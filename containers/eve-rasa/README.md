@@ -1,10 +1,8 @@
-# eve-platform
+# EVE-RASA
 
 ## Rodando o Rasa NLU
 
 - No diretório raiz do projeto, procure pela pasta ./scripts e execute o script para buildar a imagem do rasa nlu.
-
-WINDOWS
 
 - Execute o arquivo build-rasa-nlu-image.bat e aguarde o processo terminar.
 
@@ -21,17 +19,13 @@ Deverá aparecer no log do container a seguinte frase: "Site starting on 5000".
 
 - Para treinar o modelo do nlu com novos intents, basta acrescentar no arquivo nlu_train_data.json. Após esse processo, copie o conteúdo desse arquivo e o utilize como parâmetro no body da request (application/json) para o endpoint.
 
-WINDOWS
-
-- http://localhost:5000/train?project=nlu&model=evedefault
-
-tendo que:
-    - project: se refere ao nome do projeto que será criado no Rasa NLU. Portanto, nesse container, está configurado o nome nlu.
-    - model: se refere ao nome do modelo que será gerado após o treinamento. (Esse pode ser determinado, de acordo com o tipo de treinamento)
-
-LINUX
-
-- usando CURL...(continuar a escrita)
+##### WINDOWS
+```
+http://localhost:5000/train?project=nlu&model=evedefault
+```
+###### PARÂMETROS
+- <b>project</b>: se refere ao nome do projeto que será criado no Rasa NLU. Portanto, nesse container, está configurado o nome <b>nlu</b>.
+- <b>model</b>: se refere ao nome do modelo que será gerado após o treinamento. (Esse pode ser determinado, de acordo com o tipo de treinamento)
 
 ### Testando o Modelo
 
