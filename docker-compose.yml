@@ -1,17 +1,19 @@
-version: "3"
-
-networks: 
-  eve:
-    driver: bridge
-
+version: '3.0'
 services:
-  eve-app-container:
+  eve_app:
     image: eve-app-image
     command: tail -F anything
-    container_name: eve-app-container
+    container_name: eve_app
     volumes:
       - ./containers/eve-app:/var/eve-app
     ports:
       - 19000:19000
       - 19001:19001
       - 8081:8081
+  eve_rasa_nlu:
+    container_name: eve_rasa_nlu
+    image: eve-rasa-nlu-image
+    ports:
+    - "5000:5000"
+    volumes:
+      - ./containers/eve-rasa/models/nlu:/app/projects/nlu

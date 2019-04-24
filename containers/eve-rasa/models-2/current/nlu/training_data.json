@@ -1,0 +1,72 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "greeting",
+        "text": "hey"
+      },
+      {
+        "intent": "greeting",
+        "text": "hello"
+      },
+      {
+        "intent": "greeting",
+        "text": "hi"
+      },
+      {
+        "intent": "greeting",
+        "text": "good morning"
+      },
+      {
+        "intent": "greeting",
+        "text": "good evening"
+      },
+      {
+        "intent": "greeting",
+        "text": "hey there"
+      },
+      {
+        "intent": "get_answer",
+        "text": "What can I eat?"
+      },
+      {
+        "intent": "get_answer",
+        "text": "Is it okay to workout?"
+      },
+      {
+        "intent": "get_answer",
+        "text": "Do I have to take any vitamins?"
+      },
+      {
+        "intent": "get_answer",
+        "text": "What are my chances of miscarriage?"
+      },
+      {
+        "intent": "get_answer",
+        "text": "Can I wear high heels?"
+      },
+      {
+        "intent": "get_answer",
+        "text": "I feel so sick lately. Is that normal?"
+      },
+      {
+        "intent": "get_answer",
+        "text": "How can I relieve constipation?"
+      },
+      {
+        "intent": "get_answer",
+        "text": "Do I need to avoid any cosmetics?"
+      },
+      {
+        "intent": "get_answer",
+        "text": "Can I use sunscreen?"
+      },
+      {
+        "intent": "get_answer",
+        "text": "What do you recommend to keep me hydrated?"
+      }
+    ],
+    "regex_features": [],
+    "entity_synonyms": []
+  }
+}

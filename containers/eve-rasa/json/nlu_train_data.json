@@ -1,0 +1,50 @@
+{
+    "language":"en",
+    "pipeline":"tensorflow_embedding",
+    "data":{
+       "rasa_nlu_data":{
+          "common_examples":[
+             {
+                "text":"hey",
+                "intent":"greeting",
+                "entities":[]
+             },
+             {
+                 "text":"hello",
+                 "intent":"greeting",
+                 "entities":[]
+             },
+             {
+                 "text":"hi",
+                 "intent":"greeting",
+                 "entities":[]
+             },
+             {
+                 "text":"good morning",
+                 "intent":"greeting",
+                 "entities":[]
+             },
+             {
+                "text":"good evening",
+                "intent":"greeting",
+                "entities":[]
+             },
+             {
+                "text":"hey there",
+                "intent":"greeting",
+                "entities":[]
+             },
+             {
+                "text":"What can I eat?",
+                "intent":"get_answer",
+                "entities":[]
+             },
+             {
+                "text":"Is it okay to workout?",
+                "intent":"get_answer",
+                "entities":[]
+             }
+          ]
+       }
+    }
+}

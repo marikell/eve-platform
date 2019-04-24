@@ -1,0 +1,17 @@
+%YAML 1.1
+---
+actions:
+- utter_greet
+- get_question_answer
+config:
+  store_entities_as_slots: true
+entities: []
+intents:
+- greeting:
+    use_entities: true
+- get_answer:
+    use_entities: true
+slots: {}
+templates:
+  utter_greet:
+  - text: Hello!

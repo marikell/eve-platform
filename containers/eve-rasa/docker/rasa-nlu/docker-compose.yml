@@ -1,0 +1,10 @@
+version: '3.0'
+services:
+  eve_rasa_nlu:
+    container_name: eve_rasa_nlu
+    image: eve-rasa-nlu-image
+    ports:
+    - "5000:5000"
+    volumes:
+      - ../../models/nlu:/app/projects/nlu
+
