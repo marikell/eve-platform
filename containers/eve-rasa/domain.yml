@@ -1,0 +1,11 @@
+intents:
+  - greeting
+  - get_answer
+
+templates:
+  utter_greet:
+    - 'Hello!'
+    
+actions:
+  - utter_greet
+  - get_question_answer

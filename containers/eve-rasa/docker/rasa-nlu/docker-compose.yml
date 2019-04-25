@@ -7,4 +7,27 @@ services:
     - "5000:5000"
     volumes:
       - ../../models/nlu:/app/projects/nlu
+  # eve_action_server:
+  #   container_name: eve_action_server
+  #   image: rasa/rasa_core_sdk:latest
+  #   volumes:
+  #     - ./actions:/app/actions
+  eve_rasa_core:
+    container_name: eve_rasa_core
+    image: rasa/rasa_core:latest 
+    ports:
+      - 5005:5005
+    volumes:
+      - ../../models/dialogue:/app/models
+
+    # command:
+    #   - start
+    #   - --core
+    #   - models
+    #   - -c
+    #   - rest
+    #   - --endpoints
+    #   - config/endpoints.yml
+    #   - -u
+    #   - current/
 
