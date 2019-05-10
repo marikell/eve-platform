@@ -29,18 +29,22 @@ Now, inside the container, run the command below.
 
 It will appear <i>MongoDB shell version and an available terminal to operate.</i>
 
-### 1.3 Backup from Volume
+### 1.3 Backup
 
-Since we are using a docker container, there are some volumes inside. To do backups, you must enter inside the container (step 1.2) and execute:
+Since we are using a docker container, there are some volumes inside. To do backups, you must execute, in the containers/eve-mongo directory:
 
 ```sh
-#root cd data/backups
-#root mongodump --db rasa 
-#root mongodump --db eveDb
+docker run --rm --network evemongo_evenetwork --link eve_mongo:mongo -v $(pwd)/backups:/backups mongo bash -c "mongodump --out /backups --host mongo:27017"
 ```
-
 This will generate two backup files and you can go to /container/eve-mongo/backups to get them. 
 
+### 1.4 Restore
+
+To restore backups, you must execute, in the containers/eve-mongo directory:
+
+```sh
+docker run --rm --network evemongo_evenetwork --link eve_mongo:mongo -v $(pwd)/backups:/backups mongo bash -c "mongorestore /backups --host mongo:27017"
+```
 ## 2. Eve-Rasa
 Eve-Rasa contains all the files and models to run a Rasa Chatbot. We've used Rasa-Core, Rasa-NLU and Rasa-SDK to custom actions.
 ### 2.1. Update your Rasa training data in the directory (eve-rasa).
