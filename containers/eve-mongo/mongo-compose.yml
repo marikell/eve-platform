@@ -3,6 +3,8 @@ services:
    eve_mongo:
     container_name: eve_mongo
     image: mongo:latest
+    networks:
+      - evenetwork
     restart: always
     ports: 
       - 27017:27017
@@ -12,6 +14,7 @@ services:
 
 networks:
   evenetwork:
+    driver: bridge
 
 volumes:
   db-data:

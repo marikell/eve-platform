@@ -3,6 +3,8 @@ services:
   eve_rasa_core:
     container_name: eve_rasa_core
     image: rasa/rasa_core:latest
+    networks:
+      - evemongo_evenetwork
     ports:
       - 5005:5005
     volumes:
@@ -22,6 +24,8 @@ services:
   eve_rasa_nlu:
     container_name: eve_rasa_nlu
     image: rasa/rasa_nlu:latest-tensorflow
+    networks: 
+      - evemongo_evenetwork
     ports:
       - 5000:5000
     volumes:
@@ -33,18 +37,19 @@ services:
   eve_action_server:
     container_name: eve_action_server
     image: rasa/rasa_core_sdk:latest
+    networks: 
+      - evemongo_evenetwork
     ports:
       - 5055:5055
     volumes:
       - ./actions:/app/actions
-
+      
 networks:
-  evenetwork:
+  evemongo_evenetwork:
+    external: true
 
 volumes:
   models:
   config:
   rasa_nlu:
   actions:
-  db-data:
-  mongo-config:
