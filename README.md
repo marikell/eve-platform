@@ -109,7 +109,7 @@ Go to your home directory (not related to your project). And to run Portainer, w
 
 ```sh
 docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock \
--v /home/{USER_SYSTEM_FOLDER}/portainer/data:/data portainer/portainer
+-v {USER_SYSTEM_FOLDER}/portainer/data:/data portainer/portainer
 ```
 
 Acessing a URL http://localhost:9000 from your browser, it will appear a home screen of Portainer.
