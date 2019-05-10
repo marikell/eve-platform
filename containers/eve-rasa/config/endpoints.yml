@@ -1,6 +1,7 @@
-action_endpoint:
-  url: http://localhost:5055/webhook
-core_endpoint:
-  url: http://localhost:5005
 nlu:
   url: http://eve_rasa_nlu:5000
+action_endpoint:
+  url: http://eve_action_server:5055/webhook
+tracker_store:
+  type: mongod
+  url: mongodb://eve_mongo:27017

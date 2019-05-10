@@ -1,0 +1,19 @@
+version: '3'
+services:
+   eve_mongo:
+    container_name: eve_mongo
+    image: mongo:latest
+    restart: always
+    ports: 
+      - 27017:27017
+    volumes:
+      - ../eve-mongo/db-data:/data/db
+      - ../eve-mongo/mongo-config:/data/configdb
+
+networks:
+  evenetwork:
+
+volumes:
+  db-data:
+  mongo-config:
+  

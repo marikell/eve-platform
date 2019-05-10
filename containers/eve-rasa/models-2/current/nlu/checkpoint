@@ -1,2 +1,0 @@
-model_checkpoint_path: "/home/laryssa/\303\201rea de Trabalho/chatbot_rasa_core/models/current/nlu/intent_classifier_tensorflow_embedding.ckpt"
-all_model_checkpoint_paths: "/home/laryssa/\303\201rea de Trabalho/chatbot_rasa_core/models/current/nlu/intent_classifier_tensorflow_embedding.ckpt"

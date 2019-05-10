@@ -1,11 +1,15 @@
 intents:
   - greeting
-  - get_answer
+  - goodbye
+  - subscribe
+     
+actions:
+  - utter_greet
+  - utter_bye
+  - action_subscribe
 
 templates:
   utter_greet:
     - 'Hello!'
-    
-actions:
-  - utter_greet
-  - get_question_answer
+  utter_bye:
+    - 'Bye' 
