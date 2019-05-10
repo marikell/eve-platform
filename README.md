@@ -18,15 +18,37 @@ Now you are connected to mongodb://eve_mongo:27017.
 
 To run the MongoDb shell, you must enter the mongo docker container and run:
 
+```sh
+$ docker exec -it eve_mongo /bin/bash
+```
+Now, inside the container, run the command below.
 
-### 1. Eve-Rasa
+```sh
+#root mongo
+```
+
+It will appear <i>MongoDB shell version and an available terminal to operate.</i>
+
+#### 1.3 Backup from Volume
+
+Since we are using a docker container, there are some volumes inside. To do backups, you must enter inside the container (step 1.2) and execute:
+
+```sh
+#root cd backups
+#root mongodump --db rasa 
+#root mongodump --db eveDb
+```
+
+This will generate two backup files and you can go to /container/eve-mongo/backups to get them. 
+
+### 2. Eve-Rasa
 Eve-Rasa contains all the files and models to run a Rasa Chatbot. We've used Rasa-Core, Rasa-NLU and Rasa-SDK to custom actions.
-#### 1.1. Update your Rasa training data in the directory (eve-rasa).
+#### 2.1. Update your Rasa training data in the directory (eve-rasa).
 - data/stories.md
 - data/nlu.md
 - domain.yml
 
-#### 1.2. Train the Rasa NLU Model
+#### 2.2. Train the Rasa NLU Model
 
 ```
 docker run \
@@ -41,7 +63,7 @@ docker run \
     --project current
 ```
 
-#### 1.3. Train the Rasa Core Model
+#### 2.3. Train the Rasa Core Model
 
 ```
 docker run \
@@ -54,4 +76,4 @@ docker run \
     --out models
 ```
 
-#### 1.4. Run Rasa Core with Rasa NLU
+#### 2.4. Run Rasa Core with Rasa NLU
