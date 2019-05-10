@@ -66,6 +66,8 @@ docker run \
 
 ### 2.3. Train the Rasa Core Model
 
+Go to /eve-rasa directory and run these commands below.
+
 ```
 docker run \
   -v $(pwd):/app/project \
