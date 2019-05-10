@@ -34,7 +34,7 @@ It will appear <i>MongoDB shell version and an available terminal to operate.</i
 Since we are using a docker container, there are some volumes inside. To do backups, you must enter inside the container (step 1.2) and execute:
 
 ```sh
-#root cd backups
+#root cd data/backups
 #root mongodump --db rasa 
 #root mongodump --db eveDb
 ```
