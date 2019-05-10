@@ -44,11 +44,10 @@ This will generate two backup files and you can go to /container/eve-mongo/backu
 ## 2. Eve-Rasa
 Eve-Rasa contains all the files and models to run a Rasa Chatbot. We've used Rasa-Core, Rasa-NLU and Rasa-SDK to custom actions.
 ### 2.1. Update your Rasa training data in the directory (eve-rasa).
-- data/stories.md
-- data/nlu.md
-- domain.yml
 
 ### 2.2. Train the Rasa NLU Model
+
+Go to /eve-rasa directory and run these commands below.
 
 ```
 docker run \
@@ -57,10 +56,12 @@ docker run \
   rasa/rasa_nlu:latest-tensorflow \
   run \
     python -m rasa_nlu.train \
-    -c config.yml \
-    -d project/data/nlu.md \
+    -c config/nlu_config.yml \
+    -d project/data/json/nlu.json \
     -o models \
-    --project current
+    --fixed_model_name nlu \
+    --project current \
+    --verbose
 ```
 
 ### 2.3. Train the Rasa Core Model
@@ -102,15 +103,10 @@ It's a tool to edit your training examples for Rasa NLU.
 
 #### Running
 
-Go to {PROJECT_DIRECTORY}/containers/eve-rasa/data (NLU data directory). And to run Rasa NLU Trainer, we will create a docker container, by executing the code below.
+Go to {PROJECT_DIRECTORY}/containers/eve-rasa/data/json (NLU data directory). And to run Rasa NLU Trainer, we will create a docker container, by executing the code below.
 
 ```sh
 docker run -p 8080:8080 -v $(pwd):/app --name rasanlutrainer dominicbreuker/rasa-nlu-trainer
 ```
 
 This will search for the first .json file in the folder. Now, acessing a URL http://localhost:8080 from your browser, it will appear your formatted NLU json to edit. 
-
-
-
-
-
