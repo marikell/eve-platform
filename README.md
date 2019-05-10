@@ -90,12 +90,23 @@ Portainer is a tool to build and manage your Docker environments.
 Go to your home directory (not related to your project). And to run Portainer, we will create a docker container, by the command below.
 
 ```sh
-docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v /home/{USER_SYSTEM_FOLDER}/portainer/data:/data portainer/portainer
+docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock \
+-v /home/{USER_SYSTEM_FOLDER}/portainer/data:/data portainer/portainer
 ```
 
 Acessing a URL http://localhost:9000 from your browser, it will appear a home screen of Portainer.
 
 ### Rasa NLU Trainer
+
+It's a tool to edit your training examples for Rasa NLU.
+
+Go to {PROJECT_DIRECTORY}/containers/eve-rasa/data (NLU data directory). And to run Rasa NLU Trainer, we will create a docker container, by executing the code below.
+
+```sh
+docker run -p 8080:8080 -v $(pwd):/app --name rasanlutrainer dominicbreuker/rasa-nlu-trainer
+```
+
+This will search for the first .json file in the folder. Now, acessing a URL http://localhost:8080 from your browser, it will appear your formatted NLU json to edit. 
 
 
 
