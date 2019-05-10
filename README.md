@@ -79,6 +79,21 @@ docker run \
 
 ### 2.4. Run Rasa Core with Rasa NLU
 
+To run all docker containers related to Rasa (eve_rasa_nlu, eve_action_server, eve_rasa_core), we will use a compose file. Go to {PROJECT_DIRECTORY}/containers/eve-rasa and run this command:
+
+```sh
+docker-compose -f rasa-compose.yml up
+```
+Now, all Rasa containers are running and you can see each container status using Portainer or running the command below
+
+```sh
+docker ps
+```
+
+Rasa containers communicate with mongo to track and store all bot's conversations.
+
+### 2.5 Requests
+
 
 ## Tools
 
