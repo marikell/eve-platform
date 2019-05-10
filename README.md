@@ -117,17 +117,3 @@ docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.
 ```
 
 Acessing a URL http://localhost:9000 from your browser, it will appear a home screen of Portainer.
-
-### Rasa NLU Trainer
-
-It's a tool to edit your training examples for Rasa NLU.
-
-#### Running
-
-Go to {PROJECT_DIRECTORY}/containers/eve-rasa/data/json (NLU data directory). And to run Rasa NLU Trainer, we will create a docker container, by executing the code below.
-
-```sh
-docker run -p 8080:8080 -v $(pwd):/app --name rasanlutrainer dominicbreuker/rasa-nlu-trainer
-```
-
-This will search for the first .json file in the folder. Now, acessing a URL http://localhost:8080 from your browser, it will appear your formatted NLU json to edit. 
