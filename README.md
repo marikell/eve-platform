@@ -1,10 +1,10 @@
 # Eve Platform
 The eve platform is a project that is basically the combination of a smart assistant (chatbot) with an application developed in React Native, in order to monitor the prenatal of pregnant women.
 
-### 1. Eve-mongo
+## 1. Eve-mongo
 Eve-mongo is a docker container, which contains all the application models. The tracker store of Rasa Core is also here.
 
-#### 1.1 Running
+### 1.1 Running
 
 In your root directory (eve-platform), execute the commands below:
 
@@ -14,7 +14,7 @@ $ docker-compose -f mongo-compose.yml up
 ```
 Now you are connected to mongodb://eve_mongo:27017.
 
-#### 1.2 Running MongoDb shell
+### 1.2 Running MongoDb shell
 
 To run the MongoDb shell, you must enter the mongo docker container and run:
 
@@ -29,7 +29,7 @@ Now, inside the container, run the command below.
 
 It will appear <i>MongoDB shell version and an available terminal to operate.</i>
 
-#### 1.3 Backup from Volume
+### 1.3 Backup from Volume
 
 Since we are using a docker container, there are some volumes inside. To do backups, you must enter inside the container (step 1.2) and execute:
 
@@ -41,14 +41,14 @@ Since we are using a docker container, there are some volumes inside. To do back
 
 This will generate two backup files and you can go to /container/eve-mongo/backups to get them. 
 
-### 2. Eve-Rasa
+## 2. Eve-Rasa
 Eve-Rasa contains all the files and models to run a Rasa Chatbot. We've used Rasa-Core, Rasa-NLU and Rasa-SDK to custom actions.
-#### 2.1. Update your Rasa training data in the directory (eve-rasa).
+### 2.1. Update your Rasa training data in the directory (eve-rasa).
 - data/stories.md
 - data/nlu.md
 - domain.yml
 
-#### 2.2. Train the Rasa NLU Model
+### 2.2. Train the Rasa NLU Model
 
 ```
 docker run \
@@ -63,7 +63,7 @@ docker run \
     --project current
 ```
 
-#### 2.3. Train the Rasa Core Model
+### 2.3. Train the Rasa Core Model
 
 ```
 docker run \
@@ -76,4 +76,28 @@ docker run \
     --out models
 ```
 
-#### 2.4. Run Rasa Core with Rasa NLU
+### 2.4. Run Rasa Core with Rasa NLU
+
+
+## Tools
+
+### Portainer
+
+Portainer is a tool to build and manage your Docker environments. 
+
+#### Running
+
+Go to your home directory (not related to your project). And to run Portainer, we will create a docker container, by the command below.
+
+```sh
+docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v /home/{USER_SYSTEM_FOLDER}/portainer/data:/data portainer/portainer
+```
+
+Acessing a URL http://localhost:9000 from your browser, it will appear a home screen of Portainer.
+
+### Rasa NLU Trainer
+
+
+
+
+
