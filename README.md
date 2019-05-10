@@ -100,6 +100,8 @@ Acessing a URL http://localhost:9000 from your browser, it will appear a home sc
 
 It's a tool to edit your training examples for Rasa NLU.
 
+#### Running
+
 Go to {PROJECT_DIRECTORY}/containers/eve-rasa/data (NLU data directory). And to run Rasa NLU Trainer, we will create a docker container, by executing the code below.
 
 ```sh
