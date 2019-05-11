@@ -55,6 +55,7 @@ Go to /eve-rasa directory and run these commands below.
 
 ```
 docker run \
+  --rm --network evemongo_evenetwork \
   -v $(pwd):/app/project \
   -v $(pwd)/models/rasa_nlu:/app/models \
   rasa/rasa_nlu:latest-tensorflow \
@@ -74,6 +75,7 @@ Go to /eve-rasa directory and run these commands below.
 
 ```
 docker run \
+   --rm --network evemongo_evenetwork \
   -v $(pwd):/app/project \
   -v $(pwd)/models/rasa_core:/app/models \
   rasa/rasa_core:latest \
