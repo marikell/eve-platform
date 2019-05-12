@@ -51,7 +51,27 @@ docker run --rm --network evemongo_evenetwork \
 mongo bash -c "mongorestore /backups \
 --host mongo:27017"
 ```
-## 2. Eve-Rasa
+### 2. Eve-app
+
+The idea of the application is to answer common questions about pregnancy, remind your users of important exams to be done, during pregnancy, to provide health.
+
+#### 2.1 Running
+
+In your root directory (eve-platform), execute the commands below:
+
+```sh
+$ cd containers/eve-app
+$ docker build -t eve_app_image .
+$ docker run -v $(pwd):/app --name eve_app -d eve_app_image 
+```
+
+If you wish the docker container runs in the background, keep the <i>-d</i> option. Otherwise, remove it.
+
+Open up URL http://localhost:19002 and change the network type to tunnel. This will generate a QR Code, which will be used to open the app into Expo (Playstore App). Open <i><b>Expo</b></i> in your device and press the option to scan QR Code, and scan your app QR Code. 
+
+If you change anything in your app, it will be built inside docker container and refreshed.
+
+## 2. Eve-rasa
 Eve-Rasa contains all the files and models to run a Rasa Chatbot. We've used Rasa-Core, Rasa-NLU and Rasa-SDK to custom actions.
 ### 2.1. Update your Rasa training data in the directory (eve-rasa).
 
@@ -59,7 +79,7 @@ Eve-Rasa contains all the files and models to run a Rasa Chatbot. We've used Ras
 
 Go to /eve-rasa directory and run these commands below.
 
-```
+```sh
 docker run \
   --rm --network evemongo_evenetwork \
   -v $(pwd):/app/project \
@@ -79,7 +99,7 @@ docker run \
 
 Go to /eve-rasa directory and run these commands below.
 
-```
+```sh
 docker run \
    --rm --network evemongo_evenetwork \
   -v $(pwd):/app/project \
