@@ -115,15 +115,7 @@ docker run --rm --network evemongo_evenetwork -v $(pwd):/app/project -v $(pwd)/m
 Go to /eve-rasa directory and run these commands below.
 
 ```sh
-docker run \
-   --rm --network evemongo_evenetwork \
-  -v $(pwd):/app/project \
-  -v $(pwd)/models/rasa_core:/app/models \
-  rasa/rasa_core:latest \
-  train \
-    --domain project/domain.yml \
-    --stories project/data/stories.md \
-    --out models
+docker run --rm --network evemongo_evenetwork -v $(pwd):/app/project -v $(pwd)/models/rasa_core:/app/models rasa/rasa_core:latest train --domain project/domain.yml --stories project/data/stories.md --out models --verbose
 ```
 
 ### 2.4. Run Rasa Core with Rasa NLU
