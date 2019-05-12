@@ -19,6 +19,8 @@ services:
       - --endpoints
       - config/endpoints.yml
       - -u
+      - --credentials
+      - config/credentials.yml
       - current/
       - --debug
   eve_rasa_nlu:
