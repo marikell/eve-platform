@@ -61,10 +61,12 @@ In your root directory (eve-platform), execute the commands below:
 
 ```sh
 $ cd containers/eve-app
-$ docker build -t eve_app_image .
-$ docker run -v $(pwd):/app --name eve_app -d eve_app_image 
-```
 
+$ docker build -t eve-app-image .
+
+$ docker run -d -p 19000:19000 -p 19001:19001 -p 19002:19002 -v $(pwd):/app \ 
+--name eve_app eve-app-image
+```
 If you wish the docker container runs in the background, keep the <i>-d</i> option. Otherwise, remove it.
 
 Open up URL http://localhost:19002 and change the network type to tunnel. This will generate a QR Code, which will be used to open the app into Expo (Playstore App). Open <i><b>Expo</b></i> in your device and press the option to scan QR Code, and scan your app QR Code. 
@@ -140,7 +142,7 @@ Portainer is a tool to build and manage your Docker environments.
 Go to your home directory (not related to your project). And to run Portainer, we will create a docker container, by the command below.
 
 ```sh
-docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock \
+docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock
 -v {USER_SYSTEM_FOLDER}/portainer/data:/data portainer/portainer
 ```
 
