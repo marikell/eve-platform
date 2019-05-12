@@ -177,10 +177,13 @@ Acessing a URL http://localhost:9000 from your browser, it will appear a home sc
 
 It's a tool to edit your training examples for Rasa NLU.
 
+#### Running
+
 Go to {PROJECT_DIRECTORY}/containers/eve-rasa/data/json (NLU data directory). And to run Rasa NLU Trainer, we will create a docker container, by executing the code below.
 
 ```sh
-docker run -t --name rasa-nlu-trainer -v $(pwd):/rasa-nlu-trainer/src/state -p 5006:8080 -i  dominicbreuker/rasa-nlu-trainer
+docker run -t --name rasa-nlu-trainer -v $(pwd):/rasa-nlu-trainer/src/state -p 5006:8080 -i \
+dominicbreuker/rasa-nlu-trainer
 ```
 
 This will search for the first .json file in the folder. Now, acessing a URL http://localhost:5006 from your browser, it will appear your formatted NLU json to edit. 
