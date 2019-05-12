@@ -1,6 +1,7 @@
 from config.mongo_config import MongoConfig as config
 from flask_pymongo import PyMongo
 from bson import json_util
+from util import mongo_encoder as MongoEncoder
 import json
 
 class DefaultService(object):
@@ -8,9 +9,4 @@ class DefaultService(object):
         self.mongo = mongo
 
     def get_teste(self):
-      testesDb = self.mongo.db.teste
-      testes = []
-      for t in testesDb.find():
-        enc = json.dumps(t, default=json_util.default)
-        testes.append(enc)
-      return testes
+        return [t for t in self.mongo.db.teste.find()]

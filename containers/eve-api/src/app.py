@@ -2,19 +2,16 @@ from flask import Flask, jsonify, abort, make_response, request
 from flask_pymongo import PyMongo
 from service.default_service import DefaultService
 from config.mongo_config import MongoConfig
+from util import mongo_encoder as MongoEncoder
 
 app = Flask(__name__)
 
-
 obj = MongoConfig()
 
-# print(obj.getConfig()["MONGO_URI"])
 app.config["MONGO_URI"] = obj.getConfig()["MONGO_URI"]
 app.config["MONGO_DBNAME"] = obj.getConfig()["MONGO_DBNAME"]
 
 mongo = PyMongo(app)
-
-# print(mongo)
 
 ds = DefaultService(mongo)
 
@@ -24,9 +21,7 @@ def get_hello_world():
 
 @app.route('/api/v1/messages', methods=['GET'])
 def get_messages():   
-    # print(list(ds.get_teste())
-    # print(ds.get_teste())
-    return jsonify(ds.get_teste())
+    return MongoEncoder.jsonify(ds.get_teste())
     
 
 if __name__ == '__main__':
