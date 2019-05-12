@@ -107,19 +107,7 @@ Eve-Rasa contains all the files and models to run a Rasa Chatbot. We've used Ras
 Go to /eve-rasa directory and run these commands below.
 
 ```sh
-docker run \
-  --rm --network evemongo_evenetwork \
-  -v $(pwd):/app/project \
-  -v $(pwd)/models/rasa_nlu:/app/models \
-  rasa/rasa_nlu:latest-tensorflow \
-  run \
-    python -m rasa_nlu.train \
-    -c config/nlu_config.yml \
-    -d project/data/json/nlu.json \
-    -o models \
-    --fixed_model_name nlu \
-    --project current \
-    --verbose
+docker run --rm --network evemongo_evenetwork -v $(pwd):/app/project -v $(pwd)/models/rasa_nlu:/app/models rasa/rasa_nlu:latest-tensorflow run python -m rasa_nlu.train -c project/config/nlu_config.yml -d project/data/json/nlu.json -o models --fixed_model_name nlu --project current --verbose
 ```
 
 ### 2.3. Train the Rasa Core Model
