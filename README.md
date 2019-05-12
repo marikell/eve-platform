@@ -51,11 +51,11 @@ docker run --rm --network evemongo_evenetwork \
 mongo bash -c "mongorestore /backups \
 --host mongo:27017"
 ```
-### 2. Eve-app
+## 2. Eve-app
 
 The idea of the application is to answer common questions about pregnancy, remind your users of important exams to be done, during pregnancy, to provide health.
 
-#### 2.1 Running
+### 2.1 Running
 
 In your root directory (eve-platform), execute the commands below:
 
@@ -72,6 +72,31 @@ If you wish the docker container runs in the background, keep the <i>-d</i> opti
 Open up URL http://localhost:19002 and change the network type to tunnel. This will generate a QR Code, which will be used to open the app into Expo (Playstore App). Open <i><b>Expo</b></i> in your device and press the option to scan QR Code, and scan your app QR Code. 
 
 If you change anything in your app, it will be built inside docker container and refreshed.
+
+## 3. Eve-api
+
+Eve-api is the main api of the platform. Through requests, we communicate with basically the entire application. The api that makes the main communication with the database.
+
+### 3.1 Running
+
+In your root directory (eve-platform), execute the commands below:
+
+```sh
+$ cd containers/eve-api
+
+$ docker-compose -f api-compose.yml up
+```
+Open up URL http://localhost:5001/ and it will appear a message <i>Flask is running in port 5001</i>.
+
+### 3.2 Configuration
+
+If you look inside /eve-api/src/config, you will find a file named mongo_config.py. In this file, we configure all mongo settings.
+
+| Mongo Database Name | Mongo Uri |
+| :---: | :---: |
+| eveDb  | mongodb://eve_mongo:27017/eveDb  |
+
+If you need to change it, you have to change in this code. Our API is already pointing to the mongo, inside docker container. 
 
 ## 2. Eve-rasa
 Eve-Rasa contains all the files and models to run a Rasa Chatbot. We've used Rasa-Core, Rasa-NLU and Rasa-SDK to custom actions.
