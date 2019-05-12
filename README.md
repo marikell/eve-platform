@@ -140,7 +140,7 @@ Rasa containers communicate with mongo to track and store all bot's conversation
 
 You can talk with your bot by sending POST requests with some parameters to URL http://localhost:5005/webhooks/rest/webhook.
 
-Open a tool called <i><b>Postman</b></i> or your can use curl to do it. Your JSON example data is below, which you can send a message, with the sender (user_id).
+Open a tool called <i><b>Postman</b></i> or your can use curl to do it. Your JSON example data is below, which you can send a message, with the sender (user_id). 
 
 ```json
 {
@@ -158,6 +158,7 @@ This will return a bot response, like shown below.
     }
 ]
 ```
+This will be stored in Rasa database in our Mongo container. 
 
 ## Tools
 
