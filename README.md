@@ -10,7 +10,7 @@ In your root directory (eve-platform), execute the commands below:
 
 ```sh
 $ cd containers/eve-mongo
-$ docker-compose -f mongo-compose.yml up
+$ docker-compose -f mongo-compose.yml up -d
 ```
 Now you are connected to mongodb://eve_mongo:27017.
 
@@ -123,7 +123,7 @@ docker run --rm --network evemongo_evenetwork -v $(pwd):/app/project -v $(pwd)/m
 To run all docker containers related to Rasa (eve_rasa_nlu, eve_action_server, eve_rasa_core), we will use a compose file. Go to {PROJECT_DIRECTORY}/containers/eve-rasa and run this command:
 
 ```sh
-docker-compose -f rasa-compose.yml up
+docker-compose -f rasa-compose.yml up -d
 ```
 Now, all Rasa containers are running and you can see each container status using Portainer or running the command below
 
