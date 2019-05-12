@@ -9,14 +9,16 @@ services:
     ports: 
       - 27017:27017
     volumes:
-      - ../eve-mongo/db-data:/data/db
-      - ../eve-mongo/mongo-config:/data/configdb
+      - ./backups:/data/backups
+      # - ../eve-mongo/db-data:/data/db
+      # - ../eve-mongo/mongo-config:/data/configdb
 
 networks:
   evenetwork:
     driver: bridge
 
 volumes:
-  db-data:
-  mongo-config:
+  backups:
+  # db-data:
+  # mongo-config:
   
