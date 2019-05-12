@@ -1,11 +1,18 @@
-FROM node
+FROM node:latest
 
-RUN npm install -g react-native-cli
-RUN npm install -g create-react-native-app
-RUN npm install -g exp
-RUN npm install -g expo-cli
+WORKDIR /src/app
 
-RUN mkdir /var/eve-app
-WORKDIR /var/eve-app
+RUN echo "fs.inotify.max_user_watches=524288" >> /etc/sysctl.conf
 
-CMD sleep infinity
+COPY app.json package*.json ./
+
+COPY . .
+
+RUN npm install
+
+EXPOSE 19000
+EXPOSE 19001
+EXPOSE 19002
+
+CMD [ "npm", "start" ]
+
