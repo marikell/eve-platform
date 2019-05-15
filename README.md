@@ -10,7 +10,7 @@ In your root directory (eve-platform), execute the commands below:
 
 ```sh
 $ cd containers/eve-mongo
-$ docker-compose -f mongo-compose.yml up
+$ docker-compose -f mongo-compose.yml up -d
 ```
 Now you are connected to mongodb://eve_mongo:27017.
 
@@ -98,63 +98,67 @@ If you look inside /eve-api/src/config, you will find a file named mongo_config.
 
 If you need to change it, you have to change in this code. Our API is already pointing to the mongo, inside docker container. 
 
-## 2. Eve-rasa
+## 4. Eve-rasa
 Eve-Rasa contains all the files and models to run a Rasa Chatbot. We've used Rasa-Core, Rasa-NLU and Rasa-SDK to custom actions.
-### 2.1. Update your Rasa training data in the directory (eve-rasa).
+### 4.1. Update your Rasa training data in the directory (eve-rasa).
 
-### 2.2. Train the Rasa NLU Model
-
-Go to /eve-rasa directory and run these commands below.
-
-```sh
-docker run \
-  --rm --network evemongo_evenetwork \
-  -v $(pwd):/app/project \
-  -v $(pwd)/models/rasa_nlu:/app/models \
-  rasa/rasa_nlu:latest-tensorflow \
-  run \
-    python -m rasa_nlu.train \
-    -c config/nlu_config.yml \
-    -d project/data/json/nlu.json \
-    -o models \
-    --fixed_model_name nlu \
-    --project current \
-    --verbose
-```
-
-### 2.3. Train the Rasa Core Model
+### 4.2. Train the Rasa NLU Model
 
 Go to /eve-rasa directory and run these commands below.
 
 ```sh
-docker run \
-   --rm --network evemongo_evenetwork \
-  -v $(pwd):/app/project \
-  -v $(pwd)/models/rasa_core:/app/models \
-  rasa/rasa_core:latest \
-  train \
-    --domain project/domain.yml \
-    --stories project/data/stories.md \
-    --out models
+docker run --rm --network evemongo_evenetwork -v $(pwd):/app/project -v $(pwd)/models/rasa_nlu:/app/models rasa/rasa_nlu:latest-tensorflow run python -m rasa_nlu.train -c project/config/nlu_config.yml -d project/data/json/nlu.json -o models --fixed_model_name nlu --project current --verbose
 ```
 
-### 2.4. Run Rasa Core with Rasa NLU
+### 4.3. Train the Rasa Core Model
+
+Go to /eve-rasa directory and run these commands below.
+
+```sh
+docker run --rm --network evemongo_evenetwork -v $(pwd):/app/project -v $(pwd)/models/rasa_core:/app/models rasa/rasa_core:latest train --domain project/domain.yml --stories project/data/stories.md --out models --verbose
+```
+
+### 4.4. Run Rasa Core with Rasa NLU
 
 To run all docker containers related to Rasa (eve_rasa_nlu, eve_action_server, eve_rasa_core), we will use a compose file. Go to {PROJECT_DIRECTORY}/containers/eve-rasa and run this command:
 
 ```sh
-docker-compose -f rasa-compose.yml up
+docker-compose -f rasa-compose.yml up -d
 ```
 Now, all Rasa containers are running and you can see each container status using Portainer or running the command below
 
 ```sh
 docker ps
 ```
+To make sure your rasa API is working, you can open URL http://localhost:5005 and http://localhost:5000. It will appear <i> hello from Rasa: 0.15.0a1</i> (Rasa Core) and <i>hello from Rasa NLU: 0.15.0a1</i> (Rasa NLU).
 
 Rasa containers communicate with mongo to track and store all bot's conversations.
 
-### 2.5 Requests
+### 4.5 Requests
 
+#### 4.5.1 Talking to your bot
+
+You can talk with your bot by sending POST requests with some parameters to URL http://localhost:5005/webhooks/rest/webhook.
+
+Open a tool called <i><b>Postman</b></i> or your can use curl to do it. Your JSON example data is below, which you can send a message, with the sender (user_id). 
+
+```json
+{
+    "message": "Hello",
+    "sender":"1"
+}
+```
+This will return a bot response, like shown below.
+
+```json
+[
+    {
+        "recipient_id": "10",
+        "text": "Hello!"
+    }
+]
+```
+This will be stored in Rasa database in our Mongo container. 
 
 ## Tools
 
