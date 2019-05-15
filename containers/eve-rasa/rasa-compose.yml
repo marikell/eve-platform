@@ -8,20 +8,20 @@ services:
     ports:
       - 5005:5005
     volumes:
-      - ./models/rasa_core:/app/models
+      - ./models:/app/models
       - ./config:/app/config
     command:
       - start
       - --core
-      - models
+      - models/rasa_core
       - -c
       - rest
       - --endpoints
       - config/endpoints.yml
       - -u
+      - current/nlu
       - --credentials
       - config/credentials.yml
-      - current/
       - --debug
   eve_rasa_nlu:
     container_name: eve_rasa_nlu
@@ -31,19 +31,21 @@ services:
     ports:
       - 5000:5000
     volumes:
-      - ./models/rasa_nlu:/app/models
+      - ./models:/app/models
     command:
       - start
       - --path
-      - models
+      - models/rasa_nlu
   eve_action_server:
     container_name: eve_action_server
-    image: rasa/rasa_core_sdk:latest
+    build: .
+    # image: rasa/rasa_core_sdk:latest
     networks: 
       - evemongo_evenetwork
     ports:
       - 5055:5055
     volumes:
+      - ./api:/app/api
       - ./actions:/app/actions
       
 networks:
