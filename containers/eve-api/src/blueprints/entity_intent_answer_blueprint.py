@@ -1,4 +1,4 @@
-from flask import Blueprint, request
+from flask import Blueprint, request, jsonify
 from werkzeug import Response
 from utils import mongo_encoder as MongoEncoder
 from utils.request_result import RequestResult
@@ -46,16 +46,13 @@ def findby_intent_entities():
         json = request.get_json()
         entities = json['entities']
         intent = json['intent']
+        
+        action_answer = entity_intent_answer_service.action_answer(entities, intent)
+        
+        if action_answer is not None:
+            text = action_answer.answer_id.text
 
-        flt = {
-            'entities': entities,
-            'intent': intent
-        }
-
-        action_answer = entity_intent_answer_service.action_answer(flt).answer_id.text
-
-        return RequestResult.response_content(action_answer)
+        return RequestResult.response_content(text)
 
     except:
-        #if something goes wrong, it will be no answer.
-        return RequestResult.response_content('')
+       return RequestResult.response_content('')

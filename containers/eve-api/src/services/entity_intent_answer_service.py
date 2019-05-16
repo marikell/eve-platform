@@ -11,7 +11,5 @@ class EntityIntentAnswerService(GenericService):
         entity_insert_answer = EntityIntentAnswer(entities=obj['entities'], 
         intent=obj['intent'],answer_id=obj['answer'].to_dbref())
         entity_insert_answer.save() 
-    def action_answer(self, flt):
-        entities = flt['entities']
-        intent = flt['intent']
-        return EntityIntentAnswer.objects.get(Q(entities__all=entities) & Q(intent=intent))
+    def action_answer(self, entities, intent):
+        return EntityIntentAnswer.objects.get(Q(entities__all=[entities]) & Q(intent=intent))

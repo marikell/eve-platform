@@ -39,7 +39,6 @@ services:
   eve_action_server:
     container_name: eve_action_server
     build: .
-    # image: rasa/rasa_core_sdk:latest
     networks: 
       - evemongo_evenetwork
     ports:
@@ -53,7 +52,7 @@ networks:
     external: true
 
 volumes:
+  api:
   models:
   config:
-  rasa_nlu:
   actions:
