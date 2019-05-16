@@ -1,8 +1,7 @@
 from mongoengine import connect
-from config.mongo_config import MongoConfig
+from config.database_config import DEV_MONGO_CONFIGURATION
 
 class GenericService():
     def __init__(self):
-        config = MongoConfig('eveDb','mongodb://eve_mongo:27017/eveDb')
-        connect(config.getConfig()["MONGO_DBNAME"], host=config.getConfig()["MONGO_URI"])
+        connect(DEV_MONGO_CONFIGURATION['DATABASE_NAME'], host=DEV_MONGO_CONFIGURATION['DATABASE_URL'])
     
