@@ -1,0 +1,80 @@
+intent,entity,answer
+which_answer,exercicios,"Os melhores exercícios para serem praticados na gravidez são: 
+- Caminhada
+- Pilates
+- Alongamentos
+- Hidroginástica. 
+No entanto, só devem ser realizados sob orientação médica pois em alguns casos, como gravidez de risco, nenhum tipo de atividade física é permitida."
+which_answer,alimentos,"Durante a gestação, alguns nutrientes não podem faltar na alimentação como:
+- Proteínas: carnes e ovos
+- Carboidrato: cereais, massas e pães, de preferencia integrais
+- Cálcio: Vegetais verde-escuros, leites e derivados e cereais integrais
+- Ferro: carnes, leguminosas e vegetais verde-escuros
+- Ácido fólico: frutas, carnes, ovos, leguminosas e vegetais verde-escuros"
+which_not_answer,exercicios,"No geral, exercícios de grande impacto não devem ser realizados na gravidez pois podem prejudicar a saúde da mãe e do bebê. Alguns exemplos são: 
+- Exercícios abdominais
+- Esportes de lutas
+- Musculação pesada
+- Corrida
+- Jogos com bola como futebol, vôlei, basquete"
+which_not_answer,alimentos,"Durante a gravidez, algumas substâncias presentes nos alimentos podem causar problemas para o feto e para a gestação em si. Por isso, é bom evitar:
+- Ovos crus
+- Leites e queijos não pasteurizados
+- Frutas e vegetais mal lavados
+- Peixes crus e carnes mal passadas
+- Café
+- Bebidas alcoólicas"
+what_answer,pre natal,"O acompanhamento pré-natal é um conjunto de exames realizados durante a gestação que possibilitam que a mulher faça um acompanhamento detalhado da sua saúde e do bebê. É de extrema importância, pois ajuda a prevenir diversas doenças e complicações que podem trazer inclusive o parto prematuro e o aborto."
+what_answer,puerperio,"O puerpério é o período de 42 dias a oito semanas após o parto que demora para que o corpo da mulher retorne à forma anterior à gestação. O período também é marcado por mudanças emocionais. A exceção são as mamas, que, devido à amamentação, atingem seu desenvolvimento completo no puerpério e não voltam a como eram antes da gravidez."
+what_answer,loquio,"O lóquio é o sangramento que ocorre no pós-parto e é semelhante a menstruação. 
+Nas primeiras 24 horas, o lóquio é um pouco mais intenso que uma menstruação. Contudo, a partir desse momento o fluxo vai diminuindo até que fique como um corrimento. O tempo de duração do lóquio varia. Se a mulher amamenta vai demorar menos tempo, mas se não amamenta, pode ocorrer por até um mês."
+can_answer,varizes,"Cirurgias para dar cabo das veias saltadas não são indicadas nessa fase. O mais recomendado é você deixar as pernas levantadas por alguns minutos, usar meias elásticas de compressão (apenas no frio), evitar ficar muito tempo parada em pé ou sentada e fazer caminhadas regulares."
+can_answer,unhas,"Você pode tanto pintar as unhas como também remover a cutícula. O único cuidado é em relação à higiene dos acessórios de manicure. O ideal é que você tenha seu próprio kit de tesoura e alicate para fornecê-lo à profissional. Isso evita possíveis contaminações. Ou, então, escolha um estabelecimento que tenha rígidos procedimentos de esterilização do material."
+can_answer,depilacao,"Você pode se depilar com lâmina e com cera. A chamada depilação a laser não é recomendada, por precaução, já que não são feitos testes em gestantes."
+can_answer,cabelo,"Somente a partir do quarto mês de gestação. Pois não sabemos se a tinta pode ser absorvida pelo couro cabeludo da mãe, e o início da gestação é uma fase crítica de formação do feto. Só lembrando que escova progressiva, alisamentos e permanentes nos cabelos estão proibidos ao longo de todo o período."
+can_answer,descolorir,"Evite descolori-los. Não há garantias de que as substâncias químicas usadas no processo não penetrem na pele e, assim, ofereçam riscos ao bebê."
+can_answer,moto,"Não há nenhuma contraindicação formal. Mas lembre-se que os acidentes de moto são relativamente comuns e uma queda pode colocar a vida do bebê em risco, portanto procure evitar."
+can_answer,cavalo,"Assim como a moto, andar a cavalo pode não ser uma boa ideia, pois qualquer queda pode prejudicar você e o bebê."
+can_answer,bicicleta,Você pode andar de bicicleta desde que o seu médico tenha liberado e você já esteja habituada ao exercício. Não esqueça de beber bastante água e usar os equipamentos de proteção.
+can_answer,laxante,"O ideal é adicionar à dieta alimentos ricos em fibras para melhorar o trânsito intestinal, como frutas e cereais integrais. Se ainda assim o intestino continuar preso, consulte o seu médico e veja com ele se é possível ele te indicar um laxante permitido para gestante."
+can_answer,banheira,"Desde que a temperatura da água esteja morninha, até uns 38°C. Nos primeiros três meses de gestação, a hipertermia (excesso de calor) pode causar malformações no feto. Já a partir do segundo trimestre, é comum a sua pressão cair, o ambiente muito quente pode contribuir para uma pressão ainda mais baixa, o que pode diminuir o fluxo de sangue para o bebê ou te fazer desmaiar."
+can_answer,sauna,"Não, devido à alta temperatura nesse ambiente, fazer sauna é desaconselhado para prevenir problemas como queda de pressão, desmaio e enjoo."
+can_answer,pimenta,"Desde que não te provoque azia ou outro desconforto gástrico, não há problema algum."
+can_answer,café,"Você pode tomar mas com muita moderação, uma ou duas xícaras pequenas por dia. Isso porque a cafeína piora os sintomas de queimação no estômago, algo comum entre várias gestantes, além de ser muito estimulante."
+can_answer,sol,"Você pode tomar sol desde que seja antes das 10 horas ou depois das 16 horas e sempre com um protetor solar com FPS maior que 30. Durante a gestação, você tem um risco maior de ficar com manchas tanto na face como na barriga."
+can_answer,hidratante,"Escolha sempre por produtos exclusivos para gestantes, pois alguns ativos de hidratantes comuns são proibidos durante a gestação."
+can_answer,viajar,"Então, até o sétimo mês, as viagens podem ser realizadas mas com algumas precauções. Por exemplo, no carro, procure parar a cada uma hora para esticar as pernas.
+Se for viajar de avião, procure caminhar pelo corredor da aeronave sempre que der e beba bastante líquido para não se desidratar. Já no oitavo mês, é necessário atestado médico para embarcar. E, no nono, é melhor não fazer nenhuma viagem, nem de carro."
+can_answer,escada,"Sim, mas você deve ficar atenta para não ficar ofegante na subida e, na descida, não se desequilibrar."
+can_answer,salto,"Você pode usar salto de até 3 centímetros. Mais do que isso, aumenta a possibilidade de você cair devido à mudança de eixo no equilíbrio do corpo."
+can_answer,japonesa,"O melhor é evitar comida japonesa, embora o peixe cru não transmita toxoplasmose, o ideal é evitar o alimento nessa fase – aliás, qualquer carne crua."
+can_answer,dentista,"Não só pode como deve, caso ocorra algum problema nos dentes ou nas gengivas. Claro, na verdade, é muito importante ir ao dentista pois doenças bucais são associadas a parto prematuro e nascimento de bebês com baixo peso. Sempre informe o seu dentista da sua situação para que ele possa tomar as devidas precauções."
+can_answer,exercicios,"Geralmente, você pode sim fazer exercícios durante toda a gestação, porém sempre consulte o seu médico. Se você não praticava exercícios antes, prefira por atividades mais leves e se você já estava habituada procure diminuir um pouco o ritmo."
+can_answer,alcool,"Não há uma dose segura de álcool para gestantes, portanto não é recomendado. Bebida alcoólica pode acarretar prejuízos ao bebê."
+can_answer,drogas,Não é permitido o uso de álcool ou qualquer outra droga pois podem prejudicar o bebê.
+can_answer,cigarro,"Fumar pode causar má formação placentária e aumenta a chance de o bebê nascer antes do tempo e com baixo peso. Além disso, você corre o risco de ter trombose venosa profunda – o que pode levar à morte. Por isso, se você é fumante, é de extrema importância que você tente para durante esse período."
+can_answer,raio x,Você pode fazer esse tipo de exame já que a dose de radiação é mínima mas é sempre bom avisar o técnico que realiza o exame pois em alguns casos é possível utilizar um avental para te proteger da radiação.
+can_answer,sexo,"Pode sim, durante a gestação está liberado ter relações sexuais. Já após o parto, durante o período do puerpério, não é permitido."
+can_answer,medicamento,
+which_answer,exames,"Os principais exames feito no pré-natal são:
+- Fezes
+- Glicemia
+- Grupo sanguíneo e fator Rh
+- Hemograma completo
+- Papanicolau
+- Reação à toxoplasmose e rubéola
+- Sorologia para HIV
+- Sorologia para hepatites virais
+- Sorologia para citomegalovírus (CMV)
+- Ultrassonografia
+- Urina
+Se quiser saber mais sobre algum exame em especifico é só me perguntar :)"
+which_answer,cuidados,
+which_answer,sinais_parto,"Bom, os sinais variam muito mas podem começar com dores na região lombar que se irradiam para o abdômen, deixando a barriga dura mais ou menos a cada meia hora – são as famosas contrações. Se você sentir duas contrações de 40 segundos a um minuto e meio no período de dez minutos aí pode ser que você esteja entrando mesmo em trabalho de parto. Em alguns casos, o trabalho de parto se anuncia com um discreto sangramento genital ou ainda com a rotura da bolsa. Outro sinal importante é a dilatação do colo uterino acima de 2 centímetros, mas isso só o seu médico pode observar."
+goal_exam,fezes,"O exame de fezes investiga a presença de parasitas no intestino que podem provocar anemia, entre outros problemas."
+when_exam,fezes,"Deve ser feito no início da gravidez e caso durante os nove meses, se necessário."
+goal_exam,glicemia,"O exame de glicemia, conhecido popularmente como glicemia em jejum, é solicitado pelo ginecologista para medir a quantidade de glicose presente na corrente sanguínea, o que permite identificar eventuais quadros de intolerância à glicose e diabetes.
+Se as taxas estiverem muito acima do normal, pode ser que a mulher esteja com diabetes gestacional, que exige cuidado e atenção especial, pois pode comprometer a gravidez.
+
+O exame costuma ser feito em jejum de 8 horas, em que é medida a quantidade de glicose quando não houve ingestão recente de alimentos. Ele pode ser feito durante a chamada curva glicêmica — duas horas após a ingestão de alimentos."
+when_exam,glicemia,"geralmente, logo no início da gravidez. Deve ser repetido na 26ª semana, fase em que o corpo da gestante já encontra mais dificuldade em absorver o açúcar."

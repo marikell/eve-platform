@@ -1,0 +1,78 @@
+{
+  "action_fingerprints": {
+    "action_listen": {
+      "slots": [
+        "user_city",
+        "med_name",
+        "user_age",
+        "user_state",
+        "feedback_value"
+      ]
+    },
+    "medicine_form": {
+      "slots": [
+        "med_name",
+        "med_hours",
+        "med_frequency_day",
+        "med_frequency",
+        "requested_slot"
+      ]
+    },
+    "utter_ask_isbot": {
+      "slots": []
+    },
+    "utter_ask_feedback": {
+      "slots": []
+    },
+    "utter_ask_wherefrom": {
+      "slots": []
+    },
+    "utter_introduce": {
+      "slots": []
+    },
+    "utter_first_help": {
+      "slots": []
+    },
+    "get_answer": {
+      "slots": []
+    },
+    "utter_ask_howold": {
+      "slots": []
+    },
+    "utter_help": {
+      "slots": []
+    },
+    "utter_welcome": {
+      "slots": []
+    },
+    "utter_bye": {
+      "slots": []
+    },
+    "utter_canthelp": {
+      "slots": []
+    },
+    "utter_med_done": {
+      "slots": []
+    }
+  },
+  "python": "3.6.8",
+  "max_histories": [
+    5,
+    null,
+    5,
+    2,
+    5
+  ],
+  "ensemble_name": "rasa.core.policies.ensemble.SimplePolicyEnsemble",
+  "policy_names": [
+    "rasa.core.policies.keras_policy.KerasPolicy",
+    "rasa.core.policies.fallback.FallbackPolicy",
+    "rasa.core.policies.memoization.MemoizationPolicy",
+    "rasa.core.policies.form_policy.FormPolicy",
+    "rasa.core.policies.mapping_policy.MappingPolicy"
+  ],
+  "trained_at": "20190516-041113",
+  "rasa": "0.15.0a1",
+  "tensorflow": "1.13.1",
+  "sklearn": "0.20.2"
+}

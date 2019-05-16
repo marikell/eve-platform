@@ -29,6 +29,8 @@ actions:
 - utter_ask_city
 - utter_ask_state
 - utter_ask_age
+config:
+  store_entities_as_slots: true
 entities:
 - med_frequency_day
 - med_frequency
@@ -43,55 +45,101 @@ entities:
 forms:
 - medicine_form
 intents:
-- set_reminder_med
-- affirm
+- set_reminder_med:
+    use_entities: true
+- affirm:
+    use_entities: true
 - enter_data:
     use_entities: false
-- hello
-- greeting_answer
-- which_answer
-- greeting_back
-- greeting
-- deny
-- which_not_answer
-- thank_you
-- bye
-- get_started
-- get_city
-- get_state
-- get_age
-- ask_isbot
-- ask_howold
-- ask_wherefrom
-- ask_whoisit
-- canthelp
-- what_answer
-- can_answer
-- goal_exam
-- when_answer
+- hello:
+    use_entities: true
+- greeting_answer:
+    use_entities: true
+- which_answer:
+    use_entities: true
+- greeting_back:
+    use_entities: true
+- greeting:
+    use_entities: true
+- deny:
+    use_entities: true
+- which_not_answer:
+    use_entities: true
+- thank_you:
+    use_entities: true
+- bye:
+    use_entities: true
+- get_started:
+    use_entities: true
+- get_city:
+    use_entities: true
+- get_state:
+    use_entities: true
+- get_age:
+    use_entities: true
+- ask_isbot:
+    use_entities: true
+- ask_howold:
+    use_entities: true
+- ask_wherefrom:
+    use_entities: true
+- ask_whoisit:
+    use_entities: true
+- canthelp:
+    use_entities: true
+- what_answer:
+    use_entities: true
+- can_answer:
+    use_entities: true
+- goal_exam:
+    use_entities: true
+- when_answer:
+    use_entities: true
 slots:
   feedback_value:
-    type: categorical
+    auto_fill: true
+    initial_value: null
+    type: rasa.core.slots.CategoricalSlot
     values:
     - positive
     - negative
   med_frequency:
-    type: unfeaturized
+    auto_fill: true
+    initial_value: null
+    type: rasa.core.slots.UnfeaturizedSlot
   med_frequency_day:
-    type: unfeaturized
+    auto_fill: true
+    initial_value: null
+    type: rasa.core.slots.UnfeaturizedSlot
   med_hours:
-    type: unfeaturized
+    auto_fill: true
+    initial_value: null
+    type: rasa.core.slots.UnfeaturizedSlot
   med_name:
-    type: unfeaturized
+    auto_fill: true
+    initial_value: null
+    type: rasa.core.slots.UnfeaturizedSlot
   requested_slot:
-    type: unfeaturized
-  user_city:
-    type: text
-  user_state:
-    type: text
+    auto_fill: true
+    initial_value: null
+    type: rasa.core.slots.UnfeaturizedSlot
   user_age:
-    type: text
+    auto_fill: true
+    initial_value: null
+    type: rasa.core.slots.TextSlot
+  user_city:
+    auto_fill: true
+    initial_value: null
+    type: rasa.core.slots.TextSlot
+  user_state:
+    auto_fill: true
+    initial_value: null
+    type: rasa.core.slots.TextSlot
 templates:
+  utter_ask_age:
+  - text: Quantos anos você tem?
+  utter_ask_city:
+  - text: Você é de qual cidade?
   utter_ask_feedback:
   - buttons:
     - payload: /feedback{"feedback_value":"positive"}
@@ -99,6 +147,13 @@ templates:
     - payload: /feedback{"feedback_value":"negative"}
       title: 👎
     text: Você está gostando da nossa conversa?
+  utter_ask_howold:
+  - text: Velha o bastante pra ser médica haha
+  utter_ask_info_user:
+  - text: Posso te fazer umas perguntas sobre você? Só pra nos conhecermos melhor
+      haha
+  utter_ask_isbot:
+  - text: Eu sou um robô!
   utter_ask_med_frequency:
   - buttons:
     - payload: /enter_data{"med_frequency":"diario"}
@@ -112,9 +167,17 @@ templates:
   - text: 'Horário:'
   utter_ask_med_name:
   - text: Qual o nome do remédio?
+  utter_ask_state:
+  - text: Você é de qual estado?
+  utter_ask_wherefrom:
+  - text: Sou de Sorocaba, SP
+  - text: Sorocaba, SP
+  - text: Sou de são paulo
   utter_bye:
   - text: Tchau!
   - text: Tchau, até mais!
+  utter_canthelp:
+  - text: ' Desculpe por não conseguir te ajudar :('
   utter_default:
   - text: Desculpe, não entendi o que você quis dizer.
   utter_first_help:
@@ -139,6 +202,8 @@ templates:
       e remedios.
   utter_med_done:
   - text: Feito, pode deixar que vou te lembrar do medicamento :)
+  utter_thank_you:
+  - text: Obrigada :)
   utter_thumbsup:
   - text: 👍
   - text: Ok.
@@ -154,23 +219,3 @@ templates:
   - text: Não tem como tomar um remédio 0 vezes ao dia haha
   utter_wrong_med_hours:
   - text: Por favor, me passe um horário válido.
-  utter_ask_city:
-    - text: Você é de qual cidade?
-  utter_ask_state:
-    - text: Você é de qual estado?
-  utter_ask_age:
-    - text: Quantos anos você tem?
-  utter_ask_info_user:
-    - text: Posso te fazer umas perguntas sobre você? Só pra nos conhecermos melhor haha
-  utter_thank_you:
-    - text: Obrigada :)
-  utter_canthelp:
-    - text: " Desculpe por não conseguir te ajudar :("
-  utter_ask_wherefrom:
-    - text: "Sou de Sorocaba, SP"
-    - text: "Sorocaba, SP"
-    - text: "Sou de são paulo"
-  utter_ask_howold:    
-    - text: "Velha o bastante pra ser médica haha"
-  utter_ask_isbot:
-    - text: "Eu sou um robô!"
