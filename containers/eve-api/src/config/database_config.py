@@ -2,5 +2,5 @@
 
 DEV_MONGO_CONFIGURATION = {
     'DATABASE_NAME': 'evedb',
-    'DATABASE_URL': 'mongodb://eve_mongo:27017/eveDb'
+    'DATABASE_URL': 'mongodb://eve_mongo:27017/evedb'
 }
