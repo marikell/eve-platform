@@ -90,13 +90,13 @@ Open up URL http://localhost:5001/ and it will appear a message <i>Flask is runn
 
 ### 3.2 Configuration
 
-If you look inside /eve-api/src/config, you will find a file named mongo_config.py. In this file, we configure all mongo settings.
+If you look inside /eve-api/src/config, you will find a file named database_config.py. In this file, we configure all mongo settings.
 
 | Mongo Database Name | Mongo Uri |
 | :---: | :---: |
-| eveDb  | mongodb://eve_mongo:27017/eveDb  |
+| evedb  | mongodb://eve_mongo:27017/evedb  |
 
-If you need to change it, you have to change in this code. Our API is already pointing to the mongo, inside docker container. 
+If you need to change it, you have to change in this code. Our API is already pointing to the mongo inside docker container, by default. 
 
 ## 4. Eve-rasa
 Eve-Rasa contains all the files and models to run a Rasa Chatbot. We've used Rasa-Core, Rasa-NLU and Rasa-SDK to custom actions.
@@ -159,6 +159,9 @@ This will return a bot response, like shown below.
 ]
 ```
 This will be stored in Rasa database in our Mongo container. 
+### 4.6 Tracker store configuration
+
+If you wish to change mongo's db endpoint, you should insert your new URL in the ./containers/eve-rasa/config/endpoints.yml file. Then, run <b>4.4</b> commands.
 
 ## Tools
 
