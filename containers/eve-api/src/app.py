@@ -14,4 +14,4 @@ def get_hello_world():
     return Response('Flask is running in port 5001')
     
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+    app.run(debug=True, host='0.0.0.0', port='5001')
