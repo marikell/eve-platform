@@ -6,7 +6,7 @@ from utils.request_result import RequestResult
 from enums.status_code_enum import StatusCode
 
 route_name = 'answer'
-app_answer = Blueprint(route_name,__name__)
+app_answer = Blueprint(route_name,__name__, url_prefix='/api')
 
 #service
 answer_service = AnswerService()
@@ -15,7 +15,7 @@ answer_service = AnswerService()
 def index():
     return Response('Hello {}'.format(route_name))
 
-@app_answer.route('/api/{}'.format(route_name), methods=['POST'])
+@app_answer.route(route_name, methods=['POST'])
 def insert():
     try:
         json = request.get_json()
@@ -33,11 +33,9 @@ def insert():
     except Exception as e:
         return RequestResult.response(StatusCode.OK, False, str(e))
 
-@app_answer.route('/api/{}'.format(route_name), methods=['GET'])
-def get():
+@app_answer.route('/{}/<id>'.format(route_name), methods=['GET'])
+def get(id):
     try:
-        id = request.args.get('id')
-
         answer_obj = answer_service.get(id)
 
         return RequestResult.response_content(answer_obj.to_json())

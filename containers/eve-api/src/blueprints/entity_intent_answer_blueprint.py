@@ -7,7 +7,7 @@ from services.entity_intent_answer_service import EntityIntentAnswerService
 from services.answer_service import AnswerService
 
 route_name = 'entity-intent-answer'
-app_entity_intent_answer = Blueprint(route_name,__name__)
+app_entity_intent_answer = Blueprint(route_name,__name__,url_prefix='/api')
 
 #services
 entity_intent_answer_service = EntityIntentAnswerService()
@@ -17,7 +17,7 @@ answer_service = AnswerService()
 def index():
     return Response('Hello {}'.format(route_name))
 
-@app_entity_intent_answer.route('/api/{}'.format(route_name), methods=['POST'])
+@app_entity_intent_answer.route(route_name, methods=['POST'])
 def insert():
     try:
         json = request.get_json()
@@ -40,7 +40,7 @@ def insert():
     except Exception as e:
         return RequestResult.response(StatusCode.OK, False, str(e))
 
-@app_entity_intent_answer.route('/api/action-answer', methods=['POST'])
+@app_entity_intent_answer.route('action-answer', methods=['POST'])
 def findby_intent_entities():
     try:
         json = request.get_json()
