@@ -31,11 +31,11 @@ services:
     ports:
       - 5000:5000
     volumes:
-      - ./models:/app/models
+      - ./models/rasa_nlu:/app/models
     command:
       - start
       - --path
-      - models/rasa_nlu
+      - models
   eve_action_server:
     container_name: eve_action_server
     build: .
@@ -53,6 +53,6 @@ networks:
 
 volumes:
   api:
-  models:
+  rasa_nlu:
   config:
   actions:
