@@ -38,7 +38,7 @@ route_config.register_route('action_subscribe','/action-answer')
 
 #     req = requests.post(url = route_config.get_route('action_subscribe'),headers= headers,data=json.dumps(data))
 
-#     dispatcher.utter_message(req.json())
+#     dispatcher.utter_message(req.json()['response'])
 #     return
 
 class GetAnswer(Action):
