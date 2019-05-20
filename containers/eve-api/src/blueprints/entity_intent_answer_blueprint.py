@@ -1,8 +1,8 @@
 from flask import Blueprint, request, jsonify
 from werkzeug import Response
+from flask_api import status
 from utils import mongo_encoder as MongoEncoder
-from utils.request_result import RequestResult
-from enums.status_code_enum import StatusCode
+from utils.response_formatter import response
 from services.entity_intent_answer_service import EntityIntentAnswerService
 from services.answer_service import AnswerService
 
@@ -26,7 +26,7 @@ def insert():
         answer = answer_service.get(json['answer_id']['$oid'])
 
         if answer is None:
-            return RequestResult.response(StatusCode.OK, False, 'Answer not found!')
+            return response('Answer not found!', status.HTTP_400_BAD_REQUEST)
 
         obj = {
             'entities': entities,
@@ -35,10 +35,10 @@ def insert():
         }
 
         entity_intent_answer_service.insert(obj)
-        return RequestResult.response(StatusCode.CREATED, True)
+        return response(status=status.HTTP_201_CREATED)
 
     except Exception as e:
-        return RequestResult.response(StatusCode.OK, False, str(e))
+        return response(str(e), status.HTTP_400_BAD_REQUEST)
 
 @app_entity_intent_answer.route('action-answer', methods=['POST'])
 def findby_intent_entities():
@@ -52,7 +52,7 @@ def findby_intent_entities():
         if action_answer is not None:
             text = action_answer.answer_id.text
 
-        return RequestResult.response_content(text)
+        return response(text)
 
     except:
-       return RequestResult.response_content('')
+       return response('')

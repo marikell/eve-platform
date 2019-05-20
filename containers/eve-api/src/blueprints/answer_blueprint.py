@@ -2,8 +2,8 @@ from flask import Blueprint, jsonify, request
 from werkzeug import Response
 from utils import mongo_encoder as MongoEncoder
 from services.answer_service import AnswerService
-from utils.request_result import RequestResult
-from enums.status_code_enum import StatusCode
+from flask_api import status
+from utils.response_formatter import response
 
 route_name = 'answer'
 app_answer = Blueprint(route_name,__name__, url_prefix='/api')
@@ -22,23 +22,24 @@ def insert():
         text = json['text']
 
         if text is None:
-            return RequestResult.response(StatusCode.OK, False, 'Not allowed empty string!')
+            return response('Not allowed empty string!', status.HTTP_400_BAD_REQUEST)
 
         obj = {
             "text": text
         }
 
         answer_service.insert(obj)    
-        return RequestResult.response(StatusCode.CREATED, True)
+        
+        return response(status=status.HTTP_201_CREATED)
     except Exception as e:
-        return RequestResult.response(StatusCode.OK, False, str(e))
+        return response(str(e), status.HTTP_400_BAD_REQUEST)
 
 @app_answer.route('/{}/<id>'.format(route_name), methods=['GET'])
 def get(id):
     try:
         answer_obj = answer_service.get(id)
 
-        return RequestResult.response_content(answer_obj.to_json())
+        return response(answer_obj.to_json(), status.HTTP_200_OK)
 
     except Exception as e:
-        return RequestResult.response(StatusCode.OK, False, str(e))
+        return response(str(e), status.HTTP_400_BAD_REQUEST)

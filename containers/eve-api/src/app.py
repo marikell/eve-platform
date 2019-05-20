@@ -3,8 +3,9 @@ from flask_pymongo import PyMongo
 from werkzeug import Response
 from blueprints.entity_intent_answer_blueprint import app_entity_intent_answer
 from blueprints.answer_blueprint import app_answer
+from flask_api import FlaskAPI
 
-app = Flask(__name__)
+app = FlaskAPI(__name__)
 
 def register_blueprints(app):
     app.register_blueprint(app_answer)
