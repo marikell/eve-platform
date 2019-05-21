@@ -8,4 +8,4 @@ source env/bin/activate
 echo "[EVE] Installing requirements.txt"
 pip3 install -r requirements.txt
 
-python -m rasa_core.train interactive --core models/rasa_core --nlu models/rasa_nlu/current/nlu --endpoints config/dev-endpoints.yml
+python -m rasa_core.train interactive --core models/rasa_core --nlu current/nlu --endpoints config/dev-endpoints.yml --debug

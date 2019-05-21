@@ -1,5 +1,5 @@
-rasa-core
-rasa-nlu
+rasa-core==0.14.4
 spacy
 sklearn-crfsuite
-rasa-core-sdk
+rasa-core-sdk==0.14.0
+rasa-nlu==0.15.0
