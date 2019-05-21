@@ -163,6 +163,17 @@ This will be stored in Rasa database in our Mongo container.
 
 If you wish to change mongo's db endpoint, you should insert your new URL in the ./containers/eve-rasa/config/endpoints.yml file. Then, run <b>4.4</b> commands.
 
+## Heroku
+
+Heroku is hosting our Eve API, Eve Rasa Action Server and Eve Rasa Core. Basically, to refresh your changes there, you must run the commands below. 
+
+```
+heroku login
+heroku container:login
+heroku container:push web --app <HEROKU_APP_NAME>
+heroku container:release web --app <HEROKU_APP_NAME>
+```
+
 ## Tools
 
 ### Portainer
