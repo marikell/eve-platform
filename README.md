@@ -152,6 +152,15 @@ chmod +x train-core.sh
 ./train-core.sh
 ```
 
+### 3.4. Interactive Learning
+
+You can execute Rasa Interactive Learning, but not inside docker container. Run the script below, and it will run outside our containers. You must know that all Rasa running containers will be stopped.
+
+```
+chmod +x train-interactive.sh
+./train-interactive.sh
+```
+
 ### 3.5 Requests
 
 #### 3.5.1 Talking to your bot
@@ -180,7 +189,7 @@ This will return a bot response, like shown below.
 
 ### 3.6 Tracker store configuration
 
-If you wish to change mongo's db endpoint, you should insert your new URL in the ./containers/eve-rasa/config/endpoints.yml file. Then, run <b>4.4</b> commands.
+If you wish to change mongo's db endpoint, you should insert your new URL in the ./containers/eve-rasa/config/dev-endpoints.yml file. Then, run <b>3.2.2</b> commands.
 
 ## Heroku
 
