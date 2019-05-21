@@ -51,33 +51,12 @@ docker run --rm --network evemongo_evenetwork \
 mongo bash -c "mongorestore /backups \
 --host mongo:27017"
 ```
-## 2. Eve-app
 
-The idea of the application is to answer common questions about pregnancy, remind your users of important exams to be done, during pregnancy, to provide health.
-
-### 2.1 Running
-
-In your root directory (eve-platform), execute the commands below:
-
-```sh
-$ cd containers/eve-app
-
-$ docker build -t eve-app-image .
-
-$ docker run -d -p 19000:19000 -p 19001:19001 -p 19002:19002 -v $(pwd):/app \ 
---name eve_app eve-app-image
-```
-If you wish the docker container runs in the background, keep the <i>-d</i> option. Otherwise, remove it.
-
-Open up URL http://localhost:19002 and change the network type to tunnel. This will generate a QR Code, which will be used to open the app into Expo (Playstore App). Open <i><b>Expo</b></i> in your device and press the option to scan QR Code, and scan your app QR Code. 
-
-If you change anything in your app, it will be built inside docker container and refreshed.
-
-## 3. Eve-api
+## 2. Eve-api
 
 Eve-api is the main api of the platform. Through requests, we communicate with basically the entire application. The api that makes the main communication with the database.
 
-### 3.1 Running
+### 2.1 Running
 
 In your root directory (eve-platform), execute the commands below:
 
@@ -88,7 +67,7 @@ $ docker-compose -f api-compose.yml up
 ```
 Open up URL http://localhost:5001/ and it will appear a message <i>Flask is running in port 5001</i>.
 
-### 3.2 Configuration
+### 2.2 Configuration
 
 If you look inside /eve-api/src/config, you will find a file named database_config.py. In this file, we configure all mongo settings.
 
@@ -98,12 +77,12 @@ If you look inside /eve-api/src/config, you will find a file named database_conf
 
 If you need to change it, you have to change in this code. Our API is already pointing to the mongo inside docker container, by default. 
 
-## 4. Eve-rasa
+## 3. Eve-rasa
 Eve-Rasa contains all the files and models to run a Rasa Chatbot. We've used Rasa-Core, Rasa-NLU and Rasa-SDK to custom actions.
 
-### 4.1. Update your Rasa training data in the directory (eve-rasa).
+### 3.1. Update your Rasa training data in the directory (eve-rasa).
 
-### 4.2. Train the Rasa NLU Model
+### 3.2. Train the Rasa NLU Model
 
 Go to /eve-rasa/core directory and run these commands below.
 
@@ -116,7 +95,7 @@ chmod +x train_nlu.sh
 docker run --rm --network evemongo_evenetwork -v $(pwd):/app/project -v $(pwd)/models/rasa_nlu:/app/models rasa/rasa_nlu:latest-tensorflow run python -m rasa_nlu.train -c project/config/nlu_config.yml -d project/data/json/nlu.json -o models --fixed_model_name nlu --project current --verbose
 ```
 
-### 4.3. Train the Rasa Core Model
+### 3.3. Train the Rasa Core Model
 
 Go to /eve-rasa directory and run these commands below.
 
@@ -124,7 +103,7 @@ Go to /eve-rasa directory and run these commands below.
 docker run --rm --network evemongo_evenetwork -v $(pwd):/app/project -v $(pwd)/models/rasa_core:/app/models rasa/rasa_core:latest train --domain project/domain.yml --stories project/data/stories.md --out models --verbose
 ```
 
-### 4.4. Run Rasa Core with Rasa NLU
+### 3.4. Run Rasa Core with Rasa NLU
 
 To run all docker containers related to Rasa (eve_rasa_nlu, eve_action_server, eve_rasa_core), we will use a compose file. Go to {PROJECT_DIRECTORY}/containers/eve-rasa and run this command:
 
@@ -140,9 +119,9 @@ To make sure your rasa API is working, you can open URL http://localhost:5005 an
 
 Rasa containers communicate with mongo to track and store all bot's conversations.
 
-### 4.5 Requests
+### 3.5 Requests
 
-#### 4.5.1 Talking to your bot
+#### 3.5.1 Talking to your bot
 
 You can talk with your bot by sending POST requests with some parameters to URL http://localhost:5005/webhooks/rest/webhook.
 
@@ -165,7 +144,7 @@ This will return a bot response, like shown below.
 ]
 ```
 This will be stored in Rasa database in our Mongo container. 
-### 4.6 Tracker store configuration
+### 3.6 Tracker store configuration
 
 If you wish to change mongo's db endpoint, you should insert your new URL in the ./containers/eve-rasa/config/endpoints.yml file. Then, run <b>4.4</b> commands.
 
