@@ -28,7 +28,7 @@ python -m rasa_core.run -d models/dialogue -u models/nlu/nlu --debug --endpoints
 ### 5. Activate Action Server
 
 ```sh
-python -m rasa_core_sdk.endpoint --actions actions/actions
+python -m rasa_core_sdk.endpoint --actions actions.actions
 ```
 ### 6. Interactive learning
 
