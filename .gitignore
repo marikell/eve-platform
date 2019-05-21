@@ -1,13 +1,10 @@
-node_modules/
-.expo/*
-npm-debug.*
 __pycache__/
 *.py[cod]
 *$py.class
-containers/eve-rasa/models/rasa_nlu/current/nlu
-containers/eve-rasa/models/rasa_core
-containers/eve-rasa/core/models/rasa_nlu/current/nlu
-containers/eve-rasa/core/models/rasa_core
+# containers/eve-rasa/models/rasa_nlu/current/nlu
+# containers/eve-rasa/models/rasa_core
+# containers/eve-rasa/core/models/rasa_nlu/current/nlu
+# containers/eve-rasa/core/models/rasa_core
 containers/eve-rasa/core/env
 containers/eve-rasa/action-server/env
 containers/eve-api/src/config/database_config.py
