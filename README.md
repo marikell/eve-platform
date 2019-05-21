@@ -100,11 +100,17 @@ If you need to change it, you have to change in this code. Our API is already po
 
 ## 4. Eve-rasa
 Eve-Rasa contains all the files and models to run a Rasa Chatbot. We've used Rasa-Core, Rasa-NLU and Rasa-SDK to custom actions.
+
 ### 4.1. Update your Rasa training data in the directory (eve-rasa).
 
 ### 4.2. Train the Rasa NLU Model
 
-Go to /eve-rasa directory and run these commands below.
+Go to /eve-rasa/core directory and run these commands below.
+
+```
+chmod +x train_nlu.sh
+./train_nlu.sh
+```
 
 ```sh
 docker run --rm --network evemongo_evenetwork -v $(pwd):/app/project -v $(pwd)/models/rasa_nlu:/app/models rasa/rasa_nlu:latest-tensorflow run python -m rasa_nlu.train -c project/config/nlu_config.yml -d project/data/json/nlu.json -o models --fixed_model_name nlu --project current --verbose

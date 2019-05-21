@@ -1,51 +1,25 @@
 version: '3.0'
 services:
-  eve_rasa_core:
-    container_name: eve_rasa_core
-    image: rasa/rasa_core:latest
+  eve_nlu_core:
+    container_name: eve_nlu_core
+    image: eve-core-nlu
     networks:
       - evemongo_evenetwork
     ports:
       - 5005:5005
     volumes:
-      - ./models:/app/models
-      - ./config:/app/config
-    command:
-      - start
-      - --core
-      - models/rasa_core
-      - -c
-      - rest
-      - --endpoints
-      - config/endpoints.yml
-      - -u
-      - current/nlu
-      - --credentials
-      - config/credentials.yml
-      - --debug
-  eve_rasa_nlu:
-    container_name: eve_rasa_nlu
-    image: rasa/rasa_nlu:latest-tensorflow
-    networks: 
-      - evemongo_evenetwork
-    ports:
-      - 5000:5000
-    volumes:
-      - ./models/rasa_nlu:/app/models
-    command:
-      - start
-      - --path
-      - models
+      - ./core/models:/app/models
+      - ./core/config:/app/config
   eve_action_server:
     container_name: eve_action_server
-    build: .
+    image: eve-action-server
     networks: 
       - evemongo_evenetwork
     ports:
       - 5055:5055
     volumes:
-      - ./api:/app/api
-      - ./actions:/app/actions
+      - ./action-server/api:/app/api
+      - ./action-server/actions:/app/actions
       
 networks:
   evemongo_evenetwork:
@@ -53,6 +27,6 @@ networks:
 
 volumes:
   api:
-  rasa_nlu:
+  models:
   config:
   actions:

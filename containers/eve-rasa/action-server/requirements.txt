@@ -1,0 +1,6 @@
+requests
+nltk
+typing
+pandas
+rasa-core-sdk
+flask-cors
