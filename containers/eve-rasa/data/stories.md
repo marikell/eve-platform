@@ -465,4 +465,21 @@
 * goal_exam{"exam_entity": "glicemia"}
     - get_answer
 * when_exame{"exam_entity": "glicemia"}
+    - get_answer## Generated Story 6039986969556635083
+* hello
+    - action_greet_user
+* greeting_back
+    - utter_greet_answer
+    - utter_first_help
+
+## Generated Story 6158015074139116326
+* hello
+    - action_greet_user
+* greeting_answer
+    - utter_great
+    - utter_first_help
+* which_answer{"which_entity": "exerc\u00edcios"}
     - get_answer
+* bye
+    - utter_bye
+

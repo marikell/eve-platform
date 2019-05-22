@@ -1,32 +1,33 @@
 version: '3.0'
 services:
-  eve_nlu_core:
-    container_name: eve_nlu_core
-    image: eve-core-nlu
-    networks:
-      - evemongo_evenetwork
+  eve_core:
+    image: evecoreimage
+    container_name: eve_core
     ports:
       - 5005:5005
     volumes:
-      - ./core/models:/app/models
-      - ./core/config:/app/config
-  eve_action_server:
-    container_name: eve_action_server
-    image: eve-action-server
-    networks: 
+      - ./:/app
+    networks:
+      - evemongo_evenetwork
+    command:
+      - run
+      - --enable-api
+      - --verbose
+  eve_actionserver:
+    image: eveactionimage
+    container_name: eve_actionserver
+    networks:
       - evemongo_evenetwork
     ports:
       - 5055:5055
     volumes:
-      - ./action-server/api:/app/api
-      - ./action-server/actions:/app/actions
-      
+      - ./actions:/app/actions
+      - ./api:/app/api
+
 networks:
   evemongo_evenetwork:
     external: true
 
 volumes:
   api:
-  models:
-  config:
   actions:

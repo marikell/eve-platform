@@ -1,77 +1,84 @@
-import requests
-import json
-import nltk
-import pandas as pd
+from typing import Any, Text, Dict, List, Optional
+from rasa_sdk import Action, Tracker, ActionExecutionRejection
+from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.forms import FormAction, REQUESTED_SLOT
+from rasa_sdk.events import SlotSet
 from api.route_config import RouteConfig
-from typing import Dict, Text, Any, List, Union, Optional
-from rasa_core_sdk import Action
-from rasa_core_sdk import Tracker
-from rasa_core_sdk import ActionExecutionRejection
-from rasa_core_sdk.executor import CollectingDispatcher
-from rasa_core_sdk.forms import FormAction, REQUESTED_SLOT
-from rasa_core_sdk.events import SlotSet
-from nltk.stem import RSLPStemmer
-
 
 route_config = RouteConfig('5001','eve_api')
 
 route_config.register_route('action_subscribe','/action-answer')
 
-# class SubscribeAction(Action):
-#   def name(self):
-#     return "action_subscribe"
+class ActionHelloWorld(Action):
 
-#   def run(self, dispatcher, tracker, domain):
-#     intent = tracker.latest_message['intent'].get('name')
-#     entities = tracker.latest_message.get('entities', [])
+    def name(self) -> Text:
+        return "action_hello_world"
 
-#     entities_obj = [e for e in entities]
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-#     data = {
-#       'entities' : entities_obj,
-#       'intent' : intent
-#     }
+        dispatcher.utter_message("Hello World!")
 
-#     headers = {
-#       'Content-Type': 'application/json',
-#     }
+        return []
 
-#     req = requests.post(url = route_config.get_route('action_subscribe'),headers= headers,data=json.dumps(data))
+class ActionGreetUser(Action):
+    def name(self) -> Text:
+        return "action_greet_user"
 
-#     dispatcher.utter_message(req.json()['response'])
-#     return
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        intent = tracker.latest_message["intent"].get("name")
+        if intent == "hello":
+            dispatcher.utter_template("utter_introduce", tracker)
+            dispatcher.utter_template("utter_greet", tracker)
+        elif intent == "get_started":
+            dispatcher.utter_template("utter_introduce", tracker)
+            dispatcher.utter_template("utter_greet", tracker)            
+        elif intent == "greeting":
+            dispatcher.utter_template("utter_introduce", tracker)
+            dispatcher.utter_template("utter_greet_back", tracker)
+
+        return []
 
 class GetAnswer(Action):
-    def name(self):
+    def name(self) -> Text:
         return "get_answer"
-    def run(self, dispatcher, tracker, domain):
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         response = ""
         entities = tracker.latest_message['entities']
         intent = tracker.latest_message['intent'].get('name')
-        for entity in entities:
-            # stemmer = RSLPStemmer()
-            # stem_entity = stemmer.stem(entity['value'])
-            data = pd.read_csv('./api/dados.csv', encoding = 'utf-8')
-            list_data = data.values.tolist()
-            for l in list_data:
-                if intent in l and entity['value'] in l:
-                    response += str(l[2])
-        dispatcher.utter_message(response)
+        # for entity in entities:
+        #     # stemmer = RSLPStemmer()
+        #     # stem_entity = stemmer.stem(entity['value'])
+        #     data = pd.read_csv('./api/dados.csv', encoding = 'utf-8')
+        #     list_data = data.values.tolist()
+        #     for l in list_data:
+        #         if intent in l and entity['value'] in l:
+        #             response += str(l[2])
+        dispatcher.utter_message('Resposta')
 
 class CancelReminder(Action):
-    def name(self):
+    def name(self) -> Text:
         return "cancel_reminder"
-    def run(self, dispatcher, tracker, domain):
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
         response = "Ok, lembrete cancelado!"
         dispatcher.utter_message(response)
 
 class MedicineForm(FormAction):
     hours = []
-    def name(self):
+    def name(self) -> Text:
         return "medicine_form"
         
     @staticmethod
-    def required_slots(tracker):
+    def required_slots(tracker: Tracker):
         return [
             "med_name",
             "med_frequency",
@@ -164,44 +171,39 @@ class MedicineForm(FormAction):
         dispatcher.utter_message(response)
         # dispatcher.utter_template('utter_values_med', tracker)
         return []
-    
-class ActionGreetUser(Action):
-    def name(self):
-        return "action_greet_user"
-
-    def run(self, dispatcher, tracker, domain):
-        intent = tracker.latest_message["intent"].get("name")
-        if intent == "hello":
-            dispatcher.utter_template("utter_introduce", tracker)
-            dispatcher.utter_template("utter_greet", tracker)
-        elif intent == "get_started":
-            dispatcher.utter_template("utter_introduce", tracker)
-            dispatcher.utter_template("utter_greet", tracker)            
-        elif intent == "greeting":
-            dispatcher.utter_template("utter_introduce", tracker)
-            dispatcher.utter_template("utter_greet_back", tracker)
-        return []
 
 class ActionCityUser(Action):
-    def name(self):
+    def name(self) -> Text:
         return "action_city_user"
 
-    def run(self, dispatcher, tracker, domain):        
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:     
+
         dispatcher.utter_template("utter_great", tracker)
+
         return []
 
 class ActionStateUser(Action):
-    def name(self):
+    def name(self) -> Text:
         return "action_state_user"
 
-    def run(self, dispatcher, tracker, domain):        
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
         dispatcher.utter_template("utter_great", tracker)
+
         return []
 
 class ActionAgeUser(Action):
-    def name(self):
+    def name(self) -> Text:
         return "action_age_user"
 
-    def run(self, dispatcher, tracker, domain):        
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:   
+
         dispatcher.utter_template("utter_great", tracker)
+
         return []

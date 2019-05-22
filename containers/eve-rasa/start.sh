@@ -1,6 +1,6 @@
-echo "[EVE] Creating Rasa Core NLU image"
-docker build -t eve-core-nlu ./core
-echo "[EVE] Creating Rasa Action Server"
-docker build -t eve-action-server ./action-server
-echo "[EVE] Starting local containers"
+echo "[EVE] creating eve core image"
+docker build -t evecoreimage .
+echo "[EVE] creating eve action server image"
+docker build -t eveactionimage .
+echo "[EVE] starting local containers"
 docker-compose -f rasa-compose.yml up -d
