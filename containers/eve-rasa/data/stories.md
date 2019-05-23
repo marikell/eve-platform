@@ -465,7 +465,7 @@
 * goal_exam{"exam_entity": "glicemia"}
     - get_answer
 * when_exame{"exam_entity": "glicemia"}
-    - get_answer## Generated Story 6039986969556635083
+    - get_answer
 * hello
     - action_greet_user
 * greeting_back

@@ -8,12 +8,12 @@ services:
     volumes:
       - ./:/app
     networks:
-      - eve-mongo_evenetwork
+      - evemongo_evenetwork
   eve_actionserver:
     image: eveactionimage
     container_name: eve_actionserver
     networks:
-      - eve-mongo_evenetwork
+      - evemongo_evenetwork
     ports:
       - 5055:5055
     volumes:
@@ -21,7 +21,7 @@ services:
       - ./api:/app/api
 
 networks:
-  eve-mongo_evenetwork:
+  evemongo_evenetwork:
     external: true
 
 volumes:
