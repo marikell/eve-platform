@@ -1,9 +1,7 @@
 action_endpoint:
  url: "https://eve_actionserver:5055/webhook"
 
- # tracker_store:
-#    type: mongod
-#    url: <url to your mongo instance, e.g. mongodb://localhost:27017>
-#    db: <name of the db within your mongo instance, e.g. rasa>
-#    username: <username used for authentication>
-#    password: <password used for authentication>
+ tracker_store:
+  type: mongod
+  url: mongodb://eve_mongo:27017
+  db: evedb

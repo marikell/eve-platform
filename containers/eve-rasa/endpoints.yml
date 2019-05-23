@@ -7,3 +7,5 @@ action_endpoint:
 #    db: <name of the db within your mongo instance, e.g. rasa>
 #    username: <username used for authentication>
 #    password: <password used for authentication>
+
+

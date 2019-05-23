@@ -3,3 +3,4 @@ __pycache__/
 *$py.class
 containers/eve-rasa/env
 containers/eve-api/src/config/database_config.py
+containers/eve-rasa/endpoints.yml
