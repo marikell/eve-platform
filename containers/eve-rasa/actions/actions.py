@@ -3,11 +3,35 @@ from rasa_sdk import Action, Tracker, ActionExecutionRejection
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction, REQUESTED_SLOT
 from rasa_sdk.events import SlotSet
-from api.route_config import RouteConfig
+# from api.route_config import RouteConfig
 
-route_config = RouteConfig('5001','eve_api')
+# route_config = RouteConfig('5001','eve_api')
 
-route_config.register_route('action_subscribe','/action-answer')
+# route_config.register_route('action_subscribe','/action-answer')
+
+# class SubscribeAction(Action):
+#   def name(self):
+#     return "action_subscribe"
+
+#   def run(self, dispatcher, tracker, domain):
+#     intent = tracker.latest_message['intent'].get('name')
+#     entities = tracker.latest_message.get('entities', [])
+
+#     entities_obj = [e for e in entities]
+
+#     data = {
+#       'entities' : entities_obj,
+#       'intent' : intent
+#     }
+
+#     headers = {
+#       'Content-Type': 'application/json',
+#     }
+
+#     req = requests.post(url = route_config.get_route('action_subscribe'),headers= headers,data=json.dumps(data))
+
+#     dispatcher.utter_message(req.json()['response'])
+#     return
 
 class ActionHelloWorld(Action):
 
@@ -60,7 +84,7 @@ class GetAnswer(Action):
         #     for l in list_data:
         #         if intent in l and entity['value'] in l:
         #             response += str(l[2])
-        dispatcher.utter_message('Resposta')
+        dispatcher.utter_message('Testeeeee!!!')
 
 class CancelReminder(Action):
     def name(self) -> Text:
