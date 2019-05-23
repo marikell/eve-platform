@@ -2,26 +2,18 @@ version: '3.0'
 services:
   eve_core:
     image: evecoreimage
-    container_name: eve-core
+    container_name: eve_core
     ports:
       - 5005:5005
     volumes:
       - ./:/app
     networks:
-      - evemongo_evenetwork
-    # command:
-    #   - run
-    #   - -m
-    #   - models/20190522-023305.tar.gz
-    #   - --endpoints
-    #   - endpoints.yml
-    #   - --enable-api
-    #   - --debug
+      - eve-mongo_evenetwork
   eve_actionserver:
     image: eveactionimage
-    container_name: eve-actionserver
+    container_name: eve_actionserver
     networks:
-      - evemongo_evenetwork
+      - eve-mongo_evenetwork
     ports:
       - 5055:5055
     volumes:
@@ -29,7 +21,7 @@ services:
       - ./api:/app/api
 
 networks:
-  evemongo_evenetwork:
+  eve-mongo_evenetwork:
     external: true
 
 volumes:

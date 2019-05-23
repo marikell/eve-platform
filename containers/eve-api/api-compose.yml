@@ -5,11 +5,11 @@ services:
      build: .
     #  restart: always
      networks:
-       - evemongo_evenetwork
+       - eve-mongo_evenetwork
      volumes:
          - ./src:/app/src
      ports:
        - 5001:5001
 networks:
-  evemongo_evenetwork:
+  eve-mongo_evenetwork:
     external: true
