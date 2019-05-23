@@ -9,14 +9,14 @@ services:
       - ./:/app
     networks:
       - evemongo_evenetwork
-    command:
-      - run
-      - -m
-      - models/20190522-023305.tar.gz
-      - --endpoints
-      - endpoints.yml
-      - --enable-api
-      - --debug
+    # command:
+    #   - run
+    #   - -m
+    #   - models/20190522-023305.tar.gz
+    #   - --endpoints
+    #   - endpoints.yml
+    #   - --enable-api
+    #   - --debug
   eve_actionserver:
     image: eveactionimage
     container_name: eve-actionserver
