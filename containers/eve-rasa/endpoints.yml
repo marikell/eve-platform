@@ -1,5 +1,5 @@
 action_endpoint:
- url: "http://eve_actionserver:5055/webhook"
+ url: "https://eve_actionserver:5055/webhook"
 
  # tracker_store:
 #    type: mongod
