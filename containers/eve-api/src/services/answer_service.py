@@ -13,5 +13,5 @@ class AnswerService(GenericService):
         answer = Answer(text=obj['text'])
         answer.save()
     def get(self, id):
-        answer = Answer.objects(Q(_id=ObjectId(id))).first()
+        answer = Answer.objects.get(Q(_id=ObjectId(id)))
         return answer
