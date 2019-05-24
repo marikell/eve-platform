@@ -1,11 +1,10 @@
 action_endpoint:
  url: "https://eveas.herokuapp.com/webhook"
 
- # tracker_store:
-#    type: mongod
-#    url: <url to your mongo instance, e.g. mongodb://localhost:27017>
-#    db: <name of the db within your mongo instance, e.g. rasa>
-#    username: <username used for authentication>
-#    password: <password used for authentication>
-
-
+tracker_store:
+    type: mongod
+    url: mongodb://<username>:<password>@<clustername>-shard-00-00-90nlz.mongodb.net:27017,<clustername>-shard-00-01-90nlz.mongodb.net:27017,<clustername>-shard-00-02-90nlz.mongodb.net:27017/<dbname>?ssl=true&replicaSet=EveCluster-shard-0&authSource=<authsource>&retryWrites=true'
+    db: <dbname>
+    username: <username>
+    password: <password>
+    auth_source: <authsource>
