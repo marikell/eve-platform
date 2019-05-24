@@ -7,33 +7,9 @@ import requests
 import json
 from route_config import RouteConfig
 
-route_config = RouteConfig('5001','eve_api')
+route_config = RouteConfig('http://eve_api:5001')
 
 route_config.register_route('get_answer','/action-answer')
-
-# class SubscribeAction(Action):
-#   def name(self):
-#     return "action_subscribe"
-
-#   def run(self, dispatcher, tracker, domain):
-#     intent = tracker.latest_message['intent'].get('name')
-#     entities = tracker.latest_message.get('entities', [])
-
-#     entities_obj = [e for e in entities]
-
-#     data = {
-#       'entities' : entities_obj,
-#       'intent' : intent
-#     }
-
-#     headers = {
-#       'Content-Type': 'application/json',
-#     }
-
-#     req = action_subscribepost(url = route_config.get_route('action_subscribe'),headers= headers,data=json.dumps(data))
-
-#     dispataction_subscriber_message(req.json()['response'])
-#     returnaction_subscribe
 
 class GetAnswer(Action):
     def name(self) -> Text:
@@ -41,39 +17,33 @@ class GetAnswer(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        response = ""
+
         intent = tracker.latest_message['intent'].get('name')
-        entities = tracker.latest_message.get('entities', [])
-        entities_obj = [e for e in entities]
+        entities = tracker.latest_message['entities']
+        entities_obj = [e.get('value') for e in entities]
+
+        response = 'Desculpe, nao consegui compreender!'
 
         data = {
-            'entities' : ['exercicios'],
-            'intent' : 'which_entity'
+            'entities' : entities_obj,
+            'intent' : intent
         }
 
         headers = {
             'Content-Type':'application/json'
         }
 
-        try:
-
+        try:        
             req = requests.post(url = route_config.get_route('get_answer'),headers= headers,data=json.dumps(data))
+            json_obj = req.json()
 
-            # json_obj = req.json()
+            if json_obj.get('response') is not None:
+                response = json_obj['response']
+            
+            dispatcher.utter_message(response)
 
-            json_obj = json.loads(req.text)
-
-        # text = req.text()
-            text = json_obj['response']
-        
-        except Exception as e:
-            text = str(e)
-
-
-        response = ('Desculpe, não consegui compreender!' if text is '' else text)
-
-        dispatcher.utter_message(response)
-
+        except:
+            dispatcher.utter_message(response)
 
 class ActionHelloWorld(Action):
 
