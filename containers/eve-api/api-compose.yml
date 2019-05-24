@@ -7,7 +7,7 @@ services:
      networks:
        - evemongo_evenetwork
      volumes:
-         - ./src:/app/src
+         - ./:/app/
      ports:
        - 5001:5001
 networks:
