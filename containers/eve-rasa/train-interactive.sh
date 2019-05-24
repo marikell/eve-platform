@@ -8,4 +8,4 @@ source env/bin/activate
 echo "[EVE] installing requirements.txt"
 pip3 install -r requirements.txt
 
-rasa interactive -m models/20190523-210708.tar.gz --endpoints dev-endpoints.yml
+rasa interactive -m models/core.tar.gz --endpoints dev-endpoints.yml
