@@ -39,7 +39,7 @@ docker run --rm --network evemongo_evenetwork \
 mongo bash -c "mongodump --out /backups \
 --host mongo:27017"
 ```
-This will generate two backup files and you can go to /container/eve-mongo/backups to get them. 
+- This will generate two backup files and you can go to /container/eve-mongo/backups to get them. If you wish to backup your production database, you can change the host argument and run the command above.
 
 ### 1.4 Restore
 
@@ -51,6 +51,8 @@ docker run --rm --network evemongo_evenetwork \
 mongo bash -c "mongorestore /backups \
 --host mongo:27017"
 ```
+
+- You can run the same command to production database. Just change host argument. 
 
 ## 2. Eve-api
 
