@@ -1,4 +1,4 @@
-echo "[EVE] starting rasa action server"
+echo "[EVE] starting local rasa action server"
 if [ ! -d "env" ]; then
     python3 -m virtualenv env
 fi
