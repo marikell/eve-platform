@@ -3,7 +3,7 @@ services:
  eve_api:
      container_name: eve_api
      build: .
-    #  restart: always
+     restart: always
      networks:
        - evemongo_evenetwork
      volumes:
