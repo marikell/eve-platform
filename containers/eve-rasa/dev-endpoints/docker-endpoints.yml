@@ -1,10 +1,6 @@
 action_endpoint:
  url: "http://eve_actionserver:5055/webhook"
 
-#This line will be used to execute interactive learning
-# action_endpoint:
-#  url: "http://localhost:5055/webhook"
-
 tracker_store:
   type: mongod
   url: mongodb://eve_mongo:27017/evedb
