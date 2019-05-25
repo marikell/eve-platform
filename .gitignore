@@ -10,3 +10,4 @@ containers/eve-rasa/rasa.database_config
 containers/eve-rasa/rasa.db
 containers/eve-rasa/tracker.db
 containers/eve-mongo/backups
+containers/eve-api/src/config/mongo_configuration.json

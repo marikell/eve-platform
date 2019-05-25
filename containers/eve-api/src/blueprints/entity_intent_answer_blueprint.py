@@ -51,3 +51,13 @@ def findby_intent_entities():
 
     except:
        return response('')
+
+@app_entity_intent_answer.route('/{}/<id>'.format(route_name), methods=['GET'])
+def get(id):
+    try:
+        entity_intent_answer_obj = ServiceHandler.get_service(route_name).get(id)
+
+        return response(entity_intent_answer_obj.to_json(), status.HTTP_200_OK)
+
+    except Exception as e:
+        return response(str(e), status.HTTP_400_BAD_REQUEST)
