@@ -2,16 +2,12 @@ from flask import Blueprint, request, jsonify
 from werkzeug import Response
 from flask_api import status
 from utils import mongo_encoder as MongoEncoder
-from utils.response_formatter import response
-from services.entity_intent_answer_service import EntityIntentAnswerService
-from services.answer_service import AnswerService
+from utils.response_formatter import response, response_text
+from services.service_handler import ServiceHandler
+from config.route_config import RouteConfig
 
-route_name = 'entity-intent-answer'
+route_name = RouteConfig.get('ENTITY_INTENT_ANSWER_TYPE_NAME')
 app_entity_intent_answer = Blueprint(route_name,__name__,url_prefix='/api')
-
-#services
-entity_intent_answer_service = EntityIntentAnswerService()
-answer_service = AnswerService()
 
 @app_entity_intent_answer.route('/{}'.format(route_name), methods=['GET'])
 def index():
@@ -23,8 +19,7 @@ def insert():
         json = request.get_json()
         entities = json['entities']
         intent = json['intent']
-        answer = answer_service.get(json['answer_id']['$oid'])
-
+        answer = ServiceHandler.get_service(RouteConfig.get('ANSWER_TYPE_NAME')).get(json['answer_id']['$oid'])
         if answer is None:
             return response('Answer not found!', status.HTTP_400_BAD_REQUEST)
 
@@ -34,7 +29,7 @@ def insert():
             'answer': answer
         }
 
-        entity_intent_answer_service.insert(obj)
+        ServiceHandler.get_service(route_name).insert(obj)
         return response(status=status.HTTP_201_CREATED)
 
     except Exception as e:
@@ -47,12 +42,12 @@ def findby_intent_entities():
         entities = json['entities']
         intent = json['intent']
         
-        action_answer = entity_intent_answer_service.action_answer(entities, intent)
+        action_answer = ServiceHandler.get_service(route_name).action_answer(entities, intent)
         
         if action_answer is not None:
             text = action_answer.answer_id.text
 
-        return response(text)
+        return response_text(text)
 
     except:
        return response('')

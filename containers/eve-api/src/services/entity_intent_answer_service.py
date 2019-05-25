@@ -5,7 +5,7 @@ from services.generic_service import GenericService
 
 class EntityIntentAnswerService(GenericService):
     def __init__(self):
-        super().__init__()        
+        super().__init__(EntityIntentAnswer.objects)        
 
     def insert(self, obj):
         entity_insert_answer = EntityIntentAnswer(entities=obj['entities'], 

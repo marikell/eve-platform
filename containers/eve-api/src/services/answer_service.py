@@ -7,11 +7,8 @@ from bson.objectid import ObjectId
 
 class AnswerService(GenericService):
     def __init__(self):
-        super().__init__()       
+        super().__init__(Answer.objects)       
 
     def insert(self, obj):
         answer = Answer(text=obj['text'])
         answer.save()
-    def get(self, id):
-        answer = Answer.objects.get(Q(_id=ObjectId(id)))
-        return answer

@@ -1,4 +1,5 @@
 from flask import jsonify
+
 def response(json = None, status = None):
     r = {}
     if json is not None:
@@ -7,7 +8,7 @@ def response(json = None, status = None):
         r['status'] = status    
     return jsonify(r)
 
-def response(text = '', status = None):
+def response_text(text = '', status = None):
     r = {}
     if text is not '':
         r['response'] = text

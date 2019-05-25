@@ -3,13 +3,12 @@ from werkzeug import Response
 from utils import mongo_encoder as MongoEncoder
 from services.answer_service import AnswerService
 from flask_api import status
-from utils.response_formatter import response
+from utils.response_formatter import response, response_text
+from services.service_handler import ServiceHandler
+from config.route_config import RouteConfig
 
-route_name = 'answer'
+route_name = RouteConfig.get('ANSWER_TYPE_NAME')
 app_answer = Blueprint(route_name,__name__, url_prefix='/api')
-
-#service
-answer_service = AnswerService()
 
 @app_answer.route('/{}'.format(route_name), methods=['GET'])
 def index():
@@ -28,16 +27,16 @@ def insert():
             "text": text
         }
 
-        answer_service.insert(obj)    
+        ServiceHandler.get_service(route_name).insert(obj)    
         
         return response(status=status.HTTP_201_CREATED)
     except Exception as e:
-        return response(str(e), status.HTTP_400_BAD_REQUEST)
+        return response_text(str(e), status.HTTP_400_BAD_REQUEST)
 
 @app_answer.route('/{}/<id>'.format(route_name), methods=['GET'])
 def get(id):
     try:
-        answer_obj = answer_service.get(id)
+        answer_obj = ServiceHandler.get_service(route_name).get(id)
 
         return response(answer_obj.to_json(), status.HTTP_200_OK)
 
