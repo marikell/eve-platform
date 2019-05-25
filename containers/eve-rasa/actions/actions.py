@@ -3,9 +3,9 @@ from rasa_sdk import Action, Tracker, ActionExecutionRejection
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction, REQUESTED_SLOT
 from rasa_sdk.events import SlotSet
+from route_config import RouteConfig
 import requests
 import json
-from route_config import RouteConfig
 
 route_config = RouteConfig('http://eve_api:5001')
 
