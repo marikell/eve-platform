@@ -144,7 +144,7 @@ chmod +x start-rasa-x.sh
 
 ### 3.6. Interactive Learning
 
-You can execute Rasa Interactive Learning, but not inside docker container. Run the script below, and it will run outside our containers. You must know that all Rasa running containers will be stopped.
+You can execute Rasa Interactive Learning via terminal, but not inside docker container. Run the script below, and it will run outside our containers. You must know that all Rasa running containers will be stopped.
 
 ```
 chmod +x train-interactive.sh
