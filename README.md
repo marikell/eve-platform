@@ -71,52 +71,31 @@ $ docker-compose -f api-compose.yml up
 
 ### 2.2 Configuration
 
-If you look inside /eve-api/src/config, you will find a file named database_config.py. In this file, we configure all mongo settings.
+If you look inside /eve-api/src/config, you will find a file named mongo_configuration.json. In this file, we configure all mongo settings.
 
-| Mongo Database Name | Mongo Uri |
-| :---: | :---: |
-| evedb  | mongodb://eve_mongo:27017/evedb  |
+```javascript
+{
+    "DATABASE_NAME": "evedb",
+    "DATABASE_URL": "mongodb://eve_mongo:27017/evedb"
+}
+```
 
 - If you need to change it, you have to change in this code. Our API is already pointing to the mongo inside docker container, by default. 
 
 ## 3. Eve-rasa
-Eve-Rasa contains all the files and models to run a Rasa Chatbot. We've used Rasa-Core, Rasa-NLU and Rasa-SDK to custom actions.
+Eve-Rasa contains all the files and models to run a Rasa Chatbot.
 
-### 3.1. Update your Rasa training data in the directory (eve-rasa).
+### 3.1. Update your Rasa training data in the directory /containers/eve-rasa.
 
 ### 3.2. Running in Docker
 
-#### 3.2.1. Building Image
-
-- In this step, we will build docker images and run Rasa containers.
-
-##### 3.2.1.1 Rasa NLU and Rasa Core
-If you just cloned our project, you should build our rasa image, so you can run commands inside containers. 
-
-To build our image, go to containers/eve-rasa/core and run the script below
-
-```sh
-chmod +x build-rcn.sh
-./build-rcn.sh
-```
-##### 3.2.1.2 Action Server
-
-You should also build Action Server image. To do it, you must run the script below, in containers/eve-rasa/action-server directory.
-
-```sh
-chmod +x build-as.sh
-./build-as.sh
-```
-
-#### 3.2.2 Containers
-
-Now you have built all our images, make sure you have your trained models. If you have not, Rasa Core container will not run. 
+To start our containers, make sure you have your trained models. If you have not, Rasa Core container will not run. By default, our Dockerfile is configured to build with docker-endpoints.yml, which is our configuration to communicate with Mongo Container and Rasa Action Server container. Our production configuration is inside endpoints.yml. 
 
 Go to containers/eve-rasa and run:
 ```sh
 docker-compose -f rasa-compose.yml up -d
 ```
-Now, our Rasa containers are running and you can check their status using Portainer or running the command below
+- Now, our Rasa containers are running and you can check their status using Portainer or running the command below
 
 ```sh
 docker ps
@@ -125,47 +104,56 @@ docker ps
 
 - Rasa containers communicate with mongo to track and store all bot's conversations.
 
-#### 3.2.3 Script
+#### 3.2.1 Script
 
-To do all the steps before, you can run them by a single script. Our <i>start.sh</i> script builds our images and run the containers. 
+To do all the steps before, you can run them by a single script. Our <i>start-rasa-containers.sh</i> script runs Rasa Action Server and Rasa containers. 
 
 - Go to containers/eve-rasa and run the commands below
 
 ```sh
-chmod +x start.sh
-./start.sh
+chmod +x start-rasa-containers.sh
+./start-rasa-containers.sh
 ```
+### 3.3 Train the Rasa Model
 
-### 3.2. Train the Rasa NLU Model
-
-Go to /eve-rasa/core directory and run these commands below, so you can run train-nlu.sh script. This step will require our built docker images  .
-
-```
-chmod +x train-nlu.sh
-./train-nlu.sh
-```
-
-### 3.3. Train the Rasa Core Model
-
-Go to /eve-rasa/core directory and run these commands below, so you can run train-core.sh script.
+Go to containers/eve-rasa directory and run these commands below, so you can run train.sh script.
 
 ```
-chmod +x train-core.sh
-./train-core.sh
+chmod +x train.sh
+./train.sh
+```
+If you check containers/eve-rasa/models directory, you will find our trained model. 
+
+### 3.4 Local Rasa Action Server
+
+If you wish to use Rasa X, you should start a local environment for Rasa Action Server. To do so, just run these commands below, in containers/eve-rasa directory.
+
+```
+chmod +x start-action-server.sh
+./start-action-server.sh
 ```
 
-### 3.4. Interactive Learning
+### 3.5 Rasa X
 
-You can execute Rasa Interactive Learning, but not inside docker container. Run the script below, and it will run outside our containers. You must know that all Rasa running containers will be stopped.
+Go to containers/eve-rasa directory and run these commands below, so you can run start-rasa-x.sh script. With Rasa X you can talk to your bot or start interactive learning. Make sure you have started your local action server, in other terminal.  You must know that all Rasa running containers will be stopped. 
+
+```
+chmod +x start-rasa-x.sh
+./start-rasa-x.sh
+```
+
+### 3.6. Interactive Learning
+
+You can execute Rasa Interactive Learning via terminal, but not inside docker container. Run the script below, and it will run outside our containers. You must know that all Rasa running containers will be stopped.
 
 ```
 chmod +x train-interactive.sh
 ./train-interactive.sh
 ```
 
-### 3.5 Requests
+### 3.7 Requests
 
-#### 3.5.1 Talking to your bot
+<b>Talking to your bot</b>
 
 You can talk with your bot by sending POST requests with some parameters to URL http://localhost:5005/webhooks/rest/webhook.
 
@@ -189,20 +177,17 @@ This will return a bot response, like shown below.
 ```
 - This will be stored in Rasa database in our Mongo container. 
 
-### 3.6 Tracker store configuration
-
-If you wish to change mongo's db endpoint, you should insert your new URL in the ./containers/eve-rasa/config/dev-endpoints.yml file. Then, run <b>3.2.2</b> commands.
-
 ## Heroku
 
-Heroku is hosting our Eve API, Eve Rasa Action Server and Eve Rasa Core. Basically, to refresh your changes there, you must run the commands below. 
+Heroku is hosting our Eve API, Eve Rasa Action Server and Eve Rasa Core. Basically, to refresh your changes there, you must run the script below.
+
+- Go to the Container's directory you wish to Deploy. Check if your Dockerfile is pointing to production configuration's and run the command below.
 
 ```
-heroku login
-heroku container:login
-heroku container:push web --app <HEROKU_APP_NAME>
-heroku container:release web --app <HEROKU_APP_NAME>
+chmod +x ../../deploy.sh
+../../deploy.sh
 ```
+- This will deploy your container image to Heroku's application.
 
 ## Tools
 
