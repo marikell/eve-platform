@@ -2,4 +2,6 @@ flask
 Flask-PyMongo
 mongoengine
 flask_api
+pytest
+pytest-cov
 # flask_restful

@@ -1,13 +1,15 @@
 __pycache__/
 *.py[cod]
 *$py.class
+.vscode
 containers/eve-rasa/env
 containers/eve-rasa/actions/env
-containers/eve-api/src/config/database_config.py
 containers/eve-rasa/endpoints.yml
 containers/eve-rasa/rasa_core.log
 containers/eve-rasa/rasa.database_config
 containers/eve-rasa/rasa.db
 containers/eve-rasa/tracker.db
+containers/eve-api/app/config/database_config.py
+containers/eve-api/app/config/mongo_configuration.json
+containers/eve-api/env
 containers/eve-mongo/backups
-containers/eve-api/src/config/mongo_configuration.json

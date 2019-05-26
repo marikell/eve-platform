@@ -1,6 +1,5 @@
 from flask import Blueprint, jsonify, request
 from werkzeug import Response
-from utils import mongo_encoder as MongoEncoder
 from services.answer_service import AnswerService
 from flask_api import status
 from utils.response_formatter import response, response_text

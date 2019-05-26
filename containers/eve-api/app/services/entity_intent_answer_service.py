@@ -1,6 +1,5 @@
 from mongoengine.queryset.visitor import Q
 from models.entity_intent_answer import EntityIntentAnswer
-from utils.mongo_encoder import jsonify
 from services.generic_service import GenericService
 
 class EntityIntentAnswerService(GenericService):

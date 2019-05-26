@@ -12,7 +12,7 @@ class GenericService():
     def get_all(self):
         return self.objects
 
-    def get(self, id:str):
+    def get(self, id):
         obj = self.objects.get(Q(_id=ObjectId(id)))
         return obj
     
