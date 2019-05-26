@@ -183,14 +183,15 @@ If you wish to change mongo's db endpoint, you should insert your new URL in the
 
 ## Heroku
 
-Heroku is hosting our Eve API, Eve Rasa Action Server and Eve Rasa Core. Basically, to refresh your changes there, you must run the commands below. 
+Heroku is hosting our Eve API, Eve Rasa Action Server and Eve Rasa Core. Basically, to refresh your changes there, you must run the script below.
+
+- Go to the Container's directory you wish to Deploy. Check if your Dockerfile is pointing to production configuration's and run the command below.
 
 ```
-heroku login
-heroku container:login
-heroku container:push web --app <HEROKU_APP_NAME>
-heroku container:release web --app <HEROKU_APP_NAME>
+chmod +x ../../deploy.sh
+../../deploy.sh
 ```
+- This will deploy your container image to Heroku's application.
 
 ## Tools
 
