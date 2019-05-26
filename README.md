@@ -177,10 +177,6 @@ This will return a bot response, like shown below.
 ```
 - This will be stored in Rasa database in our Mongo container. 
 
-### 3.8 Tracker store configuration
-
-If you wish to change mongo's db endpoint, you should insert your new URL in the ./containers/eve-rasa/config/dev-endpoints.yml file. Then, run <b>3.2.2</b> commands.
-
 ## Heroku
 
 Heroku is hosting our Eve API, Eve Rasa Action Server and Eve Rasa Core. Basically, to refresh your changes there, you must run the script below.
