@@ -11,3 +11,12 @@ class AnswerService(GenericService):
     def insert(self, obj):
         answer = Answer(text=obj['text'])
         answer.save()
+
+    def update(self, obj):
+        answer = self.get(obj['id'])
+
+        if not answer:
+            raise Exception('Object with id {} not found!'.format(obj['id']))
+
+        answer.text = obj['text']
+        answer.save()

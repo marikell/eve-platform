@@ -13,6 +13,11 @@ class GenericService():
         return self.objects
 
     def get(self, id):
-        obj = self.objects.get(Q(_id=ObjectId(id)))
+        obj = self.objects(Q(_id=ObjectId(id))).first()
         return obj
-    
+
+    def delete(self, id):
+        obj = self.get(id)
+        if not obj:
+            raise Exception('Object with id {} not found!'.format(id))
+        obj.delete()
