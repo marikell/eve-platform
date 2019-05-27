@@ -1,9 +1,9 @@
-from mongoengine import *
 from models.answer import Answer
+from models.db_model import db
 
-class EntityIntentAnswer(DynamicDocument):
-    entities = ListField(StringField(max_length=50), required=False)
-    intent = StringField(max_length=100, required=True)
-    answer_id = ReferenceField(Answer, required=True)
+class EntityIntentAnswer(db.DynamicDocument):
+    entities = db.ListField(db.StringField(max_length=50), required=False)
+    intent = db.StringField(max_length=100, required=True)
+    answer_id = db.ReferenceField(Answer, required=True)
 
     

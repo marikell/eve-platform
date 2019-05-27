@@ -4,4 +4,5 @@ mongoengine
 flask_api
 pytest
 pytest-cov
+flask-mongoengine
 # flask_restful

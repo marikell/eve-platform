@@ -1,5 +1,5 @@
-from mongoengine import *
+from models.db_model import db
 
-class Answer(DynamicDocument):
-    text = StringField(max_length=1000, required=True)
+class Answer(db.DynamicDocument):
+    text = db.StringField(max_length=1000, required=True)
     

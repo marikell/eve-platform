@@ -4,10 +4,10 @@ from services.answer_service import AnswerService
 from flask_api import status
 from utils.response_formatter import response, response_text
 from services.service_handler import ServiceHandler
-from config.route_config import RouteConfig
+from config.configuration import ROUTE_CONFIG
 from utils.validate_fields import *
 
-route_name = RouteConfig.get('ANSWER_TYPE_NAME')
+route_name = ROUTE_CONFIG['ANSWER_TYPE_NAME']
 app_answer = Blueprint(route_name,__name__, url_prefix='/api')
 
 def validate_answer_request(json):

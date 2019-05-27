@@ -7,15 +7,19 @@ from services.service_handler import ServiceHandler
 from flask_api import FlaskAPI
 from utils.config_json import read_json
 from mongoengine import connect
-from config.route_config import RouteConfig
 import os
+from config.configuration import MONGO_CONFIG
+from flask_mongoengine import MongoEngine
+from models.db_model import db
 
 flask_app = FlaskAPI(__name__)
 
-def connect_db():
-    config_object = read_json(os.path.abspath('./app/config/mongo_configuration.json'))
+flask_app.config['MONGODB_SETTINGS'] = {
+    'db': MONGO_CONFIG['db'],
+    'host': MONGO_CONFIG['host']
+}
 
-    connect(config_object['DATABASE_NAME'], host=config_object['DATABASE_URL'])
+db.init_app(flask_app)
 
 def register_blueprints(app):
     app.register_blueprint(app_answer)
@@ -28,7 +32,6 @@ def get():
     
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5001))
-    connect_db()
     ServiceHandler.register_services()
     register_blueprints(flask_app)
     flask_app.run(debug=True, host='0.0.0.0', port=port)
