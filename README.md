@@ -126,7 +126,7 @@ If you check containers/eve-rasa/models directory, you will find our trained mod
 
 ### 3.4 Local Rasa Action Server
 
-If you wish to use Rasa X, you should start a local environment for Rasa Action Server. To do so, just run these commands below, in containers/eve-rasa directory.
+If you wish to use Rasa X, you should start a local environment for Rasa Action Server. To do so, just run these commands below, in containers/eve-rasa/actions directory.
 
 ```
 chmod +x ./scripts/start-action-server.sh
