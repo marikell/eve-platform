@@ -71,7 +71,7 @@ $ docker-compose -f api-compose.yml up
 
 ### 2.2 Configuration
 
-If you look inside /eve-api/src/config, you will find a file named mongo_configuration.json. In this file, we configure all mongo settings.
+If you look inside /eve-api/config, you will find a file named mongo_configuration.json. In this file, we configure all mongo settings.
 
 ```javascript
 {
@@ -111,16 +111,16 @@ To do all the steps before, you can run them by a single script. Our <i>start-ra
 - Go to containers/eve-rasa and run the commands below
 
 ```sh
-chmod +x start-rasa-containers.sh
-./start-rasa-containers.sh
+chmod +x ./scripts/start-rasa-containers.sh
+./scripts/start-rasa-containers.sh
 ```
 ### 3.3 Train the Rasa Model
 
 Go to containers/eve-rasa directory and run these commands below, so you can run train.sh script.
 
 ```
-chmod +x train.sh
-./train.sh
+chmod +x ./scripts/train.sh
+./scripts/train.sh
 ```
 If you check containers/eve-rasa/models directory, you will find our trained model. 
 
@@ -129,8 +129,8 @@ If you check containers/eve-rasa/models directory, you will find our trained mod
 If you wish to use Rasa X, you should start a local environment for Rasa Action Server. To do so, just run these commands below, in containers/eve-rasa directory.
 
 ```
-chmod +x start-action-server.sh
-./start-action-server.sh
+chmod +x ./scripts/start-action-server.sh
+./scripts/start-action-server.sh
 ```
 
 ### 3.5 Rasa X
@@ -138,8 +138,8 @@ chmod +x start-action-server.sh
 Go to containers/eve-rasa directory and run these commands below, so you can run start-rasa-x.sh script. With Rasa X you can talk to your bot or start interactive learning. Make sure you have started your local action server, in other terminal.  You must know that all Rasa running containers will be stopped. 
 
 ```
-chmod +x start-rasa-x.sh
-./start-rasa-x.sh
+chmod +x ./scripts/start-rasa-x.sh
+./scripts/start-rasa-x.sh
 ```
 
 ### 3.6. Interactive Learning
@@ -147,8 +147,8 @@ chmod +x start-rasa-x.sh
 You can execute Rasa Interactive Learning via terminal, but not inside docker container. Run the script below, and it will run outside our containers. You must know that all Rasa running containers will be stopped.
 
 ```
-chmod +x train-interactive.sh
-./train-interactive.sh
+chmod +x ./scripts/train-interactive.sh
+./scripts/train-interactive.sh
 ```
 
 ### 3.7 Requests
@@ -184,8 +184,8 @@ Heroku is hosting our Eve API, Eve Rasa Action Server and Eve Rasa Core. Basical
 - Go to the Container's directory you wish to Deploy. Check if your Dockerfile is pointing to production configuration's and run the command below.
 
 ```
-chmod +x ../../deploy.sh
-../../deploy.sh
+chmod +x ../../scripts/deploy.sh
+../../scripts/deploy.sh
 ```
 - This will deploy your container image to Heroku's application.
 
