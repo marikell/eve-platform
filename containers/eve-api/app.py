@@ -1,16 +1,15 @@
 from flask import Flask, jsonify, abort, make_response, request
 from flask_pymongo import PyMongo
 from werkzeug import Response
-from blueprints.entity_intent_answer_blueprint import app_entity_intent_answer
-from blueprints.answer_blueprint import app_answer
-from services.service_handler import ServiceHandler
+from api.blueprints.entity_intent_answer_blueprint import app_entity_intent_answer
+from api.blueprints.answer_blueprint import app_answer
+from api.services.service_handler import ServiceHandler
 from flask_api import FlaskAPI
-from utils.config_json import read_json
 from mongoengine import connect
 import os
-from config.configuration import MONGO_CONFIG
+from api.config.configuration import MONGO_CONFIG
 from flask_mongoengine import MongoEngine
-from models.db_model import db
+from api.models.db_model import db
 
 flask_app = FlaskAPI(__name__)
 

@@ -1,10 +1,10 @@
 from flask import Blueprint, request, jsonify
 from werkzeug import Response
 from flask_api import status
-from utils.response_formatter import response, response_text
-from services.service_handler import ServiceHandler
-from config.configuration import ROUTE_CONFIG
-from utils.validate_fields import *
+from api.utils.response_formatter import response, response_text
+from api.services.service_handler import ServiceHandler
+from api.config.configuration import ROUTE_CONFIG
+from api.utils.validate_fields import *
 
 route_name = ROUTE_CONFIG['ENTITY_INTENT_ANSWER_TYPE_NAME']
 app_entity_intent_answer = Blueprint(route_name,__name__,url_prefix='/api')

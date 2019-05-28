@@ -2,6 +2,7 @@ flask
 Flask-PyMongo
 mongoengine
 flask_api
+mongomock
 pytest
 pytest-cov
 flask-mongoengine

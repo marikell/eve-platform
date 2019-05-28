@@ -1,5 +1,5 @@
-from models.answer import Answer
-from models.db_model import db
+from api.models.answer import Answer
+from api.models.db_model import db
 
 class EntityIntentAnswer(db.DynamicDocument):
     entities = db.ListField(db.StringField(max_length=50), required=False)

@@ -1,7 +1,7 @@
-from services.generic_service import GenericService
-from config.configuration import ROUTE_CONFIG
-from services.answer_service import AnswerService
-from services.entity_intent_answer_service import EntityIntentAnswerService
+from api.services.generic_service import GenericService
+from api.config.configuration import ROUTE_CONFIG
+from api.services.answer_service import AnswerService
+from api.services.entity_intent_answer_service import EntityIntentAnswerService
 
 services : dict = {}
 
