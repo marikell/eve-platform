@@ -1,6 +1,6 @@
 from mongoengine.queryset.visitor import Q
-from models.entity_intent_answer import EntityIntentAnswer
-from services.generic_service import GenericService
+from api.models.entity_intent_answer import EntityIntentAnswer
+from api.services.generic_service import GenericService
 
 class EntityIntentAnswerService(GenericService):
     def __init__(self):

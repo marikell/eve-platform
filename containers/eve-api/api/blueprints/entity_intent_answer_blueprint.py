@@ -1,12 +1,12 @@
 from flask import Blueprint, request, jsonify
 from werkzeug import Response
 from flask_api import status
-from utils.response_formatter import response, response_text
-from services.service_handler import ServiceHandler
-from config.route_config import RouteConfig
-from utils.validate_fields import *
+from api.utils.response_formatter import response, response_text
+from api.services.service_handler import ServiceHandler
+from api.config.configuration import ROUTE_CONFIG
+from api.utils.validate_fields import *
 
-route_name = RouteConfig.get('ENTITY_INTENT_ANSWER_TYPE_NAME')
+route_name = ROUTE_CONFIG['ENTITY_INTENT_ANSWER_TYPE_NAME']
 app_entity_intent_answer = Blueprint(route_name,__name__,url_prefix='/api')
 
 def validate_entity_intent_request(json):
@@ -33,7 +33,7 @@ def insert():
     try:
         json = request.get_json()
 
-        answer = ServiceHandler.get_service(RouteConfig.get('ANSWER_TYPE_NAME')).get(json['answer_id']['$oid'])
+        answer = ServiceHandler.get_service(ROUTE_CONFIG['ANSWER_TYPE_NAME']).get(json['answer_id']['$oid'])
 
         if not answer:
             raise Exception('Answer not found!')
@@ -101,7 +101,7 @@ def update(id):
     try:
         json = request.get_json()
         
-        answer = ServiceHandler.get_service(RouteConfig.get('ANSWER_TYPE_NAME')).get(json['answer_id']['$oid'])
+        answer = ServiceHandler.get_service(ROUTE_CONFIG['ANSWER_TYPE_NAME']).get(json['answer_id']['$oid'])
 
         if not answer:
             raise Exception('Answer not found!')
