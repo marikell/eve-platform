@@ -129,25 +129,25 @@
 * greeting_answer
     - utter_great
     - utter_first_help
-* which_answer{"which_entity": "exercicios"}
+* which{"question_entity": "exercicios"}
     - get_answer
-* which_not_answer{"which_entity": "comida"}
+* which_not{"question_entity": "comida"}
     - get_answer
-* which_not_answer{"which_entity": "exercicios"}
+* can{"question_entity": "exercicios"}
     - get_answer
-* which_answer{"which_entity": "exercicios"}
+* which{"question_entity": "exercicios"}
     - get_answer
-* which_answer{"which_entity": "treinos"}
+* which{"question_entity": "treinos"}
     - get_answer
-* which_not_answer{"which_entity": "treinos"}
+* which_not{"question_entity": "treinos"}
     - get_answer
 
 ## get_answer_2
 * get_started
   - action_greet_user
-* which_answer{"which_entity": "exercicios"}
+* which{"question_entity": "exercicios"}
     - get_answer
-* which_answer{"which_entity": "treinos"}
+* which{"question_entity": "treinos"}
     - get_answer
 
 ## Generated Story -8569811712381873528
@@ -155,9 +155,9 @@
     - action_greet_user
 * greeting_answer
     - utter_first_help
-* which_answer{"which_entity": "exercicios"}
+* which{"question_entity": "exercicios"}
     - get_answer
-* which_not_answer{"which_entity": "alimentos"}
+* which_not{"question_entity": "alimentos"}
     - get_answer
 * thank_you
     - utter_welcome
@@ -312,9 +312,9 @@
 * greeting_back
     - utter_greet_answer
     - utter_first_help
-* which_not_answer{"which_entity": "alimentos"}
+* which_not{"question_entity": "alimentos"}
     - get_answer
-* which_not_answer{"which_entity": "exercicio"}
+* which_not{"question_entity": "exercicio"}
     - get_answer
 * set_reminder_med
     - medicine_form
@@ -353,15 +353,33 @@
 * greeting_answer
     - utter_great
     - utter_first_help
-* which_answer{"which_entity": "exercicio"}
+* which{"question_entity": "exercicio"}
     - get_answer
-* which_answer{"which_entity": "alimentos"}
+* which{"question_entity": "alimentos"}
     - get_answer
-* which_not_answer{"which_entity": "exercicio"}
+* which_not{"question_entity": "exercicio"}
     - get_answer
-* which_not_answer{"which_entity": "alimentos"}
+* symptom{"question_entity": "gravidez"}
     - get_answer
-* which_not_answer{"which_entity": "exercicios"}
+* prevent{"question_entity": "pre-eclampsia"}
+    - get_answer
+* risk_factor{"question_entity": "gravidez"}
+    - get_answer
+
+#1233123
+* which{"question_entity": "alimentos"}
+    - get_answer
+* which_not{"question_entity": "exercicio"}
+    - get_answer
+* symptom{"question_entity": "gravidez"}
+    - get_answer
+* prevent{"question_entity": "pre-eclampsia"}
+    - get_answer
+* what_is{"question_entity": "loquio"}
+    - get_answer
+* causes{"question_entity": "pre-eclampsia"}
+    - get_answer
+* how_to_know{"question_entity": "bolsa"}
     - get_answer
 
 ## Generated Story 6967894117882910328
@@ -445,11 +463,11 @@
     - utter_greet_back
 * greeting_answer
     - utter_first_help
-* can_answer{"which_entity": "bicicleta"}
+* can{"question_entity": "bicicleta"}
     - get_answer
-* can_answer{"which_entity": "moto"}
+* can{"question_entity": "moto"}
     - get_answer
-* what_answer{"which_entity": "puerperio"}
+* what_is{"question_entity": "puerperio"}
     - get_answer
 * ask_isbot
     - utter_ask_isbot
@@ -462,9 +480,15 @@
     - utter_greet_back
 * greeting_answer
     - utter_first_help
-* goal_exam{"exam_entity": "glicemia"}
+* goal_exam{"question_entity": "glicemia"}
     - get_answer
-* when_exame{"exam_entity": "glicemia"}
+* when_exame{"question_entity": "glicemia"}
+    - get_answer
+* what_to_do{"question_entity": "bolsa"}
+    - get_answer
+* when{"question_entity": "pre natal"}
+    - get_answer
+* why{"question_entity": "sono"}
     - get_answer
 * hello
     - action_greet_user
@@ -478,7 +502,7 @@
 * greeting_answer
     - utter_great
     - utter_first_help
-* which_answer{"which_entity": "exerc\u00edcios"}
+* which{"question_entity": "exerc\u00edcios"}
     - get_answer
 * bye
     - utter_bye

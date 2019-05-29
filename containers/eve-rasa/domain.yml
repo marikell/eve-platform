@@ -30,14 +30,14 @@ actions:
 entities:
 - med_frequency_day
 - med_frequency
-- which_entity
+- question_entity
 - feedback_value
 - med_name
 - med_hours
 - user_city
 - user_state
 - user_age
-- exam_entity
+
 forms:
 - medicine_form
 intents:
@@ -47,26 +47,33 @@ intents:
     use_entities: false
 - hello
 - greeting_answer
-- which_answer
+- which
 - greeting_back
 - greeting
 - deny
-- which_not_answer
+- which_not
 - thank_you
 - bye
 - get_started
-- get_city
-- get_state
-- get_age
 - ask_isbot
 - ask_howold
 - ask_wherefrom
 - ask_whoisit
 - canthelp
-- what_answer
-- can_answer
+- what_is
+- can
 - goal_exam
-- when_answer
+- when
+- why
+- how_to_know
+- symptom
+- prevent
+- causes
+- what_to_do
+- risk_factor
+- when_exam
+- importance
+
 slots:
   feedback_value:
     type: categorical
