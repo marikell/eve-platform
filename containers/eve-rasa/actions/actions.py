@@ -128,7 +128,7 @@ class MedicineForm(FormAction):
                          dispatcher: CollectingDispatcher,
                          tracker: Tracker,
                          domain: Dict[Text, Any]) -> Optional[Text]:
-        if int(value) in [1,2]:
+        if value in ['diario','unico']:
             return {'med_frequency': value}
         else:
             dispatcher.utter_template('utter_wrong_med_frequency', tracker)
