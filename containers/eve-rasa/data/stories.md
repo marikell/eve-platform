@@ -1,8 +1,152 @@
-## greet
+## bot inicia a conversa e a mulher esta gravida
 * get_started
   - action_greet_user
-* greeting_answer_back
-  - utter_greet_answer
+* affirm
+  - utter_ask_is_pregnant
+* affirm
+  - utter_congrats
+  - initial_form
+  - form{"name": "initial_form"}
+  - form{"name": null}
+  - utter_thank_you
+  - utter_first_help
+* which{"question_entity": "exercicios"}
+    - get_answer
+
+## bot inicia a conversa e a mulher não esta gravida mas esta tentando engravidar
+* get_started
+  - action_greet_user
+* affirm
+  - utter_ask_is_pregnant
+* deny
+  - utter_ask_trying_pregnant
+* affirm
+  - utter_trying_pregnant
+  - utter_first_help
+* which{"question_entity": "exercicios"}
+    - get_answer
+
+## bot inicia a conversa e a mulher nao esta gravida e nao esta tentando engravidar
+* get_started
+  - action_greet_user
+* affirm
+  - utter_ask_is_pregnant
+* deny
+  - utter_ask_trying_pregnant
+* deny
+  - utter_first_help
+* which{"question_entity": "exercicios"}
+    - get_answer
+
+## bot inicia a conversa e a mulher nao quer responder as perguntas
+* get_started
+  - action_greet_user
+* deny
+  - utter_info_later
+  - utter_first_help
+* which{"question_entity": "exercicios"}
+    - get_answer
+
+## a mulher inicia a conversa com apenas 'Oi' e esta gravida
+* hello
+  - action_greet_user
+* affirm
+  - utter_ask_is_pregnant
+* affirm
+  - utter_congrats
+  - initial_form
+  - form{"name": "initial_form"}
+  - form{"name": null}
+  - utter_thank_you
+  - utter_first_help
+* which{"question_entity": "exercicios"}
+    - get_answer
+
+## a mulher inicia a conversa com apenas 'Oi' e nao esta gravida mas esta tentando engravidar
+* hello
+  - action_greet_user
+* affirm
+  - utter_ask_is_pregnant
+* deny
+  - utter_ask_trying_pregnant
+* affirm
+  - utter_trying_pregnant
+  - utter_first_help
+* which{"question_entity": "exercicios"}
+    - get_answer
+
+## a mulher inicia a conversa com apenas 'Oi' e nao esta gravida e nao esta tentando engravidar
+* hello
+  - action_greet_user
+* affirm
+  - utter_ask_is_pregnant
+* deny
+  - utter_ask_trying_pregnant
+* deny
+  - utter_thank_you
+  - utter_first_help
+
+## a mulher inicia a conversa com apenas 'Oi' e quer responder as perguntas
+* hello
+  - action_greet_user
+* deny
+  - utter_info_later
+  - utter_first_help
+
+## a mulher inicia a conversa com 'Oi tudo bem?' e esta gravida
+* greeting
+  - action_greet_user
+* greeting_answer
+  - utter_ask_info
+* affirm
+  - utter_ask_is_pregnant
+* affirm
+  - utter_congrats
+  - initial_form
+  - form{"name": "initial_form"}
+  - form{"name": null}
+  - utter_thank_you
+  - utter_first_help
+* which{"question_entity": "exercicios"}
+    - get_answer
+
+## a mulher inicia a conversa com 'Oi tudo bem?' e nao esta gravida mas esta tentando engravidar
+* greeting
+  - action_greet_user
+* greeting_answer
+  - utter_ask_info
+* affirm
+  - utter_ask_is_pregnant
+* deny
+  - utter_ask_trying_pregnant
+* affirm
+  - utter_trying_pregnant
+  - utter_first_help
+* which{"question_entity": "exercicios"}
+    - get_answer
+
+## a mulher inicia a conversa com 'Oi tudo bem?' e nao esta gravida e nao esta tentando engravidar
+* greeting
+  - action_greet_user
+* greeting_answer
+  - utter_ask_info
+* affirm
+  - utter_ask_is_pregnant
+* deny
+  - utter_ask_trying_pregnant
+* deny
+  - utter_thank_you
+  - utter_first_help
+* which{"question_entity": "exercicios"}
+    - get_answer
+
+## a mulher inicia a conversa com 'Oi tudo bem?' e nao quer responder as perguntas
+* greeting
+  - action_greet_user
+* greeting_answer
+  - utter_ask_info
+* deny
+  - utter_info_later
   - utter_first_help
 
 ## canthelp
@@ -57,63 +201,17 @@
 * ask_howold
     - utter_ask_howold
 
-## greet
-* get_started
-  - action_greet_user
-* greeting_answer_back
-  - utter_greet_answer
-  - utter_first_help
-* canthelp
-    - utter_canthelp
-* ask_whoisit
-    - utter_introduce
-
-## user_info
-* get_info
-  - utter_ask_info_user
-* affirm
-  - utter_ask_city
-* enter_data{"user_city": "Sorocaba"}
-  - action_city_user
-  - utter_great
-  - utter_ask_state
-* enter_data{"user_state": "SP"}
-    - action_state_user
-  - utter_great
-  - utter_ask_age
-* enter_data{"user_age": "20"}
-    - action_age_user
-    - utter_great
-* ask_whoisit
-    - utter_introduce
-
-
-## greet
-* get_started
-  - action_greet_user
-* greeting_answer
-  - utter_first_help
-
 ## bot_start
-* hello
-    - action_greet_user
-* greeting_answer_back
-  - utter_greet_answer
-  - utter_first_help
-
-## bot_start
-* greet
+* greeting
     - action_greet_user
 * greeting_answer
-  - utter_great
-  - utter_first_help
+  - utter_ask_info
 
 ## greet_3
 * get_started
   - action_greet_user
 * greeting_answer
-    - utter_great
-    - utter_first_help
+    - utter_ask_info
 
 ## bye
 * bye
@@ -124,11 +222,6 @@
 - utter_welcome
 
 ## get_answer
-* get_started
-  - action_greet_user
-* greeting_answer
-    - utter_great
-    - utter_first_help
 * which{"question_entity": "exercicios"}
     - get_answer
 * which_not{"question_entity": "comida"}
@@ -154,7 +247,7 @@
 * get_started
     - action_greet_user
 * greeting_answer
-    - utter_first_help
+    - utter_ask_info
 * which{"question_entity": "exercicios"}
     - get_answer
 * which_not{"question_entity": "alimentos"}
@@ -163,196 +256,11 @@
     - utter_welcome
     - utter_help
 
-## med_reminder_1
-* get_started
-  - action_greet_user
-* greeting_answer
-    - utter_first_help
-* set_reminder_med
-    - medicine_form
-    - form{"name": "medicine_form"}
-    - form{"name": null}
-* affirm
-    - utter_med_done
-* thank_you
-    - utter_welcome
-    - utter_ask_feedback
-* feedback{"feedback_value": "positive"}
-    - slot{"feedback_value": "positive"}
-    - utter_great
-    - utter_help
-
-## med_reminder_1
-* greeting
-  - utter_introduce
-  - utter_greet_back
-* greeting_answer
-    - utter_first_help
-* set_reminder_med
-    - medicine_form
-    - form{"name": "medicine_form"}
-    - form{"name": null}
-* affirm
-    - utter_med_done
-    - utter_ask_feedback
-* feedback{"feedback_value": "negative"}
-    - slot{"feedback_value": "negative"}
-    - utter_thumbsup
-    - utter_help
-* thank_you
-    - utter_welcome
-
-## Generated Story 1673752282302648423
-* hello
-    - action_greet_user
-* greeting_answer
-    - utter_great
-    - utter_first_help
-* set_reminder_med
-    - medicine_form
-    - form{"name": "medicine_form"}
-    - slot{"requested_slot": "med_name"}
-* form: enter_data{"med_name": "dipirona"}
-    - slot{"med_name": "dipirona"}
-    - form: medicine_form
-    - slot{"med_name": "dipirona"}
-    - slot{"requested_slot": "med_frequency"}
-* form: enter_data
-    - form: medicine_form
-    - slot{"med_frequency": "1"}
-    - slot{"requested_slot": "med_frequency_day"}
-* form: enter_data{"med_frequency_day": "3"}
-    - slot{"med_frequency_day": "3"}
-    - form: medicine_form
-    - slot{"med_frequency_day": "3"}
-    - slot{"requested_slot": "med_hours"}
-* form: enter_data{"med_hours": "9"}
-    - slot{"med_hours": "9"}
-    - form: medicine_form
-
-## Generated Story 1025067352679099485
-* hello
-    - action_greet_user
-* greeting_answer
-    - utter_great
-    - utter_first_help
-* set_reminder_med
-    - medicine_form
-    - form{"name": "medicine_form"}
-    - slot{"requested_slot": "med_name"}
-* form: enter_data{"med_name": "dipirona"}
-    - slot{"med_name": "dipirona"}
-    - form: medicine_form
-    - slot{"med_name": "dipirona"}
-    - slot{"requested_slot": "med_frequency"}
-* form: enter_data
-    - form: medicine_form
-    - slot{"med_frequency": "1"}
-    - slot{"requested_slot": "med_frequency_day"}
-* form: enter_data
-    - form: medicine_form
-    - slot{"med_frequency_day": "3"}
-    - slot{"requested_slot": "med_hours"}
-* form: enter_data{"med_hours": "9"}
-    - slot{"med_hours": "9"}
-    - form: medicine_form
-    - slot{"med_hours": null}
-    - slot{"requested_slot": "med_hours"}
-* form: enter_data{"med_hours": "10"}
-    - slot{"med_hours": "10"}
-    - form: medicine_form
-    - slot{"med_hours": null}
-    - slot{"requested_slot": "med_hours"}
-* form: enter_data
-    - form: medicine_form
-    - slot{"med_hours": null}
-    - slot{"requested_slot": "med_hours"}
-
-## Generated Story 3143580898074990559
-* hello
-    - action_greet_user
-* greeting_answer
-    - utter_great
-    - utter_first_help
-* set_reminder_med
-    - medicine_form
-    - form{"name": "medicine_form"}
-    - slot{"requested_slot": "med_name"}
-* form: enter_data{"med_name": "lufital"}
-    - slot{"med_name": "lufital"}
-    - form: medicine_form
-    - slot{"med_name": "lufital"}
-    - slot{"requested_slot": "med_frequency"}
-* form: enter_data
-    - form: medicine_form
-    - slot{"med_frequency": "1"}
-    - slot{"requested_slot": "med_frequency_day"}
-* form: enter_data
-    - form: medicine_form
-    - slot{"med_frequency_day": "2"}
-    - slot{"requested_slot": "med_hours"}
-* form: enter_data{"med_hours": "3"}
-    - slot{"med_hours": "3"}
-    - form: medicine_form
-    - slot{"med_hours": null}
-    - slot{"requested_slot": "med_hours"}
-* form: enter_data{"med_hours": "7"}
-    - slot{"med_hours": "7"}
-    - form: medicine_form
-    - slot{"med_hours": ["3", "7"]}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-* affirm
-    - utter_med_done
-    - utter_ask_feedback
-
-## Generated Story 35854981849600683
-* hello
-    - action_greet_user
-* greeting_back
-    - utter_greet_answer
-    - utter_first_help
-* which_not{"question_entity": "alimentos"}
-    - get_answer
-* which_not{"question_entity": "exercicio"}
-    - get_answer
-* set_reminder_med
-    - medicine_form
-    - form{"name": "medicine_form"}
-    - slot{"requested_slot": "med_name"}
-* form: enter_data{"med_name": "dipirona"}
-    - slot{"med_name": "dipirona"}
-    - form: medicine_form
-    - slot{"med_name": "dipirona"}
-    - slot{"requested_slot": "med_frequency"}
-* form: enter_data
-    - form: medicine_form
-    - slot{"med_frequency": "1"}
-    - slot{"requested_slot": "med_frequency_day"}
-* form: enter_data
-    - form: medicine_form
-    - slot{"med_frequency_day": "2"}
-    - slot{"requested_slot": "med_hours"}
-* form: enter_data{"med_hours": "9"}
-    - slot{"med_hours": "9"}
-    - form: medicine_form
-    - slot{"med_hours": null}
-    - slot{"requested_slot": "med_hours"}
-* form: enter_data{"med_hours": "19"}
-    - slot{"med_hours": "19"}
-    - form: medicine_form
-    - slot{"med_hours": ["9", "19"]}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-* affirm
-    - utter_med_done
-
 ## Generated Story 707944168274727227
 * hello
     - action_greet_user
-* greeting_answer
-    - utter_great
-    - utter_first_help
+* affirm
+    - utter_ask_is_pregnant
 * which{"question_entity": "exercicio"}
     - get_answer
 * which{"question_entity": "alimentos"}
@@ -366,7 +274,7 @@
 * risk_factor{"question_entity": "gravidez"}
     - get_answer
 
-#1233123
+##1233123
 * which{"question_entity": "alimentos"}
     - get_answer
 * which_not{"question_entity": "exercicio"}
@@ -382,104 +290,7 @@
 * how_to_know{"question_entity": "bolsa"}
     - get_answer
 
-## Generated Story 6967894117882910328
-* set_reminder_med
-    - medicine_form
-    - form{"name": "medicine_form"}
-    - slot{"requested_slot": "med_name"}
-* form: enter_data{"med_name": "lufital"}
-    - slot{"med_name": "lufital"}
-    - form: medicine_form
-    - slot{"med_name": "lufital"}
-    - slot{"requested_slot": "med_frequency"}
-* form: enter_data
-    - form: medicine_form
-    - slot{"med_frequency": "1"}
-    - slot{"requested_slot": "med_frequency_day"}
-* form: enter_data
-    - form: medicine_form
-    - slot{"med_frequency_day": "2"}
-    - slot{"requested_slot": "med_hours"}
-* form: enter_data{"med_hours": "9"}
-    - slot{"med_hours": "9"}
-    - form: medicine_form
-    - slot{"med_hours": null}
-    - slot{"requested_slot": "med_hours"}
-* form: enter_data{"med_hours": "14"}
-    - slot{"med_hours": "14"}
-    - form: medicine_form
-    - slot{"med_hours": ["9", "14"]}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-
-## Generated Story -7753515448056614684
-* set_reminder_med{"med_name": "dipirona"}
-    - slot{"med_name": "dipirona"}
-    - medicine_form
-    - form{"name": "medicine_form"}
-    - slot{"med_name": "dipirona"}
-    - slot{"med_name": "dipirona"}
-    - slot{"requested_slot": "med_frequency"}
-* form: enter_data
-    - form: medicine_form
-    - slot{"med_frequency": "1"}
-    - slot{"requested_slot": "med_frequency_day"}
-* form: enter_data
-    - form: medicine_form
-    - slot{"med_frequency_day": "3"}
-    - slot{"requested_slot": "med_hours"}
-* form: enter_data
-    - form: medicine_form
-    - slot{"med_hours": null}
-    - slot{"requested_slot": "med_hours"}
-* form: enter_data{"med_hours": "9"}
-    - slot{"med_hours": "9"}
-    - form: medicine_form
-    - slot{"med_hours": null}
-    - slot{"requested_slot": "med_hours"}
-* form: enter_data{"med_hours": "20"}
-    - slot{"med_hours": "20"}
-    - form: medicine_form
-    - slot{"med_hours": null}
-    - slot{"requested_slot": "med_hours"}
-* form: enter_data{"med_hours": "15"}
-    - slot{"med_hours": "15"}
-    - form: medicine_form
-    - slot{"med_hours": ["9", "20", "15"]}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-* affirm
-    - utter_med_done
-    - utter_ask_feedback
-* enter_data
-    - utter_thumbsup
-    - utter_help
-* set_reminder_med
-    - medicine_form
-
 ## Generated Story 4646674987687058942
-* greeting
-    - utter_introduce
-    - utter_greet_back
-* greeting_answer
-    - utter_first_help
-* can{"question_entity": "bicicleta"}
-    - get_answer
-* can{"question_entity": "moto"}
-    - get_answer
-* what_is{"question_entity": "puerperio"}
-    - get_answer
-* ask_isbot
-    - utter_ask_isbot
-* ask_whoisit
-    - utter_introduce
-
-## Generated Story 4646674987687058942
-* greeting
-    - utter_introduce
-    - utter_greet_back
-* greeting_answer
-    - utter_first_help
 * goal_exam{"question_entity": "glicemia"}
     - get_answer
 * when_exame{"question_entity": "glicemia"}
@@ -490,20 +301,64 @@
     - get_answer
 * why{"question_entity": "sono"}
     - get_answer
-* hello
-    - action_greet_user
-* greeting_back
-    - utter_greet_answer
-    - utter_first_help
 
 ## Generated Story 6158015074139116326
+* im_pregnant
+    - utter_congrats
+    - utter_first_step
+    - utter_ask_info
+* affirm
+  - initial_form
+  - form{"name": "initial_form"}
+  - form{"name": null}
+  - utter_thank_you
+  - utter_first_help
+
+## Generated Story -8676088873807953507
 * hello
     - action_greet_user
-* greeting_answer
-    - utter_great
-    - utter_first_help
-* which{"question_entity": "exerc\u00edcios"}
-    - get_answer
-* bye
-    - utter_bye
+* affirm
+    - utter_ask_is_pregnant
+* affirm
+    - utter_congrats
+    - initial_form
+    - form{"name": "initial_form"}
+    - slot{"requested_slot": "pregnancy_weeks"}
+* form: enter_data{"pregnancy_weeks": "10"}
+    - slot{"pregnancy_weeks": "10"}
+    - form: initial_form
+    - slot{"pregnancy_weeks": "10"}
+    - slot{"requested_slot": "planned_pregnancy"}
+## Generated Story -9169979720908617369
+* hello
+    - action_greet_user
+* affirm
+    - utter_ask_is_pregnant
+* affirm
+    - utter_congrats
+    - initial_form
+    - form{"name": "initial_form"}
+    - slot{"requested_slot": "pregnancy_weeks"}
+* form: enter_data{"pregnancy_weeks": "12"}
+    - slot{"pregnancy_weeks": "12"}
+    - form: initial_form
+    - slot{"pregnancy_weeks": "12"}
+    - slot{"requested_slot": "planned_pregnancy"}
+* form: enter_data
+    - form: initial_form
+    - slot{"planned_pregnancy": "1"}
+    - slot{"requested_slot": "first_pregnancy"}
+* form: enter_data
+    - form: initial_form
+    - slot{"first_pregnancy": "1"}
+    - slot{"requested_slot": "health_plan"}
+* form: enter_data
+    - form: initial_form
+    - slot{"health_plan": "1"}
+    - slot{"requested_slot": "pre_natal"}
+* form: enter_data
+    - form: initial_form
+    - slot{"pre_natal": "1"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
 

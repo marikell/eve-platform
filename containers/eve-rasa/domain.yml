@@ -1,181 +1,176 @@
-actions:
-- utter_thumbsup
-- utter_med_done
-- utter_help
-- utter_greet
-- get_answer
-- utter_welcome
-- cancel_reminder
-- utter_introduce
-- utter_great
-- action_greet_user
-- utter_first_help
-- utter_bye
-- action_default_fallback
-- utter_values_med
-- utter_greet_answer
-- utter_ask_feedback
-- utter_greet_back
-- utter_ask_isbot
-- utter_ask_howold
-- utter_ask_wherefrom
-- utter_canthelp
-- action_city_user
-- action_state_user
-- action_age_user
-- utter_ask_info_user
-- utter_ask_city
-- utter_ask_state
-- utter_ask_age
-entities:
-- med_frequency_day
-- med_frequency
-- question_entity
-- feedback_value
-- med_name
-- med_hours
-- user_city
-- user_state
-- user_age
-
-forms:
-- medicine_form
-intents:
-- set_reminder_med
-- affirm
-- enter_data:
-    use_entities: false
-- hello
-- greeting_answer
-- which
-- greeting_back
-- greeting
-- deny
-- which_not
-- thank_you
-- bye
-- get_started
-- ask_isbot
-- ask_howold
-- ask_wherefrom
-- ask_whoisit
-- canthelp
-- what_is
-- can
-- goal_exam
-- when
-- why
-- how_to_know
-- symptom
-- prevent
-- causes
-- what_to_do
-- risk_factor
-- when_exam
-- importance
-
+actions: 
+  - utter_hello
+  - utter_bye
+  - utter_default
+  - utter_first_help
+  - utter_great
+  - utter_greet
+  - utter_greet_answer
+  - utter_greet_back
+  - utter_help
+  - utter_introduce
+  - utter_ask_info
+  - utter_welcome
+  - utter_thank_you
+  - utter_canthelp
+  - utter_ask_wherefrom
+  - utter_ask_howold
+  - utter_ask_isbot
+  - utter_congrats
+  - utter_first_step
+  - utter_ask_pregnancy_weeks
+  - utter_ask_is_pregnant
+  - utter_ask_trying_pregnant
+  - utter_ask_planned_pregnancy
+  - utter_ask_health_plan
+  - utter_ask_first_pregnancy
+  - utter_ask_pre_natal
+  - utter_not_planned_pregnancy
+  - utter_planned_pregnancy
+  - utter_trying_pregnant
+  - utter_info_later
+  - utter_wrong_pregnancy_weeks
+  - get_answer
+  - action_greet_user
+  - action_default_fallback
+entities: 
+  - question_entity
+  - pregnancy_weeks
+forms: 
+  - medicine_form
+  - initial_form
+intents: 
+  - affirm
+  - enter_data:
+      use_entities: false
+  - hello
+  - greeting_answer
+  - which
+  - greeting_back
+  - greeting
+  - deny
+  - which_not
+  - thank_you
+  - bye
+  - get_started
+  - ask_isbot
+  - ask_howold
+  - ask_wherefrom
+  - ask_whoisit
+  - canthelp
+  - what_is
+  - can
+  - goal_exam
+  - when
+  - why
+  - how_to_know
+  - symptom
+  - prevent
+  - causes
+  - what_to_do
+  - risk_factor
+  - when_exam
+  - importance
+  - greeting_answer_back
+  - when_exame
+  - im_pregnant
 slots:
-  feedback_value:
-    type: categorical
-    values:
-    - positive
-    - negative
-  med_frequency:
+  first_pregnancy:
     type: unfeaturized
-  med_frequency_day:
+  health_plan:
     type: unfeaturized
-  med_hours:
+  planned_pregnancy:
     type: unfeaturized
-  med_name:
+  pre_natal:
+    type: unfeaturized
+  pregnancy_weeks:
     type: unfeaturized
   requested_slot:
     type: unfeaturized
-  user_city:
-    type: text
-  user_state:
-    type: text
-  user_age:
-    type: text
 templates:
-  utter_ask_feedback:
-  - buttons:
-    - payload: /feedback{"feedback_value":"positive"}
-      title: 👍
-    - payload: /feedback{"feedback_value":"negative"}
-      title: 👎
-    text: Você está gostando da nossa conversa?
-  utter_ask_med_frequency:
-  - buttons:
-    - payload: /enter_data{"med_frequency":"diario"}
-      title: Diário
-    - payload: /enter_data{"med_frequency":"unico"}
-      title: Uma dose
-    text: Qual a frequência do remédio?
-  utter_ask_med_frequency_day:
-  - text: Quantas vezes ao dia?
-  utter_ask_med_hours:
-  - text: 'Horário:'
-  utter_ask_med_name:
-  - text: Qual o nome do remédio?
-  utter_bye:
-  - text: Tchau!
-  - text: Tchau, até mais!
-  utter_default:
-  - text: Desculpe, não entendi o que você quis dizer.
-  utter_first_help:
-  - text: Então, como eu posso te ajudar?
-  utter_great:
-  - text: Que bom! 👍
-  - text: Legal! 🙌
-  utter_greet:
-  - text: Como você está?
-  - text: Tudo bem com você?
-  utter_greet_answer:
-  - text: Estou bem, obrigada :)
-  utter_greet_back:
-  - text: Estou bem, e voce?
-  utter_help:
-  - text: Posso te ajudar em mais alguma coisa?
-  utter_inform_med_hours:
-  - text: Informe os horários do remédio, um por vez, por favor.
-  utter_introduce:
-  - text: Oi, eu sou a Dra. Eve e estou aqui pra te ajudar durante a gestação :) Você
-      pode tirar dúvidas, me pedir pra te lembrar de coisas importantes como consultas
-      e remedios.
-  utter_med_done:
-  - text: Feito, pode deixar que vou te lembrar do medicamento :)
-  utter_thumbsup:
-  - text: 👍
-  - text: Ok.
-  utter_values_med:
-  - text: "Vou agendar um lembrete para:\n - Remédio: {med_name}\n - Horário: {med_hours}\n\
-      \ - Frequência: {med_frequency}\n Ok?"
-  utter_welcome:
-  - text: Imagina, qualquer coisa só falar!
-  utter_wrong_med_frequency:
-  - text: Escolha se o remédio será tomado diariamente ou apenas uma vez, por favor
-      :)
-  utter_wrong_med_frequency_day:
-  - text: Não tem como tomar um remédio 0 vezes ao dia haha
-  utter_wrong_med_hours:
-  - text: Por favor, me passe um horário válido.
-  utter_ask_city:
-    - text: Você é de qual cidade?
-  utter_ask_state:
-    - text: Você é de qual estado?
-  utter_ask_age:
-    - text: Quantos anos você tem?
-  utter_ask_info_user:
-    - text: Posso te fazer umas perguntas sobre você? Só pra nos conhecermos melhor haha
-  utter_thank_you:
-    - text: Obrigada :)
-  utter_canthelp:
-    - text: " Desculpe por não conseguir te ajudar :("
-  utter_ask_wherefrom:
-    - text: "Sou de Sorocaba, SP"
-    - text: "Sorocaba, SP"
-    - text: "Sou de são paulo"
-  utter_ask_howold:    
-    - text: "Velha o bastante pra ser médica haha"
+  utter_ask_first_pregnancy:
+  - text: "É a sua primeira gravidez?"
+    buttons:
+    - title: "Sim"
+      payload: '/enter_data{"first_pregnancy":"True"}'
+    - title: "Não"
+      payload: '/enter_data{"first_pregnancy":"False"}'
+  utter_ask_health_plan:
+  - text: "Você possui plano de saúde?"
+    buttons:
+    - title: "Sim"
+      payload: '/enter_data{"health_plan":"True"}'
+    - title: "Não"
+      payload: '/enter_data{"health_plan":"False"}'
+  utter_ask_howold:
+  - text: "Velha o bastante pra ser médica haha"
+  utter_ask_info:
+  - text: "Bom, pra eu poder te ajudar, preciso te fazer algumas perguntas antes ok? É rapidinho :)"
+  utter_ask_is_pregnant:
+  - text: "Você está grávida?"
   utter_ask_isbot:
-    - text: "Eu sou um robô!"
+  - text: "Eu sou um robô! 🤖"
+  utter_ask_planned_pregnancy:
+  - text: "A sua gravidez foi planejada?"
+    buttons:
+    - title: "Sim"
+      payload: '/enter_data{"planned_pregnancy":"True"}'
+    - title: "Não"
+      payload: '/enter_data{"planned_pregnancy":"False"}'
+  utter_ask_pre_natal:
+  - text: "Você já começou o pré-natal?"
+    buttons:
+    - title: "Sim"
+      payload: '/enter_data{"pre_natal":"True"}'
+    - title: "Não"
+      payload: '/enter_data{"pre_natal":"False"}'
+  utter_ask_pregnancy_weeks:
+  - text: "Você está de quantas semanas?"
+  utter_ask_trying_pregnant:
+  - text: "Está tentando engravidar?"
+  utter_ask_wherefrom:
+  - text: "Sou de Sorocaba, SP"
+  - text: "Sorocaba, SP"
+  utter_bye:
+  - text: "Tchau!"
+  - text: "Tchau, até mais!"
+  utter_canthelp:
+  - text: "Desculpe por não conseguir te ajudar :("
+  utter_congrats:
+  - text: "Parabéns!"
+  utter_default:
+  - text: "Desculpe, não entendi o que você quis dizer."
+  utter_first_help:
+  - text: "Então, como eu posso te ajudar?"
+  utter_first_step:
+  - text: "Bom, a primeira coisa a se fazer é procurar um obstetra para acompanhar a sua gestação de perto e realizar o pré-natal! O pré-natal é de extrema importância para garantir a sua saúde e a do seu bebê!"
+  utter_great:
+  - text: "Que bom! 👍"
+  - text: "Legal! 🙌"
+  utter_greet:
+  - text: "Como você está?"
+  - text: "Tudo bem com você?"
+  utter_greet_answer:
+  - text: "Estou bem, obrigada :)"
+  utter_greet_back:
+  - text: "Estou bem, e voce?"
+  utter_hello:
+  - text: "Olá! :)"
+  utter_help:
+  - text: "Posso te ajudar em mais alguma coisa?"
+  utter_info_later:
+  - text: "Tudo bem, podemos fazer isso depois se quiser!"
+  utter_introduce:
+  - text: "Eu sou a Dra. Eve e estou aqui pra te ajudar durante a gestação!"
+  utter_not_planned_pregnancy:
+  - text: "Bom, não se preocupe, mesmo não tendo sido planejada tenho certeza que você vai ser uma ótima mãe!"
+  utter_planned_pregnancy:
+  - text: "Que legal! Você deve estar muito feliz então! 😄"
+  utter_thank_you:
+  - text: "Obrigada :)"
+  utter_trying_pregnant:
+  - text: "Tenho certeza que logo você consegue então! 😉"
+  utter_welcome:
+  - text: "Imagina, qualquer coisa só falar!"
+  utter_wrong_pregnancy_weeks:
+  - text: "Por favor, insira um número de semanas válido"
