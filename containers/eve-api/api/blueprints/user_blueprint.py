@@ -77,7 +77,7 @@ def update(id):
 
         validate_user_request(json_obj)
 
-        user = ServiceHandler.get_service(ROUTE_CONFIG['USER_TYPE_NAME']).get(id)
+        user = ServiceHandler.get_service(route_name).get(id)
 
         if not user:
             raise Exception('User not found!')
@@ -110,7 +110,12 @@ def update(id):
 @app_user.route('/{}/<id>'.format(route_name), methods=['DELETE'])
 def delete(id):
     try:        
+        user = ServiceHandler.get_service(route_name).get(id)
+
+        person_id = str(user.person_id['id'])
+
         ServiceHandler.get_service(route_name).delete(id)
+        ServiceHandler.get_service(ROUTE_CONFIG['PERSON_TYPE_NAME']).delete(person_id)
 
         return response(status=status.HTTP_200_OK)
         
