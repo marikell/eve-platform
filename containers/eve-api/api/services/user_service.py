@@ -1,0 +1,31 @@
+from mongoengine.queryset.visitor import Q
+from api.models.user import User
+from api.services.generic_service import GenericService
+
+class UserService(GenericService):
+    def __init__(self):
+        super().__init__(User.objects)        
+
+    def insert(self, obj):
+        user = User(email=obj['email'], 
+        password=obj['password'],person_id=obj['person'].to_dbref(), is_admin=obj['is_admin'])        
+
+        if User.objects(email=obj['email']):
+            raise Exception('This e-mail is already registered in db.')
+        
+        user.save()
+
+    def getby_email(self, email):
+        return User.objects(Q(email=email)).first()
+    
+    def update(self, obj):
+        user = self.get(obj['id'])
+
+        if not user:
+            raise Exception('Object with id {} not found!'.format(obj['id']))
+        
+        user.email = obj['email']
+        user.password = obj['password']
+        user.is_admin = obj['is_admin']
+
+        user.save()
