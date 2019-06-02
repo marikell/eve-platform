@@ -2,6 +2,7 @@ from flask import Flask, jsonify, abort, make_response, request
 from flask_pymongo import PyMongo
 from werkzeug import Response
 from api.blueprints.entity_intent_answer_blueprint import app_entity_intent_answer
+from api.blueprints.user_blueprint import app_user
 from api.blueprints.answer_blueprint import app_answer
 from api.services.service_handler import ServiceHandler
 from flask_api import FlaskAPI
@@ -23,6 +24,7 @@ db.init_app(flask_app)
 def register_blueprints(app):
     app.register_blueprint(app_answer)
     app.register_blueprint(app_entity_intent_answer)
+    app.register_blueprint(app_user)
 
 
 @flask_app.route('/', methods=['GET'])
