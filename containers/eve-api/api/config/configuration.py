@@ -7,6 +7,7 @@ ROUTE_CONFIG:dict = {
     'ANSWER_TYPE_NAME':'answer',
     'ENTITY_INTENT_ANSWER_TYPE_NAME':'entity-intent-answer',
     'USER_TYPE_NAME':'user',
-    'PERSON_TYPE_NAME':'person'
+    'PERSON_TYPE_NAME':'person',
+    'USER_WEEKS_TYPE_NAME':'user-weeks'
 }
 

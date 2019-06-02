@@ -29,6 +29,32 @@ def validate_user_request(json):
 def index():
     return Response('Hello {}'.format(route_name))
 
+
+@app_user.route('/{}/weeks/<id>'.format(route_name), methods=['POST'])
+def update_weeks(id):
+    try:
+        
+        json_obj = request.get_json()
+
+        check_if_key_exists('weeks', json_obj)
+
+        user = ServiceHandler.get_service(route_name).get(id)
+
+        if not user:
+            raise Exception('Object with id {} not found!'.format(id))
+
+        weeks_obj = {
+            'weeks':json_obj['weeks'],
+            'user': user
+        }
+
+        ServiceHandler.get_service(ROUTE_CONFIG['USER_WEEKS_TYPE_NAME']).insert(weeks_obj)
+
+        return response(status=status.HTTP_201_CREATED)
+
+    except Exception as e:
+        return response_text(str(e), status.HTTP_400_BAD_REQUEST)
+
 @app_user.route(route_name, methods=['POST'])
 def insert():
     try:
