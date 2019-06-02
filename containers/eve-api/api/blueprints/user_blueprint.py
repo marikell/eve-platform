@@ -7,6 +7,7 @@ from api.services.person_service import PersonService
 from api.utils.response_formatter import response, response_text
 from api.services.service_handler import ServiceHandler
 from api.config.configuration import ROUTE_CONFIG
+from api.enums.user_enums import UserTypeEnum
 from api.utils.validate_fields import check_empty_string, check_empty_string_in_array, check_if_key_exists
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -14,9 +15,9 @@ route_name = ROUTE_CONFIG['USER_TYPE_NAME']
 app_user = Blueprint(route_name,__name__, url_prefix='/api')
 
 def validate_user_request(json):          
-    keys = ['name', 'email','password','is_admin','confirm_password']
+    keys = ['name', 'email','password','is_admin','confirm_password','user_type']
     for k in keys:
-        if k is not 'is_admin':
+        if k is not 'is_admin' and k is not 'user_type':
             check_if_key_exists(k, json)
             check_empty_string(json[k], k)
 
@@ -27,6 +28,32 @@ def validate_user_request(json):
 @app_user.route('/{}'.format(route_name), methods=['GET'])
 def index():
     return Response('Hello {}'.format(route_name))
+
+
+@app_user.route('/{}/weeks/<id>'.format(route_name), methods=['POST'])
+def update_weeks(id):
+    try:
+        
+        json_obj = request.get_json()
+
+        check_if_key_exists('weeks', json_obj)
+
+        user = ServiceHandler.get_service(route_name).get(id)
+
+        if not user:
+            raise Exception('Object with id {} not found!'.format(id))
+
+        weeks_obj = {
+            'weeks':json_obj['weeks'],
+            'user': user
+        }
+
+        ServiceHandler.get_service(ROUTE_CONFIG['USER_WEEKS_TYPE_NAME']).insert(weeks_obj)
+
+        return response(status=status.HTTP_201_CREATED)
+
+    except Exception as e:
+        return response_text(str(e), status.HTTP_400_BAD_REQUEST)
 
 @app_user.route(route_name, methods=['POST'])
 def insert():
@@ -47,7 +74,8 @@ def insert():
             'email': json['email'],
             'password': hashed_password,
             'is_admin': (False if 'is_admin' not in json else json['is_admin']),
-            'person': created_person
+            'person': created_person,
+            'user_type': (UserTypeEnum.normal.value if 'user_type' not in json else json['user_type'])
         }
 
         ServiceHandler.get_service(route_name).insert(obj)    
@@ -97,7 +125,8 @@ def update(id):
             'email': json_obj['email'],
             'password': hashed_password,
             'is_admin': (False if 'is_admin' not in json_obj else json_obj['is_admin']),
-            'id': id
+            'id': id,
+            'user_type': (UserTypeEnum.normal.value if 'user_type' not in json_obj else json_obj['user_type'])
         }
 
         ServiceHandler.get_service(route_name).update(obj)

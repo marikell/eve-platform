@@ -2,6 +2,8 @@ from api.services.generic_service import GenericService
 from api.config.configuration import ROUTE_CONFIG
 from api.services.answer_service import AnswerService
 from api.services.entity_intent_answer_service import EntityIntentAnswerService
+from api.services.user_weeks_service import UserWeeksService
+from api.services.follow_up_service import FollowUpService
 from api.services.user_service import UserService
 from api.services.person_service import PersonService
 
@@ -15,6 +17,8 @@ class ServiceHandler():
         services[ROUTE_CONFIG['ENTITY_INTENT_ANSWER_TYPE_NAME']] = EntityIntentAnswerService()
         services[ROUTE_CONFIG['USER_TYPE_NAME']] = UserService()
         services[ROUTE_CONFIG['PERSON_TYPE_NAME']] = PersonService()
+        services[ROUTE_CONFIG['USER_WEEKS_TYPE_NAME']] = UserWeeksService()
+        services[ROUTE_CONFIG['FOLLOW_UP_TYPE_NAME']] = FollowUpService()
 
     @staticmethod
     def get_service(name: str):
