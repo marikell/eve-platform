@@ -9,3 +9,7 @@ class UserWeeksService(GenericService):
     def insert(self, obj):
         user_week = UserWeeks(weeks=obj['weeks'], user_id=obj['user'].to_dbref())
         user_week.save()
+
+    def get_most_recently_record(self, id):
+        obj = self.objects(Q(_id=ObjectId(id)))
+        self.objects..order_by('-creation_date').first()

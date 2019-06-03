@@ -24,10 +24,32 @@ def validate_user_request(json):
     if json['confirm_password'] != json['password']:
         raise Exception("Passwords don't match. Try again")
 
-
 @app_user.route('/{}'.format(route_name), methods=['GET'])
-def index():
-    return Response('Hello {}'.format(route_name))
+def get_all():
+    try:
+        users = ServiceHandler.get_service(route_name).get_all().only('_id','email','creation_date'
+        ,'user_type','person_id','is_admin')
+
+        return response(users, status.HTTP_200_OK)
+                
+    except Exception as e:
+        return response_text(str(e), status.HTTP_400_BAD_REQUEST)
+
+@app_user.route('/{}/recent-weeks/<id>'.format(route_name), methods=['GET'])
+def get_last_user_weeks(id):
+    try:
+        obj = ServiceHandler.get_service(ROUTE_CONFIG['USER_WEEKS_TYPE_NAME']).get_most_recently_record(id)
+
+        if not obj:
+            raise Exception('User with id {} has no user_weeks records.'.format(id))
+
+        if obj.user_id['user_type'] != UserTypeEnum.pregnant.value:
+            raise Exception('This user is not pregnant to control user_weeks records')
+
+        return response(obj.to_json(), status.HTTP_200_OK)
+    except Exception as e:
+        return response_text(str(e), status.HTTP_400_BAD_REQUEST)
+        
 
 
 @app_user.route('/{}/weeks/<id>'.format(route_name), methods=['POST'])

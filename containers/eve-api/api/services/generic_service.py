@@ -14,7 +14,6 @@ class GenericService():
     def get(self, id):
         obj = self.objects(Q(_id=ObjectId(id))).first()
         return obj
-
     def delete(self, id):
         obj = self.get(id)
         if not obj:
