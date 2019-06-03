@@ -8263,15 +8263,7 @@
       },
       {
         "intent": "deny",
-        "text": "errado por favor"
-      },
-      {
-        "intent": "deny",
         "text": "não pfvr"
-      },
-      {
-        "intent": "deny",
-        "text": "incorreto pfvr"
       },
       {
         "intent": "deny",
@@ -8284,10 +8276,6 @@
       {
         "intent": "deny",
         "text": "pfvr ñ"
-      },
-      {
-        "intent": "deny",
-        "text": "errado pfvr"
       },
       {
         "intent": "deny",
@@ -8315,35 +8303,11 @@
       },
       {
         "intent": "deny",
-        "text": "pfvr na verdade, não"
-      },
-      {
-        "intent": "deny",
-        "text": "isso está errado pfvr"
-      },
-      {
-        "intent": "deny",
         "text": "não faça isso"
       },
       {
         "intent": "deny",
-        "text": "pfvr isso está errado"
-      },
-      {
-        "intent": "deny",
-        "text": "por favor na verdade, não"
-      },
-      {
-        "intent": "deny",
-        "text": "isso está errado por favor"
-      },
-      {
-        "intent": "deny",
         "text": "não faça isso por favor"
-      },
-      {
-        "intent": "deny",
-        "text": "incorreto por favor"
       },
       {
         "intent": "deny",
@@ -8363,26 +8327,6 @@
       },
       {
         "intent": "deny",
-        "text": "por favor incorreto"
-      },
-      {
-        "intent": "deny",
-        "text": "na verdade, não pfvr"
-      },
-      {
-        "intent": "deny",
-        "text": "por favor errado"
-      },
-      {
-        "intent": "deny",
-        "text": "pfvr errado"
-      },
-      {
-        "intent": "deny",
-        "text": "pfvr incorreto"
-      },
-      {
-        "intent": "deny",
         "text": "na verdade, não por favor"
       },
       {
@@ -8392,6 +8336,18 @@
       {
         "intent": "deny",
         "text": "pfvr não faça isso"
+      },
+      {
+        "intent": "deny",
+        "text": "nao"
+      },
+      {
+        "intent": "deny",
+        "text": "Nao"
+      },
+      {
+        "intent": "deny",
+        "text": "Não"
       },
       {
         "intent": "thank_you",
@@ -23502,7 +23458,7 @@
         "entities": [
           {
             "end": 42,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 37,
             "value": "fezes"
           }
@@ -23514,7 +23470,7 @@
         "entities": [
           {
             "end": 42,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "sangue"
           }
@@ -23526,7 +23482,7 @@
         "entities": [
           {
             "end": 40,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 32,
             "value": "glicemia"
           }
@@ -23538,7 +23494,7 @@
         "entities": [
           {
             "end": 36,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 31,
             "value": "urina"
           }
@@ -23550,7 +23506,7 @@
         "entities": [
           {
             "end": 40,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 35,
             "value": "fezes"
           }
@@ -23562,7 +23518,7 @@
         "entities": [
           {
             "end": 44,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "glicemia"
           }
@@ -23574,7 +23530,7 @@
         "entities": [
           {
             "end": 37,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 32,
             "value": "fezes"
           }
@@ -23586,7 +23542,7 @@
         "entities": [
           {
             "end": 42,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 37,
             "value": "fezes"
           }
@@ -23598,7 +23554,7 @@
         "entities": [
           {
             "end": 35,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 30,
             "value": "fezes"
           }
@@ -23610,7 +23566,7 @@
         "entities": [
           {
             "end": 41,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 35,
             "value": "sangue"
           }
@@ -23622,7 +23578,7 @@
         "entities": [
           {
             "end": 38,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 30,
             "value": "glicemia"
           }
@@ -23634,7 +23590,7 @@
         "entities": [
           {
             "end": 40,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 35,
             "value": "urina"
           }
@@ -23646,7 +23602,7 @@
         "entities": [
           {
             "end": 43,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 38,
             "value": "urina"
           }
@@ -23658,7 +23614,7 @@
         "entities": [
           {
             "end": 42,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "sangue"
           }
@@ -23670,7 +23626,7 @@
         "entities": [
           {
             "end": 43,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 37,
             "value": "sangue"
           }
@@ -23682,7 +23638,7 @@
         "entities": [
           {
             "end": 45,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 37,
             "value": "glicemia"
           }
@@ -23694,7 +23650,7 @@
         "entities": [
           {
             "end": 41,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "fezes"
           }
@@ -23706,7 +23662,7 @@
         "entities": [
           {
             "end": 34,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 29,
             "value": "fezes"
           }
@@ -23718,7 +23674,7 @@
         "entities": [
           {
             "end": 40,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 35,
             "value": "urina"
           }
@@ -23730,7 +23686,7 @@
         "entities": [
           {
             "end": 41,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "fezes"
           }
@@ -23742,7 +23698,7 @@
         "entities": [
           {
             "end": 44,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "glicemia"
           }
@@ -23754,7 +23710,7 @@
         "entities": [
           {
             "end": 41,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "fezes"
           }
@@ -23766,7 +23722,7 @@
         "entities": [
           {
             "end": 42,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 37,
             "value": "fezes"
           }
@@ -23778,7 +23734,7 @@
         "entities": [
           {
             "end": 43,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 37,
             "value": "sangue"
           }
@@ -23790,7 +23746,7 @@
         "entities": [
           {
             "end": 45,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 37,
             "value": "glicemia"
           }
@@ -23802,7 +23758,7 @@
         "entities": [
           {
             "end": 44,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "glicemia"
           }
@@ -23814,7 +23770,7 @@
         "entities": [
           {
             "end": 42,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 37,
             "value": "urina"
           }
@@ -23826,7 +23782,7 @@
         "entities": [
           {
             "end": 46,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 38,
             "value": "glicemia"
           }
@@ -23838,7 +23794,7 @@
         "entities": [
           {
             "end": 45,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 37,
             "value": "glicemia"
           }
@@ -23850,7 +23806,7 @@
         "entities": [
           {
             "end": 42,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 37,
             "value": "urina"
           }
@@ -23862,7 +23818,7 @@
         "entities": [
           {
             "end": 35,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 29,
             "value": "sangue"
           }
@@ -23874,7 +23830,7 @@
         "entities": [
           {
             "end": 41,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "fezes"
           }
@@ -23886,7 +23842,7 @@
         "entities": [
           {
             "end": 38,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 30,
             "value": "glicemia"
           }
@@ -23898,7 +23854,7 @@
         "entities": [
           {
             "end": 43,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 37,
             "value": "sangue"
           }
@@ -23910,7 +23866,7 @@
         "entities": [
           {
             "end": 44,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 38,
             "value": "sangue"
           }
@@ -23922,7 +23878,7 @@
         "entities": [
           {
             "end": 37,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 31,
             "value": "sangue"
           }
@@ -23934,7 +23890,7 @@
         "entities": [
           {
             "end": 41,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "urina"
           }
@@ -23946,7 +23902,7 @@
         "entities": [
           {
             "end": 42,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 37,
             "value": "urina"
           }
@@ -23958,7 +23914,7 @@
         "entities": [
           {
             "end": 35,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 30,
             "value": "urina"
           }
@@ -23970,7 +23926,7 @@
         "entities": [
           {
             "end": 43,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 35,
             "value": "glicemia"
           }
@@ -23982,7 +23938,7 @@
         "entities": [
           {
             "end": 40,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 35,
             "value": "urina"
           }
@@ -23994,7 +23950,7 @@
         "entities": [
           {
             "end": 41,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "urina"
           }
@@ -24006,7 +23962,7 @@
         "entities": [
           {
             "end": 42,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 37,
             "value": "fezes"
           }
@@ -24018,7 +23974,7 @@
         "entities": [
           {
             "end": 43,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 38,
             "value": "urina"
           }
@@ -24030,7 +23986,7 @@
         "entities": [
           {
             "end": 42,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 37,
             "value": "urina"
           }
@@ -24042,7 +23998,7 @@
         "entities": [
           {
             "end": 36,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 31,
             "value": "fezes"
           }
@@ -24054,7 +24010,7 @@
         "entities": [
           {
             "end": 38,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 30,
             "value": "glicemia"
           }
@@ -24066,7 +24022,7 @@
         "entities": [
           {
             "end": 43,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 37,
             "value": "sangue"
           }
@@ -24078,7 +24034,7 @@
         "entities": [
           {
             "end": 41,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 33,
             "value": "glicemia"
           }
@@ -24090,7 +24046,7 @@
         "entities": [
           {
             "end": 41,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 35,
             "value": "sangue"
           }
@@ -24102,7 +24058,7 @@
         "entities": [
           {
             "end": 34,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 26,
             "value": "glicemia"
           }
@@ -24114,7 +24070,7 @@
         "entities": [
           {
             "end": 34,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 29,
             "value": "fezes"
           }
@@ -24126,7 +24082,7 @@
         "entities": [
           {
             "end": 42,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 37,
             "value": "urina"
           }
@@ -24138,7 +24094,7 @@
         "entities": [
           {
             "end": 44,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "glicemia"
           }
@@ -24150,7 +24106,7 @@
         "entities": [
           {
             "end": 37,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 32,
             "value": "urina"
           }
@@ -24162,7 +24118,7 @@
         "entities": [
           {
             "end": 37,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 29,
             "value": "glicemia"
           }
@@ -24174,7 +24130,7 @@
         "entities": [
           {
             "end": 35,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 30,
             "value": "urina"
           }
@@ -24186,7 +24142,7 @@
         "entities": [
           {
             "end": 42,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 37,
             "value": "fezes"
           }
@@ -24198,7 +24154,7 @@
         "entities": [
           {
             "end": 42,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 37,
             "value": "urina"
           }
@@ -24210,7 +24166,7 @@
         "entities": [
           {
             "end": 41,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "urina"
           }
@@ -24222,7 +24178,7 @@
         "entities": [
           {
             "end": 37,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 29,
             "value": "glicemia"
           }
@@ -24234,7 +24190,7 @@
         "entities": [
           {
             "end": 35,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 30,
             "value": "fezes"
           }
@@ -24246,7 +24202,7 @@
         "entities": [
           {
             "end": 42,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "sangue"
           }
@@ -24258,7 +24214,7 @@
         "entities": [
           {
             "end": 35,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 29,
             "value": "sangue"
           }
@@ -24270,7 +24226,7 @@
         "entities": [
           {
             "end": 39,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 31,
             "value": "glicemia"
           }
@@ -24282,7 +24238,7 @@
         "entities": [
           {
             "end": 34,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 29,
             "value": "urina"
           }
@@ -24294,7 +24250,7 @@
         "entities": [
           {
             "end": 43,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 35,
             "value": "glicemia"
           }
@@ -24306,7 +24262,7 @@
         "entities": [
           {
             "end": 43,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 38,
             "value": "fezes"
           }
@@ -24318,7 +24274,7 @@
         "entities": [
           {
             "end": 35,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 30,
             "value": "fezes"
           }
@@ -24330,7 +24286,7 @@
         "entities": [
           {
             "end": 40,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 35,
             "value": "fezes"
           }
@@ -24342,7 +24298,7 @@
         "entities": [
           {
             "end": 41,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "fezes"
           }
@@ -24354,7 +24310,7 @@
         "entities": [
           {
             "end": 44,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 38,
             "value": "sangue"
           }
@@ -24366,7 +24322,7 @@
         "entities": [
           {
             "end": 34,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 29,
             "value": "urina"
           }
@@ -24378,7 +24334,7 @@
         "entities": [
           {
             "end": 31,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 26,
             "value": "fezes"
           }
@@ -24390,7 +24346,7 @@
         "entities": [
           {
             "end": 37,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 32,
             "value": "fezes"
           }
@@ -24402,7 +24358,7 @@
         "entities": [
           {
             "end": 37,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 31,
             "value": "sangue"
           }
@@ -24414,7 +24370,7 @@
         "entities": [
           {
             "end": 38,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 33,
             "value": "fezes"
           }
@@ -24426,7 +24382,7 @@
         "entities": [
           {
             "end": 42,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "sangue"
           }
@@ -24438,7 +24394,7 @@
         "entities": [
           {
             "end": 44,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "glicemia"
           }
@@ -24450,7 +24406,7 @@
         "entities": [
           {
             "end": 44,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "glicemia"
           }
@@ -24462,7 +24418,7 @@
         "entities": [
           {
             "end": 40,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 35,
             "value": "fezes"
           }
@@ -24474,7 +24430,7 @@
         "entities": [
           {
             "end": 36,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 31,
             "value": "urina"
           }
@@ -24486,7 +24442,7 @@
         "entities": [
           {
             "end": 38,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 32,
             "value": "sangue"
           }
@@ -24498,7 +24454,7 @@
         "entities": [
           {
             "end": 43,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 35,
             "value": "glicemia"
           }
@@ -24510,7 +24466,7 @@
         "entities": [
           {
             "end": 42,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "sangue"
           }
@@ -24522,7 +24478,7 @@
         "entities": [
           {
             "end": 36,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 31,
             "value": "fezes"
           }
@@ -24534,7 +24490,7 @@
         "entities": [
           {
             "end": 44,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "glicemia"
           }
@@ -24546,7 +24502,7 @@
         "entities": [
           {
             "end": 42,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 37,
             "value": "fezes"
           }
@@ -24558,7 +24514,7 @@
         "entities": [
           {
             "end": 43,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 35,
             "value": "glicemia"
           }
@@ -24570,7 +24526,7 @@
         "entities": [
           {
             "end": 41,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "fezes"
           }
@@ -24582,7 +24538,7 @@
         "entities": [
           {
             "end": 32,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 26,
             "value": "sangue"
           }
@@ -24594,7 +24550,7 @@
         "entities": [
           {
             "end": 37,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 32,
             "value": "urina"
           }
@@ -24606,7 +24562,7 @@
         "entities": [
           {
             "end": 45,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 37,
             "value": "glicemia"
           }
@@ -24618,7 +24574,7 @@
         "entities": [
           {
             "end": 41,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "fezes"
           }
@@ -24630,7 +24586,7 @@
         "entities": [
           {
             "end": 41,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "urina"
           }
@@ -24642,7 +24598,7 @@
         "entities": [
           {
             "end": 36,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 30,
             "value": "sangue"
           }
@@ -24654,7 +24610,7 @@
         "entities": [
           {
             "end": 42,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 37,
             "value": "urina"
           }
@@ -24666,7 +24622,7 @@
         "entities": [
           {
             "end": 43,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 37,
             "value": "sangue"
           }
@@ -24678,7 +24634,7 @@
         "entities": [
           {
             "end": 45,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 37,
             "value": "glicemia"
           }
@@ -24690,7 +24646,7 @@
         "entities": [
           {
             "end": 43,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 37,
             "value": "sangue"
           }
@@ -24702,7 +24658,7 @@
         "entities": [
           {
             "end": 36,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 30,
             "value": "sangue"
           }
@@ -24714,7 +24670,7 @@
         "entities": [
           {
             "end": 40,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 32,
             "value": "glicemia"
           }
@@ -24726,7 +24682,7 @@
         "entities": [
           {
             "end": 38,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 33,
             "value": "urina"
           }
@@ -24738,7 +24694,7 @@
         "entities": [
           {
             "end": 39,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 33,
             "value": "sangue"
           }
@@ -24750,7 +24706,7 @@
         "entities": [
           {
             "end": 41,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "urina"
           }
@@ -24762,7 +24718,7 @@
         "entities": [
           {
             "end": 42,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "sangue"
           }
@@ -24774,7 +24730,7 @@
         "entities": [
           {
             "end": 36,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 30,
             "value": "sangue"
           }
@@ -24786,7 +24742,7 @@
         "entities": [
           {
             "end": 38,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 32,
             "value": "sangue"
           }
@@ -24798,7 +24754,7 @@
         "entities": [
           {
             "end": 39,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 31,
             "value": "glicemia"
           }
@@ -24810,7 +24766,7 @@
         "entities": [
           {
             "end": 41,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "urina"
           }
@@ -24822,7 +24778,7 @@
         "entities": [
           {
             "end": 43,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 37,
             "value": "sangue"
           }
@@ -24834,7 +24790,7 @@
         "entities": [
           {
             "end": 41,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 35,
             "value": "sangue"
           }
@@ -24846,7 +24802,7 @@
         "entities": [
           {
             "end": 42,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "sangue"
           }
@@ -24858,7 +24814,7 @@
         "entities": [
           {
             "end": 45,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 37,
             "value": "glicemia"
           }
@@ -24870,7 +24826,7 @@
         "entities": [
           {
             "end": 40,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 35,
             "value": "fezes"
           }
@@ -24882,7 +24838,7 @@
         "entities": [
           {
             "end": 43,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 38,
             "value": "fezes"
           }
@@ -24894,7 +24850,7 @@
         "entities": [
           {
             "end": 42,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "sangue"
           }
@@ -24906,7 +24862,7 @@
         "entities": [
           {
             "end": 42,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 37,
             "value": "fezes"
           }
@@ -24918,7 +24874,7 @@
         "entities": [
           {
             "end": 40,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 35,
             "value": "urina"
           }
@@ -24930,7 +24886,7 @@
         "entities": [
           {
             "end": 44,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "glicemia"
           }
@@ -24942,7 +24898,7 @@
         "entities": [
           {
             "end": 41,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "urina"
           }
@@ -24954,7 +24910,7 @@
         "entities": [
           {
             "end": 31,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 26,
             "value": "urina"
           }
@@ -24966,7 +24922,7 @@
         "entities": [
           {
             "end": 41,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "urina"
           }
@@ -24978,7 +24934,7 @@
         "entities": [
           {
             "end": 45,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 37,
             "value": "glicemia"
           }
@@ -24990,7 +24946,7 @@
         "entities": [
           {
             "end": 41,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 35,
             "value": "sangue"
           }
@@ -25002,7 +24958,7 @@
         "entities": [
           {
             "end": 41,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 36,
             "value": "fezes"
           }
@@ -25014,7 +24970,7 @@
         "entities": [
           {
             "end": 46,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 38,
             "value": "glicemia"
           }
@@ -25026,7 +24982,7 @@
         "entities": [
           {
             "end": 35,
-            "entity": "when_question_entity",
+            "entity": "question_entity",
             "start": 30,
             "value": "urina"
           }
@@ -93176,6 +93132,42 @@
             "end": 2,
             "entity": "pregnancy_weeks",
             "start": 0,
+            "value": "12"
+          }
+        ],
+        "text": "12 semanas"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "end":11,
+            "entity": "pregnancy_weeks",
+            "start": 9,
+            "value": "20"
+          }
+        ],
+        "text": "estou de 20 semanas"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "end":11,
+            "entity": "pregnancy_weeks",
+            "start": 9,
+            "value": "10"
+          }
+        ],
+        "text": "estou de 10 semanas"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "pregnancy_weeks",
+            "start": 0,
             "value": "10"
           }
         ],
@@ -93262,6 +93254,14 @@
       {
         "intent": "affirm",
         "text": "Ok"
+      },
+      {
+        "intent": "affirm",
+        "text": "Okay"
+      },
+      {
+        "intent": "affirm",
+        "text": "OK"
       },
       {
         "intent": "affirm",

@@ -5,13 +5,10 @@
   - utter_ask_is_pregnant
 * affirm
   - utter_congrats
-  - initial_form
-  - form{"name": "initial_form"}
+  - initial_form_pregnant
+  - form{"name": "initial_form_pregnant"}
   - form{"name": null}
-  - utter_thank_you
-  - utter_first_help
-* which{"question_entity": "exercicios"}
-    - get_answer
+  - utter_ask_me_anything
 
 ## bot inicia a conversa e a mulher não esta gravida mas esta tentando engravidar
 * get_started
@@ -21,8 +18,10 @@
 * deny
   - utter_ask_trying_pregnant
 * affirm
-  - utter_trying_pregnant
-  - utter_first_help
+  - initial_form_tempting
+  - form{"name": "initial_form_tempting"}
+  - form{"name": null}
+  - utter_ask_me_anything
 * which{"question_entity": "exercicios"}
     - get_answer
 
@@ -34,7 +33,7 @@
 * deny
   - utter_ask_trying_pregnant
 * deny
-  - utter_first_help
+  - utter_ask_me_anything
 * which{"question_entity": "exercicios"}
     - get_answer
 
@@ -43,7 +42,7 @@
   - action_greet_user
 * deny
   - utter_info_later
-  - utter_first_help
+  - utter_ask_me_anything
 * which{"question_entity": "exercicios"}
     - get_answer
 
@@ -54,11 +53,10 @@
   - utter_ask_is_pregnant
 * affirm
   - utter_congrats
-  - initial_form
-  - form{"name": "initial_form"}
+  - initial_form_pregnant
+  - form{"name": "initial_form_pregnant"}
   - form{"name": null}
-  - utter_thank_you
-  - utter_first_help
+  - utter_ask_me_anything
 * which{"question_entity": "exercicios"}
     - get_answer
 
@@ -70,8 +68,10 @@
 * deny
   - utter_ask_trying_pregnant
 * affirm
-  - utter_trying_pregnant
-  - utter_first_help
+  - initial_form_tempting
+  - form{"name": "initial_form_tempting"}
+  - form{"name": null}
+  - utter_ask_me_anything
 * which{"question_entity": "exercicios"}
     - get_answer
 
@@ -84,14 +84,14 @@
   - utter_ask_trying_pregnant
 * deny
   - utter_thank_you
-  - utter_first_help
+  - utter_ask_me_anything
 
 ## a mulher inicia a conversa com apenas 'Oi' e quer responder as perguntas
 * hello
   - action_greet_user
 * deny
   - utter_info_later
-  - utter_first_help
+  - utter_ask_me_anything
 
 ## a mulher inicia a conversa com 'Oi tudo bem?' e esta gravida
 * greeting
@@ -102,11 +102,10 @@
   - utter_ask_is_pregnant
 * affirm
   - utter_congrats
-  - initial_form
-  - form{"name": "initial_form"}
+  - initial_form_pregnant
+  - form{"name": "initial_form_pregnant"}
   - form{"name": null}
-  - utter_thank_you
-  - utter_first_help
+  - utter_ask_me_anything
 * which{"question_entity": "exercicios"}
     - get_answer
 
@@ -120,8 +119,10 @@
 * deny
   - utter_ask_trying_pregnant
 * affirm
-  - utter_trying_pregnant
-  - utter_first_help
+  - initial_form_tempting
+  - form{"name": "initial_form_tempting"}
+  - form{"name": null}
+  - utter_ask_me_anything
 * which{"question_entity": "exercicios"}
     - get_answer
 
@@ -136,7 +137,7 @@
   - utter_ask_trying_pregnant
 * deny
   - utter_thank_you
-  - utter_first_help
+  - utter_ask_me_anything
 * which{"question_entity": "exercicios"}
     - get_answer
 
@@ -147,7 +148,7 @@
   - utter_ask_info
 * deny
   - utter_info_later
-  - utter_first_help
+  - utter_ask_me_anything
 
 ## canthelp
 * canthelp
@@ -308,57 +309,7 @@
     - utter_first_step
     - utter_ask_info
 * affirm
-  - initial_form
-  - form{"name": "initial_form"}
+  - initial_form_pregnant
+  - form{"name": "initial_form_pregnant"}
   - form{"name": null}
-  - utter_thank_you
-  - utter_first_help
-
-## Generated Story -8676088873807953507
-* hello
-    - action_greet_user
-* affirm
-    - utter_ask_is_pregnant
-* affirm
-    - utter_congrats
-    - initial_form
-    - form{"name": "initial_form"}
-    - slot{"requested_slot": "pregnancy_weeks"}
-* form: enter_data{"pregnancy_weeks": "10"}
-    - slot{"pregnancy_weeks": "10"}
-    - form: initial_form
-    - slot{"pregnancy_weeks": "10"}
-    - slot{"requested_slot": "planned_pregnancy"}
-## Generated Story -9169979720908617369
-* hello
-    - action_greet_user
-* affirm
-    - utter_ask_is_pregnant
-* affirm
-    - utter_congrats
-    - initial_form
-    - form{"name": "initial_form"}
-    - slot{"requested_slot": "pregnancy_weeks"}
-* form: enter_data{"pregnancy_weeks": "12"}
-    - slot{"pregnancy_weeks": "12"}
-    - form: initial_form
-    - slot{"pregnancy_weeks": "12"}
-    - slot{"requested_slot": "planned_pregnancy"}
-* form: enter_data
-    - form: initial_form
-    - slot{"planned_pregnancy": "1"}
-    - slot{"requested_slot": "first_pregnancy"}
-* form: enter_data
-    - form: initial_form
-    - slot{"first_pregnancy": "1"}
-    - slot{"requested_slot": "health_plan"}
-* form: enter_data
-    - form: initial_form
-    - slot{"health_plan": "1"}
-    - slot{"requested_slot": "pre_natal"}
-* form: enter_data
-    - form: initial_form
-    - slot{"pre_natal": "1"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-
+  - utter_ask_me_anything

@@ -30,6 +30,13 @@ actions:
   - utter_trying_pregnant
   - utter_info_later
   - utter_wrong_pregnancy_weeks
+  - utter_pre_natal_sus
+  - utter_ask_is_planning
+  - utter_planning_pregnancy
+  - utter_ask_has_children
+  - utter_ask_me_anything
+  - utter_schedule_gynecologist
+  - utter_doing_right
   - get_answer
   - action_greet_user
   - action_default_fallback
@@ -38,7 +45,8 @@ entities:
   - pregnancy_weeks
 forms: 
   - medicine_form
-  - initial_form
+  - initial_form_pregnant
+  - initial_form_tempting
 intents: 
   - affirm
   - enter_data:
@@ -85,8 +93,12 @@ slots:
     type: unfeaturized
   pregnancy_weeks:
     type: unfeaturized
-  requested_slot:
+  is_planning:
     type: unfeaturized
+  has_children:
+    type: unfeaturized
+  requested_slot:
+    type: unfeaturized    
 templates:
   utter_ask_first_pregnancy:
   - text: "É a sua primeira gravidez?"
@@ -173,4 +185,29 @@ templates:
   utter_welcome:
   - text: "Imagina, qualquer coisa só falar!"
   utter_wrong_pregnancy_weeks:
-  - text: "Por favor, insira um número de semanas válido"
+  - text: "Por favor, me informe um número de semanas válido"
+  utter_pre_natal_sus:
+  - text: "Procure a rede pública mais próxima da sua casa e peça o atendimento."
+  utter_ask_is_planning:
+  - text: "E você está se preparando para isso? Digo, passou com seu ginecologista para uma avaliação de rotina, por exemplo?"
+    buttons:
+    - title: "Sim"
+      payload: '/enter_data{"is_planning":"True"}'
+    - title: "Não"
+      payload: '/enter_data{"is_planning":"False"}'
+  utter_ask_has_children:
+  - text: "Você já tem filhos?"
+    buttons:
+    - title: "Sim"
+      payload: '/enter_data{"has_children":"True"}'
+    - title: "Não"
+      payload: '/enter_data{"has_children":"False"}'
+  utter_ask_me_anything:
+  - text: "Então, você tem alguma dúvida? Talvez eu possa te ajudar"
+  utter_doing_right:
+  - text: "Ótimo! Você está fazendo certinho, se planejar e se preparar pra gravidez é muito importante!"
+  utter_schedule_gynecologist:
+  - text: "Marque uma consulta com o seu ginecologista e converse com ele sobre a sua vontade de engravidar. Assim, ele pode te ajudar durante esse processo 😉"
+  utter_planning_pregnancy:
+  - text: "Se você deseja engravidar é muito importante se preparar para isso. É recomendável que você e o seu parceiro estejam com saúde plena, física e mental, tenha uma dieta saudável, faça atividades físicas ponderadas e de preferência esteja sem sobrecargas emocionais.
+O planejamento tem o objetivo de identificar fatores de risco como diabetes e hipertensão, além de possibilitar acesso a informações sobre fertilidade."

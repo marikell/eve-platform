@@ -63,10 +63,10 @@ class ActionGreetUser(Action):
             dispatcher.utter_template("utter_greet_back", tracker)
         return []
 
-class InitialForm(FormAction):
+class InitialFormPregnant(FormAction):
     hours = []
     def name(self) -> Text:
-        return "initial_form"
+        return "initial_form_pregnant"
         
     @staticmethod
     def required_slots(tracker: Tracker):
@@ -83,18 +83,6 @@ class InitialForm(FormAction):
             "pregnancy_weeks": [
                 self.from_entity(entity="pregnancy_weeks"),
                 self.from_text(intent="enter_data")
-            ],
-            "planned_pregnancy": [
-                self.from_text(intent="enter_data")
-            ],
-            "first_pregnancy": [
-                self.from_text(intent="enter_data")
-            ],
-            "health_plan": [
-                self.from_text(intent="enter_data")
-            ],
-            "pre_natal": [
-                self.from_text(intent="enter_data")
             ]
         }
 
@@ -106,7 +94,7 @@ class InitialForm(FormAction):
         if self.is_int(value) and int(value) >= 1 and int(value) <= 40:            
             return {'pregnancy_weeks': value}
         else:
-            dispatcher.utter_template('utter_wrong_pregnancy_weeks', tracker)
+            # dispatcher.utter_template('utter_wrong_pregnancy_weeks', tracker)
             return None
 
     @staticmethod
@@ -122,6 +110,42 @@ class InitialForm(FormAction):
         first_pregnancy = tracker.get_slot("first_pregnancy")
         health_plan = tracker.get_slot("health_plan")
         pre_natal = tracker.get_slot("pre_natal")
-        # salva as informações
-        dispatcher.utter_template('utter_thank_you', tracker)
+        # salvar as informações
+        if(pre_natal == "True"):
+            dispatcher.utter_template('utter_great', tracker)
+        elif(pre_natal == "False" and health_plan == "False"):
+            dispatcher.utter_template('utter_first_step', tracker)
+            dispatcher.utter_template('utter_pre_natal_sus', tracker)
+        else:
+            dispatcher.utter_template('utter_first_step', tracker)
+
+        return []
+
+class InitialFormTempting(FormAction):
+    hours = []
+    def name(self) -> Text:
+        return "initial_form_tempting"
+        
+    @staticmethod
+    def required_slots(tracker: Tracker):
+        return [
+            "is_planning",
+            "has_children",
+            "health_plan"
+        ]
+
+    def submit(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> List[Dict]:
+        is_planning = tracker.get_slot("is_planning")
+        has_children = tracker.get_slot("has_children")
+        health_plan = tracker.get_slot("health_plan")
+        print(health_plan, type(health_plan))
+        # salvar as informações
+        if(is_planning == "True"):
+            dispatcher.utter_template('utter_doing_right', tracker)
+        else:
+            dispatcher.utter_template('utter_planning_pregnancy', tracker)
+            if(health_plan == "False"):
+                dispatcher.utter_template('utter_pre_natal_sus', tracker)
+            else:
+                dispatcher.utter_template('utter_schedule_gynecologist', tracker)
         return []
