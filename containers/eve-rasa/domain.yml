@@ -20,7 +20,7 @@ actions:
   - utter_first_step
   - utter_ask_pregnancy_weeks
   - utter_ask_is_pregnant
-  - utter_ask_trying_pregnant
+  - utter_ask_is_trying
   - utter_ask_planned_pregnancy
   - utter_ask_health_plan
   - utter_ask_first_pregnancy
@@ -43,10 +43,8 @@ actions:
 entities: 
   - question_entity
   - pregnancy_weeks
-forms: 
-  - medicine_form
-  - initial_form_pregnant
-  - initial_form_tempting
+forms:
+  - initial_form
 intents: 
   - affirm
   - enter_data:
@@ -82,6 +80,9 @@ intents:
   - greeting_answer_back
   - when_exame
   - im_pregnant
+  - complain
+  - stop
+  - stop_form
 slots:
   first_pregnancy:
     type: unfeaturized
@@ -96,6 +97,10 @@ slots:
   is_planning:
     type: unfeaturized
   has_children:
+    type: unfeaturized
+  is_pregnant:
+    type: unfeaturized
+  is_trying:
     type: unfeaturized
   requested_slot:
     type: unfeaturized    
@@ -120,6 +125,11 @@ templates:
   - text: "Bom, pra eu poder te ajudar, preciso te fazer algumas perguntas antes ok? É rapidinho :)"
   utter_ask_is_pregnant:
   - text: "Você está grávida?"
+    buttons:
+    - title: "Sim"
+      payload: '/enter_data{"is_pregnant":"True"}'
+    - title: "Não"
+      payload: '/enter_data{"is_pregnant":"False"}'
   utter_ask_isbot:
   - text: "Eu sou um robô! 🤖"
   utter_ask_planned_pregnancy:
@@ -138,8 +148,13 @@ templates:
       payload: '/enter_data{"pre_natal":"False"}'
   utter_ask_pregnancy_weeks:
   - text: "Você está de quantas semanas?"
-  utter_ask_trying_pregnant:
+  utter_ask_is_trying:
   - text: "Está tentando engravidar?"
+    buttons:
+    - title: "Sim"
+      payload: '/enter_data{"is_trying":"True"}'
+    - title: "Não"
+      payload: '/enter_data{"is_trying":"False"}'
   utter_ask_wherefrom:
   - text: "Sou de Sorocaba, SP"
   - text: "Sorocaba, SP"
@@ -206,6 +221,8 @@ templates:
   - text: "Então, você tem alguma dúvida? Talvez eu possa te ajudar"
   utter_doing_right:
   - text: "Ótimo! Você está fazendo certinho, se planejar e se preparar pra gravidez é muito importante!"
+  utter_doing_right_prenatal:
+  - text: "Ótimo! Você está fazendo certinho, o pré-natal é muito importante e deve ser iniciado assim que a gravidez é constatada!"
   utter_schedule_gynecologist:
   - text: "Marque uma consulta com o seu ginecologista e converse com ele sobre a sua vontade de engravidar. Assim, ele pode te ajudar durante esse processo 😉"
   utter_planning_pregnancy:
