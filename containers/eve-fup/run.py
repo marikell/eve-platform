@@ -1,14 +1,12 @@
 import schedule
 import time
 from helpers.logging import get_log
-from service.fup_service import routine
+from service.fup_service import FupJob
 
-def run_fup():
-    get_log('Running Eve Fup Routine...')
-    routine()
+fup_job = FupJob()
 
+schedule.every().day.at("12:42").do(fup_job.execute_routine)
 
-schedule.every().day.at("00:19").do(run_fup)
 while True:
     schedule.run_pending()
     time.sleep(1)
