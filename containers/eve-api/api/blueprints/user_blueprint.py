@@ -2,8 +2,6 @@ from flask import Blueprint, jsonify, request
 from werkzeug import Response
 import json
 from flask_api import status
-from api.services.user_service import UserService
-from api.services.person_service import PersonService
 from api.utils.response_formatter import response, response_text
 from api.services.service_handler import ServiceHandler
 from api.config.configuration import ROUTE_CONFIG
@@ -32,48 +30,6 @@ def get_all():
 
         return response(users, status.HTTP_200_OK)
                 
-    except Exception as e:
-        return response_text(str(e), status.HTTP_400_BAD_REQUEST)
-
-@app_user.route('/{}/recent-weeks/<id>'.format(route_name), methods=['GET'])
-def get_last_user_weeks(id):
-    try:
-        obj = ServiceHandler.get_service(ROUTE_CONFIG['USER_WEEKS_TYPE_NAME']).get_most_recently_record(id)
-
-        if not obj:
-            raise Exception('User with id {} has no user_weeks records.'.format(id))
-
-        if obj.user_id['user_type'] != UserTypeEnum.pregnant.value:
-            raise Exception('This user is not pregnant to control user_weeks records')
-
-        return response(obj.to_json(), status.HTTP_200_OK)
-    except Exception as e:
-        return response_text(str(e), status.HTTP_400_BAD_REQUEST)
-        
-
-
-@app_user.route('/{}/weeks/<id>'.format(route_name), methods=['POST'])
-def update_weeks(id):
-    try:
-        
-        json_obj = request.get_json()
-
-        check_if_key_exists('weeks', json_obj)
-
-        user = ServiceHandler.get_service(route_name).get(id)
-
-        if not user:
-            raise Exception('Object with id {} not found!'.format(id))
-
-        weeks_obj = {
-            'weeks':json_obj['weeks'],
-            'user': user
-        }
-
-        ServiceHandler.get_service(ROUTE_CONFIG['USER_WEEKS_TYPE_NAME']).insert(weeks_obj)
-
-        return response(status=status.HTTP_201_CREATED)
-
     except Exception as e:
         return response_text(str(e), status.HTTP_400_BAD_REQUEST)
 
