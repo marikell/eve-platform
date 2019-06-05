@@ -8,7 +8,7 @@ ROUTE_CONFIG:dict = {
     'ENTITY_INTENT_ANSWER_TYPE_NAME':'entity-intent-answer',
     'USER_TYPE_NAME':'user',
     'PERSON_TYPE_NAME':'person',
-    'USER_PREGNANCY_DAYS_TYPE_NAME':'user-pregnancy-days',
+    'USER_PREGNANCY_WEEKS_TYPE_NAME':'user-pregnancy-weeks',
     'FOLLOW_UP_TYPE_NAME':'follow-up'
 }
 

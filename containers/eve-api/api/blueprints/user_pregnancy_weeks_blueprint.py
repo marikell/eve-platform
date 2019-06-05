@@ -8,11 +8,11 @@ from api.config.configuration import ROUTE_CONFIG
 from api.utils.validate_fields import check_empty_string, check_empty_string_in_array, check_if_key_exists
 from api.enums.user_enums import UserTypeEnum
 
-route_name = ROUTE_CONFIG['USER_PREGNANCY_DAYS_TYPE_NAME']
-app_usr_pregnancy_days = Blueprint(route_name,__name__, url_prefix='/api')
+route_name = ROUTE_CONFIG['USER_PREGNANCY_WEEKS_TYPE_NAME']
+app_usr_pregnancy_weeks = Blueprint(route_name,__name__, url_prefix='/api')
 
-@app_usr_pregnancy_days.route('/{}/<user_id>'.format(route_name), methods=['GET'])
-def get_last_user_pregnant_days(user_id):
+@app_usr_pregnancy_weeks.route('/{}/<user_id>'.format(route_name), methods=['GET'])
+def get_last_user_pregnant_weeks(user_id):
     try:
         user = ServiceHandler.get_service(ROUTE_CONFIG['USER_TYPE_NAME']).get(user_id)
 
@@ -31,13 +31,13 @@ def get_last_user_pregnant_days(user_id):
     except Exception as e:
         return response_text(str(e), status.HTTP_400_BAD_REQUEST)       
 
-@app_usr_pregnancy_days.route(route_name, methods=['POST'])
+@app_usr_pregnancy_weeks.route(route_name, methods=['POST'])
 def insert():
     try:        
         json_obj = request.get_json()
 
-        check_if_key_exists('days', json_obj)
-        check_if_key_exists('days_start', json_obj)
+        check_if_key_exists('weeks', json_obj)
+        check_if_key_exists('weeks_start', json_obj)
         check_if_key_exists('user_id', json_obj)
 
         user_id = json_obj['user_id']
@@ -48,8 +48,8 @@ def insert():
             raise Exception('User with id {} not found!'.format(user_id))
 
         days_obj = {
-            'days':json_obj['days'],
-            'days_start':json_obj['days_start'],
+            'weeks':json_obj['weeks'],
+            'weeks_start':json_obj['weeks_start'],
             'user' : user
         }
 
@@ -62,15 +62,15 @@ def insert():
 
 
 
-@app_usr_pregnancy_days.route('/{}/<id>'.format(route_name), methods=['PUT'])
+@app_usr_pregnancy_weeks.route('/{}/<id>'.format(route_name), methods=['PUT'])
 def update(id):
     try:        
         json_obj = request.get_json()
 
-        check_if_key_exists('days', json_obj)
+        check_if_key_exists('weeks', json_obj)
 
         days_obj = {
-            'days':json_obj['days'],
+            'weeks':json_obj['weeks'],
             'id' : id
         }
 

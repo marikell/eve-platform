@@ -5,7 +5,7 @@ from api.blueprints.entity_intent_answer_blueprint import  app_entity_intent_ans
 from api.blueprints.follow_up_blueprint import app_follow_up
 from api.blueprints.user_blueprint import app_user
 from api.blueprints.answer_blueprint import app_answer
-from api.blueprints.user_pregnancy_days_blueprint import app_usr_pregnancy_days
+from api.blueprints.user_pregnancy_weeks_blueprint import app_usr_pregnancy_weeks
 from api.services.service_handler import ServiceHandler
 from flask_api import FlaskAPI
 from mongoengine import connect
@@ -28,7 +28,7 @@ def register_blueprints(app):
     app.register_blueprint(app_entity_intent_answer)
     app.register_blueprint(app_user)
     app.register_blueprint(app_follow_up)
-    app.register_blueprint(app_usr_pregnancy_days)
+    app.register_blueprint(app_usr_pregnancy_weeks)
 
 @flask_app.route('/', methods=['GET'])
 def get():
