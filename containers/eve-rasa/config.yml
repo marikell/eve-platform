@@ -1,8 +1,29 @@
-language: en
-pipeline: supervised_embeddings
+language: pt
+# pipeline: supervised_embeddings
+
+pipeline:
+- name: WhitespaceTokenizer
+- name: RegexFeaturizer
+- name: CRFEntityExtractor
+- name: EntitySynonymMapper
+- name: CountVectorsFeaturizer
+- name: EmbeddingIntentClassifier
+- name: DucklingHTTPExtractor
+  url: "http://localhost:8000"
+  dimensions: ["time"]
+  # allows you to configure the locale, by default the language is
+  # used
+  # locale: "le_BR"
+  # if not set the default timezone of Duckling is going to be used
+  # needed to calculate dates from relative expressions like "tomorrow"
+  # timezone: "South America/Brazil"
 
 policies:
   - name: MemoizationPolicy
   - name: KerasPolicy
   - name: MappingPolicy
   - name: FormPolicy
+  - name: FallbackPolicy
+    nlu_threshold: 0.4
+    core_threshold: 0.3
+    fallback_action_name: action_default_fallback

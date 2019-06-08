@@ -14,7 +14,7 @@
         ]
       },
       {
-        "text": "Olá eu posso tomar pimenta",
+        "text": "Olá eu posso comer pimenta",
         "intent": "can",
         "entities": [
           {
@@ -26,26 +26,14 @@
         ]
       },
       {
-        "text": "Oie posso tomar pimenta",
+        "text": "Oiii posso tomar banho na banheira",
         "intent": "can",
         "entities": [
           {
-            "end": 23,
-            "entity": "question_entity",
-            "start": 16,
-            "value": "pimenta"
-          }
-        ]
-      },
-      {
-        "text": "Oiii posso tomar banheira",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 25,
-            "entity": "question_entity",
             "start": 17,
-            "value": "banheira"
+            "end": 34,
+            "value": "banheira",
+            "entity": "question_entity"
           }
         ]
       },
@@ -62,19 +50,19 @@
         ]
       },
       {
-        "text": "eu posso tomar banheira",
+        "text": "eu posso tomar banho na banheira",
         "intent": "can",
         "entities": [
           {
-            "end": 23,
-            "entity": "question_entity",
             "start": 15,
-            "value": "banheira"
+            "end": 32,
+            "value": "banheira",
+            "entity": "question_entity"
           }
         ]
       },
       {
-        "text": "E ai tem algum problema em tomar cafe",
+        "text": "E ai tem algum problema em tomar cafe?",
         "intent": "can",
         "entities": [
           {
@@ -86,7 +74,7 @@
         ]
       },
       {
-        "text": "Olá eu posso tomar cafe",
+        "text": "Olá eu posso tomar cafe?",
         "intent": "can",
         "entities": [
           {
@@ -98,31 +86,31 @@
         ]
       },
       {
-        "text": "Hey posso tomar sol",
+        "text": "posso tomar sol",
         "intent": "can",
         "entities": [
           {
-            "end": 19,
+            "end": 15,
             "entity": "question_entity",
-            "start": 16,
+            "start": 12,
             "value": "sol"
           }
         ]
       },
       {
-        "text": "Ei posso tomar cafeina",
+        "text": "posso tomar cafeina?",
         "intent": "can",
         "entities": [
           {
-            "end": 22,
+            "end": 19,
             "entity": "question_entity",
-            "start": 15,
+            "start": 12,
             "value": "café"
           }
         ]
       },
       {
-        "text": "tem algum problema em tomar pimenta",
+        "text": "tem algum problema em comer pimenta",
         "intent": "can",
         "entities": [
           {
@@ -134,7 +122,7 @@
         ]
       },
       {
-        "text": "Ei eu posso tomar cafe",
+        "text": "Ei eu posso tomar cafe?",
         "intent": "can",
         "entities": [
           {
@@ -158,43 +146,19 @@
         ]
       },
       {
-        "text": "tem algum problema em tomar banheira",
+        "text": "tem algum problema em tomar banho de banheira",
         "intent": "can",
         "entities": [
           {
-            "end": 36,
-            "entity": "question_entity",
             "start": 28,
-            "value": "banheira"
+            "end": 45,
+            "value": "banheira",
+            "entity": "question_entity"
           }
         ]
       },
       {
-        "text": "E ai posso tomar pimenta",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 24,
-            "entity": "question_entity",
-            "start": 17,
-            "value": "pimenta"
-          }
-        ]
-      },
-      {
-        "text": "Olá eu posso tomar banheira",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 27,
-            "entity": "question_entity",
-            "start": 19,
-            "value": "banheira"
-          }
-        ]
-      },
-      {
-        "text": "Ei tem algum problema em tomar cafeína",
+        "text": "Ei tem algum problema em tomar cafeína?",
         "intent": "can",
         "entities": [
           {
@@ -230,25 +194,25 @@
         ]
       },
       {
-        "text": "Oie eu posso tomar cafeina",
+        "text": "eu posso tomar cafeina",
         "intent": "can",
         "entities": [
           {
-            "end": 26,
+            "end": 22,
             "entity": "question_entity",
-            "start": 19,
+            "start": 15,
             "value": "café"
           }
         ]
       },
       {
-        "text": "Olá tem algum problema em tomar cafeína",
+        "text": "tem algum problema em tomar cafeína",
         "intent": "can",
         "entities": [
           {
-            "end": 39,
+            "end": 35,
             "entity": "question_entity",
-            "start": 32,
+            "start": 28,
             "value": "café"
           }
         ]
@@ -290,18 +254,6 @@
         ]
       },
       {
-        "text": "Hey tem algum problema em tomar banheira",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 40,
-            "entity": "question_entity",
-            "start": 32,
-            "value": "banheira"
-          }
-        ]
-      },
-      {
         "text": "Oiii eu posso tomar laxante",
         "intent": "can",
         "entities": [
@@ -310,18 +262,6 @@
             "entity": "question_entity",
             "start": 20,
             "value": "laxante"
-          }
-        ]
-      },
-      {
-        "text": "Ei tem algum problema em tomar banheira",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 39,
-            "entity": "question_entity",
-            "start": 31,
-            "value": "banheira"
           }
         ]
       },
@@ -350,19 +290,19 @@
         ]
       },
       {
-        "text": "Hey posso tomar banheira",
+        "text": "Hey posso tomar banho de banheira?",
         "intent": "can",
         "entities": [
           {
-            "end": 24,
-            "entity": "question_entity",
             "start": 16,
-            "value": "banheira"
+            "end": 33,
+            "value": "banheira",
+            "entity": "question_entity"
           }
         ]
       },
       {
-        "text": "Ei tem algum problema em tomar cafeina",
+        "text": "Ei tem algum problema em tomar cafeina?",
         "intent": "can",
         "entities": [
           {
@@ -374,7 +314,7 @@
         ]
       },
       {
-        "text": "tem algum problema em tomar cafeína",
+        "text": "tem algum problema em tomar cafeína?",
         "intent": "can",
         "entities": [
           {
@@ -386,7 +326,7 @@
         ]
       },
       {
-        "text": "Ei posso tomar sol",
+        "text": "Ei posso tomar sol?",
         "intent": "can",
         "entities": [
           {
@@ -398,19 +338,19 @@
         ]
       },
       {
-        "text": "Oie posso tomar sol",
+        "text": "posso tomar sol",
         "intent": "can",
         "entities": [
           {
-            "end": 19,
+            "end": 15,
             "entity": "question_entity",
-            "start": 16,
+            "start": 12,
             "value": "sol"
           }
         ]
       },
       {
-        "text": "E ai posso tomar laxante",
+        "text": "E ai posso tomar laxante?",
         "intent": "can",
         "entities": [
           {
@@ -422,13 +362,13 @@
         ]
       },
       {
-        "text": "Olá tem algum problema em tomar sol",
+        "text": "tem algum problema em tomar sol",
         "intent": "can",
         "entities": [
           {
-            "end": 35,
+            "end": 31,
             "entity": "question_entity",
-            "start": 32,
+            "start": 28,
             "value": "sol"
           }
         ]
@@ -446,7 +386,7 @@
         ]
       },
       {
-        "text": "Ei posso tomar pimenta",
+        "text": "Ei posso comer pimenta?",
         "intent": "can",
         "entities": [
           {
@@ -470,13 +410,13 @@
         ]
       },
       {
-        "text": "Olá posso tomar cafeína",
+        "text": "posso tomar cafeína",
         "intent": "can",
         "entities": [
           {
-            "end": 23,
+            "end": 19,
             "entity": "question_entity",
-            "start": 16,
+            "start": 12,
             "value": "café"
           }
         ]
@@ -494,18 +434,6 @@
         ]
       },
       {
-        "text": "Oiii posso tomar sol",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 20,
-            "entity": "question_entity",
-            "start": 17,
-            "value": "sol"
-          }
-        ]
-      },
-      {
         "text": "Oiii posso tomar cafeína",
         "intent": "can",
         "entities": [
@@ -518,7 +446,7 @@
         ]
       },
       {
-        "text": "Oiii posso tomar cafeina",
+        "text": "Oiii posso tomar cafeina?",
         "intent": "can",
         "entities": [
           {
@@ -530,7 +458,7 @@
         ]
       },
       {
-        "text": "posso tomar cafe",
+        "text": "posso tomar cafe?",
         "intent": "can",
         "entities": [
           {
@@ -542,7 +470,7 @@
         ]
       },
       {
-        "text": "Oie posso tomar laxante",
+        "text": "Oie posso tomar laxante?",
         "intent": "can",
         "entities": [
           {
@@ -554,19 +482,7 @@
         ]
       },
       {
-        "text": "E ai tem algum problema em tomar banheira",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 41,
-            "entity": "question_entity",
-            "start": 33,
-            "value": "banheira"
-          }
-        ]
-      },
-      {
-        "text": "Oie posso tomar cafeina",
+        "text": "Oie posso tomar cafeina?",
         "intent": "can",
         "entities": [
           {
@@ -602,19 +518,7 @@
         ]
       },
       {
-        "text": "Oiii posso tomar cafe",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 21,
-            "entity": "question_entity",
-            "start": 17,
-            "value": "café"
-          }
-        ]
-      },
-      {
-        "text": "Oiii posso tomar pimenta",
+        "text": "Oiii posso comer pimenta?",
         "intent": "can",
         "entities": [
           {
@@ -626,7 +530,7 @@
         ]
       },
       {
-        "text": "Olá posso tomar sol",
+        "text": "Olá posso tomar sol?",
         "intent": "can",
         "entities": [
           {
@@ -650,7 +554,7 @@
         ]
       },
       {
-        "text": "E ai tem algum problema em tomar cafeína",
+        "text": "E ai tem algum problema em tomar cafeína?",
         "intent": "can",
         "entities": [
           {
@@ -710,7 +614,7 @@
         ]
       },
       {
-        "text": "Hey tem algum problema em tomar laxante",
+        "text": "Hey tem algum problema em tomar laxante?",
         "intent": "can",
         "entities": [
           {
@@ -734,7 +638,7 @@
         ]
       },
       {
-        "text": "Oi tem algum problema em tomar sol",
+        "text": "Oi tem algum problema em tomar sol?",
         "intent": "can",
         "entities": [
           {
@@ -746,7 +650,7 @@
         ]
       },
       {
-        "text": "Oi eu posso tomar cafeina",
+        "text": "Oi eu posso tomar cafeina?",
         "intent": "can",
         "entities": [
           {
@@ -794,19 +698,7 @@
         ]
       },
       {
-        "text": "Oi eu posso tomar banheira",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 26,
-            "entity": "question_entity",
-            "start": 18,
-            "value": "banheira"
-          }
-        ]
-      },
-      {
-        "text": "Oi posso tomar cafe",
+        "text": "Oi posso tomar cafe?",
         "intent": "can",
         "entities": [
           {
@@ -890,7 +782,7 @@
         ]
       },
       {
-        "text": "posso tomar laxante",
+        "text": "posso tomar laxante?",
         "intent": "can",
         "entities": [
           {
@@ -914,7 +806,7 @@
         ]
       },
       {
-        "text": "eu posso tomar sol",
+        "text": "eu posso tomar sol?",
         "intent": "can",
         "entities": [
           {
@@ -962,7 +854,7 @@
         ]
       },
       {
-        "text": "eu posso tomar pimenta",
+        "text": "eu posso comer pimenta?",
         "intent": "can",
         "entities": [
           {
@@ -970,18 +862,6 @@
             "entity": "question_entity",
             "start": 15,
             "value": "pimenta"
-          }
-        ]
-      },
-      {
-        "text": "Ei posso tomar banheira",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 23,
-            "entity": "question_entity",
-            "start": 15,
-            "value": "banheira"
           }
         ]
       },
@@ -998,31 +878,7 @@
         ]
       },
       {
-        "text": "E ai eu posso tomar banheira",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 28,
-            "entity": "question_entity",
-            "start": 20,
-            "value": "banheira"
-          }
-        ]
-      },
-      {
-        "text": "Oie posso tomar banheira",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 24,
-            "entity": "question_entity",
-            "start": 16,
-            "value": "banheira"
-          }
-        ]
-      },
-      {
-        "text": "Ei tem algum problema em tomar pimenta",
+        "text": "Ei tem algum problema em comer pimenta",
         "intent": "can",
         "entities": [
           {
@@ -1034,7 +890,7 @@
         ]
       },
       {
-        "text": "Hey eu posso tomar cafe",
+        "text": "Hey eu posso tomar cafe?",
         "intent": "can",
         "entities": [
           {
@@ -1046,7 +902,7 @@
         ]
       },
       {
-        "text": "E ai eu posso tomar cafe",
+        "text": "E ai eu posso tomar cafe?",
         "intent": "can",
         "entities": [
           {
@@ -1058,19 +914,7 @@
         ]
       },
       {
-        "text": "posso tomar banheira",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 20,
-            "entity": "question_entity",
-            "start": 12,
-            "value": "banheira"
-          }
-        ]
-      },
-      {
-        "text": "Oi eu posso tomar pimenta",
+        "text": "Oi eu posso comer pimenta?",
         "intent": "can",
         "entities": [
           {
@@ -1082,19 +926,7 @@
         ]
       },
       {
-        "text": "Oiii eu posso tomar banheira",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 28,
-            "entity": "question_entity",
-            "start": 20,
-            "value": "banheira"
-          }
-        ]
-      },
-      {
-        "text": "Olá posso tomar cafe",
+        "text": "Olá posso tomar cafe?",
         "intent": "can",
         "entities": [
           {
@@ -1106,7 +938,7 @@
         ]
       },
       {
-        "text": "posso tomar cafeína",
+        "text": "posso tomar cafeína?",
         "intent": "can",
         "entities": [
           {
@@ -1118,7 +950,7 @@
         ]
       },
       {
-        "text": "E ai eu posso tomar pimenta",
+        "text": "E ai eu posso comer pimenta",
         "intent": "can",
         "entities": [
           {
@@ -1130,19 +962,7 @@
         ]
       },
       {
-        "text": "Oi tem algum problema em tomar pimenta",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 38,
-            "entity": "question_entity",
-            "start": 31,
-            "value": "pimenta"
-          }
-        ]
-      },
-      {
-        "text": "Hey posso tomar laxante",
+        "text": "Hey posso tomar laxante?",
         "intent": "can",
         "entities": [
           {
@@ -1154,7 +974,7 @@
         ]
       },
       {
-        "text": "Hey tem algum problema em tomar pimenta",
+        "text": "Hey tem algum problema em comer pimenta?",
         "intent": "can",
         "entities": [
           {
@@ -1166,7 +986,7 @@
         ]
       },
       {
-        "text": "E ai eu posso tomar cafeina",
+        "text": "E ai eu posso tomar cafeina?",
         "intent": "can",
         "entities": [
           {
@@ -1178,19 +998,7 @@
         ]
       },
       {
-        "text": "Ei eu posso tomar banheira",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 26,
-            "entity": "question_entity",
-            "start": 18,
-            "value": "banheira"
-          }
-        ]
-      },
-      {
-        "text": "Hey posso tomar cafe",
+        "text": "Hey posso tomar cafe?",
         "intent": "can",
         "entities": [
           {
@@ -1226,7 +1034,7 @@
         ]
       },
       {
-        "text": "Oie eu posso tomar pimenta",
+        "text": "Oie eu posso comer pimenta",
         "intent": "can",
         "entities": [
           {
@@ -1234,18 +1042,6 @@
             "entity": "question_entity",
             "start": 19,
             "value": "pimenta"
-          }
-        ]
-      },
-      {
-        "text": "Oi posso tomar banheira",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 23,
-            "entity": "question_entity",
-            "start": 15,
-            "value": "banheira"
           }
         ]
       },
@@ -1274,7 +1070,7 @@
         ]
       },
       {
-        "text": "E ai posso tomar cafe",
+        "text": "E ai posso tomar cafe?",
         "intent": "can",
         "entities": [
           {
@@ -1286,7 +1082,7 @@
         ]
       },
       {
-        "text": "Olá tem algum problema em tomar pimenta",
+        "text": "Olá tem algum problema em comer pimenta",
         "intent": "can",
         "entities": [
           {
@@ -1298,14 +1094,14 @@
         ]
       },
       {
-        "text": "Hey eu posso tomar banheira",
+        "text": "Hey eu posso tomar banho de banheira",
         "intent": "can",
         "entities": [
           {
-            "end": 27,
-            "entity": "question_entity",
             "start": 19,
-            "value": "banheira"
+            "end": 36,
+            "value": "banheira",
+            "entity": "question_entity"
           }
         ]
       },
@@ -1322,7 +1118,7 @@
         ]
       },
       {
-        "text": "tem algum problema em tomar laxante",
+        "text": "tem algum problema em tomar laxante?",
         "intent": "can",
         "entities": [
           {
@@ -1342,18 +1138,6 @@
             "entity": "question_entity",
             "start": 31,
             "value": "laxante"
-          }
-        ]
-      },
-      {
-        "text": "E ai posso tomar banheira",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 25,
-            "entity": "question_entity",
-            "start": 17,
-            "value": "banheira"
           }
         ]
       },
@@ -1382,19 +1166,7 @@
         ]
       },
       {
-        "text": "Oie eu posso tomar banheira",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 27,
-            "entity": "question_entity",
-            "start": 19,
-            "value": "banheira"
-          }
-        ]
-      },
-      {
-        "text": "Ei eu posso tomar pimenta",
+        "text": "Ei eu posso comer pimenta",
         "intent": "can",
         "entities": [
           {
@@ -1418,7 +1190,7 @@
         ]
       },
       {
-        "text": "posso tomar pimenta",
+        "text": "posso comer pimenta?",
         "intent": "can",
         "entities": [
           {
@@ -1430,7 +1202,7 @@
         ]
       },
       {
-        "text": "E ai tem algum problema em tomar sol",
+        "text": "E ai tem algum problema em tomar sol?",
         "intent": "can",
         "entities": [
           {
@@ -1454,7 +1226,7 @@
         ]
       },
       {
-        "text": "posso tomar sol",
+        "text": "posso tomar sol?",
         "intent": "can",
         "entities": [
           {
@@ -1478,7 +1250,7 @@
         ]
       },
       {
-        "text": "Hey posso tomar pimenta",
+        "text": "Hey posso comer pimenta?",
         "intent": "can",
         "entities": [
           {
@@ -1490,67 +1262,7 @@
         ]
       },
       {
-        "text": "Hey eu posso tomar pimenta",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 26,
-            "entity": "question_entity",
-            "start": 19,
-            "value": "pimenta"
-          }
-        ]
-      },
-      {
-        "text": "Oi posso tomar pimenta",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 22,
-            "entity": "question_entity",
-            "start": 15,
-            "value": "pimenta"
-          }
-        ]
-      },
-      {
-        "text": "Oi tem algum problema em tomar cafe",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 35,
-            "entity": "question_entity",
-            "start": 31,
-            "value": "café"
-          }
-        ]
-      },
-      {
-        "text": "Oie tem algum problema em tomar pimenta",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 39,
-            "entity": "question_entity",
-            "start": 32,
-            "value": "pimenta"
-          }
-        ]
-      },
-      {
-        "text": "Ei eu posso tomar cafeína",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 25,
-            "entity": "question_entity",
-            "start": 18,
-            "value": "café"
-          }
-        ]
-      },
-      {
-        "text": "Ei posso tomar cafe",
+        "text": "Ei posso tomar cafe?",
         "intent": "can",
         "entities": [
           {
@@ -1562,7 +1274,7 @@
         ]
       },
       {
-        "text": "Oi posso tomar laxante",
+        "text": "Oi posso tomar laxante?",
         "intent": "can",
         "entities": [
           {
@@ -1598,19 +1310,7 @@
         ]
       },
       {
-        "text": "Olá tem algum problema em tomar banheira",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 40,
-            "entity": "question_entity",
-            "start": 32,
-            "value": "banheira"
-          }
-        ]
-      },
-      {
-        "text": "Ei eu posso tomar cafeina",
+        "text": "Ei eu posso tomar cafeina?",
         "intent": "can",
         "entities": [
           {
@@ -1622,7 +1322,7 @@
         ]
       },
       {
-        "text": "Ei posso tomar cafeína",
+        "text": "Ei posso tomar cafeína?",
         "intent": "can",
         "entities": [
           {
@@ -1670,7 +1370,7 @@
         ]
       },
       {
-        "text": "Oie eu posso tomar cafeína",
+        "text": "Oie eu posso tomar cafeína?",
         "intent": "can",
         "entities": [
           {
@@ -1682,7 +1382,7 @@
         ]
       },
       {
-        "text": "Oi posso tomar sol",
+        "text": "Oi posso tomar sol?",
         "intent": "can",
         "entities": [
           {
@@ -1718,19 +1418,7 @@
         ]
       },
       {
-        "text": "Olá posso tomar banheira",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 24,
-            "entity": "question_entity",
-            "start": 16,
-            "value": "banheira"
-          }
-        ]
-      },
-      {
-        "text": "Olá posso tomar pimenta",
+        "text": "Olá posso comer pimenta",
         "intent": "can",
         "entities": [
           {
@@ -1742,7 +1430,7 @@
         ]
       },
       {
-        "text": "Oiii eu posso tomar pimenta",
+        "text": "Oiii eu posso comer pimenta",
         "intent": "can",
         "entities": [
           {
@@ -1766,18 +1454,6 @@
         ]
       },
       {
-        "text": "Oie tem algum problema em tomar banheira",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 40,
-            "entity": "question_entity",
-            "start": 32,
-            "value": "banheira"
-          }
-        ]
-      },
-      {
         "text": "E ai eu posso tomar cafeína",
         "intent": "can",
         "entities": [
@@ -1790,7 +1466,7 @@
         ]
       },
       {
-        "text": "Oi tem algum problema em tomar cafeina",
+        "text": "Oi tem algum problema em tomar cafeina?",
         "intent": "can",
         "entities": [
           {
@@ -1814,19 +1490,7 @@
         ]
       },
       {
-        "text": "Oi tem algum problema em tomar banheira",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 39,
-            "entity": "question_entity",
-            "start": 31,
-            "value": "banheira"
-          }
-        ]
-      },
-      {
-        "text": "Oi posso tomar cafeína",
+        "text": "Oi posso tomar cafeína?",
         "intent": "can",
         "entities": [
           {
@@ -1850,7 +1514,7 @@
         ]
       },
       {
-        "text": "E ai tem algum problema em tomar pimenta",
+        "text": "E ai tem algum problema em comer pimenta",
         "intent": "can",
         "entities": [
           {
@@ -1910,114 +1574,6 @@
         ]
       },
       {
-        "text": "Oiii tem algum problema em tomar banheira",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 41,
-            "entity": "question_entity",
-            "start": 33,
-            "value": "banheira"
-          }
-        ]
-      },
-      {
-        "text": "Oiii tem algum problema em tomar pimenta",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 40,
-            "entity": "question_entity",
-            "start": 33,
-            "value": "pimenta"
-          }
-        ]
-      },
-      {
-        "text": "Olá tem algum problema em tomar cafeina",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 39,
-            "entity": "question_entity",
-            "start": 32,
-            "value": "café"
-          }
-        ]
-      },
-      {
-        "text": "Ei posso tomar laxante",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 22,
-            "entity": "question_entity",
-            "start": 15,
-            "value": "laxante"
-          }
-        ]
-      },
-      {
-        "text": "Oie tem algum problema em tomar cafe",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 36,
-            "entity": "question_entity",
-            "start": 32,
-            "value": "café"
-          }
-        ]
-      },
-      {
-        "text": "Oi eu posso tomar cafeína",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 25,
-            "entity": "question_entity",
-            "start": 18,
-            "value": "café"
-          }
-        ]
-      },
-      {
-        "text": "tem algum problema em tomar cafeina",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 35,
-            "entity": "question_entity",
-            "start": 28,
-            "value": "café"
-          }
-        ]
-      },
-      {
-        "text": "E ai eu posso tomar laxante",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 27,
-            "entity": "question_entity",
-            "start": 20,
-            "value": "laxante"
-          }
-        ]
-      },
-      {
-        "text": "Oie tem algum problema em tomar cafeína",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 39,
-            "entity": "question_entity",
-            "start": 32,
-            "value": "café"
-          }
-        ]
-      },
-      {
         "text": "Oi tem algum problema em andar de sapato de salto alto",
         "intent": "can",
         "entities": [
@@ -2030,7 +1586,7 @@
         ]
       },
       {
-        "text": "eu posso andar de motocicleta",
+        "text": "eu posso andar de motocicleta?",
         "intent": "can",
         "entities": [
           {
@@ -2042,7 +1598,7 @@
         ]
       },
       {
-        "text": "Oiii eu posso andar de cavalo",
+        "text": "Oiii eu posso andar de cavalo?",
         "intent": "can",
         "entities": [
           {
@@ -2066,7 +1622,7 @@
         ]
       },
       {
-        "text": "Ei posso andar de motocicleta",
+        "text": "Ei posso andar de motocicleta?",
         "intent": "can",
         "entities": [
           {
@@ -2090,7 +1646,7 @@
         ]
       },
       {
-        "text": "posso andar de motocicleta",
+        "text": "posso andar de motocicleta?",
         "intent": "can",
         "entities": [
           {
@@ -2126,7 +1682,7 @@
         ]
       },
       {
-        "text": "Ei eu posso andar de sapato alto",
+        "text": "Ei eu posso andar de sapato alto?",
         "intent": "can",
         "entities": [
           {
@@ -2174,7 +1730,7 @@
         ]
       },
       {
-        "text": "Oiii posso andar de sapato de salto alto",
+        "text": "Oiii posso andar de sapato de salto alto?",
         "intent": "can",
         "entities": [
           {
@@ -2222,7 +1778,7 @@
         ]
       },
       {
-        "text": "tem algum problema em andar de sapato de salto alto",
+        "text": "tem algum problema em andar de sapato de salto alto?",
         "intent": "can",
         "entities": [
           {
@@ -2378,7 +1934,7 @@
         ]
       },
       {
-        "text": "Oi tem algum problema em andar de motocicleta",
+        "text": "Oi tem algum problema em andar de motocicleta?",
         "intent": "can",
         "entities": [
           {
@@ -2390,7 +1946,7 @@
         ]
       },
       {
-        "text": "Oie eu posso andar de cavalo",
+        "text": "Oie eu posso andar de cavalo?",
         "intent": "can",
         "entities": [
           {
@@ -2498,7 +2054,7 @@
         ]
       },
       {
-        "text": "E ai posso andar de sapato de salto",
+        "text": "E ai posso andar de sapato de salto?",
         "intent": "can",
         "entities": [
           {
@@ -2546,7 +2102,7 @@
         ]
       },
       {
-        "text": "Oi eu posso andar de motocicleta",
+        "text": "Oi eu posso andar de motocicleta?",
         "intent": "can",
         "entities": [
           {
@@ -2558,7 +2114,7 @@
         ]
       },
       {
-        "text": "Olá tem algum problema em andar de motocicleta",
+        "text": "Olá tem algum problema em andar de motocicleta?",
         "intent": "can",
         "entities": [
           {
@@ -2582,7 +2138,7 @@
         ]
       },
       {
-        "text": "Oiii posso andar de bike",
+        "text": "Oiii posso andar de bike?",
         "intent": "can",
         "entities": [
           {
@@ -2726,7 +2282,7 @@
         ]
       },
       {
-        "text": "Oiii posso andar de cavalo",
+        "text": "Oiii posso andar de cavalo?",
         "intent": "can",
         "entities": [
           {
@@ -2750,7 +2306,7 @@
         ]
       },
       {
-        "text": "E ai eu posso andar de bike",
+        "text": "E ai eu posso andar de bike?",
         "intent": "can",
         "entities": [
           {
@@ -2786,7 +2342,7 @@
         ]
       },
       {
-        "text": "Olá tem algum problema em andar de bike",
+        "text": "Olá tem algum problema em andar de bike?",
         "intent": "can",
         "entities": [
           {
@@ -2810,7 +2366,7 @@
         ]
       },
       {
-        "text": "E ai eu posso andar de sapato de salto alto",
+        "text": "E ai eu posso andar de sapato de salto alto?",
         "intent": "can",
         "entities": [
           {
@@ -2834,7 +2390,7 @@
         ]
       },
       {
-        "text": "tem algum problema em andar de bike",
+        "text": "tem algum problema em andar de bike?",
         "intent": "can",
         "entities": [
           {
@@ -2858,7 +2414,7 @@
         ]
       },
       {
-        "text": "Ei tem algum problema em andar de motocicleta",
+        "text": "Ei tem algum problema em andar de motocicleta?",
         "intent": "can",
         "entities": [
           {
@@ -2870,7 +2426,7 @@
         ]
       },
       {
-        "text": "Oiii tem algum problema em andar de motocicleta",
+        "text": "Oiii tem algum problema em andar de motocicleta?",
         "intent": "can",
         "entities": [
           {
@@ -2906,7 +2462,7 @@
         ]
       },
       {
-        "text": "eu posso andar de sapato de salto",
+        "text": "eu posso andar de sapato de salto?",
         "intent": "can",
         "entities": [
           {
@@ -2930,7 +2486,7 @@
         ]
       },
       {
-        "text": "E ai posso andar de bike",
+        "text": "E ai posso andar de bike?",
         "intent": "can",
         "entities": [
           {
@@ -2966,7 +2522,7 @@
         ]
       },
       {
-        "text": "posso andar de sapato de salto alto",
+        "text": "posso andar de sapato de salto alto?",
         "intent": "can",
         "entities": [
           {
@@ -3002,7 +2558,7 @@
         ]
       },
       {
-        "text": "Olá eu posso andar de motocicleta",
+        "text": "Olá eu posso andar de motocicleta?",
         "intent": "can",
         "entities": [
           {
@@ -3098,7 +2654,7 @@
         ]
       },
       {
-        "text": "Hey posso andar de sapato de salto",
+        "text": "Hey posso andar de sapato de salto?",
         "intent": "can",
         "entities": [
           {
@@ -3110,7 +2666,7 @@
         ]
       },
       {
-        "text": "Oiii tem algum problema em andar de sapato alto",
+        "text": "Oiii tem algum problema em andar de sapato alto?",
         "intent": "can",
         "entities": [
           {
@@ -3134,7 +2690,7 @@
         ]
       },
       {
-        "text": "Hey tem algum problema em andar de bike",
+        "text": "Hey tem algum problema em andar de bike?",
         "intent": "can",
         "entities": [
           {
@@ -3170,7 +2726,7 @@
         ]
       },
       {
-        "text": "Ei eu posso andar de motocicleta",
+        "text": "Ei eu posso andar de motocicleta?",
         "intent": "can",
         "entities": [
           {
@@ -3182,7 +2738,7 @@
         ]
       },
       {
-        "text": "eu posso andar de bike",
+        "text": "eu posso andar de bike?",
         "intent": "can",
         "entities": [
           {
@@ -3218,7 +2774,7 @@
         ]
       },
       {
-        "text": "tem algum problema em andar de sapato alto",
+        "text": "tem algum problema em andar de sapato alto?",
         "intent": "can",
         "entities": [
           {
@@ -3230,7 +2786,7 @@
         ]
       },
       {
-        "text": "Olá eu posso andar de bike",
+        "text": "Olá eu posso andar de bike?",
         "intent": "can",
         "entities": [
           {
@@ -3254,7 +2810,7 @@
         ]
       },
       {
-        "text": "Ei eu posso andar de bike",
+        "text": "Ei eu posso andar de bike?",
         "intent": "can",
         "entities": [
           {
@@ -3278,7 +2834,7 @@
         ]
       },
       {
-        "text": "Ei posso andar de bike",
+        "text": "Ei posso andar de bike?",
         "intent": "can",
         "entities": [
           {
@@ -3350,7 +2906,7 @@
         ]
       },
       {
-        "text": "Hey eu posso andar de motocicleta",
+        "text": "Hey eu posso andar de motocicleta?",
         "intent": "can",
         "entities": [
           {
@@ -3434,7 +2990,7 @@
         ]
       },
       {
-        "text": "Oie eu posso andar de bike",
+        "text": "Oie eu posso andar de bike?",
         "intent": "can",
         "entities": [
           {
@@ -3458,7 +3014,7 @@
         ]
       },
       {
-        "text": "Oie posso andar de sapato de salto alto",
+        "text": "Oie posso andar de sapato de salto alto?",
         "intent": "can",
         "entities": [
           {
@@ -3482,7 +3038,7 @@
         ]
       },
       {
-        "text": "Oiii eu posso andar de bike",
+        "text": "Oiii eu posso andar de bike?",
         "intent": "can",
         "entities": [
           {
@@ -3590,7 +3146,7 @@
         ]
       },
       {
-        "text": "Oiii eu posso andar de motocicleta",
+        "text": "Oiii eu posso andar de motocicleta?",
         "intent": "can",
         "entities": [
           {
@@ -3638,7 +3194,7 @@
         ]
       },
       {
-        "text": "Hey tem algum problema em andar de cavalo",
+        "text": "Hey tem algum problema em andar de cavalo?",
         "intent": "can",
         "entities": [
           {
@@ -3662,7 +3218,7 @@
         ]
       },
       {
-        "text": "Ei posso andar de sapato de salto",
+        "text": "Ei posso andar de sapato de salto?",
         "intent": "can",
         "entities": [
           {
@@ -3734,7 +3290,7 @@
         ]
       },
       {
-        "text": "Oiii posso andar de sapato alto",
+        "text": "Oiii posso andar de sapato alto?",
         "intent": "can",
         "entities": [
           {
@@ -6141,6 +5697,11 @@
       },
       {
         "text": "Olá",
+        "intent": "hello",
+        "entities": []
+      },
+      {
+        "text": "ola",
         "intent": "hello",
         "entities": []
       },
@@ -93932,6 +93493,31 @@
         "entities": []
       },
       {
+        "text": "O que você consegue fazer?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "O que vc sabe fazer?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "No que você pode me ajudar?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "O que você faz?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
+        "text": "como vc pode me ajudar?",
+        "intent": "ask_whatspossible",
+        "entities": []
+      },
+      {
         "text": "Ok",
         "intent": "affirm",
         "entities": []
@@ -93996,7 +93582,115 @@
         ]
       },
       {
+        "text": "estou com muito enjoo, o que eu faço?",
+        "intent": "complain",
+        "entities": [
+          {
+            "start": 16,
+            "end": 21,
+            "value": "enjoo",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "estou com muito enjoo, o que eu posso fazer pra melhorar?",
+        "intent": "complain",
+        "entities": [
+          {
+            "start": 16,
+            "end": 21,
+            "value": "enjoo",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "estou com muito enjoo, o que eu faço pra melhorar?",
+        "intent": "complain",
+        "entities": [
+          {
+            "start": 16,
+            "end": 21,
+            "value": "enjoo",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
         "text": "estou com dor nos seios",
+        "intent": "complain",
+        "entities": [
+          {
+            "start": 18,
+            "end": 23,
+            "value": "seios",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "estou com dor nos seios, o que eu faço?",
+        "intent": "complain",
+        "entities": [
+          {
+            "start": 18,
+            "end": 23,
+            "value": "seios",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "estou com dor nos seios, o que fazer pra passar?",
+        "intent": "complain",
+        "entities": [
+          {
+            "start": 18,
+            "end": 23,
+            "value": "seios",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "estou com dor nos seios, o que fazer pra melhorar?",
+        "intent": "complain",
+        "entities": [
+          {
+            "start": 18,
+            "end": 23,
+            "value": "seios",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "estou com dor nos seios, oq eu faço?",
+        "intent": "complain",
+        "entities": [
+          {
+            "start": 18,
+            "end": 23,
+            "value": "seios",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "estou com dor nos seios, oq eu posso fazer?",
+        "intent": "complain",
+        "entities": [
+          {
+            "start": 18,
+            "end": 23,
+            "value": "seios",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "estou com dor nos seios, oq fazer?",
         "intent": "complain",
         "entities": [
           {
@@ -94188,10 +93882,499 @@
             "entity": "question_entity"
           }
         ]
+      },
+      {
+        "text": "Me ajude a lembrar de tomar um remédio por favor",
+        "intent": "set_reminder_med",
+        "entities": []
+      },
+      {
+        "text": "me ajuda a lembrar de tomar um remédio",
+        "intent": "set_reminder_med",
+        "entities": []
+      },
+      {
+        "text": "preciso lembrar de tomar um remédio",
+        "intent": "set_reminder_med",
+        "entities": []
+      },
+      {
+        "text": "não posso esquecer de tomar um remedio",
+        "intent": "set_reminder_med",
+        "entities": []
+      },
+      {
+        "text": "meu medico me passou um remedio",
+        "intent": "set_reminder_med",
+        "entities": []
+      },
+      {
+        "text": "tenho que tomar um medicamento",
+        "intent": "set_reminder_med",
+        "entities": []
+      },
+      {
+        "text": "me lembre de tomar um remédio por favor",
+        "intent": "set_reminder_med",
+        "entities": []
+      },
+      {
+        "text": "segunda-feira",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 13,
+            "value": "segunda-feira",
+            "entity": "week_day"
+          }
+        ]
+      },
+      {
+        "text": "segunda",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "segunda",
+            "entity": "week_day"
+          }
+        ]
+      },
+      {
+        "text": "segunda feira",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 13,
+            "value": "segunda feira",
+            "entity": "week_day"
+          }
+        ]
+      },
+      {
+        "text": "terça-feira",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "terça-feira",
+            "entity": "week_day"
+          }
+        ]
+      },
+      {
+        "text": "terca",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "terca",
+            "entity": "week_day"
+          }
+        ]
+      },
+      {
+        "text": "terca feira",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "terca feira",
+            "entity": "week_day"
+          }
+        ]
+      },
+      {
+        "text": "terça",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "terça",
+            "entity": "week_day"
+          }
+        ]
+      },
+      {
+        "text": "terca-feira",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "terca-feira",
+            "entity": "week_day"
+          }
+        ]
+      },
+      {
+        "text": "terça feira",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "terça feira",
+            "entity": "week_day"
+          }
+        ]
+      },
+      {
+        "text": "quarta-feira",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "quarta-feira",
+            "entity": "week_day"
+          }
+        ]
+      },
+      {
+        "text": "quarta",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "quarta",
+            "entity": "week_day"
+          }
+        ]
+      },
+      {
+        "text": "quarta feira",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "quarta feira",
+            "entity": "week_day"
+          }
+        ]
+      },
+      {
+        "text": "quinta-feira",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "quinta-feira",
+            "entity": "week_day"
+          }
+        ]
+      },
+      {
+        "text": "quinta",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "quinta",
+            "entity": "week_day"
+          }
+        ]
+      },
+      {
+        "text": "quinta feira",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "quinta feira",
+            "entity": "week_day"
+          }
+        ]
+      },
+      {
+        "text": "sexta-feira",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "sexta-feira",
+            "entity": "week_day"
+          }
+        ]
+      },
+      {
+        "text": "sexta",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "sexta",
+            "entity": "week_day"
+          }
+        ]
+      },
+      {
+        "text": "sexta feira",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "sexta feira",
+            "entity": "week_day"
+          }
+        ]
+      },
+      {
+        "text": "sabado",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "sabado",
+            "entity": "week_day"
+          }
+        ]
+      },
+      {
+        "text": "sábado",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "sábado",
+            "entity": "week_day"
+          }
+        ]
+      },
+      {
+        "text": "domingo",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "domingo",
+            "entity": "week_day"
+          }
+        ]
+      },
+      {
+        "text": "dipirona",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "dipirona",
+            "entity": "med_name"
+          }
+        ]
+      },
+      {
+        "text": "ibuprofeno",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "ibuprofeno",
+            "entity": "med_name"
+          }
+        ]
+      },
+      {
+        "text": "dorflex",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "dorflex",
+            "entity": "med_name"
+          }
+        ]
+      },
+      {
+        "text": "lufital",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "lufital",
+            "entity": "med_name"
+          }
+        ]
+      },
+      {
+        "text": "amanhã as 9 horas",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 17,
+            "value": "2016-12-14T09:00:00.000-08:00",
+            "entity": "time"
+          }
+        ]
+      },
+      {
+        "text": "terça as 9 horas",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 16,
+            "value": "2016-12-04T09:00:00.000-08:00",
+            "entity": "time"
+          }
+        ]
+      },
+      {
+        "text": "o nome é buscopan",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 9,
+            "end": 17,
+            "value": "buscopan",
+            "entity": "med_name"
+          }
+        ]
+      },
+      {
+        "text": "o nome do remédio é dramin",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": "dramin",
+            "entity": "med_name"
+          }
+        ]
+      },
+      {
+        "text": "e de cavalo?",
+        "intent": "last_intent",
+        "entities": [
+          {
+            "start": 5,
+            "end": 11,
+            "value": "cavalo",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "e pre-eclampsia?",
+        "intent": "last_intent",
+        "entities": [
+          {
+            "start": 2,
+            "end": 15,
+            "value": "pre-eclampsia",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "e de moto?",
+        "intent": "last_intent",
+        "entities": [
+          {
+            "start": 5,
+            "end": 9,
+            "value": "moto",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "e o parto prematuro",
+        "intent": "last_intent",
+        "entities": [
+          {
+            "start": 4,
+            "end": 19,
+            "value": "parto prematuro",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "e laxante?",
+        "intent": "last_intent",
+        "entities": [
+          {
+            "start": 2,
+            "end": 9,
+            "value": "laxante",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "posso tomar vacina?",
+        "intent": "can",
+        "entities": [
+          {
+            "start": 12,
+            "end": 18,
+            "value": "vacinas",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "posso fazer exercicios?",
+        "intent": "can",
+        "entities": [
+          {
+            "start": 12,
+            "end": 22,
+            "value": "exercicios",
+            "entity": "question_entity"
+          }
+        ]
       }
     ],
     "regex_features": [],
-    "lookup_tables": [],
+    "lookup_tables": [
+      {
+        "name": "med_name",
+        "elements": [
+          "dramin",
+          "dipirona",
+          "paracetamol",
+          "buscopan",
+          "neosaldina",
+          "lufital",
+          "dorflex",
+          "analgésico",
+          "rivotril",
+          "ibuprofeno",
+          "diclofenaco",
+          "nimesulida",
+          "anti-inflamatório",
+          "resfenol",
+          "anti-gripal",
+          "advil"
+        ]
+      }
+    ],
     "entity_synonyms": [
       {
         "value": "café",
@@ -94371,7 +94554,9 @@
       {
         "value": "dor de cabeca",
         "synonyms": [
-          "dor de cabeça"
+          "dor de cabeça",
+          "dores de cabeça",
+          "dores de cabeca"
         ]
       },
       {
@@ -94426,6 +94611,51 @@
         "value": "enjoo",
         "synonyms": [
           "enjôo"
+        ]
+      },
+      {
+        "value": "segunda-feira",
+        "synonyms": [
+          "segunda",
+          "segunda feira"
+        ]
+      },
+      {
+        "value": "terça-feira",
+        "synonyms": [
+          "terça",
+          "terca",
+          "terça feira",
+          "terca feira",
+          "terca-feira"
+        ]
+      },
+      {
+        "value": "quarta-feira",
+        "synonyms": [
+          "quarta",
+          "quarta feira"
+        ]
+      },
+      {
+        "value": "quinta-feira",
+        "synonyms": [
+          "quinta",
+          "quinta feira"
+        ]
+      },
+      {
+        "value": "sexta-feira",
+        "synonyms": [
+          "sexta",
+          "sexta feira"
+        ]
+      },
+      {
+        "value": "sabado",
+        "synonyms": [
+          "sábado",
+          "sabádo"
         ]
       }
     ]
