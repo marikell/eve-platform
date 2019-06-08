@@ -8511,6 +8511,31 @@
         "entities": []
       },
       {
+        "text": "Não",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "Não",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "Não",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "Não",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "não",
+        "intent": "deny",
+        "entities": []
+      },
+      {
         "text": "mto obg",
         "intent": "thank_you",
         "entities": []
@@ -94346,6 +94371,54 @@
             "start": 12,
             "end": 22,
             "value": "exercicios",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "e café?",
+        "intent": "last_intent",
+        "entities": [
+          {
+            "start": 2,
+            "end": 6,
+            "value": "café",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "e amendoim?",
+        "intent": "can",
+        "entities": [
+          {
+            "start": 2,
+            "end": 10,
+            "value": "amendoim",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "e puerperio?",
+        "intent": "last_intent",
+        "entities": [
+          {
+            "start": 2,
+            "end": 11,
+            "value": "puerperio",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "e pimenta?",
+        "intent": "last_intent",
+        "entities": [
+          {
+            "start": 2,
+            "end": 9,
+            "value": "pimenta",
             "entity": "question_entity"
           }
         ]

@@ -41,6 +41,8 @@ class GetAnswer(Action):
             dispatcher.utter_message(response)
         except:
             dispatcher.utter_message(response)
+        return [SlotSet("last_intent", intent)]
+
 
 class ActionGreetUser(Action):
     def name(self) -> Text:

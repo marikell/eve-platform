@@ -66,24 +66,32 @@
 
 ## get_answer
 * which{"question_entity": "exercicios"}
+    - slot{"last_intent": "which"}
     - get_answer
 * which_not{"question_entity": "comida"}
+    - slot{"last_intent": "which_not"}
     - get_answer
 * can{"question_entity": "exercicios"}
+    - slot{"last_intent": "can"}
     - get_answer
 * which{"question_entity": "exercicios"}
+    - slot{"last_intent": "which"}
     - get_answer
 * which{"question_entity": "treinos"}
+    - slot{"last_intent": "which"}
     - get_answer
 * which_not{"question_entity": "treinos"}
+    - slot{"last_intent": "which_not"}
     - get_answer
 
 ## get_answer_2
 * get_started
   - action_greet_user
 * which{"question_entity": "exercicios"}
+    - slot{"last_intent": "which"}
     - get_answer
 * which{"question_entity": "treinos"}
+    - slot{"last_intent": "which"}
     - get_answer
 
 ## Generated Story -8569811712381873528
@@ -92,26 +100,62 @@
 * greeting_answer
     - utter_ask_info
 * which{"question_entity": "exercicios"}
+    - slot{"last_intent": "which"}
     - get_answer
 * which_not{"question_entity": "alimentos"}
+    - slot{"last_intent": "which_not"}
+    - get_answer
+
+##1233123
+* which{"question_entity": "alimentos"}
+    - slot{"last_intent": "which"}
+    - get_answer
+* which_not{"question_entity": "exercicio"}
+    - slot{"last_intent": "which_not"}
+    - get_answer
+* symptom{"question_entity": "gravidez"}
+    - slot{"last_intent": "symptom"}
+    - get_answer
+* prevent{"question_entity": "pre-eclampsia"}
+    - slot{"last_intent": "prevent"}
+    - get_answer
+* what_is{"question_entity": "loquio"}
+    - slot{"last_intent": "what_is"}
+    - get_answer
+* complain{"question_entity": "costas"}
+    - slot{"last_intent": "complain"}
+    - get_answer
+* causes{"question_entity": "pre-eclampsia"}
+    - slot{"last_intent": "causes"}
+    - get_answer
+* how_to_know{"question_entity": "bolsa"}
+    - slot{"last_intent": "how_to_know"}
     - get_answer
 
 ##1233123
 * which{"question_entity": "alimentos"}
     - get_answer
-* which_not{"question_entity": "exercicio"}
+    - slot{"last_intent": "which"}
+* last_intent{"question_entity": "exercicio"}
+    - slot{"last_intent": "which"}
     - get_answer
 * symptom{"question_entity": "gravidez"}
+    - slot{"last_intent": "symptom"}
     - get_answer
 * prevent{"question_entity": "pre-eclampsia"}
+    - slot{"last_intent": "prevent"}
     - get_answer
 * what_is{"question_entity": "loquio"}
+    - slot{"last_intent": "what_is"}
     - get_answer
-* complain{"question_entity": "costas"}
+* last_intent{"question_entity": "puerperio"}
+    - slot{"last_intent": "what_is"}
     - get_answer
 * causes{"question_entity": "pre-eclampsia"}
+    - slot{"last_intent": "causes"}
     - get_answer
 * how_to_know{"question_entity": "bolsa"}
+    - slot{"last_intent": "how_to_know"}
     - get_answer
 
 ## Generated Story 4646674987687058942
@@ -195,14 +239,14 @@
 * thank_you
   - utter_help
 
-## unhappy path: a mulher inicia a conversa com apenas 'Oi' e esta gravida e pede para o bot parar as perguntas
+## unhappy path: lembrete de remédio
 * set_reminder_med
   - medicine_form
   - form{"name": "medicine_form"}
   - form{"name": null}
   - utter_help
 
-## asd
+## unhappy path: lembrete de remédio
 * set_reminder_med
   - medicine_form
   - form{"name": "medicine_form"}
@@ -210,44 +254,3 @@
   - action_deactivate_form
   - form{"name": null}
   - utter_help
-
-## Story from conversation with me on June 8th 2019
-
-* hello
-    - action_greet_user
-* affirm
-    - initial_form
-    - slot{"requested_slot":"is_pregnant"}
-* enter_data{"is_pregnant":"True"}
-    - slot{"is_pregnant":"True"}
-    - initial_form
-    - slot{"is_pregnant":"True"}
-    - slot{"requested_slot":"pregnancy_weeks"}
-* enter_data{"pregnancy_weeks":"15"}
-    - slot{"pregnancy_weeks":"15"}
-    - initial_form
-    - slot{"pregnancy_weeks":"15"}
-    - slot{"requested_slot":"planned_pregnancy"}
-* enter_data{"planned_pregnancy":"False"}
-    - slot{"planned_pregnancy":"False"}
-    - initial_form
-    - slot{"planned_pregnancy":"False"}
-    - slot{"requested_slot":"first_pregnancy"}
-* enter_data{"first_pregnancy":"True"}
-    - slot{"first_pregnancy":"True"}
-    - initial_form
-    - slot{"first_pregnancy":"True"}
-    - slot{"requested_slot":"health_plan"}
-* enter_data{"health_plan":"True"}
-    - slot{"health_plan":"True"}
-    - initial_form
-    - slot{"health_plan":"True"}
-    - slot{"requested_slot":"pre_natal"}
-* enter_data{"pre_natal":"False"}
-    - slot{"pre_natal":"False"}
-    - initial_form
-    - slot{"pre_natal":"False"}
-    - slot{"requested_slot":null}
-    - utter_ask_me_anything
-* can{"question_entity":"exercicios"}
-    - get_answer

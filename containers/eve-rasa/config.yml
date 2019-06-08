@@ -8,14 +8,17 @@ pipeline:
 - name: EntitySynonymMapper
 - name: CountVectorsFeaturizer
 - name: EmbeddingIntentClassifier
+# - name: SpacyNLP
+# - name: SpacyTokenizer
+# - name: SpacyFeaturizer
+# - name: RegexFeaturizer
+# - name: CRFEntityExtractor
+# - name: EntitySynonymMapper
+# - name: SklearnIntentClassifier
 - name: DucklingHTTPExtractor
   url: "http://localhost:8000"
-  dimensions: ["time"]
-  # allows you to configure the locale, by default the language is
-  # used
+  dimensions: ["time"]  
   # locale: "le_BR"
-  # if not set the default timezone of Duckling is going to be used
-  # needed to calculate dates from relative expressions like "tomorrow"
   # timezone: "South America/Brazil"
 
 policies:
