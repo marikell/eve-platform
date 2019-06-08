@@ -12,6 +12,9 @@ class UserPregnancyWeeksService(GenericService):
         weeks_start=obj['weeks_start'])
         user_pregnancy_weeks.save()
 
+    # def get_pregnancy_weeks_by_exam(self, exam):
+    #     return self.objects()
+
     def get_by_user(self, user):
         return self.objects(Q(user_id=ObjectId(user.id))).first()
 

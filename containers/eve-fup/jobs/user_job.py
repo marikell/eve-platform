@@ -13,8 +13,8 @@ class UserJob():
         get_log('Users to process: {}'.format(len(users)))
         [self.execute_job(usr) for usr in users]
         
-    def get_user_pregnancy_days(self,user_id):
-        r = requests.get(url = '{}/user-pregnancy-days/{}'.format(EVE_API['url'], user_id))
+    def get_user_pregnancy_weeks(self,user_id):
+        r = requests.get(url = '{}/user-pregnancy-weeks/{}'.format(EVE_API['url'], user_id))
 
         json_obj = r.json()
 
@@ -26,16 +26,16 @@ class UserJob():
         return obj
 
             
-    def update_user_pregnancy_days(self, obj):
+    def update_user_pregnancy_weeks(self, obj):
         #increasing user weeks of pregnancy
         data = {
-            "days": (int(obj['days']) + 1)
+            "weeks": (int(obj['weeks']) + 1)
         }
 
         headers = {
             'Content-Type':'application/json'
         }
-        url = '{}/user-pregnancy-days/{}'.format(EVE_API['url'], obj['_id']['$oid'])
+        url = '{}/user-pregnancy-weeks/{}'.format(EVE_API['url'], obj['_id']['$oid'])
 
         r = requests.put(url, data=json.dumps(data), headers=headers)
 
@@ -53,18 +53,15 @@ class UserJob():
             if user['user_type'] != UserTypeEnum.pregnant.value:
                 raise Exception('User {} will not be monitored!'.format(user_id))
 
-            user_pregnancy_days = self.get_user_pregnancy_days(user_id)
+            user_pregnancy_weeks = self.get_user_pregnancy_weeks(user_id)
 
-            get_log('User {} is pregnant with {} weeks.'.format(user_id, user_pregnancy_days['days']/7))
+            get_log('User {} is pregnant with {} weeks.'.format(user_id, user_pregnancy_weeks['weeks']))
             
-            self.update_user_pregnancy_days(user_pregnancy_days)
+            self.update_user_pregnancy_weeks(user_pregnancy_weeks)
 
             get_log('Successfully updated user {} weeks.'.format(user_id))        
 
         except Exception as e:
-            traceback.print_exc()
             get_log(str(e))
         finally:
             get_log('Finished User Job for {}'.format(user_id))
-        #Busco a data do user_weeks mais recente de determinada grávida. Se já contabilizou uma semana,
-        #adiciono uma linha na tabela de user_weeks com as semanas incrementadas.

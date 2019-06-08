@@ -9,6 +9,8 @@ ROUTE_CONFIG:dict = {
     'USER_TYPE_NAME':'user',
     'PERSON_TYPE_NAME':'person',
     'USER_PREGNANCY_WEEKS_TYPE_NAME':'user-pregnancy-weeks',
-    'FOLLOW_UP_TYPE_NAME':'follow-up'
+    'EXAM_TYPE_NAME':'exam',
+    #this endpoint will be called by the fup service
+    'FUP':'fup'
 }
 

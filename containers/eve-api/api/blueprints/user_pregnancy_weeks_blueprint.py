@@ -3,6 +3,7 @@ from werkzeug import Response
 import json
 from flask_api import status
 from api.utils.response_formatter import response, response_text
+from api.services.fup_service import get_users_exams
 from api.services.service_handler import ServiceHandler
 from api.config.configuration import ROUTE_CONFIG
 from api.utils.validate_fields import check_empty_string, check_empty_string_in_array, check_if_key_exists

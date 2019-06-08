@@ -28,7 +28,6 @@ class UserService(GenericService):
         user.user_type = user_type
         user.save()
 
-    
     def update(self, obj):
         user = self.get(obj['id'])
 
