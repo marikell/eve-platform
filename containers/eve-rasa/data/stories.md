@@ -2,40 +2,10 @@
 * get_started
   - action_greet_user
 * affirm
-  - utter_ask_is_pregnant
-* affirm
-  - utter_congrats
-  - initial_form_pregnant
-  - form{"name": "initial_form_pregnant"}
+  - initial_form
+  - form{"name": "initial_form"}
   - form{"name": null}
   - utter_ask_me_anything
-
-## bot inicia a conversa e a mulher não esta gravida mas esta tentando engravidar
-* get_started
-  - action_greet_user
-* affirm
-  - utter_ask_is_pregnant
-* deny
-  - utter_ask_trying_pregnant
-* affirm
-  - initial_form_tempting
-  - form{"name": "initial_form_tempting"}
-  - form{"name": null}
-  - utter_ask_me_anything
-* which{"question_entity": "exercicios"}
-    - get_answer
-
-## bot inicia a conversa e a mulher nao esta gravida e nao esta tentando engravidar
-* get_started
-  - action_greet_user
-* affirm
-  - utter_ask_is_pregnant
-* deny
-  - utter_ask_trying_pregnant
-* deny
-  - utter_ask_me_anything
-* which{"question_entity": "exercicios"}
-    - get_answer
 
 ## bot inicia a conversa e a mulher nao quer responder as perguntas
 * get_started
@@ -50,41 +20,12 @@
 * hello
   - action_greet_user
 * affirm
-  - utter_ask_is_pregnant
-* affirm
-  - utter_congrats
-  - initial_form_pregnant
-  - form{"name": "initial_form_pregnant"}
+  - initial_form
+  - form{"name": "initial_form"}
   - form{"name": null}
   - utter_ask_me_anything
 * which{"question_entity": "exercicios"}
     - get_answer
-
-## a mulher inicia a conversa com apenas 'Oi' e nao esta gravida mas esta tentando engravidar
-* hello
-  - action_greet_user
-* affirm
-  - utter_ask_is_pregnant
-* deny
-  - utter_ask_trying_pregnant
-* affirm
-  - initial_form_tempting
-  - form{"name": "initial_form_tempting"}
-  - form{"name": null}
-  - utter_ask_me_anything
-* which{"question_entity": "exercicios"}
-    - get_answer
-
-## a mulher inicia a conversa com apenas 'Oi' e nao esta gravida e nao esta tentando engravidar
-* hello
-  - action_greet_user
-* affirm
-  - utter_ask_is_pregnant
-* deny
-  - utter_ask_trying_pregnant
-* deny
-  - utter_thank_you
-  - utter_ask_me_anything
 
 ## a mulher inicia a conversa com apenas 'Oi' e quer responder as perguntas
 * hello
@@ -99,44 +40,9 @@
 * greeting_answer
   - utter_ask_info
 * affirm
-  - utter_ask_is_pregnant
-* affirm
-  - utter_congrats
-  - initial_form_pregnant
-  - form{"name": "initial_form_pregnant"}
+  - initial_form
+  - form{"name": "initial_form"}
   - form{"name": null}
-  - utter_ask_me_anything
-* which{"question_entity": "exercicios"}
-    - get_answer
-
-## a mulher inicia a conversa com 'Oi tudo bem?' e nao esta gravida mas esta tentando engravidar
-* greeting
-  - action_greet_user
-* greeting_answer
-  - utter_ask_info
-* affirm
-  - utter_ask_is_pregnant
-* deny
-  - utter_ask_trying_pregnant
-* affirm
-  - initial_form_tempting
-  - form{"name": "initial_form_tempting"}
-  - form{"name": null}
-  - utter_ask_me_anything
-* which{"question_entity": "exercicios"}
-    - get_answer
-
-## a mulher inicia a conversa com 'Oi tudo bem?' e nao esta gravida e nao esta tentando engravidar
-* greeting
-  - action_greet_user
-* greeting_answer
-  - utter_ask_info
-* affirm
-  - utter_ask_is_pregnant
-* deny
-  - utter_ask_trying_pregnant
-* deny
-  - utter_thank_you
   - utter_ask_me_anything
 * which{"question_entity": "exercicios"}
     - get_answer
@@ -257,24 +163,6 @@
     - utter_welcome
     - utter_help
 
-## Generated Story 707944168274727227
-* hello
-    - action_greet_user
-* affirm
-    - utter_ask_is_pregnant
-* which{"question_entity": "exercicio"}
-    - get_answer
-* which{"question_entity": "alimentos"}
-    - get_answer
-* which_not{"question_entity": "exercicio"}
-    - get_answer
-* symptom{"question_entity": "gravidez"}
-    - get_answer
-* prevent{"question_entity": "pre-eclampsia"}
-    - get_answer
-* risk_factor{"question_entity": "gravidez"}
-    - get_answer
-
 ##1233123
 * which{"question_entity": "alimentos"}
     - get_answer
@@ -285,6 +173,8 @@
 * prevent{"question_entity": "pre-eclampsia"}
     - get_answer
 * what_is{"question_entity": "loquio"}
+    - get_answer
+* complain{"question_entity": "costas"}
     - get_answer
 * causes{"question_entity": "pre-eclampsia"}
     - get_answer
@@ -298,6 +188,8 @@
     - get_answer
 * what_to_do{"question_entity": "bolsa"}
     - get_answer
+* complain{"question_entity": "ansia"}
+    - get_answer
 * when{"question_entity": "pre natal"}
     - get_answer
 * why{"question_entity": "sono"}
@@ -309,7 +201,82 @@
     - utter_first_step
     - utter_ask_info
 * affirm
-  - initial_form_pregnant
-  - form{"name": "initial_form_pregnant"}
+  - initial_form
+  - form{"name": "initial_form"}
   - form{"name": null}
   - utter_ask_me_anything
+
+## bot inicia a conversa e a mulher esta gravida
+* get_started
+  - action_greet_user
+* affirm
+  - initial_form
+  - form{"name": "initial_form"}
+* what_is{"question_entity":"loquio"}
+  - get_answer
+  - initial_form
+  - form{"name": null}
+  - utter_ask_me_anything
+
+## a mulher inicia a conversa com apenas 'Oi' e esta gravida
+* hello
+  - action_greet_user
+* affirm
+  - initial_form
+  - form{"name": "initial_form"}
+* why{"question_entity":"sono"}
+  - get_answer
+  - initial_form
+  - form{"name": null}
+  - utter_ask_me_anything
+* which{"question_entity": "exercicios"}
+    - get_answer
+
+## bot inicia a conversa e a mulher esta gravida e pede para o bot parar as perguntas
+* get_started
+  - action_greet_user
+* affirm
+  - initial_form
+  - form{"name": "initial_form"}
+* stop
+  - action_deactivate_form
+  - form{"name": null}
+  - utter_ask_me_anything
+
+## a mulher inicia a conversa com apenas 'Oi' e esta gravida e pede para o bot parar as perguntas
+* hello
+  - action_greet_user
+* affirm
+  - initial_form
+  - form{"name": "initial_form"}
+* stop
+  - action_deactivate_form
+  - form{"name": null}
+  - utter_ask_me_anything
+* which{"question_entity": "exercicios"}
+    - get_answer
+
+## Story from conversation with me on June 4th 2019
+
+* hello
+    - action_greet_user
+* affirm
+    - initial_form
+    - slot{"requested_slot":"is_pregnant"}
+
+## Story from conversation with me on June 4th 2019
+
+* hello
+    - action_greet_user
+* affirm
+    - initial_form
+    - slot{"requested_slot":"is_pregnant"}
+* enter_data{"is_pregnant":"False"}
+    - slot{"is_pregnant":"False"}
+    - initial_form
+    - slot{"is_pregnant":"False"}
+    - slot{"requested_slot":"is_trying"}
+* can{"question_entity":"vacinas"}
+    - get_answer
+    - initial_form
+    - slot{"requested_slot":"is_trying"}
