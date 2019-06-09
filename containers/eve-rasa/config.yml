@@ -1,8 +1,32 @@
-language: en
-pipeline: supervised_embeddings
+language: pt
+# pipeline: supervised_embeddings
+
+pipeline:
+- name: WhitespaceTokenizer
+- name: RegexFeaturizer
+- name: CRFEntityExtractor
+- name: EntitySynonymMapper
+- name: CountVectorsFeaturizer
+- name: EmbeddingIntentClassifier
+# - name: SpacyNLP
+# - name: SpacyTokenizer
+# - name: SpacyFeaturizer
+# - name: RegexFeaturizer
+# - name: CRFEntityExtractor
+# - name: EntitySynonymMapper
+# - name: SklearnIntentClassifier
+- name: DucklingHTTPExtractor
+  url: "http://localhost:8000"
+  dimensions: ["time"]  
+  # locale: "le_BR"
+  # timezone: "South America/Brazil"
 
 policies:
   - name: MemoizationPolicy
   - name: KerasPolicy
   - name: MappingPolicy
   - name: FormPolicy
+  - name: FallbackPolicy
+    nlu_threshold: 0.4
+    core_threshold: 0.3
+    fallback_action_name: action_default_fallback
