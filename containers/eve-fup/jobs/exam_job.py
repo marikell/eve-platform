@@ -4,15 +4,10 @@ from helpers.logging import get_log
 import json
 import traceback
 
-#escopo do serviço: para cada usuário do sistema, verificar se já está na hora
-#de realizar determinado exame, ou seja, por exame
-
-#query para trazer todas as gravidas que 
 class ExamJob():
     def run(self):
           
         get_log('Starting Exams Job...')
-        #buscando todos os exames
         
         pregnant_users_exams = self.get_pregnant_users_exams()
         exams = self.get_all_exams()
