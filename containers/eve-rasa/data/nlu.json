@@ -93244,19 +93244,19 @@
         "text": "me ajuda a lembrar de tomar um remédio"
       },
       {
-        "intent": "set_reminder_medicine",
+        "intent": "reminder_medicine",
         "text": "preciso lembrar de tomar um remédio"
       },
       {
-        "intent": "set_reminder_medicine",
+        "intent": "reminder_medicine",
         "text": "não posso esquecer de tomar um remedio"
       },
       {
-        "intent": "set_reminder_medicine",
+        "intent": "reminder_medicine",
         "text": "meu medico me passou um remedio"
       },
       {
-        "intent": "set_reminder_medicine",
+        "intent": "reminder_medicine",
         "text": "tenho que tomar um medicamento"
       },
       {
@@ -93938,7 +93938,7 @@
         "text": "nao"
       },
       {
-        "intent": "set_reminder_medicine",
+        "intent": "reminder_medicine",
         "text": "preciso lembrar de tomar um remédio"
       },
       {
@@ -93994,7 +93994,7 @@
         "text": "agr nao"
       },
       {
-        "intent": "set_reminder_medicine",
+        "intent": "reminder_medicine",
         "text": "não posso esquecer de tomar um remedio"
       },
       {
@@ -94050,7 +94050,7 @@
         "text": "nao"
       },
       {
-        "intent": "set_reminder_medicine",
+        "intent": "reminder_medicine",
         "text": "meu médico me passou um remédio para tomar"
       },
       {
@@ -94104,7 +94104,7 @@
         "text": "nao"
       },
       {
-        "intent": "set_reminder_medicine",
+        "intent": "reminder_medicine",
         "text": "preciso lembrar de tomar remedio"
       },
       {
@@ -94154,7 +94154,7 @@
         "text": "nao"
       },
       {
-        "intent": "set_reminder_medicine",
+        "intent": "reminder_medicine",
         "text": "tenho q tomar um remedio"
       },
       {
@@ -94204,6 +94204,243 @@
       {
         "intent": "deny",
         "text": "não"
+      },
+      {
+        "intent": "reminder_appointment",
+        "text": "nao posso esquecer da minha proxima consulta"
+      },
+      {
+        "intent": "set_reminder_appointment",
+        "text": "me ajude a lembrar da minha proxima consulta por favor"
+      },
+      {
+        "intent": "reminder_appointment",
+        "text": "tenho uma consulta marcada com meu medico"
+      },
+      {
+        "intent": "set_reminder_appointment",
+        "text": "me lembre da minha proxima consulta por favor"
+      },
+      {
+        "intent": "reminder_medicine",
+        "entities": [
+          {
+            "start": 21,
+            "end": 29,
+            "value": "dipirona",
+            "entity": "med_name"
+          },
+          {
+            "start": 41,
+            "end": 54,
+            "value": "one_time",
+            "entity": "med_frequency"
+          }
+        ],
+        "text": "meu medico me passou dipirona para tomar todos os dias"
+      },
+      {
+        "intent": "reminder_medicine",
+        "entities": [
+          {
+            "start": 16,
+            "end": 24,
+            "value": "dipirona",
+            "entity": "med_name"
+          },
+          {
+            "start": 25,
+            "end": 31,
+            "value": "2019-06-10T10:00:00.000-07:00",
+            "entity": "time"
+          }
+        ],
+        "text": "tenho que tomar dipirona amanha"
+      },
+      {
+        "intent": "reminder_appointment",
+        "entities": [
+          {
+            "start": 16,
+            "end": 23,
+            "value": "lufital",
+            "entity": "med_name"
+          },
+          {
+            "start": 24,
+            "end": 42,
+            "value": "weekly",
+            "entity": "med_frequency"
+          }
+        ],
+        "text": "tenho que tomar lufital uma vez por semana"
+      },
+      {
+        "intent": "set_reminder_appointment",
+        "entities": [
+          {
+            "start": 25,
+            "end": 48,
+            "value": "2019-06-10T10:00:00.000-07:00",
+            "entity": "time"
+          }
+        ],
+        "text": "minha proxima consulta é sexta feira as 10 horas, me lembre por favor"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 2,
+            "end": 12,
+            "value": "Dr. Marcos",
+            "entity": "doc_name"
+          }
+        ],
+        "text": "é Dr. Marcos"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 9,
+            "end": 17,
+            "value": "Dra. Ana",
+            "entity": "doc_name"
+          }
+        ],
+        "text": "o nome é Dra. Ana"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "dr joao",
+            "entity": "doc_name"
+          }
+        ],
+        "text": "dr joao"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "dr. carlos",
+            "entity": "doc_name"
+          }
+        ],
+        "text": "dr. carlos"
+      },
+      {
+        "intent": "reminder_appointment",
+        "entities": [
+          {
+            "start": 25,
+            "end": 35,
+            "value": "dr ricardo",
+            "entity": "doc_name"
+          }
+        ],
+        "text": "tenho uma consulta com o dr ricardo"
+      },
+      {
+        "intent": "hello",
+        "text": "Oi"
+      },
+      {
+        "intent": "deny",
+        "text": "nao"
+      },
+      {
+        "intent": "reminder_appointment",
+        "text": "não posso esquecer da minha proxima consulta"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "dr eduardo",
+            "entity": "doc_name",
+            "confidence": 0.6323624591,
+            "extractor": "CRFEntityExtractor"
+          }
+        ],
+        "text": "dr eduardo"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 19,
+            "end": 21,
+            "value": "10",
+            "entity": "hour",
+            "confidence": 0.5874992797,
+            "extractor": "CRFEntityExtractor"
+          }
+        ],
+        "text": "dia 20 de junho as 10 horas"
+      },
+      {
+        "intent": "affirm",
+        "text": "correto"
+      },
+      {
+        "intent": "hello",
+        "text": "oi"
+      },
+      {
+        "intent": "deny",
+        "text": "não"
+      },
+      {
+        "intent": "reminder_appointment",
+        "text": "tenho uma consulta semana q vm"
+      },
+      {
+        "intent": "affirm",
+        "text": "quero"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 2,
+            "end": 11,
+            "value": "dr carlos",
+            "entity": "doc_name",
+            "confidence": 0.9569847192,
+            "extractor": "CRFEntityExtractor"
+          }
+        ],
+        "text": "é dr carlos"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "quarta-feira",
+            "entity": "week_day",
+            "confidence": 0.6490781901,
+            "extractor": "CRFEntityExtractor",
+            "processors": [
+              "EntitySynonymMapper"
+            ]
+          }
+        ],
+        "text": "quarta feira as 9"
+      },
+      {
+        "intent": "affirm",
+        "text": "certo"
       }
     ],
     "regex_features": [],
