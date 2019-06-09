@@ -37,18 +37,45 @@ actions:
   - utter_ask_me_anything
   - utter_schedule_gynecologist
   - utter_doing_right
-  - get_answer
+  - utter_ask_subscribe
+  - utter_ask_exam
+  - utter_ask_med_frequency
+  - utter_ask_med_name
+  - utter_ask_med_date
+  - utter_ask_med_week_day
+  - utter_ask_med_hour  
+  - utter_reminder_med
+  - action_get_answer
   - action_greet_user
-  - action_default_fallback
+  - action_is_bot
+  - action_how_old
+  - action_where_from
+  - action_who_is_it
+  - utter_explain_whatspossible
+  - action_whats_possible
+  - action_bye
+  - action_thank_you
+  - action_cant_help
+  - utter_cancel_med_reminder
+  - action_cancel_med_reminder
 entities: 
   - question_entity
   - pregnancy_weeks
+  - time
+  - hour
+  - med_frequency
+  - med_name  
 forms:
   - initial_form
-intents: 
+  - medicine_form
+  - appointment_form
+intents:
+  - last_intent
+  - set_reminder_medicine
+  - set_reminder_appointment
+  - ask_exam
   - affirm
-  - enter_data:
-      use_entities: false
+  - enter_data
   - hello
   - greeting_answer
   - which
@@ -56,14 +83,21 @@ intents:
   - greeting
   - deny
   - which_not
-  - thank_you
-  - bye
+  - thank_you:
+      triggers: action_thank_you
+  - bye:
+      triggers: action_bye
   - get_started
-  - ask_isbot
-  - ask_howold
-  - ask_wherefrom
-  - ask_whoisit
-  - canthelp
+  - ask_isbot:
+      triggers: action_is_bot
+  - ask_howold:
+      triggers: action_how_old
+  - ask_wherefrom:
+      triggers: action_where_from
+  - ask_whoisit:
+      triggers: action_who_is_it
+  - canthelp:
+      triggers: action_cant_help
   - what_is
   - can
   - goal_exam
@@ -77,12 +111,13 @@ intents:
   - risk_factor
   - when_exam
   - importance
-  - greeting_answer_back
   - when_exame
   - im_pregnant
   - complain
   - stop
   - stop_form
+  - ask_whatspossible:
+      triggers: action_whats_possible
 slots:
   first_pregnancy:
     type: unfeaturized
@@ -102,6 +137,20 @@ slots:
     type: unfeaturized
   is_trying:
     type: unfeaturized
+  med_frequency:
+    type: unfeaturized
+  med_name:
+    type: unfeaturized
+  med_date:
+    type: unfeaturized
+  med_week_day:
+    type: unfeaturized
+  last_intent:
+    type: text
+  med_hour:
+    type: list
+  exam_name:
+    type: text
   requested_slot:
     type: unfeaturized    
 templates:
@@ -172,7 +221,6 @@ templates:
   utter_first_step:
   - text: "Bom, a primeira coisa a se fazer é procurar um obstetra para acompanhar a sua gestação de perto e realizar o pré-natal! O pré-natal é de extrema importância para garantir a sua saúde e a do seu bebê!"
   utter_great:
-  - text: "Que bom! 👍"
   - text: "Legal! 🙌"
   utter_greet:
   - text: "Como você está?"
@@ -184,11 +232,11 @@ templates:
   utter_hello:
   - text: "Olá! :)"
   utter_help:
-  - text: "Posso te ajudar em mais alguma coisa?"
+  - text: "Posso te ajudar em alguma outra coisa?"
   utter_info_later:
   - text: "Tudo bem, podemos fazer isso depois se quiser!"
   utter_introduce:
-  - text: "Eu sou a Dra. Eve e estou aqui pra te ajudar durante a gestação!"
+  - text: "Eu sou a Dra. Lara e estou aqui pra te ajudar durante a gestação!"
   utter_not_planned_pregnancy:
   - text: "Bom, não se preocupe, mesmo não tendo sido planejada tenho certeza que você vai ser uma ótima mãe!"
   utter_planned_pregnancy:
@@ -228,3 +276,34 @@ templates:
   utter_planning_pregnancy:
   - text: "Se você deseja engravidar é muito importante se preparar para isso. É recomendável que você e o seu parceiro estejam com saúde plena, física e mental, tenha uma dieta saudável, faça atividades físicas ponderadas e de preferência esteja sem sobrecargas emocionais.
 O planejamento tem o objetivo de identificar fatores de risco como diabetes e hipertensão, além de possibilitar acesso a informações sobre fertilidade."
+  utter_ask_subscribe:
+  - text: "Posso te mandar dicas todos os dias para te ajudar durante essa fase, se quiser é só me avisar"
+  utter_ask_exam:
+  - text: "Você já fez o exame de {exam_name}?"
+  utter_ask_med_frequency:
+  - text: "Qual a frequência do remédio?"
+    buttons:
+    - title: "Uma única dose"
+      payload: '/enter_data{"med_frequency":"one_time"}'
+    - title: "Diário"
+      payload: '/enter_data{"med_frequency":"daily"}'
+    - title: "Semanal"
+      payload: '/enter_data{"med_frequency":"weekly"}'
+  utter_ask_med_name:
+  - text: "Qual o nome do medicamento?"
+  utter_ask_med_date:
+  - text: "Quando você tem que tomar esse medicamento?"
+  utter_ask_med_week_day:
+  - text: "Qual dia da semana?"
+  utter_ask_med_hour:
+  - text: "Que horas?"
+  utter_reminder_med:
+  - text: "Ok, pode deixar que vou te avisar! ;)"
+  utter_explain_whatspossible:
+  - text: "Eu posso tirar qualquer dúvida sobre a gestação e te lembrar de consultas e remédios!"
+  utter_wrong_med_name:
+  - text: "Por favor, me fale o nome do remédio"
+  utter_wrong_med_frequency:
+  - text: "Por favor, me fale o nome do remédio"
+  utter_cancel_med_reminder:
+  - text: "Cancelei o lembrete então, se precisar de novo me avisa ;)"
