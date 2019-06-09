@@ -14,7 +14,7 @@
   - utter_info_later
   - utter_ask_me_anything
 * which{"question_entity": "exercicios"}
-    - get_answer
+    - action_get_answer
 
 ## a mulher inicia a conversa com apenas 'Oi' e esta gravida
 * hello
@@ -64,35 +64,35 @@
 * greeting_answer
     - utter_ask_info
 
-## get_answer
+## action_get_answer
 * which{"question_entity": "exercicios"}
     - slot{"last_intent": "which"}
-    - get_answer
+    - action_get_answer
 * which_not{"question_entity": "comida"}
     - slot{"last_intent": "which_not"}
-    - get_answer
+    - action_get_answer
 * can{"question_entity": "exercicios"}
     - slot{"last_intent": "can"}
-    - get_answer
+    - action_get_answer
 * which{"question_entity": "exercicios"}
     - slot{"last_intent": "which"}
-    - get_answer
+    - action_get_answer
 * which{"question_entity": "treinos"}
     - slot{"last_intent": "which"}
-    - get_answer
+    - action_get_answer
 * which_not{"question_entity": "treinos"}
     - slot{"last_intent": "which_not"}
-    - get_answer
+    - action_get_answer
 
-## get_answer_2
+## action_get_answer_2
 * get_started
   - action_greet_user
 * which{"question_entity": "exercicios"}
     - slot{"last_intent": "which"}
-    - get_answer
+    - action_get_answer
 * which{"question_entity": "treinos"}
     - slot{"last_intent": "which"}
-    - get_answer
+    - action_get_answer
 
 ## Generated Story -8569811712381873528
 * get_started
@@ -101,76 +101,76 @@
     - utter_ask_info
 * which{"question_entity": "exercicios"}
     - slot{"last_intent": "which"}
-    - get_answer
+    - action_get_answer
 * which_not{"question_entity": "alimentos"}
     - slot{"last_intent": "which_not"}
-    - get_answer
+    - action_get_answer
 
 ##1233123
 * which{"question_entity": "alimentos"}
     - slot{"last_intent": "which"}
-    - get_answer
+    - action_get_answer
 * which_not{"question_entity": "exercicio"}
     - slot{"last_intent": "which_not"}
-    - get_answer
+    - action_get_answer
 * symptom{"question_entity": "gravidez"}
     - slot{"last_intent": "symptom"}
-    - get_answer
+    - action_get_answer
 * prevent{"question_entity": "pre-eclampsia"}
     - slot{"last_intent": "prevent"}
-    - get_answer
+    - action_get_answer
 * what_is{"question_entity": "loquio"}
     - slot{"last_intent": "what_is"}
-    - get_answer
+    - action_get_answer
 * complain{"question_entity": "costas"}
     - slot{"last_intent": "complain"}
-    - get_answer
+    - action_get_answer
 * causes{"question_entity": "pre-eclampsia"}
     - slot{"last_intent": "causes"}
-    - get_answer
+    - action_get_answer
 * how_to_know{"question_entity": "bolsa"}
     - slot{"last_intent": "how_to_know"}
-    - get_answer
+    - action_get_answer
 
 ##1233123
 * which{"question_entity": "alimentos"}
-    - get_answer
+    - action_get_answer
     - slot{"last_intent": "which"}
 * last_intent{"question_entity": "exercicio"}
     - slot{"last_intent": "which"}
-    - get_answer
+    - action_get_answer
 * symptom{"question_entity": "gravidez"}
     - slot{"last_intent": "symptom"}
-    - get_answer
+    - action_get_answer
 * prevent{"question_entity": "pre-eclampsia"}
     - slot{"last_intent": "prevent"}
-    - get_answer
+    - action_get_answer
 * what_is{"question_entity": "loquio"}
     - slot{"last_intent": "what_is"}
-    - get_answer
+    - action_get_answer
 * last_intent{"question_entity": "puerperio"}
     - slot{"last_intent": "what_is"}
-    - get_answer
+    - action_get_answer
 * causes{"question_entity": "pre-eclampsia"}
     - slot{"last_intent": "causes"}
-    - get_answer
+    - action_get_answer
 * how_to_know{"question_entity": "bolsa"}
     - slot{"last_intent": "how_to_know"}
-    - get_answer
+    - action_get_answer
 
 ## Generated Story 4646674987687058942
 * goal_exam{"question_entity": "glicemia"}
-    - get_answer
+    - action_get_answer
 * when_exame{"question_entity": "glicemia"}
-    - get_answer
+    - action_get_answer
 * what_to_do{"question_entity": "bolsa"}
-    - get_answer
+    - action_get_answer
 * complain{"question_entity": "ansia"}
-    - get_answer
+    - action_get_answer
 * when{"question_entity": "pre natal"}
-    - get_answer
+    - action_get_answer
 * why{"question_entity": "sono"}
-    - get_answer
+    - action_get_answer
 
 ## estou gravida
 * im_pregnant
@@ -190,7 +190,7 @@
   - initial_form
   - form{"name": "initial_form"}
 * what_is{"question_entity":"loquio"}
-  - get_answer
+  - action_get_answer
   - initial_form
   - form{"name": null}
   - utter_ask_me_anything
@@ -202,7 +202,7 @@
   - initial_form
   - form{"name": "initial_form"}
 * why{"question_entity":"sono"}
-  - get_answer
+  - action_get_answer
   - initial_form
   - form{"name": null}
   - utter_ask_me_anything
@@ -232,25 +232,183 @@
 ## lembrete de remédio
 * hello
     - action_greet_user
-* set_reminder_med    
+* set_reminder_medicine    
   - medicine_form
   - form{"name": "medicine_form"}
   - form{"name": null}
-* thank_you
-  - utter_help
+* affirm
+  - utter_reminder_med
 
-## unhappy path: lembrete de remédio
-* set_reminder_med
+## lembrete de remédio
+* hello
+    - action_greet_user
+* set_reminder_medicine    
   - medicine_form
   - form{"name": "medicine_form"}
   - form{"name": null}
-  - utter_help
+* deny
+  - action_cancel_med_reminder
 
 ## unhappy path: lembrete de remédio
-* set_reminder_med
+* set_reminder_medicine
+  - medicine_form
+  - form{"name": "medicine_form"}
+  - form{"name": null}
+* affirm
+  - utter_reminder_med
+
+## unhappy path: lembrete de remédio
+* set_reminder_medicine
   - medicine_form
   - form{"name": "medicine_form"}
 * stop
   - action_deactivate_form
   - form{"name": null}
   - utter_help
+
+## Generated Story -1614147544277604422
+* hello
+    - action_greet_user
+* deny
+    - utter_info_later
+    - utter_ask_me_anything
+* set_reminder_medicine
+    - medicine_form
+    - form{"name": "medicine_form"}
+    - slot{"requested_slot": "med_frequency"}
+* form: enter_data{"med_frequency": "one_time"}
+    - slot{"med_frequency": "one_time"}
+    - form: medicine_form
+    - slot{"med_frequency": "one_time"}
+    - slot{"requested_slot": "med_name"}
+* form: enter_data{"med_name": "dorflex"}
+    - slot{"med_name": "dorflex"}
+    - form: medicine_form
+    - slot{"med_name": "dorflex"}
+    - slot{"requested_slot": "med_date"}
+* form: enter_data{"hour": "10", "time": "2019-06-10T10:00:00.000-07:00"}
+    - form: medicine_form
+    - slot{"med_date": "2019-06-10T10:00:00.000-07:00"}
+    - form{"name": null}
+    - slot{"requested_slot": null}    
+* affirm
+    - utter_reminder_med    
+
+## Generated Story 4282896163755816122
+* hello
+    - action_greet_user
+* deny
+    - utter_info_later
+    - utter_ask_me_anything
+* set_reminder_medicine
+    - medicine_form
+    - form{"name": "medicine_form"}
+    - slot{"requested_slot": "med_frequency"}
+* form: enter_data{"med_frequency": "daily"}
+    - slot{"med_frequency": "daily"}
+    - form: medicine_form
+    - slot{"med_frequency": "daily"}
+    - slot{"requested_slot": "med_name"}
+* form: enter_data{"med_name": "loratadina"}
+    - slot{"med_name": "loratadina"}
+    - form: medicine_form
+    - slot{"med_name": "loratadina"}
+    - slot{"requested_slot": "med_hour"}
+* form: enter_data{"hour": "14", "time": "2019-06-09T14:00:00.000-07:00"}
+    - form: medicine_form
+    - slot{"med_hour": ["9", "14"]}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* deny
+    - action_cancel_med_reminder
+
+## Generated Story -3021440965482298822
+* hello
+    - action_greet_user
+* deny
+    - utter_info_later
+    - utter_ask_me_anything
+* set_reminder_medicine
+    - medicine_form
+    - form{"name": "medicine_form"}
+    - slot{"requested_slot": "med_frequency"}
+* form: enter_data{"med_frequency": "weekly"}
+    - slot{"med_frequency": "weekly"}
+    - form: medicine_form
+    - slot{"med_frequency": "weekly"}
+    - slot{"requested_slot": "med_name"}
+* form: enter_data{"med_name": "neosaldina"}
+    - slot{"med_name": "neosaldina"}
+    - form: medicine_form
+    - slot{"med_name": "neosaldina"}
+    - slot{"requested_slot": "med_week_day"}
+* form: enter_data{"time": "2019-06-10T00:00:00.000-07:00"}
+    - form: medicine_form
+    - slot{"med_week_day": "toda segunda feira"}
+    - slot{"requested_slot": "med_hour"}
+* form: enter_data{"hour": "10", "time": "2019-06-08T22:00:00.000-07:00"}
+    - form: medicine_form
+    - slot{"med_hour": "10"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* affirm
+    - utter_reminder_med
+
+## Generated Story 1375328854635215234
+* hello
+    - action_greet_user
+* deny
+    - utter_info_later
+    - utter_ask_me_anything
+* set_reminder_medicine
+    - medicine_form
+    - form{"name": "medicine_form"}
+    - slot{"requested_slot": "med_frequency"}
+* form: enter_data{"med_frequency": "one_time"}
+    - slot{"med_frequency": "one_time"}
+    - form: medicine_form
+    - slot{"med_frequency": "one_time"}
+    - slot{"requested_slot": "med_name"}
+* form: enter_data{"med_name": "dipirona"}
+    - slot{"med_name": "dipirona"}
+    - form: medicine_form
+    - slot{"med_name": "dipirona"}
+    - slot{"requested_slot": "med_date"}
+* form: enter_data{"time": "2019-06-09T09:00:00.000-07:00"}
+    - form: medicine_form
+    - slot{"med_date": "2019-06-09T09:00:00.000-07:00"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* affirm
+    - utter_reminder_med
+* thank_you
+    - action_thank_you
+    - rewind
+
+## Generated Story -4137951915734004051
+* hello
+    - action_greet_user
+* deny
+    - utter_info_later
+    - utter_ask_me_anything
+* set_reminder_medicine
+    - medicine_form
+    - form{"name": "medicine_form"}
+    - slot{"requested_slot": "med_frequency"}
+* form: enter_data{"med_frequency": "daily"}
+    - slot{"med_frequency": "daily"}
+    - form: medicine_form
+    - slot{"med_frequency": "daily"}
+    - slot{"requested_slot": "med_name"}
+* form: enter_data{"med_name": "lufital"}
+    - slot{"med_name": "lufital"}
+    - form: medicine_form
+    - slot{"med_name": "lufital"}
+    - slot{"requested_slot": "med_hour"}
+* form: enter_data{"time": "2019-06-08T22:20:00.000-07:00", "hour": "20"}
+    - form: medicine_form
+    - slot{"med_hour": ["10", "20"]}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* deny
+    - action_cancel_med_reminder

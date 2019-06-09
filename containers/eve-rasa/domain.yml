@@ -45,7 +45,7 @@ actions:
   - utter_ask_med_week_day
   - utter_ask_med_hour  
   - utter_reminder_med
-  - get_answer
+  - action_get_answer
   - action_greet_user
   - action_is_bot
   - action_how_old
@@ -56,16 +56,23 @@ actions:
   - action_bye
   - action_thank_you
   - action_cant_help
+  - utter_cancel_med_reminder
+  - action_cancel_med_reminder
 entities: 
   - question_entity
   - pregnancy_weeks
   - time
+  - hour
+  - med_frequency
+  - med_name  
 forms:
   - initial_form
   - medicine_form
+  - appointment_form
 intents:
   - last_intent
-  - set_reminder_med
+  - set_reminder_medicine
+  - set_reminder_appointment
   - ask_exam
   - affirm
   - enter_data
@@ -214,7 +221,6 @@ templates:
   utter_first_step:
   - text: "Bom, a primeira coisa a se fazer é procurar um obstetra para acompanhar a sua gestação de perto e realizar o pré-natal! O pré-natal é de extrema importância para garantir a sua saúde e a do seu bebê!"
   utter_great:
-  - text: "Que bom! 👍"
   - text: "Legal! 🙌"
   utter_greet:
   - text: "Como você está?"
@@ -230,7 +236,7 @@ templates:
   utter_info_later:
   - text: "Tudo bem, podemos fazer isso depois se quiser!"
   utter_introduce:
-  - text: "Eu sou a Dra. Eve e estou aqui pra te ajudar durante a gestação!"
+  - text: "Eu sou a Dra. Lara e estou aqui pra te ajudar durante a gestação!"
   utter_not_planned_pregnancy:
   - text: "Bom, não se preocupe, mesmo não tendo sido planejada tenho certeza que você vai ser uma ótima mãe!"
   utter_planned_pregnancy:
@@ -299,3 +305,5 @@ O planejamento tem o objetivo de identificar fatores de risco como diabetes e hi
   - text: "Por favor, me fale o nome do remédio"
   utter_wrong_med_frequency:
   - text: "Por favor, me fale o nome do remédio"
+  utter_cancel_med_reminder:
+  - text: "Cancelei o lembrete então, se precisar de novo me avisa ;)"

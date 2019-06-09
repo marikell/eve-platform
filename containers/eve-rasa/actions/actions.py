@@ -7,13 +7,14 @@ from rasa_core_sdk.events import UserUtteranceReverted
 from route_config import RouteConfig
 import requests
 import json
+import dateutil.parser
 
 route_config = RouteConfig('http://localhost:5001')
 route_config.register_route('get_answer','/action-answer')
 
 class GetAnswer(Action):
     def name(self) -> Text:
-        return "get_answer"
+        return "action_get_answer"
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
@@ -212,10 +213,18 @@ class MedicineForm(FormAction):
         med_week_day = tracker.get_slot("med_week_day")
         med_hour = tracker.get_slot("med_hour")
         med_date = tracker.get_slot("med_date")
-        print(med_date)
+        
+        response = "Confirmando então, você tem que tomar {}".format(med_name)
+        if(med_frequency == "one_time"):
+            date = dateutil.parser.parse(med_date)
+            response = response + " no dia {} às {} horas. \nCerto?".format(date.strftime("%d/%m/%y"), date.strftime("%H"))
+        elif(med_frequency == "weekly"):
+            response = response + " toda {} às {} horas. \nCerto?".format(med_week_day, med_hour)
+        elif(med_frequency == "daily"):
+            response = response + " todo dia às {} horas. \nCerto?".format(med_hour)
+        
         # salvar as informações
-        dispatcher.utter_template('utter_reminder_med', tracker)
-
+        dispatcher.utter_message(response)
         return []
 
 
@@ -282,3 +291,11 @@ class ActionCantHelp(Action):
     def run(self, dispatcher, tracker, domain):
         dispatcher.utter_template("utter_canthelp", tracker)
         return [UserUtteranceReverted()]
+
+class ActionCancelMedReminder(Action):
+    def name(self):
+        return "action_cancel_med_reminder"
+
+    def run(self, dispatcher, tracker, domain):
+        # cancelar o lembrete
+        dispatcher.utter_template("utter_cancel_med_reminder", tracker)
