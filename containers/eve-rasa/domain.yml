@@ -2,7 +2,6 @@ actions:
   - utter_hello
   - utter_bye
   - utter_default
-  - utter_first_help
   - utter_great
   - utter_greet
   - utter_greet_answer
@@ -25,9 +24,6 @@ actions:
   - utter_ask_health_plan
   - utter_ask_first_pregnancy
   - utter_ask_pre_natal
-  - utter_not_planned_pregnancy
-  - utter_planned_pregnancy
-  - utter_trying_pregnant
   - utter_info_later
   - utter_wrong_pregnancy_weeks
   - utter_pre_natal_sus
@@ -44,7 +40,7 @@ actions:
   - utter_ask_med_date
   - utter_ask_med_week_day
   - utter_ask_med_hour  
-  - utter_reminder_med
+  - utter_reminder
   - action_get_answer
   - action_greet_user
   - action_is_bot
@@ -56,23 +52,51 @@ actions:
   - action_bye
   - action_thank_you
   - action_cant_help
-  - utter_cancel_med_reminder
-  - action_cancel_med_reminder
+  - action_cancel_reminder
+  - utter_wrong_med_date
+  - utter_wrong_med_week_day
+  - utter_wrong_med_hour
+  - utter_cancel_reminder
+  - utter_ask_app_doc_name
+  - utter_ask_app_date
+  - action_cancel_app_reminder
+  - utter_okay
+  - utter_ask_reminder
+  - action_get_exam
+  - utter_doing_right_exam
+  - utter_is_important_exam
+  - utter_why_answer
+  - utter_agree
 entities: 
   - question_entity
   - pregnancy_weeks
   - time
   - hour
   - med_frequency
-  - med_name  
+  - med_name 
+  - app_doc_name
+  - doc_name
+  - week_day
+  - has_children
+  - health_plan
+  - is_planning
+  - is_pregnant
+  - is_trying
 forms:
-  - initial_form
-  - medicine_form
-  - appointment_form
+  - form_initial
+  - form_medicine
+  - form_appointment
 intents:
+  - i_know_importance
+  - later
+  - why_i_need_to_answer
+  - did_exam
+  - did_not_exam
   - last_intent
   - set_reminder_medicine
   - set_reminder_appointment
+  - reminder_medicine
+  - reminder_appointment
   - ask_exam
   - affirm
   - enter_data
@@ -115,7 +139,7 @@ intents:
   - im_pregnant
   - complain
   - stop
-  - stop_form
+  - stop_asking
   - ask_whatspossible:
       triggers: action_whats_possible
 slots:
@@ -151,6 +175,10 @@ slots:
     type: list
   exam_name:
     type: text
+  app_date:
+    type: unfeaturized
+  app_doc_name:
+    type: unfeaturized
   requested_slot:
     type: unfeaturized    
 templates:
@@ -169,9 +197,9 @@ templates:
     - title: "Não"
       payload: '/enter_data{"health_plan":"False"}'
   utter_ask_howold:
-  - text: "Velha o bastante pra ser médica haha"
+  - text: "Velha o bastante pra ser médica 💁‍♀"
   utter_ask_info:
-  - text: "Bom, pra eu poder te ajudar, preciso te fazer algumas perguntas antes ok? É rapidinho :)"
+  - text: "Bom, pra eu poder te ajudar, preciso te fazer algumas perguntas antes ok? É rapidinho 😊"
   utter_ask_is_pregnant:
   - text: "Você está grávida?"
     buttons:
@@ -208,49 +236,41 @@ templates:
   - text: "Sou de Sorocaba, SP"
   - text: "Sorocaba, SP"
   utter_bye:
-  - text: "Tchau!"
-  - text: "Tchau, até mais!"
+  - text: "Tchau! 😙"
+  - text: "Tchau, até mais! 😙"
   utter_canthelp:
   - text: "Desculpe por não conseguir te ajudar :("
   utter_congrats:
-  - text: "Parabéns!"
+  - text: "Parabéns! Temos um baby a caminho então 👶🤰😍"
   utter_default:
-  - text: "Desculpe, não entendi o que você quis dizer."
-  utter_first_help:
-  - text: "Então, como eu posso te ajudar?"
+  - text: "Desculpe, não entendi o que você quis dizer 😖"
   utter_first_step:
-  - text: "Bom, a primeira coisa a se fazer é procurar um obstetra para acompanhar a sua gestação de perto e realizar o pré-natal! O pré-natal é de extrema importância para garantir a sua saúde e a do seu bebê!"
+  - text: "Bom, a primeira coisa a se fazer é procurar um obstetra para acompanhar a sua gestação de perto e realizar o pré-natal! O pré-natal é de extrema importância para garantir a sua saúde e a do seu bebê! 👩‍⚕️"
   utter_great:
   - text: "Legal! 🙌"
   utter_greet:
   - text: "Como você está?"
   - text: "Tudo bem com você?"
   utter_greet_answer:
-  - text: "Estou bem, obrigada :)"
+  - text: "Estou bem, obrigada 😁"
   utter_greet_back:
   - text: "Estou bem, e voce?"
   utter_hello:
-  - text: "Olá! :)"
+  - text: "Olá! 😄"
   utter_help:
   - text: "Posso te ajudar em alguma outra coisa?"
   utter_info_later:
-  - text: "Tudo bem, podemos fazer isso depois se quiser!"
+  - text: "Tudo bem, podemos fazer isso depois se quiser 😅"
   utter_introduce:
-  - text: "Eu sou a Dra. Lara e estou aqui pra te ajudar durante a gestação!"
-  utter_not_planned_pregnancy:
-  - text: "Bom, não se preocupe, mesmo não tendo sido planejada tenho certeza que você vai ser uma ótima mãe!"
-  utter_planned_pregnancy:
-  - text: "Que legal! Você deve estar muito feliz então! 😄"
+  - text: "Eu sou a Dra. Lara e estou aqui pra te ajudar durante a gestação! 🤰"
   utter_thank_you:
-  - text: "Obrigada :)"
-  utter_trying_pregnant:
-  - text: "Tenho certeza que logo você consegue então! 😉"
+  - text: "Obrigada 😊"
   utter_welcome:
   - text: "Imagina, qualquer coisa só falar!"
   utter_wrong_pregnancy_weeks:
-  - text: "Por favor, me informe um número de semanas válido"
+  - text: "Por favor, me informe um número de semanas válido 😬"
   utter_pre_natal_sus:
-  - text: "Procure a rede pública mais próxima da sua casa e peça o atendimento."
+  - text: "Procure a rede pública mais próxima da sua casa e peça o atendimento 🏥"
   utter_ask_is_planning:
   - text: "E você está se preparando para isso? Digo, passou com seu ginecologista para uma avaliação de rotina, por exemplo?"
     buttons:
@@ -268,9 +288,9 @@ templates:
   utter_ask_me_anything:
   - text: "Então, você tem alguma dúvida? Talvez eu possa te ajudar"
   utter_doing_right:
-  - text: "Ótimo! Você está fazendo certinho, se planejar e se preparar pra gravidez é muito importante!"
+  - text: "Ótimo 🙌 Você está fazendo certinho, se planejar e se preparar pra gravidez é muito importante!"
   utter_doing_right_prenatal:
-  - text: "Ótimo! Você está fazendo certinho, o pré-natal é muito importante e deve ser iniciado assim que a gravidez é constatada!"
+  - text: "Ótimo 🙌 Você está fazendo certinho, o pré-natal é muito importante e deve ser iniciado assim que a gravidez é constatada!"
   utter_schedule_gynecologist:
   - text: "Marque uma consulta com o seu ginecologista e converse com ele sobre a sua vontade de engravidar. Assim, ele pode te ajudar durante esse processo 😉"
   utter_planning_pregnancy:
@@ -297,13 +317,41 @@ O planejamento tem o objetivo de identificar fatores de risco como diabetes e hi
   - text: "Qual dia da semana?"
   utter_ask_med_hour:
   - text: "Que horas?"
-  utter_reminder_med:
-  - text: "Ok, pode deixar que vou te avisar! ;)"
+  utter_reminder:
+  - text: "Ok, pode deixar que vou te avisar! 😉"
   utter_explain_whatspossible:
-  - text: "Eu posso tirar qualquer dúvida sobre a gestação e te lembrar de consultas e remédios!"
+  - text: "Eu posso tirar qualquer dúvida sobre a gestação e te lembrar de consultas e remédios! 💁‍♀️"
   utter_wrong_med_name:
-  - text: "Por favor, me fale o nome do remédio"
+  - text: "Por favor, me fale o nome do remédio 😬"
   utter_wrong_med_frequency:
-  - text: "Por favor, me fale o nome do remédio"
-  utter_cancel_med_reminder:
-  - text: "Cancelei o lembrete então, se precisar de novo me avisa ;)"
+  - text: "Por favor, me fale o nome do remédio 😬"
+  utter_wrong_med_date:
+  - text: "Por favor, me fale quando o remédio tem que ser tomado 😬"
+  utter_wrong_med_week_day:
+  - text: "Por favor, me fale em qual dia da semana você tem que tomar 😬"
+  utter_wrong_med_hour:
+  - text: "Por favor, me fale os horários do remédio 😬"
+  utter_wrong_app_date:
+  - text: "Por favor, me fale quando será a consulta 😬"
+  utter_wrong_app_doc_name:
+  - text: "Por favor, me fale o nome do médico que você vai passar 😬"
+  utter_cancel_reminder:
+  - text: "Tudo bem, se precisar me avisa 😉"
+  utter_ask_app_doc_name:
+  - text: "Qual o nome do médico?"
+  utter_ask_app_date:
+  - text: "Quando é a consulta?"
+  utter_ask_reminder:
+  - text: "Quer que eu te lembre disso? Aí na hora eu te envio uma notificação 😉"
+  utter_okay:
+  - text: "Ok então 😊"
+  - text: "Okay 😊"
+  utter_doing_right_exam:
+  - text: "Muito bem! É importante realizar todos os exames 👏"
+  utter_is_important_exam:
+  - text: "Por isso é essencial que você faça o exame. Agende uma consulta com seu médico e converse com ele sobre isso!"
+  utter_why_answer:
+  - text: "Tudo bem se você não quiser responder mas com essas informações eu consigo te ajudar mais. Entendeu? 😊"
+  utter_agree:
+  - text: "Isso mesmo! 👍"
+  - text: "Isso aí! 👍"

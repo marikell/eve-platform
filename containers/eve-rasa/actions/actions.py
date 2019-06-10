@@ -45,7 +45,6 @@ class GetAnswer(Action):
             dispatcher.utter_message(response)
         return [SlotSet("last_intent", intent)]
 
-
 class ActionGreetUser(Action):
     def name(self) -> Text:
         return "action_greet_user"
@@ -68,7 +67,7 @@ class ActionGreetUser(Action):
 
 class InitialForm(FormAction):
     def name(self) -> Text:
-        return "initial_form"
+        return "form_initial"
         
     @staticmethod
     def required_slots(tracker: Tracker):
@@ -199,8 +198,8 @@ class InitialForm(FormAction):
 
 class MedicineForm(FormAction):
     def name(self) -> Text:
-        return "medicine_form"
-
+        return "form_medicine"
+        
     @staticmethod
     def required_slots(tracker: Tracker):
         if(tracker.get_slot('med_frequency') == "one_time"):
@@ -264,6 +263,37 @@ class MedicineForm(FormAction):
         dispatcher.utter_message(response)
         return []
 
+class AppointmentForm(FormAction):
+    def name(self) -> Text:
+        return "form_appointment"
+        
+    @staticmethod
+    def required_slots(tracker: Tracker):
+        return [
+            "app_doc_name",
+            "app_date"
+        ]
+        
+    def slot_mappings(self):
+        return {
+            "app_doc_name": [
+                self.from_entity(entity="doc_name"),
+                self.from_text(intent="enter_data")
+            ],
+            "app_date": [
+                self.from_entity(entity="time")
+            ]   
+        }
+    
+    def submit(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> List[Dict]:
+        app_doc_name = tracker.get_slot("app_doc_name")
+        app_date = tracker.get_slot("app_date")
+        date = dateutil.parser.parse(app_date)
+        response = "Confirmando então, você tem uma consulta no dia {} com o Dr. {}. Certo?".format(date.strftime("%d/%m/%y"), app_doc_name)
+
+        # salvar as informações
+        dispatcher.utter_message(response)
+        return []
 
 class ActionIsBot(Action):
     def name(self):
@@ -329,10 +359,36 @@ class ActionCantHelp(Action):
         dispatcher.utter_template("utter_canthelp", tracker)
         return [UserUtteranceReverted()]
 
-class ActionCancelMedReminder(Action):
+class ActionCancelReminder(Action):
     def name(self):
-        return "action_cancel_med_reminder"
+        return "action_cancel_reminder"
 
     def run(self, dispatcher, tracker, domain):
         # cancelar o lembrete
-        dispatcher.utter_template("utter_cancel_med_reminder", tracker)
+        dispatcher.utter_template("utter_cancel_reminder", tracker)
+
+class ActionGetExam(Action):
+    def name(self) -> Text:
+        return "action_get_exam"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        exam_name = tracker.get_slot('exam_name')    
+        response = 'Esse é um dos exames básicos do pré-natal!'
+        data = {
+            'exam' : exam_name
+        }
+        headers = {
+            'Content-Type':'application/json'
+        }
+        # try:
+        #     req = requests.post(url = route_config.get_route('get_exam'),headers= headers,data=json.dumps(data))
+        #     json_obj = req.json()
+
+        #     if json_obj.get('response') is not None:
+        #         response = json_obj['response']
+        #     dispatcher.utter_message(response)
+        # except:
+        #     dispatcher.utter_message(response)
+        dispatcher.utter_message(response)
+        return []

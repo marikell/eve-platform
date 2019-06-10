@@ -93244,19 +93244,19 @@
         "text": "me ajuda a lembrar de tomar um remédio"
       },
       {
-        "intent": "set_reminder_medicine",
+        "intent": "reminder_medicine",
         "text": "preciso lembrar de tomar um remédio"
       },
       {
-        "intent": "set_reminder_medicine",
+        "intent": "reminder_medicine",
         "text": "não posso esquecer de tomar um remedio"
       },
       {
-        "intent": "set_reminder_medicine",
+        "intent": "reminder_medicine",
         "text": "meu medico me passou um remedio"
       },
       {
-        "intent": "set_reminder_medicine",
+        "intent": "reminder_medicine",
         "text": "tenho que tomar um medicamento"
       },
       {
@@ -93938,7 +93938,7 @@
         "text": "nao"
       },
       {
-        "intent": "set_reminder_medicine",
+        "intent": "reminder_medicine",
         "text": "preciso lembrar de tomar um remédio"
       },
       {
@@ -93994,7 +93994,7 @@
         "text": "agr nao"
       },
       {
-        "intent": "set_reminder_medicine",
+        "intent": "reminder_medicine",
         "text": "não posso esquecer de tomar um remedio"
       },
       {
@@ -94050,7 +94050,7 @@
         "text": "nao"
       },
       {
-        "intent": "set_reminder_medicine",
+        "intent": "reminder_medicine",
         "text": "meu médico me passou um remédio para tomar"
       },
       {
@@ -94104,7 +94104,7 @@
         "text": "nao"
       },
       {
-        "intent": "set_reminder_medicine",
+        "intent": "reminder_medicine",
         "text": "preciso lembrar de tomar remedio"
       },
       {
@@ -94154,7 +94154,7 @@
         "text": "nao"
       },
       {
-        "intent": "set_reminder_medicine",
+        "intent": "reminder_medicine",
         "text": "tenho q tomar um remedio"
       },
       {
@@ -94204,6 +94204,479 @@
       {
         "intent": "deny",
         "text": "não"
+      },
+      {
+        "intent": "reminder_appointment",
+        "text": "nao posso esquecer da minha proxima consulta"
+      },
+      {
+        "intent": "set_reminder_appointment",
+        "text": "me ajude a lembrar da minha proxima consulta por favor"
+      },
+      {
+        "intent": "reminder_appointment",
+        "text": "tenho uma consulta marcada com meu medico"
+      },
+      {
+        "intent": "set_reminder_appointment",
+        "text": "me lembre da minha proxima consulta por favor"
+      },
+      {
+        "intent": "reminder_medicine",
+        "entities": [
+          {
+            "start": 21,
+            "end": 29,
+            "value": "dipirona",
+            "entity": "med_name"
+          },
+          {
+            "start": 41,
+            "end": 54,
+            "value": "one_time",
+            "entity": "med_frequency"
+          }
+        ],
+        "text": "meu medico me passou dipirona para tomar todos os dias"
+      },
+      {
+        "intent": "reminder_medicine",
+        "entities": [
+          {
+            "start": 16,
+            "end": 24,
+            "value": "dipirona",
+            "entity": "med_name"
+          },
+          {
+            "start": 25,
+            "end": 31,
+            "value": "2019-06-10T10:00:00.000-07:00",
+            "entity": "time"
+          }
+        ],
+        "text": "tenho que tomar dipirona amanha"
+      },
+      {
+        "intent": "reminder_appointment",
+        "entities": [
+          {
+            "start": 16,
+            "end": 23,
+            "value": "lufital",
+            "entity": "med_name"
+          },
+          {
+            "start": 24,
+            "end": 42,
+            "value": "weekly",
+            "entity": "med_frequency"
+          }
+        ],
+        "text": "tenho que tomar lufital uma vez por semana"
+      },
+      {
+        "intent": "set_reminder_appointment",
+        "entities": [
+          {
+            "start": 25,
+            "end": 48,
+            "value": "2019-06-10T10:00:00.000-07:00",
+            "entity": "time"
+          }
+        ],
+        "text": "minha proxima consulta é sexta feira as 10 horas, me lembre por favor"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 2,
+            "end": 12,
+            "value": "Dr. Marcos",
+            "entity": "doc_name"
+          }
+        ],
+        "text": "é Dr. Marcos"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 9,
+            "end": 17,
+            "value": "Dra. Ana",
+            "entity": "doc_name"
+          }
+        ],
+        "text": "o nome é Dra. Ana"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "dr joao",
+            "entity": "doc_name"
+          }
+        ],
+        "text": "dr joao"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "dr. carlos",
+            "entity": "doc_name"
+          }
+        ],
+        "text": "dr. carlos"
+      },
+      {
+        "intent": "reminder_appointment",
+        "entities": [
+          {
+            "start": 25,
+            "end": 35,
+            "value": "dr ricardo",
+            "entity": "doc_name"
+          }
+        ],
+        "text": "tenho uma consulta com o dr ricardo"
+      },
+      {
+        "intent": "hello",
+        "text": "Oi"
+      },
+      {
+        "intent": "deny",
+        "text": "nao"
+      },
+      {
+        "intent": "reminder_appointment",
+        "text": "não posso esquecer da minha proxima consulta"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "dr eduardo",
+            "entity": "doc_name",
+            "confidence": 0.6323624591,
+            "extractor": "CRFEntityExtractor"
+          }
+        ],
+        "text": "dr eduardo"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 19,
+            "end": 21,
+            "value": "10",
+            "entity": "hour",
+            "confidence": 0.5874992797,
+            "extractor": "CRFEntityExtractor"
+          }
+        ],
+        "text": "dia 20 de junho as 10 horas"
+      },
+      {
+        "intent": "affirm",
+        "text": "correto"
+      },
+      {
+        "intent": "hello",
+        "text": "oi"
+      },
+      {
+        "intent": "deny",
+        "text": "não"
+      },
+      {
+        "intent": "reminder_appointment",
+        "text": "tenho uma consulta semana q vm"
+      },
+      {
+        "intent": "affirm",
+        "text": "quero"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 2,
+            "end": 11,
+            "value": "dr carlos",
+            "entity": "doc_name",
+            "confidence": 0.9569847192,
+            "extractor": "CRFEntityExtractor"
+          }
+        ],
+        "text": "é dr carlos"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "quarta-feira",
+            "entity": "week_day",
+            "confidence": 0.6490781901,
+            "extractor": "CRFEntityExtractor",
+            "processors": [
+              "EntitySynonymMapper"
+            ]
+          }
+        ],
+        "text": "quarta feira as 9"
+      },
+      {
+        "intent": "affirm",
+        "text": "certo"
+      },
+      {
+        "intent": "i_know_importance",
+        "text": "Ah sim, eu sei como o pré-natal é importante"
+      },
+      {
+        "intent": "i_know_importance",
+        "text": "claro, é muito importante realizar o pré-natal"
+      },
+      {
+        "intent": "i_know_importance",
+        "text": "siim, eu sei como isso é importante"
+      },
+      {
+        "intent": "i_know_importance",
+        "text": "eu sei como esses exames são importantes"
+      },
+      {
+        "intent": "i_know_importance",
+        "text": "super concordo, é essencial fazer o pré-natal"
+      },
+      {
+        "intent": "i_know_importance",
+        "text": "lógico, não da pra deixar de fazer o pré-natal"
+      },
+      {
+        "intent": "i_know_importance",
+        "text": "siim, nao sei como ainda tem gnt que nao faz o pre natal"
+      },
+      {
+        "intent": "i_know_importance",
+        "text": "com certeza, é essencial fazer esses exames"
+      },
+      {
+        "intent": "later",
+        "text": "depois"
+      },
+      {
+        "intent": "later",
+        "text": "depois eu respondo"
+      },
+      {
+        "intent": "later",
+        "text": "depois eu respondo pode ser?"
+      },
+      {
+        "intent": "later",
+        "text": "eu respondo depois"
+      },
+      {
+        "intent": "later",
+        "text": "podemos fazer isso depois?"
+      },
+      {
+        "intent": "later",
+        "text": "outra hora eu respondo"
+      },
+      {
+        "intent": "later",
+        "text": "me pergunta mais tarde"
+      },
+      {
+        "intent": "later",
+        "text": "pode ser mais tarde?"
+      },
+      {
+        "intent": "im_pregnant",
+        "text": "estou gravida e nao sei oq fazer"
+      },
+      {
+        "intent": "im_pregnant",
+        "text": "to gravida, oq eu faço?"
+      },
+      {
+        "intent": "im_pregnant",
+        "text": "estou gravida e nao sei o que fazer"
+      },
+      {
+        "intent": "why_i_need_to_answer",
+        "text": "pq eu preciso responder isso?"
+      },
+      {
+        "intent": "why_i_need_to_answer",
+        "text": "eu preciso responder isso?"
+      },
+      {
+        "intent": "why_i_need_to_answer",
+        "text": "pq vc quer saber isso?"
+      },
+      {
+        "intent": "why_i_need_to_answer",
+        "text": "eu tenho que responder?"
+      },
+      {
+        "intent": "why_i_need_to_answer",
+        "text": "preciso responder?"
+      },
+      {
+        "intent": "why_i_need_to_answer",
+        "text": "por que voce precisa saber isso?"
+      },
+      {
+        "intent": "did_exam",
+        "text": "ok eu fiz o exame"
+      },
+      {
+        "intent": "did_exam",
+        "text": "ok eu fiz"
+      },
+      {
+        "intent": "did_exam",
+        "text": "eu ja fiz"
+      },
+      {
+        "intent": "did_exam",
+        "text": "eu fiz esse exame"
+      },
+      {
+        "intent": "did_exam",
+        "text": "eu fiz semana passada"
+      },
+      {
+        "intent": "did_exam",
+        "text": "fiz ontem"
+      },
+      {
+        "intent": "did_exam",
+        "text": "sim eu fiz o exame"
+      },
+      {
+        "intent": "did_exam",
+        "text": "fiz"
+      },
+      {
+        "intent": "did_exam",
+        "text": "ja fiz"
+      },
+      {
+        "intent": "did_not_exam",
+        "text": "eu nao fiz o exame"
+      },
+      {
+        "intent": "did_not_exam",
+        "text": "nao fiz esse exame"
+      },
+      {
+        "intent": "did_not_exam",
+        "text": "ainda nao fiz"
+      },
+      {
+        "intent": "did_not_exam",
+        "text": "nao fiz"
+      },
+      {
+        "intent": "did_not_exam",
+        "text": "nao fiz ainda"
+      },
+      {
+        "intent": "hello",
+        "text": "Oi"
+      },
+      {
+        "intent": "why_i_need_to_answer",
+        "text": "eu preciso responder?"
+      },
+      {
+        "intent": "affirm",
+        "text": "ok"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "entity": "is_pregnant",
+            "start": 11,
+            "end": 34,
+            "value": "False"
+          }
+        ],
+        "text": "/enter_data{\"is_pregnant\":\"False\"}"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "entity": "is_trying",
+            "start": 11,
+            "end": 31,
+            "value": "True"
+          }
+        ],
+        "text": "/enter_data{\"is_trying\":\"True\"}"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "entity": "is_planning",
+            "start": 11,
+            "end": 34,
+            "value": "False"
+          }
+        ],
+        "text": "/enter_data{\"is_planning\":\"False\"}"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "entity": "has_children",
+            "start": 11,
+            "end": 35,
+            "value": "False"
+          }
+        ],
+        "text": "/enter_data{\"has_children\":\"False\"}"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "entity": "health_plan",
+            "start": 11,
+            "end": 34,
+            "value": "False"
+          }
+        ],
+        "text": "/enter_data{\"health_plan\":\"False\"}"
+      },
+      {
+        "intent": "reminder_medicine",
+        "text": "meu medico me passou um remedio"
+      },
+      {
+        "intent": "deny",
+        "text": "não precisa"
       }
     ],
     "regex_features": [],
