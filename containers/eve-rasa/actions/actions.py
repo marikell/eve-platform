@@ -44,7 +44,6 @@ class GetAnswer(Action):
             dispatcher.utter_message(response)
         return [SlotSet("last_intent", intent)]
 
-
 class ActionGreetUser(Action):
     def name(self) -> Text:
         return "action_greet_user"
@@ -330,3 +329,29 @@ class ActionCancelReminder(Action):
     def run(self, dispatcher, tracker, domain):
         # cancelar o lembrete
         dispatcher.utter_template("utter_cancel_reminder", tracker)
+
+class ActionGetExam(Action):
+    def name(self) -> Text:
+        return "action_get_exam"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        exam_name = tracker.get_slot('exam_name')    
+        response = 'Esse é um dos exames básicos do pré-natal!'
+        data = {
+            'exam' : exam_name
+        }
+        headers = {
+            'Content-Type':'application/json'
+        }
+        # try:
+        #     req = requests.post(url = route_config.get_route('get_exam'),headers= headers,data=json.dumps(data))
+        #     json_obj = req.json()
+
+        #     if json_obj.get('response') is not None:
+        #         response = json_obj['response']
+        #     dispatcher.utter_message(response)
+        # except:
+        #     dispatcher.utter_message(response)
+        dispatcher.utter_message(response)
+        return []

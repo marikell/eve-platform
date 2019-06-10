@@ -94441,6 +94441,242 @@
       {
         "intent": "affirm",
         "text": "certo"
+      },
+      {
+        "intent": "i_know_importance",
+        "text": "Ah sim, eu sei como o pré-natal é importante"
+      },
+      {
+        "intent": "i_know_importance",
+        "text": "claro, é muito importante realizar o pré-natal"
+      },
+      {
+        "intent": "i_know_importance",
+        "text": "siim, eu sei como isso é importante"
+      },
+      {
+        "intent": "i_know_importance",
+        "text": "eu sei como esses exames são importantes"
+      },
+      {
+        "intent": "i_know_importance",
+        "text": "super concordo, é essencial fazer o pré-natal"
+      },
+      {
+        "intent": "i_know_importance",
+        "text": "lógico, não da pra deixar de fazer o pré-natal"
+      },
+      {
+        "intent": "i_know_importance",
+        "text": "siim, nao sei como ainda tem gnt que nao faz o pre natal"
+      },
+      {
+        "intent": "i_know_importance",
+        "text": "com certeza, é essencial fazer esses exames"
+      },
+      {
+        "intent": "later",
+        "text": "depois"
+      },
+      {
+        "intent": "later",
+        "text": "depois eu respondo"
+      },
+      {
+        "intent": "later",
+        "text": "depois eu respondo pode ser?"
+      },
+      {
+        "intent": "later",
+        "text": "eu respondo depois"
+      },
+      {
+        "intent": "later",
+        "text": "podemos fazer isso depois?"
+      },
+      {
+        "intent": "later",
+        "text": "outra hora eu respondo"
+      },
+      {
+        "intent": "later",
+        "text": "me pergunta mais tarde"
+      },
+      {
+        "intent": "later",
+        "text": "pode ser mais tarde?"
+      },
+      {
+        "intent": "im_pregnant",
+        "text": "estou gravida e nao sei oq fazer"
+      },
+      {
+        "intent": "im_pregnant",
+        "text": "to gravida, oq eu faço?"
+      },
+      {
+        "intent": "im_pregnant",
+        "text": "estou gravida e nao sei o que fazer"
+      },
+      {
+        "intent": "why_i_need_to_answer",
+        "text": "pq eu preciso responder isso?"
+      },
+      {
+        "intent": "why_i_need_to_answer",
+        "text": "eu preciso responder isso?"
+      },
+      {
+        "intent": "why_i_need_to_answer",
+        "text": "pq vc quer saber isso?"
+      },
+      {
+        "intent": "why_i_need_to_answer",
+        "text": "eu tenho que responder?"
+      },
+      {
+        "intent": "why_i_need_to_answer",
+        "text": "preciso responder?"
+      },
+      {
+        "intent": "why_i_need_to_answer",
+        "text": "por que voce precisa saber isso?"
+      },
+      {
+        "intent": "did_exam",
+        "text": "ok eu fiz o exame"
+      },
+      {
+        "intent": "did_exam",
+        "text": "ok eu fiz"
+      },
+      {
+        "intent": "did_exam",
+        "text": "eu ja fiz"
+      },
+      {
+        "intent": "did_exam",
+        "text": "eu fiz esse exame"
+      },
+      {
+        "intent": "did_exam",
+        "text": "eu fiz semana passada"
+      },
+      {
+        "intent": "did_exam",
+        "text": "fiz ontem"
+      },
+      {
+        "intent": "did_exam",
+        "text": "sim eu fiz o exame"
+      },
+      {
+        "intent": "did_exam",
+        "text": "fiz"
+      },
+      {
+        "intent": "did_exam",
+        "text": "ja fiz"
+      },
+      {
+        "intent": "did_not_exam",
+        "text": "eu nao fiz o exame"
+      },
+      {
+        "intent": "did_not_exam",
+        "text": "nao fiz esse exame"
+      },
+      {
+        "intent": "did_not_exam",
+        "text": "ainda nao fiz"
+      },
+      {
+        "intent": "did_not_exam",
+        "text": "nao fiz"
+      },
+      {
+        "intent": "did_not_exam",
+        "text": "nao fiz ainda"
+      },
+      {
+        "intent": "hello",
+        "text": "Oi"
+      },
+      {
+        "intent": "why_i_need_to_answer",
+        "text": "eu preciso responder?"
+      },
+      {
+        "intent": "affirm",
+        "text": "ok"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "entity": "is_pregnant",
+            "start": 11,
+            "end": 34,
+            "value": "False"
+          }
+        ],
+        "text": "/enter_data{\"is_pregnant\":\"False\"}"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "entity": "is_trying",
+            "start": 11,
+            "end": 31,
+            "value": "True"
+          }
+        ],
+        "text": "/enter_data{\"is_trying\":\"True\"}"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "entity": "is_planning",
+            "start": 11,
+            "end": 34,
+            "value": "False"
+          }
+        ],
+        "text": "/enter_data{\"is_planning\":\"False\"}"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "entity": "has_children",
+            "start": 11,
+            "end": 35,
+            "value": "False"
+          }
+        ],
+        "text": "/enter_data{\"has_children\":\"False\"}"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "entity": "health_plan",
+            "start": 11,
+            "end": 34,
+            "value": "False"
+          }
+        ],
+        "text": "/enter_data{\"health_plan\":\"False\"}"
+      },
+      {
+        "intent": "reminder_medicine",
+        "text": "meu medico me passou um remedio"
+      },
+      {
+        "intent": "deny",
+        "text": "não precisa"
       }
     ],
     "regex_features": [],
