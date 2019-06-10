@@ -11,6 +11,7 @@ import dateutil.parser
 
 route_config = RouteConfig('http://localhost:5001')
 route_config.register_route('get_answer','/action-answer')
+route_config.register_route('send_slots','/rasa/send-slots')
 
 class GetAnswer(Action):
     def name(self) -> Text:
@@ -129,16 +130,52 @@ class InitialForm(FormAction):
         except ValueError:
             return False
 
+    @staticmethod
+    def convert_to_bool(string: str) -> bool:
+        return string == 'True'
+
     def submit(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> List[Dict]:
-        planned_pregnancy = tracker.get_slot("planned_pregnancy")
-        first_pregnancy = tracker.get_slot("first_pregnancy")
-        health_plan = tracker.get_slot("health_plan")
-        pre_natal = tracker.get_slot("pre_natal")
-        is_planning = tracker.get_slot("is_planning")
-        has_children = tracker.get_slot("has_children")
-        health_plan = tracker.get_slot("health_plan")
-        is_pregnant = tracker.get_slot("is_pregnant")
-        is_trying = tracker.get_slot("is_trying")
+
+        first_pregnancy = self.convert_to_bool(tracker.get_slot("first_pregnancy"))
+        has_children = self.convert_to_bool(tracker.get_slot("has_children"))
+        health_plan = self.convert_to_bool(tracker.get_slot("health_plan"))
+        is_planning = self.convert_to_bool(tracker.get_slot("is_planning"))
+        is_pregnant = self.convert_to_bool(tracker.get_slot("is_pregnant"))
+        pre_natal = self.convert_to_bool(tracker.get_slot("pre_natal"))
+        planned_pregnancy = self.convert_to_bool(tracker.get_slot("planned_pregnancy"))
+        is_trying = self.convert_to_bool(tracker.get_slot("is_trying"))
+        pregnancy_weeks = tracker.get_slot("pregnancy_weeks")
+
+        data = {
+            "is_first_pregnancy" : first_pregnancy,
+            "has_children" : has_children,
+            "has_health_plan" : health_plan,
+            "is_planning" : is_planning,
+            "is_pregnant" : is_pregnant,
+            "is_doing_pre_natal" : pre_natal,
+            "is_planned_pregnancy" : planned_pregnancy,
+            "is_trying" : is_trying,
+            "pregnancy_weeks" : pregnancy_weeks
+        }
+       
+        headers = {
+            'Content-Type':'application/json'
+        }
+        try:        
+            req = requests.post(url = '{}{}'.format(route_config.get_route('send_slots'),'/5cf410d51dabbc0fe2354e65'),headers= headers,data=json.dumps(data))
+            json_obj = req.json()
+
+            if json_obj.get('status') == 200:
+                print('OK')
+            else:
+                print('error')
+
+            dispatcher.utter_message(str(data))
+                
+        except:
+            #this will log in the future
+            print('Log')
+
         # salvar as informações
         if(is_pregnant == "True"):
             if(pre_natal == "True"):
@@ -163,7 +200,7 @@ class InitialForm(FormAction):
 class MedicineForm(FormAction):
     def name(self) -> Text:
         return "medicine_form"
-        
+
     @staticmethod
     def required_slots(tracker: Tracker):
         if(tracker.get_slot('med_frequency') == "one_time"):

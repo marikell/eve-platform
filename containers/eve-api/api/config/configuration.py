@@ -10,7 +10,10 @@ ROUTE_CONFIG:dict = {
     'PERSON_TYPE_NAME':'person',
     'USER_PREGNANCY_WEEKS_TYPE_NAME':'user-pregnancy-weeks',
     'EXAM_TYPE_NAME':'exam',
+    'USER_INFO_TYPE_NAME':'user-info',
     #this endpoint will be called by the fup service
-    'FUP':'fup'
+    'FUP':'fup',
+    #this endpoint will be called by rasa to send data
+    'RASA' : 'rasa'
 }
 

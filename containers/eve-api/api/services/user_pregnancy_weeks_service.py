@@ -18,6 +18,17 @@ class UserPregnancyWeeksService(GenericService):
     def get_by_user(self, user):
         return self.objects(Q(user_id=ObjectId(user.id))).first()
 
+    def update_slots(self, obj):
+        user_pregnancy_weeks = self.get(obj['id'])
+
+        if not user_pregnancy_weeks:
+            raise Exception('Object with id {} not found!'.format(obj['id']))
+        
+        user_pregnancy_weeks.weeks = int(obj['weeks'])
+        user_pregnancy_weeks.weeks_start = int(obj['weeks_start'])
+
+        user_pregnancy_weeks.save()
+
     def update(self, obj):
         user_pregnancy_weeks = self.get(obj['id'])
 
