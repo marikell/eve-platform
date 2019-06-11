@@ -13,6 +13,7 @@ route_config = RouteConfig('http://localhost:5001')
 route_config.register_route('get_answer','/action-answer')
 route_config.register_route('send_slots','/rasa/send-slots')
 route_config.register_route('get_exam_by_name','/exam/get-by-name')
+route_config.register_route('insert_user_exam','/user-exam')
 route_config.register_route('get_user_by_email','/user/get-by-email')
 route_config.register_route('send_slot_user_exam','/rasa/send-slot-user-exam')
 
@@ -164,8 +165,7 @@ class InitialForm(FormAction):
             'Content-Type':'application/json'
         }
         try:        
-            email_obj = {
-                
+            email_obj = {                
                 'email' : 'me'
             }
                     
@@ -393,11 +393,11 @@ class ActionGetExam(Action):
         try:
             req = requests.post(url = route_config.get_route('get_exam_by_name'),headers= headers,data=json.dumps(data))
             exam = req.json()['response']
-            reponse = str(exam['description'])
+            response = str(exam['description'])
             if(exam['weeks_start'] == 0):
                 response = response + "\nEsse exame deve ser feito logo no inicio do pré-natal!"
             else:
-                response = response + "\nEsse exame deve ser feito entre a {}ª e {}ª semana!".format(exam['weeks_start'], exam['weeks_end'])
+                response = response + "\nDeve ser feito entre a {}ª e {}ª semana!".format(exam['weeks_start'], exam['weeks_end'])
             dispatcher.utter_message(response)
         except:
             dispatcher.utter_message(response)        
@@ -409,5 +409,28 @@ class ActionSaveExam(Action):
         return "action_doing_right_exam"
 
     def run(self, dispatcher, tracker, domain):
+        exam_id = tracker.get_slot('exam_id')
+        if(exam_id):
+            headers = {
+                'Content-Type':'application/json'
+            }
+            try:        
+                email_obj = {
+                    'email' : 'me'
+                }
+                headers = {
+                    'Content-Type' : 'application/json'
+                }
+                req_email = requests.post(url = '{}'.format(route_config.get_route('get_user_by_email')),headers = headers, data=json.dumps(email_obj))
+                if req_email.json()['status'] == 200:
+                    user_id = json.loads(req_email.json()['response'])['_id']['$oid']
+                    data = {
+                        "exam_id" : exam_id,
+                        "user_id" : user_id
+                    }
+                    req = requests.post(url = route_config.get_route('insert_user_exam'),headers= headers,data=json.dumps(data))
+            except Exception as e:
+                #this will log in the future
+                print(str(e))
         dispatcher.utter_template("utter_doing_right_exam", tracker)
         return [UserUtteranceReverted()]

@@ -60,6 +60,14 @@ class ExamJob():
             
                 req = requests.post(url = url_slot,headers= headers,data=json.dumps(json_data))
 
+                json_data = {                    
+                    'event' : 'slot',
+                    'value' : obj['exams']['_id']['$oid'],
+                    'name' : 'exam_id'
+                }
+            
+                req = requests.post(url = url_slot,headers= headers,data=json.dumps(json_data))
+
                 url_action = '{}/conversations/{}/execute'.format(RASA_API['url'],exm_act['user_id'])
 
                 action_data = {
