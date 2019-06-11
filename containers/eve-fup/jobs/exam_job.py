@@ -1,4 +1,4 @@
-from config.configuration import EVE_API
+from config.configuration import EVE_API, RASA_API
 import requests 
 from helpers.logging import get_log
 import json
@@ -12,58 +12,74 @@ class ExamJob():
         pregnant_users_exams = self.get_pregnant_users_exams()
         exams = self.get_all_exams()
 
-        objects = []
-
+        exams_to_execute = []
 
         for usr in pregnant_users_exams:
-            teste = []
+            checked_user_exams = []
             for exm in exams:
                 checked_exm = self.check_exam(exm, usr)
 
                 if checked_exm is None:
                     continue
 
-                teste.append(checked_exm)
+                checked_user_exams.append(checked_exm)
             
+
+            if len(checked_user_exams) == 0:
+                continue
+
+            #TODO REMOVE THIS PART (ONLY MADE FOR RASA X)
+
+            user = self.get_user_by_email('me')
 
             obj = {
-                'user_id': 'me',
-                'exams' : teste[0]
+                #TODO THIS WILL BE CHANGED TO USER ID
+                'user_id': user['email'],
+                #TODO SEND ALL EXAMS, NOT ONLY ONE
+                'exams' : checked_user_exams[0]
             }
                 
-            objects.append(obj)
+            exams_to_execute.append(obj)
 
+        for exm_act in exams_to_execute:
+                    
             headers = {
-            'Content-Type':'application/json'
+                'Content-Type' : 'application/json'
             }
 
-            url = 'http://localhost:5005/conversations/{}/tracker/events'.format(obj['user_id'])
+            try:
+                #url do set slot
+                url_slot = '{}/conversations/{}/tracker/events'.format(RASA_API['url'], exm_act['user_id'])
 
-            json_data = {
-                "event" : "slot",
-                "value" : obj['exams']['name'],
-                "name" : "exam_name" 
-            }
-
-            req = requests.post(url = url,headers= headers,data=json.dumps(json_data))
-
-            print(req.json())
-
-            url2 = 'http://localhost:5005/conversations/{}/execute'.format(obj['user_id'])
-
-            action_data = {
-                "name":"utter_ask_exam"
-            }
+                json_data = {
+                    
+                    'event' : 'slot',
+                    'value' : obj['exams']['name'],
+                    'name' : 'exam_name'
+                }
             
-            req2 = requests.post(url = url2, headers = headers, data=json.dumps(action_data))
+                req = requests.post(url = url_slot,headers= headers,data=json.dumps(json_data))
 
-            print(req2.json())
+                url_action = '{}/conversations/{}/execute'.format(RASA_API['url'],exm_act['user_id'])
 
-            teste = {
-                "name" : "action_listen"
-            }
+                action_data = {
+                        
+                    "name":"utter_ask_exam"
+                }
+                
+                req_action_data = requests.post(url = url_action, headers = headers, data=json.dumps(action_data))
 
-            req2 = requests.post(url = url2, headers = headers, data=json.dumps(teste))
+                action_listen = {
+                    "name" : "action_listen"
+                }
+
+                req_action_listen = requests.post(url = url_action, headers = headers, data=json.dumps(action_listen))
+
+                #TODO REMOVE THIS LINE (MADE FOR RASA X ONLY)
+                break
+
+            except:
+                continue
 
 
     def check_exam(self, exm, usr):
@@ -85,6 +101,28 @@ class ExamJob():
             return exm if usr['weeks'] <= exm['weeks_end'] else None        
         
         return None
+
+    def get_user_by_email(self, email):
+        
+        email_obj = {
+            
+            'email' : email
+        }
+                
+        headers = {
+            'Content-Type' : 'application/json'
+        }
+                
+        req_email = requests.post(url = '{}/user/get-by-email'.format(EVE_API['url']),headers = headers, data=json.dumps(email_obj))
+
+        if req_email.json()['status'] == 400:
+            get_log(req_email.json()['response'])
+            return None
+        
+        user = json.loads(req_email.json()['response'])
+
+        return user
+
 
     def get_pregnant_users_exams(self):
         r = requests.get(url = '{}/fup/pregnant-users-with-exams'.format(EVE_API['url']))

@@ -63,6 +63,23 @@ def insert():
     except Exception as e:
         return response_text(str(e), status.HTTP_400_BAD_REQUEST)
 
+@app_user.route('/{}/get-by-email'.format(route_name), methods=['POST'])
+def get_by_email():
+    try:
+        json_obj = request.get_json()
+
+        check_if_key_exists('email', json_obj)
+
+        obj = ServiceHandler.get_service(route_name).getby_email(json_obj['email'])
+
+        if not obj:
+            raise Exception('Object with email {} not found!'.format(json_obj['email']))
+
+        return response(obj.to_json(), status.HTTP_200_OK)
+      
+    except Exception as e:
+        return response(str(e), status.HTTP_400_BAD_REQUEST)
+
 @app_user.route('/{}/<id>'.format(route_name), methods=['GET'])
 def get(id):
     try:

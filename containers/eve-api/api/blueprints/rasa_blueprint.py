@@ -12,6 +12,28 @@ from api.utils.validate_fields import *
 route_name = ROUTE_CONFIG['RASA']
 app_rasa = Blueprint(route_name,__name__, url_prefix='/api')
 
+
+@app_rasa.route('/{}/send-slot-user-exam/<id>'.format(route_name), methods=['POST'])
+def send_user_exam_slot(id):
+    try:
+        json_obj = request.get_json()
+
+        user = ServiceHandler.get_service(ROUTE_CONFIG['USER_TYPE_NAME']).get(id)
+        exam = ServiceHandler.get_service(ROUTE_CONFIG['EXAM_TYPE_NAME']).get_by_name(json_obj['exam_name'])
+
+        obj = {
+            'user' : user,
+            'exam' : exam
+        }
+
+        ServiceHandler.get_service(ROUTE_CONFIG['USER_EXAM_TYPE_NAME']).insert(obj)      
+
+        return response(status=status.HTTP_201_CREATED)
+
+    except Exception as e:
+        return response_text(str(e), status.HTTP_400_BAD_REQUEST)
+
+
 @app_rasa.route('/{}/send-slots/<id>'.format(route_name), methods=['POST'])
 def send_slots_from_Rasa(id):
     try:
@@ -52,11 +74,11 @@ def send_slots_from_Rasa(id):
 
         if user_weeks:
             days_obj['id'] = user_weeks.id
-            if bool(json_obj['is_pregnant']):
+            if json_obj['is_pregnant']:
                 ServiceHandler.get_service(ROUTE_CONFIG['USER_PREGNANCY_WEEKS_TYPE_NAME']).update_slots(days_obj)
             else:
                 ServiceHandler.get_service(ROUTE_CONFIG['USER_PREGNANCY_WEEKS_TYPE_NAME']).delete(user_weeks.id)
-        else:
+        elif json_obj['is_pregnant']:
             ServiceHandler.get_service(ROUTE_CONFIG['USER_PREGNANCY_WEEKS_TYPE_NAME']).insert(days_obj)   
 
         return response(status=status.HTTP_200_OK)

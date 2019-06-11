@@ -8,4 +8,4 @@ source env/bin/activate
 echo "[EVE] installing requirements.txt"
 pip3 install -r requirements.txt
 
-python -m rasa_sdk --actions actions
+python -m rasa_sdk --actions actions --debug
