@@ -164,30 +164,25 @@ class InitialForm(FormAction):
         try:        
             req = requests.post(url = '{}{}'.format(route_config.get_route('send_slots'),'/5cfb25d6dcf4f78a9cfae49b'),headers= headers,data=json.dumps(data))
             json_obj = req.json()
-
-            if json_obj.get('status') == 200:
-                print('OK')
-            else:
-                print('error')                
         except:
             #this will log in the future
             print('Log')
 
         # salvar as informações
-        if(is_pregnant == "True"):
-            if(pre_natal == "True"):
+        if(is_pregnant):
+            if(pre_natal):
                 dispatcher.utter_template('utter_doing_right_prenatal', tracker)
-            elif(pre_natal == "False" and health_plan == "False"):
+            elif(pre_natal == False and health_plan == False):
                 dispatcher.utter_template('utter_first_step', tracker)
                 dispatcher.utter_template('utter_pre_natal_sus', tracker)
             else:
                 dispatcher.utter_template('utter_first_step', tracker)
-        elif(is_trying == "True"):
-            if(is_planning == "True"):
+        elif(is_trying):
+            if(is_planning):
                 dispatcher.utter_template('utter_doing_right', tracker)
             else:
                 dispatcher.utter_template('utter_planning_pregnancy', tracker)
-                if(health_plan == "False"):
+                if(health_plan == False):
                     dispatcher.utter_template('utter_pre_natal_sus', tracker)
                 else:
                     dispatcher.utter_template('utter_schedule_gynecologist', tracker)
@@ -383,8 +378,22 @@ class ActionGetExam(Action):
 
         try:
             req = requests.post(url = route_config.get_route('get_exam_by_name'),headers= headers,data=json.dumps(data))
-            dispatcher.utter_message(str(req.json()['response']['description']))
+            exam = req.json()['response']
+            reponse = str(exam['description'])
+            if(exam['weeks_start'] == 0):
+                response = response + "\nEsse exame deve ser feito logo no inicio do pré-natal!"
+            else:
+                response = response + "\nEsse exame deve ser feito entre a {}ª e {}ª semana!".format(exam['weeks_start'], exam['weeks_end'])
+            dispatcher.utter_message(response)
         except:
             dispatcher.utter_message(response)        
         finally:
             return []
+
+class ActionSaveExam(Action):
+    def name(self):
+        return "action_doing_right_exam"
+
+    def run(self, dispatcher, tracker, domain):
+        dispatcher.utter_template("utter_doing_right_exam", tracker)
+        return [UserUtteranceReverted()]

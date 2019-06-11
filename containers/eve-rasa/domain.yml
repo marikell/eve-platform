@@ -64,9 +64,12 @@ actions:
   - utter_ask_reminder
   - action_get_exam
   - utter_doing_right_exam
+  - action_doing_right_exam
   - utter_is_important_exam
   - utter_why_answer
   - utter_agree
+  - utter_ask
+  - utter_ask_me_later
 entities: 
   - question_entity
   - pregnancy_weeks
@@ -87,6 +90,8 @@ forms:
   - form_medicine
   - form_appointment
 intents:
+  - no_question
+  - have_question
   - i_know_importance
   - later
   - why_i_need_to_answer
@@ -355,3 +360,8 @@ O planejamento tem o objetivo de identificar fatores de risco como diabetes e hi
   utter_agree:
   - text: "Isso mesmo! 👍"
   - text: "Isso aí! 👍"
+  utter_ask:
+  - text: "Qual a dúvida? Prometo tentar responder 😅"
+  utter_ask_me_later:
+  - text: "Bom, se surgir alguma dúvida é só me perguntar! 😉"
+  

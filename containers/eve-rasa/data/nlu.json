@@ -94677,6 +94677,130 @@
       {
         "intent": "deny",
         "text": "não precisa"
+      },
+      {
+        "intent": "no_question",
+        "text": "nao tenho nenhuma duvida"
+      },
+      {
+        "intent": "no_question",
+        "text": "nao tenho nada para perguntar"
+      },
+      {
+        "intent": "no_question",
+        "text": "nao tenho duvidas"
+      },
+      {
+        "intent": "no_question",
+        "text": "nao quero perguntar nada"
+      },
+      {
+        "intent": "have_question",
+        "text": "eu tenho uma duvida"
+      },
+      {
+        "intent": "have_question",
+        "text": "quero tirar uma duvida"
+      },
+      {
+        "intent": "have_question",
+        "text": "preciso tirar uma duvida"
+      },
+      {
+        "intent": "have_question",
+        "text": "posso tirar uma duvida?"
+      },
+      {
+        "intent": "have_question",
+        "text": "quero perguntar uma coisa"
+      },
+      {
+        "intent": "have_question",
+        "text": "posso perguntar qualquer coisa?"
+      },
+      {
+        "intent": "have_question",
+        "text": "eu tenho uma pergunta"
+      },
+      {
+        "intent": "hello",
+        "text": "Ola"
+      },
+      {
+        "intent": "affirm",
+        "text": "tudo bem"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "entity": "is_pregnant",
+            "start": 11,
+            "end": 33,
+            "value": "True"
+          }
+        ],
+        "text": "/enter_data{\"is_pregnant\":\"True\"}"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 1,
+            "value": "6",
+            "entity": "pregnancy_weeks"
+          }
+        ],
+        "text": "6 semanas"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "entity": "planned_pregnancy",
+            "start": 11,
+            "end": 40,
+            "value": "False"
+          }
+        ],
+        "text": "/enter_data{\"planned_pregnancy\":\"False\"}"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "entity": "first_pregnancy",
+            "start": 11,
+            "end": 37,
+            "value": "True"
+          }
+        ],
+        "text": "/enter_data{\"first_pregnancy\":\"True\"}"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "entity": "health_plan",
+            "start": 11,
+            "end": 34,
+            "value": "False"
+          }
+        ],
+        "text": "/enter_data{\"health_plan\":\"False\"}"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "entity": "pre_natal",
+            "start": 11,
+            "end": 32,
+            "value": "False"
+          }
+        ],
+        "text": "/enter_data{\"pre_natal\":\"False\"}"
       }
     ],
     "regex_features": [],

@@ -531,7 +531,7 @@
 * reminder_medicine
     - utter_ask_reminder
 * deny
-    - utter_okay
+    - utter_cancel_reminder
 
 # bot pergunta se quer um lembrete de consulta (confirmado)
 * reminder_appointment
@@ -557,7 +557,7 @@
 * reminder_appointment
     - utter_ask_reminder
 * deny
-    - utter_okay
+    - utter_cancel_reminder
 
 ## Generated Story 9121924420816878821
 * hello
@@ -586,12 +586,12 @@
 ## bot pergunta se fez o exame e o usuário fez
     - utter_ask_exam
 * affirm
-    - utter_doing_right_exam
+    - action_doing_right_exam
 
 ## bot pergunta se fez o exame e o usuário fez
     - utter_ask_exam
 * did_exam
-    - utter_doing_right_exam
+    - action_doing_right_exam
 
 ## bot pergunta se fez o exame e o usuário não fez
     - utter_ask_exam  
@@ -610,7 +610,7 @@
 * why_i_need_to_answer
     - utter_why_answer
 * did_exam
-    - utter_doing_right_exam
+    - action_doing_right_exam
 
 ## bot pergunta se fez o exame, o usuário fez mas quer saber o motivo da pergunta
     - utter_ask_exam  
@@ -619,7 +619,7 @@
 * affirm
     - utter_ask_exam
 * did_exam
-    - utter_doing_right_exam
+    - action_doing_right_exam
 
 ## bot pergunta se fez o exame, o usuário fez mas quer saber o motivo da pergunta
     - utter_ask_exam  
@@ -628,7 +628,7 @@
 * affirm
     - utter_ask_exam
 * affirm
-    - utter_doing_right_exam
+    - action_doing_right_exam
 
 ## bot pergunta se fez o exame, o usuário não fez mas quer saber o motivo da pergunta
     - utter_ask_exam  
@@ -653,14 +653,14 @@
 ## bot pergunta se fez o exame, o usuário fez e sabe a importância do exame
     - utter_ask_exam
 * affirm
-    - utter_doing_right_exam
+    - action_doing_right_exam
 * i_know_importance
     - utter_agree
 
 ## bot pergunta se fez o exame, o usuário fez e sabe a importância do exame
     - utter_ask_exam
 * did_exam
-    - utter_doing_right_exam
+    - action_doing_right_exam
 * i_know_importance
     - utter_agree
 
@@ -730,5 +730,74 @@
 * reminder_medicine
     - utter_ask_reminder
 * deny
-    - utter_okay
+    - utter_cancel_reminder
+
+# usuario não tem duvidas
+* no_question
+    - utter_ask_me_later
+
+# usuario tem duvidas
+* have_question
+    - utter_ask
+
+## o usuário inicia a conversa com apenas 'Oi' (gestante) e não tem duvidas
+* hello
+  - action_greet_user
+* affirm
+  - form_initial
+  - form{"name": "form_initial"}
+  - form{"name": null}
+  - utter_ask_me_anything
+* no_question
+  - utter_ask_me_later
+
+## o usuário inicia a conversa com apenas 'Oi' (gestante) e tem duvidas
+* hello
+  - action_greet_user
+* affirm
+  - form_initial
+  - form{"name": "form_initial"}
+  - form{"name": null}
+  - utter_ask_me_anything
+* have_question
+  - utter_ask
+
+## Generated Story 4935868663189737503
+* hello
+    - action_greet_user
+* affirm
+    - form_initial
+    - form{"name": "form_initial"}
+    - slot{"requested_slot": "is_pregnant"}
+* form: enter_data{"is_pregnant": "True"}
+    - slot{"is_pregnant": "True"}
+    - form: form_initial
+    - slot{"is_pregnant": "True"}
+    - slot{"requested_slot": "pregnancy_weeks"}
+* form: enter_data{"pregnancy_weeks": "6"}
+    - slot{"pregnancy_weeks": "6"}
+    - form: form_initial
+    - slot{"pregnancy_weeks": "6"}
+    - slot{"requested_slot": "planned_pregnancy"}
+* form: enter_data{"planned_pregnancy": "False"}
+    - slot{"planned_pregnancy": "False"}
+    - form: form_initial
+    - slot{"planned_pregnancy": "False"}
+    - slot{"requested_slot": "first_pregnancy"}
+* form: enter_data{"first_pregnancy": "True"}
+    - slot{"first_pregnancy": "True"}
+    - form: form_initial
+    - slot{"first_pregnancy": "True"}
+    - slot{"requested_slot": "health_plan"}
+* form: enter_data{"health_plan": "False"}
+    - slot{"health_plan": "False"}
+    - form: form_initial
+    - slot{"health_plan": "False"}
+    - slot{"requested_slot": "pre_natal"}
+* form: enter_data{"pre_natal": "False"}
+    - slot{"pre_natal": "False"}
+    - form: form_initial
+    - slot{"pre_natal": "False"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
 
