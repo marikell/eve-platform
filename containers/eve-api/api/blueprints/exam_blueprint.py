@@ -16,6 +16,16 @@ def validate_followup_request(json):
         check_if_key_exists(k, json)
         check_empty_string(k, json)
 
+@app_exam.route('/{}/get-by-name'.format(route_name), methods=['POST'])
+def get_by_name():
+    try:
+        exam_name = str(request.get_json()['exam_name'])
+        exam = ServiceHandler.get_service(route_name).get_by_name(exam_name)
+
+        return response(exam, status.HTTP_200_OK)
+    except Exception as e:
+        return response_text(str(e), status.HTTP_400_BAD_REQUEST)
+
 @app_exam.route('/{}'.format(route_name), methods=['GET'])
 def get_all():
     try:

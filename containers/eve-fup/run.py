@@ -6,7 +6,7 @@ from jobs.exam_job import ExamJob
 
 
 
-schedule.every().minute.do(UserJob().run)
+# schedule.every().minute.do(UserJob().run)
 # schedule.every().day.at("12:42").do(fup_job.execute_routine)
 # schedule.every().week.at("20:18").do(fup_job.execute_routine)
 

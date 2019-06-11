@@ -12,6 +12,7 @@ import dateutil.parser
 route_config = RouteConfig('http://localhost:5001')
 route_config.register_route('get_answer','/action-answer')
 route_config.register_route('send_slots','/rasa/send-slots')
+route_config.register_route('get_exam_by_name','/exam/get-by-name')
 
 class GetAnswer(Action):
     def name(self) -> Text:
@@ -161,16 +162,13 @@ class InitialForm(FormAction):
             'Content-Type':'application/json'
         }
         try:        
-            req = requests.post(url = '{}{}'.format(route_config.get_route('send_slots'),'/5cf410d51dabbc0fe2354e65'),headers= headers,data=json.dumps(data))
+            req = requests.post(url = '{}{}'.format(route_config.get_route('send_slots'),'/5cfb25d6dcf4f78a9cfae49b'),headers= headers,data=json.dumps(data))
             json_obj = req.json()
 
             if json_obj.get('status') == 200:
                 print('OK')
             else:
-                print('error')
-
-            dispatcher.utter_message(str(data))
-                
+                print('error')                
         except:
             #this will log in the future
             print('Log')
@@ -375,20 +373,18 @@ class ActionGetExam(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         exam_name = tracker.get_slot('exam_name')    
         response = 'Esse é um dos exames básicos do pré-natal!'
+
         data = {
-            'exam' : exam_name
+            'exam_name' : exam_name
         }
         headers = {
             'Content-Type':'application/json'
         }
-        # try:
-        #     req = requests.post(url = route_config.get_route('get_exam'),headers= headers,data=json.dumps(data))
-        #     json_obj = req.json()
 
-        #     if json_obj.get('response') is not None:
-        #         response = json_obj['response']
-        #     dispatcher.utter_message(response)
-        # except:
-        #     dispatcher.utter_message(response)
-        dispatcher.utter_message(response)
-        return []
+        try:
+            req = requests.post(url = route_config.get_route('get_exam_by_name'),headers= headers,data=json.dumps(data))
+            dispatcher.utter_message(str(req.json()['response']['description']))
+        except:
+            dispatcher.utter_message(response)        
+        finally:
+            return []

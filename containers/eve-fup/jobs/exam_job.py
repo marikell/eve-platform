@@ -27,14 +27,44 @@ class ExamJob():
             
 
             obj = {
-                'user_id':usr['user_id'],
-                'exams' : teste
+                'user_id': 'me',
+                'exams' : teste[0]
             }
                 
             objects.append(obj)
 
+            headers = {
+            'Content-Type':'application/json'
+            }
 
-        print(objects)
+            url = 'http://localhost:5005/conversations/{}/tracker/events'.format(obj['user_id'])
+
+            json_data = {
+                "event" : "slot",
+                "value" : obj['exams']['name'],
+                "name" : "exam_name" 
+            }
+
+            req = requests.post(url = url,headers= headers,data=json.dumps(json_data))
+
+            print(req.json())
+
+            url2 = 'http://localhost:5005/conversations/{}/execute'.format(obj['user_id'])
+
+            action_data = {
+                "name":"utter_ask_exam"
+            }
+            
+            req2 = requests.post(url = url2, headers = headers, data=json.dumps(action_data))
+
+            print(req2.json())
+
+            teste = {
+                "name" : "action_listen"
+            }
+
+            req2 = requests.post(url = url2, headers = headers, data=json.dumps(teste))
+
 
     def check_exam(self, exm, usr):
 
