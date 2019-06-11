@@ -13,6 +13,8 @@ route_config = RouteConfig('http://localhost:5001')
 route_config.register_route('get_answer','/action-answer')
 route_config.register_route('send_slots','/rasa/send-slots')
 route_config.register_route('get_exam_by_name','/exam/get-by-name')
+route_config.register_route('get_user_by_email','/user/get-by-email')
+route_config.register_route('send_slot_user_exam','/rasa/send-slot-user-exam')
 
 class GetAnswer(Action):
     def name(self) -> Text:
@@ -162,13 +164,25 @@ class InitialForm(FormAction):
             'Content-Type':'application/json'
         }
         try:        
-            req = requests.post(url = '{}{}'.format(route_config.get_route('send_slots'),'/5cfb25d6dcf4f78a9cfae49b'),headers= headers,data=json.dumps(data))
-            json_obj = req.json()
-        except:
-            #this will log in the future
-            print('Log')
+            email_obj = {
+                
+                'email' : 'me'
+            }
+                    
+            headers = {
+                'Content-Type' : 'application/json'
+            }
+                    
+            req_email = requests.post(url = '{}'.format(route_config.get_route('get_user_by_email')),headers = headers, data=json.dumps(email_obj))
 
-        # salvar as informações
+            if req_email.json()['status'] == 200:
+                print(data)
+                user_id = json.loads(req_email.json()['response'])['_id']['$oid']
+                req = requests.post(url = '{}{}'.format(route_config.get_route('send_slots'),'/{}'.format(user_id)),headers= headers,data=json.dumps(data))
+        except Exception as e:
+            #this will log in the future
+            print(str(e))
+        
         if(is_pregnant):
             if(pre_natal):
                 dispatcher.utter_template('utter_doing_right_prenatal', tracker)

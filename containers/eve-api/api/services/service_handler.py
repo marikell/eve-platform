@@ -6,6 +6,7 @@ from api.services.user_pregnancy_weeks_service import UserPregnancyWeeksService
 from api.services.rasa_service import RasaService
 from api.services.exam_service import ExamService
 from api.services.user_service import UserService
+from api.services.user_exam_service import UserExamService
 from api.services.person_service import PersonService
 from api.services.user_info_service import UserInfoService
 
@@ -23,6 +24,7 @@ class ServiceHandler():
         services[ROUTE_CONFIG['EXAM_TYPE_NAME']] = ExamService()
         services[ROUTE_CONFIG['RASA']] = RasaService()
         services[ROUTE_CONFIG['USER_INFO_TYPE_NAME']] = UserInfoService()
+        services[ROUTE_CONFIG['USER_EXAM_TYPE_NAME']] = UserExamService()
 
     @staticmethod
     def get_service(name: str):
