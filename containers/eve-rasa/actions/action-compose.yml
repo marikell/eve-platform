@@ -1,0 +1,19 @@
+version: '3.0'
+services:
+  eve_actionserver:
+    build: .
+    container_name: eve_actionserver
+    networks:
+      - evemongo_evenetwork
+      - host
+    ports:
+      - 5055:5055
+    volumes:
+      - ./actions:/app/actions
+networks:
+  evemongo_evenetwork:
+    external: true
+  host:
+
+volumes:
+  actions:

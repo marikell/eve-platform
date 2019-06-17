@@ -75,6 +75,8 @@ class ExamJob():
 
                 req_action_listen = requests.post(url = url_action, headers = headers, data=json.dumps(action_listen))
 
+                get_log('Executed action for {} exam and user {}'.format(obj['exams']['name'], exm_act['user_id']))
+
                 #TODO REMOVE THIS LINE (MADE FOR RASA X ONLY)
                 break
 
