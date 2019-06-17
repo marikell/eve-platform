@@ -8,6 +8,6 @@ class UserExamService(GenericService):
         super().__init__(UserExam.objects)
         
     def insert(self, obj):
-        user_exam = UserExam(user_id=obj['user'].to_dbref(), exam_id=obj['exam'].to_dbref(), is_done=True)
+        user_exam = UserExam(user_id=obj['user'].to_dbref(), exam_id=obj['exam'].to_dbref())
 
         user_exam.save()

@@ -6,7 +6,6 @@ from api.models.db_model import db
 
 class UserExam(db.DynamicDocument):
     exam_id = db.ReferenceField(Exam, required=True)
-    user_id = db.ReferenceField(User, required=True)
-    is_done = db.BooleanField(required=True)
+    user_id = db.ReferenceField(User, required=True)    
 
     
