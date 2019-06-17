@@ -2,8 +2,6 @@ from flask import Blueprint, jsonify, request
 from werkzeug import Response
 import json
 from flask_api import status
-from api.services.user_service import UserService
-from api.services.person_service import PersonService
 from api.utils.response_formatter import response, response_text
 from api.services.service_handler import ServiceHandler
 from api.config.configuration import ROUTE_CONFIG
@@ -24,34 +22,14 @@ def validate_user_request(json):
     if json['confirm_password'] != json['password']:
         raise Exception("Passwords don't match. Try again")
 
-
 @app_user.route('/{}'.format(route_name), methods=['GET'])
-def index():
-    return Response('Hello {}'.format(route_name))
-
-
-@app_user.route('/{}/weeks/<id>'.format(route_name), methods=['POST'])
-def update_weeks(id):
+def get_all():
     try:
-        
-        json_obj = request.get_json()
+        users = ServiceHandler.get_service(route_name).get_all().only('_id','email','creation_date'
+        ,'user_type','person_id','is_admin')
 
-        check_if_key_exists('weeks', json_obj)
-
-        user = ServiceHandler.get_service(route_name).get(id)
-
-        if not user:
-            raise Exception('Object with id {} not found!'.format(id))
-
-        weeks_obj = {
-            'weeks':json_obj['weeks'],
-            'user': user
-        }
-
-        ServiceHandler.get_service(ROUTE_CONFIG['USER_WEEKS_TYPE_NAME']).insert(weeks_obj)
-
-        return response(status=status.HTTP_201_CREATED)
-
+        return response(users, status.HTTP_200_OK)
+                
     except Exception as e:
         return response_text(str(e), status.HTTP_400_BAD_REQUEST)
 
@@ -84,6 +62,23 @@ def insert():
 
     except Exception as e:
         return response_text(str(e), status.HTTP_400_BAD_REQUEST)
+
+@app_user.route('/{}/get-by-email'.format(route_name), methods=['POST'])
+def get_by_email():
+    try:
+        json_obj = request.get_json()
+
+        check_if_key_exists('email', json_obj)
+
+        obj = ServiceHandler.get_service(route_name).getby_email(json_obj['email'])
+
+        if not obj:
+            raise Exception('Object with email {} not found!'.format(json_obj['email']))
+
+        return response(obj.to_json(), status.HTTP_200_OK)
+      
+    except Exception as e:
+        return response(str(e), status.HTTP_400_BAD_REQUEST)
 
 @app_user.route('/{}/<id>'.format(route_name), methods=['GET'])
 def get(id):
