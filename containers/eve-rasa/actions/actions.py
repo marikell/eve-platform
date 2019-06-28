@@ -29,7 +29,7 @@ class GetAnswer(Action):
             intent = tracker.get_slot('last_intent')
         entities = tracker.latest_message['entities']
         entities_obj = [e.get('value') for e in entities]
-        response = 'Desculpe, nao consegui compreender!'
+        response = 'Desculpe, nao sei responder isso! :('
         data = {
             'entities' : entities_obj,
             'intent' : intent
@@ -40,8 +40,8 @@ class GetAnswer(Action):
         try:        
             req = requests.post(url = route_config.get_route('get_answer'),headers= headers,data=json.dumps(data))
             json_obj = req.json()
-
-            if json_obj.get('response') is not None:
+            print(json_obj, json_obj.get('response'))
+            if json_obj.get('response'):
                 response = json_obj['response']
             
             dispatcher.utter_message(response)

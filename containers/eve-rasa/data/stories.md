@@ -25,7 +25,7 @@
 * which{"question_entity": "exercicios"}
     - action_get_answer
 
-# o usuário quer responder as perguntas depois
+## o usuário quer responder as perguntas depois
 * later
   - utter_info_later
 
@@ -327,7 +327,7 @@
     - form{"name": null}
     - slot{"requested_slot": null}    
 * affirm
-    - utter_reminder    
+    - utter_reminder
 
 ## Generated Story 4282896163755816122
 * hello
@@ -507,7 +507,7 @@
 * affirm
     - utter_reminder
 
-# bot pergunta se quer um lembrete de medicamento (confirmado)
+## bot pergunta se quer um lembrete de medicamento (confirmado)
 * reminder_medicine
     - utter_ask_reminder
 * affirm
@@ -517,7 +517,7 @@
 * affirm
   - utter_reminder
 
-# bot pergunta se quer um lembrete de medicamento (cancelado)
+## bot pergunta se quer um lembrete de medicamento (cancelado)
 * reminder_medicine
     - utter_ask_reminder
 * affirm
@@ -527,13 +527,13 @@
 * deny
   - utter_cancel_reminder
 
-# bot pergunta se quer um lembrete de medicamento (cancelado)
+## bot pergunta se quer um lembrete de medicamento (cancelado)
 * reminder_medicine
     - utter_ask_reminder
 * deny
     - utter_cancel_reminder
 
-# bot pergunta se quer um lembrete de consulta (confirmado)
+## bot pergunta se quer um lembrete de consulta (confirmado)
 * reminder_appointment
     - utter_ask_reminder
 * affirm
@@ -543,7 +543,7 @@
 * affirm
   - utter_reminder
 
-# bot pergunta se quer um lembrete de consulta (cancelado)
+## bot pergunta se quer um lembrete de consulta (cancelado)
 * reminder_appointment
     - utter_ask_reminder
 * affirm
@@ -553,7 +553,7 @@
 * deny
   - utter_cancel_reminder
 
-# bot pergunta se quer um lembrete de consulta (cancelado)
+## bot pergunta se quer um lembrete de consulta (cancelado)
 * reminder_appointment
     - utter_ask_reminder
 * deny
@@ -604,6 +604,22 @@
 * did_not_exam
     - action_get_exam
     - utter_is_important_exam
+
+## bot pergunta se fez o exame e o usuário não fez
+    - utter_ask_exam  
+* deny
+    - action_get_exam
+    - utter_is_important_exam
+* ill_do_it OR affirm
+    - utter_great
+
+## bot pergunta se fez o exame e o usuário não fez
+    - utter_ask_exam  
+* did_not_exam
+    - action_get_exam
+    - utter_is_important_exam
+* ill_do_it OR affirm
+    - utter_great
 
 ## bot pergunta se fez o exame, o usuário fez mas quer saber o motivo da pergunta
     - utter_ask_exam  
@@ -732,11 +748,11 @@
 * deny
     - utter_cancel_reminder
 
-# usuario não tem duvidas
+## usuario não tem duvidas
 * no_question
     - utter_ask_me_later
 
-# usuario tem duvidas
+## usuario tem duvidas
 * have_question
     - utter_ask
 
