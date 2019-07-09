@@ -17,7 +17,6 @@ actions:
   - utter_ask_isbot
   - utter_congrats
   - utter_first_step
-  - utter_ask_pregnancy_weeks
   - utter_ask_is_pregnant
   - utter_ask_is_trying
   - utter_ask_planned_pregnancy
@@ -25,7 +24,6 @@ actions:
   - utter_ask_first_pregnancy
   - utter_ask_pre_natal
   - utter_info_later
-  - utter_wrong_pregnancy_weeks
   - utter_pre_natal_sus
   - utter_ask_is_planning
   - utter_planning_pregnancy
@@ -70,9 +68,16 @@ actions:
   - utter_agree
   - utter_ask
   - utter_ask_me_later
+  - utter_ask_first_ultrasound
+  - utter_ask_first_ultrasound_date
+  - utter_baby_not_moving
+  - utter_which_medicine
+  - utter_ask_health_questions
 entities: 
+  - last_menstruation
+  - first_ultrasound
+  - first_ultrasound_date
   - question_entity
-  - pregnancy_weeks
   - time
   - hour
   - med_frequency
@@ -89,7 +94,9 @@ forms:
   - form_initial
   - form_medicine
   - form_appointment
+  - form_health
 intents:
+  - ill_do_it
   - no_question
   - have_question
   - i_know_importance
@@ -147,6 +154,9 @@ intents:
   - stop_asking
   - ask_whatspossible:
       triggers: action_whats_possible
+  - baby_not_moving
+  - which_medicine
+  - welcome
 slots:
   first_pregnancy:
     type: unfeaturized
@@ -156,7 +166,11 @@ slots:
     type: unfeaturized
   pre_natal:
     type: unfeaturized
-  pregnancy_weeks:
+  last_menstruation:
+    type: unfeaturized
+  first_ultrasound:
+    type: unfeaturized
+  first_ultrasound_date:
     type: unfeaturized
   is_planning:
     type: unfeaturized
@@ -185,6 +199,26 @@ slots:
   app_date:
     type: unfeaturized
   app_doc_name:
+    type: unfeaturized
+  regular_medicine:
+    type: unfeaturized
+  regular_medicine_name:
+    type: unfeaturized
+  hypothyroidism:
+    type: unfeaturized
+  hyperthyroidism:
+    type: unfeaturized
+  diabetes:
+    type: unfeaturized
+  drug_use:
+    type: unfeaturized
+  autoimmune_disease:
+    type: unfeaturized
+  asthma:
+    type: unfeaturized
+  seropositive:
+    type: unfeaturized
+  high_pressure:
     type: unfeaturized
   requested_slot:
     type: unfeaturized    
@@ -230,8 +264,17 @@ templates:
       payload: '/enter_data{"pre_natal":"True"}'
     - title: "Não"
       payload: '/enter_data{"pre_natal":"False"}'
-  utter_ask_pregnancy_weeks:
-  - text: "Você está de quantas semanas?"
+  utter_ask_last_menstruation:
+  - text: "Qual a data da sua última menstruação?"
+  utter_ask_first_ultrasound:
+  - text: "Você já fez o seu primeiro ultrassom?"
+    buttons:
+    - title: "Sim"
+      payload: '/enter_data{"first_ultrasound":"True"}'
+    - title: "Não"
+      payload: '/enter_data{"first_ultrasound":"False"}'
+  utter_ask_first_ultrasound_date:
+  - text: "Qual a data do seu primeiro ultrassom?"
   utter_ask_is_trying:
   - text: "Está tentando engravidar?"
     buttons:
@@ -265,7 +308,7 @@ templates:
   utter_hello:
   - text: "Olá! 😄"
   utter_help:
-  - text: "Posso te ajudar em alguma outra coisa?"
+  - text: "Bom, no que eu posso te ajudar? Você tem alguma dúvida?"
   utter_info_later:
   - text: "Tudo bem, podemos fazer isso depois se quiser 😅"
   utter_introduce:
@@ -274,8 +317,6 @@ templates:
   - text: "Obrigada 😊"
   utter_welcome:
   - text: "Imagina, qualquer coisa só falar!"
-  utter_wrong_pregnancy_weeks:
-  - text: "Por favor, me informe um número de semanas válido 😬"
   utter_pre_natal_sus:
   - text: "Procure a rede pública mais próxima da sua casa e peça o atendimento 🏥"
   utter_ask_is_planning:
@@ -366,4 +407,100 @@ O planejamento tem o objetivo de identificar fatores de risco como diabetes e hi
   - text: "Qual a dúvida? Prometo tentar responder 😅"
   utter_ask_me_later:
   - text: "Bom, se surgir alguma dúvida é só me perguntar! 😉"
-  
+  utter_baby_not_moving:
+  - text: "Em geral, por volta do quinto mês de gestação, você já consegue sentir os primeiros 
+  movimentos do bebê na barriga. A partir do momento em que você começar a notar os movimentos, 
+  é importante ficar atenta para reparar se ele ficar muito tempo quieto.
+  Se passar mais de 6 horas e o bebê não se mexer, principalmente, depois das refeições, isso pode
+  ser um alerta. Se notar que seu bebê não está se mexendo na barriga durante alguns dias, procure
+  o seu obstetra e relate o que está acontecendo."
+  utter_which_medicine:
+  - text: "Os remédios só devem ser utilizados quando necessário e sob orientação a orientação do seu médico, por isso, se achar necessidade de tomar algum medicamento, consulte seu médico primeiro."
+  utter_ask_regular_medicine:
+  - text: "Você toma algum remédio regularmente?"
+    buttons:
+    - title: "Sim"
+      payload: '/enter_data{"regular_medicine":"True"}'
+    - title: "Não"
+      payload: '/enter_data{"regular_medicine":"False"}'
+  utter_wrong_regular_medicine:
+  - text: "Por favor, me fale se você toma algum remédio regularmente 😬 Quanto mais informações, mais eu consigo te ajudar 😅"
+  utter_ask_regular_medicine_name:
+  - text: "Qual o nome do remédio?"
+  utter_wrong_regular_medicine_name:
+  - text: "Por favor, me fale o nome do remédio 😬 Quanto mais informações, mais eu consigo te ajudar 😅"
+  utter_ask_hypothyroidism:
+  - text: "Você tem hipotireoidismo?"
+    buttons:
+    - title: "Sim"
+      payload: '/enter_data{"hypothyroidism":"True"}'
+    - title: "Não"
+      payload: '/enter_data{"hypothyroidism":"False"}'
+  utter_wrong_hypothyroidism:
+  - text: "Por favor, me fale se você tem hipotireoidismo 😬 Quanto mais informações, mais eu consigo te ajudar 😅"
+  utter_ask_hyperthyroidism:
+  - text: "Você tem hipertireoidismo?"
+    buttons:
+    - title: "Sim"
+      payload: '/enter_data{"hyperthyroidism":"True"}'
+    - title: "Não"
+      payload: '/enter_data{"hyperthyroidism":"False"}'
+  utter_wrong_hyperthyroidism:
+  - text: "Por favor, me fale se você tem hipertireoidismo 😬 Quanto mais informações, mais eu consigo te ajudar 😅"
+  utter_ask_diabetes:
+  - text: "Você é diabética?"
+    buttons:
+    - title: "Sim"
+      payload: '/enter_data{"diabetes":"True"}'
+    - title: "Não"
+      payload: '/enter_data{"diabetes":"False"}'
+  utter_wrong_diabetes:
+  - text: "Por favor, me fale se você tem diabetes 😬 Quanto mais informações, mais eu consigo te ajudar 😅"
+  utter_ask_drug_use:
+  - text: "Já usou ou faz uso de drogas?"
+    buttons:
+    - title: "Sim"
+      payload: '/enter_data{"drug_use":"True"}'
+    - title: "Não"
+      payload: '/enter_data{"drug_use":"False"}'
+  utter_wrong_drug_use:
+  - text: "Por favor, me fale se você já usou ou usa drogas 😬 Quanto mais informações, mais eu consigo te ajudar 😅"
+  utter_ask_autoimmune_disease:
+  - text: "Possui alguma doença autoimune?"
+    buttons:
+    - title: "Sim"
+      payload: '/enter_data{"autoimmune_disease":"True"}'
+    - title: "Não"
+      payload: '/enter_data{"autoimmune_disease":"False"}'
+  utter_wrong_autoimmune_disease:
+  - text: "Por favor, me fale se você possui alguma doença autoimune 😬 Quanto mais informações, mais eu consigo te ajudar 😅"
+  utter_ask_asthma:
+  - text: "Você tem asma?"
+    buttons:
+    - title: "Sim"
+      payload: '/enter_data{"asthma":"True"}'
+    - title: "Não"
+      payload: '/enter_data{"asthma":"False"}'
+  utter_wrong_asthma:
+  - text: "Por favor, me fale se você tem asma 😬 Quanto mais informações, mais eu consigo te ajudar 😅"
+  utter_ask_seropositive:
+  - text: "Você é soropositiva?"
+    buttons:
+    - title: "Sim"
+      payload: '/enter_data{"seropositive":"True"}'
+    - title: "Não"
+      payload: '/enter_data{"seropositive":"False"}'
+  utter_wrong_seropositive:
+  - text: "Por favor, me fale se você é soropositiva 😬 Quanto mais informações, mais eu consigo te ajudar 😅"
+  utter_ask_high_pressure:
+  - text: "Tem pressão alta?"
+    buttons:
+    - title: "Sim"
+      payload: '/enter_data{"high_pressure":"True"}'
+    - title: "Não"
+      payload: '/enter_data{"high_pressure":"False"}'
+  utter_wrong_high_pressure:
+  - text: "Por favor, me fale se você tem pressão alta 😬 Quanto mais informações, mais eu consigo te ajudar 😅"
+  utter_ask_health_questions:
+  - text: "Posso te fazer algumas perguntas? Vai ser rapidinho 😅"
+    

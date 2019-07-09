@@ -5,7 +5,6 @@ from api.blueprints.entity_intent_answer_blueprint import  app_entity_intent_ans
 from api.blueprints.exam_blueprint import app_exam
 from api.blueprints.user_blueprint import app_user
 from api.blueprints.answer_blueprint import app_answer
-from api.blueprints.user_pregnancy_weeks_blueprint import app_usr_pregnancy_weeks
 from api.blueprints.rasa_blueprint import app_rasa
 from api.blueprints.fup_blueprint import app_fup
 from api.blueprints.user_exam_blueprint import app_user_exam
@@ -31,7 +30,6 @@ def register_blueprints(app):
     app.register_blueprint(app_entity_intent_answer)
     app.register_blueprint(app_user)
     app.register_blueprint(app_exam)
-    app.register_blueprint(app_usr_pregnancy_weeks)
     app.register_blueprint(app_fup)
     app.register_blueprint(app_rasa)
     app.register_blueprint(app_user_exam)

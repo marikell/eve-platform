@@ -17,6 +17,8 @@ class UserInfoService(GenericService):
         is_trying = (obj['is_trying'])
         is_planned_pregnancy = (obj['is_planned_pregnancy'])
         is_doing_pre_natal = (obj['is_doing_pre_natal'])
+        last_menstruation_date = (obj['last_menstruation_date'])
+        first_ultrasound_date = (obj['first_ultrasound_date'])
         
         user_info = UserInfo(is_first_pregnancy=is_first_pregnancy, 
                              has_children=has_children,
@@ -26,6 +28,8 @@ class UserInfoService(GenericService):
                              is_trying=is_trying,
                              is_planned_pregnancy=is_planned_pregnancy,
                              is_doing_pre_natal=is_doing_pre_natal,
+                             last_menstruation_date=last_menstruation_date,
+                             first_ultrasound_date=first_ultrasound_date,
                              user_id=obj['user'].to_dbref())        
         
         user_info.save()
@@ -48,5 +52,7 @@ class UserInfoService(GenericService):
         user_info.is_trying = (obj['is_trying'])
         user_info.is_planned_pregnancy = (obj['is_planned_pregnancy'])
         user_info.is_doing_pre_natal = (obj['is_doing_pre_natal'])
+        user_info.last_menstruation_date = (obj['last_menstruation_date'])
+        user_info.first_ultrasound_date = (obj['first_ultrasound_date'])
 
         user_info.save()

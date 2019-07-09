@@ -11,7 +11,7 @@ route_name = ROUTE_CONFIG['EXAM_TYPE_NAME']
 app_exam = Blueprint(route_name,__name__, url_prefix='/api')
 
 def validate_followup_request(json):
-    keys = ['weeks_start','name']
+    keys = ['trimester','name']
     for k in keys:         
         check_if_key_exists(k, json)
         check_empty_string(k, json)
@@ -30,9 +30,7 @@ def get_by_name():
 def get_all():
     try:
         exams = ServiceHandler.get_service(route_name).get_all()
-
         return response(exams, status.HTTP_200_OK)
-                
     except Exception as e:
         return response_text(str(e), status.HTTP_400_BAD_REQUEST)
 
@@ -40,20 +38,14 @@ def get_all():
 def insert():
     try:
         json_obj = request.get_json()
-
         validate_followup_request(json_obj)
-
         obj = {
-            "weeks_start": json_obj['weeks_start'],
-            "weeks_end": (None if 'weeks_end' not in json_obj else json_obj['weeks_end']),
+            "trimester": json_obj['trimester'],
             "description": ('' if 'description' not in json_obj else json_obj['description']),
             "name": json_obj['name']
         }
-
-        ServiceHandler.get_service(route_name).insert(obj)    
-        
+        ServiceHandler.get_service(route_name).insert(obj)
         return response(status=status.HTTP_201_CREATED)
-
     except Exception as e:
         return response_text(str(e), status.HTTP_400_BAD_REQUEST)
 

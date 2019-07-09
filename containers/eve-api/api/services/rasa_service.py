@@ -11,6 +11,8 @@ class RasaService():
                              is_trying=obj['is_trying'],
                              is_planned_pregnancy=obj['is_planned_pregnancy'],
                              is_doing_pre_natal=obj['is_doing_pre_natal'],
+                             last_menstruation_date=obj['last_menstruation_date'],
+                             first_ultrasound_date=obj['first_ultrasound_date'],
                              user_id=obj['user'].to_dbref())        
         
         user_info.save()

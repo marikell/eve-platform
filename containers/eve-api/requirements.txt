@@ -7,3 +7,4 @@ pytz
 pytest
 pytest-cov
 flask-mongoengine
+python-dateutil

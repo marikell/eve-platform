@@ -7,9 +7,8 @@ class UserService(GenericService):
         super().__init__(User.objects)        
 
     def insert(self, obj):        
-        user = User(email=obj['email'], 
-        password=obj['password'],person_id=obj['person'].to_dbref(), 
-        is_admin=obj['is_admin'], user_type=obj['user_type'])        
+        user = User(name=obj['name'], date_birth=obj['date_birth'], email=obj['email'], 
+        password=obj['password'], is_admin=obj['is_admin'], user_type=obj['user_type'])
 
         if User.objects(email=obj['email']):
             raise Exception('This e-mail is already registered in db.')

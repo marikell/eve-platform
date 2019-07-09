@@ -15,6 +15,8 @@
   - utter_ask_me_anything
 * which{"question_entity": "exercicios"}
     - action_get_answer
+* which_medicine
+    - utter_which_medicine
 
 ## bot inicia a conversa e o usuário quer responder as perguntas depois
 * get_started
@@ -24,6 +26,8 @@
   - utter_ask_me_anything
 * which{"question_entity": "exercicios"}
     - action_get_answer
+* which_medicine
+    - utter_which_medicine
 
 ## o usuário quer responder as perguntas depois
 * later
@@ -778,42 +782,89 @@
 * have_question
   - utter_ask
 
-## Generated Story 4935868663189737503
-* hello
-    - action_greet_user
-* affirm
-    - form_initial
-    - form{"name": "form_initial"}
-    - slot{"requested_slot": "is_pregnant"}
-* form: enter_data{"is_pregnant": "True"}
-    - slot{"is_pregnant": "True"}
-    - form: form_initial
-    - slot{"is_pregnant": "True"}
-    - slot{"requested_slot": "pregnancy_weeks"}
-* form: enter_data{"pregnancy_weeks": "6"}
-    - slot{"pregnancy_weeks": "6"}
-    - form: form_initial
-    - slot{"pregnancy_weeks": "6"}
-    - slot{"requested_slot": "planned_pregnancy"}
-* form: enter_data{"planned_pregnancy": "False"}
-    - slot{"planned_pregnancy": "False"}
-    - form: form_initial
-    - slot{"planned_pregnancy": "False"}
-    - slot{"requested_slot": "first_pregnancy"}
-* form: enter_data{"first_pregnancy": "True"}
-    - slot{"first_pregnancy": "True"}
-    - form: form_initial
-    - slot{"first_pregnancy": "True"}
-    - slot{"requested_slot": "health_plan"}
-* form: enter_data{"health_plan": "False"}
-    - slot{"health_plan": "False"}
-    - form: form_initial
-    - slot{"health_plan": "False"}
-    - slot{"requested_slot": "pre_natal"}
-* form: enter_data{"pre_natal": "False"}
-    - slot{"pre_natal": "False"}
-    - form: form_initial
-    - slot{"pre_natal": "False"}
-    - form{"name": null}
-    - slot{"requested_slot": null}
+## baby_not_moving
+* baby_not_moving
+    - utter_baby_not_moving
 
+## form_health 1
+    - utter_ask_health_questions
+* affirm
+    - form_health
+    - form{"name": "form_health"}
+    - form{"name": null}
+
+## form_health 2
+    - utter_ask_health_questions
+* affirm
+    - form_health
+    - form{"name": "form_health"}
+    - form{"name": null}
+* have_question
+  - utter_ask
+
+## unhappy path: form_health
+    - utter_ask_health_questions
+* affirm
+  - form_health
+  - form{"name": "form_health"}
+* what_is{"question_entity":"loquio"}
+  - action_get_answer
+  - form_health
+  - form{"name": null}
+
+## welcome
+* welcome
+    - utter_great
+
+## Story from conversation with me on July 9th 2019
+    - utter_ask_health_questions
+* affirm
+    - form_health
+    - slot{"requested_slot":"regular_medicine"}
+* enter_data{"regular_medicine":"False"}
+    - slot{"regular_medicine":"False"}
+    - form_health
+    - slot{"regular_medicine":"False"}
+    - slot{"requested_slot":"hypothyroidism"}
+* enter_data{"hypothyroidism":"False"}
+    - slot{"hypothyroidism":"False"}
+    - form_health
+    - slot{"hypothyroidism":"False"}
+    - slot{"requested_slot":"hyperthyroidism"}
+* enter_data{"hyperthyroidism":"False"}
+    - slot{"hyperthyroidism":"False"}
+    - form_health
+    - slot{"hyperthyroidism":"False"}
+    - slot{"requested_slot":"diabetes"}
+* enter_data{"diabetes":"False"}
+    - slot{"diabetes":"False"}
+    - form_health
+    - slot{"diabetes":"False"}
+    - slot{"requested_slot":"drug_use"}
+* enter_data{"drug_use":"False"}
+    - slot{"drug_use":"False"}
+    - form_health
+    - slot{"drug_use":"False"}
+    - slot{"requested_slot":"autoimmune_disease"}
+* enter_data{"autoimmune_disease":"False"}
+    - slot{"autoimmune_disease":"False"}
+    - form_health
+    - slot{"autoimmune_disease":"False"}
+    - slot{"requested_slot":"asthma"}
+* enter_data{"asthma":"False"}
+    - slot{"asthma":"False"}
+    - form_health
+    - slot{"asthma":"False"}
+    - slot{"requested_slot":"seropositive"}
+* enter_data{"seropositive":"False"}
+    - slot{"seropositive":"False"}
+    - form_health
+    - slot{"seropositive":"False"}
+    - slot{"requested_slot":"high_pressure"}
+* enter_data{"high_pressure":"False"}
+    - slot{"high_pressure":"False"}
+    - form_health
+    - slot{"high_pressure":"False"}
+    - slot{"requested_slot":null}
+* welcome
+    - utter_great

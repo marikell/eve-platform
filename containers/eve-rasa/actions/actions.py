@@ -13,9 +13,9 @@ route_config = RouteConfig('http://localhost:5001')
 route_config.register_route('get_answer','/action-answer')
 route_config.register_route('send_slots','/rasa/send-slots')
 route_config.register_route('get_exam_by_name','/exam/get-by-name')
-route_config.register_route('insert_user_exam','/user-exam')
 route_config.register_route('get_user_by_email','/user/get-by-email')
 route_config.register_route('send_slot_user_exam','/rasa/send-slot-user-exam')
+route_config.register_route('send_health_slots','/rasa/send-health-slots')
 
 class GetAnswer(Action):
     def name(self) -> Text:
@@ -29,7 +29,7 @@ class GetAnswer(Action):
             intent = tracker.get_slot('last_intent')
         entities = tracker.latest_message['entities']
         entities_obj = [e.get('value') for e in entities]
-        response = 'Desculpe, nao sei responder isso! :('
+        response = 'Não vou te conseguir ajudar nessa, mas pergunte ao seu médico, ele saberá te responder ;)'
         data = {
             'entities' : entities_obj,
             'intent' : intent
@@ -56,7 +56,7 @@ class ActionGreetUser(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
+        
         intent = tracker.latest_message["intent"].get("name")
         # verificar se o usuário já existe
         if intent == "hello" or intent == "get_started":
@@ -75,14 +75,20 @@ class InitialForm(FormAction):
         
     @staticmethod
     def required_slots(tracker: Tracker):
-        if(tracker.get_slot('is_pregnant') == "True"):
+        if(tracker.get_slot('pre_natal') == "False"):
+            return []
+        elif(tracker.get_slot('first_ultrasound') == "False"):
+            return []
+        elif(tracker.get_slot('is_pregnant') == "True"):
             return [
-                "pregnancy_weeks",
-                "planned_pregnancy",
+                "last_menstruation",
                 "first_pregnancy",
+                "planned_pregnancy",
                 "health_plan",
-                "pre_natal"
-            ]
+                "pre_natal",
+                "first_ultrasound",
+                "first_ultrasound_date"
+            ]        
         elif(tracker.get_slot('is_trying') == "True"):
             return [
                 "is_planning",
@@ -95,35 +101,27 @@ class InitialForm(FormAction):
             return [
                 "is_pregnant",
                 "is_trying",
-                "pregnancy_weeks",
+                "last_menstruation",
                 "planned_pregnancy",
                 "first_pregnancy",
                 "health_plan",
                 "pre_natal",
                 "is_planning",
                 "has_children",
-                "health_plan"
+                "health_plan",
+                "first_ultrasound",
+                "first_ultrasound_date"
             ]
-
 
     def slot_mappings(self):
         return {
-            "pregnancy_weeks": [
-                self.from_entity(entity="pregnancy_weeks"),
-                self.from_text(intent="enter_data")
+            "last_menstruation": [
+                self.from_entity(entity="time")
+            ],
+            "first_ultrasound_date": [
+                self.from_entity(entity="time")
             ]
         }
-
-    def validate_pregnancy_weeks(self,
-                            value: Text,
-                            dispatcher: CollectingDispatcher,
-                            tracker: Tracker,
-                            domain: Dict[Text, Any]) -> Optional[Text]:        
-        if self.is_int(value) and int(value) >= 1 and int(value) <= 40:            
-            return {'pregnancy_weeks': value}
-        else:
-            # dispatcher.utter_template('utter_wrong_pregnancy_weeks', tracker)
-            return None
 
     @staticmethod
     def is_int(string: Text) -> bool:
@@ -138,7 +136,6 @@ class InitialForm(FormAction):
         return string == 'True'
 
     def submit(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> List[Dict]:
-
         first_pregnancy = self.convert_to_bool(tracker.get_slot("first_pregnancy"))
         has_children = self.convert_to_bool(tracker.get_slot("has_children"))
         health_plan = self.convert_to_bool(tracker.get_slot("health_plan"))
@@ -147,7 +144,8 @@ class InitialForm(FormAction):
         pre_natal = self.convert_to_bool(tracker.get_slot("pre_natal"))
         planned_pregnancy = self.convert_to_bool(tracker.get_slot("planned_pregnancy"))
         is_trying = self.convert_to_bool(tracker.get_slot("is_trying"))
-        pregnancy_weeks = tracker.get_slot("pregnancy_weeks")
+        last_menstruation = tracker.get_slot("last_menstruation")
+        first_ultrasound_date = tracker.get_slot("first_ultrasound_date")
 
         data = {
             "is_first_pregnancy" : first_pregnancy,
@@ -158,9 +156,10 @@ class InitialForm(FormAction):
             "is_doing_pre_natal" : pre_natal,
             "is_planned_pregnancy" : planned_pregnancy,
             "is_trying" : is_trying,
-            "pregnancy_weeks" : pregnancy_weeks
+            "last_menstruation_date" : last_menstruation,
+            "first_ultrasound_date" : first_ultrasound_date
         }
-       
+        print(data)
         headers = {
             'Content-Type':'application/json'
         }
@@ -176,7 +175,6 @@ class InitialForm(FormAction):
             req_email = requests.post(url = '{}'.format(route_config.get_route('get_user_by_email')),headers = headers, data=json.dumps(email_obj))
 
             if req_email.json()['status'] == 200:
-                print(data)
                 user_id = json.loads(req_email.json()['response'])['_id']['$oid']
                 req = requests.post(url = '{}{}'.format(route_config.get_route('send_slots'),'/{}'.format(user_id)),headers= headers,data=json.dumps(data))
         except Exception as e:
@@ -425,12 +423,103 @@ class ActionSaveExam(Action):
                 if req_email.json()['status'] == 200:
                     user_id = json.loads(req_email.json()['response'])['_id']['$oid']
                     data = {
-                        "exam_id" : exam_id,
-                        "user_id" : user_id
+                        "exam_id" : exam_id
                     }
-                    req = requests.post(url = route_config.get_route('insert_user_exam'),headers= headers,data=json.dumps(data))
+                    req = requests.post(url = '{}{}'.format(route_config.get_route('send_slot_user_exam'),'/{}'.format(user_id)),headers= headers,data=json.dumps(data))
             except Exception as e:
                 #this will log in the future
                 print(str(e))
         dispatcher.utter_template("utter_doing_right_exam", tracker)
         return [UserUtteranceReverted()]
+
+class HealthForm(FormAction):
+    def name(self) -> Text:
+        return "form_health"
+        
+    @staticmethod
+    def required_slots(tracker: Tracker):
+        if(tracker.get_slot('regular_medicine') == "False"):
+            return [
+                "hypothyroidism",
+                "hyperthyroidism",
+                "diabetes",
+                "drug_use",
+                "autoimmune_disease",
+                "asthma",
+                "seropositive",
+                "high_pressure"
+            ]
+        else:
+            return [
+                "regular_medicine",
+                "regular_medicine_name",
+                "hypothyroidism",
+                "hyperthyroidism",
+                "diabetes",
+                "drug_use",
+                "autoimmune_disease",
+                "asthma",
+                "seropositive",
+                "high_pressure"
+            ]
+
+    def slot_mappings(self):
+            return {
+                "regular_medicine_name": [
+                    self.from_entity(entity="med_name"),
+                    self.from_text(intent="enter_data")
+                ],                
+            }
+    @staticmethod
+    def convert_to_bool(string: str) -> bool:
+        return string == 'True'
+
+    def submit(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> List[Dict]:
+        regular_medicine = self.convert_to_bool(tracker.get_slot("regular_medicine"))
+        regular_medicine_name = tracker.get_slot("regular_medicine_name")
+        hypothyroidism = self.convert_to_bool(tracker.get_slot("hypothyroidism"))
+        hyperthyroidism = self.convert_to_bool(tracker.get_slot("hyperthyroidism"))
+        diabetes = self.convert_to_bool(tracker.get_slot("diabetes"))
+        drug_use = self.convert_to_bool(tracker.get_slot("drug_use"))
+        autoimmune_disease = self.convert_to_bool(tracker.get_slot("autoimmune_disease"))
+        asthma = self.convert_to_bool(tracker.get_slot("asthma"))
+        seropositive = self.convert_to_bool(tracker.get_slot("seropositive"))
+        high_pressure = self.convert_to_bool(tracker.get_slot("high_pressure"))
+
+        data = {
+            "takes_regular_medicine" : regular_medicine,
+            "regular_medicine_name" : regular_medicine_name,
+            "has_hypothyroidism" : hypothyroidism,
+            "has_hyperthyroidism" : hyperthyroidism,
+            "has_diabetes" : diabetes,
+            "drug_use" : drug_use,
+            "has_autoimmune_disease" : autoimmune_disease,
+            "has_asthma" : asthma,
+            "is_seropositive" : seropositive,
+            "has_high_pressure" : high_pressure
+        }
+        
+        headers = {
+            'Content-Type':'application/json'
+        }
+        try:        
+            email_obj = {                
+                'email' : 'me'
+            }
+                    
+            headers = {
+                'Content-Type' : 'application/json'
+            }
+                    
+            req_email = requests.post(url = '{}'.format(route_config.get_route('get_user_by_email')),headers = headers, data=json.dumps(email_obj))
+
+            if req_email.json()['status'] == 200:
+                user_id = json.loads(req_email.json()['response'])['_id']['$oid']
+                req = requests.post(url = '{}{}'.format(route_config.get_route('send_health_slots'),'/{}'.format(user_id)),headers= headers,data=json.dumps(data))
+        except Exception as e:
+            #this will log in the future
+            print(str(e))
+                
+        dispatcher.utter_template('utter_thank_you', tracker)
+        dispatcher.utter_template('utter_ask_me_anything', tracker)
+        return []

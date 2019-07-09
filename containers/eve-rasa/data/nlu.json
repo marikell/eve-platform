@@ -1298,30 +1298,6 @@
         ]
       },
       {
-        "text": "Olá posso tomar cafeina",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 23,
-            "entity": "question_entity",
-            "start": 16,
-            "value": "café"
-          }
-        ]
-      },
-      {
-        "text": "Ei eu posso tomar cafeina?",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 25,
-            "entity": "question_entity",
-            "start": 18,
-            "value": "café"
-          }
-        ]
-      },
-      {
         "text": "Ei posso tomar cafeína?",
         "intent": "can",
         "entities": [
@@ -1390,18 +1366,6 @@
             "entity": "question_entity",
             "start": 15,
             "value": "sol"
-          }
-        ]
-      },
-      {
-        "text": "E ai posso tomar cafeina",
-        "intent": "can",
-        "entities": [
-          {
-            "end": 24,
-            "entity": "question_entity",
-            "start": 17,
-            "value": "café"
           }
         ]
       },
@@ -93347,78 +93311,6 @@
         "entities": []
       },
       {
-        "text": "10 semanas",
-        "intent": "enter_data",
-        "entities": [
-          {
-            "end": 2,
-            "entity": "pregnancy_weeks",
-            "start": 0,
-            "value": "10"
-          }
-        ]
-      },
-      {
-        "text": "12 semanas",
-        "intent": "enter_data",
-        "entities": [
-          {
-            "end": 2,
-            "entity": "pregnancy_weeks",
-            "start": 0,
-            "value": "12"
-          }
-        ]
-      },
-      {
-        "text": "8 semanas",
-        "intent": "enter_data",
-        "entities": [
-          {
-            "end": 1,
-            "entity": "pregnancy_weeks",
-            "start": 0,
-            "value": "8"
-          }
-        ]
-      },
-      {
-        "text": "estou de 20 semanas",
-        "intent": "enter_data",
-        "entities": [
-          {
-            "end": 11,
-            "entity": "pregnancy_weeks",
-            "start": 9,
-            "value": "20"
-          }
-        ]
-      },
-      {
-        "text": "estou de 10 semanas",
-        "intent": "enter_data",
-        "entities": [
-          {
-            "end": 11,
-            "entity": "pregnancy_weeks",
-            "start": 9,
-            "value": "10"
-          }
-        ]
-      },
-      {
-        "text": "10ª",
-        "intent": "enter_data",
-        "entities": [
-          {
-            "end": 2,
-            "entity": "pregnancy_weeks",
-            "start": 0,
-            "value": "10"
-          }
-        ]
-      },
-      {
         "text": "bem tbm",
         "intent": "greeting_answer",
         "entities": []
@@ -93499,20 +93391,6 @@
         "entities": []
       },
       {
-        "text": "10 semanas",
-        "intent": "enter_data",
-        "entities": [
-          {
-            "start": 0,
-            "end": 2,
-            "value": "10",
-            "entity": "pregnancy_weeks",
-            "confidence": 0.6476458679,
-            "extractor": "CRFEntityExtractor"
-          }
-        ]
-      },
-      {
         "text": "Oii",
         "intent": "hello",
         "entities": []
@@ -93561,18 +93439,6 @@
         "text": "Sim",
         "intent": "affirm",
         "entities": []
-      },
-      {
-        "text": "12ª",
-        "intent": "enter_data",
-        "entities": [
-          {
-            "start": 0,
-            "end": 2,
-            "value": "12",
-            "entity": "pregnancy_weeks"
-          }
-        ]
       },
       {
         "text": "1",
@@ -95514,18 +95380,6 @@
         ]
       },
       {
-        "text": "6 semanas",
-        "intent": "enter_data",
-        "entities": [
-          {
-            "start": 0,
-            "end": 1,
-            "value": "6",
-            "entity": "pregnancy_weeks"
-          }
-        ]
-      },
-      {
         "text": "/enter_data{\"planned_pregnancy\":\"False\"}",
         "intent": "enter_data",
         "entities": [
@@ -95636,6 +95490,296 @@
       {
         "text": "ok, vou fazer",
         "intent": "ill_do_it",
+        "entities": []
+      },
+      {
+        "text": "posso fazer academia",
+        "intent": "can",
+        "entities": [
+          {
+            "start": 12,
+            "end": 20,
+            "value": "exercicios",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "posso treinar?",
+        "intent": "can",
+        "entities": [
+          {
+            "start": 6,
+            "end": 13,
+            "value": "exercicios",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "posso fazer algum treino?",
+        "intent": "can",
+        "entities": [
+          {
+            "start": 18,
+            "end": 24,
+            "value": "exercicios",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "posso transar?",
+        "intent": "can",
+        "entities": [
+          {
+            "start": 6,
+            "end": 13,
+            "value": "sexo",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "posso ter relações sexuais?",
+        "intent": "can",
+        "entities": [
+          {
+            "start": 10,
+            "end": 26,
+            "value": "sexo",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "posso beber café?",
+        "intent": "can",
+        "entities": [
+          {
+            "start": 12,
+            "end": 16,
+            "value": "café",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "quais exames eu devo fazer?",
+        "intent": "which",
+        "entities": [
+          {
+            "start": 6,
+            "end": 12,
+            "value": "exames",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "quais exames eu preciso fazer?",
+        "intent": "which",
+        "entities": [
+          {
+            "start": 6,
+            "end": 12,
+            "value": "exames",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "posso fazer sexo?",
+        "intent": "can",
+        "entities": [
+          {
+            "start": 12,
+            "end": 16,
+            "value": "sexo",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "posso viajar?",
+        "intent": "can",
+        "entities": [
+          {
+            "start": 6,
+            "end": 12,
+            "value": "viajar",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "posso comer comida japonesa?",
+        "intent": "can",
+        "entities": [
+          {
+            "start": 12,
+            "end": 27,
+            "value": "japonesa",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "posso comer sushi?",
+        "intent": "can",
+        "entities": [
+          {
+            "start": 12,
+            "end": 17,
+            "value": "japonesa",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "posso comer temaki?",
+        "intent": "can",
+        "entities": [
+          {
+            "start": 12,
+            "end": 18,
+            "value": "japonesa",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "faz mais de duas que meu bebe nao mexe",
+        "intent": "baby_not_moving",
+        "entities": []
+      },
+      {
+        "text": "meu bebe nao esta se mexendo",
+        "intent": "baby_not_moving",
+        "entities": []
+      },
+      {
+        "text": "meu bebe nao esta mais mexendo",
+        "intent": "baby_not_moving",
+        "entities": []
+      },
+      {
+        "text": "meu bebe parou de mexer",
+        "intent": "baby_not_moving",
+        "entities": []
+      },
+      {
+        "text": "faz tempo que meu bebe nao se mexe",
+        "intent": "baby_not_moving",
+        "entities": []
+      },
+      {
+        "text": "posso tomar remedio?",
+        "intent": "can",
+        "entities": [
+          {
+            "start": 12,
+            "end": 19,
+            "value": "remedios",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "qual remédio eu posso tomar para cólica?",
+        "intent": "which_medicine",
+        "entities": []
+      },
+      {
+        "text": "qual remédio eu posso tomar para dor de cabeça?",
+        "intent": "which_medicine",
+        "entities": []
+      },
+      {
+        "text": "que remedio eu posso tomar pra dor de cabeça?",
+        "intent": "which_medicine",
+        "entities": []
+      },
+      {
+        "text": "qual medicamento eu posso tomar pra colica?",
+        "intent": "which_medicine",
+        "entities": []
+      },
+      {
+        "text": "o que eu posso tomar para dor de cabeça?",
+        "intent": "which_medicine",
+        "entities": []
+      },
+      {
+        "text": "posso tomar algum remedio para dor de cabeça?",
+        "intent": "which_medicine",
+        "entities": []
+      },
+      {
+        "text": "posso tomar algum remédio para ansia?",
+        "intent": "which_medicine",
+        "entities": []
+      },
+      {
+        "text": "q remedio eu posso tomar para enjoo?",
+        "intent": "which_medicine",
+        "entities": []
+      },
+      {
+        "text": "posso tomar um remédio para dor de cabeça?",
+        "intent": "which_medicine",
+        "entities": []
+      },
+      {
+        "text": "posso tomar um remedio para colica?",
+        "intent": "which_medicine",
+        "entities": []
+      },
+      {
+        "text": "posso tomar remedio?",
+        "intent": "can",
+        "entities": [
+          {
+            "start": 12,
+            "end": 19,
+            "value": "remedios",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "de nada",
+        "intent": "welcome",
+        "entities": []
+      },
+      {
+        "text": "por nada",
+        "intent": "welcome",
+        "entities": []
+      },
+      {
+        "text": "não foi nada",
+        "intent": "welcome",
+        "entities": []
+      },
+      {
+        "text": "imagina",
+        "intent": "welcome",
+        "entities": []
+      },
+      {
+        "text": "mgn",
+        "intent": "welcome",
+        "entities": []
+      },
+      {
+        "text": "nao tem de q",
+        "intent": "welcome",
+        "entities": []
+      },
+      {
+        "text": "de nd",
+        "intent": "welcome",
         "entities": []
       }
     ],
@@ -95768,7 +95912,11 @@
           "exercicio físico",
           "exercicio",
           "exercício físico",
-          "exercícios"
+          "exercícios",
+          "academia",
+          "treino",
+          "treinar",
+          "exercicitar"
         ]
       },
       {
@@ -95940,10 +96088,40 @@
         ]
       },
       {
+        "value": "sexo",
+        "synonyms": [
+          "relação sexual",
+          "relações sexuais",
+          "transar"
+        ]
+      },
+      {
         "value": "sabado",
         "synonyms": [
           "sábado",
           "sabádo"
+        ]
+      },
+      {
+        "value": "japonesa",
+        "synonyms": [
+          "japones",
+          "comida japonesa",
+          "comidas japonesa",
+          "sushi",
+          "temaki"
+        ]
+      },
+      {
+        "value": "alcool",
+        "synonyms": [
+          "vinho",
+          "bebida alcoólica",
+          "cerveja",
+          "pinga",
+          "caipirinha",
+          "batidinha",
+          "álcool"
         ]
       }
     ]

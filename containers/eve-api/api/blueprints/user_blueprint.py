@@ -26,7 +26,7 @@ def validate_user_request(json):
 def get_all():
     try:
         users = ServiceHandler.get_service(route_name).get_all().only('_id','email','creation_date'
-        ,'user_type','person_id','is_admin')
+        ,'user_type','is_admin')
 
         return response(users, status.HTTP_200_OK)
                 
@@ -40,23 +40,18 @@ def insert():
 
         validate_user_request(json)
 
-        person_obj = {
-            'name': json['name']
-        }
-
-        created_person = ServiceHandler.get_service(ROUTE_CONFIG['PERSON_TYPE_NAME']).insert(person_obj)       
-
         hashed_password = generate_password_hash(json['password'], method='sha512')
 
         obj = {
+            'name': json['name'],
+            'date_birth': (False if 'date_birth' not in json else json['date_birth']),
             'email': json['email'],
             'password': hashed_password,
             'is_admin': (False if 'is_admin' not in json else json['is_admin']),
-            'person': created_person,
             'user_type': (UserTypeEnum.normal.value if 'user_type' not in json else json['user_type'])
         }
 
-        ServiceHandler.get_service(route_name).insert(obj)    
+        ServiceHandler.get_service(route_name).insert(obj)
         
         return response(status=status.HTTP_201_CREATED)
 
@@ -104,19 +99,12 @@ def update(id):
 
         if not user:
             raise Exception('User not found!')
-        
-        person_id = str(user.person_id['id'])
-
-        person_obj = {
-            'name': json_obj['name'],
-            'id': person_id
-        }
-
-        ServiceHandler.get_service(ROUTE_CONFIG['PERSON_TYPE_NAME']).update(person_obj)
 
         hashed_password = generate_password_hash(json_obj['password'], method='sha512')
 
         obj = {
+            'name': json_obj['name'],
+            'date_birth': (False if 'date_birth' not in json_obj else json_obj['date_birth']),
             'email': json_obj['email'],
             'password': hashed_password,
             'is_admin': (False if 'is_admin' not in json_obj else json_obj['is_admin']),
@@ -136,10 +124,7 @@ def delete(id):
     try:        
         user = ServiceHandler.get_service(route_name).get(id)
 
-        person_id = str(user.person_id['id'])
-
         ServiceHandler.get_service(route_name).delete(id)
-        ServiceHandler.get_service(ROUTE_CONFIG['PERSON_TYPE_NAME']).delete(person_id)
 
         return response(status=status.HTTP_200_OK)
         
