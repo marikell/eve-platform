@@ -41,7 +41,7 @@ def send_user_exam_slot(id):
 
 
 @app_rasa.route('/{}/send-slots/<id>'.format(route_name), methods=['POST'])
-def send_health_slots_from_Rasa(id):
+def send_slots_from_Rasa(id):
     try:
         json_obj = request.get_json()
         user = ServiceHandler.get_service(ROUTE_CONFIG['USER_TYPE_NAME']).get(id)
@@ -80,7 +80,7 @@ def send_health_slots_from_Rasa(id):
 
 
 @app_rasa.route('/{}/send-health-slots/<id>'.format(route_name), methods=['POST'])
-def send_slots_from_Rasa(id):
+def send_health_slots_from_Rasa(id):
     try:
         json_obj = request.get_json()
         user = ServiceHandler.get_service(ROUTE_CONFIG['USER_TYPE_NAME']).get(id)
@@ -109,6 +109,74 @@ def send_slots_from_Rasa(id):
             ServiceHandler.get_service(ROUTE_CONFIG['USER_HEALTH_INFO_TYPE_NAME']).update(obj)
         else:
             ServiceHandler.get_service(ROUTE_CONFIG['USER_HEALTH_INFO_TYPE_NAME']).insert(obj)
+        
+        return response(status=status.HTTP_200_OK)
+
+    except Exception as e:
+        print(str(e))
+        return response_text(str(e), status.HTTP_400_BAD_REQUEST)
+    return None
+
+@app_rasa.route('/{}/send-pregnancy-slots/<id>'.format(route_name), methods=['POST'])
+def send_pregnancy_slots_from_Rasa(id):
+    try:
+        json_obj = request.get_json()
+        user = ServiceHandler.get_service(ROUTE_CONFIG['USER_TYPE_NAME']).get(id)
+
+        if not user:
+            raise Exception('User not found!')
+
+        obj = {
+            'current_high_risk' : False if 'current_high_risk' not in json_obj else json_obj['current_high_risk'],
+            'due_date' : None if 'due_date' not in json_obj else json_obj['due_date'],
+            'births' : None if 'births' not in json_obj else json_obj['births'],
+            'cesarean_births' : None if 'cesarean_births' not in json_obj else json_obj['cesarean_births'],
+            'normal_births' : None if 'normal_births' not in json_obj else json_obj['normal_births'],
+            'why_cesarean_birth' : None if 'why_cesarean_birth' not in json_obj else json_obj['why_cesarean_birth'],
+            'abortion' : False if 'abortion' not in json_obj else json_obj['abortion'],
+            'premature_birth' : False if 'premature_birth' not in json_obj else json_obj['premature_birth'],
+            'user' : user
+        }
+
+        user_pregnancy_info = ServiceHandler.get_service(ROUTE_CONFIG['USER_PREGNANCY_INFO_TYPE_NAME']).get_by_user(user)
+            
+        if user_pregnancy_info:
+            obj['id'] = user_pregnancy_info.id
+            ServiceHandler.get_service(ROUTE_CONFIG['USER_PREGNANCY_INFO_TYPE_NAME']).update(obj)
+        else:
+            ServiceHandler.get_service(ROUTE_CONFIG['USER_PREGNANCY_INFO_TYPE_NAME']).insert(obj)
+        
+        return response(status=status.HTTP_200_OK)
+
+    except Exception as e:
+        print(str(e))
+        return response_text(str(e), status.HTTP_400_BAD_REQUEST)
+    return None
+
+@app_rasa.route('/{}/send-personal-slots/<id>'.format(route_name), methods=['POST'])
+def send_personal_slots_from_Rasa(id):
+    try:
+        json_obj = request.get_json()
+        user = ServiceHandler.get_service(ROUTE_CONFIG['USER_TYPE_NAME']).get(id)
+
+        if not user:
+            raise Exception('User not found!')
+
+        obj = {
+            'height' : None if 'height' not in json_obj else json_obj['height'],
+            'weight' : None if 'weight' not in json_obj else json_obj['weight'],
+            'date_birth' : None if 'date_birth' not in json_obj else json_obj['date_birth'],
+            'state' : None if 'state' not in json_obj else json_obj['state'],
+            'user' : user
+        }
+        
+        user_personal_info = ServiceHandler.get_service(ROUTE_CONFIG['USER_PERSONAL_INFO_TYPE_NAME']).get_by_user(user)
+            
+        if user_personal_info:
+            obj['id'] = user_personal_info.id
+            ServiceHandler.get_service(ROUTE_CONFIG['USER_PERSONAL_INFO_TYPE_NAME']).update(obj)
+        else:
+            ServiceHandler.get_service(ROUTE_CONFIG['USER_PERSONAL_INFO_TYPE_NAME']).insert(obj)
         
         return response(status=status.HTTP_200_OK)
 

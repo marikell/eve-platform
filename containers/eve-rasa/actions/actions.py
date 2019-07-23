@@ -16,6 +16,9 @@ route_config.register_route('get_exam_by_name','/exam/get-by-name')
 route_config.register_route('get_user_by_email','/user/get-by-email')
 route_config.register_route('send_slot_user_exam','/rasa/send-slot-user-exam')
 route_config.register_route('send_health_slots','/rasa/send-health-slots')
+route_config.register_route('send_pregnancy_slots','/rasa/send-pregnancy-slots')
+route_config.register_route('send_personal_slots','/rasa/send-personal-slots')
+route_config.register_route('send_unanswered_question','/unanswered-question')
 
 class GetAnswer(Action):
     def name(self) -> Text:
@@ -40,10 +43,13 @@ class GetAnswer(Action):
         try:        
             req = requests.post(url = route_config.get_route('get_answer'),headers= headers,data=json.dumps(data))
             json_obj = req.json()
-            print(json_obj, json_obj.get('response'))
             if json_obj.get('response'):
                 response = json_obj['response']
-            
+            else:
+                data = {
+                    'question' : tracker.latest_message['text']
+                }
+                req = requests.post(url = route_config.get_route('send_unanswered_question'),headers= headers,data=json.dumps(data))
             dispatcher.utter_message(response)
         except:
             dispatcher.utter_message(response)
@@ -159,7 +165,7 @@ class InitialForm(FormAction):
             "last_menstruation_date" : last_menstruation,
             "first_ultrasound_date" : first_ultrasound_date
         }
-        print(data)
+        
         headers = {
             'Content-Type':'application/json'
         }
@@ -516,6 +522,295 @@ class HealthForm(FormAction):
             if req_email.json()['status'] == 200:
                 user_id = json.loads(req_email.json()['response'])['_id']['$oid']
                 req = requests.post(url = '{}{}'.format(route_config.get_route('send_health_slots'),'/{}'.format(user_id)),headers= headers,data=json.dumps(data))
+        except Exception as e:
+            #this will log in the future
+            print(str(e))
+                
+        dispatcher.utter_template('utter_thank_you', tracker)
+        dispatcher.utter_template('utter_ask_me_anything', tracker)
+        return []
+
+class PersonalForm(FormAction):
+    def name(self) -> Text:
+        return "form_personal"
+        
+    @staticmethod
+    def required_slots(tracker: Tracker):
+        return [
+            "height",
+            "weight",
+            "date_birth",
+            "state"
+        ]
+
+    def slot_mappings(self):
+            return {
+                "height": [
+                    self.from_entity(entity="number")
+                ],
+                "weight": [
+                    self.from_entity(entity="number")
+                ],
+                "date_birth": [
+                    self.from_entity(entity="time")
+                ],
+                "state": [
+                    self.from_text(intent="enter_data"),
+                    self.from_entity(entity="state")
+                ],
+            }
+
+    def validate_date_birth(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]):
+        try: 
+            date = dateutil.parser.parse(value)
+            return {"date_birth": value}
+        except ValueError:
+            dispatcher.utter_template("utter_wrong_date_birth", tracker)
+            return {"date_birth": None}
+
+    def validate_height(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]):
+        print(value)
+        if(self.is_int(value) and int(value) > 150):
+            return {"height": value}
+        else:
+            dispatcher.utter_template("utter_wrong_height", tracker)
+            return {"height": None}
+
+    def validate_weight(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]):
+        if(self.is_int(value) and int(value) > 40):
+            return {"weight": value}
+        else:
+            dispatcher.utter_template("utter_wrong_weight", tracker)
+            return {"weight": None}
+    
+    def validate_state(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]):
+        if value.upper() in self.state_db():
+            return {"state": value}
+        else:
+            dispatcher.utter_template("utter_wrong_state", tracker)
+            return {"state": None}
+
+    @staticmethod
+    def state_db() -> List[Text]:
+        return [
+            "SP",
+            "AM",
+            "RS",
+            "RJ",
+            "MG",
+            "AP",
+            "AC",
+            "AL",
+            "BA",
+            "CE",
+            "ES",
+            "GO",
+            "MA",
+            "MT",
+            "MS",
+            "PA",
+            "PB",
+            "PR",
+            "PE",
+            "PI",
+            "RN",
+            "RO",
+            "RR",
+            "SC",
+            "SE",
+            "TO",
+            "DF"
+        ]
+
+    @staticmethod
+    def convert_to_bool(string: str) -> bool:
+        return string == 'True'
+
+    @staticmethod
+    def is_int(string: Text) -> bool:
+        try:
+            int(string)
+            return True
+        except ValueError:
+            return False
+
+    def submit(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> List[Dict]:
+        height = tracker.get_slot("height")
+        weight = tracker.get_slot("weight")
+        date_birth = tracker.get_slot("date_birth")
+        state = tracker.get_slot("state")
+
+        data = {
+            "height" : int(height),
+            "weight" : int(weight),
+            "date_birth" : date_birth,
+            "state" : state
+        }
+        
+        headers = {
+            'Content-Type':'application/json'
+        }
+        try:        
+            email_obj = {                
+                'email' : 'me'
+            }
+            headers = {
+                'Content-Type' : 'application/json'
+            }
+            req_email = requests.post(url = '{}'.format(route_config.get_route('get_user_by_email')),headers = headers, data=json.dumps(email_obj))
+            if req_email.json()['status'] == 200:
+                user_id = json.loads(req_email.json()['response'])['_id']['$oid']
+                req = requests.post(url = '{}{}'.format(route_config.get_route('send_personal_slots'),'/{}'.format(user_id)),headers= headers,data=json.dumps(data))
+                print(req)
+
+        except Exception as e:
+            #this will log in the future
+            print(str(e))
+                
+        dispatcher.utter_template('utter_thank_you', tracker)
+        dispatcher.utter_template('utter_ask_me_anything', tracker)
+        return []
+
+class PregnancyForm(FormAction):
+    def name(self) -> Text:
+        return "form_pregnancy"
+        
+    @staticmethod
+    def required_slots(tracker: Tracker):
+        if(tracker.get_slot('births') is not None):
+            if(tracker.get_slot('normal_births') is not None):
+                if(int(tracker.get_slot('births')) == int(tracker.get_slot('normal_births'))):
+                    return [
+                        "abortion",
+                        "premature_birth"
+                    ]
+                elif(int(tracker.get_slot('births')) > int(tracker.get_slot('normal_births'))):
+                    return [
+                        "why_cesarean_birth",
+                        "abortion",
+                        "premature_birth"
+                    ]
+            else:
+                return [
+                    "normal_births",
+                    "why_cesarean_birth",
+                    "abortion",
+                    "premature_birth"
+                ]
+        if(tracker.get_slot('had_birth') == "False"):
+            return [
+                "abortion"
+            ]
+        if(tracker.get_slot('had_birth') == "True"):
+            return [
+                "births",
+                "normal_births",
+                "why_cesarean_birth",
+                "abortion",
+                "premature_birth"
+            ]        
+        else:
+            return [
+                "high_risk",
+                "due_date",
+                "had_birth",
+                "births",
+                "normal_births",
+                "why_cesarean_birth",
+                "abortion",
+                "premature_birth"
+            ]
+
+    def slot_mappings(self):
+            return {
+                "due_date": [
+                    self.from_entity(entity="time"),
+                    self.from_text(intent="enter_data")
+                ],
+                "births": [
+                    self.from_entity(entity="number")
+                ],
+                "normal_births": [
+                    self.from_entity(entity="number")
+                ],
+                "why_cesarean_birth": [
+                    self.from_text(intent="why_cesarean_answer"),
+                    self.from_intent(intent="dont_know", value="Não sei"),
+                ],
+            }
+
+    def validate_due_date(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]):
+        try: 
+            date = dateutil.parser.parse(value)
+            return {"due_date": value}
+        except ValueError:
+            dispatcher.utter_template("utter_wrong_due_date", tracker)
+            return {"due_date": None}
+
+    def validate_births(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]):
+        if(self.is_int(value)):             
+            return {"births": value}
+        else:
+            dispatcher.utter_template("utter_wrong_births", tracker)
+            return {"births": None}
+    
+    def validate_normal_births(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]):
+        if(self.is_int(value)):             
+            return {"normal_births": value}
+        else:
+            dispatcher.utter_template("utter_wrong_normal_births", tracker)
+            return {"normal_births": None}
+    
+    @staticmethod
+    def is_int(string: Text) -> bool:
+        try:
+            int(string)
+            return True
+        except ValueError:
+            return False
+
+    @staticmethod
+    def convert_to_bool(string: str) -> bool:
+        return string == 'True'
+
+    def submit(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> List[Dict]:
+        current_high_risk = self.convert_to_bool(tracker.get_slot("high_risk"))
+        due_date = tracker.get_slot("due_date")
+        births = tracker.get_slot("births")
+        had_birth = self.convert_to_bool(tracker.get_slot("had_birth"))
+        normal_births = tracker.get_slot("normal_births")
+        why_cesarean_birth = tracker.get_slot("why_cesarean_birth")
+        abortion = self.convert_to_bool(tracker.get_slot("abortion"))
+        premature_birth = self.convert_to_bool(tracker.get_slot("premature_birth"))
+        
+        data = {
+            "current_high_risk" : current_high_risk,
+            "due_date" : due_date,
+            "births" : births,
+            "cesarean_births" : None if not had_birth else (int(births) - int(normal_births)),
+            "normal_births" : normal_births,
+            "why_cesarean_birth" : why_cesarean_birth,
+            "abortion" : abortion,
+            "premature_birth" : premature_birth
+        }
+        
+        headers = {
+            'Content-Type':'application/json'
+        }
+        try:        
+            email_obj = {                
+                'email' : 'me'
+            }
+                    
+            headers = {
+                'Content-Type' : 'application/json'
+            }
+                    
+            req_email = requests.post(url = '{}'.format(route_config.get_route('get_user_by_email')),headers = headers, data=json.dumps(email_obj))
+
+            if req_email.json()['status'] == 200:
+                user_id = json.loads(req_email.json()['response'])['_id']['$oid']
+                req = requests.post(url = '{}{}'.format(route_config.get_route('send_pregnancy_slots'),'/{}'.format(user_id)),headers= headers,data=json.dumps(data))
         except Exception as e:
             #this will log in the future
             print(str(e))

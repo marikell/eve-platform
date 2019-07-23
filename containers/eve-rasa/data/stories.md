@@ -868,3 +868,105 @@
     - slot{"requested_slot":null}
 * welcome
     - utter_great
+
+## form_personal 1
+    - utter_ask_personal_questions
+* affirm
+    - form_personal
+    - form{"name": "form_personal"}
+    - form{"name": null}
+
+## form_personal 2
+    - utter_ask_personal_questions
+* affirm
+    - form_personal
+    - form{"name": "form_personal"}
+    - form{"name": null}
+* have_question
+  - utter_ask
+
+## unhappy path: form_personal
+    - utter_ask_personal_questions
+* affirm
+  - form_personal
+  - form{"name": "form_personal"}
+* what_is{"question_entity":"loquio"}
+  - action_get_answer
+  - form_personal
+  - form{"name": null}
+
+## welcome
+* welcome
+    - utter_great
+
+## Story from conversation with me on July 9th 2019
+    - utter_ask_personal_questions
+* affirm
+    - form_personal
+    - slot{"requested_slot":"height"}
+* enter_data{"height":"False"}
+    - slot{"height":"False"}
+    - form_personal
+    - slot{"height":"False"}
+    - slot{"requested_slot":"weight"}
+* enter_data{"weight":"False"}
+    - slot{"weight":"False"}
+    - form_personal
+    - slot{"weight":"False"}
+    - slot{"requested_slot":"date_birth"}
+* enter_data{"date_birth":"False"}
+    - slot{"date_birth":"False"}
+    - form_personal
+    - slot{"date_birth":"False"}
+    - slot{"requested_slot":"state"}
+* enter_data{"state":"False"}
+    - slot{"state":"False"}
+    - form_personal
+    - slot{"state":"False"}
+    - slot{"requested_slot":null}
+* welcome
+    - utter_great
+
+## form_pregnancy 1
+    - utter_ask_pregnancy_questions
+* affirm
+    - form_pregnancy
+    - form{"name": "form_pregnancy"}
+    - form{"name": null}
+
+## form_pregnancy 2
+    - utter_ask_pregnancy_questions
+* affirm
+    - form_pregnancy
+    - form{"name": "form_pregnancy"}
+    - form{"name": null}
+* have_question
+  - utter_ask
+
+## unhappy path: form_pregnancy
+    - utter_ask_pregnancy_questions
+* affirm
+  - form_pregnancy
+  - form{"name": "form_pregnancy"}
+* what_is{"question_entity":"loquio"}
+  - action_get_answer
+  - form_pregnancy
+  - form{"name": null}
+
+## unhappy path: form_pregnancy 2
+    - utter_ask_pregnancy_questions
+* deny
+    - utter_info_later
+    - utter_ask_me_anything
+
+## unhappy path: form_personal
+    - utter_ask_personal_questions
+* deny
+    - utter_info_later
+    - utter_ask_me_anything
+
+## unhappy path: form_personal
+    - utter_ask_health_questions
+* deny
+    - utter_info_later
+    - utter_ask_me_anything

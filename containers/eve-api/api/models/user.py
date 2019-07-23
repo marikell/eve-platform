@@ -3,8 +3,7 @@ from api.enums.user_enums import UserTypeEnum
 from api.models.db_model import db
 
 class User(db.DynamicDocument):
-    name = db.StringField(max_length=300)
-    date_birth = db.DateTimeField(required=False)
+    name = db.StringField(max_length=300)    
     email = db.EmailField(required=True)
     password = db.StringField(max_length=300, required=True)
     creation_date = db.DateTimeField(required=True)
@@ -12,7 +11,6 @@ class User(db.DynamicDocument):
     is_admin = db.BooleanField(required=True)
 
     def save(self, *args, **kwargs):
-        self.date_birth = datetime.datetime.strptime(self.date_birth, "%Y-%m-%d")
         if not self.creation_date:
             self.creation_date = datetime.datetime.now()
         return super(User, self).save(*args, **kwargs)

@@ -93446,21 +93446,6 @@
         "entities": []
       },
       {
-        "text": "1",
-        "intent": "enter_data",
-        "entities": []
-      },
-      {
-        "text": "1",
-        "intent": "enter_data",
-        "entities": []
-      },
-      {
-        "text": "1",
-        "intent": "enter_data",
-        "entities": []
-      },
-      {
         "text": "estou com muito enjoo",
         "intent": "complain",
         "entities": [
@@ -95781,6 +95766,671 @@
         "text": "de nd",
         "intent": "welcome",
         "entities": []
+      },
+      {
+        "text": "sp",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 2,
+            "value": "sp",
+            "entity": "state"
+          }
+        ]
+      },
+      {
+        "text": "AM",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 2,
+            "value": "AM",
+            "entity": "state"
+          }
+        ]
+      },
+      {
+        "text": "RJ",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 2,
+            "value": "RJ",
+            "entity": "state"
+          }
+        ]
+      },
+      {
+        "text": "mt",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 2,
+            "value": "mt",
+            "entity": "state"
+          }
+        ]
+      },
+      {
+        "text": "moro em sp",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 8,
+            "end": 10,
+            "value": "sp",
+            "entity": "state"
+          }
+        ]
+      },
+      {
+        "text": "peso 59kg",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 5,
+            "end": 7,
+            "value": "59",
+            "entity": "number"
+          }
+        ]
+      },
+      {
+        "text": "65kg",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 2,
+            "value": "65",
+            "entity": "number"
+          }
+        ]
+      },
+      {
+        "text": "58,3 kg",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "58,3",
+            "entity": "number"
+          }
+        ]
+      },
+      {
+        "text": "60.5kg",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "60.5",
+            "entity": "number"
+          }
+        ]
+      },
+      {
+        "text": "2",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 1,
+            "value": "2",
+            "entity": "number"
+          }
+        ]
+      },
+      {
+        "text": "10",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 2,
+            "value": "10",
+            "entity": "number"
+          }
+        ]
+      },
+      {
+        "text": "1",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 1,
+            "value": "1",
+            "entity": "number"
+          }
+        ]
+      },
+      {
+        "text": "5",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 1,
+            "value": "5",
+            "entity": "number"
+          }
+        ]
+      },
+      {
+        "text": "20",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 2,
+            "value": "20",
+            "entity": "number"
+          }
+        ]
+      },
+      {
+        "text": "3",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 1,
+            "value": "3",
+            "entity": "number"
+          }
+        ]
+      },
+      {
+        "text": "claro",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "sim, claro!",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "pode sim",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "pode",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "com certeza",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "sim, com certeza",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "pode perguntar",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "pode, claro",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "pq o bebe não estava de cabeça pra baixo",
+        "intent": "why_cesarean_answer",
+        "entities": []
+      },
+      {
+        "text": "pq o bebe estava sentado",
+        "intent": "why_cesarean_answer",
+        "entities": []
+      },
+      {
+        "text": "pq o bebe era muito grande",
+        "intent": "why_cesarean_answer",
+        "entities": []
+      },
+      {
+        "text": "pois o trabalho de parto estava demorando muito",
+        "intent": "why_cesarean_answer",
+        "entities": []
+      },
+      {
+        "text": "pois o bebê não estava na posição correta",
+        "intent": "why_cesarean_answer",
+        "entities": []
+      },
+      {
+        "text": "devido ao descolamento da placenta",
+        "intent": "why_cesarean_answer",
+        "entities": []
+      },
+      {
+        "text": "devido ao tamanho do bebê, era muito grande",
+        "intent": "why_cesarean_answer",
+        "entities": []
+      },
+      {
+        "text": "devido ao tamanho do bebê",
+        "intent": "why_cesarean_answer",
+        "entities": []
+      },
+      {
+        "text": "porque o bebe não estava de cabeça pra baixo",
+        "intent": "why_cesarean_answer",
+        "entities": []
+      },
+      {
+        "text": "porque a minha placenta descolou",
+        "intent": "why_cesarean_answer",
+        "entities": []
+      },
+      {
+        "text": "porque eu possuo HIV",
+        "intent": "why_cesarean_answer",
+        "entities": []
+      },
+      {
+        "text": "porque eu tenho hiv",
+        "intent": "why_cesarean_answer",
+        "entities": []
+      },
+      {
+        "text": "foi cesarea pois estava demorando muito",
+        "intent": "why_cesarean_answer",
+        "entities": []
+      },
+      {
+        "text": "precisou ser cesarea pois o bebe era grande",
+        "intent": "why_cesarean_answer",
+        "entities": []
+      },
+      {
+        "text": "teve que ser cesarea pq o bebe estava sentado",
+        "intent": "why_cesarean_answer",
+        "entities": []
+      },
+      {
+        "text": "pq eu já tinha feito cesarea antes",
+        "intent": "why_cesarean_answer",
+        "entities": []
+      },
+      {
+        "text": "eu nao sei",
+        "intent": "dont_know",
+        "entities": []
+      },
+      {
+        "text": "nao sei",
+        "intent": "dont_know",
+        "entities": []
+      },
+      {
+        "text": "nao faço ideia",
+        "intent": "dont_know",
+        "entities": []
+      },
+      {
+        "text": "nao me lembro",
+        "intent": "dont_know",
+        "entities": []
+      },
+      {
+        "text": "n sei",
+        "intent": "dont_know",
+        "entities": []
+      },
+      {
+        "text": "nao lembro",
+        "intent": "dont_know",
+        "entities": []
+      },
+      {
+        "text": "não sei",
+        "intent": "dont_know",
+        "entities": []
+      },
+      {
+        "text": "ñ sei",
+        "intent": "dont_know",
+        "entities": []
+      },
+      {
+        "text": "nao sei dizer",
+        "intent": "dont_know",
+        "entities": []
+      },
+      {
+        "text": "dois",
+        "intent": "enter_data",
+        "entities": []
+      },
+      {
+        "text": "cinco",
+        "intent": "enter_data",
+        "entities": []
+      },
+      {
+        "text": "2 partos",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 1,
+            "value": "2",
+            "entity": "number"
+          }
+        ]
+      },
+      {
+        "text": "seis",
+        "intent": "enter_data",
+        "entities": []
+      },
+      {
+        "text": "1 parto",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 1,
+            "value": "1",
+            "entity": "number"
+          }
+        ]
+      },
+      {
+        "text": "tres",
+        "intent": "enter_data",
+        "entities": []
+      },
+      {
+        "text": "quatro",
+        "intent": "enter_data",
+        "entities": []
+      },
+      {
+        "text": "cinco",
+        "intent": "enter_data",
+        "entities": []
+      },
+      {
+        "text": "sete",
+        "intent": "enter_data",
+        "entities": []
+      },
+      {
+        "text": "oito",
+        "intent": "enter_data",
+        "entities": []
+      },
+      {
+        "text": "nove",
+        "intent": "enter_data",
+        "entities": []
+      },
+      {
+        "text": "um",
+        "intent": "enter_data",
+        "entities": []
+      },
+      {
+        "text": "1,65 m",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "1,65",
+            "entity": "number"
+          }
+        ]
+      },
+      {
+        "text": "1,67m",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "1,67",
+            "entity": "number"
+          }
+        ]
+      },
+      {
+        "text": "150cm",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "150",
+            "entity": "number"
+          }
+        ]
+      },
+      {
+        "text": "168 cm",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "168",
+            "entity": "number"
+          }
+        ]
+      },
+      {
+        "text": "1.65 m",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "1.65",
+            "entity": "number"
+          }
+        ]
+      },
+      {
+        "text": "1.64m",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "1.64",
+            "entity": "number"
+          }
+        ]
+      },
+      {
+        "text": "160",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "160",
+            "entity": "number"
+          }
+        ]
+      },
+      {
+        "text": "tenho 160 cm",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 6,
+            "end": 9,
+            "value": "160",
+            "entity": "number"
+          }
+        ]
+      },
+      {
+        "text": "170 cm",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "170",
+            "entity": "number"
+          }
+        ]
+      },
+      {
+        "text": "1,7m",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "1,7",
+            "entity": "number"
+          }
+        ]
+      },
+      {
+        "text": "158",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "158",
+            "entity": "number"
+          }
+        ]
+      },
+      {
+        "text": "1,66",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "1,66",
+            "entity": "number"
+          }
+        ]
+      },
+      {
+        "text": "159",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "159",
+            "entity": "number"
+          }
+        ]
+      },
+      {
+        "text": "eu tenho 1,66m",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 9,
+            "end": 13,
+            "value": "1,66",
+            "entity": "number"
+          }
+        ]
+      },
+      {
+        "text": "tenho 168cm",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 6,
+            "end": 9,
+            "value": "168",
+            "entity": "number"
+          }
+        ]
+      },
+      {
+        "text": "170 cm",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "170",
+            "entity": "number"
+          }
+        ]
+      },
+      {
+        "text": "1,6m",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "1,6",
+            "entity": "number"
+          }
+        ]
+      },
+      {
+        "text": "1.56 m",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "1.56",
+            "entity": "number"
+          }
+        ]
+      },
+      {
+        "text": "sao paulo",
+        "intent": "enter_data",
+        "entities": []
+      },
+      {
+        "text": "rio de janeiro",
+        "intent": "enter_data",
+        "entities": []
+      },
+      {
+        "text": "em minas gerais",
+        "intent": "enter_data",
+        "entities": []
+      },
+      {
+        "text": "moro no Parana",
+        "intent": "enter_data",
+        "entities": []
+      },
+      {
+        "text": "bahia",
+        "intent": "enter_data",
+        "entities": []
+      },
+      {
+        "text": "santa catarina",
+        "intent": "enter_data",
+        "entities": []
       }
     ],
     "regex_features": [],
@@ -95804,6 +96454,38 @@
           "resfenol",
           "anti-gripal",
           "advil"
+        ]
+      },
+      {
+        "name": "state",
+        "elements": [
+          "SP",
+          "AM",
+          "RS",
+          "RJ",
+          "MG",
+          "AP",
+          "AC",
+          "AL",
+          "BA",
+          "CE",
+          "ES",
+          "GO",
+          "MA",
+          "MT",
+          "MS",
+          "PA",
+          "PB",
+          "PR",
+          "PE",
+          "PI",
+          "RN",
+          "RO",
+          "RR",
+          "SC",
+          "SE",
+          "TO",
+          "DF"
         ]
       }
     ],

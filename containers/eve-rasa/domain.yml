@@ -73,12 +73,17 @@ actions:
   - utter_baby_not_moving
   - utter_which_medicine
   - utter_ask_health_questions
+  - utter_ask_personal_questions
+  - utter_ask_pregnancy_questions
 entities: 
   - last_menstruation
   - first_ultrasound
   - first_ultrasound_date
   - question_entity
   - time
+  - number
+  - distance
+  - state
   - hour
   - med_frequency
   - med_name 
@@ -95,6 +100,8 @@ forms:
   - form_medicine
   - form_appointment
   - form_health
+  - form_personal
+  - form_pregnancy
 intents:
   - ill_do_it
   - no_question
@@ -157,6 +164,8 @@ intents:
   - baby_not_moving
   - which_medicine
   - welcome
+  - why_cesarean_answer
+  - dont_know
 slots:
   first_pregnancy:
     type: unfeaturized
@@ -219,6 +228,30 @@ slots:
   seropositive:
     type: unfeaturized
   high_pressure:
+    type: unfeaturized
+  height:
+    type: unfeaturized
+  weight:
+    type: unfeaturized
+  date_birth:
+    type: unfeaturized
+  state:
+    type: unfeaturized
+  high_risk:
+    type: unfeaturized
+  due_date:
+    type: unfeaturized
+  births:
+    type: unfeaturized
+  normal_births:
+    type: unfeaturized
+  why_cesarean_birth:
+    type: unfeaturized
+  abortion:
+    type: unfeaturized
+  premature_birth:
+    type: unfeaturized
+  had_birth:
     type: unfeaturized
   requested_slot:
     type: unfeaturized    
@@ -503,4 +536,75 @@ O planejamento tem o objetivo de identificar fatores de risco como diabetes e hi
   - text: "Por favor, me fale se você tem pressão alta 😬 Quanto mais informações, mais eu consigo te ajudar 😅"
   utter_ask_health_questions:
   - text: "Posso te fazer algumas perguntas? Vai ser rapidinho 😅"
+  utter_ask_personal_questions:
+  - text: "Posso te fazer algumas perguntas? Vai ser rapidinho 😅"
+  utter_ask_pregnancy_questions:
+  - text: "Posso te fazer algumas perguntas? Vai ser rapidinho 😅"
+  utter_ask_height:
+  - text: "Qual a sua altura em centímetros?"
+  utter_wrong_height:
+  - text: "Por favor, me fale a sua altura em centímetros, por exemplo, se você tem 1,65m é equivalente a 165cm 😬"
+  utter_ask_weight:
+  - text: "Quantos kg você pesa?"
+  utter_wrong_weight:
+  - text: "Por favor, me fale qual o seu peso 😬"
+  utter_ask_date_birth:
+  - text: "Qual a sua data de nascimento?"
+  utter_wrong_date_birth:
+  - text: "Não consegui entender 😬 Me fale a sua data de nascimento como, por exemplo, 5 de setembro de 1997 ou 05/09/97 😅"
+  utter_ask_state:
+  - text: "Qual a sigla do estado em que você mora?"
+  utter_wrong_state:
+  - text: "Por favor, me fale a sigla do seu estado 😬"
+  utter_ask_high_risk:
+  - text: "A sua gravidez é de alto risco?"
+    buttons:
+    - title: "Sim"
+      payload: '/enter_data{"high_risk":"True"}'
+    - title: "Não"
+      payload: '/enter_data{"high_risk":"False"}'
+  utter_wrong_high_risk:
+  - text: "Por favor, preciso saber se a sua gestação é de alto risco 😬"
+  utter_ask_due_date:
+  - text: "Qual a data provável do seu parto?"
+  utter_wrong_due_date:
+  - text: "Não consegui entender 😬 Me fale a data provável do parto como, por exemplo, 5 de setembro ou 05/09 😅"
+  utter_ask_births:
+  - text: "Quantos partos você já teve?"
+  utter_wrong_births:
+  - text: "Não consegui entender 😬 Me fale o número de partos que você já teve, por exemplo, 1, 2, etc 😅"
+  utter_ask_normal_births:
+  - text: "Quantos foram normais?"
+  utter_wrong_normal_births:
+  - text: "Não consegui entender 😬 Me fale o número de partos normais que você já teve, por exemplo, 1, 2, etc 😅"
+  utter_ask_why_cesarean_birth:
+  - text: "Então você já passou também pela cesárea né, por que precisou ser feito cesárea?"
+  utter_wrong_why_cesarean_birth:
+  - text: "Me conte por que precisou ser cesárea, por favor 😬"
+  utter_ask_abortion:
+  - text: "Você já sofreu algum aborto?"
+    buttons:
+    - title: "Sim"
+      payload: '/enter_data{"abortion":"True"}'
+    - title: "Não"
+      payload: '/enter_data{"abortion":"False"}'
+  utter_wrong_abortion:
+  - text: "Sei que é um assunto delicado mas pode me contar 😬"
+  utter_ask_premature_birth:
+  - text: "Você já teve algum parto prematuro?"
+    buttons:
+    - title: "Sim"
+      payload: '/enter_data{"premature_birth":"True"}'
+    - title: "Não"
+      payload: '/enter_data{"premature_birth":"False"}'    
+  utter_wrong_premature_birth:
+  - text: "Me conta se você já teve um parto prematuro, por favor 😬"
+  utter_ask_had_birth:
+  - text: "Você já teve algum parto?"
+    buttons:
+    - title: "Sim"
+      payload: '/enter_data{"had_birth":"True"}'
+    - title: "Não"
+      payload: '/enter_data{"had_birth":"False"}'
+  
     
