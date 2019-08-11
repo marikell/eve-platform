@@ -13,7 +13,7 @@
 * deny
   - utter_info_later
   - utter_ask_me_anything
-* which{"question_entity": "exercicios"}
+* which_can{"question_entity": "exercicios"}
     - action_get_answer
 * which_medicine
     - utter_which_medicine
@@ -24,7 +24,7 @@
 * later
   - utter_info_later
   - utter_ask_me_anything
-* which{"question_entity": "exercicios"}
+* which_can{"question_entity": "exercicios"}
     - action_get_answer
 * which_medicine
     - utter_which_medicine
@@ -92,33 +92,33 @@
   - utter_ask_info
 
 ## perguntas aleatórias 1
-* which{"question_entity": "exercicios"}
+* which_can{"question_entity": "exercicios"}
     - slot{"last_intent": "which"}
     - action_get_answer
-* which_not{"question_entity": "comida"}
-    - slot{"last_intent": "which_not"}
+* which_can_not{"question_entity": "comida"}
+    - slot{"last_intent": "which_can_not"}
     - action_get_answer
 * can{"question_entity": "exercicios"}
     - slot{"last_intent": "can"}
     - action_get_answer
-* which{"question_entity": "exercicios"}
-    - slot{"last_intent": "which"}
+* which_can{"question_entity": "exercicios"}
+    - slot{"last_intent": "which_can"}
     - action_get_answer
-* which{"question_entity": "treinos"}
-    - slot{"last_intent": "which"}
+* which_can{"question_entity": "treinos"}
+    - slot{"last_intent": "which_can"}
     - action_get_answer
-* which_not{"question_entity": "treinos"}
-    - slot{"last_intent": "which_not"}
+* which_can_not{"question_entity": "treinos"}
+    - slot{"last_intent": "which_can_not"}
     - action_get_answer
 
 ## perguntas aleatórias 2
 * get_started
   - action_greet_user
-* which{"question_entity": "exercicios"}
-    - slot{"last_intent": "which"}
+* which_can{"question_entity": "exercicios"}
+    - slot{"last_intent": "which_can"}
     - action_get_answer
-* which{"question_entity": "treinos"}
-    - slot{"last_intent": "which"}
+* which_can{"question_entity": "treinos"}
+    - slot{"last_intent": "which_can"}
     - action_get_answer
 
 ## perguntas aleatórias 3
@@ -126,19 +126,19 @@
     - action_greet_user
 * greeting_answer
     - utter_ask_info
-* which{"question_entity": "exercicios"}
-    - slot{"last_intent": "which"}
+* which_can{"question_entity": "exercicios"}
+    - slot{"last_intent": "which_can"}
     - action_get_answer
-* which_not{"question_entity": "alimentos"}
-    - slot{"last_intent": "which_not"}
+* which_can_not{"question_entity": "alimentos"}
+    - slot{"last_intent": "which_can_not"}
     - action_get_answer
 
 ## perguntas aleatórias 4
-* which{"question_entity": "alimentos"}
-    - slot{"last_intent": "which"}
+* which_need{"question_entity": "alimentos"}
+    - slot{"last_intent": "which_need"}
     - action_get_answer
-* which_not{"question_entity": "exercicio"}
-    - slot{"last_intent": "which_not"}
+* which_can_not{"question_entity": "exercicio"}
+    - slot{"last_intent": "which_can_not"}
     - action_get_answer
 * symptom{"question_entity": "gravidez"}
     - slot{"last_intent": "symptom"}
@@ -160,11 +160,11 @@
     - action_get_answer
 
 ## perguntas aleatórias 5
-* which{"question_entity": "alimentos"}
+* which_need{"question_entity": "alimentos"}
     - action_get_answer
-    - slot{"last_intent": "which"}
+    - slot{"last_intent": "which_need"}
 * last_intent{"question_entity": "exercicio"}
-    - slot{"last_intent": "which"}
+    - slot{"last_intent": "which_need"}
     - action_get_answer
 * symptom{"question_entity": "gravidez"}
     - slot{"last_intent": "symptom"}
@@ -271,7 +271,7 @@
 ## lembrete de remédio confirmado
 * hello
     - action_greet_user
-* set_reminder_medicine    
+* reminder_medicine    
   - form_medicine
   - form{"name": "form_medicine"}
   - form{"name": null}
@@ -279,7 +279,7 @@
   - utter_reminder
 
 ## lembrete de remédio confirmado 2
-* set_reminder_medicine
+* reminder_medicine
   - form_medicine
   - form{"name": "form_medicine"}
   - form{"name": null}
@@ -289,7 +289,7 @@
 ## lembrete de remédio cancelado
 * hello
     - action_greet_user
-* set_reminder_medicine    
+* reminder_medicine    
   - form_medicine
   - form{"name": "form_medicine"}
   - form{"name": null}
@@ -297,7 +297,7 @@
   - action_cancel_reminder
 
 ## unhappy path: lembrete de remédio cancelado
-* set_reminder_medicine
+* reminder_medicine
   - form_medicine
   - form{"name": "form_medicine"}
 * stop
@@ -311,7 +311,7 @@
 * deny
     - utter_info_later
     - utter_ask_me_anything
-* set_reminder_medicine
+* reminder_medicine
     - form_medicine
     - form{"name": "form_medicine"}
     - slot{"requested_slot": "med_frequency"}
@@ -339,7 +339,7 @@
 * deny
     - utter_info_later
     - utter_ask_me_anything
-* set_reminder_medicine
+* reminder_medicine
     - form_medicine
     - form{"name": "form_medicine"}
     - slot{"requested_slot": "med_frequency"}
@@ -367,7 +367,7 @@
 * deny
     - utter_info_later
     - utter_ask_me_anything
-* set_reminder_medicine
+* reminder_medicine
     - form_medicine
     - form{"name": "form_medicine"}
     - slot{"requested_slot": "med_frequency"}
@@ -399,7 +399,7 @@
 * deny
     - utter_info_later
     - utter_ask_me_anything
-* set_reminder_medicine
+* reminder_medicine
     - form_medicine
     - form{"name": "form_medicine"}
     - slot{"requested_slot": "med_frequency"}
@@ -430,7 +430,7 @@
 * deny
     - utter_info_later
     - utter_ask_me_anything
-* set_reminder_medicine
+* reminder_medicine
     - form_medicine
     - form{"name": "form_medicine"}
     - slot{"requested_slot": "med_frequency"}
@@ -455,7 +455,7 @@
 ## lembrete de consulta confirmado
 * hello
     - action_greet_user
-* set_reminder_appointment
+* reminder_appointment
   - form_appointment
   - form{"name": "form_appointment"}
   - form{"name": null}
@@ -463,7 +463,7 @@
   - utter_reminder
 
 ## lembrete de consulta confirmado 2
-* set_reminder_appointment
+* reminder_appointment
   - form_appointment
   - form{"name": "form_appointment"}
   - form{"name": null}
@@ -473,7 +473,7 @@
 ## lembrete de consulta cancelado
 * hello
     - action_greet_user
-* set_reminder_appointment    
+* reminder_appointment    
   - form_appointment
   - form{"name": "form_appointment"}
   - form{"name": null}
@@ -481,7 +481,7 @@
   - action_cancel_app_reminder
 
 ## unhappy path: lembrete de consulta cancelado
-* set_reminder_appointment
+* reminder_appointment
   - form_medicine
   - form{"name": "form_medicine"}
 * stop
@@ -495,7 +495,7 @@
 * deny
     - utter_info_later
     - utter_ask_me_anything
-* set_reminder_appointment
+* reminder_appointment
     - form_appointment
     - form{"name": "form_appointment"}
     - slot{"requested_slot": "app_doc_name"}
@@ -1309,14 +1309,14 @@
 * can{"question_entity": "dirigir"}
     - action_get_answer
     - slot{"last_intent": "can"}
-* which{"question_entity": "parto"}
+* which_best{"question_entity": "parto"}
     - action_get_answer
-    - slot{"last_intent": "which"}
+    - slot{"last_intent": "which_best"}
 
 ## Generated Story -4846044068828919887
-* which{"question_entity": "parto"}
+* which_best{"question_entity": "parto"}
     - action_get_answer
-    - slot{"last_intent": "which"}
+    - slot{"last_intent": "which_best"}
 * ask_normal_discharge_pregnancy
     - utter_normal_discharge_pregnancy
 * can{"question_entity": "cigarro"}
@@ -1330,9 +1330,9 @@
 * can{"question_entity": "cigarro"}
     - action_get_answer
     - slot{"last_intent": "can"}
-* which{"question_entity": "parto"}
+* which_best{"question_entity": "parto"}
     - action_get_answer
-    - slot{"last_intent": "which"}
+    - slot{"last_intent": "which_best"}
 * can{"question_entity": "sexo"}
     - action_get_answer
     - slot{"last_intent": "can"}
@@ -1341,7 +1341,64 @@
 * can{"question_entity": "sexo"}
     - action_get_answer
     - slot{"last_intent": "can"}
-* which{"question_entity": "parto"}
+* which_best{"question_entity": "parto"}
     - action_get_answer
-    - slot{"last_intent": "which"}
+    - slot{"last_intent": "which_best"}
+
+## Generated Story 7789138662663016432
+* which_can_not{"question_entity": "alimentos"}
+    - action_get_answer
+    - slot{"last_intent": "which_can_not"}
+
+## Generated Story 7789138662663016432
+* which_can_not{"question_entity": "depilacao"}
+    - action_get_answer
+    - slot{"last_intent": "which_can_not"}
+
+## Generated Story 7789138662663016432
+* which_can_not{"question_entity": "vacinas"}
+    - action_get_answer
+    - slot{"last_intent": "which_can_not"}
+
+## Generated Story 7789138662663016432
+* which_need{"question_entity": "vacinas"}
+    - action_get_answer
+    - slot{"last_intent": "which_need"}
+
+## Generated Story 7789138662663016432
+* which_main{"question_entity": "exames"}
+    - action_get_answer
+    - slot{"last_intent": "which_main"}
+
+## Generated Story 7789138662663016432
+* which_signs{"question_entity": "trabalho de parto"}
+    - action_get_answer
+    - slot{"last_intent": "which_signs"}
+
+## Generated Story 7789138662663016432
+* which_can{"question_entity": "vacinas"}
+    - action_get_answer
+    - slot{"last_intent": "which_can"}
+
+## Generated Story 7789138662663016432
+* which_cases{"question_entity": "forceps"}
+    - action_get_answer
+    - slot{"last_intent": "which_cases"}
+
+# how
+* how{"question_entity": "costas"}
+    - slot{"last_intent": "how"}
+    - action_get_answer
+
+* is_it_normal{"question_entity": "costas"}
+    - slot{"last_intent": "is_it_normal"}
+    - action_get_answer
+
+## Generated Story -4097205606057303362
+* how{"question_entity": "pre-natal"}
+    - action_get_answer
+    - slot{"last_intent": "how"}
+* is_it_normal{"question_entity": "cansa\u00e7o"}
+    - action_get_answer
+    - slot{"last_intent": "is_it_normal"}
 

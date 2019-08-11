@@ -160,33 +160,7 @@ forms:
   - form_personal
   - form_pregnancy
 intents:
-  - ill_do_it
-  - no_question
-  - have_question
-  - i_know_importance
-  - later
-  - why_i_need_to_answer
-  - did_exam
-  - did_not_exam
-  - last_intent
-  - set_reminder_medicine
-  - set_reminder_appointment
-  - reminder_medicine
-  - reminder_appointment
-  - affirm
-  - enter_data
-  - hello
-  - greeting_answer
-  - which
-  - greeting_back
-  - greeting
-  - deny
-  - which_not
-  - thank_you:
-      triggers: action_thank_you
-  - bye:
-      triggers: action_bye
-  - get_started
+  - affirm  
   - ask_isbot:
       triggers: action_is_bot
   - ask_howold:
@@ -195,8 +169,40 @@ intents:
       triggers: action_where_from
   - ask_whoisit:
       triggers: action_who_is_it
+  - bye:
+      triggers: action_bye
   - canthelp:
       triggers: action_cant_help
+  - deny
+  - did_exam
+  - did_not_exam
+  - enter_data
+  - have_question
+  - hello
+  - how
+  - greeting
+  - greeting_answer
+  - greeting_back
+  - i_know_importance
+  - ill_do_it
+  - is_it_normal
+  - no_question
+  - later
+  - why_i_need_to_answer
+  - last_intent
+  - reminder_medicine
+  - reminder_appointment
+  - which_best
+  - which_can
+  - which_can_not
+  - which_cases
+  - which_main
+  - which_need  
+  - which_not
+  - which_signs      
+  - thank_you:
+      triggers: action_thank_you
+  - get_started
   - what_is
   - can
   - goal_exam
