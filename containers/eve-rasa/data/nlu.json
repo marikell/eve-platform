@@ -6514,6 +6514,16 @@
         "entities": []
       },
       {
+        "text": "Estou grávida",
+        "intent": "im_pregnant",
+        "entities": []
+      },
+      {
+        "text": "to grávida",
+        "intent": "im_pregnant",
+        "entities": []
+      },
+      {
         "text": "Oii",
         "intent": "hello",
         "entities": []
@@ -13104,6 +13114,318 @@
             "entity": "question_entity"
           }
         ]
+      },
+      {
+        "text": "posso subir escada?",
+        "intent": "can",
+        "entities": [
+          {
+            "start": 12,
+            "end": 18,
+            "value": "escada",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "posso subir as escadas?",
+        "intent": "can",
+        "entities": [
+          {
+            "start": 15,
+            "end": 22,
+            "value": "escada",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "como funciona o pré-natal?",
+        "intent": "how",
+        "entities": [
+          {
+            "start": 16,
+            "end": 25,
+            "value": "pre-natal",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "Pode ser realizado Papanicolau estando grávida?",
+        "intent": "can",
+        "entities": [
+          {
+            "start": 19,
+            "end": 30,
+            "value": "papanicolau",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "posso fazer papanicolau?",
+        "intent": "can",
+        "entities": [
+          {
+            "start": 12,
+            "end": 23,
+            "value": "papanicolau",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "posso fazer o exame papanicolau?",
+        "intent": "can",
+        "entities": [
+          {
+            "start": 20,
+            "end": 31,
+            "value": "papanicolau",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "Fazer muitos ultrassons pode ser ruim ao bebê?",
+        "intent": "ask_ultrasound_hurt_baby",
+        "entities": []
+      },
+      {
+        "text": "o ultrassom pode machucar o bebê?",
+        "intent": "ask_ultrasound_hurt_baby",
+        "entities": []
+      },
+      {
+        "text": "ultrassom faz mal para o bebê?",
+        "intent": "ask_ultrasound_hurt_baby",
+        "entities": []
+      },
+      {
+        "text": "os ultrassons podem fazer mal pro bebe?",
+        "intent": "ask_ultrasound_hurt_baby",
+        "entities": []
+      },
+      {
+        "text": "Minha gestação é de alto risco, parto normal é permitido?",
+        "intent": "ask_high_risk_normal_birth",
+        "entities": []
+      },
+      {
+        "text": "Minha gestação é de alto risco, posso escolher parto normal?",
+        "intent": "ask_high_risk_normal_birth",
+        "entities": []
+      },
+      {
+        "text": "posso ter um parto normal se minha gestação é de alto risco?",
+        "intent": "ask_high_risk_normal_birth",
+        "entities": []
+      },
+      {
+        "text": "gestante com alto risco pode ter parto normal?",
+        "intent": "ask_high_risk_normal_birth",
+        "entities": []
+      },
+      {
+        "text": "minha gravidez é de alto risco, posso fazer o parto normal?",
+        "intent": "ask_high_risk_normal_birth",
+        "entities": []
+      },
+      {
+        "text": "O feto sente quando há relação sexual entre o casal?",
+        "intent": "ask_baby_feel_sex",
+        "entities": []
+      },
+      {
+        "text": "O bebe sente quando há relação sexual entre o casal?",
+        "intent": "ask_baby_feel_sex",
+        "entities": []
+      },
+      {
+        "text": "se eu fizer sexo o bebe consegue sentir?",
+        "intent": "ask_baby_feel_sex",
+        "entities": []
+      },
+      {
+        "text": "se eu transar o bebe vai sentir?",
+        "intent": "ask_baby_feel_sex",
+        "entities": []
+      },
+      {
+        "text": "o bebe sente alguma coisa quando estou transando?",
+        "intent": "ask_baby_feel_sex",
+        "entities": []
+      },
+      {
+        "text": "o bebe sente alguma coisa na hora da relação sexual??",
+        "intent": "ask_baby_feel_sex",
+        "entities": []
+      },
+      {
+        "text": "o bebe sente alguma coisa quando estou fazendo sexo?",
+        "intent": "ask_baby_feel_sex",
+        "entities": []
+      },
+      {
+        "text": "o bebe sente quando o casal está fazendo sexo?",
+        "intent": "ask_baby_feel_sex",
+        "entities": []
+      },
+      {
+        "text": "o bebe sente quando o casal está transando?",
+        "intent": "ask_baby_feel_sex",
+        "entities": []
+      },
+      {
+        "text": "Passar vontade de comer algum alimento pode provocar algum sinal na aparência do bebê?",
+        "intent": "ask_food_desire_baby_appearance",
+        "entities": []
+      },
+      {
+        "text": "ter vontade de algum alimento durante a gestação pode influenciar na aparência do bebê?",
+        "intent": "ask_food_desire_baby_appearance",
+        "entities": []
+      },
+      {
+        "text": "ficar com vontade de comer alguma coisa, influencia na aparencia do bebe?",
+        "intent": "ask_food_desire_baby_appearance",
+        "entities": []
+      },
+      {
+        "text": "É permitido tomar anestesia para algum procedimento dentário?",
+        "intent": "ask_anesthesia_dentist",
+        "entities": []
+      },
+      {
+        "text": "posso tomar anestesia quando for ao dentista?",
+        "intent": "ask_anesthesia_dentist",
+        "entities": []
+      },
+      {
+        "text": "posso tomar anestesia quando for ao dentista se for preciso?",
+        "intent": "ask_anesthesia_dentist",
+        "entities": []
+      },
+      {
+        "text": "grávida pode tomar anestesia quando for ao dentista?",
+        "intent": "ask_anesthesia_dentist",
+        "entities": []
+      },
+      {
+        "text": "Após o parto, posso voltar à pílula que eu usava antes de engravidar?",
+        "intent": "ask_contraceptive_pill_after_birth",
+        "entities": []
+      },
+      {
+        "text": "posso voltar à pílula que eu usava antes de engravidar depois do parto?",
+        "intent": "ask_contraceptive_pill_after_birth",
+        "entities": []
+      },
+      {
+        "text": "depois que o bebè nascer posso voltar a tomar a minha pílula?",
+        "intent": "ask_contraceptive_pill_after_birth",
+        "entities": []
+      },
+      {
+        "text": "depois que o bebe nascer posso tomar a pílula anticoncepcional que eu ja tomava antes?",
+        "intent": "ask_contraceptive_pill_after_birth",
+        "entities": []
+      },
+      {
+        "text": "depois que meu filho nascer posso voltar a tomar a mesma pílula anticoncepcional?",
+        "intent": "ask_contraceptive_pill_after_birth",
+        "entities": []
+      },
+      {
+        "text": "depois que meu filho nascer posso voltar a tomar a mesma pílula?",
+        "intent": "ask_contraceptive_pill_after_birth",
+        "entities": []
+      },
+      {
+        "text": "posso voltar a tomar a minha pílula depois que o bebe nascer?",
+        "intent": "ask_contraceptive_pill_after_birth",
+        "entities": []
+      },
+      {
+        "text": "posso voltar a tomar a pilula dps q o bebe nascer?",
+        "intent": "ask_contraceptive_pill_after_birth",
+        "entities": []
+      },
+      {
+        "text": "Posso convidar alguém para me acompanhar no parto?",
+        "intent": "ask_invite_accompany_birth",
+        "entities": []
+      },
+      {
+        "text": "eu posso convidar minha mae para me acompanhar no parto?",
+        "intent": "ask_invite_accompany_birth",
+        "entities": []
+      },
+      {
+        "text": "posso chamar o meu marido pra me acompanhar no parto?",
+        "intent": "ask_invite_accompany_birth",
+        "entities": []
+      },
+      {
+        "text": "meu marido pode me acompanhar no parto?",
+        "intent": "ask_invite_accompany_birth",
+        "entities": []
+      },
+      {
+        "text": "alguem pode me acompanhar durante o parto?",
+        "intent": "ask_invite_accompany_birth",
+        "entities": []
+      },
+      {
+        "text": "alguem pode me acompanhar no dia do parto?",
+        "intent": "ask_invite_accompany_birth",
+        "entities": []
+      },
+      {
+        "text": "posso ter um acompanhante durante o parto?",
+        "intent": "ask_invite_accompany_birth",
+        "entities": []
+      },
+      {
+        "text": "posso ter um acompanhante no parto?",
+        "intent": "ask_invite_accompany_birth",
+        "entities": []
+      },
+      {
+        "text": "a gravida pode ter um acompanhante na sala do parto?",
+        "intent": "ask_invite_accompany_birth",
+        "entities": []
+      },
+      {
+        "text": "a gestante pode ter um acompanhante durante o parto?",
+        "intent": "ask_invite_accompany_birth",
+        "entities": []
+      },
+      {
+        "text": "Já tive uma cesariana, posso ter parto normal na próxima gestação?",
+        "intent": "ask_cesarean_can_normal_birth",
+        "entities": []
+      },
+      {
+        "text": "ja tive um parto cesarea, posso ter um parto normal?",
+        "intent": "ask_cesarean_can_normal_birth",
+        "entities": []
+      },
+      {
+        "text": "quem já fez cesarea pode ter um parto normal?",
+        "intent": "ask_cesarean_can_normal_birth",
+        "entities": []
+      },
+      {
+        "text": "ja tive uma cesariana, posso ter um parto normal?",
+        "intent": "ask_cesarean_can_normal_birth",
+        "entities": []
+      },
+      {
+        "text": "se eu ja fiz uma cesarea eu posso ter um parto normal?",
+        "intent": "ask_cesarean_can_normal_birth",
+        "entities": []
       }
     ],
     "regex_features": [],

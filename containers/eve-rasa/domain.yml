@@ -132,6 +132,14 @@ actions:
   - utter_how_many_pounds_pregnancy
   - utter_how_long_breastfeed
   - utter_how_long_healthy_pregnant
+  - utter_high_risk_normal_birth
+  - utter_ultrasound_hurt_baby
+  - utter_baby_feel_sex
+  - utter_food_desire_baby_appearance
+  - utter_anesthesia_dentist
+  - utter_contraceptive_pill_after_birth
+  - utter_invite_accompany_birth
+  - utter_cesarean_can_normal_birth
 entities: 
   - last_menstruation
   - first_ultrasound
@@ -284,6 +292,14 @@ intents:
   - ask_how_many_pounds_pregnancy
   - ask_how_long_breastfeed
   - ask_how_long_healthy_pregnant
+  - ask_high_risk_normal_birth
+  - ask_ultrasound_hurt_baby
+  - ask_baby_feel_sex
+  - ask_food_desire_baby_appearance
+  - ask_anesthesia_dentist
+  - ask_contraceptive_pill_after_birth
+  - ask_invite_accompany_birth
+  - ask_cesarean_can_normal_birth  
 slots:
   first_pregnancy:
     type: unfeaturized
@@ -842,3 +858,19 @@ O planejamento tem o objetivo de identificar fatores de risco como diabetes e hi
   - text: "O aleitamento deve ser feito por pelo menos seis meses, e até cerca de um ano. Amentar é difícil, exige dedicação e paciência, mas é extremamente benéfica para o desenvolvimento do bebê."
   utter_how_long_healthy_pregnant:
   - text: "Pode demorar até dois anos para engravidar. Apenas passando desse período é que começa a ser aconselhado exames específicos para avaliar a fertilidade do casal, antes não é preciso se preocupar."
+  utter_high_risk_normal_birth:
+  - text: "Sim. Você pode ter parto normal e, na maioria das vezes, mesmo em gestações de alto risco, é o parto que implica em menos complicações. Se há algum impedimento ao parto normal, essa situação deverá ser explicada a você pelo médico e deverá constar por escrito em seu cartão de pré-natal."
+  utter_ultrasound_hurt_baby:
+  - text: "Não. Você pode realizar quantos ultrassons forem necessários desde que seja por indicação médica."  
+  utter_baby_feel_sex:
+  - text: " Não, isso é um mito."
+  utter_food_desire_baby_appearance:
+  - text: "Não. Esses desejos repentinos por algum alimento específico, mesmo se não atendidos, não provocarão o aparecimento de nenhum sinal na aparência do bebê."
+  utter_anesthesia_dentist:
+  - text: "Sim. Você pode receber anestesia e o dentista vai saber a conduta mais adequada e segura na gravidez."
+  utter_contraceptive_pill_after_birth:
+  - text: "Depende da pílula, procure orientação a respeito disso, pois alguns métodos não são recomendados logo no pós-parto imediato. Até você tirar essa dúvida com o seu médico, use preservativo."
+  utter_invite_accompany_birth:
+  - text: "Sim. Na maternidade, é seu direito escolher um acompanhante e tê-lo sempre ao seu lado durante o trabalho de parto, no parto e pós-parto."
+  utter_cesarean_can_normal_birth:
+  - text: "Sim. Se seu primeiro parto foi uma cesariana, isso não é impedimento para parto normal. Informe-se melhor no pré-natal para entender o seguimento de uma gestante no final da gestação."

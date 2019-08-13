@@ -1232,6 +1232,7 @@
     - utter_have_sex_until_month
 * ask_sore_sex_after_birth
     - utter_sore_sex_after_birth
+
 ## Generated Story -4178839390444423351
 * hello
     - action_greet_user
@@ -1240,7 +1241,7 @@
 * can{"question_entity": "raio x"}
     - action_get_answer
     - slot{"last_intent": "can"}
-* im_pregnant{"time": "2019-08-06T19:19:35.000-07:00"}
+* im_pregnant
     - utter_congrats
     - utter_first_step
     - utter_ask_info
@@ -1258,7 +1259,7 @@
 * can{"question_entity": "rela\u00e7\u00f5es sexuais"}
     - action_get_answer
     - slot{"last_intent": "can"}
-* im_pregnant{"time": "2019-08-06T20:44:28.000-07:00"}
+* im_pregnant
     - utter_congrats
     - utter_first_step
     - utter_ask_info
@@ -1385,7 +1386,7 @@
     - action_get_answer
     - slot{"last_intent": "which_cases"}
 
-# how
+## how
 * how{"question_entity": "costas"}
     - slot{"last_intent": "how"}
     - action_get_answer
@@ -1402,3 +1403,54 @@
     - action_get_answer
     - slot{"last_intent": "is_it_normal"}
 
+## Story from conversation with me on August 11th 2019
+
+* ask_sore_sex_after_birth
+    - utter_sore_sex_after_birth
+* im_pregnant
+    - utter_congrats
+    - utter_first_step
+    - utter_ask_info
+
+## Story from conversation with me on August 11th 2019
+
+* im_pregnant
+    - utter_congrats
+    - utter_first_step
+    - utter_ask_info
+
+## ask_high_risk_normal_birth 
+* ask_high_risk_normal_birth
+    - utter_high_risk_normal_birth
+
+## ask_ultrasound_hurt_baby
+* ask_ultrasound_hurt_baby
+    - utter_ultrasound_hurt_baby
+
+## ask_baby_feel_sex
+* ask_baby_feel_sex
+    - utter_baby_feel_sex
+
+## ask_food_desire_baby_appearance
+* ask_food_desire_baby_appearance
+    - utter_food_desire_baby_appearance
+
+## ask_anesthesia_dentist
+* ask_anesthesia_dentist
+    - utter_anesthesia_dentist
+
+## ask_contraceptive_pill_after_birth
+* ask_contraceptive_pill_after_birth
+    - utter_contraceptive_pill_after_birth
+
+## ask_invite_accompany_birth
+* ask_invite_accompany_birth
+    - utter_invite_accompany_birth
+
+## ask_cesarean_can_normal_birth
+* ask_cesarean_can_normal_birth
+    - utter_cesarean_can_normal_birth
+
+## can
+* can{"question_entity": "papanicolau"}
+    - action_get_answer
