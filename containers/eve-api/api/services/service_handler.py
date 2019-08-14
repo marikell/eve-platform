@@ -11,6 +11,7 @@ from api.services.user_health_info_service import UserHealthInfoService
 from api.services.user_pregnancy_info_service import UserPregnancyInfoService
 from api.services.user_personal_info_service import UserPersonalInfoService
 from api.services.unanswered_question_service import UnansweredQuestionService
+from api.services.user_trimester_service import UserTrimesterService
 
 services : dict = {}
 
@@ -29,6 +30,7 @@ class ServiceHandler():
         services[ROUTE_CONFIG['USER_PERSONAL_INFO_TYPE_NAME']] = UserPersonalInfoService()
         services[ROUTE_CONFIG['USER_EXAM_TYPE_NAME']] = UserExamService()
         services[ROUTE_CONFIG['UNANSWERED_QUESTION_TYPE_NAME']] = UnansweredQuestionService()
+        services[ROUTE_CONFIG['USER_TRIMESTER_TYPE_NAME']] = UserTrimesterService()
 
     @staticmethod
     def get_service(name: str):

@@ -9,6 +9,7 @@ from api.blueprints.rasa_blueprint import app_rasa
 from api.blueprints.fup_blueprint import app_fup
 from api.blueprints.user_exam_blueprint import app_user_exam
 from api.blueprints.unanswered_question_blueprint import app_unanswered_question
+from api.blueprints.user_trimester_blueprint import app_usr_trimester
 from api.services.service_handler import ServiceHandler
 from flask_api import FlaskAPI
 from mongoengine import connect
@@ -34,6 +35,7 @@ def register_blueprints(app):
     app.register_blueprint(app_fup)
     app.register_blueprint(app_rasa)
     app.register_blueprint(app_unanswered_question)
+    app.register_blueprint(app_usr_trimester)
     # app.register_blueprint(app_user_exam)
 
 @flask_app.route('/', methods=['GET'])

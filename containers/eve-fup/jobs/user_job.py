@@ -4,6 +4,8 @@ from helpers.logging import get_log
 from enums.service_enums import UserTypeEnum
 import json
 import traceback
+from datetime import datetime
+from datetime import date
 
 class UserJob():
     def run(self):
@@ -13,8 +15,8 @@ class UserJob():
         get_log('Users to process: {}'.format(len(users)))
         [self.execute_job(usr) for usr in users]
         
-    def get_user_pregnancy_weeks(self,user_id):
-        r = requests.get(url = '{}/user-pregnancy-weeks/{}'.format(EVE_API['url'], user_id))
+    def get_user_pregnancy_trimester(self,user_id):
+        r = requests.get(url = '{}/user-trimester/{}'.format(EVE_API['url'], user_id))
 
         json_obj = r.json()
 
@@ -26,16 +28,16 @@ class UserJob():
         return obj
 
             
-    def update_user_pregnancy_weeks(self, obj):
-        #increasing user weeks of pregnancy
+    def update_user_pregnancy_trimester(self, obj):
+        #increasing user trimester of pregnancy
         data = {
-            "weeks": (int(obj['weeks']) + 1)
+            "trimester": (int(obj['trimester']) + 1)
         }
 
         headers = {
             'Content-Type':'application/json'
         }
-        url = '{}/user-pregnancy-weeks/{}'.format(EVE_API['url'], obj['_id']['$oid'])
+        url = '{}/user-trimester/{}'.format(EVE_API['url'], obj['_id']['$oid'])
 
         r = requests.put(url, data=json.dumps(data), headers=headers)
 
@@ -53,13 +55,21 @@ class UserJob():
             if user['user_type'] != UserTypeEnum.pregnant.value:
                 raise Exception('User {} will not be monitored!'.format(user_id))
 
-            user_pregnancy_weeks = self.get_user_pregnancy_weeks(user_id)
-
-            get_log('User {} is pregnant with {} weeks.'.format(user_id, user_pregnancy_weeks['weeks']))
+            user_trimester = self.get_user_pregnancy_trimester(user_id)            
+            update_date = user_trimester['update_date']['$date']
+            today = date.today()            
+            trimester = user_trimester['trimester']
             
-            self.update_user_pregnancy_weeks(user_pregnancy_weeks)
+            update_date = date.fromtimestamp(update_date/1000)
+            date_diff = today - update_date            
+            
+            if(date_diff.days >= 90 and trimester < 3):
+                r = requests.get(url = '{}/user'.format(EVE_API['url']))
+                get_log('User {} is pregnant in {} trimester.'.format(user_id, user_trimester['trimester']))
+            
+                self.update_user_pregnancy_trimester(user_trimester)
 
-            get_log('Successfully updated user {} weeks.'.format(user_id))        
+                get_log('Successfully updated user {} trimester.'.format(user_id))        
 
         except Exception as e:
             get_log(str(e))
