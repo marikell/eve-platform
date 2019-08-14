@@ -15,6 +15,7 @@ ROUTE_CONFIG:dict = {
     'USER_PERSONAL_INFO_TYPE_NAME':'user-personal',
     'USER_TRIMESTER_TYPE_NAME':'user-trimester',
     'UNANSWERED_QUESTION_TYPE_NAME':'unanswered-question',
+    'FORM_TYPE_NAME':'form',
     #this endpoint will be called by the fup service
     'FUP':'fup',
     #this endpoint will be called by rasa to send data
