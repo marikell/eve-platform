@@ -8,3 +8,5 @@ pytest
 pytest-cov
 flask-mongoengine
 python-dateutil
+jwt
+pyjwt
