@@ -152,7 +152,7 @@ def get(id):
         obj = ServiceHandler.get_service(route_name).get(id)
 
         if not obj:
-            raise Exception('Object with ieyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVkM2Y3ZmExMmQ4NDIzMzQxZTU2MzY5ZiIsImV4cCI6MTU2NTUzNTg2NX0.VkfUJLOLghmD1NSmQmdAnolCgnDgypWdqd-IREH7iygd {} not found!'.format(id))
+            raise Exception('Object with id {} not found!'.format(id))
 
         return response(obj.to_json(), status.HTTP_200_OK)
 
