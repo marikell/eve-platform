@@ -7,3 +7,5 @@ pytz
 pytest
 pytest-cov
 flask-mongoengine
+jwt
+pyjwt
