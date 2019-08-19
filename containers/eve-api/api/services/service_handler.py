@@ -24,7 +24,6 @@ class ServiceHandler():
         services[ROUTE_CONFIG['ENTITY_INTENT_ANSWER_TYPE_NAME']] = EntityIntentAnswerService()
         services[ROUTE_CONFIG['USER_TYPE_NAME']] = UserService()
         services[ROUTE_CONFIG['EXAM_TYPE_NAME']] = ExamService()
-        services[ROUTE_CONFIG['RASA']] = RasaService()
         services[ROUTE_CONFIG['USER_INFO_TYPE_NAME']] = UserInfoService()
         services[ROUTE_CONFIG['USER_HEALTH_INFO_TYPE_NAME']] = UserHealthInfoService()
         services[ROUTE_CONFIG['USER_PREGNANCY_INFO_TYPE_NAME']] = UserPregnancyInfoService()
