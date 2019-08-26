@@ -68,7 +68,7 @@ def verify_token():
     finally:
         return response(obj, status.HTTP_200_OK)
 
-@app_user.route('/login')
+@app_user.route('/login', methods=['GET'])
 def login():
     auth = request.authorization
     if not auth or not auth.username or not auth.password:
@@ -84,15 +84,13 @@ def login():
         user_json = json.loads(user.to_json())
         user_id = user_json['_id']['$oid']
         token = jwt.encode({'id': user_id, 'exp' : datetime.datetime.utcnow() + datetime.timedelta(minutes=1)}, API_SECRET_KEY)
-
         return jsonify({'token': token.decode('UTF-8'), 'name': user_json['name'], 'email' : user_json['email'] })        
     
     return response_text('Senha incorreta. Tente novamente!', status.HTTP_401_UNAUTHORIZED)
 
 
 @app_user.route('/{}'.format(route_name), methods=['GET'])
-@token_required
-def get_all(current_user):
+def get_all():
     try:
         users = ServiceHandler.get_service(route_name).get_all().only('_id','email','creation_date'
         ,'user_type','is_admin')
