@@ -1454,3 +1454,11 @@
 ## can
 * can{"question_entity": "papanicolau"}
     - action_get_answer
+
+## Story from conversation with me on August 27th 2019
+
+* hello
+    - action_greet_user
+* complain
+    - action_get_answer
+    - slot{"last_intent":"complain"}

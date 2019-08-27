@@ -8,10 +8,13 @@ from api.utils.response_formatter import response, response_text
 from api.services.service_handler import ServiceHandler
 from api.config.configuration import ROUTE_CONFIG
 from api.utils.validate_fields import *
+from datetime import datetime
+from dateutil.parser import parse
+from datetime import date
+from dateutil.relativedelta import relativedelta
 
 route_name = ROUTE_CONFIG['RASA']
 app_rasa = Blueprint(route_name,__name__, url_prefix='/api')
-
 
 @app_rasa.route('/{}/send-slot-user-exam/<id>'.format(route_name), methods=['POST'])
 def send_user_exam_slot(id):
@@ -64,12 +67,41 @@ def send_slots_from_Rasa(id):
         }
 
         user_info = ServiceHandler.get_service(ROUTE_CONFIG['USER_INFO_TYPE_NAME']).get_by_user(user)
-            
+        user_trimester = ServiceHandler.get_service(ROUTE_CONFIG['USER_TRIMESTER_TYPE_NAME']).get_by_user(user)
+        
         if user_info:
             obj['id'] = user_info.id
             ServiceHandler.get_service(ROUTE_CONFIG['USER_INFO_TYPE_NAME']).update(obj)
         else:
             ServiceHandler.get_service(ROUTE_CONFIG['USER_INFO_TYPE_NAME']).insert(obj)
+        
+        if not user_trimester:
+            last_menstruation_date = parse(obj['last_menstruation_date']).date()
+            first_ultrasound_date = parse(obj['first_ultrasound_date']).date()
+
+            if last_menstruation_date > date.today():
+                last_menstruation_date = last_menstruation_date - relativedelta(years=1)
+            
+            if first_ultrasound_date > date.today():
+                first_ultrasound_date = first_ultrasound_date - relativedelta(years=1)
+            
+            date_diff = first_ultrasound_date - last_menstruation_date
+            start_date = first_ultrasound_date if date_diff.days > 7 else last_menstruation_date
+            
+            if ((date.today() - start_date).days <= 90):
+                trimester = 1
+            elif ((date.today() - start_date).days <= 180):
+                trimester = 2
+            else:
+                trimester = 3
+            
+            obj = {
+                'start_date' : start_date.strftime("%Y-%m-%dT%H:%M:%S.%f"),
+                'trimester' : trimester,
+                'user': user
+            }
+            
+            ServiceHandler.get_service(ROUTE_CONFIG['USER_TRIMESTER_TYPE_NAME']).insert(obj)
         
         return response(status=status.HTTP_200_OK)
 

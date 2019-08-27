@@ -42,7 +42,8 @@ def insert():
         obj = {
             "trimester": json_obj['trimester'],
             "description": ('' if 'description' not in json_obj else json_obj['description']),
-            "name": json_obj['name']
+            "name": json_obj['name'],
+            "slot": ('' if 'slot' not in json_obj else json_obj['slot']),
         }
         ServiceHandler.get_service(route_name).insert(obj)
         return response(status=status.HTTP_201_CREATED)

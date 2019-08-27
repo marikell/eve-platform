@@ -38,7 +38,7 @@ def register_blueprints(app):
     app.register_blueprint(app_unanswered_question)
     app.register_blueprint(app_usr_trimester)
     app.register_blueprint(app_form)
-    # app.register_blueprint(app_user_exam)
+    app.register_blueprint(app_user_exam)
 
 @flask_app.route('/', methods=['GET'])
 def get():
