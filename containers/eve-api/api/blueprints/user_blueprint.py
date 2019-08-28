@@ -84,7 +84,15 @@ def login():
         user_json = json.loads(user.to_json())
         user_id = user_json['_id']['$oid']
         token = jwt.encode({'id': user_id, 'exp' : datetime.datetime.utcnow() + datetime.timedelta(minutes=1)}, API_SECRET_KEY)
-        return jsonify({'token': token.decode('UTF-8'), 'name': user_json['name'], 'email' : user_json['email'] })        
+        user_info = ServiceHandler.get_service(ROUTE_CONFIG['USER_INFO_TYPE_NAME']).get_by_user_id(user_id)
+        user_type = UserTypeEnum.normal
+        if user_info is not None:
+            user_info_object = json.loads(user_info.to_json())
+            if "is_pregnant" in user_info_object and user_info_object['is_pregnant']:
+                user_type = UserTypeEnum.pregnant
+            elif "is_trying" in user_info_object and user_info_object['is_trying']:
+                user_type = UserTypeEnum.wanting_conceive
+        return jsonify({'token': token.decode('UTF-8'), 'name': user_json['name'], 'email' : user_json['email'], 'user_type' : user_type })        
     
     return response_text('Senha incorreta. Tente novamente!', status.HTTP_401_UNAUTHORIZED)
 

@@ -34,6 +34,8 @@ class UserInfoService(GenericService):
         
         user_info.save()
 
+    def get_by_user_id(self, user_id):
+        return self.objects(Q(user_id=ObjectId(user_id))).first()
 
     def get_by_user(self, user):
         return self.objects(Q(user_id=ObjectId(user.id))).first()

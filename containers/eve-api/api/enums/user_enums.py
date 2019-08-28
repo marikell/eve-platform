@@ -1,6 +1,7 @@
 from enum import IntEnum
 
 class UserTypeEnum(IntEnum):
-    normal = 0,
-    pregnant = 1,
-    wanting_conceive = 2
+    pregnant = 0,
+    wanting_conceive = 1,
+    after_birth = 2,
+    normal = 3
