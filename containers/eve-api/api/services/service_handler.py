@@ -14,6 +14,7 @@ from api.services.unanswered_question_service import UnansweredQuestionService
 from api.services.user_trimester_service import UserTrimesterService
 from api.services.form_service import FormService
 from api.services.tip_service import TipService
+from api.services.notification_user_service import NotificationUserService
 
 services : dict = {}
 
@@ -34,7 +35,7 @@ class ServiceHandler():
         services[ROUTE_CONFIG['USER_TRIMESTER_TYPE_NAME']] = UserTrimesterService()
         services[ROUTE_CONFIG['TIP_TYPE_NAME']] = TipService()
         services[ROUTE_CONFIG['FORM_TYPE_NAME']] = FormService()
-        services[ROUTE_CONFIG['FORM_TYPE_NAME']] = FormService()
+        services[ROUTE_CONFIG['NOTIFICATION_USER_TYPE_NAME']] = NotificationUserService()
 
     @staticmethod
     def get_service(name: str):

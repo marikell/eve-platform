@@ -17,6 +17,7 @@ ROUTE_CONFIG:dict = {
     'USER_PERSONAL_INFO_TYPE_NAME':'user-personal',
     'USER_TRIMESTER_TYPE_NAME':'user-trimester',
     'UNANSWERED_QUESTION_TYPE_NAME':'unanswered-question',
+    'NOTIFICATION_USER_TYPE_NAME':'notification-user',
     'FORM_TYPE_NAME':'form',
     'TIP_TYPE_NAME':'tip',
     #this endpoint will be called by the fup service
