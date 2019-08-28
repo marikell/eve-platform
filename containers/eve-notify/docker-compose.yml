@@ -1,0 +1,13 @@
+version: "3"
+services:
+ eve_notify:
+     container_name: eve_notify
+     build: .
+     restart: always
+     networks:
+       - evemongo_evenetwork
+     volumes:
+         - ./:/app/
+networks:
+  evemongo_evenetwork:
+    external: true

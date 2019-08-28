@@ -1,6 +1,7 @@
 from api.models.tip import Tip
 from api.services.generic_service import GenericService
 from mongoengine.queryset.visitor import Q
+import json
 
 class TipService(GenericService):
     def __init__(self):
@@ -12,6 +13,12 @@ class TipService(GenericService):
 
     def getby_type(self, tip_type):
         return Tip.objects((Q(tip_type=tip_type) & Q(send=False))).first()
+    
+    def reset_by_type(self, tip_type):
+        items = Tip.objects(Q(tip_type=tip_type))
+        for obj in items:
+            obj.send = False
+            obj.save()
 
     def update(self, obj):
         tip = self.get(obj['id'])
@@ -19,7 +26,5 @@ class TipService(GenericService):
         if not tip:
             raise Exception('Object with id {} not found!'.format(obj['id']))
 
-        tip.description = obj['description']
         tip.send = obj['send']
-        tip.tip_type = obj['tip_type']
         tip.save()

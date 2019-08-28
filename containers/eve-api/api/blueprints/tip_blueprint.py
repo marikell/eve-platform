@@ -48,12 +48,24 @@ def update(id):
 
         obj = {
              "id" : id,
-            "description": json['description'],
-            "tip_type": json['tip_type'],
             "send": json['send']
         }
 
         ServiceHandler.get_service(route_name).update(obj)
+
+        return response(status=status.HTTP_200_OK)
+
+    except Exception as e:
+        return response(str(e), status.HTTP_400_BAD_REQUEST)
+
+@app_tip.route('/{}/reset'.format(route_name), methods=['PUT'])
+def reset():
+    try:
+        json = request.get_json()
+
+        tip_type = json['tip_type']
+
+        ServiceHandler.get_service(route_name).reset_by_type(tip_type)
 
         return response(status=status.HTTP_200_OK)
 
