@@ -12,49 +12,47 @@ class SendExamJob():
         channel = connection.channel()
         channel.queue_declare(queue='exams')
         
-        pregnant_users_exams = self.get_pregnant_users_exams()
-        exams = self.get_all_exams()
+        users_exams = self.get_users_exams()
 
-        for usr in pregnant_users_exams:
-            for exm in exams:
-                checked_exm = self.check_exam(exm, usr)
-
-                if checked_exm is None:
-                    continue
-                
+        for usr in users_exams:
+            usr_exm = self.check_exam(usr, usr['exm'])
+            if not usr_exm:
+                exm = usr['exm']
                 obj = {
                     'user_id' : usr['user_id']['$oid'],
-                    'exam_id' : exm['_id']['$oid'],
+                    'exam_id' : exm[0]['_id']['$oid'],
                     'exam_status' : 0
                 }
-                
-                if(self.insert_user_exam(obj)):
+                inserted = json.loads(self.insert_user_exam(obj))                
+                if(inserted):
                     msg = {
-                        'user' : usr['user_id']['$oid'],
-                        'exam_name' : checked_exm['name'],
-                        'exam_slot' : checked_exm['slot']
+                        'user_id' : usr['user_id']['$oid'],
+                        'exam_id' : exm[0]['_id']['$oid'],
+                        'user_exam_id' : inserted['inserted_id'],
+                        'exam_name' : exm[0]['name']
                     }
-
                     channel.basic_publish(exchange='', routing_key='exams', body=json.dumps(msg))
-                    print('User {} - Exam {}: sent to queue.'.format(usr['user_id']['$oid'], checked_exm['name']))
-        
+                    print('User {} - Exam {}: sent to queue.'.format(usr['user_id']['$oid'], exm[0]['name']))
         connection.close()
+    
+    #verifica se o usuário possui registro na tabela user_exam para esse exame
+    def check_exam(self, usr, exm):
+        url = '{}/user-exam/{}/{}'.format(EVE_API['url'], usr['user_id']['$oid'], exm[0]['_id']['$oid'])        
+        r = requests.get(url)
+        json_obj = r.json()
         
-    def check_exam(self, exm, usr):
-        user_made_exams_ids = [exmusr['exam_id']['$oid'] for exmusr in usr['user_exams']]
-        id = exm['_id']['$oid']
-
-        if id in user_made_exams_ids:
-            return None
-
-        if exm['trimester'] == 0 or (usr['user_trimesters'][0]['trimester'] >= exm['trimester']):
-            return exm
+        if json_obj['status'] == 400:
+            get_log(json_obj['response'])
+            return
         
-        return None
-
-    def get_pregnant_users_exams(self):
-        r = requests.get(url = '{}/fup/pregnant-users-with-exams'.format(EVE_API['url']))
-
+        try:
+            response = json.loads(json_obj['response'])
+        except KeyError:
+            response = None        
+        return response
+        
+    def get_users_exams(self):
+        r = requests.get(url = '{}/fup/users-with-exams'.format(EVE_API['url']))
         json_obj = r.json()
 
         if json_obj['status'] == 400:
@@ -62,19 +60,7 @@ class SendExamJob():
             return
 
         join_response = json.loads(json_obj['response'])
-        
         return join_response
-
-    def get_all_exams(self):
-        r = requests.get(url = '{}/exam'.format(EVE_API['url']))
-
-        json_obj = r.json()
-
-        if json_obj['status'] == 400:
-            get_log(json_obj['response'])
-            return
-
-        return json_obj['response']
 
     def insert_user_exam(self, usr_exm):
         headers = {
@@ -87,9 +73,7 @@ class SendExamJob():
         json_obj = r.json()
 
         if json_obj['status'] == 201:
-            return True
+            return json_obj['response']
         
         get_log(json_obj['response'])
         return
-
-

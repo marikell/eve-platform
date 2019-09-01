@@ -13,7 +13,7 @@ from api.utils.response_formatter import response, response_text
 route_name = ROUTE_CONFIG['FUP']
 app_fup = Blueprint(route_name,__name__, url_prefix='/api')
 
-@app_fup.route('/{}/pregnant-users-with-exams'.format(route_name), methods=['GET'])
+@app_fup.route('/{}/users-with-exams'.format(route_name), methods=['GET'])
 def get_pregnant_users():
     try:
         obj = get_users_exams()
