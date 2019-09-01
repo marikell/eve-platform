@@ -24,5 +24,5 @@ class UserExamService(GenericService):
         if not user_exam:
             raise Exception('Object with id {} not found!'.format(obj['id']))
         
-        user_exam.exam_status = (obj['exam_status'])
+        user_exam.exam_status = obj['exam_status']
         user_exam.save()

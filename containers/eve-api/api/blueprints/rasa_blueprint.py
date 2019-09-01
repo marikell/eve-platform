@@ -16,27 +16,21 @@ from dateutil.relativedelta import relativedelta
 route_name = ROUTE_CONFIG['RASA']
 app_rasa = Blueprint(route_name,__name__, url_prefix='/api')
 
-@app_rasa.route('/{}/send-slot-user-exam/<id>'.format(route_name), methods=['POST'])
-def send_user_exam_slot(id):
+@app_rasa.route('/{}/send-slot-user-exam'.format(route_name), methods=['POST'])
+def send_user_exam_slot():
     try:
         json_obj = request.get_json()
-        exam = ServiceHandler.get_service(ROUTE_CONFIG['EXAM_TYPE_NAME']).get(json_obj['exam_id'])
+        user_exam = ServiceHandler.get_service(ROUTE_CONFIG['USER_EXAM_TYPE_NAME']).get(json_obj['id'])
 
-        if not exam:
-            raise Exception('Exam not found!')
-
-        user = ServiceHandler.get_service(ROUTE_CONFIG['USER_TYPE_NAME']).get(json_obj['user_id'])
-        
-        if not user:
-            raise Exception('User not found!')
+        if not user_exam:
+            raise Exception('User Exam not found!')
 
         obj = {
-            'user' : user,
-            'exam' : exam
+            'exam_status' : json_obj['exam_status'],
+            'id' : json_obj['id']
         }
 
-        ServiceHandler.get_service(ROUTE_CONFIG['USER_EXAM_TYPE_NAME']).insert(obj)      
-
+        ServiceHandler.get_service(ROUTE_CONFIG['USER_EXAM_TYPE_NAME']).update(obj)
         return response(status=status.HTTP_201_CREATED)
 
     except Exception as e:

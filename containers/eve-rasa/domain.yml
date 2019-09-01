@@ -337,6 +337,8 @@ slots:
     type: list
   exam_name:
     type: text
+  user_exam_id:
+    type: text
   exam_id:
     type: text
   app_date:

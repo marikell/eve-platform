@@ -71,6 +71,14 @@ class ReceiveExamJob():
         
             req = requests.post(url = url_slot,headers= headers,data=json.dumps(json_data))
 
+            json_data = {                    
+                'event' : 'slot',
+                'value' : obj['user_exam_id'],
+                'name' : 'user_exam_id'
+            }
+        
+            req = requests.post(url = url_slot,headers= headers,data=json.dumps(json_data))
+
             url_action = '{}/conversations/{}/execute'.format(RASA_API['url'],obj['user_id'])
 
             action_data = { "name":"utter_ask_exam" }

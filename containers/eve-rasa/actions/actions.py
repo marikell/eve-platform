@@ -384,24 +384,28 @@ class ActionGetExam(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        exam_name = tracker.get_slot('exam_name')    
+        exam_name = tracker.get_slot('exam_name')
+        user_exam_id = tracker.get_slot('user_exam_id')
+
         response = 'Esse é um dos exames básicos do pré-natal!'
 
-        data = {
-            'exam_name' : exam_name
-        }
-        headers = {
-            'Content-Type':'application/json'
-        }
+        headers = { 'Content-Type':'application/json' }
 
         try:
+            data = {
+                "exam_status" : 4,
+                'id' : user_exam_id
+            }
+            req = requests.post(route_config.get_route('send_slot_user_exam'),headers= headers,data=json.dumps(data))
+            
+            data = { 'exam_name' : exam_name }
             req = requests.post(url = route_config.get_route('get_exam_by_name'),headers= headers,data=json.dumps(data))
             exam = req.json()['response']
             response = str(exam['description'])
-            if(exam['weeks_start'] == 0):
+            if(exam['trimester'] == 0):
                 response = response + "\nEsse exame deve ser feito logo no inicio do pré-natal!"
             else:
-                response = response + "\nDeve ser feito entre a {}ª e {}ª semana!".format(exam['weeks_start'], exam['weeks_end'])
+                response = response + "\nDeve ser feito no {}º trimestre!".format(exam['trimester'])
             dispatcher.utter_message(response)
         except:
             dispatcher.utter_message(response)        
@@ -413,25 +417,16 @@ class ActionSaveExam(Action):
         return "action_doing_right_exam"
 
     def run(self, dispatcher, tracker, domain):
-        exam_id = tracker.get_slot('exam_id')
-        if(exam_id):
-            headers = {
-                'Content-Type':'application/json'
-            }
-            try:        
-                email_obj = {
-                    'email' : 'me'
+        user_exam_id = tracker.get_slot('user_exam_id')
+        if(user_exam_id):
+            try:
+                headers = { 'Content-Type':'application/json' }
+                                
+                data = {
+                    "exam_status" : 3,
+                    'id' : user_exam_id
                 }
-                headers = {
-                    'Content-Type' : 'application/json'
-                }
-                req_email = requests.post(url = '{}'.format(route_config.get_route('get_user_by_email')),headers = headers, data=json.dumps(email_obj))
-                if req_email.json()['status'] == 200:
-                    user_id = json.loads(req_email.json()['response'])['_id']['$oid']
-                    data = {
-                        "exam_id" : exam_id
-                    }
-                    req = requests.post(url = '{}{}'.format(route_config.get_route('send_slot_user_exam'),'/{}'.format(user_id)),headers= headers,data=json.dumps(data))
+                req = requests.post(route_config.get_route('send_slot_user_exam'),headers= headers,data=json.dumps(data))
             except Exception as e:
                 #this will log in the future
                 print(str(e))
