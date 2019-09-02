@@ -17,6 +17,6 @@ get_module_logger().info("Notification Job is going to run at {}...".format(os.e
 while True:
     try:
         schedule.run_pending()
-        time.sleep(1)
+        time.sleep(10)
     except Exception as e:
         get_module_logger().info("[ERROR] {}".format(str(e)))

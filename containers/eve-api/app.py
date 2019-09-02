@@ -14,6 +14,7 @@ from api.blueprints.user_trimester_blueprint import app_usr_trimester
 from api.blueprints.form_blueprint import app_form
 from api.blueprints.notification_user_blueprint import app_notification_user
 from api.blueprints.notify_blueprint import app_notify
+from api.blueprints.conversations_blueprint import app_conversations
 from api.services.service_handler import ServiceHandler
 from flask_api import FlaskAPI
 from mongoengine import connect
@@ -44,7 +45,7 @@ def register_blueprints(app):
     app.register_blueprint(app_tip)
     app.register_blueprint(app_notify)
     app.register_blueprint(app_notification_user)
-    # app.register_blueprint(app_user_exam)
+    app.register_blueprint(app_conversations)
 
 @flask_app.route('/', methods=['GET'])
 def get():

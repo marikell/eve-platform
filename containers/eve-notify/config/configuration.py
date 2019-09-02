@@ -1,7 +1,7 @@
 EVE_API:dict = {
-    'url' : 'http://localhost:5001/api'
+    'url' : 'http://eve_api:5001/api'
 }
 
 RASA_API:dict = {
-    'url' : 'http://localhost:5005'
+    'url' : 'http://eve_actioncore:5005'
 }

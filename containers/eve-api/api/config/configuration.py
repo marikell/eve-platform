@@ -20,6 +20,7 @@ ROUTE_CONFIG:dict = {
     'NOTIFICATION_USER_TYPE_NAME':'notification-user',
     'FORM_TYPE_NAME':'form',
     'TIP_TYPE_NAME':'tip',
+    'CONVERSATIONS_TYPE_NAME': 'conversations',
     #this endpoint will be called by the fup service
     'FUP':'fup',
     'NOTIFY':'notify',
