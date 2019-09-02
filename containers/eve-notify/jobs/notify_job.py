@@ -60,7 +60,6 @@ class NotifyJob():
                    "contents": {"en": tip}}
 
         req = requests.post("https://onesignal.com/api/v1/notifications", headers=header, data=json.dumps(payload))
-        #Importante
         return req.status_code
         
     def reset(self, tip_type):

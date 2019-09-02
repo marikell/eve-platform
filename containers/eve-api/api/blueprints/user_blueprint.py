@@ -68,6 +68,38 @@ def verify_token():
     finally:
         return response(obj, status.HTTP_200_OK)
 
+
+@app_user.route('/change-password/<id>', methods=['POST'])
+def change_password(id):    
+    try:
+        json = request.get_json()
+
+        user = ServiceHandler.get_service(route_name).get(id)
+
+        old_password = json['old_password']
+
+        new_password = json['new_password']
+
+        confirm_new_password = json['confirm_new_password']
+
+        if check_password_hash(user['password'], old_password):
+            if confirm_new_password != new_password:
+                return response_text('As senhas não coincidem! Tente novamente.',status=status.HTTP_400_BAD_REQUEST)
+        
+            else:
+                hashed_password = generate_password_hash(new_password, method='sha512')
+                ServiceHandler.get_service(route_name).change_password(hashed_password, user)
+
+                return response(status=status.HTTP_200_OK)        
+
+        return response_text('Senha atual inválida! Tente novamente.',status=status.HTTP_400_BAD_REQUEST)
+
+    except Exception as e:
+        return response_text(str(e), status.HTTP_400_BAD_REQUEST)
+
+  
+
+
 @app_user.route('/login', methods=['GET'])
 def login():
     auth = request.authorization
@@ -92,7 +124,8 @@ def login():
                 user_type = UserTypeEnum.pregnant
             elif "is_trying" in user_info_object and user_info_object['is_trying']:
                 user_type = UserTypeEnum.wanting_conceive
-        return jsonify({'token': token.decode('UTF-8'), 'name': user_json['name'], 'email' : user_json['email'], 'user_type' : user_type })        
+        return jsonify({'token': token.decode('UTF-8'), 'name': user_json['name'], 'email' : user_json['email'], 'user_type' : user_type, 
+        'accepts_notifications': user_json['accepts_notifications'], 'date_birth' : user_json['date_birth'] })        
     
     return response_text('Senha incorreta. Tente novamente!', status.HTTP_401_UNAUTHORIZED)
 
@@ -125,7 +158,8 @@ def insert():
             'name' : json['name'],
             'birthDate' : datetime.datetime.strptime(json['birthDate'], '%d-%m-%Y'),
             'password': hashed_password,
-            'user_type': (UserTypeEnum.normal.value if 'user_type' not in json else json['user_type'])
+            'user_type': (UserTypeEnum.normal.value if 'user_type' not in json else json['user_type']),
+            'accepts_notifications' : json['accepts_notifications']
         }
 
         ServiceHandler.get_service(route_name).insert(obj)
@@ -161,6 +195,18 @@ def get(id):
             raise Exception('Object with id {} not found!'.format(id))
 
         return response(obj.to_json(), status.HTTP_200_OK)
+
+    except Exception as e:
+        return response(str(e), status.HTTP_400_BAD_REQUEST)
+
+@app_user.route('/{}/accepts-notifications/<id>'.format(route_name), methods=['PUT'])
+def update_accepts_notifications(id):
+    try:
+        json_obj = request.get_json()
+
+        ServiceHandler.get_service(route_name).update_accepts_notifications(id, json_obj['accepts_notifications'])
+
+        return response(status=status.HTTP_200_OK)
 
     except Exception as e:
         return response(str(e), status.HTTP_400_BAD_REQUEST)
