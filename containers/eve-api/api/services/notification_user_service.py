@@ -20,5 +20,5 @@ class NotificationUserService(GenericService):
             self.delete(notification_id)
             
     def insert(self, obj):        
-        notification_user = NotificationUser(description=obj['description'], user_id=obj['user'].to_dbref())
+        notification_user = NotificationUser(title=obj['title'],description=obj['description'], user_id=obj['user'].to_dbref())
         notification_user.save()

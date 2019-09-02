@@ -4,6 +4,8 @@ services:
      container_name: eve_notify
      build: .
      restart: always
+     environment:
+       - RUN_TIME=00:29
      networks:
        - evemongo_evenetwork
      volumes:

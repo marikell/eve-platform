@@ -8,7 +8,7 @@ RUN pip install -r requirements.txt
 
 ENV TZ=America/Sao_Paulo
 
-ENV RUN_TIME="13:20"
+ENV RUN_TIME="20:42"
 
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
