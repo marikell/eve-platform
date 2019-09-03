@@ -1,7 +1,6 @@
 from enum import IntEnum
 
-class UserTypeEnum(IntEnum):
+class TipTypeEnum(IntEnum):
     pregnant = 0,
     wanting_conceive = 1,
-    after_birth = 2,
-    normal = 3
+    after_birth = 2

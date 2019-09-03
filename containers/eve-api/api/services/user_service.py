@@ -7,11 +7,11 @@ class UserService(GenericService):
         super().__init__(User.objects)        
 
     def insert(self, obj):        
-        user = User(name=obj['name'], email=obj['email'], 
-        password=obj['password'], is_admin=obj['is_admin'], user_type=obj['user_type'])
+        user = User(email=obj['email'], 
+        password=obj['password'],name=obj['name'],user_type=obj['user_type'], date_birth=obj['birthDate'])        
 
         if User.objects(email=obj['email']):
-            raise Exception('This e-mail is already registered in db.')
+            raise Exception('Esse e-mail já foi cadastrado.')
         
         user.save()
 

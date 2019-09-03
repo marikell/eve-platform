@@ -13,4 +13,5 @@ containers/eve-api/app/config/database_config.py
 containers/eve-api/app/config/mongo_configuration.json
 containers/eve-api/env
 containers/eve-fup/env
+containers/eve-notify/env
 containers/eve-mongo/backups

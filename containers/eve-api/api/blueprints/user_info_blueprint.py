@@ -1,0 +1,37 @@
+from flask import Blueprint, jsonify, request
+from werkzeug import Response
+from flask_api import status
+from api.services.answer_service import AnswerService
+from api.utils.response_formatter import response, response_text
+from api.services.service_handler import ServiceHandler
+from api.config.configuration import ROUTE_CONFIG
+from api.utils.validate_fields import *
+
+route_name = ROUTE_CONFIG['ANSWER_TYPE_NAME']
+app_answer = Blueprint(route_name,__name__, url_prefix='/api')
+
+def validate_answer_request(json):
+    check_if_key_exists('text',json)
+    check_empty_string(json['text'], 'text')           
+
+@app_answer.route('/{}'.format(route_name), methods=['GET'])
+def index():
+    return Response('Hello {}'.format(route_name))
+
+@app_answer.route(route_name, methods=['POST'])
+def insert():
+    try:
+        json = request.get_json()
+
+        validate_answer_request(json)
+
+        obj = {
+            "text": json['text']
+        }
+
+        ServiceHandler.get_service(route_name).insert(obj)    
+        
+        return response(status=status.HTTP_201_CREATED)
+
+    except Exception as e:
+        return response_text(str(e), status.HTTP_400_BAD_REQUEST)

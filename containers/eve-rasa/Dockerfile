@@ -5,6 +5,7 @@ WORKDIR /app
 RUN pip install rasa
 
 ADD ./models /app/models
+ADD ./actions /app/actions
 COPY ./endpoints.yml .
 COPY ./dev-endpoints /app/dev-endpoints
 

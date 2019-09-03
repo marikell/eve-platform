@@ -13,6 +13,9 @@ from api.services.user_personal_info_service import UserPersonalInfoService
 from api.services.unanswered_question_service import UnansweredQuestionService
 from api.services.user_trimester_service import UserTrimesterService
 from api.services.form_service import FormService
+from api.services.tip_service import TipService
+from api.services.notification_user_service import NotificationUserService
+from api.services.conversations_service import ConversationsService
 
 services : dict = {}
 
@@ -31,7 +34,10 @@ class ServiceHandler():
         services[ROUTE_CONFIG['USER_EXAM_TYPE_NAME']] = UserExamService()
         services[ROUTE_CONFIG['UNANSWERED_QUESTION_TYPE_NAME']] = UnansweredQuestionService()
         services[ROUTE_CONFIG['USER_TRIMESTER_TYPE_NAME']] = UserTrimesterService()
+        services[ROUTE_CONFIG['TIP_TYPE_NAME']] = TipService()
         services[ROUTE_CONFIG['FORM_TYPE_NAME']] = FormService()
+        services[ROUTE_CONFIG['NOTIFICATION_USER_TYPE_NAME']] = NotificationUserService()
+        services[ROUTE_CONFIG['CONVERSATIONS_TYPE_NAME']] = ConversationsService()
 
     @staticmethod
     def get_service(name: str):
