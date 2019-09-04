@@ -6913,41 +6913,6 @@
         ]
       },
       {
-        "text": "Me ajude a lembrar de tomar um remédio por favor",
-        "intent": "reminder_medicine",
-        "entities": []
-      },
-      {
-        "text": "me ajuda a lembrar de tomar um remédio",
-        "intent": "reminder_medicine",
-        "entities": []
-      },
-      {
-        "text": "preciso lembrar de tomar um remédio",
-        "intent": "reminder_medicine",
-        "entities": []
-      },
-      {
-        "text": "não posso esquecer de tomar um remedio",
-        "intent": "reminder_medicine",
-        "entities": []
-      },
-      {
-        "text": "meu medico me passou um remedio",
-        "intent": "reminder_medicine",
-        "entities": []
-      },
-      {
-        "text": "tenho que tomar um medicamento",
-        "intent": "reminder_medicine",
-        "entities": []
-      },
-      {
-        "text": "me lembre de tomar um remédio por favor",
-        "intent": "reminder_medicine",
-        "entities": []
-      },
-      {
         "text": "segunda-feira",
         "intent": "enter_data",
         "entities": [
@@ -7600,23 +7565,6 @@
         "entities": []
       },
       {
-        "text": "preciso lembrar de tomar um remédio",
-        "intent": "reminder_medicine",
-        "entities": []
-      },
-      {
-        "text": "/enter_data{\"med_frequency\":\"one_time\"}",
-        "intent": "enter_data",
-        "entities": [
-          {
-            "entity": "med_frequency",
-            "start": 11,
-            "end": 39,
-            "value": "one_time"
-          }
-        ]
-      },
-      {
         "text": "dorflex",
         "intent": "enter_data",
         "entities": [
@@ -7658,23 +7606,6 @@
         "text": "agr nao",
         "intent": "deny",
         "entities": []
-      },
-      {
-        "text": "não posso esquecer de tomar um remedio",
-        "intent": "reminder_medicine",
-        "entities": []
-      },
-      {
-        "text": "/enter_data{\"med_frequency\":\"daily\"}",
-        "intent": "enter_data",
-        "entities": [
-          {
-            "entity": "med_frequency",
-            "start": 11,
-            "end": 36,
-            "value": "daily"
-          }
-        ]
       },
       {
         "text": "loratadina",
@@ -7719,23 +7650,6 @@
         "entities": []
       },
       {
-        "text": "meu médico me passou um remédio para tomar",
-        "intent": "reminder_medicine",
-        "entities": []
-      },
-      {
-        "text": "/enter_data{\"med_frequency\":\"weekly\"}",
-        "intent": "enter_data",
-        "entities": [
-          {
-            "entity": "med_frequency",
-            "start": 11,
-            "end": 37,
-            "value": "weekly"
-          }
-        ]
-      },
-      {
         "text": "o nome é neosaldina",
         "intent": "enter_data",
         "entities": [
@@ -7777,23 +7691,6 @@
         "entities": []
       },
       {
-        "text": "preciso lembrar de tomar remedio",
-        "intent": "reminder_medicine",
-        "entities": []
-      },
-      {
-        "text": "/enter_data{\"med_frequency\":\"one_time\"}",
-        "intent": "enter_data",
-        "entities": [
-          {
-            "entity": "med_frequency",
-            "start": 11,
-            "end": 39,
-            "value": "one_time"
-          }
-        ]
-      },
-      {
         "text": "dipirona",
         "intent": "enter_data",
         "entities": [
@@ -7833,23 +7730,6 @@
         "entities": []
       },
       {
-        "text": "tenho q tomar um remedio",
-        "intent": "reminder_medicine",
-        "entities": []
-      },
-      {
-        "text": "/enter_data{\"med_frequency\":\"daily\"}",
-        "intent": "enter_data",
-        "entities": [
-          {
-            "entity": "med_frequency",
-            "start": 11,
-            "end": 36,
-            "value": "daily"
-          }
-        ]
-      },
-      {
         "text": "lufital",
         "intent": "enter_data",
         "entities": [
@@ -7887,152 +7767,6 @@
         "entities": []
       },
       {
-        "text": "nao posso esquecer da minha proxima consulta",
-        "intent": "reminder_appointment",
-        "entities": []
-      },
-      {
-        "text": "me ajude a lembrar da minha proxima consulta por favor",
-        "intent": "reminder_appointment",
-        "entities": []
-      },
-      {
-        "text": "tenho uma consulta marcada com meu medico",
-        "intent": "reminder_appointment",
-        "entities": []
-      },
-      {
-        "text": "me lembre da minha proxima consulta por favor",
-        "intent": "reminder_appointment",
-        "entities": []
-      },
-      {
-        "text": "meu medico me passou dipirona para tomar todos os dias",
-        "intent": "reminder_medicine",
-        "entities": [
-          {
-            "start": 21,
-            "end": 29,
-            "value": "dipirona",
-            "entity": "med_name"
-          },
-          {
-            "start": 41,
-            "end": 54,
-            "value": "one_time",
-            "entity": "med_frequency"
-          }
-        ]
-      },
-      {
-        "text": "tenho que tomar dipirona amanha",
-        "intent": "reminder_medicine",
-        "entities": [
-          {
-            "start": 16,
-            "end": 24,
-            "value": "dipirona",
-            "entity": "med_name"
-          },
-          {
-            "start": 25,
-            "end": 31,
-            "value": "2019-06-10T10:00:00.000-07:00",
-            "entity": "time"
-          }
-        ]
-      },
-      {
-        "text": "tenho que tomar lufital uma vez por semana",
-        "intent": "reminder_appointment",
-        "entities": [
-          {
-            "start": 16,
-            "end": 23,
-            "value": "lufital",
-            "entity": "med_name"
-          },
-          {
-            "start": 24,
-            "end": 42,
-            "value": "weekly",
-            "entity": "med_frequency"
-          }
-        ]
-      },
-      {
-        "text": "minha proxima consulta é sexta feira as 10 horas, me lembre por favor",
-        "intent": "reminder_appointment",
-        "entities": [
-          {
-            "start": 25,
-            "end": 48,
-            "value": "2019-06-10T10:00:00.000-07:00",
-            "entity": "time"
-          }
-        ]
-      },
-      {
-        "text": "é Dr. Marcos",
-        "intent": "enter_data",
-        "entities": [
-          {
-            "start": 2,
-            "end": 12,
-            "value": "Dr. Marcos",
-            "entity": "doc_name"
-          }
-        ]
-      },
-      {
-        "text": "o nome é Dra. Ana",
-        "intent": "enter_data",
-        "entities": [
-          {
-            "start": 9,
-            "end": 17,
-            "value": "Dra. Ana",
-            "entity": "doc_name"
-          }
-        ]
-      },
-      {
-        "text": "dr joao",
-        "intent": "enter_data",
-        "entities": [
-          {
-            "start": 0,
-            "end": 7,
-            "value": "dr joao",
-            "entity": "doc_name"
-          }
-        ]
-      },
-      {
-        "text": "dr. carlos",
-        "intent": "enter_data",
-        "entities": [
-          {
-            "start": 0,
-            "end": 10,
-            "value": "dr. carlos",
-            "entity": "doc_name"
-          }
-        ]
-      },
-      {
-        "text": "tenho uma consulta com o dr ricardo",
-        "intent": "reminder_appointment",
-        "entities": [
-          {
-            "start": 25,
-            "end": 35,
-            "value": "dr ricardo",
-            "entity": "doc_name"
-          }
-        ]
-      },
-      {
         "text": "Oi",
         "intent": "hello",
         "entities": []
@@ -8041,26 +7775,7 @@
         "text": "nao",
         "intent": "deny",
         "entities": []
-      },
-      {
-        "text": "não posso esquecer da minha proxima consulta",
-        "intent": "reminder_appointment",
-        "entities": []
-      },
-      {
-        "text": "dr eduardo",
-        "intent": "enter_data",
-        "entities": [
-          {
-            "start": 0,
-            "end": 10,
-            "value": "dr eduardo",
-            "entity": "doc_name",
-            "confidence": 0.6323624591,
-            "extractor": "CRFEntityExtractor"
-          }
-        ]
-      },
+      },      
       {
         "text": "dia 20 de junho as 10 horas",
         "intent": "enter_data",
@@ -8091,28 +7806,9 @@
         "entities": []
       },
       {
-        "text": "tenho uma consulta semana q vm",
-        "intent": "reminder_appointment",
-        "entities": []
-      },
-      {
         "text": "quero",
         "intent": "affirm",
         "entities": []
-      },
-      {
-        "text": "é dr carlos",
-        "intent": "enter_data",
-        "entities": [
-          {
-            "start": 2,
-            "end": 11,
-            "value": "dr carlos",
-            "entity": "doc_name",
-            "confidence": 0.9569847192,
-            "extractor": "CRFEntityExtractor"
-          }
-        ]
       },
       {
         "text": "quarta feira as 9",
@@ -8405,11 +8101,6 @@
             "value": "False"
           }
         ]
-      },
-      {
-        "text": "meu medico me passou um remedio",
-        "intent": "reminder_medicine",
-        "entities": []
       },
       {
         "text": "não precisa",
@@ -13426,6 +13117,137 @@
         "text": "se eu ja fiz uma cesarea eu posso ter um parto normal?",
         "intent": "ask_cesarean_can_normal_birth",
         "entities": []
+      },
+      {
+        "text": "tive mastite",
+        "intent": "inform_infection_kind",
+        "entities": []
+      },
+      {
+        "text": "infecção urinária",
+        "intent": "inform_infection_kind",
+        "entities": []
+      },
+      {
+        "text": "eu tive infecção urinária e mastite",
+        "intent": "inform_infection_kind",
+        "entities": []
+      },
+      {
+        "text": "tive uma infecção na cicatriz da episiotomia",
+        "intent": "inform_infection_kind",
+        "entities": []
+      },
+      {
+        "text": "infecção na corte da cesárea",
+        "intent": "inform_infection_kind",
+        "entities": []
+      },
+      {
+        "text": "tive endometrite",
+        "intent": "inform_infection_kind",
+        "entities": []
+      },
+      {
+        "text": "camisinha",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "camisinha",
+            "entity": "contraceptive_method"
+          }
+        ]
+      },
+      {
+        "text": "pilula",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "pilula",
+            "entity": "contraceptive_method"
+          }
+        ]
+      },
+      {
+        "text": "nenhum",
+        "intent": "enter_data",
+        "entities": []
+      },
+      {
+        "text": "diu",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "diu",
+            "entity": "contraceptive_method"
+          }
+        ]
+      },
+      {
+        "text": "mastite",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "mastite",
+            "entity": "infection_kind"
+          }
+        ]
+      },
+      {
+        "text": "infecção urinária",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 17,
+            "value": "infecção urinária",
+            "entity": "infection_kind"
+          }
+        ]
+      },
+      {
+        "text": "endometrite",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "endometrite",
+            "entity": "infection_kind"
+          }
+        ]
+      },
+      {
+        "text": "tive mastite",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 5,
+            "end": 12,
+            "value": "mastite",
+            "entity": "infection_kind"
+          }
+        ]
+      },
+      {
+        "text": "urinária",
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "urinária",
+            "entity": "infection_kind"
+          }
+        ]
       }
     ],
     "regex_features": [],

@@ -7,32 +7,42 @@ class UserPregnancyInfoService(GenericService):
     def __init__(self):
         super().__init__(UserPregnancyInfo.objects)
         
-    def insert(self, obj):                                        
+    def insert(self, obj):
+        # current_high_risk = (obj['current_high_risk'])
+        # due_date = (obj['due_date'])
+        # births = (obj['births'])
+        # cesarean_births = (obj['cesarean_births'])
+        # normal_births = (obj['normal_births'])
+        # why_cesarean_birth = (obj['why_cesarean_birth'])
+        # abortion = (obj['abortion'])
+        # premature_birth = (obj['premature_birth'])
+        is_doing_pre_natal = (obj['is_doing_pre_natal'])
+        last_menstruation_date = (obj['last_menstruation_date'])
+        is_planned_pregnancy = (obj['is_planned_pregnancy'])
+        is_first_pregnancy = (obj['is_first_pregnancy'])
+        first_ultrasound_date = (obj['first_ultrasound_date'])
         
-        current_high_risk = (obj['current_high_risk'])
-        due_date = (obj['due_date'])
-        births = (obj['births'])
-        cesarean_births = (obj['cesarean_births'])
-        normal_births = (obj['normal_births'])
-        why_cesarean_birth = (obj['why_cesarean_birth'])
-        abortion = (obj['abortion'])
-        premature_birth = (obj['premature_birth'])        
-        
-        user_pregnancy_info = UserPregnancyInfo(current_high_risk=current_high_risk, 
-                             due_date=due_date,                             
-                             births=births,
-                             cesarean_births=cesarean_births, 
-                             normal_births=normal_births,
-                             why_cesarean_birth=why_cesarean_birth,
-                             abortion=abortion,
-                             premature_birth=premature_birth,
+        user_pregnancy_info = UserPregnancyInfo(
+                            #  current_high_risk=current_high_risk, 
+                            #  due_date=due_date,                             
+                            #  births=births,
+                            #  cesarean_births=cesarean_births, 
+                            #  normal_births=normal_births,
+                            #  why_cesarean_birth=why_cesarean_birth,
+                            #  abortion=abortion,
+                            #  premature_birth=premature_birth,
+                             is_doing_pre_natal=is_doing_pre_natal,
+                             last_menstruation_date=last_menstruation_date,
+                             is_planned_pregnancy=is_planned_pregnancy,
+                             is_first_pregnancy=is_first_pregnancy,
+                             first_ultrasound_date=first_ultrasound_date,
                              user_id=obj['user'].to_dbref())
         
         user_pregnancy_info.save()
 
 
-    def get_by_user(self, user):
-        return self.objects(Q(user_id=ObjectId(user.id))).first()
+    def get_by_user_id(self, user_id):
+        return self.objects(Q(user_id=ObjectId(user_id))).first()
 
     def update(self, obj):
         user_pregnancy_info = self.get(obj['id'])
@@ -48,5 +58,10 @@ class UserPregnancyInfoService(GenericService):
         user_pregnancy_info.why_cesarean_birth = (obj['why_cesarean_birth'])
         user_pregnancy_info.abortion = (obj['abortion'])
         user_pregnancy_info.premature_birth = (obj['premature_birth'])
+        user_pregnancy_info.is_doing_pre_natal = (obj['is_doing_pre_natal'])
+        user_pregnancy_info.last_menstruation_date = (obj['last_menstruation_date'])
+        user_pregnancy_info.is_planned_pregnancy = (obj['is_planned_pregnancy'])
+        user_pregnancy_info.is_first_pregnancy = (obj['is_first_pregnancy'])
+        user_pregnancy_info.first_ultrasound_date = (obj['first_ultrasound_date'])
         
         user_pregnancy_info.save()

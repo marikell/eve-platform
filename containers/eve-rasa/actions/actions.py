@@ -64,13 +64,20 @@ class ActionGreetUser(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         intent = tracker.latest_message["intent"].get("name")
-        # verificar se o usuário já existe
-        if intent == "hello" or intent == "get_started":
-            dispatcher.utter_template("utter_hello", tracker)
+        user_id = tracker.get_slot('user_id')
+        # user_id = 123
+        
+        dispatcher.utter_template("utter_hello", tracker)
+        if user_id is not None:
+            if intent == "hello":
+                dispatcher.utter_template("utter_greet", tracker)
+            elif intent == "greeting":
+                dispatcher.utter_template("utter_greet_back", tracker)
+
+        elif intent == "hello" or intent == "get_started":
             dispatcher.utter_template("utter_introduce", tracker)
             dispatcher.utter_template("utter_ask_info", tracker)
         elif intent == "greeting":
-            dispatcher.utter_template("utter_hello", tracker)
             dispatcher.utter_template("utter_introduce", tracker)
             dispatcher.utter_template("utter_greet_back", tracker)
         return []
@@ -101,12 +108,33 @@ class InitialForm(FormAction):
                 "has_children",
                 "health_plan"
             ]
-        elif(tracker.get_slot('is_pregnant') == "False" and tracker.get_slot('is_trying') == "False"):
+        elif(tracker.get_slot('is_postpartum') == "True"):
+            if(tracker.get_slot('having_sex') == "False"):
+                return [
+                    "doctor_appointment",
+                    "infection",
+                    "infection_kind"
+                ]
+            if(tracker.get_slot('infection') == "False"):
+                return []
+            
+            return [
+                "health_plan",
+                "planned_pregnancy",
+                "breastfeeding",
+                "having_sex",
+                "contraceptive_method",
+                "doctor_appointment",
+                "infection",
+                "infection_kind"
+            ]
+        elif(tracker.get_slot('is_pregnant') == "False" and tracker.get_slot('is_trying') == "False" and tracker.get_slot('is_postpartum') == "False"):
             return []
         else:
             return [
                 "is_pregnant",
                 "is_trying",
+                "is_postpartum",
                 "last_menstruation",
                 "planned_pregnancy",
                 "first_pregnancy",
@@ -114,9 +142,14 @@ class InitialForm(FormAction):
                 "pre_natal",
                 "is_planning",
                 "has_children",
-                "health_plan",
                 "first_ultrasound",
-                "first_ultrasound_date"
+                "first_ultrasound_date",
+                "breastfeeding",
+                "having_sex",
+                "contraceptive_method",
+                "doctor_appointment",
+                "infection",
+                "infection_kind"
             ]
 
     def slot_mappings(self):
@@ -126,6 +159,14 @@ class InitialForm(FormAction):
             ],
             "first_ultrasound_date": [
                 self.from_entity(entity="time")
+            ],
+            "contraceptive_method": [
+                self.from_entity(entity="contraceptive_method"),
+                self.from_text(intent="enter_data")
+            ],
+            "infection_kind": [
+                self.from_entity(entity="infection_kind"),
+                self.from_text(intent="enter_data")
             ]
         }
 
@@ -150,8 +191,16 @@ class InitialForm(FormAction):
         pre_natal = self.convert_to_bool(tracker.get_slot("pre_natal"))
         planned_pregnancy = self.convert_to_bool(tracker.get_slot("planned_pregnancy"))
         is_trying = self.convert_to_bool(tracker.get_slot("is_trying"))
+        is_postpartum = self.convert_to_bool(tracker.get_slot("is_postpartum"))
         last_menstruation = tracker.get_slot("last_menstruation")
         first_ultrasound_date = tracker.get_slot("first_ultrasound_date")
+        breastfeeding = self.convert_to_bool(tracker.get_slot("breastfeeding"))
+        having_sex = self.convert_to_bool(tracker.get_slot("having_sex"))
+        contraceptive_method = tracker.get_slot("contraceptive_method")        
+        doctor_appointment = self.convert_to_bool(tracker.get_slot("doctor_appointment"))        
+        infection = self.convert_to_bool(tracker.get_slot("infection"))
+        infection_kind = tracker.get_slot("infection_kind")
+        user_id = tracker.get_slot("user_id")
 
         data = {
             "is_first_pregnancy" : first_pregnancy,
@@ -162,14 +211,22 @@ class InitialForm(FormAction):
             "is_doing_pre_natal" : pre_natal,
             "is_planned_pregnancy" : planned_pregnancy,
             "is_trying" : is_trying,
+            "is_postpartum" : is_postpartum,
             "last_menstruation_date" : last_menstruation,
-            "first_ultrasound_date" : first_ultrasound_date
+            "first_ultrasound_date" : first_ultrasound_date,
+            "is_breastfeeding" : breastfeeding,
+            "is_having_sex" : having_sex,
+            "contraceptive_method" : contraceptive_method,
+            "had_doctor_appointment" : doctor_appointment,
+            "had_infection" : infection,
+            "infection_kind" : infection_kind,
         }
-        
+        print(data)
         headers = {
             'Content-Type':'application/json'
         }
-        try:        
+        try:
+            #TODO remover essa parte
             email_obj = {                
                 'email' : 'me'
             }
@@ -187,6 +244,7 @@ class InitialForm(FormAction):
             #this will log in the future
             print(str(e))
         
+        dispatcher.utter_template('utter_thank_you', tracker)
         if(is_pregnant):
             if(pre_natal):
                 dispatcher.utter_template('utter_doing_right_prenatal', tracker)
@@ -205,105 +263,6 @@ class InitialForm(FormAction):
                 else:
                     dispatcher.utter_template('utter_schedule_gynecologist', tracker)
 
-        return []
-
-class MedicineForm(FormAction):
-    def name(self) -> Text:
-        return "form_medicine"
-        
-    @staticmethod
-    def required_slots(tracker: Tracker):
-        if(tracker.get_slot('med_frequency') == "one_time"):
-            return [
-                "med_name",
-                "med_date"
-            ]
-        elif(tracker.get_slot('med_frequency') == "daily"):
-            return [
-                "med_name",
-                "med_hour"
-            ]
-        elif(tracker.get_slot('med_frequency') == "weekly"):
-            return [
-                "med_name",
-                "med_week_day",
-                "med_hour"
-            ]
-        else:
-            return [
-                "med_frequency",
-                "med_name",
-                "med_week_day",
-                "med_hour",
-                "med_date"
-            ]
-
-
-    def slot_mappings(self):
-        return {
-            "med_week_day": [
-                self.from_entity(entity="week_day"),
-                self.from_text(intent="enter_data")
-            ],
-            "med_hour": [
-                self.from_entity(entity="hour"),
-                self.from_text(intent="enter_data")
-            ],
-            "med_date": [
-                self.from_entity(entity="time")
-            ]   
-        }
-    
-    def submit(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> List[Dict]:
-        med_name = tracker.get_slot("med_name")
-        med_frequency = tracker.get_slot("med_frequency")
-        med_week_day = tracker.get_slot("med_week_day")
-        med_hour = tracker.get_slot("med_hour")
-        med_date = tracker.get_slot("med_date")
-        
-        response = "Confirmando então, você tem que tomar {}".format(med_name)
-        if(med_frequency == "one_time"):
-            date = dateutil.parser.parse(med_date)
-            response = response + " no dia {} às {} horas. \nCerto?".format(date.strftime("%d/%m/%y"), date.strftime("%H"))
-        elif(med_frequency == "weekly"):
-            response = response + " toda {} às {} horas. \nCerto?".format(med_week_day, med_hour)
-        elif(med_frequency == "daily"):
-            response = response + " todo dia às {} horas. \nCerto?".format(med_hour)
-        
-        # salvar as informações
-        dispatcher.utter_message(response)
-        return []
-
-class AppointmentForm(FormAction):
-    def name(self) -> Text:
-        return "form_appointment"
-        
-    @staticmethod
-    def required_slots(tracker: Tracker):
-        return [
-            "app_doc_name",
-            "app_date"
-        ]
-        
-    def slot_mappings(self):
-        return {
-            "app_doc_name": [
-                self.from_entity(entity="doc_name"),
-                self.from_text(intent="enter_data")
-            ],
-            "app_date": [
-                self.from_entity(entity="time")
-            ]   
-        }
-    
-    def submit(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> List[Dict]:
-        app_doc_name = tracker.get_slot("app_doc_name")
-        app_date = tracker.get_slot("app_date")
-        date = dateutil.parser.parse(app_date)
-        response = "Confirmando então, você tem uma consulta no dia {} com o Dr. {}. Certo?".format(date.strftime("%d/%m/%y"), app_doc_name)
-
-        # salvar as informações
-        dispatcher.utter_message(response)
         return []
 
 class ActionIsBot(Action):
@@ -369,14 +328,6 @@ class ActionCantHelp(Action):
     def run(self, dispatcher, tracker, domain):
         dispatcher.utter_template("utter_canthelp", tracker)
         return [UserUtteranceReverted()]
-
-class ActionCancelReminder(Action):
-    def name(self):
-        return "action_cancel_reminder"
-
-    def run(self, dispatcher, tracker, domain):
-        # cancelar o lembrete
-        dispatcher.utter_template("utter_cancel_reminder", tracker)
 
 class ActionGetExam(Action):
     def name(self) -> Text:
@@ -534,7 +485,6 @@ class PersonalForm(FormAction):
         return [
             "height",
             "weight",
-            "date_birth",
             "state"
         ]
 
@@ -546,22 +496,11 @@ class PersonalForm(FormAction):
                 "weight": [
                     self.from_entity(entity="number")
                 ],
-                "date_birth": [
-                    self.from_entity(entity="time")
-                ],
                 "state": [
                     self.from_text(intent="enter_data"),
                     self.from_entity(entity="state")
                 ],
             }
-
-    def validate_date_birth(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]):
-        try: 
-            date = dateutil.parser.parse(value)
-            return {"date_birth": value}
-        except ValueError:
-            dispatcher.utter_template("utter_wrong_date_birth", tracker)
-            return {"date_birth": None}
 
     def validate_height(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]):
         print(value)
@@ -632,13 +571,11 @@ class PersonalForm(FormAction):
     def submit(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> List[Dict]:
         height = tracker.get_slot("height")
         weight = tracker.get_slot("weight")
-        date_birth = tracker.get_slot("date_birth")
         state = tracker.get_slot("state")
 
         data = {
             "height" : int(height),
             "weight" : int(weight),
-            "date_birth" : date_birth,
             "state" : state
         }
         

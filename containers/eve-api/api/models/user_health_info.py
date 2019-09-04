@@ -17,4 +17,3 @@ class UserHealthInfo(db.DynamicDocument):
     is_seropositive = db.BooleanField(required=False)
     has_high_pressure = db.BooleanField(required=False)
     user_id = db.ReferenceField(User, required=True)
-    

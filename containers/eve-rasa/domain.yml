@@ -33,12 +33,6 @@ actions:
   - utter_doing_right
   - utter_ask_subscribe
   - utter_ask_exam
-  - utter_ask_med_frequency
-  - utter_ask_med_name
-  - utter_ask_med_date
-  - utter_ask_med_week_day
-  - utter_ask_med_hour  
-  - utter_reminder
   - action_get_answer
   - action_greet_user
   - action_is_bot
@@ -50,16 +44,7 @@ actions:
   - action_bye
   - action_thank_you
   - action_cant_help
-  - action_cancel_reminder
-  - utter_wrong_med_date
-  - utter_wrong_med_week_day
-  - utter_wrong_med_hour
-  - utter_cancel_reminder
-  - utter_ask_app_doc_name
-  - utter_ask_app_date
-  - action_cancel_app_reminder
   - utter_okay
-  - utter_ask_reminder
   - action_get_exam
   - utter_doing_right_exam
   - action_doing_right_exam
@@ -140,6 +125,14 @@ actions:
   - utter_contraceptive_pill_after_birth
   - utter_invite_accompany_birth
   - utter_cesarean_can_normal_birth
+  - utter_ask_breastfeeding
+  - utter_ask_having_sex
+  - utter_ask_contraceptive_method
+  - utter_ask_type_delivery
+  - utter_ask_episiotomy
+  - utter_ask_doctor_appointment
+  - utter_ask_infection
+  - utter_ask_infection_kind
 entities: 
   - last_menstruation
   - first_ultrasound
@@ -150,9 +143,7 @@ entities:
   - distance
   - state
   - hour
-  - med_frequency
-  - med_name 
-  - app_doc_name
+  - med_name   
   - doc_name
   - week_day
   - has_children
@@ -160,13 +151,21 @@ entities:
   - is_planning
   - is_pregnant
   - is_trying
+  - is_postpartum
+  - breastfeeding
+  - having_sex
+  - contraceptive_method
+  - type_delivery
+  - episiotomy
+  - doctor_appointment
+  - infection
+  - infection_kind
 forms:
   - form_initial
-  - form_medicine
-  - form_appointment
   - form_health
   - form_personal
   - form_pregnancy
+  - form_postpartum
 intents:
   - affirm  
   - ask_isbot:
@@ -198,8 +197,6 @@ intents:
   - later
   - why_i_need_to_answer
   - last_intent
-  - reminder_medicine
-  - reminder_appointment
   - which_best
   - which_can
   - which_can_not
@@ -299,7 +296,7 @@ intents:
   - ask_anesthesia_dentist
   - ask_contraceptive_pill_after_birth
   - ask_invite_accompany_birth
-  - ask_cesarean_can_normal_birth  
+  - ask_cesarean_can_normal_birth
 slots:
   first_pregnancy:
     type: unfeaturized
@@ -323,28 +320,16 @@ slots:
     type: unfeaturized
   is_trying:
     type: unfeaturized
-  med_frequency:
-    type: unfeaturized
   med_name:
-    type: unfeaturized
-  med_date:
-    type: unfeaturized
-  med_week_day:
     type: unfeaturized
   last_intent:
     type: text
-  med_hour:
-    type: list
   exam_name:
     type: text
   user_exam_id:
     type: text
   exam_id:
     type: text
-  app_date:
-    type: unfeaturized
-  app_doc_name:
-    type: unfeaturized
   regular_medicine:
     type: unfeaturized
   regular_medicine_name:
@@ -389,8 +374,27 @@ slots:
     type: unfeaturized
   had_birth:
     type: unfeaturized
+  breastfeeding:
+    type: unfeaturized
+  having_sex:
+    type: unfeaturized
+  contraceptive_method:
+    type: unfeaturized
+  type_delivery:
+    type: unfeaturized
+  episiotomy:
+    type: unfeaturized
+  doctor_appointment:
+    type: unfeaturized
+  infection:
+    type: unfeaturized
+  infection_kind:
+    type: unfeaturized
+  is_postpartum:
+    type: unfeaturized
   requested_slot:
-    type: unfeaturized    
+    type: unfeaturized
+
 templates:
   utter_ask_first_pregnancy:
   - text: "É a sua primeira gravidez?"
@@ -517,49 +521,8 @@ O planejamento tem o objetivo de identificar fatores de risco como diabetes e hi
   - text: "Posso te mandar dicas todos os dias para te ajudar durante essa fase, se quiser é só me avisar"
   utter_ask_exam:
   - text: "Você já fez o exame de {exam_name}?"
-  utter_ask_med_frequency:
-  - text: "Qual a frequência do remédio?"
-    buttons:
-    - title: "Uma única dose"
-      payload: '/enter_data{"med_frequency":"one_time"}'
-    - title: "Diário"
-      payload: '/enter_data{"med_frequency":"daily"}'
-    - title: "Semanal"
-      payload: '/enter_data{"med_frequency":"weekly"}'
-  utter_ask_med_name:
-  - text: "Qual o nome do medicamento?"
-  utter_ask_med_date:
-  - text: "Quando você tem que tomar esse medicamento?"
-  utter_ask_med_week_day:
-  - text: "Qual dia da semana?"
-  utter_ask_med_hour:
-  - text: "Que horas?"
-  utter_reminder:
-  - text: "Ok, pode deixar que vou te avisar! 😉"
   utter_explain_whatspossible:
   - text: "Eu posso tirar qualquer dúvida sobre a gestação e te lembrar de consultas e remédios! 💁‍♀️"
-  utter_wrong_med_name:
-  - text: "Por favor, me fale o nome do remédio 😬"
-  utter_wrong_med_frequency:
-  - text: "Por favor, me fale o nome do remédio 😬"
-  utter_wrong_med_date:
-  - text: "Por favor, me fale quando o remédio tem que ser tomado 😬"
-  utter_wrong_med_week_day:
-  - text: "Por favor, me fale em qual dia da semana você tem que tomar 😬"
-  utter_wrong_med_hour:
-  - text: "Por favor, me fale os horários do remédio 😬"
-  utter_wrong_app_date:
-  - text: "Por favor, me fale quando será a consulta 😬"
-  utter_wrong_app_doc_name:
-  - text: "Por favor, me fale o nome do médico que você vai passar 😬"
-  utter_cancel_reminder:
-  - text: "Tudo bem, se precisar me avisa 😉"
-  utter_ask_app_doc_name:
-  - text: "Qual o nome do médico?"
-  utter_ask_app_date:
-  - text: "Quando é a consulta?"
-  utter_ask_reminder:
-  - text: "Quer que eu te lembre disso? Aí na hora eu te envio uma notificação 😉"
   utter_okay:
   - text: "Ok então 😊"
   - text: "Okay 😊"
@@ -876,3 +839,56 @@ O planejamento tem o objetivo de identificar fatores de risco como diabetes e hi
   - text: "Sim. Na maternidade, é seu direito escolher um acompanhante e tê-lo sempre ao seu lado durante o trabalho de parto, no parto e pós-parto."
   utter_cesarean_can_normal_birth:
   - text: "Sim. Se seu primeiro parto foi uma cesariana, isso não é impedimento para parto normal. Informe-se melhor no pré-natal para entender o seguimento de uma gestante no final da gestação."
+  utter_ask_breastfeeding:
+  - text: "Você está amamentando?"
+    buttons:
+    - title: "Sim"
+      payload: '/enter_data{"breastfeeding":"True"}'
+    - title: "Não"
+      payload: '/enter_data{"breastfeeding":"False"}'
+  utter_ask_having_sex:
+  - text: "Está tendo relações sexuais?"
+    buttons:
+    - title: "Sim"
+      payload: '/enter_data{"having_sex":"True"}'
+    - title: "Não"
+      payload: '/enter_data{"having_sex":"False"}'
+  utter_ask_contraceptive_method:
+  - text: "Qual método contraceptivo você está utilizando?"
+  utter_ask_type_delivery:
+  - text: "Qual foi o tipo do parto?"
+    buttons:
+    - title: "Normal"
+      payload: '/enter_data{"type_delivery":"Normal"}'
+    - title: "Cesárea"
+      payload: '/enter_data{"type_delivery":"Cesarea"}'
+  utter_ask_episiotomy:
+  - text: "Foi necessário fazer episiotomia (corte próximo à vagina)?"
+    buttons:
+    - title: "Sim"
+      payload: '/enter_data{"episiotomy":"True"}'
+    - title: "Não"
+      payload: '/enter_data{"episiotomy":"False"}'
+  utter_ask_doctor_appointment:
+  - text: "Você ja foi a uma consulta médica depois que o bebê nasceu?"
+    buttons:
+    - title: "Sim"
+      payload: '/enter_data{"doctor_appointment":"True"}'
+    - title: "Não"
+      payload: '/enter_data{"doctor_appointment":"False"}'
+  utter_ask_infection:
+  - text: "Você teve algum tipo de infecção durante esse período?"
+    buttons:
+    - title: "Sim"
+      payload: '/enter_data{"infection":"True"}'
+    - title: "Não"
+      payload: '/enter_data{"infection":"False"}'
+  utter_ask_infection_kind:
+  - text: "Que tipo de infecção (mastite, endometrite, urinária, etc)?"
+  utter_ask_is_postpartum:
+  - text: "Você está no pós parto?"
+    buttons:
+    - title: "Sim"
+      payload: '/enter_data{"is_postpartum":"True"}'
+    - title: "Não"
+      payload: '/enter_data{"is_postpartum":"False"}'

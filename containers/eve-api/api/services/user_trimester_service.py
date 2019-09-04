@@ -17,8 +17,8 @@ class UserTrimesterService(GenericService):
         user_trimester.save()
 
 
-    def get_by_user(self, user):
-        return self.objects(Q(user_id=ObjectId(user.id))).first()
+    def get_by_user_id(self, user_id):
+        return self.objects(Q(user_id=ObjectId(user_id))).first()
 
     def update(self, obj):
         user_trimester = self.get(obj['id'])

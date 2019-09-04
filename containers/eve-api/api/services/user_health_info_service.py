@@ -35,7 +35,7 @@ class UserHealthInfoService(GenericService):
         user_health_info.save()
 
 
-    def get_by_user(self, user):
+    def get_by_user_id(self, user):
         return self.objects(Q(user_id=ObjectId(user.id))).first()
 
     def update(self, obj):

@@ -41,61 +41,97 @@ def send_user_exam_slot():
 def send_slots_from_Rasa(id):
     try:
         json_obj = request.get_json()
+        
         user = ServiceHandler.get_service(ROUTE_CONFIG['USER_TYPE_NAME']).get(id)
 
         if not user:
             raise Exception('User not found!')
-
-        obj = {
-            'is_first_pregnancy' : False if 'is_first_pregnancy' not in json_obj else json_obj['is_first_pregnancy'],
+        
+        obj_user_info = {
             'has_children' : False if 'has_children' not in json_obj else json_obj['has_children'],
             'has_health_plan' : False if 'has_health_plan' not in json_obj else json_obj['has_health_plan'],
             'is_planning' : False if 'is_planning' not in json_obj else json_obj['is_planning'],
             'is_pregnant' : False if 'is_pregnant' not in json_obj else json_obj['is_pregnant'],
             'is_trying' : False if 'is_trying' not in json_obj else json_obj['is_trying'],
-            'is_planned_pregnancy' : False if 'is_planned_pregnancy' not in json_obj else json_obj['is_planned_pregnancy'],
-            'is_doing_pre_natal' : False if 'is_doing_pre_natal' not in json_obj else json_obj['is_doing_pre_natal'],
-            'last_menstruation_date' : None if 'last_menstruation_date' not in json_obj else json_obj['last_menstruation_date'],
-            'first_ultrasound_date' : None if 'first_ultrasound_date' not in json_obj else json_obj['first_ultrasound_date'],
+            'is_postpartum' : False if 'is_postpartum' not in json_obj else json_obj['is_postpartum'],
+            'height' : None if 'height' not in json_obj else json_obj['height'],
+            'weight' : None if 'weight' not in json_obj else json_obj['weight'],
+            'state' : None if 'state' not in json_obj else json_obj['state'],
             'user' : user
         }
-
-        user_info = ServiceHandler.get_service(ROUTE_CONFIG['USER_INFO_TYPE_NAME']).get_by_user(user)
-        user_trimester = ServiceHandler.get_service(ROUTE_CONFIG['USER_TRIMESTER_TYPE_NAME']).get_by_user(user)
         
+        user_info = ServiceHandler.get_service(ROUTE_CONFIG['USER_INFO_TYPE_NAME']).get_by_user_id(user.id)
         if user_info:
-            obj['id'] = user_info.id
-            ServiceHandler.get_service(ROUTE_CONFIG['USER_INFO_TYPE_NAME']).update(obj)
+            obj_user_info['id'] = user_info.id
+            ServiceHandler.get_service(ROUTE_CONFIG['USER_INFO_TYPE_NAME']).update(obj_user_info)
         else:
-            ServiceHandler.get_service(ROUTE_CONFIG['USER_INFO_TYPE_NAME']).insert(obj)
+            ServiceHandler.get_service(ROUTE_CONFIG['USER_INFO_TYPE_NAME']).insert(obj_user_info)
         
-        if not user_trimester:
-            last_menstruation_date = parse(obj['last_menstruation_date']).date()
-            first_ultrasound_date = parse(obj['first_ultrasound_date']).date()
-
-            if last_menstruation_date > date.today():
-                last_menstruation_date = last_menstruation_date - relativedelta(years=1)
-            
-            if first_ultrasound_date > date.today():
-                first_ultrasound_date = first_ultrasound_date - relativedelta(years=1)
-            
-            date_diff = first_ultrasound_date - last_menstruation_date
-            start_date = first_ultrasound_date if date_diff.days > 7 else last_menstruation_date
-            
-            if ((date.today() - start_date).days <= 90):
-                trimester = 1
-            elif ((date.today() - start_date).days <= 180):
-                trimester = 2
-            else:
-                trimester = 3
-            
-            obj = {
-                'start_date' : start_date.strftime("%Y-%m-%dT%H:%M:%S.%f"),
-                'trimester' : trimester,
-                'user': user
+        if json_obj['is_pregnant']:
+            obj_pregnancy_info = {
+                'is_first_pregnancy' : False if 'is_first_pregnancy' not in json_obj else json_obj['is_first_pregnancy'],
+                'is_planned_pregnancy' : False if 'is_planned_pregnancy' not in json_obj else json_obj['is_planned_pregnancy'],
+                'is_doing_pre_natal' : False if 'is_doing_pre_natal' not in json_obj else json_obj['is_doing_pre_natal'],
+                'last_menstruation_date' : None if 'last_menstruation_date' not in json_obj else json_obj['last_menstruation_date'],
+                'first_ultrasound_date' : None if 'first_ultrasound_date' not in json_obj else json_obj['first_ultrasound_date'],
+                'user' : user
             }
+
+            user_pregnancy_info = ServiceHandler.get_service(ROUTE_CONFIG['USER_PREGNANCY_INFO_TYPE_NAME']).get_by_user_id(user.id)
+            if user_pregnancy_info:
+                obj_pregnancy_info['id'] = user_pregnancy_info.id
+                ServiceHandler.get_service(ROUTE_CONFIG['USER_PREGNANCY_INFO_TYPE_NAME']).update(obj_pregnancy_info)
+            else:
+                ServiceHandler.get_service(ROUTE_CONFIG['USER_PREGNANCY_INFO_TYPE_NAME']).insert(obj_pregnancy_info)
+
+            user_trimester = ServiceHandler.get_service(ROUTE_CONFIG['USER_TRIMESTER_TYPE_NAME']).get_by_user_id(user.id)
+            if not user_trimester:
+                last_menstruation_date = parse(obj_pregnancy_info['last_menstruation_date']).date()
+                if last_menstruation_date > date.today():
+                    last_menstruation_date = last_menstruation_date - relativedelta(years=1)
+                
+                if not obj_pregnancy_info['first_ultrasound_date']:
+                    start_date = last_menstruation_date
+                else:
+                    first_ultrasound_date = parse(obj_pregnancy_info['first_ultrasound_date']).date()
+                    if first_ultrasound_date > date.today():
+                        first_ultrasound_date = first_ultrasound_date - relativedelta(years=1)
+                    
+                    date_diff = first_ultrasound_date - last_menstruation_date
+                    start_date = first_ultrasound_date if date_diff.days > 7 else last_menstruation_date
+                
+                if ((date.today() - start_date).days <= 90):
+                    trimester = 1
+                elif ((date.today() - start_date).days <= 180):
+                    trimester = 2
+                else:
+                    trimester = 3
+                
+                obj = {
+                    'start_date' : start_date.strftime("%Y-%m-%dT%H:%M:%S.%f"),
+                    'trimester' : trimester,
+                    'user': user
+                }
             
-            ServiceHandler.get_service(ROUTE_CONFIG['USER_TRIMESTER_TYPE_NAME']).insert(obj)
+                ServiceHandler.get_service(ROUTE_CONFIG['USER_TRIMESTER_TYPE_NAME']).insert(obj)
+            
+        if json_obj['is_postpartum']:
+            obj_postpartum_info = {
+                'is_breastfeeding' : False if 'is_breastfeeding' not in json_obj else json_obj['is_breastfeeding'],
+                'is_having_sex' : False if 'is_having_sex' not in json_obj else json_obj['is_having_sex'],
+                'contraceptive_method' : None if 'contraceptive_method' not in json_obj else json_obj['contraceptive_method'],            
+                'had_doctor_appointment' : False if 'had_doctor_appointment' not in json_obj else json_obj['had_doctor_appointment'],
+                'had_infection' : False if 'had_infection' not in json_obj else json_obj['had_infection'],
+                'infection_kind' : None if 'infection_kind' not in json_obj else json_obj['infection_kind'],
+                'user' : user
+            }
+
+            user_postpartum_info = ServiceHandler.get_service(ROUTE_CONFIG['USER_POSTPARTUM_INFO_TYPE_NAME']).get_by_user_id(user.id)
+            if user_postpartum_info:
+                obj_postpartum_info['id'] = user_postpartum_info.id
+                ServiceHandler.get_service(ROUTE_CONFIG['USER_POSTPARTUM_INFO_TYPE_NAME']).update(obj_postpartum_info)
+            else:
+                ServiceHandler.get_service(ROUTE_CONFIG['USER_POSTPARTUM_INFO_TYPE_NAME']).insert(obj_postpartum_info)
         
         return response(status=status.HTTP_200_OK)
 
@@ -128,7 +164,7 @@ def send_health_slots_from_Rasa(id):
             'user' : user
         }
 
-        user_health_info = ServiceHandler.get_service(ROUTE_CONFIG['USER_HEALTH_INFO_TYPE_NAME']).get_by_user(user)
+        user_health_info = ServiceHandler.get_service(ROUTE_CONFIG['USER_HEALTH_INFO_TYPE_NAME']).get_by_user_id(user.id)
             
         if user_health_info:
             obj['id'] = user_health_info.id
@@ -164,7 +200,7 @@ def send_pregnancy_slots_from_Rasa(id):
             'user' : user
         }
 
-        user_pregnancy_info = ServiceHandler.get_service(ROUTE_CONFIG['USER_PREGNANCY_INFO_TYPE_NAME']).get_by_user(user)
+        user_pregnancy_info = ServiceHandler.get_service(ROUTE_CONFIG['USER_PREGNANCY_INFO_TYPE_NAME']).get_by_user_id(user.id)
             
         if user_pregnancy_info:
             obj['id'] = user_pregnancy_info.id
@@ -191,18 +227,17 @@ def send_personal_slots_from_Rasa(id):
         obj = {
             'height' : None if 'height' not in json_obj else json_obj['height'],
             'weight' : None if 'weight' not in json_obj else json_obj['weight'],
-            'date_birth' : None if 'date_birth' not in json_obj else json_obj['date_birth'],
             'state' : None if 'state' not in json_obj else json_obj['state'],
             'user' : user
         }
         
-        user_personal_info = ServiceHandler.get_service(ROUTE_CONFIG['USER_PERSONAL_INFO_TYPE_NAME']).get_by_user(user)
+        user_info = ServiceHandler.get_service(ROUTE_CONFIG['USER_INFO_TYPE_NAME']).get_by_user_id(user.id)
             
-        if user_personal_info:
-            obj['id'] = user_personal_info.id
-            ServiceHandler.get_service(ROUTE_CONFIG['USER_PERSONAL_INFO_TYPE_NAME']).update(obj)
+        if user_info:
+            obj['id'] = user_info.id
+            ServiceHandler.get_service(ROUTE_CONFIG['USER_INFO_TYPE_NAME']).update(obj)
         else:
-            ServiceHandler.get_service(ROUTE_CONFIG['USER_PERSONAL_INFO_TYPE_NAME']).insert(obj)
+            ServiceHandler.get_service(ROUTE_CONFIG['USER_INFO_TYPE_NAME']).insert(obj)
         
         return response(status=status.HTTP_200_OK)
 

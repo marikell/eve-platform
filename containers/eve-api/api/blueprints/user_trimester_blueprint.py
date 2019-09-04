@@ -20,7 +20,7 @@ def get_user_trimester(user_id):
         if not user:
             raise Exception('User with id {} not found!'.format(user_id))
 
-        obj = ServiceHandler.get_service(route_name).get_by_user(user)
+        obj = ServiceHandler.get_service(route_name).get_by_user_id(user.id)
 
         if obj.user_id['user_type'] != UserTypeEnum.pregnant.value:
             raise Exception('This user is not pregnant to control user_pregnancy_days records')
