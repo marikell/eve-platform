@@ -201,7 +201,8 @@
 
 ## estou gravida
 * im_pregnant
-    - utter_congrats
+    - action_congrats
+    - slot{"is_pregnant": "True"}
     - utter_first_step
     - utter_ask_info
 * affirm
@@ -433,6 +434,12 @@
 * no_question
     - utter_ask_me_later
 
+## usuario não tem duvidas
+* no_question
+    - utter_ask_me_later
+* affirm
+    - utter_great
+
 ## usuario tem duvidas
 * have_question
     - utter_ask
@@ -447,6 +454,8 @@
   - utter_ask_me_anything
 * no_question
   - utter_ask_me_later
+* affirm
+  - utter_great
 
 ## o usuário inicia a conversa com apenas 'Oi' (gestante) e tem duvidas
 * hello
@@ -919,7 +928,8 @@
     - action_get_answer
     - slot{"last_intent": "can"}
 * im_pregnant
-    - utter_congrats
+    - action_congrats
+    - slot{"is_pregnant": "True"}
     - utter_first_step
     - utter_ask_info
 
@@ -936,8 +946,9 @@
 * can{"question_entity": "rela\u00e7\u00f5es sexuais"}
     - action_get_answer
     - slot{"last_intent": "can"}
-* im_pregnant
-    - utter_congrats
+* im_pregnant    
+    - action_congrats
+    - slot{"is_pregnant": "True"}
     - utter_first_step
     - utter_ask_info
 
@@ -1085,14 +1096,15 @@
 * ask_sore_sex_after_birth
     - utter_sore_sex_after_birth
 * im_pregnant
-    - utter_congrats
+    - action_congrats
+    - slot{"is_pregnant": "True"}
     - utter_first_step
     - utter_ask_info
 
 ## Story from conversation with me on August 11th 2019
-
 * im_pregnant
-    - utter_congrats
+    - action_congrats
+    - slot{"is_pregnant": "True"}
     - utter_first_step
     - utter_ask_info
 
@@ -1139,3 +1151,83 @@
 * complain
     - action_get_answer
     - slot{"last_intent":"complain"}
+
+## Story from conversation with me on September 4th 2019
+
+* hello
+    - action_greet_user
+* affirm
+    - form_initial
+    - slot{"requested_slot":"is_pregnant"}
+* enter_data{"is_pregnant":"False"}
+    - slot{"is_pregnant":"False"}
+    - form_initial
+    - slot{"is_pregnant":"False"}
+    - slot{"requested_slot":"is_trying"}
+* enter_data{"is_trying":"False"}
+    - slot{"is_trying":"False"}
+    - form_initial
+    - slot{"is_trying":"False"}
+    - slot{"requested_slot":"is_postpartum"}
+* enter_data{"is_postpartum":"True"}
+    - slot{"is_postpartum":"True"}
+    - form_initial
+    - slot{"is_postpartum":"True"}
+    - slot{"requested_slot":"health_plan"}
+* enter_data{"health_plan":"False"}
+    - slot{"health_plan":"False"}
+    - form_initial
+    - slot{"health_plan":"False"}
+    - slot{"requested_slot":"planned_pregnancy"}
+* enter_data{"planned_pregnancy":"False"}
+    - slot{"planned_pregnancy":"False"}
+    - form_initial
+    - slot{"planned_pregnancy":"False"}
+    - slot{"requested_slot":"breastfeeding"}
+* enter_data{"breastfeeding":"True"}
+    - slot{"breastfeeding":"True"}
+    - form_initial
+    - slot{"breastfeeding":"True"}
+    - slot{"requested_slot":"having_sex"}
+* enter_data{"having_sex":"True"}
+    - slot{"having_sex":"True"}
+    - form_initial
+    - slot{"having_sex":"True"}
+    - slot{"requested_slot":"contraceptive_method"}
+* enter_data{"contraceptive_method":"camisinha"}
+    - slot{"contraceptive_method":"camisinha"}
+    - form_initial
+    - slot{"contraceptive_method":"camisinha"}
+    - slot{"requested_slot":"doctor_appointment"}
+* enter_data{"doctor_appointment":"True"}
+    - slot{"doctor_appointment":"True"}
+    - form_initial
+    - slot{"doctor_appointment":"True"}
+    - slot{"requested_slot":"infection"}
+* enter_data{"infection":"False"}
+    - slot{"infection":"False"}
+    - form_initial
+    - slot{"infection":"False"}
+    - slot{"requested_slot":null}
+    - utter_ask_me_anything
+* ask_isbot
+    - action_is_bot
+* ask_wherefrom
+    - action_where_from
+
+## Story from conversation with me on September 4th 2019
+* have_question
+    - utter_ask
+* no_question
+    - utter_ask_me_later
+
+## Story from conversation with me on September 4th 2019
+* hello
+    - action_greet_user
+* deny
+    - utter_info_later
+    - utter_ask_me_anything
+* baby_not_moving
+    - utter_baby_not_moving
+* ask_exercise_help_normal_birth
+    - utter_exercise_help_normal_birth

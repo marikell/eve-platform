@@ -133,6 +133,7 @@ actions:
   - utter_ask_doctor_appointment
   - utter_ask_infection
   - utter_ask_infection_kind
+  - action_congrats
 entities: 
   - last_menstruation
   - first_ultrasound
@@ -165,7 +166,6 @@ forms:
   - form_health
   - form_personal
   - form_pregnancy
-  - form_postpartum
 intents:
   - affirm  
   - ask_isbot:
@@ -411,7 +411,7 @@ templates:
     - title: "Não"
       payload: '/enter_data{"health_plan":"False"}'
   utter_ask_howold:
-  - text: "Velha o bastante pra ser médica 💁‍♀"
+  - text: "Sou velha o bastante pra ser médica haha 💁‍"
   utter_ask_info:
   - text: "Bom, pra eu poder te ajudar, preciso te fazer algumas perguntas antes ok? É rapidinho 😊"
   utter_ask_is_pregnant:
@@ -457,12 +457,11 @@ templates:
       payload: '/enter_data{"is_trying":"False"}'
   utter_ask_wherefrom:
   - text: "Sou de Sorocaba, SP"
-  - text: "Sorocaba, SP"
   utter_bye:
   - text: "Tchau! 😙"
   - text: "Tchau, até mais! 😙"
   utter_canthelp:
-  - text: "Desculpe por não conseguir te ajudar :("
+  - text: "Desculpe por não conseguir te ajudar 😕 Mas procure o seu médico, tenho certeza que ele conseguirá te ajudar! 😉"
   utter_congrats:
   - text: "Parabéns! Temos um baby a caminho 👶🤰😍"
   utter_default:
@@ -706,7 +705,7 @@ O planejamento tem o objetivo de identificar fatores de risco como diabetes e hi
     - title: "Não"
       payload: '/enter_data{"had_birth":"False"}'
   utter_normal_birth_best:
-  - text: "Se tudo estiver bem com a mãe e com o bebê e que não haja contraindicações, esse é o tipo de parto mais indicado. Diferente de uma cesárea agendada, no parto normal quem decide o momento de chegar ao mundo é a própria criança."
+  - text: "Se tudo estiver bem com a mãe e com o bebê e que não haja contraindicações, o parto normal é o tipo de parto mais indicado. Diferente de uma cesárea agendada, no parto normal quem decide o momento de chegar ao mundo é a própria criança."
   utter_normal_birth_pain:
   - text: "O nível de sensibilidade varia muito de pessoa para pessoa e claro que o lado psicológico interfere nessa hora. Mas geralmente, é uma dor suportável e que você vai acabar esquecendo depois que o bebê nasce. Existem algumas alternativas naturais que podem aliviar o incômodo, como massagem, água quente e até mesmo a atenção de pessoas queridas."
   utter_exercise_help_normal_birth:

@@ -7775,7 +7775,7 @@
         "text": "nao",
         "intent": "deny",
         "entities": []
-      },      
+      },
       {
         "text": "dia 20 de junho as 10 horas",
         "intent": "enter_data",
@@ -12166,6 +12166,11 @@
         "entities": []
       },
       {
+        "text": "de onde vc é?",
+        "intent": "ask_wherefrom",
+        "entities": []
+      },
+      {
         "text": "da onde você é?",
         "intent": "ask_wherefrom",
         "entities": []
@@ -13248,6 +13253,51 @@
             "entity": "infection_kind"
           }
         ]
+      },
+      {
+        "text": "estou gravida",
+        "intent": "im_pregnant",
+        "entities": []
+      },
+      {
+        "text": "eu tenho uma duvida, vc pode me ajudar?",
+        "intent": "have_question",
+        "entities": []
+      },
+      {
+        "text": "eu to com uma duvida, sera q vc consegue me ajudar?",
+        "intent": "have_question",
+        "entities": []
+      },
+      {
+        "text": "eu tenho uma pergunta, será q vc pode me ajudar?",
+        "intent": "have_question",
+        "entities": []
+      },
+      {
+        "text": "eu não tenho duvida",
+        "intent": "no_question",
+        "entities": []
+      },
+      {
+        "text": "nao estou com nenhuma duvida",
+        "intent": "no_question",
+        "entities": []
+      },
+      {
+        "text": "nao tenho nenhuma pergunta pra fazer",
+        "intent": "no_question",
+        "entities": []
+      },
+      {
+        "text": "nao tenho perguntar pra fazer",
+        "intent": "no_question",
+        "entities": []
+      },
+      {
+        "text": "nao tenho perguntas",
+        "intent": "no_question",
+        "entities": []
       }
     ],
     "regex_features": [],

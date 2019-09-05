@@ -80,6 +80,7 @@ class ActionGreetUser(Action):
         elif intent == "greeting":
             dispatcher.utter_template("utter_introduce", tracker)
             dispatcher.utter_template("utter_greet_back", tracker)
+        
         return []
 
 class InitialForm(FormAction):
@@ -280,6 +281,14 @@ class ActionHowOld(Action):
     def run(self, dispatcher, tracker, domain):
         dispatcher.utter_template("utter_ask_howold", tracker)
         return [UserUtteranceReverted()]
+
+class ActionCongrats(Action):
+    def name(self):
+        return "action_congrats"
+
+    def run(self, dispatcher, tracker, domain):
+        dispatcher.utter_template("utter_congrats", tracker)
+        return [SlotSet("is_pregnant", "True")]
 
 class ActionWhereFrom(Action):
     def name(self):
