@@ -69,7 +69,7 @@ def verify_token():
         return response(obj, status.HTTP_200_OK)
 
 
-@app_user.route('/change-password/<id>', methods=['POST'])
+@app_user.route('/change-password/<id>', methods=['PUT'])
 def change_password(id):    
     try:
         json = request.get_json()
