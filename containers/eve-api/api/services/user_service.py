@@ -8,12 +8,17 @@ class UserService(GenericService):
 
     def insert(self, obj):        
         user = User(email=obj['email'], 
-        password=obj['password'],name=obj['name'],user_type=obj['user_type'], date_birth=obj['birthDate'])        
+        password=obj['password'],name=obj['name'],user_type=obj['user_type'], date_birth=obj['birthDate'], accepts_notifications=obj['accepts_notifications'])        
 
         if User.objects(email=obj['email']):
             raise Exception('Esse e-mail já foi cadastrado.')
         
         user.save()
+    
+    def change_password(self, new_password, user):
+        user.password = new_password
+        user.save()
+
 
     def getby_email(self, email):
         return User.objects(Q(email=email)).first()
@@ -26,6 +31,16 @@ class UserService(GenericService):
 
         user.user_type = user_type
         user.save()
+
+    
+    def update_accepts_notifications(self, id, accepts_notification):
+        user = self.get(id)
+
+        if not user:
+            raise Exception('Object with id {} not found!'.format(id))
+
+        user.accepts_notifications = accepts_notification
+        user.save()   
 
     def update(self, obj):
         user = self.get(obj['id'])

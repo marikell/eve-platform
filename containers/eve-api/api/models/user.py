@@ -10,6 +10,9 @@ class User(db.DynamicDocument):
     name = db.StringField(max_length=300)
     date_birth = db.DateTimeField(required=False)
     user_type = db.IntField(required=True)
+    accepts_notifications = db.BooleanField(required=True)
+
+
 
     def save(self, *args, **kwargs):
         if not self.creation_date:

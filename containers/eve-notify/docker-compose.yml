@@ -5,7 +5,7 @@ services:
      build: .
      restart: always
      environment:
-       - RUN_TIME=00:29
+       - RUN_TIME=02:21
      networks:
        - evemongo_evenetwork
      volumes:
