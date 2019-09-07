@@ -12,7 +12,7 @@ app_notification_user = Blueprint(route_name,__name__, url_prefix='/api')
 @app_notification_user.route('/{}/<id>'.format(route_name), methods=['GET'])
 def get_all_by_user(id):
     try:
-        users = ServiceHandler.get_service(route_name).get_all_by_user(id).order_by('creation_date').only('_id','description','creation_date','title')
+        users = list(ServiceHandler.get_service(route_name).get_all_by_user(id).order_by('creation_date').only('_id','description','creation_date','title'))[::-1]
 
         return response(users, status.HTTP_200_OK)
                 
