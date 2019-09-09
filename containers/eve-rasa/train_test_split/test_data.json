@@ -1,0 +1,3024 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "start": 19,
+            "end": 22,
+            "value": "sol",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "grávida pode tomar sol?"
+      },
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "start": 22,
+            "end": 28,
+            "value": "cabelo",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "tem problema pintar o cabelo?"
+      },
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "start": 15,
+            "end": 20,
+            "value": "cigarro",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "Grávidas podem fumar?"
+      },
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "start": 19,
+            "end": 27,
+            "value": "dentista",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "tem problema ir ao dentista?"
+      },
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "end": 26,
+            "entity": "question_entity",
+            "start": 15,
+            "value": "moto"
+          }
+        ],
+        "text": "posso andar de motocicleta?"
+      },
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "start": 12,
+            "end": 20,
+            "value": "dentista",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "posso ir ao dentista?"
+      },
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "start": 12,
+            "end": 18,
+            "value": "raio x",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "posso fazer raio x?"
+      },
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "start": 26,
+            "end": 32,
+            "value": "escada",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "mulher gestante pode usar escada?"
+      },
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "start": 15,
+            "end": 24,
+            "value": "bicicleta",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "posso andar de bicicleta?"
+      },
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "start": 6,
+            "end": 13,
+            "value": "sexo",
+            "entity": "question_entity",
+            "confidence": 0.5158508307,
+            "extractor": "CRFEntityExtractor",
+            "processors": [
+              "EntitySynonymMapper"
+            ]
+          }
+        ],
+        "text": "posso transar?"
+      },
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "start": 25,
+            "end": 35,
+            "value": "analgesico",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "tem algum problema tomar analgesico?"
+      },
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "start": 12,
+            "end": 22,
+            "value": "analgesico",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "posso tomar analgesico?"
+      },
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "start": 17,
+            "end": 33,
+            "value": "sexo",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "grávida pode ter relações sexuais?"
+      },
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "start": 11,
+            "end": 17,
+            "value": "drogas",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "posso usar drogas?"
+      },
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "end": 42,
+            "entity": "question_entity",
+            "start": 31,
+            "value": "moto"
+          }
+        ],
+        "text": "tem algum problema em andar de motocicleta"
+      },
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "start": 23,
+            "end": 28,
+            "value": "unhas",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "gravida pode pintar as unhas?"
+      },
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "start": 12,
+            "end": 20,
+            "value": "adoçante",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "posso tomar adoçante?"
+      },
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "end": 19,
+            "entity": "question_entity",
+            "start": 12,
+            "value": "laxante"
+          }
+        ],
+        "text": "posso tomar laxante?"
+      },
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "start": 10,
+            "end": 26,
+            "value": "sexo",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "posso ter relações sexuais?"
+      },
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "start": 12,
+            "end": 24,
+            "value": "refrigerante",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "posso beber refrigerante?"
+      },
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "start": 22,
+            "end": 26,
+            "value": "moto",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "grávida pode andar de moto?"
+      },
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "start": 6,
+            "end": 11,
+            "value": "cigarro",
+            "entity": "question_entity",
+            "confidence": 0.7650203804,
+            "extractor": "CRFEntityExtractor",
+            "processors": [
+              "EntitySynonymMapper"
+            ]
+          }
+        ],
+        "text": "posso fumar?"
+      },
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "start": 12,
+            "end": 30,
+            "value": "exercicios",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "posso fazer atividades fisicas?"
+      },
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "end": 35,
+            "entity": "question_entity",
+            "start": 28,
+            "value": "café"
+          }
+        ],
+        "text": "tem algum problema em tomar cafeína"
+      },
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "start": 12,
+            "end": 17,
+            "value": "japonesa",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "posso comer sushi?"
+      },
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "start": 15,
+            "end": 21,
+            "value": "cabelo",
+            "entity": "question_entity",
+            "confidence": 0.6154596931,
+            "extractor": "CRFEntityExtractor"
+          }
+        ],
+        "text": "posso pintar o cabelo?"
+      },
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "end": 22,
+            "entity": "question_entity",
+            "start": 15,
+            "value": "pimenta"
+          }
+        ],
+        "text": "eu posso comer pimenta?"
+      },
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "end": 30,
+            "entity": "question_entity",
+            "start": 15,
+            "value": "salto alto"
+          }
+        ],
+        "text": "posso andar de sapato de salto"
+      },
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "start": 19,
+            "end": 27,
+            "value": "dentista",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "gravida pode ir no dentista?"
+      },
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "start": 19,
+            "end": 26,
+            "value": "cigarro",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "gravida pode fumar cigarro?"
+      },
+      {
+        "intent": "can",
+        "entities": [
+          {
+            "start": 26,
+            "end": 34,
+            "value": "adoçante",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "mulher gravida pode tomar adoçante?"
+      },
+      {
+        "intent": "which_can_not",
+        "entities": [
+          {
+            "start": 6,
+            "end": 15,
+            "value": "alimentos",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "quais alimentos uma muher grávida não pode comer?"
+      },
+      {
+        "intent": "which_can_not",
+        "entities": [
+          {
+            "start": 6,
+            "end": 13,
+            "value": "vacinas",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "quais vacinas eu não posso tomar?"
+      },
+      {
+        "intent": "which_can_not",
+        "entities": [
+          {
+            "start": 4,
+            "end": 12,
+            "value": "alimentos",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "que alimento eu não posso comer?"
+      },
+      {
+        "intent": "which_can_not",
+        "entities": [
+          {
+            "start": 6,
+            "end": 15,
+            "value": "alimentos",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "quais alimentos eu não devo comer?"
+      },
+      {
+        "intent": "which_can",
+        "entities": [
+          {
+            "start": 6,
+            "end": 24,
+            "value": "exercicios",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "quais exercicios físicos são permitidos?"
+      },
+      {
+        "intent": "which_can",
+        "entities": [
+          {
+            "start": 12,
+            "end": 21,
+            "value": "depilacao",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "que tipo de depilação uma gestante pode fazer?"
+      },
+      {
+        "intent": "which_can",
+        "entities": [
+          {
+            "start": 6,
+            "end": 16,
+            "value": "exercicios",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "quais exercicios uma mulher gravida pode fazer?"
+      },
+      {
+        "intent": "which_need",
+        "entities": [
+          {
+            "start": 6,
+            "end": 15,
+            "value": "alimentos",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "quais alimentos eu tenho que comer?"
+      },
+      {
+        "intent": "which_need",
+        "entities": [
+          {
+            "start": 6,
+            "end": 12,
+            "value": "exames",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "quais exames eu devo fazer?"
+      },
+      {
+        "intent": "which_main",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": "exames",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "quais os principais exames do pré-natal?"
+      },
+      {
+        "intent": "which_main",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": "exames",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "quais os principais exames a serem feitos?"
+      },
+      {
+        "intent": "which_signs",
+        "entities": [
+          {
+            "start": 33,
+            "end": 50,
+            "value": "trabalho de parto",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "quais os sinais de que entrei em trabalho de parto?"
+      },
+      {
+        "intent": "which_best",
+        "entities": [
+          {
+            "start": 14,
+            "end": 33,
+            "value": "posicao para dormir",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "qual a melhor posição para dormir grávida?"
+      },
+      {
+        "intent": "which_best",
+        "entities": [
+          {
+            "start": 24,
+            "end": 29,
+            "value": "parto",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "qual é o melhor tipo de parto?"
+      },
+      {
+        "intent": "which_best",
+        "entities": [
+          {
+            "start": 14,
+            "end": 46,
+            "value": "posicao para dormir",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "qual a melhor posição para uma gestante dormir?"
+      },
+      {
+        "intent": "which_cases",
+        "entities": [
+          {
+            "start": 15,
+            "end": 22,
+            "value": "forceps",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "em que casos o forceps é necessário?"
+      },
+      {
+        "intent": "causes",
+        "entities": [
+          {
+            "start": 30,
+            "end": 43,
+            "value": "pre-eclampsia",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "quais as principais causas da pre-eclampsia?"
+      },
+      {
+        "intent": "causes",
+        "entities": [
+          {
+            "start": 30,
+            "end": 45,
+            "value": "parto prematuro",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "quais as principais causas do parto prematuro?"
+      },
+      {
+        "intent": "greeting",
+        "text": "Ei Oi, tudo bem?"
+      },
+      {
+        "intent": "greeting",
+        "text": "Oi Como vc esta?"
+      },
+      {
+        "intent": "greeting",
+        "text": "E ai Como vc esta?"
+      },
+      {
+        "intent": "greeting",
+        "text": "Oie Td bem?"
+      },
+      {
+        "intent": "greeting",
+        "text": "Oiii Td bem?"
+      },
+      {
+        "intent": "greeting",
+        "text": "Olá Como vc esta?"
+      },
+      {
+        "intent": "greeting",
+        "text": "Oi Td bem?"
+      },
+      {
+        "intent": "greeting",
+        "text": "Hey tudo bom?"
+      },
+      {
+        "intent": "greeting",
+        "text": "Oiii Como vc esta?"
+      },
+      {
+        "intent": "hello",
+        "text": "Olá"
+      },
+      {
+        "intent": "hello",
+        "text": "Olá Boa tarde"
+      },
+      {
+        "intent": "hello",
+        "text": "ola"
+      },
+      {
+        "intent": "hello",
+        "text": "Oi Boa noite"
+      },
+      {
+        "intent": "hello",
+        "text": "Boa noite"
+      },
+      {
+        "intent": "hello",
+        "text": "Oi Boa tarde"
+      },
+      {
+        "intent": "hello",
+        "text": "Bom dia"
+      },
+      {
+        "intent": "hello",
+        "text": "Oiii Bom dia"
+      },
+      {
+        "intent": "hello",
+        "text": "Olá Boa noite"
+      },
+      {
+        "intent": "hello",
+        "text": "Olá"
+      },
+      {
+        "intent": "bye",
+        "text": "tks bye"
+      },
+      {
+        "intent": "bye",
+        "text": "mto obg bye"
+      },
+      {
+        "intent": "bye",
+        "text": "até mais vlw"
+      },
+      {
+        "intent": "bye",
+        "text": "muito obrigada bye"
+      },
+      {
+        "intent": "bye",
+        "text": "obrigada tchau"
+      },
+      {
+        "intent": "bye",
+        "text": "tks até"
+      },
+      {
+        "intent": "bye",
+        "text": "xau valeu"
+      },
+      {
+        "intent": "bye",
+        "text": "tks até mais"
+      },
+      {
+        "intent": "bye",
+        "text": "até"
+      },
+      {
+        "intent": "bye",
+        "text": "obg até"
+      },
+      {
+        "intent": "bye",
+        "text": "até obrigada"
+      },
+      {
+        "intent": "bye",
+        "text": "vlw até mais"
+      },
+      {
+        "intent": "bye",
+        "text": "mto obrigada bye"
+      },
+      {
+        "intent": "bye",
+        "text": "até muito obrigada"
+      },
+      {
+        "intent": "bye",
+        "text": "mto obrigada tchau"
+      },
+      {
+        "intent": "bye",
+        "text": "xau tks"
+      },
+      {
+        "intent": "bye",
+        "text": "até mto obg"
+      },
+      {
+        "intent": "affirm",
+        "text": "exatamente sim vlw"
+      },
+      {
+        "intent": "affirm",
+        "text": "exatamente exato obg"
+      },
+      {
+        "intent": "affirm",
+        "text": "exato correto mto obrigada"
+      },
+      {
+        "intent": "affirm",
+        "text": "exatamente correto obg"
+      },
+      {
+        "intent": "affirm",
+        "text": "correto correto vlw"
+      },
+      {
+        "intent": "affirm",
+        "text": "sim exatamente tks"
+      },
+      {
+        "intent": "affirm",
+        "text": "tudo bem"
+      },
+      {
+        "intent": "affirm",
+        "text": "correto isso valeu"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes sim mto obg"
+      },
+      {
+        "intent": "affirm",
+        "text": "isso"
+      },
+      {
+        "intent": "affirm",
+        "text": "exato exato muito obrigada"
+      },
+      {
+        "intent": "affirm",
+        "text": "isso correto"
+      },
+      {
+        "intent": "affirm",
+        "text": "exatamente yes mto obrigada"
+      },
+      {
+        "intent": "affirm",
+        "text": "exatamente exato"
+      },
+      {
+        "intent": "affirm",
+        "text": "exatamente exatamente muito obrigada"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes isso mto obg"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes exato mto obrigada"
+      },
+      {
+        "intent": "affirm",
+        "text": "exatamente correto vlw"
+      },
+      {
+        "intent": "affirm",
+        "text": "isso exato mto obrigada"
+      },
+      {
+        "intent": "affirm",
+        "text": "correto exato obg"
+      },
+      {
+        "intent": "affirm",
+        "text": "sim isso valeu"
+      },
+      {
+        "intent": "affirm",
+        "text": "pode sim"
+      },
+      {
+        "intent": "affirm",
+        "text": "exato exato vlw"
+      },
+      {
+        "intent": "affirm",
+        "text": "correto sim obrigada"
+      },
+      {
+        "intent": "affirm",
+        "text": "isso sim"
+      },
+      {
+        "intent": "affirm",
+        "text": "exato yes muito obrigada"
+      },
+      {
+        "intent": "affirm",
+        "text": "sim correto muito obrigada"
+      },
+      {
+        "intent": "affirm",
+        "text": "isso muito obrigada"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes pfvr"
+      },
+      {
+        "intent": "affirm",
+        "text": "exatamente isso mto obg"
+      },
+      {
+        "intent": "affirm",
+        "text": "exato mto obg"
+      },
+      {
+        "intent": "affirm",
+        "text": "exato yes obrigada"
+      },
+      {
+        "intent": "affirm",
+        "text": "exatamente exato vlw"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes exato muito obrigada"
+      },
+      {
+        "intent": "affirm",
+        "text": "correto yes valeu"
+      },
+      {
+        "intent": "affirm",
+        "text": "correto correto mto obrigada"
+      },
+      {
+        "intent": "affirm",
+        "text": "exatamente exatamente vlw"
+      },
+      {
+        "intent": "affirm",
+        "text": "correto isso obrigada"
+      },
+      {
+        "intent": "affirm",
+        "text": "isso sim tks"
+      },
+      {
+        "intent": "affirm",
+        "text": "exato exato obrigada"
+      },
+      {
+        "intent": "affirm",
+        "text": "exatamente correto mto obg"
+      },
+      {
+        "intent": "affirm",
+        "text": "sim tks"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes exato obg"
+      },
+      {
+        "intent": "affirm",
+        "text": "exatamente sim mto obg"
+      },
+      {
+        "intent": "affirm",
+        "text": "sim yes"
+      },
+      {
+        "intent": "affirm",
+        "text": "correto exato vlw"
+      },
+      {
+        "intent": "affirm",
+        "text": "exatamente obg"
+      },
+      {
+        "intent": "affirm",
+        "text": "correto"
+      },
+      {
+        "intent": "affirm",
+        "text": "correto yes mto obg"
+      },
+      {
+        "intent": "affirm",
+        "text": "Sim"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes sim obrigada"
+      },
+      {
+        "intent": "affirm",
+        "text": "isso obg"
+      },
+      {
+        "intent": "affirm",
+        "text": "sim yes obg"
+      },
+      {
+        "intent": "affirm",
+        "text": "exatamente sim muito obrigada"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes sim mto obrigada"
+      },
+      {
+        "intent": "affirm",
+        "text": "correto vlw"
+      },
+      {
+        "intent": "affirm",
+        "text": "exato isso muito obrigada"
+      },
+      {
+        "intent": "affirm",
+        "text": "exato correto"
+      },
+      {
+        "intent": "affirm",
+        "text": "sim, claro!"
+      },
+      {
+        "intent": "affirm",
+        "text": "exato exatamente"
+      },
+      {
+        "intent": "affirm",
+        "text": "isso correto muito obrigada"
+      },
+      {
+        "intent": "affirm",
+        "text": "isso sim valeu"
+      },
+      {
+        "intent": "affirm",
+        "text": "correto obrigada"
+      },
+      {
+        "intent": "affirm",
+        "text": "isso sim vlw"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes exato tks"
+      },
+      {
+        "intent": "affirm",
+        "text": "certo"
+      },
+      {
+        "intent": "affirm",
+        "text": "exatamente sim mto obrigada"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes isso mto obrigada"
+      },
+      {
+        "intent": "affirm",
+        "text": "exato yes vlw"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes correto obg"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes isso obg"
+      },
+      {
+        "intent": "affirm",
+        "text": "exatamente yes tks"
+      },
+      {
+        "intent": "affirm",
+        "text": "correto yes obg"
+      },
+      {
+        "intent": "affirm",
+        "text": "isso pfvr"
+      },
+      {
+        "intent": "affirm",
+        "text": "correto sim mto obg"
+      },
+      {
+        "intent": "affirm",
+        "text": "exatamente"
+      },
+      {
+        "intent": "affirm",
+        "text": "exato exato obg"
+      },
+      {
+        "intent": "affirm",
+        "text": "exato isso mto obrigada"
+      },
+      {
+        "intent": "affirm",
+        "text": "correto"
+      },
+      {
+        "intent": "affirm",
+        "text": "exatamente sim obg"
+      },
+      {
+        "intent": "affirm",
+        "text": "Okay"
+      },
+      {
+        "intent": "affirm",
+        "text": "isso sim obg"
+      },
+      {
+        "intent": "affirm",
+        "text": "isso exatamente mto obrigada"
+      },
+      {
+        "intent": "deny",
+        "text": "não faça isso pfvr"
+      },
+      {
+        "intent": "deny",
+        "text": "Não"
+      },
+      {
+        "intent": "deny",
+        "text": "não pfvr"
+      },
+      {
+        "intent": "deny",
+        "text": "Não"
+      },
+      {
+        "intent": "deny",
+        "text": "nao"
+      },
+      {
+        "intent": "deny",
+        "text": "Nao"
+      },
+      {
+        "intent": "deny",
+        "text": "Não"
+      },
+      {
+        "intent": "deny",
+        "text": "ñ pfvr"
+      },
+      {
+        "intent": "thank_you",
+        "text": "valeu"
+      },
+      {
+        "intent": "thank_you",
+        "text": "tks"
+      },
+      {
+        "intent": "what_is",
+        "entities": [
+          {
+            "start": 17,
+            "end": 20,
+            "value": "dpp",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "o que quer dizer dpp?"
+      },
+      {
+        "intent": "what_is",
+        "entities": [
+          {
+            "start": 5,
+            "end": 19,
+            "value": "altura uterina",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "oq é altura uterina?"
+      },
+      {
+        "intent": "what_is",
+        "entities": [
+          {
+            "start": 5,
+            "end": 17,
+            "value": "acido folico",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "oq é acido folico?"
+      },
+      {
+        "intent": "what_is",
+        "entities": [
+          {
+            "start": 16,
+            "end": 28,
+            "value": "pelvico",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "o que significa bebê pélvico?"
+      },
+      {
+        "intent": "what_is",
+        "entities": [
+          {
+            "start": 10,
+            "end": 23,
+            "value": "braxton hicks",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "o que são braxton hicks?"
+      },
+      {
+        "intent": "what_is",
+        "entities": [
+          {
+            "start": 5,
+            "end": 17,
+            "value": "a termo",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "oq é bebê a termo?"
+      },
+      {
+        "intent": "what_is",
+        "entities": [
+          {
+            "start": 8,
+            "end": 20,
+            "value": "acido folico",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "o que é ácido fólico?"
+      },
+      {
+        "intent": "what_is",
+        "entities": [
+          {
+            "start": 8,
+            "end": 28,
+            "value": "a termo",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "o que é bebe nascido a termo?"
+      },
+      {
+        "intent": "what_is",
+        "entities": [
+          {
+            "start": 8,
+            "end": 28,
+            "value": "hiperemese gravidica",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "o que é hiperêmese gravídica?"
+      },
+      {
+        "intent": "what_is",
+        "entities": [
+          {
+            "end": 11,
+            "entity": "question_entity",
+            "start": 5,
+            "value": "loquio"
+          }
+        ],
+        "text": "oq é lóquio?"
+      },
+      {
+        "intent": "what_is",
+        "entities": [
+          {
+            "start": 8,
+            "end": 25,
+            "value": "temperatura basal",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "o que é temperatura basal?"
+      },
+      {
+        "intent": "what_is",
+        "entities": [
+          {
+            "start": 5,
+            "end": 12,
+            "value": "forceps",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "oq é forceps?"
+      },
+      {
+        "intent": "what_is",
+        "entities": [
+          {
+            "end": 14,
+            "entity": "question_entity",
+            "start": 5,
+            "value": "puerperio"
+          }
+        ],
+        "text": "oq é puerpério?"
+      },
+      {
+        "intent": "what_is",
+        "entities": [
+          {
+            "start": 8,
+            "end": 22,
+            "value": "istmo cervical",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "o que é istmo-cervical?"
+      },
+      {
+        "intent": "what_is",
+        "entities": [
+          {
+            "start": 13,
+            "end": 28,
+            "value": "placenta previa",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "oq significa placenta previa?"
+      },
+      {
+        "intent": "what_is",
+        "entities": [
+          {
+            "end": 21,
+            "entity": "question_entity",
+            "start": 8,
+            "value": "pre-eclampsia"
+          }
+        ],
+        "text": "O que é pré eclâmpsia?"
+      },
+      {
+        "intent": "what_is",
+        "entities": [
+          {
+            "start": 8,
+            "end": 16,
+            "value": "beta-hcg",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "o que é beta-hcg?"
+      },
+      {
+        "intent": "symptom",
+        "entities": [
+          {
+            "start": 25,
+            "end": 42,
+            "value": "aborto espontaneo",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "quais são os sintomas do aborto espontaneo?"
+      },
+      {
+        "intent": "symptom",
+        "entities": [
+          {
+            "start": 21,
+            "end": 29,
+            "value": "gravidez",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "quais os sintomas da gravidez?"
+      },
+      {
+        "intent": "symptom",
+        "entities": [
+          {
+            "start": 21,
+            "end": 34,
+            "value": "pre-eclampsia",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "quais os sintomas da pré-eclâmpsia?"
+      },
+      {
+        "intent": "when",
+        "entities": [
+          {
+            "start": 23,
+            "end": 34,
+            "value": "episiotomia",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "quando é preciso fazer episiotomia?"
+      },
+      {
+        "intent": "when",
+        "entities": [
+          {
+            "start": 17,
+            "end": 26,
+            "value": "pre-natal",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "quando iniciar o pré-natal?"
+      },
+      {
+        "intent": "when",
+        "entities": [
+          {
+            "start": 10,
+            "end": 16,
+            "value": "nauseas",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "quando os enjoos vão passar?"
+      },
+      {
+        "intent": "greeting_back",
+        "text": "Estou bem e voce?"
+      },
+      {
+        "intent": "greeting_back",
+        "text": "Tudo e voce?"
+      },
+      {
+        "intent": "greeting_answer",
+        "text": "tudo tbm"
+      },
+      {
+        "intent": "greeting_answer",
+        "text": "estou bem"
+      },
+      {
+        "intent": "im_pregnant",
+        "text": "Estou grávida, o que eu faço?"
+      },
+      {
+        "intent": "im_pregnant",
+        "text": "estou gravida e agora?"
+      },
+      {
+        "intent": "im_pregnant",
+        "text": "Estou grávida e agora?"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "O que você consegue fazer?"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "dorflex",
+            "entity": "med_name"
+          }
+        ],
+        "text": "dorflex"
+      },
+      {
+        "intent": "enter_data",
+        "text": "quatro"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 5,
+            "end": 12,
+            "value": "mastite",
+            "entity": "infection_kind"
+          }
+        ],
+        "text": "tive mastite"
+      },
+      {
+        "intent": "enter_data",
+        "text": "cinco"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "entity": "is_trying",
+            "start": 11,
+            "end": 31,
+            "value": "True"
+          }
+        ],
+        "text": "/enter_data{\"is_trying\":\"True\"}"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 2,
+            "value": "sp",
+            "entity": "state"
+          }
+        ],
+        "text": "sp"
+      },
+      {
+        "intent": "enter_data",
+        "text": "oito"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "mastite",
+            "entity": "infection_kind"
+          }
+        ],
+        "text": "mastite"
+      },
+      {
+        "intent": "enter_data",
+        "text": "dois"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "camisinha",
+            "entity": "contraceptive_method"
+          }
+        ],
+        "text": "camisinha"
+      },
+      {
+        "intent": "enter_data",
+        "text": "sete"
+      },
+      {
+        "intent": "enter_data",
+        "text": "santa catarina"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 1,
+            "value": "5",
+            "entity": "number"
+          }
+        ],
+        "text": "5"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "pilula",
+            "entity": "contraceptive_method"
+          }
+        ],
+        "text": "pilula"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "terça-feira",
+            "entity": "week_day"
+          }
+        ],
+        "text": "terça-feira"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "terca-feira",
+            "entity": "week_day"
+          }
+        ],
+        "text": "terca-feira"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 1,
+            "value": "2",
+            "entity": "number"
+          }
+        ],
+        "text": "2"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 2,
+            "value": "mt",
+            "entity": "state"
+          }
+        ],
+        "text": "mt"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "160",
+            "entity": "number"
+          }
+        ],
+        "text": "160"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "1.56",
+            "entity": "number"
+          }
+        ],
+        "text": "1.56 m"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 17,
+            "value": "2016-12-14T09:00:00.000-08:00",
+            "entity": "time"
+          }
+        ],
+        "text": "amanhã as 9 horas"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "entity": "planned_pregnancy",
+            "start": 11,
+            "end": 40,
+            "value": "False"
+          }
+        ],
+        "text": "/enter_data{\"planned_pregnancy\":\"False\"}"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "168",
+            "entity": "number"
+          }
+        ],
+        "text": "168 cm"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 13,
+            "value": "segunda-feira",
+            "entity": "week_day"
+          }
+        ],
+        "text": "segunda-feira"
+      },
+      {
+        "intent": "enter_data",
+        "text": "toda segunda feira"
+      },
+      {
+        "intent": "complain",
+        "entities": [
+          {
+            "start": 13,
+            "end": 17,
+            "value": "azia",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "to com muita azia"
+      },
+      {
+        "intent": "complain",
+        "entities": [
+          {
+            "start": 18,
+            "end": 26,
+            "value": "desmaio",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "tenho tido muitos desmaios, o q eu faço?"
+      },
+      {
+        "intent": "complain",
+        "entities": [
+          {
+            "start": 23,
+            "end": 32,
+            "value": "tornozelo",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "estou com muita dor no tornozelo"
+      },
+      {
+        "intent": "complain",
+        "entities": [
+          {
+            "start": 6,
+            "end": 15,
+            "value": "vomitos",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "estou vomitando muito, o que faço?"
+      },
+      {
+        "intent": "complain",
+        "entities": [
+          {
+            "start": 21,
+            "end": 27,
+            "value": "costas",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "to com muita dor nas costas, é normal?"
+      },
+      {
+        "intent": "complain",
+        "entities": [
+          {
+            "start": 23,
+            "end": 29,
+            "value": "joelho",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "como melhorar a dor no joelho?"
+      },
+      {
+        "intent": "complain",
+        "entities": [
+          {
+            "start": 19,
+            "end": 30,
+            "value": "falta de ar",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "é normal ter muita falta de ar?"
+      },
+      {
+        "intent": "complain",
+        "entities": [
+          {
+            "start": 18,
+            "end": 23,
+            "value": "seios",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "estou com dor nos seios, o que eu faço?"
+      },
+      {
+        "intent": "complain",
+        "entities": [
+          {
+            "start": 16,
+            "end": 21,
+            "value": "nauseas",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "estou com muito enjoo, o que eu faço?"
+      },
+      {
+        "intent": "complain",
+        "entities": [
+          {
+            "start": 7,
+            "end": 17,
+            "value": "corrimento",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "to com corrimento, o que eu faço?"
+      },
+      {
+        "intent": "complain",
+        "entities": [
+          {
+            "start": 24,
+            "end": 30,
+            "value": "costas",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "estou com muita dor nas costas"
+      },
+      {
+        "intent": "stop_form",
+        "text": "Não vou mais responder"
+      },
+      {
+        "intent": "stop_form",
+        "text": "Não quero responder isso"
+      },
+      {
+        "intent": "stop",
+        "text": "Pare"
+      },
+      {
+        "intent": "last_intent",
+        "entities": [
+          {
+            "start": 2,
+            "end": 10,
+            "value": "amendoim",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "e amendoim?"
+      },
+      {
+        "intent": "last_intent",
+        "entities": [
+          {
+            "start": 5,
+            "end": 9,
+            "value": "moto",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "e de moto?"
+      },
+      {
+        "intent": "last_intent",
+        "entities": [
+          {
+            "start": 2,
+            "end": 9,
+            "value": "laxante",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "e laxante?"
+      },
+      {
+        "intent": "last_intent",
+        "entities": [
+          {
+            "start": 5,
+            "end": 11,
+            "value": "cavalo",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "e de cavalo?"
+      },
+      {
+        "intent": "i_know_importance",
+        "text": "siim, eu sei como isso é importante"
+      },
+      {
+        "intent": "i_know_importance",
+        "text": "super concordo, é essencial fazer o pré-natal"
+      },
+      {
+        "intent": "later",
+        "text": "me pergunta mais tarde"
+      },
+      {
+        "intent": "later",
+        "text": "outra hora eu respondo"
+      },
+      {
+        "intent": "why_i_need_to_answer",
+        "text": "preciso responder?"
+      },
+      {
+        "intent": "why_i_need_to_answer",
+        "text": "por que voce precisa saber isso?"
+      },
+      {
+        "intent": "did_exam",
+        "text": "ja fiz"
+      },
+      {
+        "intent": "did_exam",
+        "text": "eu fiz esse exame"
+      },
+      {
+        "intent": "did_not_exam",
+        "text": "nao fiz"
+      },
+      {
+        "intent": "no_question",
+        "text": "nao tenho nada para perguntar"
+      },
+      {
+        "intent": "no_question",
+        "text": "nao tenho perguntar pra fazer"
+      },
+      {
+        "intent": "have_question",
+        "text": "quero perguntar uma coisa"
+      },
+      {
+        "intent": "have_question",
+        "text": "posso perguntar qualquer coisa?"
+      },
+      {
+        "intent": "ill_do_it",
+        "text": "ok eu vou fazer"
+      },
+      {
+        "intent": "ill_do_it",
+        "text": "claro, vou fazer sim"
+      },
+      {
+        "intent": "ill_do_it",
+        "text": "vou conversar com meu medico"
+      },
+      {
+        "intent": "baby_not_moving",
+        "text": "meu bebe nao esta mais mexendo"
+      },
+      {
+        "intent": "which_medicine",
+        "entities": [
+          {
+            "start": 38,
+            "end": 44,
+            "value": "cabeca",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "que remedio eu posso tomar pra dor de cabeça?"
+      },
+      {
+        "intent": "which_medicine",
+        "entities": [
+          {
+            "start": 36,
+            "end": 42,
+            "value": "colica",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "qual medicamento eu posso tomar pra colica?"
+      },
+      {
+        "intent": "welcome",
+        "text": "por nada"
+      },
+      {
+        "intent": "welcome",
+        "text": "imagina"
+      },
+      {
+        "intent": "why_cesarean_answer",
+        "text": "pois o bebê não estava na posição correta"
+      },
+      {
+        "intent": "why_cesarean_answer",
+        "text": "pq o bebe estava sentado"
+      },
+      {
+        "intent": "why_cesarean_answer",
+        "text": "porque eu tenho hiv"
+      },
+      {
+        "intent": "why_cesarean_answer",
+        "text": "devido ao descolamento da placenta"
+      },
+      {
+        "intent": "dont_know",
+        "text": "ñ sei"
+      },
+      {
+        "intent": "dont_know",
+        "text": "nao lembro"
+      },
+      {
+        "intent": "ask_normal_bigger_foot",
+        "text": "meu pé está maior"
+      },
+      {
+        "intent": "ask_normal_feeling_tired",
+        "text": "estou com muito cansaço desde que o meu filho nasceu"
+      },
+      {
+        "intent": "ask_normal_lose_weight_breastfeed",
+        "text": "estou perdendo peso durante a amamentação, tem problema?"
+      },
+      {
+        "intent": "ask_normal_lose_weight_breastfeed",
+        "text": "estou perdendo peso durante a amamentação, é normal?"
+      },
+      {
+        "intent": "ask_normal_lose_weight_breastfeed",
+        "text": "é normal perder peso enquanto estou amamentando?"
+      },
+      {
+        "intent": "ask_dye_hair_breastfeed",
+        "text": "tem problema pintar o cabelo durante a amamentação?"
+      },
+      {
+        "intent": "ask_dye_hair_breastfeed",
+        "text": "posso colorir o cabelo mesmo amamentando?"
+      },
+      {
+        "intent": "ask_dye_hair_breastfeed",
+        "text": "tem problema fazer luzes no cabelo se estou amamentando?"
+      },
+      {
+        "intent": "ask_normal_menstruation_breastfeed",
+        "text": "estou amamentando e ainda nao menstruei, tem algo errado?"
+      },
+      {
+        "intent": "ask_normal_bleeding_after_birth",
+        "text": "meu parto foi há quase um mês e ainda estou sangrando é normal?"
+      },
+      {
+        "intent": "ask_normal_bleeding_after_birth",
+        "text": "é normal sangrar até 15 dias depois do parto?"
+      },
+      {
+        "intent": "ask_normal_bleeding_after_birth",
+        "text": "ja fazem 15 dias desde o meu parto e eu ainda estou sangrando"
+      },
+      {
+        "intent": "ask_exercise_impair_milk",
+        "text": "tem algum problema praticar esportes enquanto estou amamentando?"
+      },
+      {
+        "intent": "ask_exercise_impair_milk",
+        "text": "tem algum problema praticar esportes durante a amamentação?"
+      },
+      {
+        "intent": "ask_exercise_impair_milk",
+        "text": "posso treinar enquanto estou amamentando?"
+      },
+      {
+        "intent": "ask_loss_hair_breastfeed",
+        "text": "É comum os cabelos caírem durante o período de amamentação?"
+      },
+      {
+        "intent": "ask_loss_hair_breastfeed",
+        "text": "meu cabelo está caindo muito por causa da amamentação, o que eu faço?"
+      },
+      {
+        "intent": "ask_back_exercise",
+        "text": "quando posso voltar a correr?"
+      },
+      {
+        "intent": "ask_back_exercise",
+        "text": "quanto tempo depois do parto eu vou poder voltar a treinar?"
+      },
+      {
+        "intent": "ask_back_exercise",
+        "text": "Quando posso voltar a praticar uma atividade física?"
+      },
+      {
+        "intent": "ask_body_back_normal",
+        "text": "demora muito para o corpo voltar ao normal depois do parto?"
+      },
+      {
+        "intent": "ask_body_back_normal",
+        "text": "meu corpo vai demorar muito para voltar ao normal?"
+      },
+      {
+        "intent": "ask_body_back_normal",
+        "text": "depois do parto, quanto tempo demora para o corpo voltar ao normal?"
+      },
+      {
+        "intent": "ask_sagging_breasts_breastfeed",
+        "text": "seios flácidos depois da amamentação"
+      },
+      {
+        "intent": "ask_sagging_breasts_breastfeed",
+        "text": "meus seios ficaram flácidos depois da amamentação"
+      },
+      {
+        "intent": "ask_sagging_breasts_breastfeed",
+        "text": "meus seios estão flácidos por causa da amamentação, eles vão voltar ao normal?"
+      },
+      {
+        "intent": "ask_loose_vagina",
+        "text": "é verdade que quem faz parto normal fica com a vagina grande depois?"
+      },
+      {
+        "intent": "ask_loose_vagina",
+        "text": "quem faz parto normal fica com a vagina frouxa?"
+      },
+      {
+        "intent": "ask_loose_vagina",
+        "text": "é verdade que quem faz parto normal fica com a vagina larga depois?"
+      },
+      {
+        "intent": "ask_stretch_marks",
+        "text": "Fiquei com os seios e o abdômen cheio de estrias, o que eu faço pra tirar?"
+      },
+      {
+        "intent": "ask_stretch_marks",
+        "text": "o que eu posso fazer com as estrias que apareceram durante a gestação?"
+      },
+      {
+        "intent": "ask_desire_sex",
+        "text": "é normal não ter vontade fazer sexo depois do parto?"
+      },
+      {
+        "intent": "ask_desire_sex",
+        "text": "depois do parto, não tive mais vontade de sexo, isso é normal?"
+      },
+      {
+        "intent": "ask_desire_sex",
+        "text": "depois do parto, não tive mais vontade de ter relações sexuais é normal?"
+      },
+      {
+        "intent": "ask_when_have_sex",
+        "text": "quando posso voltar a me relacionar com o meu marido?"
+      },
+      {
+        "intent": "ask_when_have_sex",
+        "text": "quando posso voltar a ter relações sexuais?"
+      },
+      {
+        "intent": "ask_gain_weight_pregnancy",
+        "text": "eu engordei muito e não consigo voltar ao normal"
+      },
+      {
+        "intent": "ask_gain_weight_pregnancy",
+        "text": "engordei muito e não consigo voltar ao meu peso normal, o que eu faço?"
+      },
+      {
+        "intent": "ask_gain_weight_pregnancy",
+        "text": "o que eu faço para voltar ao meu peso normal?"
+      },
+      {
+        "intent": "ask_diet_breastfeed",
+        "text": "Posso fazer dieta para emagrecer mesmo amamentando?"
+      },
+      {
+        "intent": "ask_diet_breastfeed",
+        "text": "pode fazer dieta no período da amamentação?"
+      },
+      {
+        "intent": "ask_feeling_sad",
+        "text": "é normal ficar muito triste depois o parto?"
+      },
+      {
+        "intent": "ask_feeling_sad",
+        "text": "Estou me sentindo triste depois que o meu bebê nasceu, isso é normal?"
+      },
+      {
+        "intent": "ask_thirst_breastfeed",
+        "text": "é normal sentir sede enquanto amamento?"
+      },
+      {
+        "intent": "ask_thirst_breastfeed",
+        "text": "tenho muita sede durante a amamentação"
+      },
+      {
+        "intent": "ask_pain_breastfeed",
+        "text": "estou sentindo muita dor quando amamento, é normal?"
+      },
+      {
+        "intent": "ask_pain_breastfeed",
+        "text": "é normal sentir muita dor na amamentação?"
+      },
+      {
+        "intent": "ask_pain_breastfeed",
+        "text": "estou sentindo bastante dor quando amamento, o que estou fazendo errado?"
+      },
+      {
+        "intent": "ask_prevent_milk_stumbling",
+        "text": "como evitar que o leite empedre?"
+      },
+      {
+        "intent": "ask_prevent_milk_stumbling",
+        "text": "O que faço para evitar que o leite empedre?"
+      },
+      {
+        "intent": "ask_normal_fever_milk_comes_down",
+        "text": "ter febre quando desce o leite é normal?"
+      },
+      {
+        "intent": "ask_how_long_milk_come_down",
+        "text": "Quanto tempo o leite demora para descer?"
+      },
+      {
+        "intent": "ask_normal_swollen_foot",
+        "text": "É normal os pés continuarem inchados após o parto?"
+      },
+      {
+        "intent": "ask_do_pregnancy_test",
+        "text": "Quando devo fazer o teste de gravidez?"
+      },
+      {
+        "intent": "ask_late_menstruation",
+        "text": "minha menstruação está atrasada, o que eu faço?"
+      },
+      {
+        "intent": "ask_calculate_fertile_period",
+        "text": "como se calcula o período fértil?"
+      },
+      {
+        "intent": "ask_ideal_birth_older_women",
+        "text": "Qual é melhor parto para as mulheres com mais de 40 anos e que tem pressão alta?"
+      },
+      {
+        "intent": "ask_avoid_normal_birth",
+        "text": "Por que os médicos evitam fazer parto normal em mulheres que já fizeram cesarianas?"
+      },
+      {
+        "intent": "ask_birth_transmit_disease",
+        "text": "a mãe pode transmitir doença para o bebê durante o parto?"
+      },
+      {
+        "intent": "ask_normal_birth_duration",
+        "text": "quanto tempo dura a cesariana?"
+      },
+      {
+        "intent": "ask_normal_birth_duration",
+        "text": "quanto tempo demora o parto normal?"
+      },
+      {
+        "intent": "ask_normal_birth_recovery",
+        "text": "a recuperação do parto normal é mais rápida?"
+      },
+      {
+        "intent": "ask_breast_milk_normal_birth",
+        "text": "depois do parto normal, o leite desce mais rápido?"
+      },
+      {
+        "intent": "ask_exercise_help_normal_birth",
+        "text": "a prática de atividade física ajuda no preparo pro parto normal?"
+      },
+      {
+        "intent": "ask_normal_birth_pain",
+        "text": "O parto normal dói muito?"
+      },
+      {
+        "intent": "ask_normal_birth_best",
+        "text": "O parto normal é a melhor opção para o bebê?"
+      },
+      {
+        "intent": "ask_pregnant_menopause",
+        "text": "tem como engravidar na menopausa?"
+      },
+      {
+        "intent": "ask_sex_bad_pregnancy",
+        "text": "faz mal fazer sexo durante a gravidez?"
+      },
+      {
+        "intent": "ask_sex_bad_pregnancy",
+        "text": "ter relações sexuais durante a gestação pode antecipar o parto?"
+      },
+      {
+        "intent": "ask_feces_normal_birth",
+        "text": "é normal eliminar fezes durante o parto normal?"
+      },
+      {
+        "intent": "ask_sore_sex_after_birth",
+        "text": "é normal o sexo ser um pouco dolorido depois do parto?"
+      },
+      {
+        "intent": "ask_sore_sex_after_birth",
+        "text": "O sexo pode ser um pouco dolorido após dar à luz?"
+      },
+      {
+        "intent": "ask_have_sex_until_month",
+        "text": "até que mês da gestaçao posso fazer sexo?"
+      },
+      {
+        "intent": "ask_have_sex_until_month",
+        "text": "Até que mês de gravidez posso manter relações sexuais?"
+      },
+      {
+        "intent": "ask_receive_oral_sex",
+        "text": "posso receber sexo oral?"
+      },
+      {
+        "intent": "ask_receive_oral_sex",
+        "text": "Existe algum empecilho para que eu receba sexo oral?"
+      },
+      {
+        "intent": "ask_smell_sweat_stronger",
+        "text": "O cheiro do meu suor está mais forte"
+      },
+      {
+        "intent": "ask_smell_sweat_stronger",
+        "text": "meu suor está mais fedido, o que eu faço?"
+      },
+      {
+        "intent": "ask_normal_discharge_pregnancy",
+        "text": "ter corrimento durante a gravidez é normal?"
+      },
+      {
+        "intent": "ask_sex_hurt_baby",
+        "text": "o sexo pode machucar o bebê?"
+      },
+      {
+        "intent": "ask_choose_birth_type_public",
+        "text": "Posso escolher o tipo de parto na rede pública?"
+      },
+      {
+        "intent": "ask_choose_birth_type_public",
+        "text": "posso escolher qual parto eu quero?"
+      },
+      {
+        "intent": "ask_choose_birth_type_public",
+        "text": "eu posso escolher qual tipo de parto eu quero?"
+      },
+      {
+        "intent": "ask_pregnant_eat_two",
+        "text": "agora que estou grávida, preciso comer por dois?"
+      },
+      {
+        "intent": "ask_pregnant_eat_two",
+        "text": "Gestante precisa comer por dois?"
+      },
+      {
+        "intent": "ask_avoid_cleaning_products",
+        "text": "posso mexer com produtos de limpeza?"
+      },
+      {
+        "intent": "ask_best_position_baby_sleep",
+        "text": "Qual é a posição recomendada para o bebê dormir?"
+      },
+      {
+        "intent": "ask_best_position_baby_sleep",
+        "text": "qual a posição indicada para o bebê dormir?"
+      },
+      {
+        "intent": "ask_what_vaccines_baby",
+        "text": "que vacinas o bebê tem que tomar quando nasce?"
+      },
+      {
+        "intent": "ask_when_go_pediatrician",
+        "text": "quando devo levar o bebê ao pediatra pela primeira vez?"
+      },
+      {
+        "intent": "ask_when_go_pediatrician",
+        "text": "quando devo levar o bebê ao pediatra?"
+      },
+      {
+        "intent": "ask_care_baby_belly_button",
+        "text": "quais cuidados tenho que ter com o umbigo do bebê?"
+      },
+      {
+        "intent": "ask_birth_control_difficult_pregnancy",
+        "text": "tomar pilula por muito dificulta depois para engravidar?"
+      },
+      {
+        "intent": "ask_birth_control_difficult_pregnancy",
+        "text": "tomei anticoncepcional por muito tempo, isso pode dificultar uma gravidez?"
+      },
+      {
+        "intent": "ask_normal_headache_pregnancy",
+        "text": "é normal ter dores de cabeça na gestação?"
+      },
+      {
+        "intent": "ask_how_many_pounds_pregnancy",
+        "text": "quantos kg a gestante deve engordar?"
+      },
+      {
+        "intent": "ask_how_long_breastfeed",
+        "text": "Até quando a mulher deve e pode amamentar?"
+      },
+      {
+        "intent": "ask_how_long_breastfeed",
+        "text": "até quando eu preciso amamentar?"
+      },
+      {
+        "intent": "ask_how_long_healthy_pregnant",
+        "text": "é normal um casal demorar muito tempo para engravidar?"
+      },
+      {
+        "intent": "ask_how_long_healthy_pregnant",
+        "text": "Até quando tempo uma mulher saudável, com um parceiro saudável, pode demorar para engravidar sem usar nenhum método anticoncepcional?"
+      },
+      {
+        "intent": "why",
+        "entities": [
+          {
+            "start": 20,
+            "end": 24,
+            "value": "sono",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "por que temos muito sono na gravidez?"
+      },
+      {
+        "intent": "risk_factor",
+        "entities": [
+          {
+            "start": 29,
+            "end": 44,
+            "value": "parto prematuro",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "quais os fatores de risco do parto prematuro?"
+      },
+      {
+        "intent": "what_to_do",
+        "entities": [
+          {
+            "start": 21,
+            "end": 26,
+            "value": "bolsa",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "o que fazer quando a bolsa romper?"
+      },
+      {
+        "intent": "what_to_do",
+        "entities": [
+          {
+            "start": 17,
+            "end": 22,
+            "value": "bolsa",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "o que fazer se a bolsa estourou?"
+      },
+      {
+        "intent": "importance",
+        "entities": [
+          {
+            "start": 22,
+            "end": 31,
+            "value": "amamentacao",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "qual a importancia de amamentar?"
+      },
+      {
+        "intent": "how_to_know",
+        "entities": [
+          {
+            "start": 24,
+            "end": 41,
+            "value": "trabalho de parto",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "como eu sei se estou em trabalho de parto?"
+      },
+      {
+        "intent": "how_to_know",
+        "entities": [
+          {
+            "start": 16,
+            "end": 21,
+            "value": "bolsa",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "como saber se a bolsa estourou?"
+      },
+      {
+        "intent": "prevent",
+        "entities": [
+          {
+            "start": 25,
+            "end": 40,
+            "value": "parto prematuro",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "como eu posso prevenir o parto prematuro?"
+      },
+      {
+        "intent": "prevent",
+        "entities": [
+          {
+            "start": 14,
+            "end": 29,
+            "value": "parto prematuro",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "como evitar o parto prematuro?"
+      },
+      {
+        "intent": "how",
+        "entities": [
+          {
+            "start": 16,
+            "end": 20,
+            "value": "azia",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "como melhorar a azia?"
+      },
+      {
+        "intent": "how",
+        "entities": [
+          {
+            "start": 16,
+            "end": 25,
+            "value": "pre-natal",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "como funciona o pre-natal?"
+      },
+      {
+        "intent": "is_it_normal",
+        "entities": [
+          {
+            "start": 20,
+            "end": 28,
+            "value": "desmaio",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "é normal ter muitos desmaios?"
+      },
+      {
+        "intent": "is_it_normal",
+        "entities": [
+          {
+            "start": 13,
+            "end": 21,
+            "value": "desmaios",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "é normal ter desmaios?"
+      },
+      {
+        "intent": "compa",
+        "entities": [
+          {
+            "start": 17,
+            "end": 22,
+            "value": "corpo",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "estou com dor no corpo"
+      },
+      {
+        "intent": "when_exam",
+        "entities": [
+          {
+            "start": 33,
+            "end": 38,
+            "value": "fezes",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "quando deve ser feito o exame de fezes?"
+      },
+      {
+        "intent": "goal_exam",
+        "entities": [
+          {
+            "start": 24,
+            "end": 29,
+            "value": "fezes",
+            "entity": "question_entity"
+          }
+        ],
+        "text": "para q serve o exame de fezes?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "vc é um robo?"
+      },
+      {
+        "intent": "ask_howold",
+        "text": "quantos anos vc tem?"
+      },
+      {
+        "intent": "ask_wherefrom",
+        "text": "vc é da onde?"
+      },
+      {
+        "intent": "ask_wherefrom",
+        "text": "da onde você é?"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "quem é vc?"
+      },
+      {
+        "intent": "canthelp",
+        "text": "vc nao consegue me ajudar"
+      },
+      {
+        "intent": "ask_ultrasound_hurt_baby",
+        "text": "ultrassom faz mal para o bebê?"
+      },
+      {
+        "intent": "ask_high_risk_normal_birth",
+        "text": "posso ter um parto normal se minha gestação é de alto risco?"
+      },
+      {
+        "intent": "ask_baby_feel_sex",
+        "text": "se eu transar o bebe vai sentir?"
+      },
+      {
+        "intent": "ask_baby_feel_sex",
+        "text": "o bebe sente alguma coisa na hora da relação sexual??"
+      },
+      {
+        "intent": "ask_food_desire_baby_appearance",
+        "text": "ter vontade de algum alimento durante a gestação pode influenciar na aparência do bebê?"
+      },
+      {
+        "intent": "ask_anesthesia_dentist",
+        "text": "posso tomar anestesia quando for ao dentista se for preciso?"
+      },
+      {
+        "intent": "ask_contraceptive_pill_after_birth",
+        "text": "depois que o bebè nascer posso voltar a tomar a minha pílula?"
+      },
+      {
+        "intent": "ask_contraceptive_pill_after_birth",
+        "text": "Após o parto, posso voltar à pílula que eu usava antes de engravidar?"
+      },
+      {
+        "intent": "ask_invite_accompany_birth",
+        "text": "posso ter um acompanhante no parto?"
+      },
+      {
+        "intent": "ask_invite_accompany_birth",
+        "text": "a gravida pode ter um acompanhante na sala do parto?"
+      },
+      {
+        "intent": "ask_cesarean_can_normal_birth",
+        "text": "ja tive uma cesariana, posso ter um parto normal?"
+      }
+    ],
+    "regex_features": [],
+    "lookup_tables": [
+      {
+        "name": "med_name",
+        "elements": [
+          "dramin",
+          "dipirona",
+          "paracetamol",
+          "buscopan",
+          "neosaldina",
+          "lufital",
+          "dorflex",
+          "analgésico",
+          "rivotril",
+          "ibuprofeno",
+          "diclofenaco",
+          "nimesulida",
+          "anti-inflamatório",
+          "resfenol",
+          "anti-gripal",
+          "advil"
+        ]
+      },
+      {
+        "name": "state",
+        "elements": [
+          "SP",
+          "AM",
+          "RS",
+          "RJ",
+          "MG",
+          "AP",
+          "AC",
+          "AL",
+          "BA",
+          "CE",
+          "ES",
+          "GO",
+          "MA",
+          "MT",
+          "MS",
+          "PA",
+          "PB",
+          "PR",
+          "PE",
+          "PI",
+          "RN",
+          "RO",
+          "RR",
+          "SC",
+          "SE",
+          "TO",
+          "DF"
+        ]
+      }
+    ],
+    "entity_synonyms": [
+      {
+        "value": "café",
+        "synonyms": [
+          "cafeina",
+          "cafeína",
+          "cafe"
+        ]
+      },
+      {
+        "value": "salto alto",
+        "synonyms": [
+          "sapato de salto alto",
+          "sapato alto",
+          "sapato de salto"
+        ]
+      },
+      {
+        "value": "moto",
+        "synonyms": [
+          "motocicleta"
+        ]
+      },
+      {
+        "value": "bicicleta",
+        "synonyms": [
+          "bike"
+        ]
+      },
+      {
+        "value": "pre-eclampsia",
+        "synonyms": [
+          "pré-eclâmpsia",
+          "pré eclâmpsia",
+          "pre eclampsia"
+        ]
+      },
+      {
+        "value": "amamentacao",
+        "synonyms": [
+          "amamentar",
+          "amamentação"
+        ]
+      },
+      {
+        "value": "gravidez",
+        "synonyms": [
+          "gestação",
+          "gestacao"
+        ]
+      },
+      {
+        "value": "puerperio",
+        "synonyms": [
+          "puerpério"
+        ]
+      },
+      {
+        "value": "liquido amniotico",
+        "synonyms": [
+          "líquido amniótico",
+          "líquido amniotico"
+        ]
+      },
+      {
+        "value": "pre-natal",
+        "synonyms": [
+          "pré natal",
+          "pré-natal",
+          "pre natal"
+        ]
+      },
+      {
+        "value": "aborto espontaneo",
+        "synonyms": [
+          "aborto espontâneo"
+        ]
+      },
+      {
+        "value": "loquio",
+        "synonyms": [
+          "lóquio"
+        ]
+      },
+      {
+        "value": "bolsa",
+        "synonyms": [
+          "bolsa rompeu",
+          "bolsa estourou",
+          "bolsa romper",
+          "bolsa estourar"
+        ]
+      },
+      {
+        "value": "exercicios",
+        "synonyms": [
+          "atividade física",
+          "treinos",
+          "exercicio fisico",
+          "exercício",
+          "atividade fisica",
+          "exercício fisico",
+          "exercicio físico",
+          "exercicio",
+          "exercício físico",
+          "exercícios",
+          "academia",
+          "treino",
+          "treinar",
+          "exercicitar"
+        ]
+      },
+      {
+        "value": "alimentos",
+        "synonyms": [
+          "alimento",
+          "comida"
+        ]
+      },
+      {
+        "value": "vacinas",
+        "synonyms": [
+          "vacinação",
+          "vacinacao",
+          "vacina"
+        ]
+      },
+      {
+        "value": "nauseas",
+        "synonyms": [
+          "nausea",
+          "náusea",
+          "náuseas",
+          "ansia",
+          "ânsia"
+        ]
+      },
+      {
+        "value": "vomitos",
+        "synonyms": [
+          "vômitos",
+          "vômito",
+          "vomito"
+        ]
+      },
+      {
+        "value": "tonturas",
+        "synonyms": [
+          "tontura"
+        ]
+      },
+      {
+        "value": "salivacao",
+        "synonyms": [
+          "salivação",
+          "saliva"
+        ]
+      },
+      {
+        "value": "fraqueza",
+        "synonyms": [
+          "fraquezas"
+        ]
+      },
+      {
+        "value": "azia",
+        "synonyms": [
+          "queimação"
+        ]
+      },
+      {
+        "value": "seios",
+        "synonyms": [
+          "mamas",
+          "mama",
+          "seio",
+          "peitos",
+          "peito"
+        ]
+      },
+      {
+        "value": "dor de cabeca",
+        "synonyms": [
+          "dor de cabeça",
+          "dores de cabeça",
+          "dores de cabeca"
+        ]
+      },
+      {
+        "value": "caimbras",
+        "synonyms": [
+          "câimbras",
+          "caimbra",
+          "câimbra"
+        ]
+      },
+      {
+        "value": "estrias",
+        "synonyms": [
+          "estria"
+        ]
+      },
+      {
+        "value": "manchas",
+        "synonyms": [
+          "mancha"
+        ]
+      },
+      {
+        "value": "gengivas",
+        "synonyms": [
+          "gengiva"
+        ]
+      },
+      {
+        "value": "costas",
+        "synonyms": [
+          "costa",
+          "lombar"
+        ]
+      },
+      {
+        "value": "urina",
+        "synonyms": [
+          "xixi"
+        ]
+      },
+      {
+        "value": "flatulencia",
+        "synonyms": [
+          "flatulência",
+          "pum",
+          "peido",
+          "peidos"
+        ]
+      },
+      {
+        "value": "enjoo",
+        "synonyms": [
+          "enjôo"
+        ]
+      },
+      {
+        "value": "segunda-feira",
+        "synonyms": [
+          "segunda",
+          "segunda feira"
+        ]
+      },
+      {
+        "value": "terça-feira",
+        "synonyms": [
+          "terça",
+          "terca",
+          "terça feira",
+          "terca feira",
+          "terca-feira"
+        ]
+      },
+      {
+        "value": "quarta-feira",
+        "synonyms": [
+          "quarta",
+          "quarta feira"
+        ]
+      },
+      {
+        "value": "quinta-feira",
+        "synonyms": [
+          "quinta",
+          "quinta feira"
+        ]
+      },
+      {
+        "value": "sexta-feira",
+        "synonyms": [
+          "sexta",
+          "sexta feira"
+        ]
+      },
+      {
+        "value": "sexo",
+        "synonyms": [
+          "relação sexual",
+          "relações sexuais",
+          "transar"
+        ]
+      },
+      {
+        "value": "sabado",
+        "synonyms": [
+          "sábado",
+          "sabádo"
+        ]
+      },
+      {
+        "value": "japonesa",
+        "synonyms": [
+          "japones",
+          "comida japonesa",
+          "comidas japonesa",
+          "sushi",
+          "temaki"
+        ]
+      },
+      {
+        "value": "alcool",
+        "synonyms": [
+          "vinho",
+          "bebida alcoólica",
+          "cerveja",
+          "pinga",
+          "caipirinha",
+          "batidinha",
+          "álcool"
+        ]
+      }
+    ]
+  }
+}

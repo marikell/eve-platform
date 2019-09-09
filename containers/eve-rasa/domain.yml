@@ -330,6 +330,10 @@ slots:
     type: text
   exam_id:
     type: text
+  user_id:
+    type: text
+  user_name:
+    type: text
   regular_medicine:
     type: unfeaturized
   regular_medicine_name:

@@ -1,0 +1,13 @@
+language: pt
+
+pipeline:
+- name: "SpacyNLP"
+- name: "SpacyTokenizer"
+- name: "SpacyFeaturizer"
+- name: "RegexFeaturizer"
+- name: "CRFEntityExtractor"
+- name: "EntitySynonymMapper"
+- name: "SklearnIntentClassifier"
+- name: DucklingHTTPExtractor
+  url: "http://localhost:8000"
+  dimensions: ["time"]

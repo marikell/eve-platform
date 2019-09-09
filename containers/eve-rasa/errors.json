@@ -1,0 +1,34 @@
+[
+  {
+    "text": "tudo bem?",
+    "intent": "greeting",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.8197973370552063
+    }
+  },
+  {
+    "text": "td bem",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "greeting",
+      "confidence": 0.857099175453186
+    }
+  },
+  {
+    "text": "ñ",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "",
+      "confidence": 0.0
+    }
+  },
+  {
+    "text": "posso fazer exercicios enquanto estou amamentando?",
+    "intent": "ask_exercise_impair_milk",
+    "intent_prediction": {
+      "name": "ask_normal_lose_weight_breastfeed",
+      "confidence": 0.5841164588928223
+    }
+  }
+]
