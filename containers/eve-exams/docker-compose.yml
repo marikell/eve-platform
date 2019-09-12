@@ -1,0 +1,35 @@
+version: "3"
+services:
+  eve_rabbit:
+      image: rabbitmq:3-management
+      container_name: eve_rabbit
+      restart: always
+      networks:
+        - evemongo_evenetwork
+      ports:
+        - 5672:5672
+        - 15672:15672
+  eve_consumer:
+      container_name: eve_consumer
+      build: consumer
+      links:
+        - eve_rabbit
+      command: python -u ./consumer.py
+      environment:
+        - RUN_TIME=00:42
+      networks:
+        - evemongo_evenetwork
+  eve_producer:
+      container_name: eve_producer
+      build: producer
+      links:
+        - eve_rabbit
+      command: python -u ./producer.py
+      environment:
+        - RUN_TIME=00:40
+      networks:
+        - evemongo_evenetwork
+  
+networks:
+  evemongo_evenetwork:
+    external: true
