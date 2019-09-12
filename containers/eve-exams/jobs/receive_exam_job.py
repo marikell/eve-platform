@@ -8,7 +8,7 @@ import pika
 
 class ReceiveExamJob():
     def run(self):
-        connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost', port=5672))
+        connection = pika.BlockingConnection(pika.ConnectionParameters(host='eve_rabbit', port=5672))
         channel = connection.channel()
         channel.queue_declare(queue='exams')
         
@@ -48,9 +48,8 @@ class ReceiveExamJob():
     
     def send_exam_to_rasa(self, obj):
         try:
-            #TODO REMOVE THIS PART (ONLY MADE FOR RASA X)
-            user = self.get_user_by_email('me')
-            obj['user_id'] = user['email']
+            #TODO REMOVE THIS PART (ONLY MADE FOR RASA 
+            obj['user_id'] = obj['user_id']
             
             headers = { 'Content-Type' : 'application/json' }
             url_slot = '{}/conversations/{}/tracker/events'.format(RASA_API['url'], obj['user_id'])

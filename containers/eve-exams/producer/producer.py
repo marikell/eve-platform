@@ -1,14 +1,40 @@
-from config.configuration import EVE_API, RASA_API
-import requests 
-from helpers.logging import get_log
+import schedule
+import time
+import requests
 import json
+import os
+import schedule
+import time
 import traceback
+from datetime import datetime
+from datetime import date
+import logging
 import pika
-#status dos exames: 0 (fila), 1 (pendente), 2 (done), 3 (undone)
+
+def get_module_logger():
+    logger = logging.getLogger()
+    handler = logging.StreamHandler()
+    formatter = logging.Formatter(
+        '%(asctime)s [%(name)-12s] %(levelname)-8s %(message)s')
+    handler.setFormatter(formatter)
+    logger.addHandler(handler)
+    logger.setLevel(logging.DEBUG)
+    return logger
+
+def get_log(string):
+    print('[eve-producer] {}'.format(string))
+
+EVE_API:dict = {
+    'url' : 'http://eve_api:5001/api'
+}
+
+RASA_API:dict = {
+    'url' : 'http://eve_core:5005'
+}
 
 class SendExamJob():
     def run(self):
-        connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost', port=5672))
+        connection = pika.BlockingConnection(pika.ConnectionParameters(host='eve_rabbit', port=5672))
         channel = connection.channel()
         channel.queue_declare(queue='exams')
         
@@ -32,7 +58,9 @@ class SendExamJob():
                         'exam_name' : exm[0]['name']
                     }
                     channel.basic_publish(exchange='', routing_key='exams', body=json.dumps(msg))
-                    print('User {} - Exam {}: sent to queue.'.format(usr['user_id']['$oid'], exm[0]['name']))
+                    get_log('User {} - Exam {}: sent to queue.'.format(usr['user_id']['$oid'], exm[0]['name']))
+        
+        get_log('Job finalizado!')
         connection.close()
     
     #verifica se o usuário possui registro na tabela user_exam para esse exame
@@ -77,3 +105,17 @@ class SendExamJob():
         
         get_log(json_obj['response'])
         return
+
+
+
+schedule.every().day.at(os.environ['RUN_TIME']).do(SendExamJob().run)
+get_module_logger().info("Exam Sender is going to run at {}...".format(os.environ['RUN_TIME']))
+while True:
+    log_times = 0
+    try:
+        schedule.run_pending()
+        time.sleep(10)
+    except Exception as e:
+        log_times = log_times + 1
+        if log_times <= 10:
+            get_module_logger().info("[ERROR] {}".format(str(e)))
