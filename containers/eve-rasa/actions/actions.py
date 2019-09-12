@@ -225,21 +225,12 @@ class InitialForm(FormAction):
         headers = {
             'Content-Type':'application/json'
         }
-        try:
-            #TODO remover essa parte
-            email_obj = {                
-                'email' : 'me'
-            }
-                    
+        try:    
             headers = {
                 'Content-Type' : 'application/json'
             }
                     
-            req_email = requests.post(url = '{}'.format(route_config.get_route('get_user_by_email')),headers = headers, data=json.dumps(email_obj))
-
-            if req_email.json()['status'] == 200:
-                user_id = json.loads(req_email.json()['response'])['_id']['$oid']
-                req = requests.post(url = '{}{}'.format(route_config.get_route('send_slots'),'/{}'.format(user_id)),headers= headers,data=json.dumps(data))
+            req = requests.post(url = '{}{}'.format(route_config.get_route('send_slots'),'/{}'.format(user_id)),headers= headers,data=json.dumps(data))
         except Exception as e:
             #this will log in the future
             print(str(e))
