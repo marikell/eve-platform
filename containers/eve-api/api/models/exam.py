@@ -4,7 +4,6 @@ class Exam(db.DynamicDocument):
     trimester = db.IntField(required=True)
     description = db.StringField(max_length=300, required=False)
     name = db.StringField(max_length=200, required=True)
-    slot = db.StringField(max_length=100, required=False)
 
 
     

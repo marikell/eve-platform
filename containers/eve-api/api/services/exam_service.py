@@ -7,7 +7,7 @@ class ExamService(GenericService):
         super().__init__(Exam.objects)        
 
     def insert(self, obj):        
-        exam = Exam(trimester=obj['trimester'], description=obj['description'], name=obj['name'], slot=obj['slot'])
+        exam = Exam(trimester=obj['trimester'], description=obj['description'], name=obj['name'])
         exam.save()
 
     def get_by_name(self, exam_name):
