@@ -16,7 +16,7 @@ pipeline:
 # - name: EntitySynonymMapper
 # - name: SklearnIntentClassifier
 - name: DucklingHTTPExtractor
-  url: "http://localhost:8000"
+  url: "http://eve_duckling:8000"
   dimensions: ["time"]  
   # locale: "le_BR"
   # timezone: "South America/Brazil"
