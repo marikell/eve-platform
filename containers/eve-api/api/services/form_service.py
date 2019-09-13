@@ -7,7 +7,7 @@ class FormService(GenericService):
         super().__init__(Form.objects)        
 
     def insert(self, obj):        
-        form = Form(trimester=obj['trimester'], name=obj['name'])
+        form = Form(name=obj['name'])
         form.save()
 
     def get_by_name(self, form_name):

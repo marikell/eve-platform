@@ -8,14 +8,6 @@ class UserPregnancyInfoService(GenericService):
         super().__init__(UserPregnancyInfo.objects)
         
     def insert(self, obj):
-        # current_high_risk = (obj['current_high_risk'])
-        # due_date = (obj['due_date'])
-        # births = (obj['births'])
-        # cesarean_births = (obj['cesarean_births'])
-        # normal_births = (obj['normal_births'])
-        # why_cesarean_birth = (obj['why_cesarean_birth'])
-        # abortion = (obj['abortion'])
-        # premature_birth = (obj['premature_birth'])
         is_doing_pre_natal = (obj['is_doing_pre_natal'])
         last_menstruation_date = (obj['last_menstruation_date'])
         is_planned_pregnancy = (obj['is_planned_pregnancy'])
@@ -23,14 +15,6 @@ class UserPregnancyInfoService(GenericService):
         first_ultrasound_date = (obj['first_ultrasound_date'])
         
         user_pregnancy_info = UserPregnancyInfo(
-                            #  current_high_risk=current_high_risk, 
-                            #  due_date=due_date,                             
-                            #  births=births,
-                            #  cesarean_births=cesarean_births, 
-                            #  normal_births=normal_births,
-                            #  why_cesarean_birth=why_cesarean_birth,
-                            #  abortion=abortion,
-                            #  premature_birth=premature_birth,
                              is_doing_pre_natal=is_doing_pre_natal,
                              last_menstruation_date=last_menstruation_date,
                              is_planned_pregnancy=is_planned_pregnancy,

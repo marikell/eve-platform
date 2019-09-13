@@ -10,9 +10,7 @@ from jobs.receive_exam_job import ReceiveExamJob
 # schedule.every().day.at("12:42").do(fup_job.execute_routine)
 # schedule.every().week.at("20:18").do(fup_job.execute_routine)
 
-# ExamJob().run()
 # SendExamJob().run()
-# UserJob().run()
 ReceiveExamJob().run()
 
 # while True:

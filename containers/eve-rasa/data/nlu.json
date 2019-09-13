@@ -11103,7 +11103,7 @@
           {
             "start": 22,
             "end": 27,
-            "value": "enjoo",
+            "value": "nauseas",
             "entity": "question_entity"
           }
         ]
@@ -11115,7 +11115,7 @@
           {
             "start": 27,
             "end": 32,
-            "value": "enjoo",
+            "value": "nauseas",
             "entity": "question_entity"
           }
         ]
@@ -13124,36 +13124,6 @@
         "entities": []
       },
       {
-        "text": "tive mastite",
-        "intent": "inform_infection_kind",
-        "entities": []
-      },
-      {
-        "text": "infecção urinária",
-        "intent": "inform_infection_kind",
-        "entities": []
-      },
-      {
-        "text": "eu tive infecção urinária e mastite",
-        "intent": "inform_infection_kind",
-        "entities": []
-      },
-      {
-        "text": "tive uma infecção na cicatriz da episiotomia",
-        "intent": "inform_infection_kind",
-        "entities": []
-      },
-      {
-        "text": "infecção na corte da cesárea",
-        "intent": "inform_infection_kind",
-        "entities": []
-      },
-      {
-        "text": "tive endometrite",
-        "intent": "inform_infection_kind",
-        "entities": []
-      },
-      {
         "text": "camisinha",
         "intent": "enter_data",
         "entities": [
@@ -13298,6 +13268,54 @@
         "text": "nao tenho perguntas",
         "intent": "no_question",
         "entities": []
+      },
+      {
+        "text": "estou com gases",
+        "intent": "complain",
+        "entities": [
+          {
+            "start": 10,
+            "end": 15,
+            "value": "flatulencia",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "estou com muitos gases",
+        "intent": "complain",
+        "entities": [
+          {
+            "start": 17,
+            "end": 22,
+            "value": "flatulencia",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "estou com o intestino preso",
+        "intent": "complain",
+        "entities": [
+          {
+            "start": 12,
+            "end": 27,
+            "value": "intestino preso",
+            "entity": "question_entity"
+          }
+        ]
+      },
+      {
+        "text": "estou com prisão de ventre",
+        "intent": "complain",
+        "entities": [
+          {
+            "start": 10,
+            "end": 26,
+            "value": "intestino preso",
+            "entity": "question_entity"
+          }
+        ]
       }
     ],
     "regex_features": [],
@@ -13589,13 +13607,31 @@
           "flatulência",
           "pum",
           "peido",
-          "peidos"
+          "peidos",
+          "gases"
         ]
       },
       {
-        "value": "enjoo",
+        "value": "intestino preso",
         "synonyms": [
-          "enjôo"
+          "prisão de ventre",
+          "prisao de ventre"
+        ]
+      },
+      {
+        "value": "nauseas",
+        "synonyms": [
+          "enjôo",
+          "enjoo",
+          "enjoos",
+          "enjôos",
+          "ansia",
+          "ânsia",
+          "ansias",
+          "ânsias",
+          "nausea",
+          "náusea",
+          "náuseas"
         ]
       },
       {

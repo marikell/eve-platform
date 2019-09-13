@@ -6,6 +6,7 @@ from api.services.entity_intent_answer_service import EntityIntentAnswerService
 from api.services.exam_service import ExamService
 from api.services.user_service import UserService
 from api.services.user_exam_service import UserExamService
+from api.services.user_form_service import UserFormService
 from api.services.user_info_service import UserInfoService
 from api.services.user_health_info_service import UserHealthInfoService
 from api.services.user_pregnancy_info_service import UserPregnancyInfoService
@@ -32,6 +33,7 @@ class ServiceHandler():
         services[ROUTE_CONFIG['USER_PREGNANCY_INFO_TYPE_NAME']] = UserPregnancyInfoService()
         services[ROUTE_CONFIG['USER_POSTPARTUM_INFO_TYPE_NAME']] = UserPostpartumInfoService()
         services[ROUTE_CONFIG['USER_EXAM_TYPE_NAME']] = UserExamService()
+        services[ROUTE_CONFIG['USER_FORM_TYPE_NAME']] = UserFormService()
         services[ROUTE_CONFIG['UNANSWERED_QUESTION_TYPE_NAME']] = UnansweredQuestionService()
         services[ROUTE_CONFIG['USER_TRIMESTER_TYPE_NAME']] = UserTrimesterService()
         services[ROUTE_CONFIG['TIP_TYPE_NAME']] = TipService()
