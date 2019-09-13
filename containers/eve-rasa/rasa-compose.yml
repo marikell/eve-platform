@@ -18,6 +18,16 @@ services:
       - 5055:5055
     volumes:
       - ./actions:/app/actions
+  eve_duckling:
+    image: rasa/duckling
+    container_name: eve_duckling
+    ports:
+      - 8000:8000
+    links:
+      - eve_core
+      - eve_actionserver
+    networks:
+      - evemongo_evenetwork
 networks:
   evemongo_evenetwork:
     external: true
