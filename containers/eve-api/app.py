@@ -9,6 +9,7 @@ from api.blueprints.answer_blueprint import app_answer
 from api.blueprints.rasa_blueprint import app_rasa
 from api.blueprints.fup_blueprint import app_fup
 from api.blueprints.user_exam_blueprint import app_user_exam
+from api.blueprints.user_form_blueprint import app_user_form
 from api.blueprints.unanswered_question_blueprint import app_unanswered_question
 from api.blueprints.user_trimester_blueprint import app_usr_trimester
 from api.blueprints.form_blueprint import app_form
@@ -43,6 +44,7 @@ def register_blueprints(app):
     app.register_blueprint(app_usr_trimester)
     app.register_blueprint(app_form)
     app.register_blueprint(app_user_exam)
+    app.register_blueprint(app_user_form)
     app.register_blueprint(app_tip)
     app.register_blueprint(app_notify)
     app.register_blueprint(app_notification_user)

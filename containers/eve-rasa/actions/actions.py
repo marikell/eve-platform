@@ -18,6 +18,9 @@ route_config.register_route('send_slot_user_exam','/rasa/send-slot-user-exam')
 route_config.register_route('send_health_slots','/rasa/send-health-slots')
 route_config.register_route('send_pregnancy_slots','/rasa/send-pregnancy-slots')
 route_config.register_route('send_personal_slots','/rasa/send-personal-slots')
+route_config.register_route('user_form','/user-form')
+route_config.register_route('get_user_form','/user-form/get-form-user')
+route_config.register_route('get_form_by_name','/form/get-by-name')
 route_config.register_route('send_unanswered_question','/unanswered-question')
 
 class GetAnswer(Action):
@@ -65,21 +68,21 @@ class ActionGreetUser(Action):
         
         intent = tracker.latest_message["intent"].get("name")
         user_id = tracker.get_slot('user_id')
-        # user_id = 123
         
         dispatcher.utter_template("utter_hello", tracker)
-        if user_id is not None:
-            if intent == "hello":
-                dispatcher.utter_template("utter_greet", tracker)
-            elif intent == "greeting":
-                dispatcher.utter_template("utter_greet_back", tracker)
+        # if user_id is not None:
+        #     if intent == "hello":
+        #         dispatcher.utter_template("utter_greet", tracker)
+        #     elif intent == "greeting":
+        #         dispatcher.utter_template("utter_greet_back", tracker)
 
-        elif intent == "hello" or intent == "get_started":
+        if intent == "hello" or intent == "get_started":
             dispatcher.utter_template("utter_introduce", tracker)
             dispatcher.utter_template("utter_ask_info", tracker)
         elif intent == "greeting":
             dispatcher.utter_template("utter_introduce", tracker)
             dispatcher.utter_template("utter_greet_back", tracker)
+        
         return []
 
 class InitialForm(FormAction):
@@ -88,6 +91,31 @@ class InitialForm(FormAction):
         
     @staticmethod
     def required_slots(tracker: Tracker):
+        user_id = tracker.get_slot("user_id")
+        headers = { 'Content-Type':'application/json' }
+        # busca o id form-initial
+        data = { "name" : "form_initial" }        
+        req = requests.post(route_config.get_route('get_form_by_name'),headers= headers,data=json.dumps(data))
+        initial_form_id = req.json()['response']['_id']['$oid']
+        
+        # verifica se já um registro para esse usuário desse form
+        data = {
+            'form_id': initial_form_id,
+            'user_id': user_id
+        }
+        req = requests.post(url = route_config.get_route('get_user_form'), headers=headers, data=json.dumps(data))
+        
+        # se o registro não existe, insere
+        if 'response' not in req.json():
+            data = {
+                "user_id" : user_id,
+                "form_id" : initial_form_id,
+                "status" : 0
+            }
+
+            req = requests.post(route_config.get_route('user_form'),headers= headers,data=json.dumps(data))
+            user_form_id = json.loads(req.json()['response'])['inserted_id']            
+
         if(tracker.get_slot('pre_natal') == "False"):
             return []
         elif(tracker.get_slot('first_ultrasound') == "False"):
@@ -183,6 +211,23 @@ class InitialForm(FormAction):
         return string == 'True'
 
     def submit(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> List[Dict]:
+        user_id = tracker.get_slot("user_id")
+        headers = { 'Content-Type':'application/json' }
+        # busca o id form-initial
+        data = { "name" : "form_initial" }
+        req = requests.post(route_config.get_route('get_form_by_name'),headers= headers,data=json.dumps(data))
+        initial_form_id = req.json()['response']['_id']['$oid']
+        
+        # verifica se já um registro para esse usuário desse form
+        data = {
+            'form_id': initial_form_id,
+            'user_id': user_id
+        }
+        req = requests.post(url = route_config.get_route('get_user_form'), headers=headers, data=json.dumps(data))        
+        obj = json.loads(req.json()['response'])
+        data = { 'id': obj['_id']['$oid'], 'status': 1 }        
+        req = requests.put(url = '{}/{}'.format(route_config.get_route('user_form'), format(data['id'])),headers= headers,data=json.dumps(data))
+
         first_pregnancy = self.convert_to_bool(tracker.get_slot("first_pregnancy"))
         has_children = self.convert_to_bool(tracker.get_slot("has_children"))
         health_plan = self.convert_to_bool(tracker.get_slot("health_plan"))
@@ -221,7 +266,7 @@ class InitialForm(FormAction):
             "had_infection" : infection,
             "infection_kind" : infection_kind,
         }
-        print(data)
+        
         headers = {
             'Content-Type':'application/json'
         }
@@ -271,6 +316,14 @@ class ActionHowOld(Action):
     def run(self, dispatcher, tracker, domain):
         dispatcher.utter_template("utter_ask_howold", tracker)
         return [UserUtteranceReverted()]
+
+class ActionCongrats(Action):
+    def name(self):
+        return "action_congrats"
+
+    def run(self, dispatcher, tracker, domain):
+        dispatcher.utter_template("utter_congrats", tracker)
+        return [SlotSet("is_pregnant", "True")]
 
 class ActionWhereFrom(Action):
     def name(self):
@@ -381,6 +434,30 @@ class HealthForm(FormAction):
         
     @staticmethod
     def required_slots(tracker: Tracker):
+        user_id = tracker.get_slot("user_id")
+        headers = { 'Content-Type':'application/json' }
+        # busca o id form-initial
+        data = { "name" : "form_health" }        
+        req = requests.post(route_config.get_route('get_form_by_name'),headers= headers,data=json.dumps(data))
+        health_form_id = req.json()['response']['_id']['$oid']
+        
+        # verifica se já um registro para esse usuário desse form
+        data = {
+            'form_id': health_form_id,
+            'user_id': user_id
+        }
+        req = requests.post(url = route_config.get_route('get_user_form'), headers=headers, data=json.dumps(data))
+        
+        # se o registro não existe, insere
+        if 'response' not in req.json():
+            data = {
+                "user_id" : user_id,
+                "form_id" : health_form_id,
+                "status" : 0
+            }
+
+            req = requests.post(route_config.get_route('user_form'),headers= headers,data=json.dumps(data))
+
         if(tracker.get_slot('regular_medicine') == "False"):
             return [
                 "hypothyroidism",
@@ -418,6 +495,23 @@ class HealthForm(FormAction):
         return string == 'True'
 
     def submit(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> List[Dict]:
+        user_id = tracker.get_slot("user_id")
+        headers = { 'Content-Type':'application/json' }
+        # busca o id form-initial
+        data = { "name" : "form_health" }
+        req = requests.post(route_config.get_route('get_form_by_name'),headers= headers,data=json.dumps(data))
+        health_form_id = req.json()['response']['_id']['$oid']
+        
+        # verifica se já um registro para esse usuário desse form
+        data = {
+            'form_id': health_form_id,
+            'user_id': user_id
+        }
+        req = requests.post(url = route_config.get_route('get_user_form'), headers=headers, data=json.dumps(data))        
+        obj = json.loads(req.json()['response'])
+        data = { 'id': obj['_id']['$oid'], 'status': 1 }        
+        req = requests.put(url = '{}/{}'.format(route_config.get_route('user_form'), format(data['id'])),headers= headers,data=json.dumps(data))
+
         regular_medicine = self.convert_to_bool(tracker.get_slot("regular_medicine"))
         regular_medicine_name = tracker.get_slot("regular_medicine_name")
         hypothyroidism = self.convert_to_bool(tracker.get_slot("hypothyroidism"))
@@ -473,6 +567,30 @@ class PersonalForm(FormAction):
         
     @staticmethod
     def required_slots(tracker: Tracker):
+        user_id = tracker.get_slot("user_id")
+        headers = { 'Content-Type':'application/json' }
+        # busca o id form-initial
+        data = { "name" : "form_personal" }        
+        req = requests.post(route_config.get_route('get_form_by_name'),headers= headers,data=json.dumps(data))
+        personal_form_id = req.json()['response']['_id']['$oid']
+        print(personal_form_id)
+        # verifica se já um registro para esse usuário desse form
+        data = {
+            'form_id': personal_form_id,
+            'user_id': user_id
+        }
+        req = requests.post(url = route_config.get_route('get_user_form'), headers=headers, data=json.dumps(data))
+        
+        # se o registro não existe, insere
+        if 'response' not in req.json():
+            data = {
+                "user_id" : user_id,
+                "form_id" : personal_form_id,
+                "status" : 0
+            }
+            print(data)
+
+            req = requests.post(route_config.get_route('user_form'),headers= headers,data=json.dumps(data))
         return [
             "height",
             "weight",
@@ -560,6 +678,23 @@ class PersonalForm(FormAction):
             return False
 
     def submit(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> List[Dict]:
+        user_id = tracker.get_slot("user_id")
+        headers = { 'Content-Type':'application/json' }
+        # busca o id form-initial
+        data = { "name" : "form_personal" }
+        req = requests.post(route_config.get_route('get_form_by_name'),headers= headers,data=json.dumps(data))
+        personal_form_id = req.json()['response']['_id']['$oid']
+        
+        # verifica se já um registro para esse usuário desse form
+        data = {
+            'form_id': personal_form_id,
+            'user_id': user_id
+        }
+        req = requests.post(url = route_config.get_route('get_user_form'), headers=headers, data=json.dumps(data))        
+        obj = json.loads(req.json()['response'])
+        data = { 'id': obj['_id']['$oid'], 'status': 1 }        
+        req = requests.put(url = '{}/{}'.format(route_config.get_route('user_form'), format(data['id'])),headers= headers,data=json.dumps(data))
+
         height = tracker.get_slot("height")
         weight = tracker.get_slot("weight")
         state = tracker.get_slot("state")
@@ -600,6 +735,29 @@ class PregnancyForm(FormAction):
         
     @staticmethod
     def required_slots(tracker: Tracker):
+        user_id = tracker.get_slot("user_id")
+        headers = { 'Content-Type':'application/json' }
+        # busca o id form-initial
+        data = { "name" : "form_pregnancy" }        
+        req = requests.post(route_config.get_route('get_form_by_name'),headers= headers,data=json.dumps(data))
+        pregnancy_form_id = req.json()['response']['_id']['$oid']
+        
+        # verifica se já um registro para esse usuário desse form
+        data = {
+            'form_id': pregnancy_form_id,
+            'user_id': user_id
+        }
+        req = requests.post(url = route_config.get_route('get_user_form'), headers=headers, data=json.dumps(data))
+        
+        # se o registro não existe, insere
+        if 'response' not in req.json():
+            data = {
+                "user_id" : user_id,
+                "form_id" : pregnancy_form_id,
+                "status" : 0
+            }
+
+            req = requests.post(route_config.get_route('user_form'),headers= headers,data=json.dumps(data))
         if(tracker.get_slot('births') is not None):
             if(tracker.get_slot('normal_births') is not None):
                 if(int(tracker.get_slot('births')) == int(tracker.get_slot('normal_births'))):
@@ -697,6 +855,23 @@ class PregnancyForm(FormAction):
         return string == 'True'
 
     def submit(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> List[Dict]:
+        user_id = tracker.get_slot("user_id")
+        headers = { 'Content-Type':'application/json' }
+        # busca o id form-initial
+        data = { "name" : "form_pregnancy" }
+        req = requests.post(route_config.get_route('get_form_by_name'),headers= headers,data=json.dumps(data))
+        pregnancy_form_id = req.json()['response']['_id']['$oid']
+        
+        # verifica se já um registro para esse usuário desse form
+        data = {
+            'form_id': pregnancy_form_id,
+            'user_id': user_id
+        }
+        req = requests.post(url = route_config.get_route('get_user_form'), headers=headers, data=json.dumps(data))        
+        obj = json.loads(req.json()['response'])
+        data = { 'id': obj['_id']['$oid'], 'status': 1 }        
+        req = requests.put(url = '{}/{}'.format(route_config.get_route('user_form'), format(data['id'])),headers= headers,data=json.dumps(data))
+
         current_high_risk = self.convert_to_bool(tracker.get_slot("high_risk"))
         due_date = tracker.get_slot("due_date")
         births = tracker.get_slot("births")

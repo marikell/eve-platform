@@ -39,20 +39,3 @@ def get_users_exams():
     join_result = [usr for usr in UserTrimester._get_collection().aggregate(pipeline)]
     return join_result
 
-# def get_users_infos():
-#     pipeline = [
-#         {
-#             '$lookup': {
-#                 'from' : 'user_info',
-#                 'localField': 'user_id',
-#                 'foreignField' : '_id',
-#                 'as' : 'user_infos'
-#             }
-#         },
-#         {
-#             '$unwind':'$user_id'
-#         }
-#     ]
-    
-#     join_result = [usr for usr in User._get_collection().aggregate(pipeline)]
-#     return join_result

@@ -21,8 +21,8 @@ class ReceiveExamJob():
     def callback(self, ch, method, properties, body):
         obj = json.loads(body)
         pendings_exams = self.check_pending_exams(obj['user_id'])
-        
-        if pendings_exams is None:
+        pendings_forms = self.check_pending_forms(obj['user_id'])
+        if pendings_exams is None and pendings_forms is None:
             self.send_exam_to_rasa(obj)
             self.update_user_exam_status(obj['user_exam_id'])
         else:
@@ -39,6 +39,21 @@ class ReceiveExamJob():
             get_log(json_obj['response'])
             return
         
+        try:
+            response = json.loads(json_obj['response'])
+        except KeyError:
+            response = None
+        
+        return response
+    
+    def check_pending_forms(self, usr):
+        url = '{}/user-form/{}/{}'.format(EVE_API['url'], usr, 0)
+        r = requests.get(url)
+        json_obj = r.json()
+        
+        if json_obj['status'] == 400:
+            get_log(json_obj['response'])
+            return
         try:
             response = json.loads(json_obj['response'])
         except KeyError:
@@ -116,3 +131,12 @@ class ReceiveExamJob():
         user = json.loads(req_email.json()['response'])
 
         return user
+    
+    def delete_user_exam(self, usr_exm):
+        req = requests.delete(url = '{}/user-exam/{}'.format(EVE_API['url'], usr_exm))
+        json_obj = req.json()
+
+        if json_obj['status'] == 400:
+            get_log(json_obj['response'])
+            return
+        

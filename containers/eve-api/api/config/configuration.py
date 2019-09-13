@@ -19,12 +19,11 @@ ROUTE_CONFIG:dict = {
     'UNANSWERED_QUESTION_TYPE_NAME':'unanswered-question',
     'NOTIFICATION_USER_TYPE_NAME':'notification-user',
     'FORM_TYPE_NAME':'form',
+    'USER_FORM_TYPE_NAME':'user-form',
     'TIP_TYPE_NAME':'tip',
     'CONVERSATIONS_TYPE_NAME': 'conversations',
-    #this endpoint will be called by the fup service
     'FUP':'fup',
     'NOTIFY':'notify',
-    #this endpoint will be called by rasa to send data
     'RASA' : 'rasa'
 }
 

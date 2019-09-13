@@ -133,6 +133,7 @@ actions:
   - utter_ask_doctor_appointment
   - utter_ask_infection
   - utter_ask_infection_kind
+  - action_congrats
 entities: 
   - last_menstruation
   - first_ultrasound
@@ -165,7 +166,6 @@ forms:
   - form_health
   - form_personal
   - form_pregnancy
-  - form_postpartum
 intents:
   - affirm  
   - ask_isbot:
@@ -328,6 +328,12 @@ slots:
     type: text
   user_exam_id:
     type: text
+  user_form_initial_id:
+    type: text
+  user_id:
+    type: text
+  user_name:
+    type: text
   exam_id:
     type: text
   user_id:
@@ -415,7 +421,7 @@ templates:
     - title: "Não"
       payload: '/enter_data{"health_plan":"False"}'
   utter_ask_howold:
-  - text: "Velha o bastante pra ser médica 💁‍♀"
+  - text: "Sou velha o bastante pra ser médica haha 💁‍"
   utter_ask_info:
   - text: "Bom, pra eu poder te ajudar, preciso te fazer algumas perguntas antes ok? É rapidinho 😊"
   utter_ask_is_pregnant:
@@ -461,12 +467,11 @@ templates:
       payload: '/enter_data{"is_trying":"False"}'
   utter_ask_wherefrom:
   - text: "Sou de Sorocaba, SP"
-  - text: "Sorocaba, SP"
   utter_bye:
   - text: "Tchau! 😙"
   - text: "Tchau, até mais! 😙"
   utter_canthelp:
-  - text: "Desculpe por não conseguir te ajudar :("
+  - text: "Desculpe por não conseguir te ajudar 😕 Mas procure o seu médico, tenho certeza que ele conseguirá te ajudar! 😉"
   utter_congrats:
   - text: "Parabéns! Temos um baby a caminho 👶🤰😍"
   utter_default:
@@ -483,7 +488,7 @@ templates:
   utter_greet_back:
   - text: "Estou bem, e voce?"
   utter_hello:
-  - text: "Olá! 😄"
+  - text: "Olá, {user_name}! 😄"
   utter_help:
   - text: "Bom, no que eu posso te ajudar? Você tem alguma dúvida?"
   utter_info_later:
@@ -710,9 +715,9 @@ O planejamento tem o objetivo de identificar fatores de risco como diabetes e hi
     - title: "Não"
       payload: '/enter_data{"had_birth":"False"}'
   utter_normal_birth_best:
-  - text: "Se tudo estiver bem com a mãe e com o bebê e que não haja contraindicações, esse é o tipo de parto mais indicado. Diferente de uma cesárea agendada, no parto normal quem decide o momento de chegar ao mundo é a própria criança."
+  - text: "Se tudo estiver bem com a mãe e com o bebê e que não haja contraindicações, o parto normal é o tipo de parto mais indicado. Diferente de uma cesárea agendada, no parto normal quem decide o momento de chegar ao mundo é a própria criança."
   utter_normal_birth_pain:
-  - text: "O nível de sensibilidade varia muito de pessoa para pessoa e claro que o lado psicológico interfere nessa hora. Mas geralmente, é uma dor suportável e que você vai acabar esquecendo depois que o bebê nasce. Existem algumas alternativas naturais que podem aliviar o incômodo, como massagem, água quente e até mesmo a atenção de pessoas queridas."
+  - text: "O nível de sensibilidade varia muito de pessoa para pessoa e claro que o lado psicológico interfere nessa hora. Mas geralmente, é uma dor suportável e que você vai acabar esquecendo depois que o bebê nasce. Existem algumas alternativas naturais que podem aliviar o incômodo, como massagem, água quente e até mesmo o apoio do seu acompanhante. Além disso, existe a possibilidade de realizar uma analgesia de bloqueio (peridural ou combinada), feita por anestesista, na maternidade, que vai retirar a dor, sem que você perca a mobilidade e a possibilidade de ter um parto normal."
   utter_exercise_help_normal_birth:
   - text: "A prática regular de exercícios pode trazer muitas vantagens para as grávidas e para os bebês desde que seguindo à risca as orientações médicas. O trabalho de parto exige paciência e a mulher tem que fazer força, com um melhor condicionamento físico você conseguirá fazer força mais facilmente."
   utter_breast_milk_normal_birth:
@@ -722,11 +727,11 @@ O planejamento tem o objetivo de identificar fatores de risco como diabetes e hi
   utter_normal_birth_duration:
   - text: "Enquanto a cesariana demora de 1 a 2 horas para acontecer, a fase ativa do parto normal pode levar de 8 a 12 horas na primeira gestação."
   utter_birth_transmit_disease:
-  - text: "Existem situações em que pode haver contaminação, mas esses casos são controláveis e a conduta adotada varia de acordo com a doença."
+  - text: "Sim, como por exemplo o vírus HIV. No entanto, a maioria das condições infecciosas da mãe, quando bem controlada, não contraindica o parto normal. A avaliação médica ditará a conduta, em alguns casos usando medicamentos que previnem a contaminação."
   utter_avoid_normal_birth:
   - text: "Isso não é uma verdade absoluta, a partir da segunda cirurgia, os médicos desaconselham parto normal, pois há risco de ocorrer ruptura no útero. O órgão fica frágil por ter sido cortado mais de uma vez no mesmo lugar."
   utter_ideal_birth_older_women:
-  - text: "Se a pressão estiver controlada e a gravidez transcorrer bem, não há restrição para o parto natural. Mas converse com o seu médico para decidir como será feito o parto."
+  - text: "Se a pressão estiver controlada e a gravidez transcorrer bem, não há restrição para o parto normal. Mas converse com o seu médico para decidir como será feito o parto."
   utter_calculate_fertile_period:
   - text: "Para calcular o período fértil é necessário considerar que a concepção acontece sempre no meio do ciclo, ou seja, em torno do 14º dia de um ciclo normal de 28 dias.
   Desta forma, para saber quando é o período fértil é preciso contar 14 dias a partir da data em que veio a última menstruação. A ovulação acontecerá entre 3 dias antes e 3 dias depois dessa data, que é o que se considera o período fértil da mulher. "
@@ -737,7 +742,8 @@ O planejamento tem o objetivo de identificar fatores de risco como diabetes e hi
   utter_do_pregnancy_test:
   - text: "Existem dois tipos de teste: o de urina e o de sangue. O mais confiável é o de sangue, esse exame pode ser feito sem um pedido médico cerca de 10 dias após a relação sexual e custa em média R$ 50. O teste de gravidez de farmácia pode ser feito a partir do 1º dia do atraso da menstruação e custa cerca de R$ 10. Porém, se o resultado desse primeiro teste for negativo e a menstruação ainda estiver atrasada ou se existirem sintomas de gravidez, o teste deve ser repetido em 3 ou 5 dias, quando os níveis do hormônio beta HCG estão maiores e mais fáceis de serem detectados."
   utter_normal_swollen_foot:
-  - text: "Isso é normal e acontece por causa do aumento da retenção de líquidos. Mas fique tranquila, seu pé deve desinchar em até uma semana."
+  - text: "Isso é normal e acontece por causa do aumento da retenção de líquidos. Mas fique tranquila, seu pé deve desinchar em até uma semana.
+Caso haja inchaço assimétrico, dor importante ou vermelhidão nas pernas após o parto, procure um médico pelo risco de trombose no período pós-parto."
   utter_how_long_milk_come_down:
   - text: "Geralmente, o leite desce entre o terceiro e o quinto dia depois do parto. O líquido que sai antes se chama colostro, que é rico em anticorpos e por isso também é muito importante para o recém-nascido."
   utter_normal_fever_milk_comes_down:
@@ -754,31 +760,31 @@ O planejamento tem o objetivo de identificar fatores de risco como diabetes e hi
   utter_diet_breastfeed:
   - text: "Não faça dietas e regimes nesse período. Eles podem afetar sua produção de leite. Procure apenas ter uma alimentação balanceada e beber muito líquido."
   utter_gain_weight_pregnancy:
-  - text: "Procure um endocrinologista para ajudá-la a perder o peso em excesso. Passados 40 dias do parto, a mulher em geral já pode voltar a fazer atividades físicas leves, sempre com acompanhamento. A alimentação balanceada e fracionada também é sempre bem-vinda."
+  - text: "Procure um médico ou nutricionista para ajudá-la a perder o peso em excesso. Passados 40 dias do parto, a mulher em geral já pode voltar a fazer atividades físicas leves, sempre com acompanhamento. A alimentação balanceada e fracionada também é sempre bem-vinda."
   utter_when_have_sex:
-  - text: "Em caso de parto normal, sem a incisão na vagina (episiotomia), o casal pode voltar a fazer sexo tão logo se sinta confortável para isso. Já na cesariana, a cicatriz uterina e as dores na região abdominal inviabilizam a relação por um, dois ou até três meses, dependendo da mulher. De maneira geral, o recomendado é esperar pelo menos 40 dias antes de voltar às atividades sexuais."
+  - text: "É recomendado esperar 40 dias antes de voltar às atividades sexuais, para aguardar o fechamento completo do colo uterino e, no caso de parto normal, a cicatrização dos tecidos vaginais."
   utter_stretch_marks:
   - text: "Infelizmente, as estrias são definitivas. Alguns tratamentos com produtos cosméticos podem atenuar o problema, mas não solucioná-lo."
   utter_desire_sex:
   - text: "Isso é super normal devido a uma série de fatores como o estresse do parto, o cansaço de cuidar de um recém-nascido, medo de engravidar novamente e a insegurança em relação ao corpo. Além disso, o seu metabolismo também altera o desejo sexual devido a falta de ovulação e ao aumento do hormônio prolactina que é importante para a produção do leite. Mas logo a sua libido voltará ao normal."
   utter_loose_vagina:
-  - text: "Se o parto for feito corretamente, com procedimentos adequados isso não acontece. Agora, se o parto for mal assistido, há riscos. Porém existem exercícios para recuperar e melhorar o desempenho da musculatura vaginal. Eles devem ser realizados imediatamente após o parto."
+  - text: "Se o parto for feito corretamente, com procedimentos adequados isso não acontece. Agora, se o parto for mal assistido, há riscos. Porém existem exercícios para recuperar e melhorar o desempenho da musculatura vaginal. Eles devem ser iniciados tão logo ocorra a cicatrização dos tecidos vaginais."
   utter_sagging_breasts_breastfeed:
   - text: "A verdade é que os seios não voltarão a ser como antes, porém com o tempo, voltam a uma forma parecida com a que tinham. Ah saiba que a flacidez dos seios é causada pela gestação e não pela amamentação, então não adianta interromper a amamentação com intuito de evitar a flacidez."
   utter_body_back_normal:
   - text: "O corpo retoma suas formas entre 40 e 60 dias. Já os seios só voltam ao normal depois do fim da amamentação."
   utter_back_exercise:
-  - text: "Se foi parto normal, você pode voltar a se exercitar em dois meses. Mas, se fez cesariana, espere pelo menos uns seis meses. Até lá, você pode fazer atividades físicas leves e supervisionadas. Sempre sob a orientação médica."
+  - text: "Se foi parto normal, você pode voltar a se exercitar em dois meses. Mas, se fez cesariana, espere pelo menos 3 meses. Em algumas situações especiais, o médico pode pedir períodos mais longos sem atividade físicas. Consulte-o sobre o seu caso específico."
   utter_loss_hair_breastfeed:
   - text: "É normal. Em geral, os fios começam a cair entre dois e três meses após o parto e podem continuar por até seis meses. Durante esse período, suavize as escovações, evite banhos com água muito quente e massageie a cabeça sempre que se lembrar."
   utter_exercise_impair_milk:
-  - text: "A prática exagerada de exercícios pode ser prejudicial sim. Prefira apenas caminhar ou, no máximo, uma hidroginástica."
+  - text: "A prática exagerada de exercícios pode diminuir a produção de leite. Prefira atividades de menor intensidade. Se notar diminuição do volume de leite, reduza o ritmo."
   utter_normal_bleeding_after_birth:
   - text: "É normal, o nome disso é loquios e se trata da perda de sangue, muco e tecidos do interior do útero durante o puerpério. No caso de parto normal, o corrimento escurece até o final do primeiro mês. Depois, por mais um mês, uma secreção amarelada ainda. Em casos de cesariana, o sangramento pode durar até o segundo mês."
   utter_normal_menstruation_breastfeed:
   - text: "Em geral, é normal não menstruar nesse período. Mas isso não é regra. Algumas podem menstruar e até engravidar enquanto amamentam, embora as chances sejam menores."
   utter_dye_hair_breastfeed:
-  - text: "O melhor é evitar até o término da amamentação devido as substâncias presentes nas tinturas que podem fazer mal ao bebê."
+  - text: "O melhor é evitar até o término da amamentação devido as substâncias presentes nas tinturas que podem fazer mal ao bebê, especialmente aquelas contendo chumbo e amônia. Você pode consultar o seu médico a respeito de tinturas semi-permanentes, que em alguns casos são permitidas."
   utter_normal_lose_weight_breastfeed:
   - text: "A produção de leite absorve muitas calorias por isso é normal emagrecer durante a amamentação."
   utter_normal_feeling_tired:
@@ -794,7 +800,7 @@ O planejamento tem o objetivo de identificar fatores de risco como diabetes e hi
   utter_sore_sex_after_birth:
   - text: "Sim, porque, nessa momento, os hormônios comportam-se quase como que na menopausa. A vagina fica mais seca e dificulta a penetração, causando dor."
   utter_have_sex_until_month:
-  - text: "Se não há complicações, o sexo é permitido até o 8° mês. Se houver sangramento vaginal, perda de líquido, dor ou qualquer dúvida, procure orientação médica."
+  - text: "Se não há complicações, o sexo é permitido até o final da gestação. Se houver sangramento vaginal, perda de líquido, dor ou qualquer dúvida, procure orientação médica."
   utter_receive_oral_sex:
   - text: "O sexo oral, na maioria das vezes, não tem contraindicação. Lembre-se apenas de evitar o contato no caso de herpes labial ativo."
   utter_smell_sweat_stronger:
@@ -824,9 +830,9 @@ O planejamento tem o objetivo de identificar fatores de risco como diabetes e hi
   utter_how_many_pounds_pregnancy:
   - text: "O ideal é engordar entre 10 e 12kg. Assim, a mulher conseguirá voltar ao peso normal em poucos meses, sem precisar ter muito trabalho para emagrecer e fazer grandes sacrifícios."
   utter_how_long_breastfeed:
-  - text: "O aleitamento deve ser feito por pelo menos seis meses, e até cerca de um ano. Amentar é difícil, exige dedicação e paciência, mas é extremamente benéfica para o desenvolvimento do bebê."
+  - text: "O aleitamento deve ser exclusivo por pelo menos seis meses, e depois mantido até dois anos ou mais. Amentar é difícil, exige dedicação e paciência, mas é extremamente benéfica para o desenvolvimento do bebê."
   utter_how_long_healthy_pregnant:
-  - text: "Pode demorar até dois anos para engravidar. Apenas passando desse período é que começa a ser aconselhado exames específicos para avaliar a fertilidade do casal, antes não é preciso se preocupar."
+  - text: "Pode demorar até dois anos para engravidar. Apenas passando desse período é que começa a ser aconselhado exames específicos para avaliar a fertilidade do casal, antes não é preciso se preocupar. Nas mulheres com mais de 35 anos, é recomendável avaliação médica se após 6 meses de tentativas não tenha ocorrido a gestação, pois depois dessa idade a fertilidade diminui naturalmente e não se pode perder tempo seu no diagnóstico e tratamento."
   utter_high_risk_normal_birth:
   - text: "Sim. Você pode ter parto normal e, na maioria das vezes, mesmo em gestações de alto risco, é o parto que implica em menos complicações. Se há algum impedimento ao parto normal, essa situação deverá ser explicada a você pelo médico e deverá constar por escrito em seu cartão de pré-natal."
   utter_ultrasound_hurt_baby:
