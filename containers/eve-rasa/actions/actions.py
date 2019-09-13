@@ -65,23 +65,37 @@ class ActionGreetUser(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        
-        intent = tracker.latest_message["intent"].get("name")
-        user_id = tracker.get_slot('user_id')
-        
-        dispatcher.utter_template("utter_hello", tracker)
-        # if user_id is not None:
-        #     if intent == "hello":
-        #         dispatcher.utter_template("utter_greet", tracker)
-        #     elif intent == "greeting":
-        #         dispatcher.utter_template("utter_greet_back", tracker)
 
-        if intent == "hello" or intent == "get_started":
-            dispatcher.utter_template("utter_introduce", tracker)
-            dispatcher.utter_template("utter_ask_info", tracker)
-        elif intent == "greeting":
-            dispatcher.utter_template("utter_introduce", tracker)
-            dispatcher.utter_template("utter_greet_back", tracker)
+        user_id = tracker.get_slot("user_id")
+        headers = { 'Content-Type':'application/json' }
+        # busca o id form-initial
+        data = { "name" : "form_initial" }
+        req = requests.post(route_config.get_route('get_form_by_name'),headers= headers,data=json.dumps(data))
+        initial_form_id = req.json()['response']['_id']['$oid']
+        
+        # verifica se já um registro para esse usuário desse form
+        data = {
+            'form_id': initial_form_id,
+            'user_id': user_id
+        }
+        req = requests.post(url = route_config.get_route('get_user_form'), headers=headers, data=json.dumps(data))        
+        obj = json.loads(req.json()['response'])
+        intent = tracker.latest_message["intent"].get("name")
+        dispatcher.utter_template("utter_hello", tracker)
+
+        if(obj['status'] == 1):
+            if intent == "hello":
+                dispatcher.utter_template("utter_greet", tracker)
+            elif intent == "greeting":
+                dispatcher.utter_template("utter_greet_back", tracker)
+        else:
+            if intent == "hello" or intent == "get_started":
+                dispatcher.utter_template("utter_introduce", tracker)
+                dispatcher.utter_template("utter_ask_info", tracker)
+            elif intent == "greeting":
+                dispatcher.utter_template("utter_introduce", tracker)
+                dispatcher.utter_template("utter_greet_back", tracker)
+        
         
         return []
 
@@ -388,7 +402,7 @@ class ActionGetExam(Action):
 
         try:
             data = {
-                "exam_status" : 4,
+                "exam_status" : 3,
                 'id' : user_exam_id
             }
             req = requests.post(route_config.get_route('send_slot_user_exam'),headers= headers,data=json.dumps(data))
@@ -418,7 +432,7 @@ class ActionSaveExam(Action):
                 headers = { 'Content-Type':'application/json' }
                                 
                 data = {
-                    "exam_status" : 3,
+                    "exam_status" : 2,
                     'id' : user_exam_id
                 }
                 req = requests.post(route_config.get_route('send_slot_user_exam'),headers= headers,data=json.dumps(data))

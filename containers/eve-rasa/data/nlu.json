@@ -3009,32 +3009,7 @@
         "entities": []
       },
       {
-        "text": "td bem",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
         "text": "sem problema",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "tudo bem",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente correto mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato sim tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso sim tks",
         "intent": "affirm",
         "entities": []
       },
@@ -3054,27 +3029,7 @@
         "entities": []
       },
       {
-        "text": "yes exato obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto yes mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes exato obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
         "text": "sim isso obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes exato tks",
         "intent": "affirm",
         "entities": []
       },
@@ -3089,16 +3044,6 @@
         "entities": []
       },
       {
-        "text": "yes sim mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
         "text": "correto exatamente mto obg",
         "intent": "affirm",
         "entities": []
@@ -3107,27 +3052,12 @@
         "text": "exato sim mto obrigada",
         "intent": "affirm",
         "entities": []
-      },
-      {
-        "text": "yes muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes correto valeu",
-        "intent": "affirm",
-        "entities": []
-      },
+      },      
       {
         "text": "exatamente sim vlw",
         "intent": "affirm",
         "entities": []
-      },
-      {
-        "text": "yes sim tks",
-        "intent": "affirm",
-        "entities": []
-      },
+      },      
       {
         "text": "yes",
         "intent": "affirm",
@@ -3145,11 +3075,6 @@
       },
       {
         "text": "exatamente exatamente mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso",
         "intent": "affirm",
         "entities": []
       },
@@ -3174,22 +3099,7 @@
         "entities": []
       },
       {
-        "text": "exatamente isso vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
         "text": "isso correto vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes isso valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes correto mto obg",
         "intent": "affirm",
         "entities": []
       },
@@ -3204,37 +3114,7 @@
         "entities": []
       },
       {
-        "text": "isso yes mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes yes muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
         "text": "correto isso muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto correto valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato sim obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto yes valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso exato valeu",
         "intent": "affirm",
         "entities": []
       },
@@ -3249,27 +3129,12 @@
         "entities": []
       },
       {
-        "text": "exato exatamente valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
         "text": "isso exatamente valeu",
         "intent": "affirm",
         "entities": []
       },
       {
-        "text": "exatamente sim muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
         "text": "exato isso",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes exatamente mto obg",
         "intent": "affirm",
         "entities": []
       },
@@ -3285,26 +3150,6 @@
       },
       {
         "text": "sim exatamente obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim isso tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim yes obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto yes tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto correto",
         "intent": "affirm",
         "entities": []
       },
@@ -3344,72 +3189,12 @@
         "entities": []
       },
       {
-        "text": "yes exatamente valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim exato tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso yes mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
         "text": "sim sim",
         "intent": "affirm",
         "entities": []
       },
       {
-        "text": "exatamente correto mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim yes muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto correto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente yes tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
         "text": "correto exato obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente exato muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato sim",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes isso mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente exatamente obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato exato vlw",
         "intent": "affirm",
         "entities": []
       },
@@ -3429,26 +3214,6 @@
         "entities": []
       },
       {
-        "text": "exatamente yes mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente correto tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente exato mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto exatamente obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
         "text": "sim exatamente obrigada",
         "intent": "affirm",
         "entities": []
@@ -3464,32 +3229,7 @@
         "entities": []
       },
       {
-        "text": "exato exatamente",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente correto muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim yes obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente correto",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
         "text": "correto isso vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente yes valeu",
         "intent": "affirm",
         "entities": []
       },
@@ -3499,32 +3239,7 @@
         "entities": []
       },
       {
-        "text": "sim yes tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente isso tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato isso valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes correto mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
         "text": "isso exatamente",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes sim obrigada",
         "intent": "affirm",
         "entities": []
       },
@@ -3535,11 +3250,6 @@
       },
       {
         "text": "correto por favor",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato yes obg",
         "intent": "affirm",
         "entities": []
       },
@@ -3559,1402 +3269,12 @@
         "entities": []
       },
       {
-        "text": "isso yes",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
         "text": "isso obrigada",
         "intent": "affirm",
         "entities": []
       },
       {
         "text": "sim mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim exatamente mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes isso muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes por favor",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes exatamente obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso sim muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato sim mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes yes mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso correto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso sim obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso isso valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto isso",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente correto valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto exatamente mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto exatamente muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto yes muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato exatamente obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente exato vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato isso muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto sim valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente exato obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato yes muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso isso obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes yes valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim exatamente mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim exato mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato isso vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente exatamente vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto exato valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso exato obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato isso tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim sim valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim correto mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato correto vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato yes valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto correto vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto exato obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato yes",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente exato obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes exatamente tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim exatamente",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes yes obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso exatamente vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes exatamente muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato yes obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente correto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes isso vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto correto muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente isso",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes isso tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato exatamente mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente yes obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim exatamente muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto exatamente valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso exato obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso exatamente tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato yes mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim exatamente vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente exatamente tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso isso mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim exatamente tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes exato valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente exato tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto yes",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes yes",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes exatamente",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso yes muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso exato mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim exato obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim isso obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes exatamente obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto sim muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente exatamente",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato correto",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes exato mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso sim mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto isso tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes sim muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente exato mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto correto mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto correto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes correto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim sim mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato isso obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes correto vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato yes mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato sim muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim sim muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes sim",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim correto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso correto muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes pfvr",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim correto vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim sim mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso isso mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim correto muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente sim obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato correto muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato exato obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente exatamente valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato exato tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso yes valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes exato vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato exato valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto yes obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes exatamente vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso isso vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente isso obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto exato muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim isso mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato sim obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim isso valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente yes muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto isso obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto sim tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso exato muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato correto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente exatamente muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente exatamente mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso exatamente obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto sim obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes correto",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto sim mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato exato mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto pfvr",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim sim obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso isso tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato isso obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes correto tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso yes obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente sim",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato exatamente obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato correto tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto yes obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto sim",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato isso mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso correto valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim correto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto exato mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente correto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso correto mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes isso obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto exatamente vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim sim tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato exato obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato exato",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes correto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim correto tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes yes tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente isso mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes isso obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes exatamente mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente correto vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes correto muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso sim vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto isso mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente isso muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente sim tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto exatamente tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente isso valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto isso mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato exato muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato correto mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato exatamente tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto correto tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato yes tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto sim vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim exato vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso exato mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes yes mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim yes valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto yes mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato pfvr",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso exato vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes sim vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto exato",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto correto mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso yes vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato exatamente mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso yes obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso sim",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes yes vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente yes obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes exato",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto exato tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes sim valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes isso",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes sim obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim yes mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso exatamente mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente sim obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente exato",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim sim vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim yes",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente sim mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim exato valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente exato valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim yes mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto exatamente obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato yes vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim por favor",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso isso obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes exato mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim correto valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim sim obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto exato vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente yes vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso yes tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim exatamente valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim exato",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim yes vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso correto tks",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente exatamente obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto isso valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso sim valeu",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente por favor",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim isso muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso isso muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente isso mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso correto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente isso obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato exatamente vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto yes vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes yes obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim correto",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato exato mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes sim mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim exato mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes exato muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso por favor",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim correto mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes isso mto obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exato exatamente muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente yes mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim isso vlw",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim exato muito obrigada",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "exatamente yes",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correto exatamente",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sim pfvr",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso correto mto obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes obg",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "isso isso",
         "intent": "affirm",
         "entities": []
       },
@@ -6479,6 +4799,36 @@
         "entities": []
       },
       {
+        "text": "tudo bem",
+        "intent": "greeting_answer",
+        "entities": []
+      },
+      {
+        "text": "td bem",
+        "intent": "greeting_answer",
+        "entities": []
+      },
+      {
+        "text": "tudo certo",
+        "intent": "greeting_answer",
+        "entities": []
+      },
+      {
+        "text": "tudo bom",
+        "intent": "greeting_answer",
+        "entities": []
+      },
+      {
+        "text": "td bom",
+        "intent": "greeting_answer",
+        "entities": []
+      },
+      {
+        "text": "td certo",
+        "intent": "greeting_answer",
+        "entities": []
+      },
+      {
         "text": "Estou grávida e agora?",
         "intent": "im_pregnant",
         "entities": []
@@ -6534,16 +4884,6 @@
         "entities": []
       },
       {
-        "text": "tudo bem",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "Sim",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
         "text": "Oii",
         "intent": "hello",
         "entities": []
@@ -6585,11 +4925,6 @@
       },
       {
         "text": "OK",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "Sim",
         "intent": "affirm",
         "entities": []
       },
@@ -8038,11 +6373,6 @@
         "entities": []
       },
       {
-        "text": "ok",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
         "text": "/enter_data{\"is_pregnant\":\"False\"}",
         "intent": "enter_data",
         "entities": [
@@ -8165,11 +6495,6 @@
       {
         "text": "Ola",
         "intent": "hello",
-        "entities": []
-      },
-      {
-        "text": "tudo bem",
-        "intent": "affirm",
         "entities": []
       },
       {
@@ -12146,7 +10471,22 @@
         "entities": []
       },
       {
-        "text": "vc é um robo?",
+        "text": "o que você é?",
+        "intent": "ask_isbot",
+        "entities": []
+      },
+      {
+        "text": "voce é uma pessoa?",
+        "intent": "ask_isbot",
+        "entities": []
+      },
+      {
+        "text": "voce é uma pessoa de verdade?",
+        "intent": "ask_isbot",
+        "entities": []
+      },
+      {
+        "text": "voce é um robo?",
         "intent": "ask_isbot",
         "entities": []
       },

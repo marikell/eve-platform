@@ -7,6 +7,20 @@
   - form{"name": null}
   - utter_ask_me_anything
 
+## bot inicia a conversa e o usuário (gestante)
+* hello
+  - action_greet_user
+* greeting_back
+  - utter_greet_answer
+  - utter_ask_me_anything
+
+## bot inicia a conversa e o usuário (gestante)
+* hello
+  - action_greet_user
+* greeting_answer
+  - utter_great
+  - utter_ask_me_anything
+
 ## bot inicia a conversa e o usuário nao quer responder as perguntas
 * get_started
   - action_greet_user
