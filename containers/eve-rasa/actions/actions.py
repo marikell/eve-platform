@@ -79,11 +79,10 @@ class ActionGreetUser(Action):
             'user_id': user_id
         }
         req = requests.post(url = route_config.get_route('get_user_form'), headers=headers, data=json.dumps(data))        
-        obj = json.loads(req.json()['response'])
         intent = tracker.latest_message["intent"].get("name")
         dispatcher.utter_template("utter_hello", tracker)
-
-        if(obj['status'] == 1):
+        
+        if 'response' in req.json() and json.loads(req.json()['response'])['status'] == 1:
             if intent == "hello":
                 dispatcher.utter_template("utter_greet", tracker)
             elif intent == "greeting":
