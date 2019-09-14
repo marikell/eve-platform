@@ -9,7 +9,7 @@ import requests
 import json
 import dateutil.parser
 
-route_config = RouteConfig('http://localhost:5001')
+route_config = RouteConfig('http://eve_api:5001')
 route_config.register_route('get_answer','/action-answer')
 route_config.register_route('send_slots','/rasa/send-slots')
 route_config.register_route('get_exam_by_name','/exam/get-by-name')
