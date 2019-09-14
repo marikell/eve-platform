@@ -6,6 +6,7 @@ from api.services.service_handler import ServiceHandler
 from api.utils.validate_fields import check_empty_string, check_if_key_exists
 from api.utils.response_formatter import response, response_text
 import json
+from bson import json_util
 
 route_name = ROUTE_CONFIG['USER_EXAM_TYPE_NAME']
 app_user_exam = Blueprint(route_name,__name__, url_prefix='/api')
@@ -46,6 +47,16 @@ def insert():
         return response(json.dumps(obj), status=status.HTTP_201_CREATED)
     except Exception as e:
         return response_text(str(e), status.HTTP_400_BAD_REQUEST)
+
+@app_user_exam.route('/done-exams/<user_id>', methods=['GET'])
+def get_done_exams_users(user_id):
+    try:
+        users = ServiceHandler.get_service(ROUTE_CONFIG['EXAM_TYPE_NAME']).get_user_done_exams(user_id)
+
+        return response(json_util.dumps(users))
+    except Exception as e:
+        return response_text(str(e), status.HTTP_400_BAD_REQUEST)
+        
     
 @app_user_exam.route('/{}/<user_id>'.format(route_name), methods=['GET'])
 def get_pending_exams_by_user(user_id):
