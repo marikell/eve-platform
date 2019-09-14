@@ -1,7 +1,7 @@
 version: '3.0'
 services:
   eve_core:
-    image: evecoreimage
+    build: .
     container_name: eve_core
     ports:
       - 5005:5005
@@ -10,7 +10,7 @@ services:
     networks:
       - evemongo_evenetwork
   eve_actionserver:
-    image: eveactionimage
+    build: actions
     container_name: eve_actionserver
     networks:
       - evemongo_evenetwork
