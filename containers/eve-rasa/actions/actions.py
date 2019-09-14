@@ -216,10 +216,6 @@ class InitialForm(FormAction):
         except ValueError:
             return False
 
-    # @staticmethod
-    # def convert_to_bool(string: str) -> bool:
-    #     return string == 'True'
-
     def submit(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> List[Dict]:
         user_id = tracker.get_slot("user_id")
         headers = { 'Content-Type':'application/json' }
@@ -256,7 +252,7 @@ class InitialForm(FormAction):
         infection = tracker.get_slot("infection")
         infection_kind = tracker.get_slot("infection_kind")
         user_id = tracker.get_slot("user_id")
-
+        
         data = {
             "is_first_pregnancy" : first_pregnancy,
             "has_children" : has_children,
@@ -267,8 +263,8 @@ class InitialForm(FormAction):
             "is_planned_pregnancy" : planned_pregnancy,
             "is_trying" : is_trying,
             "is_postpartum" : is_postpartum,
-            "last_menstruation_date" : last_menstruation,
-            "first_ultrasound_date" : first_ultrasound_date,
+            "last_menstruation_date" : last_menstruation['from'] if isinstance(last_menstruation, dict) else last_menstruation,
+            "first_ultrasound_date" : first_ultrasound_date['from'] if isinstance(first_ultrasound_date, dict) else first_ultrasound_date,
             "is_breastfeeding" : breastfeeding,
             "is_having_sex" : having_sex,
             "contraceptive_method" : contraceptive_method,
@@ -277,14 +273,7 @@ class InitialForm(FormAction):
             "infection_kind" : infection_kind,
         }
         
-        headers = {
-            'Content-Type':'application/json'
-        }
-        try:    
-            headers = {
-                'Content-Type' : 'application/json'
-            }
-                    
+        try:
             req = requests.post(url = '{}{}'.format(route_config.get_route('send_slots'),'/{}'.format(user_id)),headers= headers,data=json.dumps(data))
         except Exception as e:
             #this will log in the future
@@ -500,9 +489,6 @@ class HealthForm(FormAction):
                     self.from_text(intent="enter_data")
                 ],                
             }
-    # @staticmethod
-    # def convert_to_bool(string: str) -> bool:
-    #     return string == 'True'
 
     def submit(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> List[Dict]:
         user_id = tracker.get_slot("user_id")
@@ -546,23 +532,8 @@ class HealthForm(FormAction):
             "has_high_pressure" : high_pressure
         }
         
-        headers = {
-            'Content-Type':'application/json'
-        }
-        try:        
-            email_obj = {                
-                'email' : 'me'
-            }
-                    
-            headers = {
-                'Content-Type' : 'application/json'
-            }
-                    
-            req_email = requests.post(url = '{}'.format(route_config.get_route('get_user_by_email')),headers = headers, data=json.dumps(email_obj))
-
-            if req_email.json()['status'] == 200:
-                user_id = json.loads(req_email.json()['response'])['_id']['$oid']
-                req = requests.post(url = '{}{}'.format(route_config.get_route('send_health_slots'),'/{}'.format(user_id)),headers= headers,data=json.dumps(data))
+        try:
+            req = requests.post(url = '{}{}'.format(route_config.get_route('send_health_slots'),'/{}'.format(user_id)),headers= headers,data=json.dumps(data))
         except Exception as e:
             #this will log in the future
             print(str(e))
@@ -583,7 +554,7 @@ class PersonalForm(FormAction):
         data = { "name" : "form_personal" }        
         req = requests.post(route_config.get_route('get_form_by_name'),headers= headers,data=json.dumps(data))
         personal_form_id = req.json()['response']['_id']['$oid']
-        print(personal_form_id)
+        
         # verifica se já um registro para esse usuário desse form
         data = {
             'form_id': personal_form_id,
@@ -598,7 +569,6 @@ class PersonalForm(FormAction):
                 "form_id" : personal_form_id,
                 "status" : 0
             }
-            print(data)
 
             req = requests.post(route_config.get_route('user_form'),headers= headers,data=json.dumps(data))
         return [
@@ -622,7 +592,6 @@ class PersonalForm(FormAction):
             }
 
     def validate_height(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]):
-        print(value)
         if(self.is_int(value) and int(value) > 150):
             return {"height": value}
         else:
@@ -675,10 +644,6 @@ class PersonalForm(FormAction):
             "DF"
         ]
 
-    # @staticmethod
-    # def convert_to_bool(string: str) -> bool:
-    #     return string == 'True'
-
     @staticmethod
     def is_int(string: Text) -> bool:
         try:
@@ -714,22 +679,9 @@ class PersonalForm(FormAction):
             "weight" : int(weight),
             "state" : state
         }
-        
-        headers = {
-            'Content-Type':'application/json'
-        }
-        try:        
-            email_obj = {                
-                'email' : 'me'
-            }
-            headers = {
-                'Content-Type' : 'application/json'
-            }
-            req_email = requests.post(url = '{}'.format(route_config.get_route('get_user_by_email')),headers = headers, data=json.dumps(email_obj))
-            if req_email.json()['status'] == 200:
-                user_id = json.loads(req_email.json()['response'])['_id']['$oid']
-                req = requests.post(url = '{}{}'.format(route_config.get_route('send_personal_slots'),'/{}'.format(user_id)),headers= headers,data=json.dumps(data))
-                print(req)
+                
+        try:
+            req = requests.post(url = '{}{}'.format(route_config.get_route('send_personal_slots'),'/{}'.format(user_id)),headers= headers,data=json.dumps(data))
 
         except Exception as e:
             #this will log in the future
@@ -860,10 +812,6 @@ class PregnancyForm(FormAction):
         except ValueError:
             return False
 
-    # @staticmethod
-    # def convert_to_bool(string: str) -> bool:
-    #     return string == 'True'
-
     def submit(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> List[Dict]:
         user_id = tracker.get_slot("user_id")
         headers = { 'Content-Type':'application/json' }
@@ -902,23 +850,8 @@ class PregnancyForm(FormAction):
             "premature_birth" : premature_birth
         }
         
-        headers = {
-            'Content-Type':'application/json'
-        }
-        try:        
-            email_obj = {                
-                'email' : 'me'
-            }
-                    
-            headers = {
-                'Content-Type' : 'application/json'
-            }
-                    
-            req_email = requests.post(url = '{}'.format(route_config.get_route('get_user_by_email')),headers = headers, data=json.dumps(email_obj))
-
-            if req_email.json()['status'] == 200:
-                user_id = json.loads(req_email.json()['response'])['_id']['$oid']
-                req = requests.post(url = '{}{}'.format(route_config.get_route('send_pregnancy_slots'),'/{}'.format(user_id)),headers= headers,data=json.dumps(data))
+        try:
+            req = requests.post(url = '{}{}'.format(route_config.get_route('send_pregnancy_slots'),'/{}'.format(user_id)),headers= headers,data=json.dumps(data))
         except Exception as e:
             #this will log in the future
             print(str(e))

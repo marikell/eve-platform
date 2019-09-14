@@ -1,5 +1,4 @@
 language: pt
-# pipeline: supervised_embeddings
 
 pipeline:
 - name: WhitespaceTokenizer
@@ -9,11 +8,7 @@ pipeline:
 - name: EmbeddingIntentClassifier
 - name: DucklingHTTPExtractor
   url: "http://eve_duckling:8000"
-  dimensions: ["time"]  
-  
-  
-  # locale: "le_BR"
-  # timezone: "South America/Brazil"
+  dimensions: ["time"]
 
 policies:
   - name: MemoizationPolicy

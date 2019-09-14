@@ -41,7 +41,6 @@ def send_user_exam_slot():
 def send_slots_from_Rasa(id):
     try:
         json_obj = request.get_json()
-        
         user = ServiceHandler.get_service(ROUTE_CONFIG['USER_TYPE_NAME']).get(id)
 
         if not user:
