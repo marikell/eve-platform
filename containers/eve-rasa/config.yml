@@ -3,21 +3,15 @@ language: pt
 
 pipeline:
 - name: WhitespaceTokenizer
-- name: RegexFeaturizer
 - name: CRFEntityExtractor
 - name: EntitySynonymMapper
 - name: CountVectorsFeaturizer
 - name: EmbeddingIntentClassifier
-# - name: SpacyNLP
-# - name: SpacyTokenizer
-# - name: SpacyFeaturizer
-# - name: RegexFeaturizer
-# - name: CRFEntityExtractor
-# - name: EntitySynonymMapper
-# - name: SklearnIntentClassifier
 - name: DucklingHTTPExtractor
   url: "http://localhost:8000"
   dimensions: ["time"]  
+  
+  
   # locale: "le_BR"
   # timezone: "South America/Brazil"
 
