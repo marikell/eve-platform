@@ -81,8 +81,7 @@ class ActionGreetUser(Action):
         req = requests.post(url = route_config.get_route('get_user_form'), headers=headers, data=json.dumps(data))        
         intent = tracker.latest_message["intent"].get("name")
         dispatcher.utter_template("utter_hello", tracker)
-        
-        if 'response' in req.json() and json.loads(req.json()['response'])['status'] == 1:
+        if tracker.get_slot('greeted_user'):
             if intent == "hello":
                 dispatcher.utter_template("utter_greet", tracker)
             elif intent == "greeting":
@@ -93,10 +92,8 @@ class ActionGreetUser(Action):
                 dispatcher.utter_template("utter_ask_info", tracker)
             elif intent == "greeting":
                 dispatcher.utter_template("utter_introduce", tracker)
-                dispatcher.utter_template("utter_greet_back", tracker)
-        
-        
-        return []
+                dispatcher.utter_template("utter_greet_back", tracker)                
+        return [SlotSet("greeted_user"), True]
 
 class InitialForm(FormAction):
     def name(self) -> Text:
@@ -129,11 +126,11 @@ class InitialForm(FormAction):
             req = requests.post(route_config.get_route('user_form'),headers= headers,data=json.dumps(data))
             user_form_id = json.loads(req.json()['response'])['inserted_id']            
 
-        if(tracker.get_slot('pre_natal') == "False"):
+        if(tracker.get_slot('pre_natal') == False):
             return []
-        elif(tracker.get_slot('first_ultrasound') == "False"):
+        elif(tracker.get_slot('first_ultrasound') == False):
             return []
-        elif(tracker.get_slot('is_pregnant') == "True"):
+        elif(tracker.get_slot('is_pregnant')):
             return [
                 "last_menstruation",
                 "first_pregnancy",
@@ -143,20 +140,20 @@ class InitialForm(FormAction):
                 "first_ultrasound",
                 "first_ultrasound_date"
             ]        
-        elif(tracker.get_slot('is_trying') == "True"):
+        elif(tracker.get_slot('is_trying')):
             return [
                 "is_planning",
                 "has_children",
                 "health_plan"
             ]
-        elif(tracker.get_slot('is_postpartum') == "True"):
-            if(tracker.get_slot('having_sex') == "False"):
+        elif(tracker.get_slot('is_postpartum')):
+            if(tracker.get_slot('having_sex') == False):
                 return [
                     "doctor_appointment",
                     "infection",
                     "infection_kind"
                 ]
-            if(tracker.get_slot('infection') == "False"):
+            if(tracker.get_slot('infection') == False):
                 return []
             
             return [
@@ -169,7 +166,7 @@ class InitialForm(FormAction):
                 "infection",
                 "infection_kind"
             ]
-        elif(tracker.get_slot('is_pregnant') == "False" and tracker.get_slot('is_trying') == "False" and tracker.get_slot('is_postpartum') == "False"):
+        elif(tracker.get_slot('is_pregnant') == False and tracker.get_slot('is_trying') == False and tracker.get_slot('is_postpartum') == False):
             return []
         else:
             return [
@@ -219,9 +216,9 @@ class InitialForm(FormAction):
         except ValueError:
             return False
 
-    @staticmethod
-    def convert_to_bool(string: str) -> bool:
-        return string == 'True'
+    # @staticmethod
+    # def convert_to_bool(string: str) -> bool:
+    #     return string == 'True'
 
     def submit(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> List[Dict]:
         user_id = tracker.get_slot("user_id")
@@ -241,22 +238,22 @@ class InitialForm(FormAction):
         data = { 'id': obj['_id']['$oid'], 'status': 1 }        
         req = requests.put(url = '{}/{}'.format(route_config.get_route('user_form'), format(data['id'])),headers= headers,data=json.dumps(data))
 
-        first_pregnancy = self.convert_to_bool(tracker.get_slot("first_pregnancy"))
-        has_children = self.convert_to_bool(tracker.get_slot("has_children"))
-        health_plan = self.convert_to_bool(tracker.get_slot("health_plan"))
-        is_planning = self.convert_to_bool(tracker.get_slot("is_planning"))
-        is_pregnant = self.convert_to_bool(tracker.get_slot("is_pregnant"))
-        pre_natal = self.convert_to_bool(tracker.get_slot("pre_natal"))
-        planned_pregnancy = self.convert_to_bool(tracker.get_slot("planned_pregnancy"))
-        is_trying = self.convert_to_bool(tracker.get_slot("is_trying"))
-        is_postpartum = self.convert_to_bool(tracker.get_slot("is_postpartum"))
+        first_pregnancy = tracker.get_slot("first_pregnancy")
+        has_children = tracker.get_slot("has_children")
+        health_plan = tracker.get_slot("health_plan")
+        is_planning = tracker.get_slot("is_planning")
+        is_pregnant = tracker.get_slot("is_pregnant")
+        pre_natal = tracker.get_slot("pre_natal")
+        planned_pregnancy = tracker.get_slot("planned_pregnancy")
+        is_trying = tracker.get_slot("is_trying")
+        is_postpartum = tracker.get_slot("is_postpartum")
         last_menstruation = tracker.get_slot("last_menstruation")
         first_ultrasound_date = tracker.get_slot("first_ultrasound_date")
-        breastfeeding = self.convert_to_bool(tracker.get_slot("breastfeeding"))
-        having_sex = self.convert_to_bool(tracker.get_slot("having_sex"))
+        breastfeeding = tracker.get_slot("breastfeeding")
+        having_sex = tracker.get_slot("having_sex")
         contraceptive_method = tracker.get_slot("contraceptive_method")        
-        doctor_appointment = self.convert_to_bool(tracker.get_slot("doctor_appointment"))        
-        infection = self.convert_to_bool(tracker.get_slot("infection"))
+        doctor_appointment = tracker.get_slot("doctor_appointment")        
+        infection = tracker.get_slot("infection")
         infection_kind = tracker.get_slot("infection_kind")
         user_id = tracker.get_slot("user_id")
 
@@ -336,7 +333,7 @@ class ActionCongrats(Action):
 
     def run(self, dispatcher, tracker, domain):
         dispatcher.utter_template("utter_congrats", tracker)
-        return [SlotSet("is_pregnant", "True")]
+        return [SlotSet("is_pregnant", True)]
 
 class ActionWhereFrom(Action):
     def name(self):
@@ -471,7 +468,7 @@ class HealthForm(FormAction):
 
             req = requests.post(route_config.get_route('user_form'),headers= headers,data=json.dumps(data))
 
-        if(tracker.get_slot('regular_medicine') == "False"):
+        if(tracker.get_slot('regular_medicine') == False):
             return [
                 "hypothyroidism",
                 "hyperthyroidism",
@@ -503,9 +500,9 @@ class HealthForm(FormAction):
                     self.from_text(intent="enter_data")
                 ],                
             }
-    @staticmethod
-    def convert_to_bool(string: str) -> bool:
-        return string == 'True'
+    # @staticmethod
+    # def convert_to_bool(string: str) -> bool:
+    #     return string == 'True'
 
     def submit(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> List[Dict]:
         user_id = tracker.get_slot("user_id")
@@ -525,16 +522,16 @@ class HealthForm(FormAction):
         data = { 'id': obj['_id']['$oid'], 'status': 1 }        
         req = requests.put(url = '{}/{}'.format(route_config.get_route('user_form'), format(data['id'])),headers= headers,data=json.dumps(data))
 
-        regular_medicine = self.convert_to_bool(tracker.get_slot("regular_medicine"))
+        regular_medicine = tracker.get_slot("regular_medicine")
         regular_medicine_name = tracker.get_slot("regular_medicine_name")
-        hypothyroidism = self.convert_to_bool(tracker.get_slot("hypothyroidism"))
-        hyperthyroidism = self.convert_to_bool(tracker.get_slot("hyperthyroidism"))
-        diabetes = self.convert_to_bool(tracker.get_slot("diabetes"))
-        drug_use = self.convert_to_bool(tracker.get_slot("drug_use"))
-        autoimmune_disease = self.convert_to_bool(tracker.get_slot("autoimmune_disease"))
-        asthma = self.convert_to_bool(tracker.get_slot("asthma"))
-        seropositive = self.convert_to_bool(tracker.get_slot("seropositive"))
-        high_pressure = self.convert_to_bool(tracker.get_slot("high_pressure"))
+        hypothyroidism = tracker.get_slot("hypothyroidism")
+        hyperthyroidism = tracker.get_slot("hyperthyroidism")
+        diabetes = tracker.get_slot("diabetes")
+        drug_use = tracker.get_slot("drug_use")
+        autoimmune_disease = tracker.get_slot("autoimmune_disease")
+        asthma = tracker.get_slot("asthma")
+        seropositive = tracker.get_slot("seropositive")
+        high_pressure = tracker.get_slot("high_pressure")
 
         data = {
             "takes_regular_medicine" : regular_medicine,
@@ -678,9 +675,9 @@ class PersonalForm(FormAction):
             "DF"
         ]
 
-    @staticmethod
-    def convert_to_bool(string: str) -> bool:
-        return string == 'True'
+    # @staticmethod
+    # def convert_to_bool(string: str) -> bool:
+    #     return string == 'True'
 
     @staticmethod
     def is_int(string: Text) -> bool:
@@ -791,11 +788,11 @@ class PregnancyForm(FormAction):
                     "abortion",
                     "premature_birth"
                 ]
-        if(tracker.get_slot('had_birth') == "False"):
+        if(tracker.get_slot('had_birth') == False):
             return [
                 "abortion"
             ]
-        if(tracker.get_slot('had_birth') == "True"):
+        if(tracker.get_slot('had_birth')):
             return [
                 "births",
                 "normal_births",
@@ -863,9 +860,9 @@ class PregnancyForm(FormAction):
         except ValueError:
             return False
 
-    @staticmethod
-    def convert_to_bool(string: str) -> bool:
-        return string == 'True'
+    # @staticmethod
+    # def convert_to_bool(string: str) -> bool:
+    #     return string == 'True'
 
     def submit(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> List[Dict]:
         user_id = tracker.get_slot("user_id")
@@ -885,14 +882,14 @@ class PregnancyForm(FormAction):
         data = { 'id': obj['_id']['$oid'], 'status': 1 }        
         req = requests.put(url = '{}/{}'.format(route_config.get_route('user_form'), format(data['id'])),headers= headers,data=json.dumps(data))
 
-        current_high_risk = self.convert_to_bool(tracker.get_slot("high_risk"))
+        current_high_risk = tracker.get_slot("high_risk")
         due_date = tracker.get_slot("due_date")
         births = tracker.get_slot("births")
-        had_birth = self.convert_to_bool(tracker.get_slot("had_birth"))
+        had_birth = tracker.get_slot("had_birth")
         normal_births = tracker.get_slot("normal_births")
         why_cesarean_birth = tracker.get_slot("why_cesarean_birth")
-        abortion = self.convert_to_bool(tracker.get_slot("abortion"))
-        premature_birth = self.convert_to_bool(tracker.get_slot("premature_birth"))
+        abortion = tracker.get_slot("abortion")
+        premature_birth = tracker.get_slot("premature_birth")
         
         data = {
             "current_high_risk" : current_high_risk,
