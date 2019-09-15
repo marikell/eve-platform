@@ -10,14 +10,11 @@
 - sim isso obrigada
 - isso exatamente muito obrigada
 - isso exatamente mto obg
-- correto exatamente mto obg
 - exato sim mto obrigada
 - exatamente sim vlw
 - yes
 - isso pfvr
 - exatamente sim valeu
-- exatamente exatamente mto obrigada
-- isso exatamente obrigada
 - exatamente mto obg
 - exatamente obg
 - sim isso
@@ -45,9 +42,6 @@
 - isso sim obrigada
 - isso exato tks
 - sim exatamente obrigada
-- exato sim valeu
-- correto sim mto obrigada
-- correto isso vlw
 - isso sim mto obrigada
 - isso exatamente
 - exatamente pfvr
@@ -60,7 +54,6 @@
 - Sim
 - Ok
 - Okay
-- OK
 - isso
 - correto
 - quero
@@ -69,6 +62,8 @@
 - sim, claro!
 - pode sim
 - pode
+- pode ser
+- claro, pode sim
 - com certeza
 - sim, com certeza
 - pode perguntar
@@ -1441,6 +1436,8 @@
 - nao tenho nenhuma pergunta pra fazer
 - nao tenho perguntar pra fazer
 - nao tenho perguntas
+- agora nao tenho nenhuma duvida
+- agora nao tenho duvidas
 
 ## intent:prevent
 - como prevenir o [parto prematuro](question_entity)?
@@ -1493,8 +1490,7 @@
 - obrigada
 - valeu
 - muito obrigada
-- obrigada
-- obrigada
+- ok, obrigada
 
 ## intent:welcome
 - de nada

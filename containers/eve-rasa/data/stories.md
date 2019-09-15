@@ -1,5 +1,5 @@
 ## bot inicia a conversa e o usuário (gestante)
-* get_started
+* hello
   - action_greet_user
   - slot{"greeted_user": true}
 * affirm
@@ -25,7 +25,7 @@
   - utter_ask_me_anything
 
 ## bot inicia a conversa e o usuário nao quer responder as perguntas
-* get_started
+* hello
   - action_greet_user
   - slot{"greeted_user": true}
 * deny
@@ -37,7 +37,7 @@
     - utter_which_medicine
 
 ## bot inicia a conversa e o usuário quer responder as perguntas depois
-* get_started
+* hello
   - action_greet_user
   - slot{"greeted_user": true}
 * later
@@ -82,8 +82,6 @@
 * greeting
   - action_greet_user
   - slot{"greeted_user": true}
-* greeting_answer
-  - utter_ask_info
 * affirm
   - form_initial
   - form{"name": "form_initial"}
@@ -94,8 +92,6 @@
 * greeting
   - action_greet_user
   - slot{"greeted_user": true}
-* greeting_answer
-  - utter_ask_info
 * deny
   - utter_info_later
   - utter_ask_me_anything
@@ -104,8 +100,6 @@
 * greeting
   - action_greet_user
   - slot{"greeted_user": true}
-* greeting_answer
-  - utter_ask_info
 * later
   - utter_info_later
   - utter_ask_me_anything
@@ -113,9 +107,9 @@
 ## 'Oi tudo bem?'
 * greeting
     - action_greet_user
-  - slot{"greeted_user": true}
+    - slot{"greeted_user": true}
 * greeting_answer
-  - utter_ask_info
+    - utter_great
 
 ## perguntas aleatórias 1
 * which_can{"question_entity": "exercicios"}
@@ -138,7 +132,7 @@
     - action_get_answer
 
 ## perguntas aleatórias 2
-* get_started
+* hello
   - action_greet_user
   - slot{"greeted_user": true}
 * which_can{"question_entity": "exercicios"}
@@ -149,11 +143,11 @@
     - action_get_answer
 
 ## perguntas aleatórias 3
-* get_started
+* hello
     - action_greet_user
   - slot{"greeted_user": true}
 * greeting_answer
-    - utter_ask_info
+    - utter_great
 * which_can{"question_entity": "exercicios"}
     - slot{"last_intent": "which_can"}
     - action_get_answer
@@ -240,7 +234,7 @@
   - utter_ask_me_anything
 
 ## unhappy path: bot inicia a conversa (gestante)
-* get_started
+* hello
   - action_greet_user
   - slot{"greeted_user": true}
 * affirm
@@ -279,7 +273,7 @@
   - utter_ask_me_anything
 
 ## unhappy path: bot inicia a conversa e o usuário e pede para o bot parar as perguntas (gestante)
-* get_started
+* hello
   - action_greet_user
   - slot{"greeted_user": true}
 * affirm

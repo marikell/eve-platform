@@ -87,13 +87,11 @@ class ActionGreetUser(Action):
             elif intent == "greeting":
                 dispatcher.utter_template("utter_greet_back", tracker)
         else:
-            if intent == "hello" or intent == "get_started":
-                dispatcher.utter_template("utter_introduce", tracker)
-                dispatcher.utter_template("utter_ask_info", tracker)
-            elif intent == "greeting":
-                dispatcher.utter_template("utter_introduce", tracker)
-                dispatcher.utter_template("utter_greet_back", tracker)                
-        return [SlotSet("greeted_user"), True]
+            dispatcher.utter_template("utter_introduce", tracker)
+            if intent == "greeting":
+                dispatcher.utter_template("utter_greet_answer", tracker)
+            dispatcher.utter_template("utter_ask_info", tracker)
+        return [SlotSet("greeted_user", True)]
 
 class InitialForm(FormAction):
     def name(self) -> Text:

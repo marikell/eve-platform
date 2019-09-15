@@ -206,7 +206,6 @@ intents:
   - which_signs      
   - thank_you:
       triggers: action_thank_you
-  - get_started
   - what_is
   - can
   - goal_exam
