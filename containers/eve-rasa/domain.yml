@@ -41,8 +41,6 @@ actions:
   - action_who_is_it
   - utter_explain_whatspossible
   - action_whats_possible
-  - action_bye
-  - action_thank_you
   - action_cant_help
   - utter_okay
   - action_get_exam
@@ -142,7 +140,6 @@ entities:
   - number
   - distance
   - state
-  - hour
   - med_name   
   - doc_name
   - week_day
@@ -166,7 +163,29 @@ forms:
   - form_personal
   - form_pregnancy
 intents:
-  - affirm  
+  - hello
+  - greeting
+  - affirm
+  - deny
+  - ill_do_it
+  - did_exam
+  - thank_you
+  - affirm+thank_you
+  - got_it
+  - affirm+got_it
+  - affirm+got_it+thank_you
+  - got_it+thank_you
+  - bye
+  - thank_you+bye
+  - bye+thank_you
+  - affirm+did_exam
+  - deny+did_not_exam
+  - hello+greeting
+  - have_question
+  - affirm+have_question
+  - affirm+ill_do_it
+  - im_pregnant
+  - hello+im_pregnant
   - ask_isbot:
       triggers: action_is_bot
   - ask_howold:
@@ -175,22 +194,14 @@ intents:
       triggers: action_where_from
   - ask_whoisit:
       triggers: action_who_is_it
-  - bye:
-      triggers: action_bye
   - canthelp:
       triggers: action_cant_help
-  - deny
-  - did_exam
   - did_not_exam
   - enter_data
-  - have_question
-  - hello
   - how
-  - greeting
   - greeting_answer
   - greeting_back
   - i_know_importance
-  - ill_do_it
   - is_it_normal
   - no_question
   - later
@@ -204,8 +215,6 @@ intents:
   - which_need  
   - which_not
   - which_signs      
-  - thank_you:
-      triggers: action_thank_you
   - what_is
   - can
   - goal_exam
@@ -219,7 +228,6 @@ intents:
   - risk_factor
   - importance
   - when_exam
-  - im_pregnant
   - complain
   - stop
   - stop_form

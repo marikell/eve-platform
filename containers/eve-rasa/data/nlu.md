@@ -1,56 +1,13 @@
 ## intent:affirm
-- exato
-- exatamente sim mto obg
 - sim
 - sem problemas
 - sem problema
-- sim obrigada
-- exato correto valeu
-- exato correto obrigada
-- sim isso obrigada
-- isso exatamente muito obrigada
-- isso exatamente mto obg
-- exato sim mto obrigada
-- exatamente sim vlw
 - yes
 - isso pfvr
-- exatamente sim valeu
-- exatamente mto obg
-- exatamente obg
-- sim isso
-- isso correto vlw
-- exatamente obrigada
-- correto vlw
-- correto isso muito obrigada
-- exatamente
 - correto
-- isso exatamente valeu
-- exato isso
-- sim exato obrigada
 - exato por favor
-- sim exatamente obg
-- correto exato mto obg
-- correto sim obrigada
-- exato correto mto obrigada
-- correto isso obg
-- sim isso mto obrigada
-- sim obg
 - isso exato
 - sim sim
-- correto exato obg
-- exato isso mto obg
-- isso sim obrigada
-- isso exato tks
-- sim exatamente obrigada
-- isso sim mto obrigada
-- isso exatamente
-- exatamente pfvr
-- correto por favor
-- isso correto
-- exato vlw
-- exato sim vlw
-- isso obrigada
-- sim mto obrigada
 - Sim
 - Ok
 - Okay
@@ -68,6 +25,62 @@
 - sim, com certeza
 - pode perguntar
 - pode, claro
+- beleza
+- blz
+
+## intent:affirm+thank_you
+- sim obrigada
+- sim mto obrigada
+- sim, obg
+- isso obg
+- ok, obrigada
+- ok, obg
+- ok, vlw
+- ok, valeu
+- beleza, obg
+- beleza, obrigada
+- blz, obrigada
+- blz, obg
+
+## intent:got_it
+- Entendi
+- entendi
+- ah entendi
+- agora entendi
+- faz sentido
+- entendo
+- agora eu entendi
+- agora faz sentido
+
+# intent:affirm+got_it
+- sim, entendi
+- blz, entendi
+- ok, entendi
+- claro, entendi
+- sim, faz sentido
+- Okay, agora entendi
+
+# intent:affirm+got_it+thank_you
+- sim, entendi, obg
+- blz, entendi, obrigada
+- ok, entendi value
+- claro, entendi muito obrigada
+- sim, faz sentido, vlw
+- Okay, agora entendi, tks
+
+# intent:got_it+thank_you
+- entendi, obg
+- ah entendi, obrigada
+- faz sentido, obrigada
+- agora entendi, obg
+- entendi, valeu
+
+# intent:thank_you+bye
+- obg, tchau
+- muito obrigada, até mais
+- obg, até mais
+- obg, xau
+- valeu, tchau
 
 ## intent:ask_anesthesia_dentist
 - É permitido tomar anestesia para algum procedimento dentário?
@@ -368,6 +381,11 @@
 - voce é uma pessoa?
 - voce é uma pessoa de verdade?
 - voce é um robo?
+- Oii, vc é um robo?
+- Hey, o que você é?
+- Olá, voce é uma pessoa?
+- Ei, voce é uma pessoa de verdade?
+- Oi, voce é um robo?
 
 ## intent:ask_late_menstruation
 - Minha menstruação está atrasada
@@ -657,10 +675,18 @@
 - vc é da onde?
 - onde vc nasceu?
 - vc nasceu onde?
+- Oi, da onde vc é?
+- Hey, de onde vc é?
+- Ola, da onde você é?
+- Oii, vc é da onde?
+- Ei, onde vc nasceu?
+- oi, vc nasceu onde?
 
 ## intent:ask_whoisit
 - quem é vc?
 - quem é você?
+- Oi, quem é vc?
+- Ei, quem é você?
 
 ## intent:baby_not_moving
 - faz mais de duas que meu bebe nao mexe
@@ -671,89 +697,52 @@
 
 ## intent:bye
 - xau
+- bye
+- tchau
+- até
+- até mais
+
+## intent:bye+thank_you
 - bye obrigada
 - tchau mto obrigada
 - até muito obrigada
-- até
-- obg bye
 - tchau muito obrigada
-- mto obg tchau
-- tchau
 - até mais obg
 - xau obg
 - até mais obrigada
-- muito obrigada até
 - tchau mto obg
-- bye
-- vlw tchau
-- obg até mais
-- muito obrigada bye
-- muito obrigada xau
-- obrigada até
-- até mais
 - até mais mto obrigada
-- vlw até mais
 - até vlw
 - até mais valeu
-- obrigada até mais
 - xau vlw
 - bye vlw
-- mto obrigada tchau
-- valeu bye
-- valeu tchau
 - até mto obrigada
 - bye mto obg
 - xau mto obrigada
 - tchau obg
 - até valeu
-- tks até
 - até mais tks
 - bye valeu
 - bye muito obrigada
 - até obrigada
-- mto obg até mais
 - tchau vlw
-- valeu xau
-- tks xau
 - até obg
-- muito obrigada tchau
-- mto obrigada xau
-- tks bye
-- obrigada tchau
 - xau tks
 - bye tks
-- valeu até
 - bye mto obrigada
 - até mais vlw
-- tks até mais
 - até mais mto obg
-- vlw xau
 - xau muito obrigada
-- obg tchau
 - xau mto obg
-- mto obg xau
-- muito obrigada até mais
 - até mto obg
 - xau valeu
 - tchau tks
-- valeu até mais
-- tks tchau
-- obg xau
-- obrigada bye
 - bye obg
 - até tks
-- mto obrigada até
 - até mais muito obrigada
-- mto obg bye
-- obrigada xau
-- mto obrigada bye
-- mto obrigada até mais
-- vlw bye
 - xau obrigada
-- obg até
 - tchau obrigada
 - tchau valeu
-- mto obg até
 - vlw até
 
 ## intent:can
@@ -928,10 +917,8 @@
 - o que causa a [pre eclampsia](question_entity:pre-eclampsia)?
 - quais as principais causas da [pre-eclampsia](question_entity)?
 
-## intent:compa
-- estou com dor no [corpo](question_entity)
-
 ## intent:complain
+- estou com dor no [corpo](question_entity)
 - estou com muito [enjoo](question_entity:nauseas)
 - estou com muito [enjoo](question_entity:nauseas), o que eu faço?
 - estou com muito [enjoo](question_entity:nauseas), o que eu posso fazer pra melhorar?
@@ -1014,33 +1001,30 @@
 - ñ por favor
 - pfvr não faça isso
 - nao
-- Nao
 - Não
-- Não
-- Não
-- Não
-- Não
-- não
-- nao
 - agr nao
-- nao
-- nao
-- nao
-- não
-- nao
-- não
 - não precisa
 
 ## intent:did_exam
-- ok eu fiz o exame
-- ok eu fiz
+- eu fiz o exame
+- eu fiz
 - eu ja fiz
 - eu fiz esse exame
 - eu fiz semana passada
 - fiz ontem
-- sim eu fiz o exame
+- eu fiz o exame
 - fiz
 - ja fiz
+
+## intent:affirm+did_exam
+- ok eu fiz o exame
+- ok eu fiz
+- sim, eu ja fiz
+- sim, eu fiz esse exame
+- ok, eu fiz semana passada
+- sim, fiz ontem
+- sim eu fiz o exame
+- sim, ja fiz
 
 ## intent:did_not_exam
 - eu nao fiz o exame
@@ -1048,6 +1032,12 @@
 - ainda nao fiz
 - nao fiz
 - nao fiz ainda
+
+## intent:deny+did_not_exam
+- nao, eu nao fiz o exame
+- nao, ainda nao fiz
+- nao, eu nao fiz
+- nao, nao fiz
 
 ## intent:dont_know
 - eu nao sei
@@ -1091,36 +1081,12 @@
 - [terça as 9 horas](time:2016-12-04T09:00:00.000-08:00)
 - o nome é [buscopan](med_name)
 - o nome do remédio é [dramin](med_name)
-- as [20](hour) horas
-- [10](hour)h
-- [14](hour)h e [20](hour)h
-- as [20](hour) e as [18](hour) horas
-- [7](hour) horas
-- tenho q tomar as [20](hour) horas
-- [7](hour) e [14](hour) horas
 - [dorflex](med_name)
-- segunda as [10](hour) horas
 - [loratadina](med_name)
-- [9](hour) e as [14](hour) horas
 - o nome é [neosaldina](med_name)
-- toda segunda feira
-- [10](hour) horas
 - [dipirona](med_name)
-- amanha as 9 horas
 - [lufital](med_name)
-- 10h e 20h[](hour:10)[](hour:20)
-- dia 20 de junho as [10](hour) horas
 - [quarta feira](week_day:quarta-feira) as 9
-- /enter_data[{"is_pregnant":"False"}](is_pregnant:False)
-- /enter_data[{"is_trying":"True"}](is_trying:True)
-- /enter_data[{"is_planning":"False"}](is_planning:False)
-- /enter_data[{"has_children":"False"}](has_children:False)
-- /enter_data[{"health_plan":"False"}](health_plan:False)
-- /enter_data[{"is_pregnant":"True"}](is_pregnant:True)
-- /enter_data[{"planned_pregnancy":"False"}](planned_pregnancy:False)
-- /enter_data[{"first_pregnancy":"True"}](first_pregnancy:True)
-- /enter_data[{"health_plan":"False"}](health_plan:False)
-- /enter_data[{"pre_natal":"False"}](pre_natal:False)
 - [sp](state)
 - [AM](state)
 - [RJ](state)
@@ -1178,6 +1144,7 @@
 - santa catarina
 - [camisinha](contraceptive_method)
 - [pilula](contraceptive_method)
+- [anticoncepcional](contraceptive_method)
 - nenhum
 - [diu](contraceptive_method)
 - [mastite](infection_kind)
@@ -1191,48 +1158,31 @@
 - para q serve o exame de [fezes](question_entity)?
 - o exame de [fezes](question_entity) serve pra que?
 
-## intent:greeting
+## intent:hello+greeting
 - Hey Como vc esta?
-- Oie Oi, tudo bem?
-- tudo bem?
-- E ai tudo bom?
-- Oie Como vc esta?
-- Hey Oi, tudo bem?
-- Oiii Oi, tudo bem?
+- Oie, tudo bem?
+- Oi, tudo bem?
 - Ei tudo bom?
 - Hey tudo bom?
 - E ai Td bem?
 - Oi Como vc esta?
-- Oie tudo bom?
-- tudo bom?
-- Oiii Como vc esta?
 - Olá Td bem?
-- Td bem?
-- Oi tudo bom?
 - Olá Td bem com vc?
 - Olá tudo bom?
-- Como vc esta?
 - Hey Td bem com vc?
 - E ai Como vc esta?
-- Ei Oi, tudo bem?
-- Oie Td bem?
-- Td bem com vc?
-- Olá Como vc esta?
-- E ai Td bem com vc?
-- Oi Oi, tudo bem?
-- Oi Td bem?
-- Ei Td bem com vc?
-- Oie Td bem com vc?
-- E ai Oi, tudo bem?
-- Oi Td bem com vc?
+- Oie td bem?
+- Oi, td bem?
+- Ei, td bem com vc?
 - Ei Td bem?
 - Oiii tudo bom?
-- Oi, tudo bem?
-- Oiii Td bem?
-- Ei Como vc esta?
-- Olá Oi, tudo bem?
-- Hey Td bem?
-- Oiii Td bem com vc?
+
+## intent:greeting
+- Como vc esta?
+- tudo bem?
+- tudo bom?
+- Td bem?
+- Td bem com vc?
 
 ## intent:greeting_answer
 - Tô bem, obrigada
@@ -1271,6 +1221,15 @@
 - eu to com uma duvida, sera q vc consegue me ajudar?
 - eu tenho uma pergunta, será q vc pode me ajudar?
 
+## intent:affirm+have_question
+- sim, eu tenho uma duvida
+- ok, quero tirar uma duvida
+- ok, preciso tirar uma duvida
+- ok, posso tirar uma duvida?
+- blz, quero perguntar uma coisa
+- sim, eu tenho uma pergunta
+- ok, eu tenho uma duvida, vc pode me ajudar?
+
 ## intent:hello
 - Oiii
 - Hey Boa tarde
@@ -1302,25 +1261,8 @@
 - Ei Boa tarde
 - E ai Bom dia
 - Boa noite
-- Ei
-- Olá
-- E ai
-- Oiii
-- Oi
-- Oie
-- Hey
 - Oii
-- Oii
-- oi
-- ola
-- ola
-- oi
-- ola
-- Oi
-- oi
-- Oi
-- Ola
-- oii
+
 
 ## intent:how
 - como melhorar a [azia](question_entity)?
@@ -1351,17 +1293,28 @@
 - com certeza, é essencial fazer esses exames
 
 ## intent:ill_do_it
-- ok eu vou fazer
 - eu vou fazer
-- blz, vou fazer o exame
+- vou fazer o exame
 - não sabia mas vou fazer o exame
 - vou marcar uma consulta
-- pode deixar vou falar com meu médico
-- ok vou ver com o meu médico
+- vou falar com meu médico
+- vou ver com o meu médico
 - vou ver com meu obstetra
 - vou conversar com meu medico
 - vou falar com o meu medico
-- pode deixar, vou fazer o exame
+- vou fazer sim
+- vou fazer
+
+## intent:affirm+ill_do_it
+- ok, eu vou fazer
+- blz, vou fazer o exame
+- ok, não sabia mas vou fazer o exame
+- okay, vou marcar uma consulta
+- sim, pode deixar vou falar com meu médico
+- ok, vou ver com o meu médico
+- ok, vou ver com meu obstetra
+- beleza, vou conversar com meu medico
+- sem problema, vou falar com o meu medico
 - claro, vou fazer sim
 - ok, vou fazer
 
@@ -1379,8 +1332,17 @@
 - to gravida, oq eu faço?
 - estou gravida e nao sei o que fazer
 - estou gravida e agora?
-- estou gravida e agora?
-- estou gravida
+
+## intent:hello+im_pregnant
+- Oi, estou grávida e agora?
+- Ola, estou grávida, por onde devo começar?
+- Oi, to grávida e agr?
+- Ei, to grávida e agora?
+- Oi, estou grávida, qual o primeiro passo?
+- Oi, estou grávida, o que eu faço?
+- oi, estou gravida e nao sei o que fazer
+- Ola, estou gravida e agora?
+- Oii, estou gravida
 
 ## intent:importance
 - qual a importância da [amamentação](question_entity:amamentacao)?
@@ -1425,6 +1387,7 @@
 - outra hora eu respondo
 - me pergunta mais tarde
 - pode ser mais tarde?
+- pode ser depois?
 
 ## intent:no_question
 - nao tenho nenhuma duvida
@@ -1490,7 +1453,6 @@
 - obrigada
 - valeu
 - muito obrigada
-- ok, obrigada
 
 ## intent:welcome
 - de nada
@@ -1540,7 +1502,7 @@
 - o que significa [BCF](question_entity)?
 - o que é [BCF](question_entity)?
 - o que significa uma [gestação a termo](question_entity:a termo)?
-- o que é uma [gravidez a termo](question_entity)?
+- o que é uma [gravidez a termo](question_entity:a termo)?
 - o que é [bebe nascido a termo](question_entity:a termo)?
 - oq é [bebê a termo](question_entity:a termo)?
 - o que é [bebê defletido](question_entity:defletido)?
@@ -1796,6 +1758,8 @@
 
 ## synonym:exercicios
 - atividade física
+- atividades fisicas
+- atividades físicas
 - treinos
 - exercicio fisico
 - exercício
@@ -1804,6 +1768,9 @@
 - exercicio físico
 - exercicio
 - exercício físico
+- exercicios fisicos
+- exercícios físicos
+- exercicios fisicos
 - exercícios
 - academia
 - treino
@@ -1832,7 +1799,7 @@
 - prisao de ventre
 
 ## synonym:japonesa
-- japones
+- japonesa
 - comida japonesa
 - comidas japonesa
 - sushi

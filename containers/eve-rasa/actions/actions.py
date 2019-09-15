@@ -346,21 +346,21 @@ class ActionWhatsPossible(Action):
         dispatcher.utter_template("utter_explain_whatspossible", tracker)
         return [UserUtteranceReverted()]
 
-class ActionBye(Action):
-    def name(self):
-        return "action_bye"
+# class ActionBye(Action):
+#     def name(self):
+#         return "action_bye"
 
-    def run(self, dispatcher, tracker, domain):
-        dispatcher.utter_template("utter_bye", tracker)
-        return [UserUtteranceReverted()]
+#     def run(self, dispatcher, tracker, domain):
+#         dispatcher.utter_template("utter_bye", tracker)
+#         return [UserUtteranceReverted()]
 
-class ActionThankYou(Action):
-    def name(self):
-        return "action_thank_you"
+# class ActionThankYou(Action):
+#     def name(self):
+#         return "action_thank_you"
 
-    def run(self, dispatcher, tracker, domain):
-        dispatcher.utter_template("utter_welcome", tracker)
-        return [UserUtteranceReverted()]
+#     def run(self, dispatcher, tracker, domain):
+#         dispatcher.utter_template("utter_welcome", tracker)
+#         return [UserUtteranceReverted()]
 
 class ActionCantHelp(Action):
     def name(self):
