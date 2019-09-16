@@ -15,6 +15,15 @@ def validate_followup_request(json):
         check_if_key_exists(k, json)
         check_empty_string(k, json)
 
+@app_form.route('/{}'.format(route_name), methods=['GET'])
+def get_all():
+    try:
+        forms = ServiceHandler.get_service(route_name).get_all()
+        return response(forms, status.HTTP_200_OK)
+                
+    except Exception as e:
+        return response_text(str(e), status.HTTP_400_BAD_REQUEST)
+
 @app_form.route('/{}/get-by-name'.format(route_name), methods=['POST'])
 def get_by_name():
     try:
