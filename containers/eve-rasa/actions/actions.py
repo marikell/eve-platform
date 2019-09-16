@@ -529,8 +529,12 @@ class HealthForm(FormAction):
             "is_seropositive" : seropositive,
             "has_high_pressure" : high_pressure
         }
-        
         try:
+                    
+            headers = {
+                'Content-Type' : 'application/json'
+            }
+                    
             req = requests.post(url = '{}{}'.format(route_config.get_route('send_health_slots'),'/{}'.format(user_id)),headers= headers,data=json.dumps(data))
         except Exception as e:
             #this will log in the future
@@ -677,8 +681,12 @@ class PersonalForm(FormAction):
             "weight" : int(weight),
             "state" : state
         }
-                
-        try:
+        
+        try:        
+            headers = {
+                'Content-Type' : 'application/json'
+            }
+
             req = requests.post(url = '{}{}'.format(route_config.get_route('send_personal_slots'),'/{}'.format(user_id)),headers= headers,data=json.dumps(data))
 
         except Exception as e:
@@ -848,7 +856,12 @@ class PregnancyForm(FormAction):
             "premature_birth" : premature_birth
         }
         
-        try:
+        try:        
+                    
+            headers = {
+                'Content-Type' : 'application/json'
+            }                    
+
             req = requests.post(url = '{}{}'.format(route_config.get_route('send_pregnancy_slots'),'/{}'.format(user_id)),headers= headers,data=json.dumps(data))
         except Exception as e:
             #this will log in the future
