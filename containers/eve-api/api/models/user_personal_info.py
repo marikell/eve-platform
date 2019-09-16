@@ -8,7 +8,6 @@ from dateutil.relativedelta import relativedelta
 class UserPersonalInfo(db.DynamicDocument):
     height = db.FloatField(required=False)
     weight = db.FloatField(required=False)
-    date_birth = db.DateTimeField(required=False)
     state = db.StringField(max_length=45, required=False)
     user_id = db.ReferenceField(User, required=True)
     

@@ -41,8 +41,6 @@ actions:
   - action_who_is_it
   - utter_explain_whatspossible
   - action_whats_possible
-  - action_bye
-  - action_thank_you
   - action_cant_help
   - utter_okay
   - action_get_exam
@@ -128,7 +126,6 @@ actions:
   - utter_ask_breastfeeding
   - utter_ask_having_sex
   - utter_ask_contraceptive_method
-  - utter_ask_type_delivery
   - utter_ask_episiotomy
   - utter_ask_doctor_appointment
   - utter_ask_infection
@@ -143,7 +140,6 @@ entities:
   - number
   - distance
   - state
-  - hour
   - med_name   
   - doc_name
   - week_day
@@ -167,7 +163,29 @@ forms:
   - form_personal
   - form_pregnancy
 intents:
-  - affirm  
+  - hello
+  - greeting
+  - affirm
+  - deny
+  - ill_do_it
+  - did_exam
+  - thank_you
+  - affirm+thank_you
+  - got_it
+  - affirm+got_it
+  - affirm+got_it+thank_you
+  - got_it+thank_you
+  - bye
+  - thank_you+bye
+  - bye+thank_you
+  - affirm+did_exam
+  - deny+did_not_exam
+  - hello+greeting
+  - have_question
+  - affirm+have_question
+  - affirm+ill_do_it
+  - im_pregnant
+  - hello+im_pregnant
   - ask_isbot:
       triggers: action_is_bot
   - ask_howold:
@@ -176,22 +194,14 @@ intents:
       triggers: action_where_from
   - ask_whoisit:
       triggers: action_who_is_it
-  - bye:
-      triggers: action_bye
   - canthelp:
       triggers: action_cant_help
-  - deny
-  - did_exam
   - did_not_exam
   - enter_data
-  - have_question
-  - hello
   - how
-  - greeting
   - greeting_answer
   - greeting_back
   - i_know_importance
-  - ill_do_it
   - is_it_normal
   - no_question
   - later
@@ -205,9 +215,6 @@ intents:
   - which_need  
   - which_not
   - which_signs      
-  - thank_you:
-      triggers: action_thank_you
-  - get_started
   - what_is
   - can
   - goal_exam
@@ -221,7 +228,6 @@ intents:
   - risk_factor
   - importance
   - when_exam
-  - im_pregnant
   - complain
   - stop
   - stop_form
@@ -356,6 +362,8 @@ slots:
     type: unfeaturized
   high_pressure:
     type: unfeaturized
+  greeted_user:
+    type: bool
   height:
     type: unfeaturized
   weight:
@@ -406,16 +414,16 @@ templates:
   - text: "É a sua primeira gravidez?"
     buttons:
     - title: "Sim"
-      payload: '/enter_data{"first_pregnancy":"True"}'
+      payload: '/enter_data{"first_pregnancy":true}'
     - title: "Não"
-      payload: '/enter_data{"first_pregnancy":"False"}'
+      payload: '/enter_data{"first_pregnancy":false}'
   utter_ask_health_plan:
   - text: "Você possui plano de saúde?"
     buttons:
     - title: "Sim"
-      payload: '/enter_data{"health_plan":"True"}'
+      payload: '/enter_data{"health_plan":true}'
     - title: "Não"
-      payload: '/enter_data{"health_plan":"False"}'
+      payload: '/enter_data{"health_plan":false}'
   utter_ask_howold:
   - text: "Sou velha o bastante pra ser médica haha 💁‍"
   utter_ask_info:
@@ -424,43 +432,43 @@ templates:
   - text: "Você está grávida?"
     buttons:
     - title: "Sim"
-      payload: '/enter_data{"is_pregnant":"True"}'
+      payload: '/enter_data{"is_pregnant":true}'
     - title: "Não"
-      payload: '/enter_data{"is_pregnant":"False"}'
+      payload: '/enter_data{"is_pregnant":false}'
   utter_ask_isbot:
   - text: "Eu sou um robô! 🤖"
   utter_ask_planned_pregnancy:
   - text: "A sua gravidez foi planejada?"
     buttons:
     - title: "Sim"
-      payload: '/enter_data{"planned_pregnancy":"True"}'
+      payload: '/enter_data{"planned_pregnancy":true}'
     - title: "Não"
-      payload: '/enter_data{"planned_pregnancy":"False"}'
+      payload: '/enter_data{"planned_pregnancy":false}'
   utter_ask_pre_natal:
   - text: "Você já começou o pré-natal?"
     buttons:
     - title: "Sim"
-      payload: '/enter_data{"pre_natal":"True"}'
+      payload: '/enter_data{"pre_natal":true}'
     - title: "Não"
-      payload: '/enter_data{"pre_natal":"False"}'
+      payload: '/enter_data{"pre_natal":false}'
   utter_ask_last_menstruation:
   - text: "Qual a data da sua última menstruação?"
   utter_ask_first_ultrasound:
   - text: "Você já fez o seu primeiro ultrassom?"
     buttons:
     - title: "Sim"
-      payload: '/enter_data{"first_ultrasound":"True"}'
+      payload: '/enter_data{"first_ultrasound":true}'
     - title: "Não"
-      payload: '/enter_data{"first_ultrasound":"False"}'
+      payload: '/enter_data{"first_ultrasound":false}'
   utter_ask_first_ultrasound_date:
   - text: "Qual a data do seu primeiro ultrassom?"
   utter_ask_is_trying:
   - text: "Está tentando engravidar?"
     buttons:
     - title: "Sim"
-      payload: '/enter_data{"is_trying":"True"}'
+      payload: '/enter_data{"is_trying":true}'
     - title: "Não"
-      payload: '/enter_data{"is_trying":"False"}'
+      payload: '/enter_data{"is_trying":false}'
   utter_ask_wherefrom:
   - text: "Sou de Sorocaba, SP"
   utter_bye:
@@ -501,16 +509,16 @@ templates:
   - text: "E você está se preparando para isso? Digo, passou com seu ginecologista para uma avaliação de rotina, por exemplo?"
     buttons:
     - title: "Sim"
-      payload: '/enter_data{"is_planning":"True"}'
+      payload: '/enter_data{"is_planning":true}'
     - title: "Não"
-      payload: '/enter_data{"is_planning":"False"}'
+      payload: '/enter_data{"is_planning":false}'
   utter_ask_has_children:
   - text: "Você já tem filhos?"
     buttons:
     - title: "Sim"
-      payload: '/enter_data{"has_children":"True"}'
+      payload: '/enter_data{"has_children":true}'
     - title: "Não"
-      payload: '/enter_data{"has_children":"False"}'
+      payload: '/enter_data{"has_children":false}'
   utter_ask_me_anything:
   - text: "Então, você tem alguma dúvida? Talvez eu possa te ajudar"
   utter_doing_right:
@@ -557,9 +565,9 @@ O planejamento tem o objetivo de identificar fatores de risco como diabetes e hi
   - text: "Você toma algum remédio regularmente?"
     buttons:
     - title: "Sim"
-      payload: '/enter_data{"regular_medicine":"True"}'
+      payload: '/enter_data{"regular_medicine":true}'
     - title: "Não"
-      payload: '/enter_data{"regular_medicine":"False"}'
+      payload: '/enter_data{"regular_medicine":false}'
   utter_wrong_regular_medicine:
   - text: "Por favor, me fale se você toma algum remédio regularmente 😬 Quanto mais informações, mais eu consigo te ajudar 😅"
   utter_ask_regular_medicine_name:
@@ -570,72 +578,72 @@ O planejamento tem o objetivo de identificar fatores de risco como diabetes e hi
   - text: "Você tem hipotireoidismo?"
     buttons:
     - title: "Sim"
-      payload: '/enter_data{"hypothyroidism":"True"}'
+      payload: '/enter_data{"hypothyroidism":true}'
     - title: "Não"
-      payload: '/enter_data{"hypothyroidism":"False"}'
+      payload: '/enter_data{"hypothyroidism":false}'
   utter_wrong_hypothyroidism:
   - text: "Por favor, me fale se você tem hipotireoidismo 😬 Quanto mais informações, mais eu consigo te ajudar 😅"
   utter_ask_hyperthyroidism:
   - text: "Você tem hipertireoidismo?"
     buttons:
     - title: "Sim"
-      payload: '/enter_data{"hyperthyroidism":"True"}'
+      payload: '/enter_data{"hyperthyroidism":true}'
     - title: "Não"
-      payload: '/enter_data{"hyperthyroidism":"False"}'
+      payload: '/enter_data{"hyperthyroidism":false}'
   utter_wrong_hyperthyroidism:
   - text: "Por favor, me fale se você tem hipertireoidismo 😬 Quanto mais informações, mais eu consigo te ajudar 😅"
   utter_ask_diabetes:
   - text: "Você é diabética?"
     buttons:
     - title: "Sim"
-      payload: '/enter_data{"diabetes":"True"}'
+      payload: '/enter_data{"diabetes":true}'
     - title: "Não"
-      payload: '/enter_data{"diabetes":"False"}'
+      payload: '/enter_data{"diabetes":false}'
   utter_wrong_diabetes:
   - text: "Por favor, me fale se você tem diabetes 😬 Quanto mais informações, mais eu consigo te ajudar 😅"
   utter_ask_drug_use:
   - text: "Já usou ou faz uso de drogas?"
     buttons:
     - title: "Sim"
-      payload: '/enter_data{"drug_use":"True"}'
+      payload: '/enter_data{"drug_use":true}'
     - title: "Não"
-      payload: '/enter_data{"drug_use":"False"}'
+      payload: '/enter_data{"drug_use":false}'
   utter_wrong_drug_use:
   - text: "Por favor, me fale se você já usou ou usa drogas 😬 Quanto mais informações, mais eu consigo te ajudar 😅"
   utter_ask_autoimmune_disease:
   - text: "Possui alguma doença autoimune?"
     buttons:
     - title: "Sim"
-      payload: '/enter_data{"autoimmune_disease":"True"}'
+      payload: '/enter_data{"autoimmune_disease":true}'
     - title: "Não"
-      payload: '/enter_data{"autoimmune_disease":"False"}'
+      payload: '/enter_data{"autoimmune_disease":false}'
   utter_wrong_autoimmune_disease:
   - text: "Por favor, me fale se você possui alguma doença autoimune 😬 Quanto mais informações, mais eu consigo te ajudar 😅"
   utter_ask_asthma:
   - text: "Você tem asma?"
     buttons:
     - title: "Sim"
-      payload: '/enter_data{"asthma":"True"}'
+      payload: '/enter_data{"asthma":true}'
     - title: "Não"
-      payload: '/enter_data{"asthma":"False"}'
+      payload: '/enter_data{"asthma":false}'
   utter_wrong_asthma:
   - text: "Por favor, me fale se você tem asma 😬 Quanto mais informações, mais eu consigo te ajudar 😅"
   utter_ask_seropositive:
   - text: "Você é soropositiva?"
     buttons:
     - title: "Sim"
-      payload: '/enter_data{"seropositive":"True"}'
+      payload: '/enter_data{"seropositive":true}'
     - title: "Não"
-      payload: '/enter_data{"seropositive":"False"}'
+      payload: '/enter_data{"seropositive":false}'
   utter_wrong_seropositive:
   - text: "Por favor, me fale se você é soropositiva 😬 Quanto mais informações, mais eu consigo te ajudar 😅"
   utter_ask_high_pressure:
   - text: "Tem pressão alta?"
     buttons:
     - title: "Sim"
-      payload: '/enter_data{"high_pressure":"True"}'
+      payload: '/enter_data{"high_pressure":true}'
     - title: "Não"
-      payload: '/enter_data{"high_pressure":"False"}'
+      payload: '/enter_data{"high_pressure":false}'
   utter_wrong_high_pressure:
   - text: "Por favor, me fale se você tem pressão alta 😬 Quanto mais informações, mais eu consigo te ajudar 😅"
   utter_ask_health_questions:
@@ -664,9 +672,9 @@ O planejamento tem o objetivo de identificar fatores de risco como diabetes e hi
   - text: "A sua gravidez é de alto risco?"
     buttons:
     - title: "Sim"
-      payload: '/enter_data{"high_risk":"True"}'
+      payload: '/enter_data{"high_risk":true}'
     - title: "Não"
-      payload: '/enter_data{"high_risk":"False"}'
+      payload: '/enter_data{"high_risk":false}'
   utter_wrong_high_risk:
   - text: "Por favor, preciso saber se a sua gestação é de alto risco 😬"
   utter_ask_due_date:
@@ -689,27 +697,27 @@ O planejamento tem o objetivo de identificar fatores de risco como diabetes e hi
   - text: "Você já sofreu algum aborto?"
     buttons:
     - title: "Sim"
-      payload: '/enter_data{"abortion":"True"}'
+      payload: '/enter_data{"abortion":true}'
     - title: "Não"
-      payload: '/enter_data{"abortion":"False"}'
+      payload: '/enter_data{"abortion":false}'
   utter_wrong_abortion:
   - text: "Sei que é um assunto delicado mas pode me contar 😬"
   utter_ask_premature_birth:
   - text: "Você já teve algum parto prematuro?"
     buttons:
     - title: "Sim"
-      payload: '/enter_data{"premature_birth":"True"}'
+      payload: '/enter_data{"premature_birth":true}'
     - title: "Não"
-      payload: '/enter_data{"premature_birth":"False"}'    
+      payload: '/enter_data{"premature_birth":false}'    
   utter_wrong_premature_birth:
   - text: "Me conta se você já teve um parto prematuro, por favor 😬"
   utter_ask_had_birth:
   - text: "Você já teve algum parto?"
     buttons:
     - title: "Sim"
-      payload: '/enter_data{"had_birth":"True"}'
+      payload: '/enter_data{"had_birth":true}'
     - title: "Não"
-      payload: '/enter_data{"had_birth":"False"}'
+      payload: '/enter_data{"had_birth":false}'
   utter_normal_birth_best:
   - text: "Se tudo estiver bem com a mãe e com o bebê e que não haja contraindicações, o parto normal é o tipo de parto mais indicado. Diferente de uma cesárea agendada, no parto normal quem decide o momento de chegar ao mundo é a própria criança."
   utter_normal_birth_pain:
@@ -849,52 +857,45 @@ Caso haja inchaço assimétrico, dor importante ou vermelhidão nas pernas após
   - text: "Você está amamentando?"
     buttons:
     - title: "Sim"
-      payload: '/enter_data{"breastfeeding":"True"}'
+      payload: '/enter_data{"breastfeeding":true}'
     - title: "Não"
-      payload: '/enter_data{"breastfeeding":"False"}'
+      payload: '/enter_data{"breastfeeding":false}'
   utter_ask_having_sex:
   - text: "Está tendo relações sexuais?"
     buttons:
     - title: "Sim"
-      payload: '/enter_data{"having_sex":"True"}'
+      payload: '/enter_data{"having_sex":true}'
     - title: "Não"
-      payload: '/enter_data{"having_sex":"False"}'
+      payload: '/enter_data{"having_sex":false}'
   utter_ask_contraceptive_method:
   - text: "Qual método contraceptivo você está utilizando?"
-  utter_ask_type_delivery:
-  - text: "Qual foi o tipo do parto?"
-    buttons:
-    - title: "Normal"
-      payload: '/enter_data{"type_delivery":"Normal"}'
-    - title: "Cesárea"
-      payload: '/enter_data{"type_delivery":"Cesarea"}'
   utter_ask_episiotomy:
   - text: "Foi necessário fazer episiotomia (corte próximo à vagina)?"
     buttons:
     - title: "Sim"
-      payload: '/enter_data{"episiotomy":"True"}'
+      payload: '/enter_data{"episiotomy":true}'
     - title: "Não"
-      payload: '/enter_data{"episiotomy":"False"}'
+      payload: '/enter_data{"episiotomy":false}'
   utter_ask_doctor_appointment:
   - text: "Você ja foi a uma consulta médica depois que o bebê nasceu?"
     buttons:
     - title: "Sim"
-      payload: '/enter_data{"doctor_appointment":"True"}'
+      payload: '/enter_data{"doctor_appointment":true}'
     - title: "Não"
-      payload: '/enter_data{"doctor_appointment":"False"}'
+      payload: '/enter_data{"doctor_appointment":false}'
   utter_ask_infection:
   - text: "Você teve algum tipo de infecção durante esse período?"
     buttons:
     - title: "Sim"
-      payload: '/enter_data{"infection":"True"}'
+      payload: '/enter_data{"infection":true}'
     - title: "Não"
-      payload: '/enter_data{"infection":"False"}'
+      payload: '/enter_data{"infection":false}'
   utter_ask_infection_kind:
   - text: "Que tipo de infecção (mastite, endometrite, urinária, etc)?"
   utter_ask_is_postpartum:
   - text: "Você está no pós parto?"
     buttons:
     - title: "Sim"
-      payload: '/enter_data{"is_postpartum":"True"}'
+      payload: '/enter_data{"is_postpartum":true}'
     - title: "Não"
-      payload: '/enter_data{"is_postpartum":"False"}'
+      payload: '/enter_data{"is_postpartum":false}'

@@ -1,19 +1,16 @@
 language: pt
-# pipeline: supervised_embeddings
 
 pipeline:
 - name: WhitespaceTokenizer
 - name: CRFEntityExtractor
+- name: DucklingHTTPExtractor
+  url: "http://eve_duckling:8000"
+  dimensions: ["time"]
 - name: EntitySynonymMapper
 - name: CountVectorsFeaturizer
 - name: EmbeddingIntentClassifier
-- name: DucklingHTTPExtractor
-  url: "http://eve_duckling:8000"
-  dimensions: ["time"]  
-  
-  
-  # locale: "le_BR"
-  # timezone: "South America/Brazil"
+  intent_tokenization_flag: true
+  intent_split_symbol: "+"
 
 policies:
   - name: MemoizationPolicy

@@ -41,7 +41,6 @@ def send_user_exam_slot():
 def send_slots_from_Rasa(id):
     try:
         json_obj = request.get_json()
-        
         user = ServiceHandler.get_service(ROUTE_CONFIG['USER_TYPE_NAME']).get(id)
 
         if not user:
@@ -231,13 +230,13 @@ def send_personal_slots_from_Rasa(id):
             'user' : user
         }
         
-        user_info = ServiceHandler.get_service(ROUTE_CONFIG['USER_INFO_TYPE_NAME']).get_by_user_id(user.id)
+        user_personal_info = ServiceHandler.get_service(ROUTE_CONFIG['USER_PERSONAL_INFO_TYPE_NAME']).get_by_user_id(user.id)
             
-        if user_info:
-            obj['id'] = user_info.id
-            ServiceHandler.get_service(ROUTE_CONFIG['USER_INFO_TYPE_NAME']).update(obj)
+        if user_personal_info:
+            obj['id'] = user_personal_info.id
+            ServiceHandler.get_service(ROUTE_CONFIG['USER_PERSONAL_INFO_TYPE_NAME']).update(obj)
         else:
-            ServiceHandler.get_service(ROUTE_CONFIG['USER_INFO_TYPE_NAME']).insert(obj)
+            ServiceHandler.get_service(ROUTE_CONFIG['USER_PERSONAL_INFO_TYPE_NAME']).insert(obj)
         
         return response(status=status.HTTP_200_OK)
 

@@ -1,6 +1,7 @@
 ## bot inicia a conversa e o usuário (gestante)
-* get_started
+* hello
   - action_greet_user
+  - slot{"greeted_user": true}
 * affirm
   - form_initial
   - form{"name": "form_initial"}
@@ -10,6 +11,7 @@
 ## bot inicia a conversa e o usuário (gestante)
 * hello
   - action_greet_user
+  - slot{"greeted_user": true}
 * greeting_back
   - utter_greet_answer
   - utter_ask_me_anything
@@ -17,13 +19,15 @@
 ## bot inicia a conversa e o usuário (gestante)
 * hello
   - action_greet_user
+  - slot{"greeted_user": true}
 * greeting_answer
   - utter_great
   - utter_ask_me_anything
 
 ## bot inicia a conversa e o usuário nao quer responder as perguntas
-* get_started
+* hello
   - action_greet_user
+  - slot{"greeted_user": true}
 * deny
   - utter_info_later
   - utter_ask_me_anything
@@ -33,8 +37,9 @@
     - utter_which_medicine
 
 ## bot inicia a conversa e o usuário quer responder as perguntas depois
-* get_started
+* hello
   - action_greet_user
+  - slot{"greeted_user": true}
 * later
   - utter_info_later
   - utter_ask_me_anything
@@ -50,6 +55,7 @@
 ## o usuário inicia a conversa com apenas 'Oi' (gestante)
 * hello
   - action_greet_user
+  - slot{"greeted_user": true}
 * affirm
   - form_initial
   - form{"name": "form_initial"}
@@ -59,6 +65,7 @@
 ## o usuário inicia a conversa com apenas 'Oi' e não quer responder as perguntas
 * hello
   - action_greet_user
+  - slot{"greeted_user": true}
 * deny
   - utter_info_later
   - utter_ask_me_anything
@@ -66,15 +73,15 @@
 ## o usuário inicia a conversa com apenas 'Oi' e quer responder as perguntas depois
 * hello
   - action_greet_user
+  - slot{"greeted_user": true}
 * later
   - utter_info_later
   - utter_ask_me_anything
 
 ## o usuário inicia a conversa com 'Oi tudo bem?' (gestante)
-* greeting
+* greeting OR hello+greeting
   - action_greet_user
-* greeting_answer
-  - utter_ask_info
+  - slot{"greeted_user": true}
 * affirm
   - form_initial
   - form{"name": "form_initial"}
@@ -82,28 +89,27 @@
   - utter_ask_me_anything
 
 ## o usuário inicia a conversa com 'Oi tudo bem?' e nao quer responder as perguntas
-* greeting
+* greeting OR hello+greeting
   - action_greet_user
-* greeting_answer
-  - utter_ask_info
+  - slot{"greeted_user": true}
 * deny
   - utter_info_later
   - utter_ask_me_anything
 
 ## o usuário inicia a conversa com 'Oi tudo bem?' e quer responder as perguntas depois
-* greeting
+* greeting OR hello+greeting
   - action_greet_user
-* greeting_answer
-  - utter_ask_info
+  - slot{"greeted_user": true}
 * later
   - utter_info_later
   - utter_ask_me_anything
 
 ## 'Oi tudo bem?'
-* greeting
+* greeting OR hello+greeting
     - action_greet_user
+    - slot{"greeted_user": true}
 * greeting_answer
-  - utter_ask_info
+    - utter_great
 
 ## perguntas aleatórias 1
 * which_can{"question_entity": "exercicios"}
@@ -126,8 +132,9 @@
     - action_get_answer
 
 ## perguntas aleatórias 2
-* get_started
+* hello
   - action_greet_user
+  - slot{"greeted_user": true}
 * which_can{"question_entity": "exercicios"}
     - slot{"last_intent": "which_can"}
     - action_get_answer
@@ -136,10 +143,11 @@
     - action_get_answer
 
 ## perguntas aleatórias 3
-* get_started
+* hello
     - action_greet_user
+  - slot{"greeted_user": true}
 * greeting_answer
-    - utter_ask_info
+    - utter_great
 * which_can{"question_entity": "exercicios"}
     - slot{"last_intent": "which_can"}
     - action_get_answer
@@ -216,7 +224,45 @@
 ## estou gravida
 * im_pregnant
     - action_congrats
-    - slot{"is_pregnant": "True"}
+    - slot{"is_pregnant": true}
+    - utter_first_step
+    - utter_ask_info
+* affirm
+  - form_initial
+  - form{"name": "form_initial"}
+  - form{"name": null}
+  - utter_ask_me_anything
+
+## estou gravida
+* hello+im_pregnant
+    - utter_hello
+    - action_congrats
+    - slot{"is_pregnant": true}
+    - utter_first_step
+    - utter_ask_info
+* affirm
+  - form_initial
+  - form{"name": "form_initial"}
+  - form{"name": null}
+  - utter_ask_me_anything
+
+## estou gravida
+* im_pregnant
+    - action_congrats
+    - slot{"is_pregnant": true}
+    - utter_first_step
+    - utter_ask_info
+* affirm
+  - form_initial
+  - form{"name": "form_initial"}
+  - form{"name": null}
+  - utter_ask_me_anything
+
+## estou gravida
+* hello+im_pregnant
+    - utter_hello
+    - action_congrats
+    - slot{"is_pregnant": true}
     - utter_first_step
     - utter_ask_info
 * affirm
@@ -226,8 +272,9 @@
   - utter_ask_me_anything
 
 ## unhappy path: bot inicia a conversa (gestante)
-* get_started
+* hello
   - action_greet_user
+  - slot{"greeted_user": true}
 * affirm
   - form_initial
   - form{"name": "form_initial"}
@@ -240,6 +287,7 @@
 ## unhappy path: o usuário inicia a conversa com apenas 'Oi' (gestante)
 * hello
   - action_greet_user
+  - slot{"greeted_user": true}
 * affirm
   - form_initial
   - form{"name": "form_initial"}
@@ -252,6 +300,7 @@
 ## unhappy path: o usuário inicia a conversa com apenas 'Oi' (gestante)
 * hello
   - action_greet_user
+  - slot{"greeted_user": true}
 * affirm
   - form_initial
   - form{"name": "form_initial"}
@@ -262,8 +311,9 @@
   - utter_ask_me_anything
 
 ## unhappy path: bot inicia a conversa e o usuário e pede para o bot parar as perguntas (gestante)
-* get_started
+* hello
   - action_greet_user
+  - slot{"greeted_user": true}
 * affirm
   - form_initial
   - form{"name": "form_initial"}
@@ -275,6 +325,7 @@
 ## unhappy path: o usuário inicia a conversa com apenas 'Oi' e pede para o bot parar as perguntas (gestante)
 * hello
   - action_greet_user
+  - slot{"greeted_user": true}
 * affirm
   - form_initial
   - form{"name": "form_initial"}
@@ -290,6 +341,11 @@
 
 ## bot pergunta se fez o exame e o usuário fez
     - utter_ask_exam
+* affirm+did_exam
+    - action_doing_right_exam
+
+## bot pergunta se fez o exame e o usuário fez
+    - utter_ask_exam
 * did_exam
     - action_doing_right_exam
 
@@ -310,7 +366,7 @@
 * deny
     - action_get_exam
     - utter_is_important_exam
-* ill_do_it OR affirm
+* affirm+ill_do_it OR affirm OR ill_do_it
     - utter_great
 
 ## bot pergunta se fez o exame e o usuário não fez
@@ -318,7 +374,7 @@
 * did_not_exam
     - action_get_exam
     - utter_is_important_exam
-* ill_do_it OR affirm
+* ill_do_it OR affirm OR affirm+ill_do_it
     - utter_great
 
 ## bot pergunta se fez o exame, o usuário fez mas quer saber o motivo da pergunta
@@ -334,7 +390,7 @@
     - utter_why_answer
 * affirm
     - utter_ask_exam
-* did_exam
+* affirm+did_exam OR did_exam OR affirm
     - action_doing_right_exam
 
 ## bot pergunta se fez o exame, o usuário fez mas quer saber o motivo da pergunta
@@ -343,7 +399,7 @@
     - utter_why_answer
 * affirm
     - utter_ask_exam
-* affirm
+* affirm+did_exam OR affirm OR did_exam
     - action_doing_right_exam
 
 ## bot pergunta se fez o exame, o usuário não fez mas quer saber o motivo da pergunta
@@ -352,30 +408,13 @@
     - utter_why_answer
 * affirm
     - utter_ask_exam
-* deny
-    - action_get_exam
-    - utter_is_important_exam
-
-## bot pergunta se fez o exame, o usuário não fez mas quer saber o motivo da pergunta
-    - utter_ask_exam  
-* why_i_need_to_answer
-    - utter_why_answer
-* affirm
-    - utter_ask_exam
-* did_not_exam
+* deny OR did_not_exam OR deny+did_not_exam
     - action_get_exam
     - utter_is_important_exam
 
 ## bot pergunta se fez o exame, o usuário fez e sabe a importância do exame
     - utter_ask_exam
-* affirm
-    - action_doing_right_exam
-* i_know_importance
-    - utter_agree
-
-## bot pergunta se fez o exame, o usuário fez e sabe a importância do exame
-    - utter_ask_exam
-* did_exam
+* affirm OR affirm+did_exam OR did_exam
     - action_doing_right_exam
 * i_know_importance
     - utter_agree
@@ -387,6 +426,7 @@
 ## o usuário inicia a conversa com apenas 'Oi' e quer saber o motivo das perguntas (gestante)
 * hello
   - action_greet_user
+  - slot{"greeted_user": true}
 * why_i_need_to_answer
   - utter_why_answer
 * affirm
@@ -398,6 +438,7 @@
 ## o usuário inicia a conversa com apenas 'Oi' e quer saber o motivo das perguntas (gestante)
 * hello
   - action_greet_user
+  - slot{"greeted_user": true}
 * affirm
   - form_initial
   - form{"name": "form_initial"}
@@ -410,36 +451,37 @@
 ## Generated Story -2517970030274559833
 * hello
     - action_greet_user
+  - slot{"greeted_user": true}
 * why_i_need_to_answer
     - utter_why_answer
 * affirm
     - form_initial
     - form{"name": "form_initial"}
     - slot{"requested_slot": "is_pregnant"}
-* form: enter_data{"is_pregnant": "False"}
-    - slot{"is_pregnant": "False"}
+* form: enter_data{"is_pregnant": false}
+    - slot{"is_pregnant": false}
     - form: form_initial
-    - slot{"is_pregnant": "False"}
+    - slot{"is_pregnant": false}
     - slot{"requested_slot": "is_trying"}
-* form: enter_data{"is_trying": "True"}
-    - slot{"is_trying": "True"}
+* form: enter_data{"is_trying": true}
+    - slot{"is_trying": true}
     - form: form_initial
-    - slot{"is_trying": "True"}
+    - slot{"is_trying": true}
     - slot{"requested_slot": "is_planning"}
-* form: enter_data{"is_planning": "False"}
-    - slot{"is_planning": "False"}
+* form: enter_data{"is_planning": false}
+    - slot{"is_planning": false}
     - form: form_initial
-    - slot{"is_planning": "False"}
+    - slot{"is_planning": false}
     - slot{"requested_slot": "has_children"}
-* form: enter_data{"has_children": "False"}
-    - slot{"has_children": "False"}
+* form: enter_data{"has_children": false}
+    - slot{"has_children": false}
     - form: form_initial
-    - slot{"has_children": "False"}
+    - slot{"has_children": false}
     - slot{"requested_slot": "health_plan"}
-* form: enter_data{"health_plan": "False"}
-    - slot{"health_plan": "False"}
+* form: enter_data{"health_plan": false}
+    - slot{"health_plan": false}
     - form: form_initial
-    - slot{"health_plan": "False"}
+    - slot{"health_plan": false}
     - form{"name": null}
     - slot{"requested_slot": null}
     - utter_ask_me_anything
@@ -455,12 +497,13 @@
     - utter_great
 
 ## usuario tem duvidas
-* have_question
+* have_question OR affirm+have_question
     - utter_ask
 
 ## o usuário inicia a conversa com apenas 'Oi' (gestante) e não tem duvidas
 * hello
   - action_greet_user
+  - slot{"greeted_user": true}
 * affirm
   - form_initial
   - form{"name": "form_initial"}
@@ -474,12 +517,13 @@
 ## o usuário inicia a conversa com apenas 'Oi' (gestante) e tem duvidas
 * hello
   - action_greet_user
+  - slot{"greeted_user": true}
 * affirm
   - form_initial
   - form{"name": "form_initial"}
   - form{"name": null}
   - utter_ask_me_anything
-* have_question
+* have_question OR affirm+have_question
   - utter_ask
 
 ## baby_not_moving
@@ -499,7 +543,7 @@
     - form_health
     - form{"name": "form_health"}
     - form{"name": null}
-* have_question
+* have_question OR affirm+have_question
   - utter_ask
 
 ## unhappy path: form_health
@@ -521,50 +565,50 @@
 * affirm
     - form_health
     - slot{"requested_slot":"regular_medicine"}
-* enter_data{"regular_medicine":"False"}
-    - slot{"regular_medicine":"False"}
+* enter_data{"regular_medicine":false}
+    - slot{"regular_medicine":false}
     - form_health
-    - slot{"regular_medicine":"False"}
+    - slot{"regular_medicine":false}
     - slot{"requested_slot":"hypothyroidism"}
-* enter_data{"hypothyroidism":"False"}
-    - slot{"hypothyroidism":"False"}
+* enter_data{"hypothyroidism":false}
+    - slot{"hypothyroidism":false}
     - form_health
-    - slot{"hypothyroidism":"False"}
+    - slot{"hypothyroidism":false}
     - slot{"requested_slot":"hyperthyroidism"}
-* enter_data{"hyperthyroidism":"False"}
-    - slot{"hyperthyroidism":"False"}
+* enter_data{"hyperthyroidism":false}
+    - slot{"hyperthyroidism":false}
     - form_health
-    - slot{"hyperthyroidism":"False"}
+    - slot{"hyperthyroidism":false}
     - slot{"requested_slot":"diabetes"}
-* enter_data{"diabetes":"False"}
-    - slot{"diabetes":"False"}
+* enter_data{"diabetes":false}
+    - slot{"diabetes":false}
     - form_health
-    - slot{"diabetes":"False"}
+    - slot{"diabetes":false}
     - slot{"requested_slot":"drug_use"}
-* enter_data{"drug_use":"False"}
-    - slot{"drug_use":"False"}
+* enter_data{"drug_use":false}
+    - slot{"drug_use":false}
     - form_health
-    - slot{"drug_use":"False"}
+    - slot{"drug_use":false}
     - slot{"requested_slot":"autoimmune_disease"}
-* enter_data{"autoimmune_disease":"False"}
-    - slot{"autoimmune_disease":"False"}
+* enter_data{"autoimmune_disease":false}
+    - slot{"autoimmune_disease":false}
     - form_health
-    - slot{"autoimmune_disease":"False"}
+    - slot{"autoimmune_disease":false}
     - slot{"requested_slot":"asthma"}
-* enter_data{"asthma":"False"}
-    - slot{"asthma":"False"}
+* enter_data{"asthma":false}
+    - slot{"asthma":false}
     - form_health
-    - slot{"asthma":"False"}
+    - slot{"asthma":false}
     - slot{"requested_slot":"seropositive"}
-* enter_data{"seropositive":"False"}
-    - slot{"seropositive":"False"}
+* enter_data{"seropositive":false}
+    - slot{"seropositive":false}
     - form_health
-    - slot{"seropositive":"False"}
+    - slot{"seropositive":false}
     - slot{"requested_slot":"high_pressure"}
-* enter_data{"high_pressure":"False"}
-    - slot{"high_pressure":"False"}
+* enter_data{"high_pressure":false}
+    - slot{"high_pressure":false}
     - form_health
-    - slot{"high_pressure":"False"}
+    - slot{"high_pressure":false}
     - slot{"requested_slot":null}
 * welcome
     - utter_great
@@ -582,7 +626,7 @@
     - form_personal
     - form{"name": "form_personal"}
     - form{"name": null}
-* have_question
+* have_question OR affirm+have_question
   - utter_ask
 
 ## unhappy path: form_personal
@@ -604,25 +648,25 @@
 * affirm
     - form_personal
     - slot{"requested_slot":"height"}
-* enter_data{"height":"False"}
-    - slot{"height":"False"}
+* enter_data{"height":false}
+    - slot{"height":false}
     - form_personal
-    - slot{"height":"False"}
+    - slot{"height":false}
     - slot{"requested_slot":"weight"}
-* enter_data{"weight":"False"}
-    - slot{"weight":"False"}
+* enter_data{"weight":false}
+    - slot{"weight":false}
     - form_personal
-    - slot{"weight":"False"}
+    - slot{"weight":false}
     - slot{"requested_slot":"date_birth"}
-* enter_data{"date_birth":"False"}
-    - slot{"date_birth":"False"}
+* enter_data{"date_birth":false}
+    - slot{"date_birth":false}
     - form_personal
-    - slot{"date_birth":"False"}
+    - slot{"date_birth":false}
     - slot{"requested_slot":"state"}
-* enter_data{"state":"False"}
-    - slot{"state":"False"}
+* enter_data{"state":false}
+    - slot{"state":false}
     - form_personal
-    - slot{"state":"False"}
+    - slot{"state":false}
     - slot{"requested_slot":null}
 * welcome
     - utter_great
@@ -640,7 +684,7 @@
     - form_pregnancy
     - form{"name": "form_pregnancy"}
     - form{"name": null}
-* have_question
+* have_question OR affirm+have_question
   - utter_ask
 
 ## unhappy path: form_pregnancy
@@ -936,6 +980,7 @@
 ## Generated Story -4178839390444423351
 * hello
     - action_greet_user
+    - slot{"greeted_user": true}
 
 ## Generated Story -6771195614729549971
 * can{"question_entity": "raio x"}
@@ -943,7 +988,18 @@
     - slot{"last_intent": "can"}
 * im_pregnant
     - action_congrats
-    - slot{"is_pregnant": "True"}
+    - slot{"is_pregnant": true}
+    - utter_first_step
+    - utter_ask_info
+
+## Generated Story -6771195614729549971
+* can{"question_entity": "raio x"}
+    - action_get_answer
+    - slot{"last_intent": "can"}
+* hello+im_pregnant
+    - utter_hello
+    - action_congrats
+    - slot{"is_pregnant": true}
     - utter_first_step
     - utter_ask_info
 
@@ -960,9 +1016,68 @@
 * can{"question_entity": "rela\u00e7\u00f5es sexuais"}
     - action_get_answer
     - slot{"last_intent": "can"}
-* im_pregnant    
+* im_pregnant
     - action_congrats
-    - slot{"is_pregnant": "True"}
+    - slot{"is_pregnant": true}
+    - utter_first_step
+    - utter_ask_info
+
+## Generated Story 2621393950485477002
+* can{"question_entity": "cabelo"}
+    - action_get_answer
+    - slot{"last_intent": "can"}
+* can{"question_entity": "dentista"}
+    - action_get_answer
+    - slot{"last_intent": "can"}
+* can{"question_entity": "sexo"}
+    - action_get_answer
+    - slot{"last_intent": "can"}
+* can{"question_entity": "rela\u00e7\u00f5es sexuais"}
+    - action_get_answer
+    - slot{"last_intent": "can"}
+* hello+im_pregnant
+    - utter_hello
+    - action_congrats
+    - slot{"is_pregnant": true}
+    - utter_first_step
+    - utter_ask_info
+
+## Generated Story 2621393950485477002
+* can{"question_entity": "cabelo"}
+    - action_get_answer
+    - slot{"last_intent": "can"}
+* can{"question_entity": "dentista"}
+    - action_get_answer
+    - slot{"last_intent": "can"}
+* can{"question_entity": "sexo"}
+    - action_get_answer
+    - slot{"last_intent": "can"}
+* can{"question_entity": "rela\u00e7\u00f5es sexuais"}
+    - action_get_answer
+    - slot{"last_intent": "can"}
+* im_pregnant
+    - action_congrats
+    - slot{"is_pregnant": true}
+    - utter_first_step
+    - utter_ask_info
+
+## Generated Story 2621393950485477002
+* can{"question_entity": "cabelo"}
+    - action_get_answer
+    - slot{"last_intent": "can"}
+* can{"question_entity": "dentista"}
+    - action_get_answer
+    - slot{"last_intent": "can"}
+* can{"question_entity": "sexo"}
+    - action_get_answer
+    - slot{"last_intent": "can"}
+* can{"question_entity": "rela\u00e7\u00f5es sexuais"}
+    - action_get_answer
+    - slot{"last_intent": "can"}
+* hello+im_pregnant
+    - utter_hello
+    - action_congrats
+    - slot{"is_pregnant": true}
     - utter_first_step
     - utter_ask_info
 
@@ -1106,19 +1221,36 @@
     - slot{"last_intent": "is_it_normal"}
 
 ## Story from conversation with me on August 11th 2019
-
 * ask_sore_sex_after_birth
     - utter_sore_sex_after_birth
 * im_pregnant
     - action_congrats
-    - slot{"is_pregnant": "True"}
+    - slot{"is_pregnant": true}
+    - utter_first_step
+    - utter_ask_info
+
+## Story from conversation with me on August 11th 2019
+* ask_sore_sex_after_birth
+    - utter_sore_sex_after_birth
+* hello+im_pregnant
+    - utter_hello
+    - action_congrats
+    - slot{"is_pregnant": true}
     - utter_first_step
     - utter_ask_info
 
 ## Story from conversation with me on August 11th 2019
 * im_pregnant
     - action_congrats
-    - slot{"is_pregnant": "True"}
+    - slot{"is_pregnant": true}
+    - utter_first_step
+    - utter_ask_info
+
+## Story from conversation with me on August 11th 2019
+* hello+im_pregnant
+    - utter_hello
+    - action_congrats
+    - slot{"is_pregnant": true}
     - utter_first_step
     - utter_ask_info
 
@@ -1162,6 +1294,7 @@
 
 * hello
     - action_greet_user
+    - slot{"greeted_user": true}
 * complain
     - action_get_answer
     - slot{"last_intent":"complain"}
@@ -1170,58 +1303,59 @@
 
 * hello
     - action_greet_user
+    - slot{"greeted_user": true}
 * affirm
     - form_initial
     - slot{"requested_slot":"is_pregnant"}
-* enter_data{"is_pregnant":"False"}
-    - slot{"is_pregnant":"False"}
+* enter_data{"is_pregnant":false}
+    - slot{"is_pregnant":false}
     - form_initial
-    - slot{"is_pregnant":"False"}
+    - slot{"is_pregnant":false}
     - slot{"requested_slot":"is_trying"}
-* enter_data{"is_trying":"False"}
-    - slot{"is_trying":"False"}
+* enter_data{"is_trying":false}
+    - slot{"is_trying":false}
     - form_initial
-    - slot{"is_trying":"False"}
+    - slot{"is_trying":false}
     - slot{"requested_slot":"is_postpartum"}
-* enter_data{"is_postpartum":"True"}
-    - slot{"is_postpartum":"True"}
+* enter_data{"is_postpartum":true}
+    - slot{"is_postpartum":true}
     - form_initial
-    - slot{"is_postpartum":"True"}
+    - slot{"is_postpartum":true}
     - slot{"requested_slot":"health_plan"}
-* enter_data{"health_plan":"False"}
-    - slot{"health_plan":"False"}
+* enter_data{"health_plan":false}
+    - slot{"health_plan":false}
     - form_initial
-    - slot{"health_plan":"False"}
+    - slot{"health_plan":false}
     - slot{"requested_slot":"planned_pregnancy"}
-* enter_data{"planned_pregnancy":"False"}
-    - slot{"planned_pregnancy":"False"}
+* enter_data{"planned_pregnancy":false}
+    - slot{"planned_pregnancy":false}
     - form_initial
-    - slot{"planned_pregnancy":"False"}
+    - slot{"planned_pregnancy":false}
     - slot{"requested_slot":"breastfeeding"}
-* enter_data{"breastfeeding":"True"}
-    - slot{"breastfeeding":"True"}
+* enter_data{"breastfeeding":true}
+    - slot{"breastfeeding":true}
     - form_initial
-    - slot{"breastfeeding":"True"}
+    - slot{"breastfeeding":true}
     - slot{"requested_slot":"having_sex"}
-* enter_data{"having_sex":"True"}
-    - slot{"having_sex":"True"}
+* enter_data{"having_sex":true}
+    - slot{"having_sex":true}
     - form_initial
-    - slot{"having_sex":"True"}
+    - slot{"having_sex":true}
     - slot{"requested_slot":"contraceptive_method"}
 * enter_data{"contraceptive_method":"camisinha"}
     - slot{"contraceptive_method":"camisinha"}
     - form_initial
     - slot{"contraceptive_method":"camisinha"}
     - slot{"requested_slot":"doctor_appointment"}
-* enter_data{"doctor_appointment":"True"}
-    - slot{"doctor_appointment":"True"}
+* enter_data{"doctor_appointment":true}
+    - slot{"doctor_appointment":true}
     - form_initial
-    - slot{"doctor_appointment":"True"}
+    - slot{"doctor_appointment":true}
     - slot{"requested_slot":"infection"}
-* enter_data{"infection":"False"}
-    - slot{"infection":"False"}
+* enter_data{"infection":false}
+    - slot{"infection":false}
     - form_initial
-    - slot{"infection":"False"}
+    - slot{"infection":false}
     - slot{"requested_slot":null}
     - utter_ask_me_anything
 * ask_isbot
@@ -1230,7 +1364,7 @@
     - action_where_from
 
 ## Story from conversation with me on September 4th 2019
-* have_question
+* have_question OR affirm+have_question
     - utter_ask
 * no_question
     - utter_ask_me_later
@@ -1238,6 +1372,7 @@
 ## Story from conversation with me on September 4th 2019
 * hello
     - action_greet_user
+    - slot{"greeted_user": true}
 * deny
     - utter_info_later
     - utter_ask_me_anything
@@ -1245,3 +1380,33 @@
     - utter_baby_not_moving
 * ask_exercise_help_normal_birth
     - utter_exercise_help_normal_birth
+
+# got_it
+* got_it OR affirm+got_it
+    - utter_great
+
+# got_it
+* affirm+got_it+thank_you OR got_it+thank_you
+    - utter_great
+    - utter_welcome
+
+# got_it
+* baby_not_moving
+    - utter_baby_not_moving
+* ask_exercise_help_normal_birth
+    - utter_exercise_help_normal_birth
+* got_it OR affirm+got_it
+    - utter_great
+
+# thank_you
+* thank_you OR affirm+thank_you
+    - utter_welcome
+
+# thank_you+bye
+* thank_you+bye OR bye+thank_you
+    - utter_welcome
+    - utter_bye
+
+# bye
+* bye
+    - utter_bye
