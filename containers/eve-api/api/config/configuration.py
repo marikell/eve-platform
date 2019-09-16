@@ -15,6 +15,7 @@ ROUTE_CONFIG:dict = {
     'USER_HEALTH_INFO_TYPE_NAME':'user-health',
     'USER_PREGNANCY_INFO_TYPE_NAME':'user-pregnancy',
     'USER_POSTPARTUM_INFO_TYPE_NAME':'user-postpartum',
+    'USER_PERSONAL_INFO_TYPE_NAME':'user-personal',
     'USER_TRIMESTER_TYPE_NAME':'user-trimester',
     'UNANSWERED_QUESTION_TYPE_NAME':'unanswered-question',
     'NOTIFICATION_USER_TYPE_NAME':'notification-user',
