@@ -1,23 +1,22 @@
 language: pt
 
 pipeline:
-- name: WhitespaceTokenizer
-- name: CRFEntityExtractor
-- name: DucklingHTTPExtractor
+- name: "WhitespaceTokenizer"
+  intent_split_symbol: "+"
+- name: "CRFEntityExtractor"
+- name: "DucklingHTTPExtractor"
   url: "http://eve_duckling:8000"
   dimensions: ["time"]
-- name: EntitySynonymMapper
-- name: CountVectorsFeaturizer
-- name: EmbeddingIntentClassifier
-  intent_tokenization_flag: true
-  intent_split_symbol: "+"
+- name: "EntitySynonymMapper"
+- name: "CountVectorsFeaturizer"
+- name: "EmbeddingIntentClassifier"  
 
 policies:
-  - name: MemoizationPolicy
-  - name: KerasPolicy
-  - name: MappingPolicy
-  - name: FormPolicy
-  - name: FallbackPolicy
+  - name: "MemoizationPolicy"
+  - name: "KerasPolicy"
+  - name: "MappingPolicy"
+  - name: "FormPolicy"
+  - name: "FallbackPolicy"
     nlu_threshold: 0.6
     core_threshold: 0.4
-    fallback_action_name: action_default_fallback
+    fallback_action_name: "action_default_fallback"

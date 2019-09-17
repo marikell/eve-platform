@@ -1,4 +1,5 @@
-actions: 
+actions:
+  - ask_form
   - utter_hello
   - utter_bye
   - utter_default
@@ -196,9 +197,6 @@ intents:
   - canthelp:
       triggers: action_cant_help
   - did_not_exam
-  - can_ask_me
-  - thank_you+can_ask_me
-  - affirm+can_ask_me
   - enter_data
   - how
   - greeting_answer
