@@ -30,6 +30,11 @@ class UserFormService(GenericService):
 
     def get_forms_by_user_status(self, user, status):
         return self.objects(Q(user_id=ObjectId(user), status=status)).first()
+
+    def get_all_forms_by_user(self, userId):
+        forms = UserForm.objects(Q(user_id=ObjectId(userId)))
+
+        return forms
     
     def get_form_by_user(self, form, user):
         return self.objects(Q(user_id=ObjectId(user), form_id=ObjectId(form))).first()

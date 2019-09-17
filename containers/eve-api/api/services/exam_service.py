@@ -3,6 +3,7 @@ from api.services.generic_service import GenericService
 from mongoengine.queryset.visitor import Q
 from api.models.user_exam import UserExam
 from bson.objectid import ObjectId
+from bson import json_util
 
 class ExamService(GenericService):
     def __init__(self):
@@ -25,13 +26,13 @@ class ExamService(GenericService):
                     'foreignField': 'exam_id',
                     'as': 'user_exams'},
                 },              
-                 {
-                    '$unwind':'$user_exams'
+                {
+                       '$group':{'_id' : '$trimester', 'exams' : { '$push': "$$ROOT" }}
+                    
                 },
                 {
-                    '$match' : {'user_exams.user_id' : ObjectId(user_id)}
+                    "$sort" : {'_id' : 1}
                 }
                 ]
         join_result = [exm for exm in Exam._get_collection().aggregate(pipeline)]
-        print(join_result)
         return join_result
