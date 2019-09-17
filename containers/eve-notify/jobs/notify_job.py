@@ -97,11 +97,12 @@ class NotifyJob():
             get_module_logger().info('Não há dicas tentantes para enviar, portanto, devemos dar reset.')
             self.reset(TipTypeEnum.wanting_conceive)
             trying_tip = self.get_tip_by_type(TipTypeEnum.wanting_conceive)
-            # reset
 
         if(not after_birth_tip):
             get_module_logger().info('Não há dicas de puerperas para enviar, portanto, devemos dar reset.')
-            # TODO IMPLEMENTAR AFTER_BIRTH  
+            self.reset(TipTypeEnum.after_birth)
+            trying_tip = self.get_tip_by_type(TipTypeEnum.after_birth)
+            
         
         if trying_tip:
             trying_template_id = 'c2eace00-74dc-47b3-a5a1-96fbd778c5ca'
@@ -114,4 +115,10 @@ class NotifyJob():
             status_code = self.notify("Pregnant Users",pregnant_tip['description'], pregnant_template_id)
             if status_code == 200:
                 self.update_tip(pregnant_tip['_id']['$oid'])     
-                get_module_logger().info('Notificação recebida pelas usuárias grávidas...')  
+                get_module_logger().info('Notificação recebida pelas usuárias grávidas...') 
+        if after_birth_tip:
+            after_birth_template_id = '3125bd72-0dd5-4158-bdf4-a96da56ef3dc'
+            status_code = self.notify("After Birth Users",after_birth_tip['description'], after_birth_template_id)
+            if status_code == 200:
+                self.update_tip(after_birth_tip['_id']['$oid'])     
+                get_module_logger().info('Notificação recebida pelas usuárias de pós parto...') 
