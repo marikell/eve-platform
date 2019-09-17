@@ -42,6 +42,43 @@
 - blz, obrigada
 - blz, obg
 
+## intent:can_ask_me
+- pode me fazer as perguntas agora
+- agora voce pode fazer as perguntas se quiser
+- se quiser pode me perguntar agora
+- pode me perguntar o que queria
+- pode fazer as perguntas
+- agora pode me fazer as perguntas
+- pode me perguntar agora
+- agora pode me perguntar
+- o que voce tinha pra me perguntar?
+- oq voce ia me perguntar?
+- entao oq voce ia me perguntar?
+- voce ia me perguntar alguma coisa?
+- se quiser pode me fazer as perguntas agora
+- pode me perguntar agora
+
+## intent:affirm+can_ask_me
+- ok, pode me fazer as perguntas agora
+- blz, agora voce pode fazer as perguntas se quiser
+- okay, se quiser pode me perguntar agora
+- claro, pode me perguntar o que queria
+- ok, pode fazer as perguntas
+- beleza, agora pode me fazer as perguntas
+- ok, pode me perguntar agora
+- certo, agora pode me perguntar
+- ok, o que voce tinha pra me perguntar?
+- ok, pode me perguntar agora
+
+## intent:thank_you+can_ask_me
+- obg, pode me fazer as perguntas agora
+- vlw, agora voce pode fazer as perguntas se quiser
+- obrigada, se quiser pode me perguntar agora
+- tks, pode me perguntar o que queria
+- valeu, pode fazer as perguntas
+- obrigada, agora pode me fazer as perguntas
+- obg, agora pode me perguntar
+
 ## intent:got_it
 - Entendi
 - entendi
@@ -52,7 +89,7 @@
 - agora eu entendi
 - agora faz sentido
 
-# intent:affirm+got_it
+## intent:affirm+got_it
 - sim, entendi
 - blz, entendi
 - ok, entendi
@@ -60,7 +97,7 @@
 - sim, faz sentido
 - Okay, agora entendi
 
-# intent:affirm+got_it+thank_you
+## intent:affirm+got_it+thank_you
 - sim, entendi, obg
 - blz, entendi, obrigada
 - ok, entendi value
@@ -68,14 +105,14 @@
 - sim, faz sentido, vlw
 - Okay, agora entendi, tks
 
-# intent:got_it+thank_you
+## intent:got_it+thank_you
 - entendi, obg
 - ah entendi, obrigada
 - faz sentido, obrigada
 - agora entendi, obg
 - entendi, valeu
 
-# intent:thank_you+bye
+## intent:thank_you+bye
 - obg, tchau
 - muito obrigada, até mais
 - obg, até mais
@@ -405,7 +442,6 @@
 - é verdade que quem faz parto normal fica com a vagina frouxa depois?
 - é verdade que quem faz parto normal fica com a vagina folgada depois?
 - é verdade que quem faz parto normal fica com a vagina grande depois?
-- Minha vagina pode ficar larga após o parto?
 - Minha vagina pode ficar larga após o parto?
 
 ## intent:ask_loss_hair_breastfeed
@@ -746,12 +782,12 @@
 - vlw até
 
 ## intent:can
-- eu posso tomar [cafeina](question_entity:café)
-- tem algum problema em tomar [cafe](question_entity:café)?
-- eu posso tomar [cafe](question_entity:café)?
-- posso tomar [cafeina](question_entity:café)?
-- tem algum problema em tomar [cafeína](question_entity:café)
-- posso tomar [cafe](question_entity:café)
+- eu posso tomar [cafeina](question_entity)
+- tem algum problema em tomar [cafe](question_entity)?
+- eu posso tomar [cafe](question_entity)?
+- posso tomar [cafeina](question_entity)?
+- tem algum problema em tomar [cafeína](question_entity)
+- posso tomar [cafe](question_entity)
 - posso beber [café](question_entity)?
 - grávida pode tomar [café](question_entity)?
 - gestante pode tomar [café](question_entity)?
@@ -761,11 +797,11 @@
 - eu posso comer [pimenta](question_entity)?
 - grávida pode comer [pimenta](question_entity)?
 - gestante pode comer [pimenta](question_entity)?
-- posso comer comida [apimentada](question_entity:pimenta)?
-- posso tomar [banho na banheira](question_entity:banheira)
-- grávida pode tomar [banho de banheira](question_entity:banheira)?
-- eu posso tomar [banho na banheira](question_entity:banheira)
-- tem algum problema em tomar [banho de banheira](question_entity:banheira)
+- posso comer comida [apimentada](question_entity)?
+- posso tomar [banho na banheira](question_entity)
+- grávida pode tomar [banho de banheira](question_entity)?
+- eu posso tomar [banho na banheira](question_entity)
+- tem algum problema em tomar [banho de banheira](question_entity)
 - posso tomar [sol](question_entity)
 - tem algum problema em tomar [sol](question_entity)
 - eu posso tomar [sol](question_entity)?
@@ -777,51 +813,51 @@
 - eu posso tomar [laxante](question_entity)
 - grávida pode tomar [laxante](question_entity)?
 - gestante pode tomar [laxante](question_entity)?
-- tem algum problema em andar de [sapato de salto alto](question_entity:salto alto)
+- tem algum problema em andar de [sapato de salto alto](question_entity)
 - posso andar de [salto](question_entity:salto salto)?
 - gravida pode usar [salto alto](question_entity)?
-- posso andar de [sapato alto](question_entity:salto alto)
-- posso andar de [sapato de salto](question_entity:salto alto)
-- tem algum problema em andar de [sapato de salto](question_entity:salto alto)
-- eu posso andar de [sapato de salto alto](question_entity:salto alto)
-- eu posso andar de [motocicleta](question_entity:moto)?
+- posso andar de [sapato alto](question_entity)
+- posso andar de [sapato de salto](question_entity)
+- tem algum problema em andar de [sapato de salto](question_entity)
+- eu posso andar de [sapato de salto alto](question_entity)
+- eu posso andar de [motocicleta](question_entity)?
 - posso andar de [moto](question_entity)?
 - grávida pode andar de [moto](question_entity)?
-- posso andar de [motocicleta](question_entity:moto)?
-- tem algum problema em andar de [motocicleta](question_entity:moto)
+- posso andar de [motocicleta](question_entity)?
+- tem algum problema em andar de [motocicleta](question_entity)
 - eu posso andar de [cavalo](question_entity)?
 - posso andar a [cavalo](question_entity)?
 - gravida pode andar a [cavalo](question_entity)?
 - tem algum problema em andar de [cavalo](question_entity)
-- posso andar de [bike](question_entity:bicicleta)?
-- tem algum problema em andar de [bike](question_entity:bicicleta)?
-- eu posso andar de [bike](question_entity:bicicleta)?
+- posso andar de [bike](question_entity)?
+- tem algum problema em andar de [bike](question_entity)?
+- eu posso andar de [bike](question_entity)?
 - posso andar de [bicicleta](question_entity)?
 - gravida pode andar de [bicicleta](question_entity)?
-- posso tomar [vacina](question_entity:vacinas)?
-- gravida pode tomar [vacina](question_entity:vacinas)?
+- posso tomar [vacina](question_entity)?
+- gravida pode tomar [vacina](question_entity)?
 - posso fazer [exercicios](question_entity)?
-- posso fazer [academia](question_entity:exercicios)
-- posso [treinar](question_entity:exercicios)?
-- posso fazer algum [treino](question_entity:exercicios)?
-- posso fazer [exercicios fisicos](question_entity:exercicios)?
-- posso fazer [atividades fisicas](question_entity:exercicios)?
+- posso fazer [academia](question_entity)
+- posso [treinar](question_entity)?
+- posso fazer algum [treino](question_entity)?
+- posso fazer [exercicios fisicos](question_entity)?
+- posso fazer [atividades fisicas](question_entity)?
 - gravida pode fazer [exercicios](question_entity)?
-- gravida pode praticar [atividade fisica](question_entity:exercicios)?
-- posso [transar](question_entity:sexo)?
-- posso ter [relações sexuais](question_entity:sexo)?
+- gravida pode praticar [atividade fisica](question_entity)?
+- posso [transar](question_entity)?
+- posso ter [relações sexuais](question_entity)?
 - posso fazer [sexo](question_entity)?
-- gestante pode ter [relações sexuais](question_entity:sexo)?
+- gestante pode ter [relações sexuais](question_entity)?
 - gestante pode fazer [sexo](question_entity)?
 - posso [viajar](question_entity)?
-- posso comer [comida japonesa](question_entity:japonesa)?
-- posso comer [sushi](question_entity:japonesa)?
-- posso comer [temaki](question_entity:japonesa)?
-- posso tomar [remedio](question_entity:remedios)?
+- posso comer [comida japonesa](question_entity)?
+- posso comer [sushi](question_entity)?
+- posso comer [temaki](question_entity)?
+- posso tomar [remedio](question_entity)?
 - posso fazer as [unhas](question_entity)?
 - posso pintar as [unhas](question_entity)?
 - gravida pode pintar as [unhas](question_entity)?
-- posso pintar o [cabelo](question_entity)?
+- posso pintar os [cabelos](question_entity)?
 - eu posso pintar meu [cabelo](question_entity)?
 - gravida pode pintar o [cabelo](question_entity)?
 - tem problema pintar o [cabelo](question_entity)?
@@ -834,7 +870,7 @@
 - posso usar [hidratante](question_entity)?
 - posso usar [hidratante](question_entity) de corpo?
 - gravida pode usar [hidratante](question_entity)?
-- posso usar as [escadas](question_entity:escada)?
+- posso usar as [escadas](question_entity)?
 - mulher gestante pode usar [escada](question_entity)?
 - posso ir ao [dentista](question_entity)?
 - tem problema ir ao [dentista](question_entity)?
@@ -843,7 +879,7 @@
 - posso beber [refrigerante](question_entity)?
 - gravida pode tomar [refrigerante](question_entity)?
 - posso tomar [adoçante](question_entity)?
-- mulher gravida pode tomar [adoçante](question_entity)?
+- mulher gravida pode tomar [adocante](question_entity)?
 - tem algum problema tomar [adoçante](question_entity)?
 - posso comer [peixe cru](question_entity)?
 - gravida pode comer [peixe cru](question_entity)?
@@ -851,17 +887,19 @@
 - tem problema [dormir de bruços](question_entity)?
 - gravida pode [dormir de bruços](question_entity)?
 - posso tomar [analgesico](question_entity)?
-- gravida pode tomar [analgesico](question_entity)?
+- gravida pode tomar [analgésico](question_entity)?
 - tem algum problema tomar [analgesico](question_entity)?
 - posso tomar [remedio de alergia](question_entity)?
-- posso tomar [remedio para alergia](question_entity:remedio de alergia)?
-- tem problema tomar [remedio para alergia](question_entity:remedio de alergia)?
-- gravida pode tomar [remedio de alergia](week_day)?
+- posso tomar [remedio para alergia](question_entity)?
+- tem problema tomar [remedio para alergia](question_entity)?
+- gravida pode tomar [remedio de alergia](question_entity)?
 - posso tomar [alcool](question_entity)?
 - posso beber [alcool](question_entity)?
-- posso tomar [bebida alcoolica](question_entity:alcool)?
+- posso beber [vinho](question_entity)?
+- posso beber [caipirinha](question_entity)?
+- posso tomar [bebida alcoolica](question_entity)?
 - gravida pode tomar [alcool](question_entity)?
-- gravida pode tomar [bebida alcoolica](question_entity:alcool)?
+- gravida pode tomar [bebida alcoólica](question_entity)?
 - posso usar [drogas](question_entity)?
 - posso consumir [drogas](question_entity)?
 - gravida pode usar [drogas](question_entity)?
@@ -869,7 +907,7 @@
 - gravida pode fazer [raio x](question_entity)?
 - tem algum problema fazer exame [raio x](question_entity)?
 - posso fumar [cigarro](question_entity)?
-- posso [fumar](question_entity:cigarro)?
+- posso [fumar](question_entity)?
 - gravida pode fumar [cigarro](question_entity)?
 - posso fazer [raio x](question_entity)?
 - posso pintar o [cabelo](question_entity)?
@@ -877,28 +915,28 @@
 - posso fazer [sexo](question_entity)?
 - posso ter [relações sexuais](question_entity)?
 - posso usar [salto alto](question_entity)?
-- posso [fumar](question_entity:cigarro)?
-- posso [transar](question_entity:sexo)?
+- posso [fumar](question_entity)?
+- posso [transar](question_entity)?
 - posso fazer [sexo](question_entity)?
-- posso ter [relações sexuais](question_entity:sexo)?
+- posso ter [relações sexuais](question_entity)?
 - posso fazer [exercicios](question_entity)?
 - posso [dirigir](question_entity)?
-- posso continuar [dirigindo](dirigir)?
+- posso continuar [dirigindo](question_entity)?
 - posso [dirigir](question_entity) o meu carro?
 - mulher grávida pode [dirigir](question_entity)?
 - posso [dirigir](question_entity)?
-- Grávidas podem [fumar](question_entity:cigarro)?
-- posso ter [relações sexuais](question_entity:sexo)?
-- gravida pode [fumar](question_entity:cigarro)?
-- mulher grávida pode [fumar](question_entity:cigarro)?
-- grávida pode [fumar](question_entity:cigarro)?
-- posso ter [relações sexuais](question_entity:sexo)?
-- posso ter [relações sexuais](question_entity:sexo)?
-- grávida pode ter [relações sexuais](question_entity:sexo)?
-- posso ter [relações sexuais](question_entity:sexo)?
+- Grávidas podem [fumar](question_entity)?
+- posso ter [relações sexuais](question_entity)?
+- gravida pode [fumar](question_entity)?
+- mulher grávida pode [fumar](question_entity)?
+- grávida pode [fumar](question_entity)?
+- posso ter [relações sexuais](question_entity)?
+- posso ter [relações sexuais](question_entity)?
+- grávida pode ter [relações sexuais](question_entity)?
+- posso ter [relações sexuais](question_entity)?
 - posso subir [escada](question_entity)?
-- posso subir as [escadas](question_entity:escada)?
-- Pode ser realizado [Papanicolau](question_entity:papanicolau) estando grávida?
+- posso subir as [escadas](question_entity)?
+- Pode ser realizado [Papanicolau](question_entity) estando grávida?
 - posso fazer [papanicolau](question_entity)?
 - posso fazer o exame [papanicolau](question_entity)?
 
@@ -913,16 +951,16 @@
 - quais as causas do [parto prematuro](question_entity)?
 - o que causa o [parto prematuro](question_entity)?
 - quais as principais causas do [parto prematuro](question_entity)?
-- quais as causas da [pré eclâmpsia](question_entity:pre-eclampsia)?
-- o que causa a [pre eclampsia](question_entity:pre-eclampsia)?
+- quais as causas da [pré eclâmpsia](question_entity)?
+- o que causa a [pre eclampsia](question_entity)?
 - quais as principais causas da [pre-eclampsia](question_entity)?
 
 ## intent:complain
 - estou com dor no [corpo](question_entity)
-- estou com muito [enjoo](question_entity:nauseas)
-- estou com muito [enjoo](question_entity:nauseas), o que eu faço?
-- estou com muito [enjoo](question_entity:nauseas), o que eu posso fazer pra melhorar?
-- estou com muito [enjoo](question_entity:nauseas), o que eu faço pra melhorar?
+- estou com muito [enjoo](question_entity)
+- estou com muito [enjoo](question_entity), o que eu faço?
+- estou com muito [enjoo](question_entity), o que eu posso fazer pra melhorar?
+- estou com muito [enjoo](question_entity), o que eu faço pra melhorar?
 - estou com dor nos [seios](question_entity)
 - estou com dor nos [seios](question_entity), o que eu faço?
 - estou com dor nos [seios](question_entity), o que fazer pra passar?
@@ -934,6 +972,7 @@
 - to com muita [azia](question_entity)
 - estou com muitas [estrias](question_entity), o que posso fazer pra melhorar?
 - to com muita [dor de cabeça](question_entity)
+- to com muita [dor de cabeca](question_entity)
 - estou com [cólica](question_entity), o que eu faço?
 - estou com [cólica](question_entity)
 - tenho muita [fraqueza](question_entity)
@@ -941,22 +980,22 @@
 - estou com muita dor na [lombar](question_entity)
 - estou com muita [queimação](question_entity) no estomago
 - tenho tido muita dor nas [costas](question_entity) também
-- tenho tido muita [nausea](question_entity:nauseas)
+- tenho tido muita [nausea](question_entity)
 - tenho tido muita dor nos [seios](question_entity)
-- estou [vomitando](question_entity:vomitos) muito, o que faço?
-- estou [vomitando](question_entity:vomitos) muito
-- tenho tido muita [tontura](question_entity:tonturas), é normal?
-- estou tendo muita [tontura](question_entity:tonturas), o que eu faço?
+- estou [vomitando](question_entity) muito, o que faço?
+- estou [vomitando](question_entity) muito
+- tenho tido muita [tontura](question_entity), é normal?
+- estou tendo muita [tontura](question_entity), o que eu faço?
 - estou tendo muita [azia](question_entity), oq eu faço?
-- estou [salivando](question_entity:salivacao) muito, o que eu faço pra melhorar?
+- estou [salivando](question_entity) muito, o que eu faço pra melhorar?
 - tenho tido muita [fraqueza](question_entity), oq eu faço?
-- estou me sentindo muito [fraca](question_entity:fraqueza)
-- estou [desmaiando](question_entity:desmaio) muito
-- tenho tido muitos [desmaios](question_entity:desmaio), o q eu faço?
+- estou me sentindo muito [fraca](question_entity)
+- estou [desmaiando](question_entity) muito
+- tenho tido muitos [desmaios](question_entity), o q eu faço?
 - estou com muito [corrimento](question_entity), é normal?
 - to com [corrimento](question_entity), o que eu faço?
 - estou com muita dor no [corpo](question_entity), o que eu fazer?
-- estou com dor de [cabeça](question_entity:cabeca)
+- estou com dor de [cabeça](question_entity)
 - estou com muita dor no [joelho](question_entity)
 - to com muita dor no [joelho](question_entity), oq eu faço?
 - to com muita dor no [joelho](question_entity), é normal?
@@ -968,15 +1007,15 @@
 - como melhorar a dor no [tornozelo](question_entity)?
 - estou com muita dor nas [costas](question_entity)
 - to com muita dor nas [costas](question_entity), é normal?
-- estou com muita [cólica](question_entity:colica)?
-- é normal ter muita [cólica](question_entity:colica)?
-- como melhorar a [cólica](question_entity:colica)?
+- estou com muita [cólica](question_entity)?
+- é normal ter muita [cólica](question_entity)?
+- como melhorar a [cólica](question_entity)?
 - estou com muita [falta de ar](question_entity)?
 - é normal ter muita [falta de ar](question_entity)?
-- estou com [gases](question_entity:flatulencia)
-- estou com muitos [gases](question_entity:flatulencia)
+- estou com [gases](question_entity)
+- estou com muitos [gases](question_entity)
 - estou com o [intestino preso](question_entity)
-- estou com [prisão de ventre](question_entity:intestino preso)
+- estou com [prisão de ventre](question_entity)
 
 ## intent:deny
 - ñ
@@ -1052,27 +1091,6 @@
 
 ## intent:enter_data
 - 1
-- [segunda-feira](week_day)
-- [segunda](week_day)
-- [segunda feira](week_day)
-- [terça-feira](week_day)
-- [terca](week_day)
-- [terca feira](week_day)
-- [terça](week_day)
-- [terca-feira](week_day)
-- [terça feira](week_day)
-- [quarta-feira](week_day)
-- [quarta](week_day)
-- [quarta feira](week_day)
-- [quinta-feira](week_day)
-- [quinta](week_day)
-- [quinta feira](week_day)
-- [sexta-feira](week_day)
-- [sexta](week_day)
-- [sexta feira](week_day)
-- [sabado](week_day)
-- [sábado](week_day)
-- [domingo](week_day)
 - [dipirona](med_name)
 - [ibuprofeno](med_name)
 - [dorflex](med_name)
@@ -1086,7 +1104,6 @@
 - o nome é [neosaldina](med_name)
 - [dipirona](med_name)
 - [lufital](med_name)
-- [quarta feira](week_day:quarta-feira) as 9
 - [sp](state)
 - [AM](state)
 - [RJ](state)
@@ -1232,46 +1249,33 @@
 
 ## intent:hello
 - Oiii
+- Hey
 - Hey Boa tarde
 - Olá Boa tarde
 - Oie Bom dia
-- Boa tarde
 - Olá
 - ola
-- E ai Boa noite
-- Oi Boa tarde
-- Oiii Bom dia
-- Olá Bom dia
-- Oie Boa noite
-- Oiii Boa noite
 - E ai
 - Oi
 - Hey
 - Bom dia
-- Ei Bom dia
-- Ei Boa noite
 - Hey Bom dia
 - Oiii Boa tarde
 - Ei
-- Oi Boa noite
-- Oie
-- Hey Boa noite
-- Olá Boa noite
-- Oie Boa tarde
-- Ei Boa tarde
-- E ai Bom dia
 - Boa noite
+- Bom dia
+- Oie
+- Boa tarde
 - Oii
-
 
 ## intent:how
 - como melhorar a [azia](question_entity)?
-- como melhorar os [enjoos](question_entity:nauseas)?
+- como melhorar os [enjoos](question_entity)?
 - como melhorar as [tonturas](question_entity)?
 - como melhorar a dor nos [seios](question_entity)?
-- como funciona o [pré-natal](question_entity:pre-natal)?
+- como funciona o [pré-natal](question_entity)?
 - como funciona o [pre-natal](question_entity)?
-- como funciona o [pré-natal](question_entity:pre-natal)?
+- como funciona o [pré-natal](question_entity)?
 
 ## intent:how_to_know
 - como saber se a [bolsa](question_entity) estourou?
@@ -1279,8 +1283,8 @@
 - como saber se a [bolsa](question_entity) rompeu?
 - como saber se estou em [trabalho de parto](question_entity)?
 - como eu sei se estou em [trabalho de parto](question_entity)?
-- como saber se estou [grávida](question_entity:gravidez)?
-- como eu sei que estou [gravida](question_entity:gravidez)?
+- como saber se estou [grávida](question_entity)?
+- como eu sei que estou [gravida](question_entity)?
 
 ## intent:i_know_importance
 - Ah sim, eu sei como o pré-natal é importante
@@ -1345,20 +1349,22 @@
 - Oii, estou gravida
 
 ## intent:importance
-- qual a importância da [amamentação](question_entity:amamentacao)?
-- por que é importante [amamentar](question_entity:amamentacao)?
-- qual a importancia de [amamentar](question_entity:amamentacao)?
-- a [amamentação](question_entity:amamentacao) é importante?
+- qual a importância da [amamentação](question_entity)?
+- qual a importância da [amamentacão](question_entity)?
+- qual a importância da [amamentacao](question_entity)?
+- por que é importante [amamentar](question_entity)?
+- qual a importancia de [amamentar](question_entity)?
+- a [amamentação](question_entity) é importante?
 
 ## intent:is_it_normal
-- é normal ter muitos [desmaios](question_entity:desmaio)?
-- é normal ter muita [tontura](question_entity:tonturas)?
-- é normal ter muitos [enjoos](question_entity:nauseas)?
+- é normal ter muitos [desmaios](question_entity)?
+- é normal ter muita [tontura](question_entity)?
+- é normal ter muitos [enjoos](question_entity)?
 - é normal ter muita [azia](question_entity)?
+- é normal ter muita [queimação](question_entity) no estomago?
 - é normal ter [desmaios](question_entity)?
 - é normal ter [corrimento](question_entity)?
 - é normal ter muita dor no [corpo](question_entity)?
-- é normal sentir tanto [cansaço](question_entity)?
 
 ## intent:last_intent
 - e de [cavalo](question_entity)?
@@ -1406,13 +1412,13 @@
 - como prevenir o [parto prematuro](question_entity)?
 - como evitar o [parto prematuro](question_entity)?
 - como eu posso prevenir o [parto prematuro](question_entity)?
-- como prevenir a [pré-eclâmpsia](question_entity:pre-eclampsia)?
+- como prevenir a [pré-eclâmpsia](question_entity)?
 - como eu posso me prevenir da [pre-eclampsia](question_entity)?
-- estou [salivando](question_entity:salivacao) muito, é normal?
+- estou [salivando](question_entity) muito, é normal?
 
 ## intent:risk_factor
 - quais são os fatores de risco da [gravidez](question_entity)?
-- quais os principais fatores de risco da [gestação](question_entity:gravidez)?
+- quais os principais fatores de risco da [gestação](question_entity)?
 - quais são os fatores de risco durante a [gravidez](question_entity)?
 - quais são os fatores de risco de um [parto prematuro](question_entity)?
 - quais os fatores de risco do [parto prematuro](question_entity)?
@@ -1432,16 +1438,16 @@
 - Não vou responder
 
 ## intent:symptom
-- quais os sintomas do [aborto espontâneo](question_entity:aborto espontaneo)?
+- quais os sintomas do [aborto espontâneo](question_entity)?
 - quais são os sintomas do [aborto espontaneo](question_entity)?
 - quais os principais sintomas de um [aborto espontaneo](question_entity)?
 - quais os sintomas da [gravidez](question_entity)?
-- quais os principais sintomas da [gestação](question_entity:gravidez)?
-- quais são os sintomas de uma [mulher grávida](question_entity:gravidez)?
+- quais os principais sintomas da [gestação](question_entity)?
+- quais são os sintomas de uma [mulher grávida](question_entity)?
 - quais os sintomas de um [parto prematuro](question_entity)?
 - quais os principais sintomas de um [parto prematuro](question_entity)?
-- quais os sintomas da [pré-eclâmpsia](question_entity:pre-eclampsia)?
-- quais são os principais sintomas da [pre eclampsia](question_entity:pre-eclampsia)?
+- quais os sintomas da [pré-eclâmpsia](question_entity)?
+- quais são os principais sintomas da [pre eclampsia](question_entity)?
 - quais são os principais sintomas da [pre-eclampsia](question_entity)?
 
 ## intent:thank_you
@@ -1465,81 +1471,89 @@
 
 ## intent:what_is
 - oq é [pre-natal](question_entity)?
-- oq é [pré natal](question_entity:pre-natal)?
-- oq é [puerpério](question_entity:puerperio)?
-- O que é [puerpério](question_entity:puerperio)?
-- oq é [lóquio](question_entity:loquio)?
-- O que é [lóquio](question_entity:loquio)?
-- O que é [aborto espontâneo](question_entity:aborto espontaneo)?
-- oq é [aborto espontâneo](question_entity:aborto espontaneo)?
-- oq é [líquido amniótico](question_entity:liquido amniotico)?
-- O que é o [líquido amniótico](question_entity:liquido amniotico)?
-- O que é [pré-eclâmpsia](question_entity:pre-eclampsia)?
-- O que é [pré eclâmpsia](question_entity:pre-eclampsia)?
-- oq é [pré-eclâmpsia](question_entity:pre-eclampsia)?
-- O que é [pré eclâmpsia](question_entity:pre-eclampsia)
--  o que é o [pré-natal](question_entity:pre-natal)?
-- o que significa [puerpério](question_entity:puerperio)?
+- oq é [pré natal](question_entity)?
+- oq é [puerpério](question_entity)?
+- oq é [bebê pélvico](question_entity)?
+- oq significa [bebê córmico](question_entity)?
+- oq é [bebe cormico](question_entity)?
+- oq é [bebê pelvico](question_entity)?
+- oq é [bebe pelvico](question_entity)?
+- O que é [puerpério](question_entity)?
+- oq é [lóquio](question_entity)?
+- O que é [lóquio](question_entity)?
+- O que é [aborto espontâneo](question_entity)?
+- oq é [aborto espontâneo](question_entity)?
+- oq é [líquido amniótico](question_entity)?
+- O que é o [líquido amniótico](question_entity)?
+- O que é [pré-eclâmpsia](question_entity)?
+- O que é [pré eclâmpsia](question_entity)?
+- oq é [pré-eclâmpsia](question_entity)?
+- O que é [pré eclâmpsia](question_entity)
+-  o que é o [pré-natal](question_entity)?
+- o que significa [puerpério](question_entity)?
 - o que significa [aborto espontaneo](question_entity)?
-- o que é [ácido fólico](question_entity:acido folico)?
+- o que é [ácido fólico](question_entity)?
 - oq é [acido folico](question_entity)?
+- oq é [acido fólico](question_entity)?
+- oq é [ácido folico](question_entity)?
 - O que é [episiotomia](question_entity)?
 - oq é [episiotomia](question_entity)?
 - o que é [tricotomia](question_entity)?
 - oq é [tricotomia](question_entity)?
-- o que é [fórceps](question_entity:forceps)?
+- o que é [fórceps](question_entity)?
 - oq é [forceps](question_entity)?
 - o que são as contrações de [braxton hicks](question_entity)?
 - o que são [braxton hicks](question_entity)?
 - oq é [braxton hicks](question_entity)?
 - o que é [eclampsia](question_entity)?
-- oq é [eclâmpsia](question_entity:eclampsia)?
+- oq é [eclâmpsia](question_entity)?
 - o que significa [eclampsia](question_entity)?
 - oq é [altura uterina](question_entity)?
 - o que é [altura uterina](question_entity)?
 - oq é [amniocentese](question_entity)?
 - o que significa [amniocentese](question_entity)?
 - o que significa [BCF](question_entity)?
-- o que é [BCF](question_entity)?
-- o que significa uma [gestação a termo](question_entity:a termo)?
-- o que é uma [gravidez a termo](question_entity:a termo)?
-- o que é [bebe nascido a termo](question_entity:a termo)?
-- oq é [bebê a termo](question_entity:a termo)?
-- o que é [bebê defletido](question_entity:defletido)?
-- o que significa [bebê defletido](question_entity:defletido)?
-- oq é [bebe defletido](question_entity:defletido)?
-- o que significa [bebê pélvico](question_entity:pelvico)?
-- oq é [bebê pélvico](question_entity:pelvico)?
-- o que quer dizer [bebê pélvico](question_entity:pelvico)?
-- o que significa [bebê córmico](question_entity:cormico)?
-- oq quer dizer [bebe cormico](question_entity:cormico)?
-- o que é [bebê córmico](question_entity:cormico)?
+- o que é [bcf](question_entity)?
+- o que significa uma [gestação a termo](question_entity)?
+- o que é uma [gravidez a termo](question_entity)?
+- o que é [bebe nascido a termo](question_entity)?
+- oq é [bebê a termo](question_entity)?
+- oq é [bebe a termo](question_entity)?
+- o que é [bebê defletido](question_entity)?
+- o que significa [bebe defletido](question_entity)?
+- oq é [bebe defletido](question_entity)?
+- o que significa [bebê pélvico](question_entity)?
+- oq é [bebê pélvico](question_entity)?
+- o que quer dizer [bebê pélvico](question_entity)?
+- o que significa [bebê córmico](question_entity)?
+- oq quer dizer [bebe cormico](question_entity)?
+- o que é [bebê córmico](question_entity)?
 - o que é [beta-hcg](question_entity)?
-- oq é [beta hcg](question_entity:beta-hcg)?
+- oq é [beta hcg](question_entity)?
 - o que significa [beta-hcg](question_entity)?
 - o que é [colostro](question_entity)?
 - oq é [colostro](question_entity)?
 - oq significa [colostro](question_entity)?
-- o que significa [DPP](question_entity:dpp)?
+- o que significa [DPP](question_entity)?
 - o que é [dpp](question_entity)?
 - o que quer dizer [dpp](question_entity)?
-- o que é [hiperêmese gravídica](question_entity:hiperemese gravidica)?
+- o que é [hiperêmese gravídica](question_entity)?
 - oq é [hiperemese gravidica](question_entity)?
 - o que significa [hiperemese gravidica](question_entity)?
-- o que é [istmo-cervical](question_entity:istmo cervical)?
+- o que é [istmo-cervical](question_entity)?
 - o que é [istmo cervical](question_entity)?
-- o que é um [istmo-cervical](question_entity:istmo cervical)?
-- o que é [nidação](question_entity:nidacao)?
-- o que significa [nidação](question_entity:nidacao)?
+- o que é um [istmo-cervical](question_entity)?
+- o que é [nidação](question_entity)?
+- o que significa [nidação](question_entity)?
 - o que é [ocitocina](question_entity)?
 - oq é [ocitocina](question_entity)?
-- o que é [placenta prévia](question_entity:placenta previa)?
+- o que é [placenta prévia](question_entity)?
 - oq significa [placenta previa](question_entity)?
 - oq é [placenta previa](question_entity)?
 - o que é [peridural](question_entity)?
 - o que é [raquidiana](question_entity)?
 - o que é a [anestesia raquidiana](question_entity)?
-- o que é [perímetro cefálico](question_entity:perimetro cefalico)?
+- o que é [perímetro cefálico](question_entity)?
 - oq é [perimetro cefalico](question_entity)?
 - o que é [temperatura basal](question_entity)?
 - o que significa [temperatura basal](question_entity)?
@@ -1556,20 +1570,20 @@
 - a [bolsa](question_entity) estourou, o que eu devo fazer?
 
 ## intent:when
-- quando devo começar o [pré-natal](question_entity:pre-natal)?
-- quando preciso fazer o [pré natal](question_entity:pre-natal)?
-- quando tenho que começar o [pre natal](question_entity:pre-natal)?
-- quando iniciar o [pré-natal](question_entity:pre-natal)?
+- quando devo começar o [pré-natal](question_entity)?
+- quando preciso fazer o [pré natal](question_entity)?
+- quando tenho que começar o [pre natal](question_entity)?
+- quando iniciar o [pré-natal](question_entity)?
 - quando é feito a [episiotomia](question_entity)?
 - quando é preciso fazer [episiotomia](question_entity)?
 - quando é necessário a [episiotomia](question_entity)?
 - quando é necessário fazer [episiotomia](question_entity)?
 - quando começas as contrações de [braxton hicks](question_entity)?
-- quando acontecem as contrações [braxton hicks](question_entity)?
+- quando acontecem as contrações [braxton hick](question_entity)?
 - quando o bebê começa a [mexer](question_entity)?
 - quando o bebê irá [mexer](question_entity)?
-- quando os [enjoos](question_entity:nauseas) vão passar?
-- quando os [enjoos](question_entity:nauseas) passam?
+- quando os [enjoos](question_entity) vão passar?
+- quando os [enjoos](question_entity) passam?
 
 ## intent:when_exam
 - quando deve ser feito o exame de [fezes](question_entity)?
@@ -1591,43 +1605,45 @@
 - qual é o melhor [parto](question_entity)?
 
 ## intent:which_can
-- quais [exercicios fisicos](question_entity:exercicios) eu posso fazer?
-- quais [atividades fisicas](question_entity:exercicios) eu posso fazer?
+- quais [exercicios fisicos](question_entity) eu posso fazer?
+- quais [exercícios físicos](question_entity) eu posso fazer?
+- quais [atividades fisicas](question_entity) eu posso fazer?
 - quais [exercicios](question_entity) uma mulher gravida pode fazer?
-- que tipo de [exercicio](question_entity:exercicios) eu posso fazer?
-- que tipo de [depilação](question_entity:depilacao) eu posso fazer?
-- quais tipo de [depilação](question_entity:depilacao) são permitidos?
-- que tipo de [depilação](question_entity:depilacao) uma gestante pode fazer?
+- que tipo de [exercicio](question_entity) eu posso fazer?
+- que tipo de [depilação](question_entity) eu posso fazer?
+- quais tipo de [depilação](question_entity) são permitidos?
+- que tipo de [depilação](question_entity) uma gestante pode fazer?
 - quais [vacinas](question_entity) eu posso tomar?
-- quais tipos de [atividades físicas](question_entity:exercicios) estão liberadas?
-- quais [treinos](question_entity:exercicios) são permitidos?
+- quais tipos de [atividades físicas](question_entity) estão liberadas?
+- quais [treinos](question_entity) são permitidos?
 - quais [exercícios](question_entity) eu posso fazer?
-- quais tipos de [atividades fisicas](question_entity:exercicios) são permitidas?
-- quais [exercicios físicos](question_entity:exercicios) são permitidos?
+- quais tipos de [atividades fisicas](question_entity) são permitidas?
+- quais [exercicios físicos](question_entity) são permitidos?
 
 ## intent:which_can_not
 - quais [exercicios](question_entity) eu não posso fazer?
-- quais [exercicios fisicos](question_entity:exercicios) eu não devo fazer?
-- quais [atividades fisicas](question_entity:exercicios) eu não posso fazer?
-- que tipo de [exercicio](question_entity:exercicios) eu não posso fazer?
-- que tipo de [atividades fisicas](question_entity:exercicios) eu não posso fazer?
-- que tipo de [exercicio fisico](question_entity:exercicios) eu não posso fazer?
+- quais [exercicios fisicos](question_entity) eu não devo fazer?
+- quais [atividades fisicas](question_entity) eu não posso fazer?
+- que tipo de [exercicio](question_entity) eu não posso fazer?
+- que tipo de [atividades fisicas](question_entity) eu não posso fazer?
+- que tipo de [exercicio fisico](question_entity) eu não posso fazer?
 - quais tipos de [exercicios](question_entity) eu não posso fazer?
 - quais [alimentos](question_entity) eu não posso comer?
-- que [alimento](question_entity:alimentos) eu não posso comer?
+- quais [comidas](question_entity) eu não posso comer?
+- que [alimento](question_entity) eu não posso comer?
 - quais [alimentos](question_entity) eu não devo comer?
 - quais [alimentos](question_entity) eu não posso consumir?
 - quais [exercicios](question_entity) uma muher gravida não pode fazer?
 - quais [alimentos](question_entity) uma muher grávida não pode comer?
 - quais [alimentos](question_entity) uma gestante não deve comer?
-- que tipo de [alimento](question_entity:alimentos) eu não posso comer?
+- que tipo de [alimento](question_entity) eu não posso comer?
 - quais [vacinas](question_entity) eu não posso tomar?
 - quais [vacinas](question_entity) uma gestante não pode tomar?
 - quais [vacinas](question_entity) eu não posso tomar?
 - quais [vacinas](question_entity) eu não posso tomar?
 
 ## intent:which_cases
-- em quais casos o [fórceps](question_entity:forceps) é utilizado?
+- em quais casos o [fórceps](question_entity) é utilizado?
 - em que casos o [forceps](question_entity) é necessário?
 
 ## intent:which_main
@@ -1639,15 +1655,15 @@
 - quais os principais [exames](question_entity) do pré-natal?
 
 ## intent:which_medicine
-- qual remédio eu posso tomar para [cólica](question_entity:colica)?
-- qual remédio eu posso tomar para dor de [cabeça](question_entity:cabeca)?
-- que remedio eu posso tomar pra dor de [cabeça](question_entity:cabeca)?
+- qual remédio eu posso tomar para [cólica](question_entity)?
+- qual remédio eu posso tomar para dor de [cabeça](question_entity)?
+- que remedio eu posso tomar pra dor de [cabeça](question_entity)?
 - qual medicamento eu posso tomar pra [colica](question_entity)?
-- o que eu posso tomar para dor de [cabeça](question_entity:cabeca)?
-- posso tomar algum remedio para dor de [cabeça](question_entity:cabeca)?
-- posso tomar algum remédio para [ansia](question_entity:nauseas)?
-- q remedio eu posso tomar para [enjoo](question_entity:nauseas)?
-- posso tomar um remédio para dor de [cabeça](question_entity:cabeca)?
+- o que eu posso tomar para dor de [cabeça](question_entity)?
+- posso tomar algum remedio para dor de [cabeça](question_entity)?
+- posso tomar algum remédio para [ansia](question_entity)?
+- q remedio eu posso tomar para [enjoo](question_entity)?
+- posso tomar um remédio para dor de [cabeça](question_entity)?
 - posso tomar um remedio para [colica](question_entity)?
 
 ## intent:which_need
@@ -1672,8 +1688,8 @@
 - por que eu tenho tanto [sono](question_entity)?
 - pq gravida sente muito [sono](question_entity)?
 - por que temos muito [sono](question_entity) na gravidez?
-- pq gestante tem muito [enjôo](question_entity:nauseas)?
-- por que mulher grávida tem [enjoo](question_entity:nauseas)?
+- pq gestante tem muito [enjôo](question_entity)?
+- por que mulher grávida tem [enjoo](question_entity)?
 
 ## intent:why_cesarean_answer
 - pq o bebe não estava de cabeça pra baixo
@@ -1705,6 +1721,41 @@
 ## synonym:aborto espontaneo
 - aborto espontâneo
 
+## synonym:adocante
+- adoçante
+
+## synonym:analgesico
+- analgésico
+
+## synonym:a termo
+- bebê a termo
+- bebe a termo
+- bebê termo
+- bebe termo
+- gestação a termo
+- gravidez a termo
+
+## synonym:defletido
+- bebê defletido
+- bebe defletido
+
+## synonym:pelvico
+- pélvico
+- bebê pélvico
+- bebe pelvico
+- bebe pélvico
+
+## synonym:cormico
+- bebê córmico
+- bebe cormico
+- bebê cormico
+- bebe córmico
+
+## synonym:acido folico
+- ácido fólico
+- acido fólico
+- ácido folico
+
 ## synonym:alcool
 - vinho
 - bebida alcoólica
@@ -1716,11 +1767,14 @@
 
 ## synonym:alimentos
 - alimento
+- comidas
 - comida
 
 ## synonym:amamentacao
 - amamentar
 - amamentação
+- amamentaçao
+- amamentacão
 
 ## synonym:azia
 - queimação
@@ -1728,25 +1782,95 @@
 ## synonym:bicicleta
 - bike
 
-## synonym:bolsa
-- bolsa rompeu
-- bolsa estourou
-- bolsa romper
-- bolsa estourar
+## synonym:pimenta
+- apimentada
+
+## synonym:beta-hcg
+- beta hcg
+
+## synonym:BCF
+- bcf
+
+## synonym:braxton hicks
+- braxton hick
 
 ## synonym:café
 - cafeina
 - cafeína
 - cafe
 
+## synonym:cabelo
+- cabelos
+
+## synonym:cabeca
+- dor de cabeça
+- dor de cabeca
+
 ## synonym:caimbras
 - câimbras
 - caimbra
 - câimbra
 
+## synonym:colica
+- cólica
+- colicas
+- cólicas
+
+## synonym:triagem de estreptococo beta-hermolitico
+- triagem de estreptococo beta-hermolítico
+- triagem de estreptococo beta hermolitico
+- triagem de estreptococo beta hermolítico
+
+## synonym:ultrassonografia intravaginal
+- ultrassom intravaginal
+
+## synonym:ultrassonografia do terceiro trimestre
+- ultrassom do terceiro trimestre
+- ultrassom do 3º trimestre
+- ultrassonografia do 3º trimestre
+
 ## synonym:costas
 - costa
 - lombar
+
+## synonym:dpp
+- DPP
+
+## synonym:drogas
+- droga
+
+## synonym:cigarro
+- fumar
+- cigarros
+
+## synonym:raio x
+- raio-x
+
+## synonym:hiperemese gravidica
+- hiperêmese gravídica
+- hiperemese gravídica
+- hiperêmese gravidica
+
+## synonym:depilacao
+- depilação
+- depilaçao
+- depilacão
+
+## synonym:remedio
+- remedios
+- remédio
+- remédios
+
+## synonym:remedio de alergia
+- remedio para alergia
+- remédio de alergia
+- remédio para alergia
+
+## synonym:exames
+- exame
+
+## synonym:eclampsia
+- eclâmpsia
 
 ## synonym:dor de cabeca
 - dor de cabeça
@@ -1757,25 +1881,40 @@
 - estria
 
 ## synonym:exercicios
+- exercicio
+- exercício
+- exercícios
+- exercicio fisico
+- exercício físico
+- exercício fisico
+- exercicio físico
+- exercicios fisicos
+- exercícios físicos
+- exercícios fisicos
+- exercicios físicos
 - atividade física
+- atividade fisica
 - atividades fisicas
 - atividades físicas
 - treinos
-- exercicio fisico
-- exercício
-- atividade fisica
-- exercício fisico
-- exercicio físico
-- exercicio
-- exercício físico
-- exercicios fisicos
-- exercícios físicos
-- exercicios fisicos
-- exercícios
 - academia
 - treino
 - treinar
 - exercicitar
+
+## synonym:forceps
+- fórceps
+- forcep
+- fórcep
+
+## synonym:fezes
+- coco
+- cocô
+
+## synonym:ultrassonografia da translucencia nucal
+- ultrassonografia da translucência nucal
+- ultrassom da translucencia nucal
+- ultrassom da translucência nucal
 
 ## synonym:flatulencia
 - flatulência
@@ -1786,13 +1925,20 @@
 
 ## synonym:fraqueza
 - fraquezas
+- fraca
 
 ## synonym:gengivas
 - gengiva
 
+## synonym:joelho
+- joelhos
+
 ## synonym:gravidez
 - gestação
 - gestacao
+
+## synonym:istmo-cervical
+- istmo cervical
 
 ## synonym:intestino preso
 - prisão de ventre
@@ -1818,6 +1964,11 @@
 ## synonym:moto
 - motocicleta
 
+## synonym:nidacao
+- nidação
+- nidaçao
+- nidacão
+
 ## synonym:nauseas
 - nausea
 - náusea
@@ -1831,26 +1982,26 @@
 - ansias
 - ânsias
 
+## synonym:placenta previa
+- placenta prévia
+
 ## synonym:pre-eclampsia
 - pré-eclâmpsia
 - pré eclâmpsia
 - pre eclampsia
+- pré eclampsia
+- pré-eclampsia
+- pre-eclâmpsia
+- pre eclâmpsia
 
 ## synonym:pre-natal
 - pré natal
+- prenatal
 - pré-natal
 - pre natal
 
 ## synonym:puerperio
 - puerpério
-
-## synonym:quarta-feira
-- quarta
-- quarta feira
-
-## synonym:quinta-feira
-- quinta
-- quinta feira
 
 ## synonym:sabado
 - sábado
@@ -1860,14 +2011,11 @@
 - salivação
 - saliva
 
-## synonym:salto alto
+## synonym:salto
 - sapato de salto alto
 - sapato alto
 - sapato de salto
-
-## synonym:segunda-feira
-- segunda
-- segunda feira
+- salto alto
 
 ## synonym:seios
 - mamas
@@ -1878,29 +2026,41 @@
 
 ## synonym:sexo
 - relação sexual
+- relacao sexual
+- relacoes sexuais
+- relaçoes sexuais
+- relacões sexuais
 - relações sexuais
 - transar
 
-## synonym:sexta-feira
-- sexta
-- sexta feira
+## synonym:peso idela
+- melhor peso
 
-## synonym:terça-feira
-- terça
-- terca
-- terça feira
-- terca feira
-- terca-feira
+## synonym:perimetro cefalico
+- perímetro cefálico
+- perimetro cefálico
+- perímetro cefalico
 
 ## synonym:tonturas
 - tontura
 
+## synonym:tornozelo
+- tornozelos
+
+## synonym:translucencia nucal
+- translucência nucal
+
 ## synonym:urina
 - xixi
+
+## synonym:unhas
+- unha
 
 ## synonym:vacinas
 - vacinação
 - vacinacao
+- vacinaçao
+- vacinacão
 - vacina
 
 ## synonym:vomitos

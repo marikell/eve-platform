@@ -36,6 +36,47 @@
 * which_medicine
     - utter_which_medicine
 
+## bot inicia a conversa e o usuário nao quer responder as perguntas
+* hello
+  - action_greet_user
+  - slot{"greeted_user": true}
+* deny
+  - utter_info_later
+  - utter_ask_me_anything
+* which_can_not{"question_entity": "exercicios"}
+    - action_get_answer
+* can_ask_me OR affirm+can_ask_me
+    - form_initial
+    - form{"name": "form_initial"}
+    - form{"name": null}
+
+## bot inicia a conversa e o usuário nao quer responder as perguntas
+* hello
+  - action_greet_user
+  - slot{"greeted_user": true}
+* deny
+  - utter_info_later
+  - utter_ask_me_anything
+* which_medicine
+    - utter_which_medicine
+* thank_you+can_ask_me
+    - utter_welcome
+    - form_initial
+    - form{"name": "form_initial"}
+    - form{"name": null}
+
+## bot inicia a conversa e o usuário nao quer responder as perguntas
+* hello
+  - action_greet_user
+  - slot{"greeted_user": true}
+* deny
+  - utter_info_later
+  - utter_ask_me_anything
+* can_ask_me OR affirm+can_ask_me
+    - form_initial
+    - form{"name": "form_initial"}
+    - form{"name": null}
+
 ## bot inicia a conversa e o usuário quer responder as perguntas depois
 * hello
   - action_greet_user
@@ -47,6 +88,37 @@
     - action_get_answer
 * which_medicine
     - utter_which_medicine
+
+## bot inicia a conversa e o usuário quer responder as perguntas depois
+* hello
+  - action_greet_user
+  - slot{"greeted_user": true}
+* later
+  - utter_info_later
+  - utter_ask_me_anything
+* which_medicine
+    - utter_which_medicine
+* can_ask_me OR affirm+can_ask_me
+    - form_initial
+    - form{"name": "form_initial"}
+    - form{"name": null}
+
+## bot inicia a conversa e o usuário quer responder as perguntas depois
+* hello
+  - action_greet_user
+  - slot{"greeted_user": true}
+* later
+  - utter_info_later
+  - utter_ask_me_anything
+* which_can{"question_entity": "exercicios"}
+    - action_get_answer
+* which_medicine
+    - utter_which_medicine
+* thank_you+can_ask_me
+    - utter_welcome
+    - form_initial
+    - form{"name": "form_initial"}
+    - form{"name": null}
 
 ## o usuário quer responder as perguntas depois
 * later
@@ -77,6 +149,18 @@
 * later
   - utter_info_later
   - utter_ask_me_anything
+
+## o usuário inicia a conversa com apenas 'Oi' e quer responder as perguntas depois
+* hello
+  - action_greet_user
+  - slot{"greeted_user": true}
+* later
+  - utter_info_later
+  - utter_ask_me_anything
+* can_ask_me OR affirm+can_ask_me
+  - form_initial
+  - form{"name": "form_initial"}
+  - form{"name": null}
 
 ## o usuário inicia a conversa com 'Oi tudo bem?' (gestante)
 * greeting OR hello+greeting
@@ -695,10 +779,89 @@
 * what_is{"question_entity":"loquio"}
   - action_get_answer
   - form_pregnancy
+  - form{"name": "form_pregnancy"}
   - form{"name": null}
 
 ## unhappy path: form_pregnancy 2
     - utter_ask_pregnancy_questions
+* deny
+    - utter_info_later
+    - utter_ask_me_anything
+
+## unhappy path: form_pregnancy 2
+    - utter_ask_pregnancy_questions
+* deny
+    - utter_info_later
+    - utter_ask_me_anything
+* ask_normal_birth_pain
+    - utter_normal_birth_pain
+* ask_exercise_help_normal_birth
+    - utter_exercise_help_normal_birth
+* can_ask_me OR affirm+can_ask_me
+    - form_pregnancy
+    - form{"name": "form_pregnancy"}
+    - form{"name": null}
+
+## unhappy path: form_pregnancy 2
+    - utter_ask_pregnancy_questions
+* deny
+    - utter_info_later
+    - utter_ask_me_anything
+* ask_normal_birth_pain
+    - utter_normal_birth_pain
+* ask_exercise_help_normal_birth
+    - utter_exercise_help_normal_birth
+* thank_you+can_ask_me
+    - utter_welcome
+    - form_pregnancy
+    - form{"name": "form_pregnancy"}
+    - form{"name": null}
+
+## unhappy path: form_pregnancy 2
+    - utter_ask_pregnancy_questions
+* deny
+    - utter_info_later
+    - utter_ask_me_anything
+* when_exam{"question_entity": "glicemia"}
+    - action_get_answer
+* what_to_do{"question_entity": "bolsa"}
+    - action_get_answer
+* complain{"question_entity": "ansia"}
+    - action_get_answer
+* can_ask_me OR affirm+can_ask_me
+    - form_pregnancy
+    - form{"name": "form_pregnancy"}
+    - form{"name": null}
+
+## unhappy path: form_pregnancy 2
+    - utter_ask_pregnancy_questions
+* deny
+    - utter_info_later
+    - utter_ask_me_anything
+* when_exam{"question_entity": "glicemia"}
+    - action_get_answer
+* what_to_do{"question_entity": "bolsa"}
+    - action_get_answer
+* complain{"question_entity": "ansia"}
+    - action_get_answer
+* thank_you+can_ask_me
+    - utter_welcome
+    - form_pregnancy
+    - form{"name": "form_pregnancy"}
+    - form{"name": null}
+
+## unhappy path: form_pregnancy
+    - utter_ask_pregnancy_questions
+* deny
+    - utter_info_later
+    - utter_ask_me_anything
+* can_ask_me OR affirm+can_ask_me
+    - form_pregnancy
+    - form{"name": "form_pregnancy"}
+    - form{"name": null}
+
+## unhappy path: form_personal
+    - utter_ask_personal_questions
 * deny
     - utter_info_later
     - utter_ask_me_anything
@@ -708,12 +871,150 @@
 * deny
     - utter_info_later
     - utter_ask_me_anything
+* can_ask_me OR affirm+can_ask_me
+    - form_personal
+    - form{"name": "form_personal"}
+    - form{"name": null}
 
-## unhappy path: form_personal
+## unhappy path: form_health
     - utter_ask_health_questions
 * deny
     - utter_info_later
     - utter_ask_me_anything
+
+## unhappy path: form_health
+    - utter_ask_health_questions
+* deny
+    - utter_info_later
+    - utter_ask_me_anything
+* can_ask_me OR affirm+can_ask_me
+    - form_health
+    - form{"name": "form_health"}
+    - form{"name": null}
+
+## unhappy path: form_personal
+    - utter_ask_personal_questions
+* deny
+    - utter_info_later
+    - utter_ask_me_anything
+* ask_normal_birth_pain
+    - utter_normal_birth_pain
+* ask_exercise_help_normal_birth
+    - utter_exercise_help_normal_birth
+* can_ask_me OR affirm+can_ask_me
+    - form_personal
+    - form{"name": "form_personal"}
+    - form{"name": null}
+
+## unhappy path: form_personal
+    - utter_ask_personal_questions
+* deny
+    - utter_info_later
+    - utter_ask_me_anything
+* ask_normal_birth_pain
+    - utter_normal_birth_pain
+* ask_exercise_help_normal_birth
+    - utter_exercise_help_normal_birth
+* thank_you+can_ask_me
+    - utter_welcome
+    - form_personal
+    - form{"name": "form_personal"}
+    - form{"name": null}
+
+## unhappy path: form_personal
+    - utter_ask_personal_questions
+* deny
+    - utter_info_later
+    - utter_ask_me_anything
+* when_exam{"question_entity": "glicemia"}
+    - action_get_answer
+* what_to_do{"question_entity": "bolsa"}
+    - action_get_answer
+* complain{"question_entity": "ansia"}
+    - action_get_answer
+* can_ask_me OR affirm+can_ask_me
+    - form_personal
+    - form{"name": "form_personal"}
+    - form{"name": null}
+
+## unhappy path: form_personal
+    - utter_ask_personal_questions
+* deny
+    - utter_info_later
+    - utter_ask_me_anything
+* when_exam{"question_entity": "glicemia"}
+    - action_get_answer
+* what_to_do{"question_entity": "bolsa"}
+    - action_get_answer
+* complain{"question_entity": "ansia"}
+    - action_get_answer
+* thank_you+can_ask_me
+    - utter_welcome
+    - form_personal
+    - form{"name": "form_personal"}
+    - form{"name": null}
+
+## unhappy path: form_health
+    - utter_ask_health_questions
+* deny
+    - utter_info_later
+    - utter_ask_me_anything
+* ask_normal_birth_pain
+    - utter_normal_birth_pain
+* ask_exercise_help_normal_birth
+    - utter_exercise_help_normal_birth
+* can_ask_me OR affirm+can_ask_me
+    - form_health
+    - form{"name": "form_health"}
+    - form{"name": null}
+
+## unhappy path: form_health
+    - utter_ask_health_questions
+* deny
+    - utter_info_later
+    - utter_ask_me_anything
+* ask_normal_birth_pain
+    - utter_normal_birth_pain
+* ask_exercise_help_normal_birth
+    - utter_exercise_help_normal_birth
+* thank_you+can_ask_me
+    - utter_welcome
+    - form_health
+    - form{"name": "form_health"}
+    - form{"name": null}
+
+## unhappy path: form_health
+    - utter_ask_health_questions
+* deny
+    - utter_info_later
+    - utter_ask_me_anything
+* when_exam{"question_entity": "glicemia"}
+    - action_get_answer
+* what_to_do{"question_entity": "bolsa"}
+    - action_get_answer
+* complain{"question_entity": "ansia"}
+    - action_get_answer
+* can_ask_me OR affirm+can_ask_me
+    - form_health
+    - form{"name": "form_health"}
+    - form{"name": null}
+
+## unhappy path: form_health
+    - utter_ask_health_questions
+* deny
+    - utter_info_later
+    - utter_ask_me_anything
+* when_exam{"question_entity": "glicemia"}
+    - action_get_answer
+* what_to_do{"question_entity": "bolsa"}
+    - action_get_answer
+* complain{"question_entity": "ansia"}
+    - action_get_answer
+* thank_you+can_ask_me
+    - utter_welcome
+    - form_health
+    - form{"name": "form_health"}
+    - form{"name": null}
 
 ## ask_normal_birth_best
 * ask_normal_birth_best
