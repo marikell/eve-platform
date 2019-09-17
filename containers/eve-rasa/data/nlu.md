@@ -1095,8 +1095,6 @@
 - [ibuprofeno](med_name)
 - [dorflex](med_name)
 - [lufital](med_name)
-- [amanhã as 9 horas](time:2016-12-14T09:00:00.000-08:00)
-- [terça as 9 horas](time:2016-12-04T09:00:00.000-08:00)
 - o nome é [buscopan](med_name)
 - o nome do remédio é [dramin](med_name)
 - [dorflex](med_name)
