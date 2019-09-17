@@ -2,7 +2,9 @@ FROM python:3.7
 
 WORKDIR /app
 
-RUN pip install rasa
+COPY ./requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
 
 ADD ./models /app/models
 ADD ./actions /app/actions

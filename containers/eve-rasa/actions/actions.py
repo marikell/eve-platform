@@ -346,22 +346,6 @@ class ActionWhatsPossible(Action):
         dispatcher.utter_template("utter_explain_whatspossible", tracker)
         return [UserUtteranceReverted()]
 
-# class ActionBye(Action):
-#     def name(self):
-#         return "action_bye"
-
-#     def run(self, dispatcher, tracker, domain):
-#         dispatcher.utter_template("utter_bye", tracker)
-#         return [UserUtteranceReverted()]
-
-# class ActionThankYou(Action):
-#     def name(self):
-#         return "action_thank_you"
-
-#     def run(self, dispatcher, tracker, domain):
-#         dispatcher.utter_template("utter_welcome", tracker)
-#         return [UserUtteranceReverted()]
-
 class ActionCantHelp(Action):
     def name(self):
         return "action_cant_help"
@@ -856,4 +840,12 @@ class PregnancyForm(FormAction):
                 
         dispatcher.utter_template('utter_thank_you', tracker)
         dispatcher.utter_template('utter_ask_me_anything', tracker)
-        return []
+        return [ActionReverted()]
+
+class ActionAskForm(Action):
+    def name(self):
+        return "ask_form"
+
+    def run(self, dispatcher, tracker, domain):
+        dispatcher.utter_template("utter_explain_whatspossible", tracker)
+        return [UserUtteranceReverted()]
