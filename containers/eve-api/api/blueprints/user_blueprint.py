@@ -124,6 +124,8 @@ def login():
                 user_type = UserTypeEnum.pregnant
             elif "is_trying" in user_info_object and user_info_object['is_trying']:
                 user_type = UserTypeEnum.wanting_conceive
+            elif "is_postpartum" in user_info_object and user_info_object['is_postpartum']:
+                user_type = UserTypeEnum.after_birth
         return jsonify({'token': token.decode('UTF-8'), 'name': user_json['name'], 'email' : user_json['email'], 'user_type' : user_type, 
         'accepts_notifications': user_json['accepts_notifications'], 'date_birth' : user_json['date_birth'] })        
     
