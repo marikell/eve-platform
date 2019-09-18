@@ -2,11 +2,11 @@ import pandas as pd
 import pymongo
 from bson.objectid import ObjectId    
 from enums import TipTypeEnum
+from configuration import MONGO_DEV,MONGO_PROD
 
 def main():
     try:
-        client = pymongo.MongoClient('mongodb://localhost:27017')
-        # client = pymongo.MongoClient('mongodb://admin:eve2019@evecluster-shard-00-00-90nlz.mongodb.net:27017,evecluster-shard-00-01-90nlz.mongodb.net:27017,evecluster-shard-00-02-90nlz.mongodb.net:27017/evedb?ssl=true&replicaSet=EveCluster-shard-0&authSource=admin&retryWrites=true')
+        client = pymongo.MongoClient(MONGO_PROD['HOST'])
         db = client['evedb']
         tip_col = db['form']
 

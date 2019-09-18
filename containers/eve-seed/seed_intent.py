@@ -4,9 +4,9 @@ from answer import Answer
 from intent_answer import IntentAnswer
 from bson.objectid import ObjectId    
 from mongoengine.queryset.visitor import Q
+from configuration import MONGO_DEV, MONGO_PROD
 
-# connect('evedb', host='mongodb://admin:eve2019@evecluster-shard-00-00-90nlz.mongodb.net:27017,evecluster-shard-00-01-90nlz.mongodb.net:27017,evecluster-shard-00-02-90nlz.mongodb.net:27017/evedb?ssl=true&replicaSet=EveCluster-shard-0&authSource=admin&retryWrites=true')
-connect('evedb', host='mongodb://localhost:27017')
+connect('evedb', host=MONGO_PROD['HOST'])
 
 df = pd.read_csv('intent.csv')
 
