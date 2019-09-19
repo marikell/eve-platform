@@ -6,29 +6,23 @@ from api.services.service_handler import ServiceHandler
 from api.config.configuration import ROUTE_CONFIG
 from api.utils.validate_fields import *
 
-route_name = ROUTE_CONFIG['ENTITY_INTENT_ANSWER_TYPE_NAME']
-app_entity_intent_answer = Blueprint(route_name,__name__,url_prefix='/api')
+route_name = ROUTE_CONFIG['INTENT_ANSWER_TYPE_NAME']
+app_intent_answer = Blueprint(route_name,__name__,url_prefix='/api')
 
-def validate_entity_intent_request(json):
+def validate_intent_request(json):
     
-    keys = ['entities', 'intent']
+    keys = ['intent']
 
     for k in keys:
         check_if_key_exists(k, json)
 
     check_empty_string(json['intent'], 'intent')
 
-    if len(json['entities']) == 0:
-        raise Exception('Not allowed empty array of entities')
-
-    check_empty_string_in_array(json['entities'], 'entities')
-
-
-@app_entity_intent_answer.route('/{}'.format(route_name), methods=['GET'])
+@app_intent_answer.route('/{}'.format(route_name), methods=['GET'])
 def index():
     return Response('Hello {}'.format(route_name))
 
-@app_entity_intent_answer.route(route_name, methods=['POST'])
+@app_intent_answer.route(route_name, methods=['POST'])
 def insert():
     try:
         json = request.get_json()
@@ -38,13 +32,11 @@ def insert():
         if not answer:
             raise Exception('Answer not found!')
 
-        validate_entity_intent_request(json)
+        validate_intent_request(json)
         
         intent = json['intent']
-        entities = json['entities']
         
         obj = {
-            'entities': entities,
             'intent': intent,
             'answer': answer
         }
@@ -56,17 +48,16 @@ def insert():
     except Exception as e:
         return response(str(e), status.HTTP_400_BAD_REQUEST)
 
-@app_entity_intent_answer.route('action-answer', methods=['POST'])
+@app_intent_answer.route('action-answer', methods=['POST'])
 def findby_intent_entities():
     try:
         json = request.get_json()
 
-        validate_entity_intent_request(json)
+        validate_intent_request(json)
         
-        entities = json['entities']
         intent = json['intent']
         
-        action_answer = ServiceHandler.get_service(route_name).getby_intent_entities(entities, intent)
+        action_answer = ServiceHandler.get_service(route_name).get_by_intent(intent)
         
         if action_answer:
             text = action_answer.answer_id.text
@@ -76,17 +67,17 @@ def findby_intent_entities():
     except:
        return response('')
 
-@app_entity_intent_answer.route('/{}/<id>'.format(route_name), methods=['GET'])
+@app_intent_answer.route('/{}/<id>'.format(route_name), methods=['GET'])
 def get(id):
     try:
-        entity_intent_answer_obj = ServiceHandler.get_service(route_name).get(id)
+        intent_answer_obj = ServiceHandler.get_service(route_name).get(id)
 
-        return response(entity_intent_answer_obj.to_json(), status.HTTP_200_OK)
+        return response(intent_answer_obj.to_json(), status.HTTP_200_OK)
 
     except Exception as e:
         return response(str(e), status.HTTP_400_BAD_REQUEST)
 
-@app_entity_intent_answer.route('/{}/<id>'.format(route_name), methods=['DELETE'])
+@app_intent_answer.route('/{}/<id>'.format(route_name), methods=['DELETE'])
 def delete(id):
     try:        
         ServiceHandler.get_service(route_name).delete(id)
@@ -96,7 +87,7 @@ def delete(id):
     except Exception as e:
         return response(str(e), status.HTTP_400_BAD_REQUEST)
 
-@app_entity_intent_answer.route('/{}/<id>'.format(route_name), methods=['PUT'])
+@app_intent_answer.route('/{}/<id>'.format(route_name), methods=['PUT'])
 def update(id):
     try:
         json = request.get_json()
@@ -106,13 +97,11 @@ def update(id):
         if not answer:
             raise Exception('Answer not found!')
 
-        validate_entity_intent_request(json)
+        validate_intent_request(json)
 
         intent = json['intent']
-        entities = json['entities']        
 
         obj = {
-            'entities': entities,
             'intent': intent,
             'answer': answer,
             'id': id
