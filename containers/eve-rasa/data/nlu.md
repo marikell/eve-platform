@@ -82,6 +82,963 @@
 - obg, xau
 - valeu, tchau
 
+## intent:ask_main_exams_prenatal
+- quais os principais exames do pré-natal?
+- quais os principais exames a serem feitos?
+- quais os principais exames do pré-natal?
+- quais exames eu devo fazer?
+- quais exames eu preciso fazer?
+- quais exames eu tenho que fazer?
+
+## intent:ask_allowed_exercises
+- quais exercícios físicos eu posso fazer?
+- quais atividades físicas eu posso fazer?
+- quais exercícios uma mulher gravida pode fazer?
+- que tipo de exercício eu posso fazer?
+- quais vacinas eu posso tomar?
+- quais tipos de atividades físicas estão liberadas?
+- quais treinos são permitidos?
+- quais exercícios eu posso fazer?
+- quais tipos de atividades físicas são permitidas?
+- quais exercícios físicos são permitidos?
+
+## intent:ask_allowed_depilation
+- que tipo de depilação eu posso fazer?
+- quais tipo de depilação são permitidos?
+- que tipo de depilação uma gestante pode fazer?
+- posso me depilar com cera quente?
+- posso me depilar com gilette?
+- posso fazer depilação a laser?
+
+## intent:ask_needed_feed
+- quais alimentos eu preciso comer?
+- quais alimentos eu tenho que comer?
+- quais alimentos uma gestante deve comer?
+
+## intent:ask_needed_vaccine
+- quais vacinas eu preciso tomar?
+- quais vacinas uma gestante precisa tomar?
+- quais vacinas uma mulher gravida precisa tomar?
+- quais vacinas uma gestante deve tomar?
+- que vacinas eu tenho que tomar?
+- quais vacinas eu tenho q tomar?
+
+## intent:ask_signs_labor
+- quais os sinais do trabalho de parto?
+- quais os sinais de que entrei em trabalho de parto?
+- quais são os sinais do trabalho de parto?
+- quais são os sinais de que estou em trabalho de parto?
+
+## intent:ask_ideal_weight
+- qual o ganho de peso ideal na gravidez?
+- qual o peso ideal durante a gravidez?
+- qual o peso ideal de uma gestante?
+
+## intent:ask_best_sleeping_position
+- qual a melhor posição para dormir?
+- qual a melhor posição para uma gestante dormir?
+- qual a melhor posição para dormir grávida?
+
+## intent:ask_best_childbirth
+- qual o melhor tipo de parto?
+- qual o melhor parto?
+- qual é a melhor opção de parto?
+- qual é o melhor tipo de parto?
+- qual é o melhor tipo de parto?
+- qual é o melhor parto?
+- o parto normal é melhor que a cesarea?
+- O parto normal é a melhor opção para o bebê?
+- o parto normal é sempre o melhor para o bebê?
+- qual a melhor opção de parto para o bebe?
+
+## intent:ask_cases_forceps
+- em quais casos o fórceps é utilizado?
+- em que casos o forceps é necessário?
+- em quais casos o forceps é usado?
+- quando o forceps é utilizado?
+
+## intent:ask_medicine
+- qual remédio eu posso tomar para cólica?
+- qual remédio eu posso tomar para dor de cabeça?
+- que remedio eu posso tomar pra dor de cabeça?
+- qual medicamento eu posso tomar pra colica?
+- o que eu posso tomar para dor de cabeça?
+- posso tomar algum remedio para dor de cabeça?
+- posso tomar algum remédio para ansia?
+- q remedio eu posso tomar para enjoo?
+- posso tomar um remédio para dor de cabeça?
+- posso tomar um remedio para colica?
+- posso tomar analgesico?
+- gravida pode tomar analgésico?
+- tem algum problema tomar analgesico?
+- posso tomar remedio de alergia?
+- posso tomar remedio para alergia?
+- tem problema tomar remedio para alergia?
+- gravida pode tomar remedio de alergia?
+- posso tomar remedio?
+- qual remedio eu tomo para colica?
+
+## intent:ask_not_allowed_exercises
+- quais exercicios eu não posso fazer?
+- quais exercicios fisicos eu não devo fazer?
+- quais atividades fisicas eu não posso fazer?
+- que tipo de exercicio eu não posso fazer?
+- que tipo de atividades fisicas eu não posso fazer?
+- que tipo de exercicio fisico eu não posso fazer?
+- quais tipos de exercicios eu não posso fazer?
+- quais exercicios uma muher gravida não pode fazer?
+- que exercicios eu nao posso fazer
+
+## intent:ask_not_allowed_food
+- quais alimentos eu não posso comer?
+- quais comidas eu não posso comer?
+- que alimento eu não posso comer?
+- quais alimentos eu não devo comer?
+- quais alimentos eu não posso consumir?
+- quais alimentos uma muher grávida não pode comer?
+- quais alimentos uma gestante não deve comer?
+- que tipo de alimento eu não posso comer?
+- quais alimentos eu devo evitar?
+- que tipo de alimento eu devo evitar?
+
+## intent:ask_not_allowed_vaccine
+- quais vacinas eu não posso tomar?
+- quais vacinas uma gestante não pode tomar?
+- quais vacinas eu não posso tomar?
+- quais vacinas eu não posso tomar?
+
+## intent:ask_what_is_prenatal
+- oq é pre-natal?
+- oq é pré natal?
+- o que é o pré-natal?
+
+## intent:ask_what_is_postpartum
+- oq é puerpério?
+- O que é puerpério?
+- o que significa puerpério?
+
+## intent:ask_what_is_loco
+- oq é lóquio?
+- O que é lóquio?
+
+## intent:ask_what_is_miscarriage
+- O que é aborto espontâneo?
+- oq é aborto espontâneo?
+
+## intent:ask_what_is_amniotic_fluid
+- oq é líquido amniótico?
+- O que é o líquido amniótico?
+
+## intent:ask_what_is_pre_eclampsia
+- O que é pré-eclâmpsia?
+- O que é pré eclâmpsia?
+- oq é pré-eclâmpsia?
+
+## intent:ask_what_is_folic_acid
+- o que é ácido fólico?
+- oq é acido folico?
+- oq é acido fólico?
+- oq é ácido folico?
+
+## intent:ask_what_is_episiotomy
+- O que é episiotomia?
+- oq é episiotomia?
+
+## intent:ask_what_is_trichotomy
+- o que é tricotomia?
+- oq é tricotomia?
+
+## intent:ask_what_is_forceps
+- o que é fórceps?
+- oq é forceps?
+
+## intent:ask_what_is_braxton_hicks
+- o que são as contrações de braxton hicks?
+- o que são braxton hicks?
+- oq é braxton hicks?
+
+## intent:ask_what_is_eclampsia
+- oq é eclâmpsia?
+- o que significa eclampsia?
+- o que é eclâmpsia
+
+## intent:ask_what_is_uterine_height
+- oq é altura uterina?
+- o que é altura uterina?
+
+## intent:ask_what_is_amniocentesis
+- oq é amniocentese?
+- o que significa amniocentese?
+
+## intent:ask_what_is_bcf
+- o que significa BCF?
+- o que é bcf?
+
+## intent:ask_what_is_term_baby
+- o que significa uma gestação a termo?
+- o que é uma gravidez a termo?
+- o que é bebe nascido a termo?
+- oq é bebê a termo?
+- oq é bebe a termo?
+- o que significa bebe a termo
+
+## intent:ask_what_is_deflected_baby
+- o que é bebê defletido?
+- o que significa bebe defletido?
+- oq é bebe defletido?
+
+## intent:ask_what_is_pelvic
+- o que significa bebê pélvico?
+- oq é bebê pélvico?
+- o que quer dizer bebê pélvico?
+- oq é bebê pélvico?
+- oq é bebê pelvico?
+- oq é bebe pelvico?
+
+## intent:ask_what_is_choric
+- oq significa bebê córmico?
+- oq é bebe cormico?
+- o que significa bebê córmico?
+- oq quer dizer bebe cormico?
+- o que é bebê córmico?
+- o que significa bebe cormico
+
+## intent:ask_what_is_beta_hcg
+- o que é beta-hcg?
+- oq é beta hcg?
+- o que significa beta-hcg?
+
+## intent:ask_what_is_colostrum
+- o que é colostro?
+- oq é colostro?
+- oq significa colostro?
+
+## intent:ask_what_is_pdd
+- o que significa DPP?
+- o que é dpp?
+- o que quer dizer dpp?
+
+## intent:ask_what_is_hyperemesis_gravidarum
+- o que é hiperêmese gravídica?
+- oq é hiperemese gravidica?
+- o que significa hiperemese gravidica?
+
+## intent:ask_what_is_isthmus_cervical
+- o que é istmo-cervical?
+- o que é istmo cervical?
+- o que é um istmo-cervical?
+- o que é um istmo cervical? 
+
+## intent:ask_what_is_nesting
+- o que é nidação?
+- o que significa nidação?
+
+## intent:ask_what_is_oxytocin
+- o que é ocitocina?
+- oq é ocitocina?
+- o que significa ocitocina
+
+## intent:ask_what_is_previous_placenta
+- o que é placenta prévia?
+- oq significa placenta previa?
+- oq é placenta previa?
+
+## intent:ask_what_is_epidural_anesthesia
+- o que é peridural?
+- o que é anestesia peridural?
+
+## intent:ask_what_is_cephalic_perimeter
+- o que é perímetro cefálico?
+- oq é perimetro cefalico?
+
+## intent:ask_what_is_spinal_anesthesia
+- o que é raquidiana?
+- o que é a anestesia raquidiana?
+
+## intent:ask_what_is_basal_temperature
+- o que é temperatura basal?
+- o que significa temperatura basal?
+- oq quer dizer temperatura basal?
+
+## intent:ask_what_is_nuchal_translucency
+- o que é translucencia nucal?
+- oq é translucência nucal?
+- o que é translucencia nucal?
+
+## intent:ask_can_paint_nails
+- posso fazer as unhas?
+- posso pintar as unhas?
+- gravida pode pintar as unhas?
+
+## intent:ask_can_paint_hair
+- posso pintar os cabelos?
+- eu posso pintar meu cabelo?
+- gravida pode pintar o cabelo?
+- tem problema pintar o cabelo?
+- posso pintar o cabelo?
+
+## intent:ask_can_discolor_hair
+- posso descolorir os pelos?
+- posso descolorir os pelos do corpo?
+- gravida pode descolorir os pelos do corpo?
+
+## intent:ask_can_ride_motorcycle
+- eu posso andar de motocicleta?
+- posso andar de moto?
+- grávida pode andar de moto?
+- posso andar de motocicleta?
+- tem algum problema em andar de motocicleta
+
+## intent:ask_can_horseback_riding
+- eu posso andar de cavalo?
+- posso andar a cavalo?
+- gravida pode andar a cavalo?
+- tem algum problema em andar de cavalo
+
+## intent:ask_can_ride_bike
+- posso andar de bike?
+- tem algum problema em andar de bike?
+- eu posso andar de bike?
+- posso andar de bicicleta?
+- gravida pode andar de bicicleta?
+
+## intent:ask_can_take_laxative
+- eu posso tomar laxante
+- posso tomar laxante?
+- tem algum problema em tomar laxante?
+- eu posso tomar laxante
+- grávida pode tomar laxante?
+- gestante pode tomar laxante?
+
+## intent:ask_can_take_bath
+- posso tomar banho na banheira
+- grávida pode tomar banho de banheira?
+- eu posso tomar banho na banheira
+- tem algum problema em tomar banho de banheira
+
+## intent:ask_can_steam_room
+- posso ir a sauna?
+- gravida pode fazer sauna?
+- posso fazer sauna?
+
+## intent:ask_can_chili
+- tem algum problema em comer pimenta
+- posso comer pimenta?
+- eu posso comer pimenta?
+- grávida pode comer pimenta?
+- gestante pode comer pimenta?
+- posso comer comida apimentada?
+
+## intent:ask_can_coffee
+- eu posso tomar cafeína
+- tem algum problema em tomar café?
+- eu posso tomar cafe?
+- posso tomar cafeina?
+- tem algum problema em tomar cafeína
+- posso tomar cafe
+- posso beber café?
+- grávida pode tomar café?
+- gestante pode tomar café?
+- mulher gravida pode tomar café?
+
+## intent:ask_can_sunbathe
+- posso tomar sol
+- tem algum problema em tomar sol
+- eu posso tomar sol?
+- grávida pode tomar sol?
+- gestante pode tomar sol?
+- posso tomar banho de sol
+- gravida pode tomar banho de sol?
+
+## intent:ask_can_moisturizer
+- posso usar hidratante?
+- posso usar hidratante de corpo?
+- gravida pode usar hidratante?
+- posso passar hidratante
+- gravida pode passar hidratante?
+
+## intent:ask_can_travel
+- posso viajar?
+- grávida pode viajar de avião?
+- gravida pode viajar?
+- mulher gestante pode viajar de carro?
+
+## intent:ask_can_ladder
+- posso usar as escadas?
+- mulher gestante pode usar escada?
+- posso subir escada?
+- posso subir as escadas?
+
+## intent:ask_can_high_heels
+- tem algum problema em andar de sapato de salto alto
+- posso andar de salto?
+- gravida pode usar salto alto?
+- posso andar de sapato alto
+- posso andar de sapato de salto?
+- tem algum problema em andar de sapato de salto
+- eu posso andar de sapato de salto alto?
+- posso usar salto alto?
+
+## intent:ask_can_japanese_food
+- posso comer comida japonesa?
+- posso comer sushi?
+- posso comer temaki?
+- gravida pode comer comida japonesa?
+
+## intent:ask_can_dentist
+- posso ir ao dentista?
+- tem problema ir ao dentista?
+- gravida pode ir no dentista?
+
+## intent:ask_can_exercise
+- posso fazer exercicios?
+- posso fazer academia
+- posso treinar?
+- posso malhar?
+- posso fazer algum treino?
+- posso fazer exercicios fisicos?
+- posso fazer atividades fisicas?
+- gravida pode fazer exercicios?
+- gravida pode praticar atividade fisica?
+
+## intent:ask_can_alcohol
+- posso tomar alcool?
+- posso tomar vinho?
+- posso tomar cerveja?
+- posso beber alcool?
+- posso beber vinho?
+- posso beber caipirinha?
+- posso tomar bebida alcoolica?
+- gravida pode tomar alcool?
+- gravida pode tomar bebida alcoólica?
+
+## intent:ask_can_drugs
+- posso usar drogas?
+- posso consumir drogas?
+- gravida pode usar drogas?
+
+## intent:ask_can_smoke
+- posso fumar cigarro?
+- posso fumar?
+- gravida pode fumar cigarro?
+- Grávidas podem fumar?
+- mulher grávida pode fumar?
+- grávida pode fumar?
+
+## intent:ask_can_x_ray
+- posso fazer raio x?
+- gravida pode fazer raio x?
+- tem algum problema fazer exame raio x?
+
+## intent:ask_can_sex
+- posso transar?
+- posso ter relações sexuais?
+- posso fazer sexo?
+- gestante pode ter relações sexuais?
+- gestante pode fazer sexo?
+- grávida pode ter relações sexuais?
+
+## intent:ask_can_raw_meat
+- posso comer peixe cru?
+- gravida pode comer peixe cru?
+- posso comer carne mal passada?
+- gravida pode comer carne mal passada?
+
+## intent:ask_can_soda
+- posso tomar refrigerante?
+- posso beber refrigerante?
+- gravida pode tomar refrigerante?
+
+## intent:ask_can_sweetener
+- posso tomar adoçante?
+- mulher gravida pode tomar adocante?
+- tem algum problema tomar adoçante?
+- posso usar adoçante?
+
+## intent:ask_can_vaccine
+- posso tomar vacina?
+- gravida pode tomar vacina?
+
+## intent:ask_can_sleep_stomach
+- posso dormir de bruços?
+- tem problema dormir de bruços?
+- gravida pode dormir de bruços?
+
+## intent:ask_can_pap_smear
+- Pode ser realizado Papanicolau estando grávida?
+- posso fazer papanicolau?
+- posso fazer o exame papanicolau?
+
+## intent:ask_can_drive
+- posso dirigir?
+- posso continuar dirigindo?
+- posso dirigir o meu carro?
+- mulher grávida pode dirigir?
+- posso dirigir?
+
+## intent:ask_when_start_prenatal
+- quando devo começar o pré-natal?
+- quando preciso fazer o pré natal?
+- quando tenho que começar o pre natal?
+- quando iniciar o pré-natal?
+
+## intent:ask_when_episiotomy
+- quando é feito a episiotomia?
+- quando é preciso fazer episiotomia?
+- quando é necessário a episiotomia?
+- quando é necessário fazer episiotomia?
+- quando é necessaria a episiotomia?
+
+## intent:ask_when_baby_move
+- quando o bebê começa a mexer?
+- quando o bebê irá mexer?
+
+## intent:ask_when_start_braxton_hicks
+- quando acontecem as contrações braxton hick?
+- quando começam as contrações de braxton hicks?
+
+## intent:ask_when_exam_feces
+- quando deve ser feito o exame de fezes?
+- quando preciso fazer o exame de fezes?
+- quando o exame de fezes deve ser feito?
+- quando fazer o exame de fezes?
+- em que trimestre é feito o exame de fezes?
+- em que semana é feito o exame de fezes?
+
+## intent:ask_when_exam_blood_glucose
+- quando deve ser feito o exame de glicemia?
+- quando preciso fazer o exame de glicemia?
+- quando o exame de glicemia deve ser feito?
+- quando fazer o exame de glicemia?
+- em que trimestre é feito o exame de glicemia?
+- em que semana é feito o exame de glicemia?
+
+## intent:ask_when_exam_blood
+- quando deve ser feito o exame de sangue?
+- quando preciso fazer o exame de sangue?
+- quando o exame de sangue deve ser feito?
+- quando fazer o exame de sangue?
+- em que trimestre é feito o exame de sangue?
+- em que semana é feito o exame de sangue?
+
+## intent:ask_when_exam_urine
+- quando deve ser feito o exame de urina?
+- quando preciso fazer o exame de urina?
+- quando o exame de urina deve ser feito?
+- quando fazer o exame de urina?
+- em que trimestre é feito o exame de urina?
+- em que semana é feito o exame de urina?
+
+## intent:ask_when_exam_intravaginal_ultrasound
+- quando deve ser feito o ultrassom intravaginal?
+- quando preciso fazer o ultrassom intravaginal?
+- quando o ultrassom intravaginal deve ser feito?
+- quando fazer o ultrassom intravaginal?
+- em que trimestre é feito o ultrassom intravaginal?
+- em que semana é feito a ultrassonografia intravaginal?
+- quando deve ser feito a ultrassonografia intravaginal?
+- quando preciso fazer a ultrassonografia intravaginal?
+- quando a ultrassonografia intravaginal deve ser feita?
+- quando fazer a ultrassonografia intravaginal?
+- em que trimestre é feita a ultrassonografia intravaginal?
+- em que semana é feita a ultrassonografia intravaginal?
+
+## intent:ask_when_exam_nuchal_translucency_ultrasound
+- quando deve ser feito o ultrassom da translucencia nucal?
+- quando preciso fazer o ultrassom da translucencia nucal?
+- quando o ultrassom da translucencia nucal deve ser feito?
+- quando fazer o ultrassom da translucencia nucal?
+- em que trimestre é feito o ultrassom da translucencia nucal?
+- em que semana é feito o ultrassom da translucencia nucal?
+- quando deve ser feita a ultrassonografia da translucencia nucal?
+- quando preciso fazer a ultrassonografia da translucencia nucal?
+- quando a ultrassonografia da translucencia nucal deve ser feita?
+- quando fazer a ultrassonografia da translucencia nucal?
+- em que trimestre é feita a ultrassonografia da translucencia nucal?
+- em que semana é feita a ultrassonografia da translucencia nucal?
+
+## intent:ask_when_exam_screening_gestational_diabetes
+- quando deve ser feito a triagem de diabetes gestacional?
+- quando preciso fazer a triagem de diabetes gestacional?
+- quando a triagem de diabetes gestacional deve ser feito?
+- quando fazer a triagem de diabetes gestacional?
+- em que trimestre é feito a triagem de diabetes gestacional?
+- em que semana é feito a triagem de diabetes gestacional?
+
+## intent:ask_when_exam_screening_beta_hermolytic_streptococcus
+- quando deve ser feito a triagem de estreptococo beta-hermolitico?
+- quando preciso fazer a triagem de estreptococo beta-hermolitico?
+- quando a triagem de estreptococo beta-hermolitico deve ser feito?
+- quando fazer a triagem de estreptococo beta-hermolitico?
+- em que trimestre é feito a triagem de estreptococo beta-hermolitico?
+- em que semana é feito a triagem de estreptococo beta-hermolitico?
+
+## intent:ask_when_exam_third_trimester_ultrasound
+- quando deve ser feito o ultrassom do 3º trimestre?
+- quando preciso fazer o ultrassom do 3º trimestre?
+- quando o ultrassom do 3º trimestre deve ser feito?
+- quando devo fazer o último ultrassom?
+- quando devo fazer a última ultrassonografia?
+- quando fazer o ultrassom do 3º trimestre?
+- em que trimestre é feito o último ultrassom?
+- em que semana é feito o último ultrassom?
+- quando deve ser feito a ultrassonografia do 3º trimestre?
+- quando preciso fazer a ultrassonografia do 3º trimestre?
+- quando a ultrassonografia do 3º trimestre deve ser feito?
+- quando devo fazer a última ultrassonografia?
+- quando devo fazer a última ultrassonografia?
+- quando fazer a ultrassonografia do 3º trimestre?
+- em que trimestre é feito a última ultrassonografia?
+- em que semana é feito a última ultrassonografia?
+
+## intent:ask_when_stop_nausea
+- quando os enjoos vão passar?
+- quando os enjoos passam?
+- quando as nauseas vão passar?
+- quando passam as tonturas?
+
+## intent:ask_symptom_miscarriage
+- quais os sintomas do aborto espontaneo?
+- quais os sinais do aborto espontaneo?
+- quais os sinais do aborto?
+- como saber se estou tendo um aborto?
+- quais os sintomas do aborto espontâneo?
+- quais são os sintomas do aborto espontaneo?
+- quais os principais sintomas de um aborto espontaneo?
+
+## intent:ask_symptom_pregnancy
+- quais os sintomas da gravidez?
+- quais os principais sintomas da gestação?
+- quais os sintomas da gravidez?
+- quais os principais sintomas da gestação?
+- quais são os sintomas de uma mulher grávida?
+
+## intent:ask_symptom_premature_birth
+- quais os sinais do parto prematuro?
+- como saber se não estou tendo um parto prematuro?
+- quais os sintomas de um parto prematuro?
+- quais os principais sintomas de um parto prematuro?
+
+## intent:ask_symptom_pre_eclampsia
+- quais os sintomas da pre eclampsia?
+- quais os sintomas da pre-eclampsia?
+- quais os sintomas da pré-eclâmpsia?
+- quais são os principais sintomas da pre eclampsia?
+- quais são os principais sintomas da pre-eclampsia?
+
+## intent:ask_why_sleep
+- por que eu tenho tanto sono?
+- pq gravida sente muito sono?
+- por que temos muito sono na gravidez?
+
+## intent:ask_why_nausea
+- pq gestante tem muito enjôo?
+- por que mulher grávida tem enjoo?
+- pq gravida tem tanta nausea?
+- pq eu tenho tanto enjoo?
+
+## intent:ask_risk_factor_pregnancy
+- quais são os fatores de risco da gravidez?
+- quais os principais fatores de risco da gestação?
+- quais são os fatores de risco durante a gravidez?
+
+## intent:ask_risk_factor_premature_birth
+- quais são os fatores de risco de um parto prematuro?
+- quais os fatores de risco do parto prematuro?
+
+## intent:ask_causes_pre_eclampsia
+- quais as causas da pré eclâmpsia?
+- o que causa a pre eclampsia?
+- quais as principais causas da pre-eclampsia?
+
+## intent:ask_causes_premature_birth
+- Quais as causas da parto prematuro
+- O que pode causar parto prematuro
+- quais as causas do parto prematuro?
+- o que causa o parto prematuro?
+- quais as principais causas do parto prematuro?
+
+## intent:ask_what_to_do_bag
+- o que fazer se a bolsa estourou?
+- o que eu faço se a bolsa romper?
+- o que fazer quando a bolsa romper?
+- a minha bolsa estourou, o que eu faço?
+- a bolsa rompeu, o que fazer?
+- a bolsa estourou, o que eu devo fazer?
+- o que fazer se a bolsa estourar?
+
+## intent:ask_what_to_do_bleeding
+- estou tendo sangramento, o que eu faço?
+- o que eu faço se tiver um sangramento?
+- o que fazer se eu tiver um sangramento?
+
+## intent:ask_importance_breast_feeding
+- qual a importância da amamentação?
+- qual a importância da amamentacão?
+- qual a importância da amamentacao?
+- por que é importante amamentar?
+- qual a importancia de amamentar?
+- a amamentação é importante?
+
+## intent:ask_how_to_know_bag_burst
+- como saber se a bolsa estourou?
+- como eu sei que a bolsa estourou?
+- como saber se a bolsa rompeu?
+
+## intent:ask_how_to_know_childbirth
+- como saber se estou em trabalho de parto?
+- como eu sei se estou em trabalho de parto?
+
+## intent:ask_how_to_know_pregnancy
+- como saber se estou grávida?
+- como eu sei que estou gravida?
+
+## intent:ask_prevent_premature_birth
+- como prevenir o parto prematuro?
+- como evitar o parto prematuro?
+- como eu posso prevenir o parto prematuro?
+
+## intent:ask_prevent_pre_eclampsia
+- como prevenir a pré-eclâmpsia?
+- como eu posso me prevenir da pre-eclampsia?
+
+## intent:complain_nauseas
+- estou com muito enjôo
+- tenho tido muito enjôo
+- estou com muito enjoo, o que eu faço?
+- estou com muito enjoo, o que eu posso fazer pra melhorar?
+- estou com muito enjoo, o que eu faço pra melhorar?
+- tenho tido muita nausea
+- estou vomitando muito, o que faço?
+- estou vomitando muito
+- tenho tido muita tontura, é normal?
+- estou tendo muita tontura, o que eu faço?
+- tenho tido muita tontura
+- como melhorar os enjoos?
+- como melhorar as tonturas?
+- é normal ter muita tontura?
+- é normal ter muitos enjoos?
+
+## intent:complain_heartburn
+- é normal ter muita azia?
+- é normal ter muita queimação no estomago?
+- to com muita azia
+- estou com muita queimação no estomago
+- estou tendo muita azia, oq eu faço?
+- como melhorar a azia?
+- como melhorar a queimação no estômago?
+
+## intent:complain_salivation
+- estou salivando muito, o que eu faço pra melhorar?
+- estou salivando muito, é normal?
+- como melhorar a salivação?
+
+## intent:complain_weakness
+- tenho muita fraqueza
+- tenho tido muita fraqueza, oq eu faço?
+- estou me sentindo muito fraca
+- estou desmaiando muito
+- tenho tido muitos desmaios, o q eu faço?
+- é normal ter muitos desmaios?
+- é normal ter desmaios?
+- tenho desmaiado muito, o que eu faço?
+
+## intent:complain_flatulence
+- estou com gases
+- estou com muitos gases
+
+## intent:complain_constipation
+- estou com o intestino preso
+- estou com prisão de ventre
+
+## intent:complain_discharge
+- estou com muito corrimento, é normal?
+- to com corrimento, o que eu faço?
+- é normal ter corrimento?
+- É normal ter corrimento durante a gravidez?
+- ter corrimento durante a gravidez é normal?
+- É normal ter corrimento durante a gravidez?
+- É normal ter corrimento durante a gravidez?
+
+## intent:complain_urine
+- tenho tido muita vontade de fazer xixi
+- estou com muita vontade de fazer xixi, é normal?
+
+## intent:complain_breasts
+- estou com dor nos seios
+- estou com dor nos seios, o que eu faço?
+- estou com dor nos seios, o que fazer pra passar?
+- estou com dor nos seios, o que fazer pra melhorar?
+- estou com dor nos seios, oq eu faço?
+- estou com dor nos seios, oq eu posso fazer?
+- estou com dor nos seios, oq fazer?
+- tenho tido muita dor nos seios
+- como melhorar a dor nos seios?
+
+## intent:complain_varicose_veins
+- estou com muitas varizes
+- estou com muitas varizes, é normal?
+- to com muitas varizes, o que eu faço?
+- to com varizes o que eu posso fazer pra melhorar
+
+## intent:complain_body
+- estou com dor no corpo
+- estou com muita dor no corpo, o que eu fazer?
+- estou com muita dor no joelho
+- to com muita dor no joelho, oq eu faço?
+- to com muita dor no joelho, é normal?
+- é normal ter muita dor no joelho?
+- como melhorar a dor no joelho?
+- estou com muita dor no tornozelo
+- to com muita dor no tornozelo, o que eu faço?
+- é normal ter muita dor no tornozelo?
+- como melhorar a dor no tornozelo?
+- estou com muita dor nas costas
+- to com muita dor nas costas, é normal?
+- estou com muita dor na lombar
+- tenho tido muita dor nas costas também
+- é normal ter muita dor no corpo?
+
+## intent:complain_headache
+- to com muita dor de cabeça
+- to com muita dor de cabeca
+- estou com dor de cabeça
+- É normal ter mais dor de cabeça durante a gestação?
+- é normal ter dor de cabeça na gravidez?
+- é normal ter dores de cabeça na gestação?
+- estou tendo mais dor de cabeça agora que estou grávida, isso é normal?
+- estou tendo mais dor de cabeça agora, é normal?
+
+## intent:complain_cramps
+- estou tendo muita câimbra
+- estou tendo câimbra, o que eu faço?
+- o que eu faço para melhorar as caimbras?
+- como melhorar as câimbras?
+- estou tendo muita câimbra?
+
+## intent:complain_stretch_marks
+- estou com muitas estrias, o que posso fazer pra melhorar?
+- o que eu posso passar para melhorar as estrias?
+
+## intent:complain_melasma
+- estou com muito melasma
+- estou com muito melasma, é normal?
+- o que eu faço para melhorar as manchas no rosto?
+- o que eu faço para melhorar o melasma?
+- estou com muitas manchas no rosto
+
+## intent:complain_gums
+- minhas gengivas sangram sempre que escovo os dentes
+- é normal as gengivas sangrarem?
+- é normal as gengivas sangrarem durante a escovação?
+- minhas gengivas estão sangrando, o que eu faço?
+
+## intent:complain_shortness_breath
+- tenho tido muita falta de ar
+- tenho tido muita falta de ar, é normal?
+- é normal ter muita falta de ar?
+- o que faço para melhorar a falta de ar?
+- estou tendo dificuldade para respirar
+- estou com muita falta de ar?
+- é normal ter muita falta de ar?
+
+## intent:complain_bleeding
+- estou tendo sangramento, o que eu faço?
+- estou sangrando e agora?
+- estou sangrando significa que perdi meu bebe?
+- o que eu faço se tiver um sangramento?
+
+## intent:complain_colic
+- estou com cólica, o que eu faço?
+- estou com cólica
+- estou com muita cólica?
+- é normal ter muita cólica?
+- como melhorar a cólica?
+
+## intent:ask_goal_exam_feces
+- pra que serve o exame de fezes?
+- para q serve o exame de fezes?
+- o exame de fezes serve pra que?
+- por que preciso fazer o exame de fezes
+- qual o objetivo do exame de fezes?
+
+## intent:ask_goal_exam_blood_glucose
+- pra que serve o exame de glicemia?
+- para q serve o exame de glicemia?
+- o exame de glicemia serve pra que?
+- por que preciso fazer o exame de glicemia
+- qual o objetivo do exame de glicemica?
+
+## intent:ask_goal_exam_blood
+- pra que serve o exame de sangue?
+- para q serve o exame de sangue?
+- o exame de sangue serve pra que?
+- por que preciso fazer o exame de sangue?
+- qual o objetivo do exame de sangue?
+
+## intent:ask_goal_exam_urine
+- pra que serve o exame de urina?
+- para q serve o exame de urina?
+- o exame de urina serve pra que?
+- por que preciso fazer o exame de urina?
+- qual o objetivo do exame de urina?
+
+## intent:ask_goal_exam_intravaginal_ultrasound
+- pra que serve a ultrassonografia intravaginal?
+- para q serve a ultrassonografia intravaginal?
+- a ultrassonografia intravaginal serve pra que?
+- por que preciso fazer a ultrassonografia intravaginal?
+- pra que serve o ultrassom intravaginal?
+- para q serve o ultrassom intravaginal?
+- o ultrassom intravaginal serve pra que?
+- por que preciso fazer o ultrassom intravaginal?
+- qual o objetivo do ultrassom intravaginal?
+
+## intent:ask_goal_exam_nuchal_translucency_ultrasound
+- pra que serve a ultrassonografia da translucência nucal?
+- para q serve a ultrassonografia da translucência nucal?
+- a ultrassonografia da translucência nucal serve pra que?
+- por que preciso fazer a ultrassonografia da translucencia nucal?
+- pra que serve o ultrassom da translucência nucal?
+- para q serve o ultrassom da translucência nucal?
+- o ultrassom da translucencia nucal serve pra que?
+- por que preciso fazer o ultrassom da translucencia nucal?
+- qual o objetivo do ultrassom intravaginal?
+
+## intent:ask_goal_exam_screening_gestational_diabetes
+- pra que serve o exame de triagem de diabetes gestacional?
+- para q serve o exame de triagem de diabetes gestacional?
+- o exame de triagem de diabetes gestacional serve pra que?
+- por que preciso fazer a triagem de diabetes gestacional?
+- qual o objetivo da triagem de diabetes gestacional?
+
+## intent:ask_goal_exam_screening_beta_hermolytic_streptococcus
+- pra que serve o exame de triagem de estreptococo beta-hermolitico?
+- para q serve o exame de triagem de estreptococo beta-hermolitico?
+- o exame de triagem de estreptococo beta-hermolitico serve pra que?
+- por que preciso fazer a triagem de estreptococo beta-hermolitico?
+- qual o objetivo da triagem de estreptococo beta-hermolitico?
+
+## intent:ask_goal_exam_third_trimester_ultrasound
+- pra que serve a ultrassonografia do terceiro trimestre?
+- para q serve a ultrassonografia do terceiro trimestre?
+- a ultrassonografia do terceiro trimestre serve pra que?
+- por que preciso fazer a ultrassonografia do terceiro trimestre?
+- pra que serve a ultrassom do terceiro trimestre?
+- para q serve a ultrassom do terceiro trimestre?
+- a ultrassom do terceiro trimestre serve pra que?
+- por que preciso fazer a ultrassom do terceiro trimestre?
+- pra que serve o último ultrassom?
+- para q serve o último ultrassom?
+- o último ultrassom serve pra que?
+- por que preciso fazer o último ultrassom?
+- qual o objetivo do último ultrassom?
+- qual o objetivo do ultrassom do 3º trimestre?
+
+## intent:ask_how_works_prenatal
+- como funciona o pré-natal?
+- como é feito o pre natal?
+
 ## intent:ask_anesthesia_dentist
 - É permitido tomar anestesia para algum procedimento dentário?
 - posso tomar anestesia quando for ao dentista?
@@ -425,11 +1382,6 @@
 - o pé pode aumentar de tamanho na gravidez?
 - meu pé está maior
 
-## intent:ask_normal_birth_best
-- O parto normal é a melhor opção para o bebê?
-- o parto normal é sempre o melhor para o bebê?
-- qual a melhor opção de parto para o bebe?
-
 ## intent:ask_normal_birth_duration
 - O parto normal demora mais do que a cesárea?
 - quanto tempo demora o parto normal?
@@ -464,12 +1416,6 @@
 - é normal continuar sangrando 1 mes depois do nascimento do bebe
 - é normal continuar sangrando 1 mes depois do parto?
 
-## intent:ask_normal_discharge_pregnancy
-- É normal ter corrimento durante a gravidez?
-- ter corrimento durante a gravidez é normal?
-- É normal ter corrimento durante a gravidez?
-- É normal ter corrimento durante a gravidez?
-
 ## intent:ask_normal_feeling_tired
 - Estou me sentindo muito cansada desde que meu bebê nasceu. Isso é normal?
 - estou muito cansada desde que o bebê nasceu
@@ -480,13 +1426,6 @@
 ## intent:ask_normal_fever_milk_comes_down
 - É normal ter febre quando o leite desce?
 - ter febre quando desce o leite é normal?
-
-## intent:ask_normal_headache_pregnancy
-- É normal ter mais dor de cabeça durante a gestação?
-- é normal ter dor de cabeça na gravidez?
-- é normal ter dores de cabeça na gestação?
-- estou tendo mais dor de cabeça agora que estou grávida, isso é normal?
-- estou tendo mais dor de cabeça agora, é normal?
 
 ## intent:ask_normal_lose_weight_breastfeed
 - É normal emagrecer quando se amamenta?
@@ -744,241 +1683,10 @@
 - tchau valeu
 - vlw até
 
-## intent:can
-- eu posso tomar [cafeina](question_entity)
-- tem algum problema em tomar [cafe](question_entity)?
-- eu posso tomar [cafe](question_entity)?
-- posso tomar [cafeina](question_entity)?
-- tem algum problema em tomar [cafeína](question_entity)
-- posso tomar [cafe](question_entity)
-- posso beber [café](question_entity)?
-- grávida pode tomar [café](question_entity)?
-- gestante pode tomar [café](question_entity)?
-- mulher gravida pode tomar [café](question_entity)?
-- tem algum problema em comer [pimenta](question_entity)
-- posso comer [pimenta](question_entity)?
-- eu posso comer [pimenta](question_entity)?
-- grávida pode comer [pimenta](question_entity)?
-- gestante pode comer [pimenta](question_entity)?
-- posso comer comida [apimentada](question_entity)?
-- posso tomar [banho na banheira](question_entity)
-- grávida pode tomar [banho de banheira](question_entity)?
-- eu posso tomar [banho na banheira](question_entity)
-- tem algum problema em tomar [banho de banheira](question_entity)
-- posso tomar [sol](question_entity)
-- tem algum problema em tomar [sol](question_entity)
-- eu posso tomar [sol](question_entity)?
-- grávida pode tomar [sol](question_entity)?
-- gestante pode tomar [sol](question_entity)?
-- eu posso tomar [laxante](question_entity)
-- posso tomar [laxante](question_entity)?
-- tem algum problema em tomar [laxante](question_entity)?
-- eu posso tomar [laxante](question_entity)
-- grávida pode tomar [laxante](question_entity)?
-- gestante pode tomar [laxante](question_entity)?
-- tem algum problema em andar de [sapato de salto alto](question_entity)
-- posso andar de [salto](question_entity:salto salto)?
-- gravida pode usar [salto alto](question_entity)?
-- posso andar de [sapato alto](question_entity)
-- posso andar de [sapato de salto](question_entity)
-- tem algum problema em andar de [sapato de salto](question_entity)
-- eu posso andar de [sapato de salto alto](question_entity)
-- eu posso andar de [motocicleta](question_entity)?
-- posso andar de [moto](question_entity)?
-- grávida pode andar de [moto](question_entity)?
-- posso andar de [motocicleta](question_entity)?
-- tem algum problema em andar de [motocicleta](question_entity)
-- eu posso andar de [cavalo](question_entity)?
-- posso andar a [cavalo](question_entity)?
-- gravida pode andar a [cavalo](question_entity)?
-- tem algum problema em andar de [cavalo](question_entity)
-- posso andar de [bike](question_entity)?
-- tem algum problema em andar de [bike](question_entity)?
-- eu posso andar de [bike](question_entity)?
-- posso andar de [bicicleta](question_entity)?
-- gravida pode andar de [bicicleta](question_entity)?
-- posso tomar [vacina](question_entity)?
-- gravida pode tomar [vacina](question_entity)?
-- posso fazer [exercicios](question_entity)?
-- posso fazer [academia](question_entity)
-- posso [treinar](question_entity)?
-- posso fazer algum [treino](question_entity)?
-- posso fazer [exercicios fisicos](question_entity)?
-- posso fazer [atividades fisicas](question_entity)?
-- gravida pode fazer [exercicios](question_entity)?
-- gravida pode praticar [atividade fisica](question_entity)?
-- posso [transar](question_entity)?
-- posso ter [relações sexuais](question_entity)?
-- posso fazer [sexo](question_entity)?
-- gestante pode ter [relações sexuais](question_entity)?
-- gestante pode fazer [sexo](question_entity)?
-- posso [viajar](question_entity)?
-- posso comer [comida japonesa](question_entity)?
-- posso comer [sushi](question_entity)?
-- posso comer [temaki](question_entity)?
-- posso tomar [remedio](question_entity)?
-- posso fazer as [unhas](question_entity)?
-- posso pintar as [unhas](question_entity)?
-- gravida pode pintar as [unhas](question_entity)?
-- posso pintar os [cabelos](question_entity)?
-- eu posso pintar meu [cabelo](question_entity)?
-- gravida pode pintar o [cabelo](question_entity)?
-- tem problema pintar o [cabelo](question_entity)?
-- posso descolorir os [pelos](question_entity)?
-- posso descolorir os [pelos](question_entity) do corpo?
-- gravida pode descolorir os [pelos](question_entity) do corpo?
-- posso ir a [sauna](question_entity)?
-- gravida pode fazer [sauna](question_entity)?
-- posso fazer [sauna](question_entity)?
-- posso usar [hidratante](question_entity)?
-- posso usar [hidratante](question_entity) de corpo?
-- gravida pode usar [hidratante](question_entity)?
-- posso usar as [escadas](question_entity)?
-- mulher gestante pode usar [escada](question_entity)?
-- posso ir ao [dentista](question_entity)?
-- tem problema ir ao [dentista](question_entity)?
-- gravida pode ir no [dentista](question_entity)?
-- posso tomar [refrigerante](question_entity)?
-- posso beber [refrigerante](question_entity)?
-- gravida pode tomar [refrigerante](question_entity)?
-- posso tomar [adoçante](question_entity)?
-- mulher gravida pode tomar [adocante](question_entity)?
-- tem algum problema tomar [adoçante](question_entity)?
-- posso comer [peixe cru](question_entity)?
-- gravida pode comer [peixe cru](question_entity)?
-- posso [dormir de bruços](question_entity)?
-- tem problema [dormir de bruços](question_entity)?
-- gravida pode [dormir de bruços](question_entity)?
-- posso tomar [analgesico](question_entity)?
-- gravida pode tomar [analgésico](question_entity)?
-- tem algum problema tomar [analgesico](question_entity)?
-- posso tomar [remedio de alergia](question_entity)?
-- posso tomar [remedio para alergia](question_entity)?
-- tem problema tomar [remedio para alergia](question_entity)?
-- gravida pode tomar [remedio de alergia](question_entity)?
-- posso tomar [alcool](question_entity)?
-- posso beber [alcool](question_entity)?
-- posso beber [vinho](question_entity)?
-- posso beber [caipirinha](question_entity)?
-- posso tomar [bebida alcoolica](question_entity)?
-- gravida pode tomar [alcool](question_entity)?
-- gravida pode tomar [bebida alcoólica](question_entity)?
-- posso usar [drogas](question_entity)?
-- posso consumir [drogas](question_entity)?
-- gravida pode usar [drogas](question_entity)?
-- posso fazer [raio x](question_entity)?
-- gravida pode fazer [raio x](question_entity)?
-- tem algum problema fazer exame [raio x](question_entity)?
-- posso fumar [cigarro](question_entity)?
-- posso [fumar](question_entity)?
-- gravida pode fumar [cigarro](question_entity)?
-- posso fazer [raio x](question_entity)?
-- posso pintar o [cabelo](question_entity)?
-- posso ir ao [dentista](question_entity)?
-- posso fazer [sexo](question_entity)?
-- posso ter [relações sexuais](question_entity)?
-- posso usar [salto alto](question_entity)?
-- posso [fumar](question_entity)?
-- posso [transar](question_entity)?
-- posso fazer [sexo](question_entity)?
-- posso ter [relações sexuais](question_entity)?
-- posso fazer [exercicios](question_entity)?
-- posso [dirigir](question_entity)?
-- posso continuar [dirigindo](question_entity)?
-- posso [dirigir](question_entity) o meu carro?
-- mulher grávida pode [dirigir](question_entity)?
-- posso [dirigir](question_entity)?
-- Grávidas podem [fumar](question_entity)?
-- posso ter [relações sexuais](question_entity)?
-- gravida pode [fumar](question_entity)?
-- mulher grávida pode [fumar](question_entity)?
-- grávida pode [fumar](question_entity)?
-- posso ter [relações sexuais](question_entity)?
-- posso ter [relações sexuais](question_entity)?
-- grávida pode ter [relações sexuais](question_entity)?
-- posso ter [relações sexuais](question_entity)?
-- posso subir [escada](question_entity)?
-- posso subir as [escadas](question_entity)?
-- Pode ser realizado [Papanicolau](question_entity) estando grávida?
-- posso fazer [papanicolau](question_entity)?
-- posso fazer o exame [papanicolau](question_entity)?
-
 ## intent:canthelp
 - vc nao consegue me ajudar
 - vc nao pode me ajudar
 - vc nao sabe me ajudar
-
-## intent:causes
-- Quais as causas da [parto prematuro](question_entity)
-- O que pode causar [parto prematuro](question_entity)
-- quais as causas do [parto prematuro](question_entity)?
-- o que causa o [parto prematuro](question_entity)?
-- quais as principais causas do [parto prematuro](question_entity)?
-- quais as causas da [pré eclâmpsia](question_entity)?
-- o que causa a [pre eclampsia](question_entity)?
-- quais as principais causas da [pre-eclampsia](question_entity)?
-
-## intent:complain
-- estou com dor no [corpo](question_entity)
-- estou com muito [enjoo](question_entity)
-- estou com muito [enjoo](question_entity), o que eu faço?
-- estou com muito [enjoo](question_entity), o que eu posso fazer pra melhorar?
-- estou com muito [enjoo](question_entity), o que eu faço pra melhorar?
-- estou com dor nos [seios](question_entity)
-- estou com dor nos [seios](question_entity), o que eu faço?
-- estou com dor nos [seios](question_entity), o que fazer pra passar?
-- estou com dor nos [seios](question_entity), o que fazer pra melhorar?
-- estou com dor nos [seios](question_entity), oq eu faço?
-- estou com dor nos [seios](question_entity), oq eu posso fazer?
-- estou com dor nos [seios](question_entity), oq fazer?
-- tenho tido muita [tontura](question_entity)
-- to com muita [azia](question_entity)
-- estou com muitas [estrias](question_entity), o que posso fazer pra melhorar?
-- to com muita [dor de cabeça](question_entity)
-- to com muita [dor de cabeca](question_entity)
-- estou com [cólica](question_entity), o que eu faço?
-- estou com [cólica](question_entity)
-- tenho muita [fraqueza](question_entity)
-- tenho tido muita vontade de fazer [xixi](question_entity)
-- estou com muita dor na [lombar](question_entity)
-- estou com muita [queimação](question_entity) no estomago
-- tenho tido muita dor nas [costas](question_entity) também
-- tenho tido muita [nausea](question_entity)
-- tenho tido muita dor nos [seios](question_entity)
-- estou [vomitando](question_entity) muito, o que faço?
-- estou [vomitando](question_entity) muito
-- tenho tido muita [tontura](question_entity), é normal?
-- estou tendo muita [tontura](question_entity), o que eu faço?
-- estou tendo muita [azia](question_entity), oq eu faço?
-- estou [salivando](question_entity) muito, o que eu faço pra melhorar?
-- tenho tido muita [fraqueza](question_entity), oq eu faço?
-- estou me sentindo muito [fraca](question_entity)
-- estou [desmaiando](question_entity) muito
-- tenho tido muitos [desmaios](question_entity), o q eu faço?
-- estou com muito [corrimento](question_entity), é normal?
-- to com [corrimento](question_entity), o que eu faço?
-- estou com muita dor no [corpo](question_entity), o que eu fazer?
-- estou com dor de [cabeça](question_entity)
-- estou com muita dor no [joelho](question_entity)
-- to com muita dor no [joelho](question_entity), oq eu faço?
-- to com muita dor no [joelho](question_entity), é normal?
-- é normal ter muita dor no [joelho](question_entity)?
-- como melhorar a dor no [joelho](question_entity)?
-- estou com muita dor no [tornozelo](question_entity)
-- to com muita dor no [tornozelo](question_entity), o que eu faço?
-- é normal ter muita dor no [tornozelo](question_entity)?
-- como melhorar a dor no [tornozelo](question_entity)?
-- estou com muita dor nas [costas](question_entity)
-- to com muita dor nas [costas](question_entity), é normal?
-- estou com muita [cólica](question_entity)?
-- é normal ter muita [cólica](question_entity)?
-- como melhorar a [cólica](question_entity)?
-- estou com muita [falta de ar](question_entity)?
-- é normal ter muita [falta de ar](question_entity)?
-- estou com [gases](question_entity)
-- estou com muitos [gases](question_entity)
-- estou com o [intestino preso](question_entity)
-- estou com [prisão de ventre](question_entity)
 
 ## intent:deny
 - ñ
@@ -1053,7 +1761,7 @@
 - nao sei dizer
 
 ## intent:enter_data
-- 1
+<!-- - 1 -->
 - [dipirona](med_name)
 - [ibuprofeno](med_name)
 - [dorflex](med_name)
@@ -1080,22 +1788,22 @@
 - [5](number)
 - [20](number)
 - [3](number)
-- dois
-- cinco
+<!-- - dois
+- cinco -->
 - [2](number) partos
 - [3](number) partos
 - [4](number) partos
 - [5](number) partos
 - [1](number) parto
-- seis
+<!-- - seis -->
 - [1](number) parto
-- tres
+<!-- - tres
 - quatro
 - cinco
 - sete
 - oito
 - nove
-- um
+- um -->
 - [1,65](number) m
 - [1,67](number)m
 - [150](number)cm
@@ -1124,11 +1832,6 @@
 - [endometrite](infection_kind)
 - tive [mastite](infection_kind)
 - [urinária](infection_kind)
-
-## intent:goal_exam
-- pra que serve o exame de [fezes](question_entity)?
-- para q serve o exame de [fezes](question_entity)?
-- o exame de [fezes](question_entity) serve pra que?
 
 ## intent:hello+greeting
 - Hey Como vc esta?
@@ -1223,24 +1926,6 @@
 - Boa tarde
 - Oii
 
-## intent:how
-- como melhorar a [azia](question_entity)?
-- como melhorar os [enjoos](question_entity)?
-- como melhorar as [tonturas](question_entity)?
-- como melhorar a dor nos [seios](question_entity)?
-- como funciona o [pré-natal](question_entity)?
-- como funciona o [pre-natal](question_entity)?
-- como funciona o [pré-natal](question_entity)?
-
-## intent:how_to_know
-- como saber se a [bolsa](question_entity) estourou?
-- como eu sei que a [bolsa](question_entity) estourou?
-- como saber se a [bolsa](question_entity) rompeu?
-- como saber se estou em [trabalho de parto](question_entity)?
-- como eu sei se estou em [trabalho de parto](question_entity)?
-- como saber se estou [grávida](question_entity)?
-- como eu sei que estou [gravida](question_entity)?
-
 ## intent:i_know_importance
 - Ah sim, eu sei como o pré-natal é importante
 - claro, é muito importante realizar o pré-natal
@@ -1303,42 +1988,6 @@
 - Ola, estou gravida e agora?
 - Oii, estou gravida
 
-## intent:importance
-- qual a importância da [amamentação](question_entity)?
-- qual a importância da [amamentacão](question_entity)?
-- qual a importância da [amamentacao](question_entity)?
-- por que é importante [amamentar](question_entity)?
-- qual a importancia de [amamentar](question_entity)?
-- a [amamentação](question_entity) é importante?
-
-## intent:is_it_normal
-- é normal ter muitos [desmaios](question_entity)?
-- é normal ter muita [tontura](question_entity)?
-- é normal ter muitos [enjoos](question_entity)?
-- é normal ter muita [azia](question_entity)?
-- é normal ter muita [queimação](question_entity) no estomago?
-- é normal ter [desmaios](question_entity)?
-- é normal ter [corrimento](question_entity)?
-- é normal ter muita dor no [corpo](question_entity)?
-
-## intent:last_intent
-- e de [cavalo](question_entity)?
-- e [pre-eclampsia](question_entity)?
-- e de [moto](question_entity)?
-- e o [parto prematuro](question_entity)
-- e [laxante](question_entity)?
-- e [café](question_entity)?
-- e [amendoim](question_entity)?
-- e [puerperio](question_entity)?
-- e [pimenta](question_entity)?
-- e [exercicios](question_entity)?
-- e [alimentos](question_entity)?
-- e [descolorir](question_entity)?
-- e [sol](question_entity)?
-- e [hidratante](question_entity)?
-- e [cigarro](question_entity)?
-- e [vacina](question_entity)?
-
 ## intent:later
 - depois
 - depois eu respondo
@@ -1363,21 +2012,6 @@
 - agora nao tenho nenhuma duvida
 - agora nao tenho duvidas
 
-## intent:prevent
-- como prevenir o [parto prematuro](question_entity)?
-- como evitar o [parto prematuro](question_entity)?
-- como eu posso prevenir o [parto prematuro](question_entity)?
-- como prevenir a [pré-eclâmpsia](question_entity)?
-- como eu posso me prevenir da [pre-eclampsia](question_entity)?
-- estou [salivando](question_entity) muito, é normal?
-
-## intent:risk_factor
-- quais são os fatores de risco da [gravidez](question_entity)?
-- quais os principais fatores de risco da [gestação](question_entity)?
-- quais são os fatores de risco durante a [gravidez](question_entity)?
-- quais são os fatores de risco de um [parto prematuro](question_entity)?
-- quais os fatores de risco do [parto prematuro](question_entity)?
-
 ## intent:stop
 - Pare
 - Chega
@@ -1391,19 +2025,6 @@
 - Não quero responder isso
 - Não quero responder
 - Não vou responder
-
-## intent:symptom
-- quais os sintomas do [aborto espontâneo](question_entity)?
-- quais são os sintomas do [aborto espontaneo](question_entity)?
-- quais os principais sintomas de um [aborto espontaneo](question_entity)?
-- quais os sintomas da [gravidez](question_entity)?
-- quais os principais sintomas da [gestação](question_entity)?
-- quais são os sintomas de uma [mulher grávida](question_entity)?
-- quais os sintomas de um [parto prematuro](question_entity)?
-- quais os principais sintomas de um [parto prematuro](question_entity)?
-- quais os sintomas da [pré-eclâmpsia](question_entity)?
-- quais são os principais sintomas da [pre eclampsia](question_entity)?
-- quais são os principais sintomas da [pre-eclampsia](question_entity)?
 
 ## intent:thank_you
 - mto obg
@@ -1423,228 +2044,6 @@
 - mgn
 - nao tem de q
 - de nd
-
-## intent:what_is
-- oq é [pre-natal](question_entity)?
-- oq é [pré natal](question_entity)?
-- oq é [puerpério](question_entity)?
-- oq é [bebê pélvico](question_entity)?
-- oq significa [bebê córmico](question_entity)?
-- oq é [bebe cormico](question_entity)?
-- oq é [bebê pelvico](question_entity)?
-- oq é [bebe pelvico](question_entity)?
-- O que é [puerpério](question_entity)?
-- oq é [lóquio](question_entity)?
-- O que é [lóquio](question_entity)?
-- O que é [aborto espontâneo](question_entity)?
-- oq é [aborto espontâneo](question_entity)?
-- oq é [líquido amniótico](question_entity)?
-- O que é o [líquido amniótico](question_entity)?
-- O que é [pré-eclâmpsia](question_entity)?
-- O que é [pré eclâmpsia](question_entity)?
-- oq é [pré-eclâmpsia](question_entity)?
-- O que é [pré eclâmpsia](question_entity)
--  o que é o [pré-natal](question_entity)?
-- o que significa [puerpério](question_entity)?
-- o que significa [aborto espontaneo](question_entity)?
-- o que é [ácido fólico](question_entity)?
-- oq é [acido folico](question_entity)?
-- oq é [acido fólico](question_entity)?
-- oq é [ácido folico](question_entity)?
-- O que é [episiotomia](question_entity)?
-- oq é [episiotomia](question_entity)?
-- o que é [tricotomia](question_entity)?
-- oq é [tricotomia](question_entity)?
-- o que é [fórceps](question_entity)?
-- oq é [forceps](question_entity)?
-- o que são as contrações de [braxton hicks](question_entity)?
-- o que são [braxton hicks](question_entity)?
-- oq é [braxton hicks](question_entity)?
-- o que é [eclampsia](question_entity)?
-- oq é [eclâmpsia](question_entity)?
-- o que significa [eclampsia](question_entity)?
-- oq é [altura uterina](question_entity)?
-- o que é [altura uterina](question_entity)?
-- oq é [amniocentese](question_entity)?
-- o que significa [amniocentese](question_entity)?
-- o que significa [BCF](question_entity)?
-- o que é [bcf](question_entity)?
-- o que significa uma [gestação a termo](question_entity)?
-- o que é uma [gravidez a termo](question_entity)?
-- o que é [bebe nascido a termo](question_entity)?
-- oq é [bebê a termo](question_entity)?
-- oq é [bebe a termo](question_entity)?
-- o que é [bebê defletido](question_entity)?
-- o que significa [bebe defletido](question_entity)?
-- oq é [bebe defletido](question_entity)?
-- o que significa [bebê pélvico](question_entity)?
-- oq é [bebê pélvico](question_entity)?
-- o que quer dizer [bebê pélvico](question_entity)?
-- o que significa [bebê córmico](question_entity)?
-- oq quer dizer [bebe cormico](question_entity)?
-- o que é [bebê córmico](question_entity)?
-- o que é [beta-hcg](question_entity)?
-- oq é [beta hcg](question_entity)?
-- o que significa [beta-hcg](question_entity)?
-- o que é [colostro](question_entity)?
-- oq é [colostro](question_entity)?
-- oq significa [colostro](question_entity)?
-- o que significa [DPP](question_entity)?
-- o que é [dpp](question_entity)?
-- o que quer dizer [dpp](question_entity)?
-- o que é [hiperêmese gravídica](question_entity)?
-- oq é [hiperemese gravidica](question_entity)?
-- o que significa [hiperemese gravidica](question_entity)?
-- o que é [istmo-cervical](question_entity)?
-- o que é [istmo cervical](question_entity)?
-- o que é um [istmo-cervical](question_entity)?
-- o que é [nidação](question_entity)?
-- o que significa [nidação](question_entity)?
-- o que é [ocitocina](question_entity)?
-- oq é [ocitocina](question_entity)?
-- o que é [placenta prévia](question_entity)?
-- oq significa [placenta previa](question_entity)?
-- oq é [placenta previa](question_entity)?
-- o que é [peridural](question_entity)?
-- o que é [raquidiana](question_entity)?
-- o que é a [anestesia raquidiana](question_entity)?
-- o que é [perímetro cefálico](question_entity)?
-- oq é [perimetro cefalico](question_entity)?
-- o que é [temperatura basal](question_entity)?
-- o que significa [temperatura basal](question_entity)?
-- oq quer dizer [temperatura basal](question_entity)?
-- o que é [translucencia nucal](question_entity)?
-- oq é [translucência nucal](question_entity)?
-
-## intent:what_to_do
-- o que fazer se a [bolsa](question_entity) estourou?
-- o que eu faço se a [bolsa](question_entity) romper?
-- o que fazer quando a [bolsa](question_entity) romper?
-- a minha [bolsa](question_entity) estourou, o que eu faço?
-- a [bolsa](question_entity) rompeu, o que fazer?
-- a [bolsa](question_entity) estourou, o que eu devo fazer?
-
-## intent:when
-- quando devo começar o [pré-natal](question_entity)?
-- quando preciso fazer o [pré natal](question_entity)?
-- quando tenho que começar o [pre natal](question_entity)?
-- quando iniciar o [pré-natal](question_entity)?
-- quando é feito a [episiotomia](question_entity)?
-- quando é preciso fazer [episiotomia](question_entity)?
-- quando é necessário a [episiotomia](question_entity)?
-- quando é necessário fazer [episiotomia](question_entity)?
-- quando começas as contrações de [braxton hicks](question_entity)?
-- quando acontecem as contrações [braxton hick](question_entity)?
-- quando o bebê começa a [mexer](question_entity)?
-- quando o bebê irá [mexer](question_entity)?
-- quando os [enjoos](question_entity) vão passar?
-- quando os [enjoos](question_entity) passam?
-
-## intent:when_exam
-- quando deve ser feito o exame de [fezes](question_entity)?
-- quando preciso fazer o exame de [fezes](question_entity)?
-- quando o exame de [fezes](question_entity) deve ser feito?
-- quando fazer o exame de [fezes](question_entity)?
-
-## intent:which_best
-- qual o ganho de [peso ideal](question_entity) na gravidez?
-- qual o [peso ideal](question_entity) durante a gravidez?
-- qual a melhor [posição para dormir](question_entity:posicao para dormir)?
-- qual a melhor [posição para uma gestante dormir](question_entity:posicao para dormir)?
-- qual a melhor [posição para dormir](question_entity:posicao para dormir) grávida?
-- qual o melhor tipo de [parto](question_entity)?
-- qual o melhor [parto](question_entity)?
-- qual é a melhor opção de [parto](question_entity)?
-- qual é o melhor tipo de [parto](question_entity)?
-- qual é o melhor tipo de [parto](question_entity)?
-- qual é o melhor [parto](question_entity)?
-
-## intent:which_can
-- quais [exercicios fisicos](question_entity) eu posso fazer?
-- quais [exercícios físicos](question_entity) eu posso fazer?
-- quais [atividades fisicas](question_entity) eu posso fazer?
-- quais [exercicios](question_entity) uma mulher gravida pode fazer?
-- que tipo de [exercicio](question_entity) eu posso fazer?
-- que tipo de [depilação](question_entity) eu posso fazer?
-- quais tipo de [depilação](question_entity) são permitidos?
-- que tipo de [depilação](question_entity) uma gestante pode fazer?
-- quais [vacinas](question_entity) eu posso tomar?
-- quais tipos de [atividades físicas](question_entity) estão liberadas?
-- quais [treinos](question_entity) são permitidos?
-- quais [exercícios](question_entity) eu posso fazer?
-- quais tipos de [atividades fisicas](question_entity) são permitidas?
-- quais [exercicios físicos](question_entity) são permitidos?
-
-## intent:which_can_not
-- quais [exercicios](question_entity) eu não posso fazer?
-- quais [exercicios fisicos](question_entity) eu não devo fazer?
-- quais [atividades fisicas](question_entity) eu não posso fazer?
-- que tipo de [exercicio](question_entity) eu não posso fazer?
-- que tipo de [atividades fisicas](question_entity) eu não posso fazer?
-- que tipo de [exercicio fisico](question_entity) eu não posso fazer?
-- quais tipos de [exercicios](question_entity) eu não posso fazer?
-- quais [alimentos](question_entity) eu não posso comer?
-- quais [comidas](question_entity) eu não posso comer?
-- que [alimento](question_entity) eu não posso comer?
-- quais [alimentos](question_entity) eu não devo comer?
-- quais [alimentos](question_entity) eu não posso consumir?
-- quais [exercicios](question_entity) uma muher gravida não pode fazer?
-- quais [alimentos](question_entity) uma muher grávida não pode comer?
-- quais [alimentos](question_entity) uma gestante não deve comer?
-- que tipo de [alimento](question_entity) eu não posso comer?
-- quais [vacinas](question_entity) eu não posso tomar?
-- quais [vacinas](question_entity) uma gestante não pode tomar?
-- quais [vacinas](question_entity) eu não posso tomar?
-- quais [vacinas](question_entity) eu não posso tomar?
-
-## intent:which_cases
-- em quais casos o [fórceps](question_entity) é utilizado?
-- em que casos o [forceps](question_entity) é necessário?
-
-## intent:which_main
-- quais os principais [exames](question_entity) do pré-natal?
-- quais os principais [cuidados](question_entity) que a gestante deve ter?
-- quais os principais [cuidados](question_entity) na gestação?
-- quais os principais [cuidados](question_entity) na gravidez?
-- quais os principais [exames](question_entity) a serem feitos?
-- quais os principais [exames](question_entity) do pré-natal?
-
-## intent:which_medicine
-- qual remédio eu posso tomar para [cólica](question_entity)?
-- qual remédio eu posso tomar para dor de [cabeça](question_entity)?
-- que remedio eu posso tomar pra dor de [cabeça](question_entity)?
-- qual medicamento eu posso tomar pra [colica](question_entity)?
-- o que eu posso tomar para dor de [cabeça](question_entity)?
-- posso tomar algum remedio para dor de [cabeça](question_entity)?
-- posso tomar algum remédio para [ansia](question_entity)?
-- q remedio eu posso tomar para [enjoo](question_entity)?
-- posso tomar um remédio para dor de [cabeça](question_entity)?
-- posso tomar um remedio para [colica](question_entity)?
-
-## intent:which_need
-- quais [alimentos](question_entity) eu preciso comer?
-- quais [alimentos](question_entity) eu tenho que comer?
-- quais [alimentos](question_entity) uma gestante deve comer?
-- quais [exames](question_entity) eu tenho que fazer?
-- quais [vacinas](question_entity) eu preciso tomar?
-- quais [vacinas](question_entity) uma gestante precisa tomar?
-- quais [vacinas](question_entity) uma mulher gravida precisa tomar?
-- quais [vacinas](question_entity) uma gestante deve tomar?
-- quais [exames](question_entity) eu devo fazer?
-- quais [exames](question_entity) eu preciso fazer?
-
-## intent:which_signs
-- quais os sinais do [trabalho de parto](question_entity)?
-- quais os sinais de que entrei em [trabalho de parto](question_entity)?
-- quais são os sinais do [trabalho de parto](question_entity)?
-- quais são os sinais de que estou em [trabalho de parto](question_entity)?
-
-## intent:why
-- por que eu tenho tanto [sono](question_entity)?
-- pq gravida sente muito [sono](question_entity)?
-- por que temos muito [sono](question_entity) na gravidez?
-- pq gestante tem muito [enjôo](question_entity)?
-- por que mulher grávida tem [enjoo](question_entity)?
 
 ## intent:why_cesarean_answer
 - pq o bebe não estava de cabeça pra baixo
@@ -1673,355 +2072,139 @@
 - por que voce precisa saber isso?
 - eu preciso responder?
 
-## synonym:aborto espontaneo
-- aborto espontâneo
+## synonym:pré-natal
+- pre natal
+- pré natal
+- pre-natal
 
-## synonym:adocante
-- adoçante
+## synonym:exercícios 
+- exercicios
+- exercicio
 
-## synonym:analgesico
-- analgésico
+## synonym:físicos
+- fisicos
+- fisico
+- físicas
+- física
+- fisica
 
-## synonym:a termo
-- bebê a termo
-- bebe a termo
-- bebê termo
-- bebe termo
-- gestação a termo
-- gravidez a termo
-
-## synonym:defletido
-- bebê defletido
-- bebe defletido
-
-## synonym:pelvico
-- pélvico
-- bebê pélvico
-- bebe pelvico
-- bebe pélvico
-
-## synonym:cormico
-- bebê córmico
-- bebe cormico
-- bebê cormico
-- bebe córmico
-
-## synonym:acido folico
-- ácido fólico
-- acido fólico
-- ácido folico
-
-## synonym:alcool
-- vinho
-- bebida alcoólica
-- cerveja
-- pinga
-- caipirinha
-- batidinha
-- álcool
-
-## synonym:alimentos
-- alimento
-- comidas
-- comida
-
-## synonym:amamentacao
-- amamentar
-- amamentação
-- amamentaçao
-- amamentacão
-
-## synonym:azia
-- queimação
-
-## synonym:bicicleta
-- bike
-
-## synonym:pimenta
-- apimentada
-
-## synonym:beta-hcg
-- beta hcg
-
-## synonym:BCF
-- bcf
-
-## synonym:braxton hicks
-- braxton hick
-
-## synonym:café
-- cafeina
-- cafeína
-- cafe
-
-## synonym:cabelo
-- cabelos
-
-## synonym:cabeca
-- dor de cabeça
-- dor de cabeca
-
-## synonym:caimbras
-- câimbras
-- caimbra
-- câimbra
-
-## synonym:colica
-- cólica
-- colicas
-- cólicas
-
-## synonym:triagem de estreptococo beta-hermolitico
-- triagem de estreptococo beta-hermolítico
-- triagem de estreptococo beta hermolitico
-- triagem de estreptococo beta hermolítico
-
-## synonym:ultrassonografia intravaginal
-- ultrassom intravaginal
-
-## synonym:ultrassonografia do terceiro trimestre
-- ultrassom do terceiro trimestre
-- ultrassom do 3º trimestre
-- ultrassonografia do 3º trimestre
-
-## synonym:costas
-- costa
-- lombar
-
-## synonym:dpp
-- DPP
-
-## synonym:drogas
-- droga
-
-## synonym:cigarro
-- fumar
-- cigarros
-
-## synonym:raio x
-- raio-x
-
-## synonym:hiperemese gravidica
-- hiperêmese gravídica
-- hiperemese gravídica
-- hiperêmese gravidica
-
-## synonym:depilacao
-- depilação
+## synonym:depilação
+- depilacao
 - depilaçao
 - depilacão
 
-## synonym:remedio
-- remedios
-- remédio
-- remédios
+## synonym:perímetro cefálico
+- perimetro cefalico
+- perímetro cefalico
+- perimetro cefálico
 
-## synonym:remedio de alergia
-- remedio para alergia
-- remédio de alergia
-- remédio para alergia
+## synonym:hiperêmese gravídica
+- hiperêmese gravidica
+- hiperemese gravídica
+- hiperemese gravidica
 
-## synonym:exames
-- exame
+## synonym:grávida
+- gravida
+- gestante
 
-## synonym:eclampsia
-- eclâmpsia
+## synonym:posição
+- posicao
+- posiçao
+- posicão
 
-## synonym:dor de cabeca
-- dor de cabeça
-- dores de cabeça
-- dores de cabeca
-
-## synonym:estrias
-- estria
-
-## synonym:exercicios
-- exercicio
-- exercício
-- exercícios
-- exercicio fisico
-- exercício físico
-- exercício fisico
-- exercicio físico
-- exercicios fisicos
-- exercícios físicos
-- exercícios fisicos
-- exercicios físicos
-- atividade física
-- atividade fisica
-- atividades fisicas
-- atividades físicas
-- treinos
-- academia
-- treino
-- treinar
-- exercicitar
-
-## synonym:forceps
-- fórceps
-- forcep
-- fórcep
-
-## synonym:fezes
-- coco
-- cocô
-
-## synonym:ultrassonografia da translucencia nucal
-- ultrassonografia da translucência nucal
-- ultrassom da translucencia nucal
-- ultrassom da translucência nucal
-
-## synonym:flatulencia
-- flatulência
-- pum
-- peido
-- peidos
-- gases
-
-## synonym:fraqueza
-- fraquezas
-- fraca
-
-## synonym:gengivas
-- gengiva
-
-## synonym:joelho
-- joelhos
-
-## synonym:gravidez
-- gestação
-- gestacao
+## synonym:fórceps
+- forceps
 
 ## synonym:istmo-cervical
 - istmo cervical
 
-## synonym:intestino preso
-- prisão de ventre
-- prisao de ventre
+## synonym:remédio
+- remedio
 
-## synonym:japonesa
-- japonesa
-- comida japonesa
-- comidas japonesa
-- sushi
-- temaki
+## synonym:analgésico
+- analgesico
 
-## synonym:liquido amniotico
-- líquido amniótico
+## synonym:cólica
+- colica
+
+## synonym:lóquio
+- loquio
+
+## synonym:aborto espontâneo
+- aborto espontaneo
+
+## synonym:líquido amniótico
+- liquido amniotico
 - líquido amniotico
+- liquido amniótico
 
-## synonym:loquio
-- lóquio
+## synonym:puerpério
+- puerperio
+- pós parto
+- pós-parto
+- pos parto
+- pos-parto
 
-## synonym:manchas
-- mancha
+## synonym:pré-eclâmpsia
+- pré eclâmpsia
+- pré-eclampsia
+- pré eclampsia
+- pre eclâmpsia
+- pre eclampsia
+- pre-eclampsia
 
-## synonym:moto
-- motocicleta
+## synonym:ácido fólico
+- ácido folico
+- acido fólico
+- acido folico
 
-## synonym:nidacao
-- nidação
+## synonym:pélvico
+- pelvico
+
+## synonym:translucência nucal
+- translucencia nucal
+
+## synonym:córmico
+- cormico
+
+## synonym:contrações
+- contracoes
+- contraçoes
+- contracões
+- contração
+- contracao
+- contraçao
+- contracão
+
+## synonym:eclâmpsia
+- eclampsia
+
+## synonym:adoçante
+- adocante
+
+## synonym:nidação
+- nidacao
 - nidaçao
 - nidacão
 
-## synonym:nauseas
-- nausea
-- náusea
-- náuseas
-- ansia
-- ânsia
-- enjôo
-- enjoo
-- enjoos
-- enjôos
-- ansias
-- ânsias
+## synonym:prévia
+- previa
 
-## synonym:placenta previa
-- placenta prévia
+## synonym:café
+- cafe
+- cafeína
+- cafeina
 
-## synonym:pre-eclampsia
-- pré-eclâmpsia
-- pré eclâmpsia
-- pre eclampsia
-- pré eclampsia
-- pré-eclampsia
-- pre-eclâmpsia
-- pre eclâmpsia
+## synonym:ultrassonografia
+- ultrassom
 
-## synonym:pre-natal
-- pré natal
-- prenatal
-- pré-natal
-- pre natal
+## synonym:relações
+- relaçoes
+- relacões
+- relacoes
 
-## synonym:puerperio
-- puerpério
-
-## synonym:sabado
-- sábado
-- sabádo
-
-## synonym:salivacao
-- salivação
-- saliva
-
-## synonym:salto
-- sapato de salto alto
-- sapato alto
-- sapato de salto
-- salto alto
-
-## synonym:seios
-- mamas
-- mama
-- seio
-- peitos
-- peito
-
-## synonym:sexo
-- relação sexual
-- relacao sexual
-- relacoes sexuais
-- relaçoes sexuais
-- relacões sexuais
-- relações sexuais
-- transar
-
-## synonym:peso idela
-- melhor peso
-
-## synonym:perimetro cefalico
-- perímetro cefálico
-- perimetro cefálico
-- perímetro cefalico
-
-## synonym:tonturas
-- tontura
-
-## synonym:tornozelo
-- tornozelos
-
-## synonym:translucencia nucal
-- translucência nucal
-
-## synonym:urina
-- xixi
-
-## synonym:unhas
-- unha
-
-## synonym:vacinas
-- vacinação
-- vacinacao
-- vacinaçao
-- vacinacão
-- vacina
-
-## synonym:vomitos
-- vômitos
-- vômito
-- vomito
+## synonym:bruços
+- brucos
 
 ## lookup:med_name
 - dramin
