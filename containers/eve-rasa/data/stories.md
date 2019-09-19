@@ -31,10 +31,6 @@
 * deny
   - utter_info_later
   - utter_ask_me_anything
-* which_can{"question_entity": "exercicios"}
-    - action_get_answer
-* which_medicine
-    - utter_which_medicine
 
 ## bot inicia a conversa e o usuário quer responder as perguntas depois
 * hello
@@ -43,10 +39,6 @@
 * later
   - utter_info_later
   - utter_ask_me_anything
-* which_can{"question_entity": "exercicios"}
-    - action_get_answer
-* which_medicine
-    - utter_which_medicine
 
 ## o usuário quer responder as perguntas depois
 * later
@@ -111,116 +103,6 @@
 * greeting_answer
     - utter_great
 
-## perguntas aleatórias 1
-* which_can{"question_entity": "exercicios"}
-    - slot{"last_intent": "which"}
-    - action_get_answer
-* which_can_not{"question_entity": "comida"}
-    - slot{"last_intent": "which_can_not"}
-    - action_get_answer
-* can{"question_entity": "exercicios"}
-    - slot{"last_intent": "can"}
-    - action_get_answer
-* which_can{"question_entity": "exercicios"}
-    - slot{"last_intent": "which_can"}
-    - action_get_answer
-* which_can{"question_entity": "treinos"}
-    - slot{"last_intent": "which_can"}
-    - action_get_answer
-* which_can_not{"question_entity": "treinos"}
-    - slot{"last_intent": "which_can_not"}
-    - action_get_answer
-
-## perguntas aleatórias 2
-* hello
-  - action_greet_user
-  - slot{"greeted_user": true}
-* which_can{"question_entity": "exercicios"}
-    - slot{"last_intent": "which_can"}
-    - action_get_answer
-* which_can{"question_entity": "treinos"}
-    - slot{"last_intent": "which_can"}
-    - action_get_answer
-
-## perguntas aleatórias 3
-* hello
-    - action_greet_user
-  - slot{"greeted_user": true}
-* greeting_answer
-    - utter_great
-* which_can{"question_entity": "exercicios"}
-    - slot{"last_intent": "which_can"}
-    - action_get_answer
-* which_can_not{"question_entity": "alimentos"}
-    - slot{"last_intent": "which_can_not"}
-    - action_get_answer
-
-## perguntas aleatórias 4
-* which_need{"question_entity": "alimentos"}
-    - slot{"last_intent": "which_need"}
-    - action_get_answer
-* which_can_not{"question_entity": "exercicio"}
-    - slot{"last_intent": "which_can_not"}
-    - action_get_answer
-* symptom{"question_entity": "gravidez"}
-    - slot{"last_intent": "symptom"}
-    - action_get_answer
-* prevent{"question_entity": "pre-eclampsia"}
-    - slot{"last_intent": "prevent"}
-    - action_get_answer
-* what_is{"question_entity": "loquio"}
-    - slot{"last_intent": "what_is"}
-    - action_get_answer
-* complain{"question_entity": "costas"}
-    - slot{"last_intent": "complain"}
-    - action_get_answer
-* causes{"question_entity": "pre-eclampsia"}
-    - slot{"last_intent": "causes"}
-    - action_get_answer
-* how_to_know{"question_entity": "bolsa"}
-    - slot{"last_intent": "how_to_know"}
-    - action_get_answer
-
-## perguntas aleatórias 5
-* which_need{"question_entity": "alimentos"}
-    - action_get_answer
-    - slot{"last_intent": "which_need"}
-* last_intent{"question_entity": "exercicio"}
-    - slot{"last_intent": "which_need"}
-    - action_get_answer
-* symptom{"question_entity": "gravidez"}
-    - slot{"last_intent": "symptom"}
-    - action_get_answer
-* prevent{"question_entity": "pre-eclampsia"}
-    - slot{"last_intent": "prevent"}
-    - action_get_answer
-* what_is{"question_entity": "loquio"}
-    - slot{"last_intent": "what_is"}
-    - action_get_answer
-* last_intent{"question_entity": "puerperio"}
-    - slot{"last_intent": "what_is"}
-    - action_get_answer
-* causes{"question_entity": "pre-eclampsia"}
-    - slot{"last_intent": "causes"}
-    - action_get_answer
-* how_to_know{"question_entity": "bolsa"}
-    - slot{"last_intent": "how_to_know"}
-    - action_get_answer
-
-## perguntas aleatórias 6
-* goal_exam{"question_entity": "glicemia"}
-    - action_get_answer
-* when_exam{"question_entity": "glicemia"}
-    - action_get_answer
-* what_to_do{"question_entity": "bolsa"}
-    - action_get_answer
-* complain{"question_entity": "ansia"}
-    - action_get_answer
-* when{"question_entity": "pre-natal"}
-    - action_get_answer
-* why{"question_entity": "sono"}
-    - action_get_answer
-
 ## estou gravida
 * im_pregnant
     - action_congrats
@@ -278,7 +160,7 @@
 * affirm
   - form_initial
   - form{"name": "form_initial"}
-* what_is{"question_entity":"loquio"}
+* ask_allowed_exercises
   - action_get_answer
   - form_initial
   - form{"name": null}
@@ -291,7 +173,7 @@
 * affirm
   - form_initial
   - form{"name": "form_initial"}
-* why{"question_entity":"sono"}
+* ask_needed_feed
   - action_get_answer
   - form_initial
   - form{"name": null}
@@ -551,7 +433,7 @@
 * affirm
   - form_health
   - form{"name": "form_health"}
-* what_is{"question_entity":"loquio"}
+* ask_main_exams_prenatal
   - action_get_answer
   - form_health
   - form{"name": null}
@@ -634,7 +516,7 @@
 * affirm
   - form_personal
   - form{"name": "form_personal"}
-* what_is{"question_entity":"loquio"}
+* ask_allowed_exercises
   - action_get_answer
   - form_personal
   - form{"name": null}
@@ -657,11 +539,6 @@
     - slot{"weight":false}
     - form_personal
     - slot{"weight":false}
-    - slot{"requested_slot":"date_birth"}
-* enter_data{"date_birth":false}
-    - slot{"date_birth":false}
-    - form_personal
-    - slot{"date_birth":false}
     - slot{"requested_slot":"state"}
 * enter_data{"state":false}
     - slot{"state":false}
@@ -692,7 +569,7 @@
 * affirm
   - form_pregnancy
   - form{"name": "form_pregnancy"}
-* what_is{"question_entity":"loquio"}
+* ask_allowed_depilation
   - action_get_answer
   - form_pregnancy
   - form{"name": "form_pregnancy"}
@@ -716,267 +593,221 @@
     - utter_info_later
     - utter_ask_me_anything
 
-## ask_normal_birth_best
-* ask_normal_birth_best
-    - utter_normal_birth_best
-
 ## ask_normal_birth_pain
 * ask_normal_birth_pain
-    - utter_normal_birth_pain
+    - action_get_answer
 
 ## ask_exercise_help_normal_birth
 * ask_exercise_help_normal_birth
-    - utter_exercise_help_normal_birth
+    - action_get_answer
 
 ## ask_breast_milk_normal_birth
 * ask_breast_milk_normal_birth
-    - utter_breast_milk_normal_birth
+    - action_get_answer
 
 ## ask_normal_birth_recovery
 * ask_normal_birth_recovery
-    - utter_normal_birth_recovery
+    - action_get_answer
 
 ## ask_normal_birth_duration
 * ask_normal_birth_duration
-    - utter_normal_birth_duration
+    - action_get_answer
 
 ## ask_birth_transmit_disease
 * ask_birth_transmit_disease
-    - utter_birth_transmit_disease
+    - action_get_answer
 
 ## ask_avoid_normal_birth
 * ask_avoid_normal_birth
-    - utter_avoid_normal_birth
+    - action_get_answer
 
 ## ask_ideal_birth_older_women
 * ask_ideal_birth_older_women
-    - utter_ideal_birth_older_women
+    - action_get_answer
 
 ## ask_calculate_fertile_period
 * ask_calculate_fertile_period
-    - utter_calculate_fertile_period
+    - action_get_answer
 
 ## ask_late_menstruation
 * ask_late_menstruation
-    - utter_late_menstruation
+    - action_get_answer
 
 ## ask_do_pregnancy_test
 * ask_do_pregnancy_test
-    - utter_do_pregnancy_test
+    - action_get_answer
 
 ## ask_normal_swollen_foot
 * ask_normal_swollen_foot
-    - utter_normal_swollen_foot
+    - action_get_answer
 
 ## ask_how_long_milk_come_down
 * ask_how_long_milk_come_down
-    - utter_how_long_milk_come_down
+    - action_get_answer
 
 ## ask_normal_fever_milk_comes_down
 * ask_normal_fever_milk_comes_down
-    - utter_normal_fever_milk_comes_down
+    - action_get_answer
 
 ## ask_prevent_milk_stumbling
 * ask_prevent_milk_stumbling
-    - utter_prevent_milk_stumbling
+    - action_get_answer
 
 ## ask_pain_breastfeed
 * ask_pain_breastfeed
-    - utter_pain_breastfeed
+    - action_get_answer
 
 ## ask_thirst_breastfeed
 * ask_thirst_breastfeed
-    - utter_thirst_breastfeed
+    - action_get_answer
 
 ## ask_feeling_sad
 * ask_feeling_sad
-    - utter_feeling_sad
+    - action_get_answer
 
 ## ask_diet_breastfeed
 * ask_diet_breastfeed
-    - utter_diet_breastfeed
+    - action_get_answer
 
 ## ask_gain_weight_pregnancy
 * ask_gain_weight_pregnancy
-    - utter_gain_weight_pregnancy
+    - action_get_answer
 
 ## ask_when_have_sex
 * ask_when_have_sex
-    - utter_when_have_sex
+    - action_get_answer
 
 ## ask_stretch_marks
 * ask_stretch_marks
-    - utter_stretch_marks
+    - action_get_answer
 
 ## ask_desire_sex
 * ask_desire_sex
-    - utter_desire_sex
+    - action_get_answer
 
 ## ask_loose_vagina
 * ask_loose_vagina
-    - utter_loose_vagina
+    - action_get_answer
 
 ## ask_sagging_breasts_breastfeed
 * ask_sagging_breasts_breastfeed
-    - utter_sagging_breasts_breastfeed
+    - action_get_answer
 
 ## ask_body_back_normal
 * ask_body_back_normal
-    - utter_body_back_normal
+    - action_get_answer
 
 ## ask_back_exercise
 * ask_back_exercise
-    - utter_back_exercise
+    - action_get_answer
 
 ## ask_loss_hair_breastfeed
 * ask_loss_hair_breastfeed
-    - utter_loss_hair_breastfeed
+    - action_get_answer
 
 ## ask_exercise_impair_milk
 * ask_exercise_impair_milk
-    - utter_exercise_impair_milk
+    - action_get_answer
 
 ## ask_normal_bleeding_after_birth
 * ask_normal_bleeding_after_birth
-    - utter_normal_bleeding_after_birth
+    - action_get_answer
 
 ## ask_normal_menstruation_breastfeed
 * ask_normal_menstruation_breastfeed
-    - utter_normal_menstruation_breastfeed
+    - action_get_answer
 
 ## ask_dye_hair_breastfeed
 * ask_dye_hair_breastfeed
-    - utter_dye_hair_breastfeed
+    - action_get_answer
 
 ## ask_normal_lose_weight_breastfeed
 * ask_normal_lose_weight_breastfeed
-    - utter_normal_lose_weight_breastfeed
+    - action_get_answer
 
 ## ask_normal_feeling_tired
 * ask_normal_feeling_tired
-    - utter_normal_feeling_tired
+    - action_get_answer
 
 ## ask_normal_bigger_foot
 * ask_normal_bigger_foot
-    - utter_normal_bigger_foot
+    - action_get_answer
 
 ## ask_pregnant_menopause
 * ask_pregnant_menopause
-    - utter_pregnant_menopause
+    - action_get_answer
 
 ## ask_sex_bad_pregnancy
 * ask_sex_bad_pregnancy
-    - utter_sex_bad_pregnancy
+    - action_get_answer
 
 ## ask_feces_normal_birth
 * ask_feces_normal_birth
-    - utter_feces_normal_birth
+    - action_get_answer
 
 ## ask_sore_sex_after_birth
 * ask_sore_sex_after_birth
-    - utter_sore_sex_after_birth
+    - action_get_answer
 
 ## ask_have_sex_until_month
 * ask_have_sex_until_month
-    - utter_have_sex_until_month
+    - action_get_answer
 
 ## ask_receive_oral_sex
 * ask_receive_oral_sex
-    - utter_receive_oral_sex
+    - action_get_answer
 
 ## ask_smell_sweat_stronger
 * ask_smell_sweat_stronger
-    - utter_smell_sweat_stronger
-
-## ask_normal_discharge_pregnancy
-* ask_normal_discharge_pregnancy
-    - utter_normal_discharge_pregnancy
+    - action_get_answer
 
 ## ask_sex_hurt_baby
 * ask_sex_hurt_baby
-    - utter_sex_hurt_baby
+    - action_get_answer
 
 ## ask_choose_birth_type_public
 * ask_choose_birth_type_public
-    - utter_choose_birth_type_public
+    - action_get_answer
 
 ## ask_pregnant_eat_two
 * ask_pregnant_eat_two
-    - utter_pregnant_eat_two
+    - action_get_answer
 
 ## ask_avoid_cleaning_products
 * ask_avoid_cleaning_products
-    - utter_avoid_cleaning_products
+    - action_get_answer
 
 ## ask_best_position_baby_sleep
 * ask_best_position_baby_sleep
-    - utter_best_position_baby_sleep
+    - action_get_answer
 
 ## ask_what_vaccines_baby
 * ask_what_vaccines_baby
-    - utter_what_vaccines_baby
+    - action_get_answer
 
 ## ask_when_go_pediatrician
 * ask_when_go_pediatrician
-    - utter_when_go_pediatrician
+    - action_get_answer
 
 ## ask_care_baby_belly_button
 * ask_care_baby_belly_button
-    - utter_care_baby_belly_button
+    - action_get_answer
 
 ## ask_birth_control_difficult_pregnancy
 * ask_birth_control_difficult_pregnancy
-    - utter_birth_control_difficult_pregnancy
-
-## ask_normal_headache_pregnancy
-* ask_normal_headache_pregnancy
-    - utter_normal_headache_pregnancy
+    - action_get_answer
 
 ## ask_how_many_pounds_pregnancy
 * ask_how_many_pounds_pregnancy
-    - utter_how_many_pounds_pregnancy
+    - action_get_answer
 
 ## ask_how_long_breastfeed
 * ask_how_long_breastfeed
-    - utter_how_long_breastfeed
+    - action_get_answer
 
 ## ask_how_long_healthy_pregnant
 * ask_how_long_healthy_pregnant
-    - utter_how_long_healthy_pregnant
-
-## Story from conversation with me on July 31st 2019
-
-* ask_choose_birth_type_public
-    - utter_choose_birth_type_public
-* ask_choose_birth_type_public
-    - utter_choose_birth_type_public
-* ask_loose_vagina
-    - utter_loose_vagina
-
-## Story from conversation with me on July 31st 2019
-
-* ask_choose_birth_type_public
-    - utter_choose_birth_type_public
-* ask_choose_birth_type_public
-    - utter_choose_birth_type_public
-* ask_loose_vagina
-    - action_default_fallback
-* ask_loose_vagina
-    - utter_loose_vagina
-* ask_feces_normal_birth
-    - utter_feces_normal_birth
-* ask_sex_hurt_baby
-    - utter_sex_hurt_baby
-* ask_normal_discharge_pregnancy
-    - utter_normal_discharge_pregnancy
-* ask_smell_sweat_stronger
-    - utter_smell_sweat_stronger
-* ask_receive_oral_sex
-    - utter_receive_oral_sex
-* ask_have_sex_until_month
-    - utter_have_sex_until_month
-* ask_sore_sex_after_birth
-    - utter_sore_sex_after_birth
+    - action_get_answer
 
 ## Generated Story -4178839390444423351
 * hello
@@ -984,9 +815,6 @@
     - slot{"greeted_user": true}
 
 ## Generated Story -6771195614729549971
-* can{"question_entity": "raio x"}
-    - action_get_answer
-    - slot{"last_intent": "can"}
 * im_pregnant
     - action_congrats
     - slot{"is_pregnant": true}
@@ -994,260 +822,6 @@
     - utter_ask_info
 
 ## Generated Story -6771195614729549971
-* can{"question_entity": "raio x"}
-    - action_get_answer
-    - slot{"last_intent": "can"}
-* hello+im_pregnant
-    - utter_hello
-    - action_congrats
-    - slot{"is_pregnant": true}
-    - utter_first_step
-    - utter_ask_info
-
-## Generated Story 2621393950485477002
-* can{"question_entity": "cabelo"}
-    - action_get_answer
-    - slot{"last_intent": "can"}
-* can{"question_entity": "dentista"}
-    - action_get_answer
-    - slot{"last_intent": "can"}
-* can{"question_entity": "sexo"}
-    - action_get_answer
-    - slot{"last_intent": "can"}
-* can{"question_entity": "rela\u00e7\u00f5es sexuais"}
-    - action_get_answer
-    - slot{"last_intent": "can"}
-* im_pregnant
-    - action_congrats
-    - slot{"is_pregnant": true}
-    - utter_first_step
-    - utter_ask_info
-
-## Generated Story 2621393950485477002
-* can{"question_entity": "cabelo"}
-    - action_get_answer
-    - slot{"last_intent": "can"}
-* can{"question_entity": "dentista"}
-    - action_get_answer
-    - slot{"last_intent": "can"}
-* can{"question_entity": "sexo"}
-    - action_get_answer
-    - slot{"last_intent": "can"}
-* can{"question_entity": "rela\u00e7\u00f5es sexuais"}
-    - action_get_answer
-    - slot{"last_intent": "can"}
-* hello+im_pregnant
-    - utter_hello
-    - action_congrats
-    - slot{"is_pregnant": true}
-    - utter_first_step
-    - utter_ask_info
-
-## Generated Story 2621393950485477002
-* can{"question_entity": "cabelo"}
-    - action_get_answer
-    - slot{"last_intent": "can"}
-* can{"question_entity": "dentista"}
-    - action_get_answer
-    - slot{"last_intent": "can"}
-* can{"question_entity": "sexo"}
-    - action_get_answer
-    - slot{"last_intent": "can"}
-* can{"question_entity": "rela\u00e7\u00f5es sexuais"}
-    - action_get_answer
-    - slot{"last_intent": "can"}
-* im_pregnant
-    - action_congrats
-    - slot{"is_pregnant": true}
-    - utter_first_step
-    - utter_ask_info
-
-## Generated Story 2621393950485477002
-* can{"question_entity": "cabelo"}
-    - action_get_answer
-    - slot{"last_intent": "can"}
-* can{"question_entity": "dentista"}
-    - action_get_answer
-    - slot{"last_intent": "can"}
-* can{"question_entity": "sexo"}
-    - action_get_answer
-    - slot{"last_intent": "can"}
-* can{"question_entity": "rela\u00e7\u00f5es sexuais"}
-    - action_get_answer
-    - slot{"last_intent": "can"}
-* hello+im_pregnant
-    - utter_hello
-    - action_congrats
-    - slot{"is_pregnant": true}
-    - utter_first_step
-    - utter_ask_info
-
-## Generated Story 1492885391058787124
-* can{"question_entity": "salto alto"}
-    - action_get_answer
-    - slot{"last_intent": "can"}
-* can{"question_entity": "cigarro"}
-    - action_get_answer
-    - slot{"last_intent": "can"}
-* can{"question_entity": "sexo"}
-    - action_get_answer
-    - slot{"last_intent": "can"}
-* can{"question_entity": "sexo"}
-    - action_get_answer
-    - slot{"last_intent": "can"}
-* can{"question_entity": "sexo"}
-    - action_get_answer
-    - slot{"last_intent": "can"}
-* can{"question_entity": "exercicios"}
-    - action_get_answer
-    - slot{"last_intent": "can"}
-* ask_feces_normal_birth
-    - utter_feces_normal_birth
-* ask_loose_vagina
-    - utter_loose_vagina
-* ask_smell_sweat_stronger
-    - utter_smell_sweat_stronger
-* ask_receive_oral_sex
-    - utter_receive_oral_sex
-* ask_have_sex_until_month
-    - utter_have_sex_until_month
-* ask_sore_sex_after_birth
-    - utter_sore_sex_after_birth
-
-## Generated Story 4782866021833329566
-* ask_receive_oral_sex
-    - utter_receive_oral_sex
-* ask_smell_sweat_stronger
-    - utter_smell_sweat_stronger
-* ask_normal_discharge_pregnancy
-    - utter_normal_discharge_pregnancy
-* ask_loose_vagina
-    - utter_loose_vagina
-
-## Generated Story 3897647428770637518
-* can{"question_entity": "dirigir"}
-    - action_get_answer
-    - slot{"last_intent": "can"}
-* which_best{"question_entity": "parto"}
-    - action_get_answer
-    - slot{"last_intent": "which_best"}
-
-## Generated Story -4846044068828919887
-* which_best{"question_entity": "parto"}
-    - action_get_answer
-    - slot{"last_intent": "which_best"}
-* ask_normal_discharge_pregnancy
-    - utter_normal_discharge_pregnancy
-* can{"question_entity": "cigarro"}
-    - action_get_answer
-    - slot{"last_intent": "can"}
-* can{"question_entity": "sexo"}
-    - action_get_answer
-    - slot{"last_intent": "can"}
-
-## Generated Story 7789138662663016432
-* can{"question_entity": "cigarro"}
-    - action_get_answer
-    - slot{"last_intent": "can"}
-* which_best{"question_entity": "parto"}
-    - action_get_answer
-    - slot{"last_intent": "which_best"}
-* can{"question_entity": "sexo"}
-    - action_get_answer
-    - slot{"last_intent": "can"}
-
-## Generated Story 8778707381967773006
-* can{"question_entity": "sexo"}
-    - action_get_answer
-    - slot{"last_intent": "can"}
-* which_best{"question_entity": "parto"}
-    - action_get_answer
-    - slot{"last_intent": "which_best"}
-
-## Generated Story 7789138662663016432
-* which_can_not{"question_entity": "alimentos"}
-    - action_get_answer
-    - slot{"last_intent": "which_can_not"}
-
-## Generated Story 7789138662663016432
-* which_can_not{"question_entity": "depilacao"}
-    - action_get_answer
-    - slot{"last_intent": "which_can_not"}
-
-## Generated Story 7789138662663016432
-* which_can_not{"question_entity": "vacinas"}
-    - action_get_answer
-    - slot{"last_intent": "which_can_not"}
-
-## Generated Story 7789138662663016432
-* which_need{"question_entity": "vacinas"}
-    - action_get_answer
-    - slot{"last_intent": "which_need"}
-
-## Generated Story 7789138662663016432
-* which_main{"question_entity": "exames"}
-    - action_get_answer
-    - slot{"last_intent": "which_main"}
-
-## Generated Story 7789138662663016432
-* which_signs{"question_entity": "trabalho de parto"}
-    - action_get_answer
-    - slot{"last_intent": "which_signs"}
-
-## Generated Story 7789138662663016432
-* which_can{"question_entity": "vacinas"}
-    - action_get_answer
-    - slot{"last_intent": "which_can"}
-
-## Generated Story 7789138662663016432
-* which_cases{"question_entity": "forceps"}
-    - action_get_answer
-    - slot{"last_intent": "which_cases"}
-
-## how
-* how{"question_entity": "costas"}
-    - slot{"last_intent": "how"}
-    - action_get_answer
-
-* is_it_normal{"question_entity": "costas"}
-    - slot{"last_intent": "is_it_normal"}
-    - action_get_answer
-
-## Generated Story -4097205606057303362
-* how{"question_entity": "pre-natal"}
-    - action_get_answer
-    - slot{"last_intent": "how"}
-* is_it_normal{"question_entity": "cansa\u00e7o"}
-    - action_get_answer
-    - slot{"last_intent": "is_it_normal"}
-
-## Story from conversation with me on August 11th 2019
-* ask_sore_sex_after_birth
-    - utter_sore_sex_after_birth
-* im_pregnant
-    - action_congrats
-    - slot{"is_pregnant": true}
-    - utter_first_step
-    - utter_ask_info
-
-## Story from conversation with me on August 11th 2019
-* ask_sore_sex_after_birth
-    - utter_sore_sex_after_birth
-* hello+im_pregnant
-    - utter_hello
-    - action_congrats
-    - slot{"is_pregnant": true}
-    - utter_first_step
-    - utter_ask_info
-
-## Story from conversation with me on August 11th 2019
-* im_pregnant
-    - action_congrats
-    - slot{"is_pregnant": true}
-    - utter_first_step
-    - utter_ask_info
-
-## Story from conversation with me on August 11th 2019
 * hello+im_pregnant
     - utter_hello
     - action_congrats
@@ -1257,51 +831,37 @@
 
 ## ask_high_risk_normal_birth 
 * ask_high_risk_normal_birth
-    - utter_high_risk_normal_birth
+    - action_get_answer
 
 ## ask_ultrasound_hurt_baby
 * ask_ultrasound_hurt_baby
-    - utter_ultrasound_hurt_baby
+    - action_get_answer
 
 ## ask_baby_feel_sex
 * ask_baby_feel_sex
-    - utter_baby_feel_sex
+    - action_get_answer
 
 ## ask_food_desire_baby_appearance
 * ask_food_desire_baby_appearance
-    - utter_food_desire_baby_appearance
+    - action_get_answer
 
 ## ask_anesthesia_dentist
 * ask_anesthesia_dentist
-    - utter_anesthesia_dentist
+    - action_get_answer
 
 ## ask_contraceptive_pill_after_birth
 * ask_contraceptive_pill_after_birth
-    - utter_contraceptive_pill_after_birth
+    - action_get_answer
 
 ## ask_invite_accompany_birth
 * ask_invite_accompany_birth
-    - utter_invite_accompany_birth
+    - action_get_answer
 
 ## ask_cesarean_can_normal_birth
 * ask_cesarean_can_normal_birth
-    - utter_cesarean_can_normal_birth
-
-## can
-* can{"question_entity": "papanicolau"}
     - action_get_answer
-
-## Story from conversation with me on August 27th 2019
-
-* hello
-    - action_greet_user
-    - slot{"greeted_user": true}
-* complain
-    - action_get_answer
-    - slot{"last_intent":"complain"}
 
 ## Story from conversation with me on September 4th 2019
-
 * hello
     - action_greet_user
     - slot{"greeted_user": true}
@@ -1379,8 +939,6 @@
     - utter_ask_me_anything
 * baby_not_moving
     - utter_baby_not_moving
-* ask_exercise_help_normal_birth
-    - utter_exercise_help_normal_birth
 
 # got_it
 * got_it OR affirm+got_it
@@ -1394,8 +952,6 @@
 # got_it
 * baby_not_moving
     - utter_baby_not_moving
-* ask_exercise_help_normal_birth
-    - utter_exercise_help_normal_birth
 * got_it OR affirm+got_it
     - utter_great
 
@@ -1411,3 +967,563 @@
 # bye
 * bye
     - utter_bye
+
+## ask_main_exams_prenatal
+* ask_main_exams_prenatal
+    - action_get_answer
+
+## ask_allowed_exercises
+* ask_allowed_exercises
+    - action_get_answer
+
+## ask_allowed_depilation
+* ask_allowed_depilation
+    - action_get_answer
+
+## ask_needed_feed
+* ask_needed_feed
+    - action_get_answer
+
+## ask_needed_vaccine
+* ask_needed_vaccine
+    - action_get_answer
+
+## ask_signs_labor
+* ask_signs_labor
+    - action_get_answer
+
+## ask_ideal_weight
+* ask_ideal_weight
+    - action_get_answer
+
+## ask_best_sleeping_position
+* ask_best_sleeping_position
+    - action_get_answer
+
+## ask_best_childbirth
+* ask_best_childbirth
+    - action_get_answer
+
+## ask_cases_forceps
+* ask_cases_forceps
+    - action_get_answer
+
+## ask_medicine
+* ask_medicine
+    - action_get_answer
+
+## ask_not_allowed_exercises
+* ask_not_allowed_exercises
+    - action_get_answer
+
+## ask_not_allowed_food
+* ask_not_allowed_food
+    - action_get_answer
+
+## ask_not_allowed_vaccine
+* ask_not_allowed_vaccine
+    - action_get_answer
+
+## ask_what_is_prenatal
+* ask_what_is_prenatal
+    - action_get_answer
+
+## ask_what_is_postpartum
+* ask_what_is_postpartum
+    - action_get_answer
+
+## ask_what_is_loco
+* ask_what_is_loco
+    - action_get_answer
+
+## ask_what_is_miscarriage
+* ask_what_is_miscarriage
+    - action_get_answer
+
+## ask_what_is_amniotic_fluid
+* ask_what_is_amniotic_fluid
+    - action_get_answer
+
+## ask_what_is_pre_eclampsia
+* ask_what_is_pre_eclampsia
+    - action_get_answer
+
+## ask_what_is_folic_acid
+* ask_what_is_folic_acid
+    - action_get_answer
+
+## ask_what_is_episiotomy
+* ask_what_is_episiotomy
+    - action_get_answer
+
+## ask_what_is_trichotomy
+* ask_what_is_trichotomy
+    - action_get_answer
+
+## ask_what_is_forceps
+* ask_what_is_forceps
+    - action_get_answer
+
+## ask_what_is_braxton_hicks
+* ask_what_is_braxton_hicks
+    - action_get_answer
+
+## ask_what_is_eclampsia
+* ask_what_is_eclampsia
+    - action_get_answer
+
+## ask_what_is_uterine_height
+* ask_what_is_uterine_height
+    - action_get_answer
+
+## ask_what_is_amniocentesis
+* ask_what_is_amniocentesis
+    - action_get_answer
+
+## ask_what_is_bcf
+* ask_what_is_bcf
+    - action_get_answer
+
+## ask_what_is_term_baby
+* ask_what_is_term_baby
+    - action_get_answer
+
+## ask_what_is_deflected_baby
+* ask_what_is_deflected_baby
+    - action_get_answer
+
+## ask_what_is_pelvic
+* ask_what_is_pelvic
+    - action_get_answer
+
+## ask_what_is_choric
+* ask_what_is_choric
+    - action_get_answer
+
+## ask_what_is_beta_hcg
+* ask_what_is_beta_hcg
+    - action_get_answer
+
+## ask_what_is_colostrum
+* ask_what_is_colostrum
+    - action_get_answer
+
+## ask_what_is_pdd
+* ask_what_is_pdd
+    - action_get_answer
+
+## ask_what_is_hyperemesis_gravidarum
+* ask_what_is_hyperemesis_gravidarum
+    - action_get_answer
+
+## ask_what_is_isthmus_cervical
+* ask_what_is_isthmus_cervical
+    - action_get_answer
+
+## ask_what_is_nesting
+* ask_what_is_nesting
+    - action_get_answer
+
+## ask_what_is_oxytocin
+* ask_what_is_oxytocin
+    - action_get_answer
+
+## ask_what_is_previous_placenta
+* ask_what_is_previous_placenta
+    - action_get_answer
+
+## ask_what_is_epidural_anesthesia
+* ask_what_is_epidural_anesthesia
+    - action_get_answer
+
+## ask_what_is_cephalic_perimeter
+* ask_what_is_cephalic_perimeter
+    - action_get_answer
+
+## ask_what_is_spinal_anesthesia
+* ask_what_is_spinal_anesthesia
+    - action_get_answer
+
+## ask_what_is_basal_temperature
+* ask_what_is_basal_temperature
+    - action_get_answer
+
+## ask_what_is_nuchal_translucency
+* ask_what_is_nuchal_translucency
+    - action_get_answer
+
+## ask_can_paint_nails
+* ask_can_paint_nails
+    - action_get_answer
+
+## ask_can_paint_hair
+* ask_can_paint_hair
+    - action_get_answer
+
+## ask_can_discolor_hair
+* ask_can_discolor_hair
+    - action_get_answer
+
+## ask_can_ride_motorcycle
+* ask_can_ride_motorcycle
+    - action_get_answer
+
+## ask_can_horseback_riding
+* ask_can_horseback_riding
+    - action_get_answer
+
+## ask_can_ride_bike
+* ask_can_ride_bike
+    - action_get_answer
+
+## ask_can_take_laxative
+* ask_can_take_laxative
+    - action_get_answer
+
+## ask_can_take_bath
+* ask_can_take_bath
+    - action_get_answer
+
+## ask_can_steam_room
+* ask_can_steam_room
+    - action_get_answer
+
+## ask_can_chili
+* ask_can_chili
+    - action_get_answer
+
+## ask_can_coffee
+* ask_can_coffee
+    - action_get_answer
+
+## ask_can_sunbathe
+* ask_can_sunbathe
+    - action_get_answer
+
+## ask_can_moisturizer
+* ask_can_moisturizer
+    - action_get_answer
+
+## ask_can_travel
+* ask_can_travel
+    - action_get_answer
+
+## ask_can_travel
+* ask_can_travel
+    - action_get_answer
+
+## ask_can_ladder
+* ask_can_ladder
+    - action_get_answer
+
+## ask_can_high_heels
+* ask_can_high_heels
+    - action_get_answer
+
+## ask_can_japanese_food
+* ask_can_japanese_food
+    - action_get_answer
+
+## ask_can_dentist
+* ask_can_dentist
+    - action_get_answer
+
+## ask_can_exercise
+* ask_can_exercise
+    - action_get_answer
+
+## ask_can_alcohol
+* ask_can_alcohol
+    - action_get_answer
+
+## ask_can_drugs
+* ask_can_drugs
+    - action_get_answer
+
+## ask_can_smoke
+* ask_can_smoke
+    - action_get_answer
+
+## ask_can_x_ray
+* ask_can_x_ray
+    - action_get_answer
+
+## ask_can_sex
+* ask_can_sex
+    - action_get_answer
+
+## ask_can_raw_meat
+* ask_can_raw_meat
+    - action_get_answer
+
+## ask_can_soda
+* ask_can_soda
+    - action_get_answer
+
+## ask_can_sweetener
+* ask_can_sweetener
+    - action_get_answer
+
+## ask_can_vaccine
+* ask_can_vaccine
+    - action_get_answer
+
+## ask_can_sleep_stomach
+* ask_can_sleep_stomach
+    - action_get_answer
+
+## ask_can_hot_wax
+* ask_can_hot_wax
+    - action_get_answer
+
+## ask_can_pap_smear
+* ask_can_pap_smear
+    - action_get_answer
+
+## ask_can_drive
+* ask_can_drive
+    - action_get_answer
+
+## ask_when_start_prenatal
+* ask_when_start_prenatal
+    - action_get_answer
+
+## ask_when_episiotomy
+* ask_when_episiotomy
+    - action_get_answer
+
+## ask_when_baby_move
+* ask_when_baby_move
+    - action_get_answer
+
+## ask_when_start_braxton_hicks
+* ask_when_start_braxton_hicks
+    - action_get_answer
+
+## ask_when_exam_feces
+* ask_when_exam_feces
+    - action_get_answer
+
+## ask_when_exam_blood_glucose
+* ask_when_exam_blood_glucose
+    - action_get_answer
+
+## ask_when_exam_blood
+* ask_when_exam_blood
+    - action_get_answer
+
+## ask_when_exam_urine
+* ask_when_exam_urine
+    - action_get_answer
+
+## ask_when_exam_intravaginal_ultrasound
+* ask_when_exam_intravaginal_ultrasound
+    - action_get_answer
+
+## ask_when_exam_nuchal_translucency_ultrasound
+* ask_when_exam_nuchal_translucency_ultrasound
+    - action_get_answer
+
+## ask_when_exam_screening_gestational_diabetes
+* ask_when_exam_screening_gestational_diabetes
+    - action_get_answer
+
+## ask_when_exam_screening_beta_hermolytic_streptococcus
+* ask_when_exam_screening_beta_hermolytic_streptococcus
+    - action_get_answer
+
+## ask_when_exam_third_trimester_ultrasound
+* ask_when_exam_third_trimester_ultrasound
+    - action_get_answer
+
+## ask_when_stop_nausea
+* ask_when_stop_nausea
+    - action_get_answer
+
+## ask_symptom_miscarriage
+* ask_symptom_miscarriage
+    - action_get_answer
+
+## ask_symptom_pregnancy
+* ask_symptom_pregnancy
+    - action_get_answer
+
+## ask_symptom_premature_birth
+* ask_symptom_premature_birth
+    - action_get_answer
+
+## ask_symptom_pre_eclampsia
+* ask_symptom_pre_eclampsia
+    - action_get_answer
+
+## ask_why_sleep
+* ask_why_sleep
+    - action_get_answer
+
+## ask_why_nausea
+* ask_why_nausea
+    - action_get_answer
+
+## ask_risk_factor_pregnancy
+* ask_risk_factor_pregnancy
+    - action_get_answer
+
+## ask_risk_factor_premature_birth
+* ask_risk_factor_premature_birth
+    - action_get_answer
+
+## ask_causes_pre_eclampsia
+* ask_causes_pre_eclampsia
+    - action_get_answer
+
+## ask_causes_premature_birth
+* ask_causes_premature_birth
+    - action_get_answer
+
+## ask_what_to_do_bag
+* ask_what_to_do_bag
+    - action_get_answer
+
+## ask_what_to_do_bleeding
+* ask_what_to_do_bleeding
+    - action_get_answer
+
+## ask_importance_breast_feeding
+* ask_importance_breast_feeding
+    - action_get_answer
+
+## ask_how_to_know_bag_burst
+* ask_how_to_know_bag_burst
+    - action_get_answer
+
+## ask_how_to_know_childbirth
+* ask_how_to_know_childbirth
+    - action_get_answer
+
+## ask_how_to_know_pregnancy
+* ask_how_to_know_pregnancy
+    - action_get_answer
+
+## ask_prevent_premature_birth
+* ask_prevent_premature_birth
+    - action_get_answer
+
+## ask_prevent_pre_eclampsia
+* ask_prevent_pre_eclampsia
+    - action_get_answer
+
+## complain_nauseas
+* complain_nauseas
+    - action_get_answer
+
+## complain_heartburn
+* complain_heartburn
+    - action_get_answer
+
+## complain_salivation
+* complain_salivation
+    - action_get_answer
+
+## complain_weakness
+* complain_weakness
+    - action_get_answer
+
+## complain_flatulence
+* complain_flatulence
+    - action_get_answer
+
+## complain_constipation
+* complain_constipation
+    - action_get_answer
+
+## complain_discharge
+* complain_discharge
+    - action_get_answer
+
+## complain_urine
+* complain_urine
+    - action_get_answer
+
+## complain_breasts
+* complain_breasts
+    - action_get_answer
+
+## complain_varicose_veins
+* complain_varicose_veins
+    - action_get_answer
+
+## complain_body
+* complain_body
+    - action_get_answer
+
+## complain_headache
+* complain_headache
+    - action_get_answer
+
+## complain_cramps
+* complain_cramps
+    - action_get_answer
+
+## complain_stretch_marks
+* complain_stretch_marks
+    - action_get_answer
+
+## complain_melasma
+* complain_melasma
+    - action_get_answer
+
+## complain_gums
+* complain_gums
+    - action_get_answer
+
+## complain_shortness_breath
+* complain_shortness_breath
+    - action_get_answer
+
+## complain_bleeding
+* complain_bleeding
+    - action_get_answer
+
+## complain_colic
+* complain_colic
+    - action_get_answer
+
+## ask_goal_exam_feces
+* ask_goal_exam_feces
+    - action_get_answer
+
+## ask_goal_exam_blood_glucose
+* ask_goal_exam_blood_glucose
+    - action_get_answer
+
+## ask_goal_exam_blood
+* ask_goal_exam_blood
+    - action_get_answer
+
+## ask_goal_exam_urine
+* ask_goal_exam_urine
+    - action_get_answer
+
+## ask_goal_exam_intravaginal_ultrasound
+* ask_goal_exam_intravaginal_ultrasound
+    - action_get_answer
+
+## ask_goal_exam_nuchal_translucency_ultrasound
+* ask_goal_exam_nuchal_translucency_ultrasound
+    - action_get_answer
+
+## ask_goal_exam_screening_gestational_diabetes
+* ask_goal_exam_screening_gestational_diabetes
+    - action_get_answer
+
+## ask_goal_exam_screening_beta_hermolytic_streptococcus
+* ask_goal_exam_screening_beta_hermolytic_streptococcus
+    - action_get_answer
+
+## ask_goal_exam_third_trimester_ultrasound
+* ask_goal_exam_third_trimester_ultrasound
+    - action_get_answer
+
+## ask_how_works_prenatal
+* ask_how_works_prenatal
+    - action_get_answer

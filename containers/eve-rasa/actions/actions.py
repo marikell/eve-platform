@@ -3,7 +3,7 @@ from rasa_sdk import Action, Tracker, ActionExecutionRejection
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction, REQUESTED_SLOT
 from rasa_sdk.events import SlotSet
-from rasa_core_sdk.events import UserUtteranceReverted
+from rasa_sdk.events import UserUtteranceReverted
 from route_config import RouteConfig
 import requests
 import json
@@ -31,13 +31,9 @@ class GetAnswer(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         intent = tracker.latest_message['intent'].get('name')
-        if(intent == 'last_intent'):
-            intent = tracker.get_slot('last_intent')
-        entities = tracker.latest_message['entities']
-        entities_obj = [e.get('value') for e in entities]
+                
         response = 'Não vou te conseguir ajudar nessa, mas pergunte ao seu médico, ele saberá te responder ;)'
         data = {
-            'entities' : entities_obj,
             'intent' : intent
         }
         headers = {
@@ -56,7 +52,7 @@ class GetAnswer(Action):
             dispatcher.utter_message(response)
         except:
             dispatcher.utter_message(response)
-        return [SlotSet("last_intent", intent)]
+        return []
 
 class ActionGreetUser(Action):
     def name(self) -> Text:
@@ -761,10 +757,12 @@ class PregnancyForm(FormAction):
                     self.from_text(intent="enter_data")
                 ],
                 "births": [
-                    self.from_entity(entity="number")
+                    self.from_entity(entity="number"),
+                    self.from_text(intent="enter_data")
                 ],
                 "normal_births": [
-                    self.from_entity(entity="number")
+                    self.from_entity(entity="number"),
+                    self.from_text(intent="enter_data")
                 ],
                 "why_cesarean_birth": [
                     self.from_text(intent="why_cesarean_answer"),
@@ -861,4 +859,21 @@ class ActionAskForm(Action):
 
     def run(self, dispatcher, tracker, domain):
         dispatcher.utter_template("utter_explain_whatspossible", tracker)
+        return [UserUtteranceReverted()]
+
+class ActionDefaultFallback(Action):
+    def name(self) -> Text:
+        return "action_default_fallback"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        headers = { 'Content-Type':'application/json' }
+        try:
+            data = { 'question' : tracker.latest_message['text'] }
+            req = requests.post(url = route_config.get_route('send_unanswered_question'),headers= headers,data=json.dumps(data))
+            dispatcher.utter_template("utter_default", tracker)            
+        except:
+            dispatcher.utter_template("utter_default", tracker)
+
         return [UserUtteranceReverted()]

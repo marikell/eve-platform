@@ -6,17 +6,27 @@ pipeline:
 - name: "CRFEntityExtractor"
 - name: "DucklingHTTPExtractor"
   url: "http://eve_duckling:8000"
-  dimensions: ["time"]
+  dimensions: ["time","number"]
 - name: "EntitySynonymMapper"
 - name: "CountVectorsFeaturizer"
-- name: "EmbeddingIntentClassifier"  
+- name: "CountVectorsFeaturizer"
+  analyzer: "char_wb"
+  min_ngram: 1
+  max_ngram: 4
+- name: "EmbeddingIntentClassifier"
 
 policies:
-  - name: "MemoizationPolicy"
   - name: "KerasPolicy"
+    featurizer:
+      - name: MaxHistoryTrackerFeaturizer
+        max_history: 5
+        state_featurizer:
+          - name: BinarySingleStateFeaturizer
+  - name: "MemoizationPolicy"
   - name: "MappingPolicy"
   - name: "FormPolicy"
   - name: "FallbackPolicy"
-    nlu_threshold: 0.6
+    nlu_threshold: 0.3
     core_threshold: 0.4
+    ambiguity_threshold: 0.01
     fallback_action_name: "action_default_fallback"

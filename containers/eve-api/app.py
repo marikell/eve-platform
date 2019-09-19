@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, abort, make_response, request
 from flask_pymongo import PyMongo
 from werkzeug import Response
-from api.blueprints.entity_intent_answer_blueprint import  app_entity_intent_answer
+from api.blueprints.intent_answer_blueprint import  app_intent_answer
 from api.blueprints.exam_blueprint import app_exam
 from api.blueprints.user_blueprint import app_user
 from api.blueprints.tip_blueprint import app_tip
@@ -35,7 +35,7 @@ db.init_app(flask_app)
 
 def register_blueprints(app):
     app.register_blueprint(app_answer)
-    app.register_blueprint(app_entity_intent_answer)
+    app.register_blueprint(app_intent_answer)
     app.register_blueprint(app_user)
     app.register_blueprint(app_exam)
     app.register_blueprint(app_fup)
