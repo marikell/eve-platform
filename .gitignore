@@ -15,3 +15,4 @@ containers/eve-api/env
 containers/eve-fup/env
 containers/eve-notify/env
 containers/eve-mongo/backups
+containers/eve-seed/env
