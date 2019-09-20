@@ -1,389 +1,388 @@
-actions:
-  - action_default_fallback
-  - ask_form
-  - utter_hello
-  - utter_bye
-  - utter_default
-  - utter_great
-  - utter_greet
-  - utter_greet_answer
-  - utter_greet_back
-  - utter_help
-  - utter_introduce
-  - utter_ask_info
-  - utter_welcome
-  - utter_thank_you
-  - utter_canthelp
-  - utter_ask_wherefrom
-  - utter_ask_howold
-  - utter_ask_isbot
-  - utter_congrats
-  - utter_first_step
-  - utter_ask_is_pregnant
-  - utter_ask_is_trying
-  - utter_ask_planned_pregnancy
-  - utter_ask_health_plan
-  - utter_ask_first_pregnancy
-  - utter_ask_pre_natal
-  - utter_info_later
-  - utter_pre_natal_sus
-  - utter_ask_is_planning
-  - utter_planning_pregnancy
-  - utter_ask_has_children
-  - utter_ask_me_anything
-  - utter_schedule_gynecologist
-  - utter_doing_right
-  - utter_ask_subscribe
-  - utter_ask_exam
-  - action_get_answer
-  - action_greet_user
-  - action_is_bot
-  - action_how_old
-  - action_where_from
-  - action_who_is_it
-  - utter_explain_whatspossible
-  - action_whats_possible
-  - action_cant_help
-  - utter_okay
-  - action_get_exam
-  - utter_doing_right_exam
-  - action_doing_right_exam
-  - utter_is_important_exam
-  - utter_why_answer
-  - utter_agree
-  - utter_ask
-  - utter_ask_me_later
-  - utter_ask_first_ultrasound
-  - utter_ask_first_ultrasound_date
-  - utter_baby_not_moving
-  - utter_which_medicine
-  - utter_ask_health_questions
-  - utter_ask_personal_questions
-  - utter_ask_pregnancy_questions
-  - utter_ask_breastfeeding
-  - utter_ask_having_sex
-  - utter_ask_contraceptive_method
-  - utter_ask_episiotomy
-  - utter_ask_doctor_appointment
-  - utter_ask_infection
-  - utter_ask_infection_kind
-  - action_congrats
-entities: 
-  - last_menstruation
-  - first_ultrasound
-  - first_ultrasound_date
-  - question_entity
-  - time
-  - number
-  - distance
-  - state
-  - med_name   
-  - doc_name
-  - has_children
-  - health_plan
-  - is_planning
-  - is_pregnant
-  - is_trying
-  - is_postpartum
-  - breastfeeding
-  - having_sex
-  - contraceptive_method
-  - type_delivery
-  - episiotomy
-  - doctor_appointment
-  - infection
-  - infection_kind
-forms:
-  - form_initial
-  - form_health
-  - form_personal
-  - form_pregnancy
 intents:
-  - hello
-  - greeting
-  - affirm
-  - deny
-  - ill_do_it
-  - did_exam
-  - thank_you
-  - affirm+thank_you
-  - got_it
-  - affirm+got_it
-  - affirm+got_it+thank_you
-  - got_it+thank_you
-  - bye
-  - thank_you+bye
-  - bye+thank_you
-  - affirm+did_exam
-  - deny+did_not_exam
-  - hello+greeting
-  - have_question
-  - affirm+have_question
-  - affirm+ill_do_it
-  - im_pregnant
-  - hello+im_pregnant
-  - ask_isbot:
-      triggers: action_is_bot
-  - ask_howold:
-      triggers: action_how_old
-  - ask_wherefrom:
-      triggers: action_where_from
-  - ask_whoisit:
-      triggers: action_who_is_it
-  - canthelp:
-      triggers: action_cant_help
-  - did_not_exam
-  - enter_data
-  - greeting_answer
-  - greeting_back
-  - i_know_importance
-  - no_question
-  - later
-  - why_i_need_to_answer
-  - stop
-  - stop_form
-  - ask_whatspossible:
-      triggers: action_whats_possible
-  - baby_not_moving
-  - welcome
-  - why_cesarean_answer
-  - dont_know
-  - ask_normal_birth_pain
-  - ask_exercise_help_normal_birth
-  - ask_breast_milk_normal_birth
-  - ask_normal_birth_recovery
-  - ask_normal_birth_duration
-  - ask_birth_transmit_disease
-  - ask_avoid_normal_birth
-  - ask_ideal_birth_older_women
-  - ask_calculate_fertile_period
-  - ask_late_menstruation
-  - ask_do_pregnancy_test
-  - ask_normal_swollen_foot
-  - ask_how_long_milk_come_down
-  - ask_normal_fever_milk_comes_down
-  - ask_prevent_milk_stumbling
-  - ask_pain_breastfeed
-  - ask_thirst_breastfeed
-  - ask_feeling_sad
-  - ask_diet_breastfeed
-  - ask_gain_weight_pregnancy
-  - ask_when_have_sex
-  - ask_stretch_marks
-  - ask_desire_sex
-  - ask_loose_vagina
-  - ask_sagging_breasts_breastfeed
-  - ask_body_back_normal
-  - ask_back_exercise
-  - ask_loss_hair_breastfeed
-  - ask_exercise_impair_milk
-  - ask_normal_bleeding_after_birth
-  - ask_normal_menstruation_breastfeed
-  - ask_dye_hair_breastfeed
-  - ask_normal_lose_weight_breastfeed
-  - ask_normal_feeling_tired
-  - ask_normal_bigger_foot
-  - ask_pregnant_menopause
-  - ask_sex_bad_pregnancy
-  - ask_feces_normal_birth
-  - ask_sore_sex_after_birth
-  - ask_have_sex_until_month
-  - ask_receive_oral_sex
-  - ask_smell_sweat_stronger
-  - ask_sex_hurt_baby
-  - ask_choose_birth_type_public
-  - ask_pregnant_eat_two
-  - ask_avoid_cleaning_products
-  - ask_best_position_baby_sleep
-  - ask_what_vaccines_baby
-  - ask_when_go_pediatrician
-  - ask_care_baby_belly_button
-  - ask_birth_control_difficult_pregnancy
-  - ask_how_many_pounds_pregnancy
-  - ask_how_long_breastfeed
-  - ask_how_long_healthy_pregnant
-  - ask_high_risk_normal_birth
-  - ask_ultrasound_hurt_baby
-  - ask_baby_feel_sex
-  - ask_food_desire_baby_appearance
-  - ask_anesthesia_dentist
-  - ask_contraceptive_pill_after_birth
-  - ask_invite_accompany_birth
-  - ask_cesarean_can_normal_birth
-  - ask_main_exams_prenatal
-  - ask_allowed_exercises
-  - ask_allowed_depilation
-  - ask_needed_feed
-  - ask_needed_vaccine
-  - ask_signs_labor
-  - ask_ideal_weight
-  - ask_best_sleeping_position
-  - ask_best_childbirth
-  - ask_cases_forceps
-  - ask_medicine
-  - ask_not_allowed_exercises
-  - ask_not_allowed_food
-  - ask_not_allowed_vaccine
-  - ask_what_is_prenatal
-  - ask_what_is_postpartum
-  - ask_what_is_loco
-  - ask_what_is_miscarriage
-  - ask_what_is_amniotic_fluid
-  - ask_what_is_pre_eclampsia
-  - ask_what_is_folic_acid
-  - ask_what_is_episiotomy
-  - ask_what_is_trichotomy
-  - ask_what_is_forceps
-  - ask_what_is_braxton_hicks
-  - ask_what_is_eclampsia
-  - ask_what_is_uterine_height
-  - ask_what_is_amniocentesis
-  - ask_what_is_bcf
-  - ask_what_is_term_baby
-  - ask_what_is_deflected_baby
-  - ask_what_is_pelvic
-  - ask_what_is_choric
-  - ask_what_is_beta_hcg
-  - ask_what_is_colostrum
-  - ask_what_is_pdd
-  - ask_what_to_do_bag
-  - ask_what_is_hyperemesis_gravidarum
-  - ask_what_is_isthmus_cervical
-  - ask_how_to_know_bag_burst
-  - ask_what_is_nesting
-  - ask_what_is_oxytocin
-  - ask_what_is_previous_placenta
-  - ask_what_is_epidural_anesthesia
-  - ask_what_is_cephalic_perimeter
-  - ask_what_is_spinal_anesthesia
-  - ask_what_is_basal_temperature
-  - ask_what_is_nuchal_translucency
-  - ask_can_paint_nails
-  - ask_can_paint_hair
-  - ask_can_discolor_hair
-  - ask_can_ride_motorcycle
-  - ask_can_horseback_riding
-  - ask_can_ride_bike
-  - ask_can_take_laxative
-  - ask_can_take_bath
-  - ask_can_steam_room
-  - ask_can_chili
-  - ask_can_coffee
-  - ask_can_sunbathe
-  - ask_can_moisturizer
-  - ask_can_travel
-  - ask_can_ladder
-  - ask_can_high_heels
-  - ask_can_japanese_food
-  - ask_can_dentist
-  - ask_can_exercise
-  - ask_can_alcohol
-  - ask_can_drugs
-  - ask_can_smoke
-  - ask_can_x_ray
-  - ask_can_sex
-  - ask_can_raw_meat
-  - ask_can_medicine
-  - ask_can_soda
-  - ask_can_sweetener
-  - ask_can_vaccine
-  - ask_can_sleep_stomach
-  - ask_can_hot_wax
-  - ask_can_pap_smear
-  - ask_can_drive
-  - ask_when_start_prenatal
-  - ask_when_episiotomy
-  - ask_when_baby_move
-  - ask_when_start_braxton_hicks
-  - ask_when_exam_feces
-  - ask_when_exam_blood_glucose
-  - ask_when_exam_blood
-  - ask_when_exam_urine
-  - ask_when_exam_intravaginal_ultrasound
-  - ask_when_exam_nuchal_translucency_ultrasound
-  - ask_when_exam_screening_gestational_diabetes
-  - ask_when_exam_screening_beta_hermolytic_streptococcus
-  - ask_when_exam_third_trimester_ultrasound
-  - ask_when_stop_nausea
-  - ask_symptom_miscarriage
-  - ask_symptom_pregnancy
-  - ask_symptom_premature_birth
-  - ask_symptom_pre_eclampsia
-  - ask_why_sleep
-  - ask_why_nausea
-  - ask_risk_factor_pregnancy
-  - ask_risk_factor_premature_birth
-  - ask_causes_pre_eclampsia
-  - ask_causes_premature_birth
-  - what_to_do
-  - ask_what_to_do_bleeding
-  - ask_importance_breast_feeding  
-  - how_to_know
-  - ask_how_to_know_childbirth
-  - ask_how_to_know_pregnancy
-  - ask_prevent_premature_birth
-  - ask_prevent_pre_eclampsia
-  - complain_nauseas
-  - complain_vomit
-  - complain_dizziness
-  - complain_heartburn
-  - complain_salivation
-  - complain_weakness
-  - complain_flatulence
-  - complain_constipation
-  - complain_discharge
-  - complain_urine
-  - complain_breasts
-  - complain_varicose_veins
-  - complain_body
-  - complain_headache
-  - complain_cramps
-  - complain_stretch_marks
-  - complain_melasma
-  - complain_gums
-  - complain_shortness_breath
-  - complain_back
-  - complain_knee
-  - complain_ankle
-  - complain_bleeding
-  - complain_colic
-  - ask_goal_exam_feces
-  - ask_goal_exam_blood_glucose
-  - ask_goal_exam_blood
-  - ask_goal_exam_urine
-  - ask_goal_exam_intravaginal_ultrasound
-  - ask_goal_exam_nuchal_translucency_ultrasound
-  - ask_goal_exam_screening_gestational_diabetes
-  - ask_goal_exam_screening_beta_hermolytic_streptococcus
-  - ask_goal_exam_third_trimester_ultrasound
-  - ask_how_works_prenatal
+- hello
+- greeting
+- affirm
+- deny
+- ill_do_it
+- did_exam
+- thank_you
+- affirm+thank_you
+- got_it
+- affirm+got_it
+- affirm+got_it+thank_you
+- got_it+thank_you
+- bye
+- thank_you+bye
+- bye+thank_you
+- affirm+did_exam
+- deny+did_not_exam
+- hello+greeting
+- have_question
+- affirm+have_question
+- affirm+ill_do_it
+- im_pregnant
+- hello+im_pregnant
+- ask_isbot:
+    triggers: action_is_bot
+- ask_howold:
+    triggers: action_how_old
+- ask_wherefrom:
+    triggers: action_where_from
+- ask_whoisit:
+    triggers: action_who_is_it
+- canthelp:
+    triggers: action_cant_help
+- did_not_exam
+- enter_data
+- greeting_answer
+- greeting_back
+- i_know_importance
+- no_question
+- later
+- why_i_need_to_answer
+- stop
+- stop_form
+- ask_whatspossible:
+    triggers: action_whats_possible
+- baby_not_moving
+- welcome
+- why_cesarean_answer
+- dont_know
+- ask_normal_birth_pain
+- ask_exercise_help_normal_birth
+- ask_breast_milk_normal_birth
+- ask_normal_birth_recovery
+- ask_normal_birth_duration
+- ask_birth_transmit_disease
+- ask_avoid_normal_birth
+- ask_ideal_birth_older_women
+- ask_calculate_fertile_period
+- ask_late_menstruation
+- ask_do_pregnancy_test
+- ask_normal_swollen_foot
+- ask_how_long_milk_come_down
+- ask_normal_fever_milk_comes_down
+- ask_prevent_milk_stumbling
+- ask_pain_breastfeed
+- ask_thirst_breastfeed
+- ask_feeling_sad
+- ask_diet_breastfeed
+- ask_gain_weight_pregnancy
+- ask_when_have_sex
+- ask_stretch_marks
+- ask_desire_sex
+- ask_loose_vagina
+- ask_sagging_breasts_breastfeed
+- ask_body_back_normal
+- ask_back_exercise
+- ask_loss_hair_breastfeed
+- ask_exercise_impair_milk
+- ask_normal_bleeding_after_birth
+- ask_normal_menstruation_breastfeed
+- ask_dye_hair_breastfeed
+- ask_normal_lose_weight_breastfeed
+- ask_normal_feeling_tired
+- ask_normal_bigger_foot
+- ask_pregnant_menopause
+- ask_sex_bad_pregnancy
+- ask_feces_normal_birth
+- ask_sore_sex_after_birth
+- ask_have_sex_until_month
+- ask_receive_oral_sex
+- ask_smell_sweat_stronger
+- ask_sex_hurt_baby
+- ask_choose_birth_type_public
+- ask_pregnant_eat_two
+- ask_avoid_cleaning_products
+- ask_best_position_baby_sleep
+- ask_what_vaccines_baby
+- ask_when_go_pediatrician
+- ask_care_baby_belly_button
+- ask_birth_control_difficult_pregnancy
+- ask_how_many_pounds_pregnancy
+- ask_how_long_breastfeed
+- ask_how_long_healthy_pregnant
+- ask_high_risk_normal_birth
+- ask_ultrasound_hurt_baby
+- ask_baby_feel_sex
+- ask_food_desire_baby_appearance
+- ask_anesthesia_dentist
+- ask_contraceptive_pill_after_birth
+- ask_invite_accompany_birth
+- ask_cesarean_can_normal_birth
+- ask_main_exams_prenatal
+- ask_allowed_exercises
+- ask_allowed_depilation
+- ask_needed_feed
+- ask_needed_vaccine
+- ask_signs_labor
+- ask_ideal_weight
+- ask_best_sleeping_position
+- ask_best_childbirth
+- ask_cases_forceps
+- ask_medicine
+- ask_not_allowed_exercises
+- ask_not_allowed_food
+- ask_not_allowed_vaccine
+- ask_what_is_prenatal
+- ask_what_is_postpartum
+- ask_what_is_loco
+- ask_what_is_miscarriage
+- ask_what_is_amniotic_fluid
+- ask_what_is_pre_eclampsia
+- ask_what_is_folic_acid
+- ask_what_is_episiotomy
+- ask_what_is_trichotomy
+- ask_what_is_forceps
+- ask_what_is_braxton_hicks
+- ask_what_is_eclampsia
+- ask_what_is_uterine_height
+- ask_what_is_amniocentesis
+- ask_what_is_bcf
+- ask_what_is_term_baby
+- ask_what_is_deflected_baby
+- ask_what_is_pelvic
+- ask_what_is_choric
+- ask_what_is_beta_hcg
+- ask_what_is_colostrum
+- ask_what_is_pdd
+- ask_what_to_do_bag
+- ask_what_is_hyperemesis_gravidarum
+- ask_what_is_isthmus_cervical
+- ask_how_to_know_bag_burst
+- ask_what_is_nesting
+- ask_what_is_oxytocin
+- ask_what_is_previous_placenta
+- ask_what_is_epidural_anesthesia
+- ask_what_is_cephalic_perimeter
+- ask_what_is_spinal_anesthesia
+- ask_what_is_basal_temperature
+- ask_what_is_nuchal_translucency
+- ask_can_paint_nails
+- ask_can_paint_hair
+- ask_can_discolor_hair
+- ask_can_ride_motorcycle
+- ask_can_horseback_riding
+- ask_can_ride_bike
+- ask_can_take_laxative
+- ask_can_take_bath
+- ask_can_steam_room
+- ask_can_chili
+- ask_can_coffee
+- ask_can_sunbathe
+- ask_can_moisturizer
+- ask_can_travel
+- ask_can_ladder
+- ask_can_high_heels
+- ask_can_japanese_food
+- ask_can_dentist
+- ask_can_exercise
+- ask_can_alcohol
+- ask_can_drugs
+- ask_can_smoke
+- ask_can_x_ray
+- ask_can_sex
+- ask_can_raw_meat
+- ask_can_medicine
+- ask_can_soda
+- ask_can_sweetener
+- ask_can_vaccine
+- ask_can_sleep_stomach
+- ask_can_hot_wax
+- ask_can_pap_smear
+- ask_can_drive
+- ask_when_start_prenatal
+- ask_when_episiotomy
+- ask_when_baby_move
+- ask_when_start_braxton_hicks
+- ask_when_exam_feces
+- ask_when_exam_blood_glucose
+- ask_when_exam_blood
+- ask_when_exam_urine
+- ask_when_exam_intravaginal_ultrasound
+- ask_when_exam_nuchal_translucency_ultrasound
+- ask_when_exam_screening_gestational_diabetes
+- ask_when_exam_screening_beta_hermolytic_streptococcus
+- ask_when_exam_third_trimester_ultrasound
+- ask_when_stop_nausea
+- ask_symptom_miscarriage
+- ask_symptom_pregnancy
+- ask_symptom_premature_birth
+- ask_symptom_pre_eclampsia
+- ask_why_sleep
+- ask_why_nausea
+- ask_risk_factor_pregnancy
+- ask_risk_factor_premature_birth
+- ask_causes_pre_eclampsia
+- ask_causes_premature_birth
+- what_to_do
+- ask_what_to_do_bleeding
+- ask_importance_breast_feeding
+- how_to_know
+- ask_how_to_know_childbirth
+- ask_how_to_know_pregnancy
+- ask_prevent_premature_birth
+- ask_prevent_pre_eclampsia
+- complain_nauseas
+- complain_vomit
+- complain_dizziness
+- complain_heartburn
+- complain_salivation
+- complain_weakness
+- complain_flatulence
+- complain_constipation
+- complain_discharge
+- complain_urine
+- complain_breasts
+- complain_varicose_veins
+- complain_body
+- complain_headache
+- complain_cramps
+- complain_stretch_marks
+- complain_melasma
+- complain_gums
+- complain_shortness_breath
+- complain_back
+- complain_knee
+- complain_ankle
+- complain_bleeding
+- complain_colic
+- ask_goal_exam_feces
+- ask_goal_exam_blood_glucose
+- ask_goal_exam_blood
+- ask_goal_exam_urine
+- ask_goal_exam_intravaginal_ultrasound
+- ask_goal_exam_nuchal_translucency_ultrasound
+- ask_goal_exam_screening_gestational_diabetes
+- ask_goal_exam_screening_beta_hermolytic_streptococcus
+- ask_goal_exam_third_trimester_ultrasound
+- ask_how_works_prenatal
+entities:
+- last_menstruation
+- first_ultrasound
+- first_ultrasound_date
+- question_entity
+- time
+- number
+- distance
+- state
+- med_name
+- doc_name
+- has_children
+- health_plan
+- is_planning
+- is_pregnant
+- is_trying
+- is_postpartum
+- breastfeeding
+- having_sex
+- contraceptive_method
+- type_delivery
+- episiotomy
+- doctor_appointment
+- infection
+- infection_kind
+- height
+- planned_pregnancy
+- seropositive
+- weight
+- high_pressure
+- asthma
+- regular_medicine
+- drug_use
+- diabetes
+- hypothyroidism
+- autoimmune_disease
+- hyperthyroidism
 slots:
+  abortion:
+    type: unfeaturized
+  asthma:
+    type: unfeaturized
+  autoimmune_disease:
+    type: unfeaturized
+  births:
+    type: unfeaturized
+  breastfeeding:
+    type: unfeaturized
+  contraceptive_method:
+    type: unfeaturized
+  diabetes:
+    type: unfeaturized
+  doctor_appointment:
+    type: unfeaturized
+  drug_use:
+    type: unfeaturized
+  due_date:
+    type: unfeaturized
+  episiotomy:
+    type: unfeaturized
+  exam_id:
+    type: text
+  exam_name:
+    type: text
   first_pregnancy:
-    type: unfeaturized
-  health_plan:
-    type: unfeaturized
-  planned_pregnancy:
-    type: unfeaturized
-  pre_natal:
-    type: unfeaturized
-  last_menstruation:
     type: unfeaturized
   first_ultrasound:
     type: unfeaturized
   first_ultrasound_date:
     type: unfeaturized
-  is_planning:
+  greeted_user:
+    type: bool
+  had_birth:
     type: unfeaturized
   has_children:
+    type: unfeaturized
+  having_sex:
+    type: unfeaturized
+  health_plan:
+    type: unfeaturized
+  height:
+    type: unfeaturized
+  high_pressure:
+    type: unfeaturized
+  high_risk:
+    type: unfeaturized
+  hyperthyroidism:
+    type: unfeaturized
+  hypothyroidism:
+    type: unfeaturized
+  infection:
+    type: unfeaturized
+  infection_kind:
+    type: unfeaturized
+  is_planning:
+    type: unfeaturized
+  is_postpartum:
     type: unfeaturized
   is_pregnant:
     type: unfeaturized
   is_trying:
     type: unfeaturized
+  last_menstruation:
+    type: unfeaturized
   med_name:
     type: unfeaturized
-  exam_name:
-    type: text
+  normal_births:
+    type: unfeaturized
+  planned_pregnancy:
+    type: unfeaturized
+  pre_natal:
+    type: unfeaturized
+  premature_birth:
+    type: unfeaturized
+  regular_medicine:
+    type: unfeaturized
+  regular_medicine_name:
+    type: unfeaturized
+  requested_slot:
+    type: unfeaturized
+  seropositive:
+    type: unfeaturized
+  state:
+    type: unfeaturized
+  type_delivery:
+    type: unfeaturized
   user_exam_id:
     type: text
   user_form_initial_id:
@@ -392,421 +391,467 @@ slots:
     type: text
   user_name:
     type: text
-  exam_id:
-    type: text
-  regular_medicine:
-    type: unfeaturized
-  regular_medicine_name:
-    type: unfeaturized
-  hypothyroidism:
-    type: unfeaturized
-  hyperthyroidism:
-    type: unfeaturized
-  diabetes:
-    type: unfeaturized
-  drug_use:
-    type: unfeaturized
-  autoimmune_disease:
-    type: unfeaturized
-  asthma:
-    type: unfeaturized
-  seropositive:
-    type: unfeaturized
-  high_pressure:
-    type: unfeaturized
-  greeted_user:
-    type: bool
-  height:
-    type: unfeaturized
   weight:
-    type: unfeaturized
-  state:
-    type: unfeaturized
-  high_risk:
-    type: unfeaturized
-  due_date:
-    type: unfeaturized
-  births:
-    type: unfeaturized
-  normal_births:
     type: unfeaturized
   why_cesarean_birth:
     type: unfeaturized
-  abortion:
-    type: unfeaturized
-  premature_birth:
-    type: unfeaturized
-  had_birth:
-    type: unfeaturized
-  breastfeeding:
-    type: unfeaturized
-  having_sex:
-    type: unfeaturized
-  contraceptive_method:
-    type: unfeaturized
-  type_delivery:
-    type: unfeaturized
-  episiotomy:
-    type: unfeaturized
-  doctor_appointment:
-    type: unfeaturized
-  infection:
-    type: unfeaturized
-  infection_kind:
-    type: unfeaturized
-  is_postpartum:
-    type: unfeaturized
-  requested_slot:
-    type: unfeaturized
-
 templates:
   utter_ask_first_pregnancy:
-  - text: "É a sua primeira gravidez?"
+  - text: É a sua primeira gravidez?
     buttons:
-    - title: "Sim"
-      payload: '/enter_data{"first_pregnancy":true}'
-    - title: "Não"
-      payload: '/enter_data{"first_pregnancy":false}'
+    - title: Sim
+      payload: /enter_data{"first_pregnancy":true}
+    - title: Não
+      payload: /enter_data{"first_pregnancy":false}
   utter_ask_health_plan:
-  - text: "Você possui plano de saúde?"
+  - text: Você possui plano de saúde?
     buttons:
-    - title: "Sim"
-      payload: '/enter_data{"health_plan":true}'
-    - title: "Não"
-      payload: '/enter_data{"health_plan":false}'
+    - title: Sim
+      payload: /enter_data{"health_plan":true}
+    - title: Não
+      payload: /enter_data{"health_plan":false}
   utter_ask_howold:
-  - text: "Sou velha o bastante pra ser médica haha 💁‍"
+  - text: Sou velha o bastante pra ser médica haha 💁‍
   utter_ask_info:
-  - text: "Bom, pra eu poder te ajudar, preciso te fazer algumas perguntas antes ok? É rapidinho 😊"
+  - text: Bom, pra eu poder te ajudar, preciso te fazer algumas perguntas antes ok?
+      É rapidinho 😊
   utter_ask_is_pregnant:
-  - text: "Você está grávida?"
+  - text: Você está grávida?
     buttons:
-    - title: "Sim"
-      payload: '/enter_data{"is_pregnant":true}'
-    - title: "Não"
-      payload: '/enter_data{"is_pregnant":false}'
+    - title: Sim
+      payload: /enter_data{"is_pregnant":true}
+    - title: Não
+      payload: /enter_data{"is_pregnant":false}
   utter_ask_isbot:
-  - text: "Eu sou um robô! 🤖"
+  - text: Eu sou um robô! 🤖
   utter_ask_planned_pregnancy:
-  - text: "A sua gravidez foi planejada?"
+  - text: A sua gravidez foi planejada?
     buttons:
-    - title: "Sim"
-      payload: '/enter_data{"planned_pregnancy":true}'
-    - title: "Não"
-      payload: '/enter_data{"planned_pregnancy":false}'
+    - title: Sim
+      payload: /enter_data{"planned_pregnancy":true}
+    - title: Não
+      payload: /enter_data{"planned_pregnancy":false}
   utter_ask_pre_natal:
-  - text: "Você já começou o pré-natal?"
+  - text: Você já começou o pré-natal?
     buttons:
-    - title: "Sim"
-      payload: '/enter_data{"pre_natal":true}'
-    - title: "Não"
-      payload: '/enter_data{"pre_natal":false}'
+    - title: Sim
+      payload: /enter_data{"pre_natal":true}
+    - title: Não
+      payload: /enter_data{"pre_natal":false}
   utter_ask_last_menstruation:
-  - text: "Qual a data da sua última menstruação?"
+  - text: Qual a data da sua última menstruação?
   utter_ask_first_ultrasound:
-  - text: "Você já fez o seu primeiro ultrassom?"
+  - text: Você já fez o seu primeiro ultrassom?
     buttons:
-    - title: "Sim"
-      payload: '/enter_data{"first_ultrasound":true}'
-    - title: "Não"
-      payload: '/enter_data{"first_ultrasound":false}'
+    - title: Sim
+      payload: /enter_data{"first_ultrasound":true}
+    - title: Não
+      payload: /enter_data{"first_ultrasound":false}
   utter_ask_first_ultrasound_date:
-  - text: "Qual a data do seu primeiro ultrassom?"
+  - text: Qual a data do seu primeiro ultrassom?
   utter_ask_is_trying:
-  - text: "Está tentando engravidar?"
+  - text: Está tentando engravidar?
     buttons:
-    - title: "Sim"
-      payload: '/enter_data{"is_trying":true}'
-    - title: "Não"
-      payload: '/enter_data{"is_trying":false}'
+    - title: Sim
+      payload: /enter_data{"is_trying":true}
+    - title: Não
+      payload: /enter_data{"is_trying":false}
   utter_ask_wherefrom:
-  - text: "Sou de Sorocaba, SP"
+  - text: Sou de Sorocaba, SP
   utter_bye:
-  - text: "Tchau! 😙"
-  - text: "Tchau, até mais! 😙"
+  - text: Tchau! 😙
+  - text: Tchau, até mais! 😙
   utter_canthelp:
-  - text: "Desculpe por não conseguir te ajudar 😕 Mas procure o seu médico, tenho certeza que ele conseguirá te ajudar! 😉"
+  - text: Desculpe por não conseguir te ajudar 😕 Mas procure o seu médico, tenho certeza
+      que ele conseguirá te ajudar! 😉
   utter_congrats:
-  - text: "Parabéns! Temos um baby a caminho 👶🤰😍"
+  - text: Parabéns! Temos um baby a caminho 👶🤰😍
   utter_default:
-  - text: "Desculpe, não entendi o que você quis dizer 😖"
+  - text: Desculpe, não entendi o que você quis dizer 😖
   utter_first_step:
-  - text: "Bom, a primeira coisa a se fazer é procurar um obstetra para acompanhar a sua gestação de perto e realizar o pré-natal! O pré-natal é de extrema importância para garantir a sua saúde e a do seu bebê! 👩‍⚕️"
+  - text: Bom, a primeira coisa a se fazer é procurar um obstetra para acompanhar
+      a sua gestação de perto e realizar o pré-natal! O pré-natal é de extrema importância
+      para garantir a sua saúde e a do seu bebê! 👩‍⚕️
   utter_great:
-  - text: "Legal! 🙌"
+  - text: Legal! 🙌
   utter_greet:
-  - text: "Como você está?"
-  - text: "Tudo bem com você?"
+  - text: Como você está?
+  - text: Tudo bem com você?
   utter_greet_answer:
-  - text: "Estou bem, obrigada 😁"
+  - text: Estou bem, obrigada 😁
   utter_greet_back:
-  - text: "Estou bem, e voce?"
+  - text: Estou bem, e voce?
   utter_hello:
-  - text: "Olá, {user_name}! 😄"
+  - text: Olá, {user_name}! 😄
   utter_help:
-  - text: "Bom, no que eu posso te ajudar? Você tem alguma dúvida?"
+  - text: Bom, no que eu posso te ajudar? Você tem alguma dúvida?
   utter_info_later:
-  - text: "Tudo bem, podemos fazer isso depois se quiser 😅"
+  - text: Tudo bem, podemos fazer isso depois se quiser 😅
   utter_introduce:
-  - text: "Eu sou a Dra. Lara e estou aqui pra te ajudar durante a gestação! 🤰"
+  - text: Eu sou a Dra. Lara e estou aqui pra te ajudar durante a gestação! 🤰
   utter_thank_you:
-  - text: "Obrigada 😊"
+  - text: Obrigada 😊
   utter_welcome:
-  - text: "Imagina, qualquer coisa só falar!"
+  - text: Imagina, qualquer coisa só falar!
   utter_pre_natal_sus:
-  - text: "Procure a rede pública mais próxima da sua casa e peça o atendimento 🏥"
+  - text: Procure a rede pública mais próxima da sua casa e peça o atendimento 🏥
   utter_ask_is_planning:
-  - text: "E você está se preparando para isso? Digo, passou com seu ginecologista para uma avaliação de rotina, por exemplo?"
+  - text: E você está se preparando para isso? Digo, passou com seu ginecologista
+      para uma avaliação de rotina, por exemplo?
     buttons:
-    - title: "Sim"
-      payload: '/enter_data{"is_planning":true}'
-    - title: "Não"
-      payload: '/enter_data{"is_planning":false}'
+    - title: Sim
+      payload: /enter_data{"is_planning":true}
+    - title: Não
+      payload: /enter_data{"is_planning":false}
   utter_ask_has_children:
-  - text: "Você já tem filhos?"
+  - text: Você já tem filhos?
     buttons:
-    - title: "Sim"
-      payload: '/enter_data{"has_children":true}'
-    - title: "Não"
-      payload: '/enter_data{"has_children":false}'
+    - title: Sim
+      payload: /enter_data{"has_children":true}
+    - title: Não
+      payload: /enter_data{"has_children":false}
   utter_ask_me_anything:
-  - text: "Então, você tem alguma dúvida? Talvez eu possa te ajudar"
+  - text: Então, você tem alguma dúvida? Talvez eu possa te ajudar
   utter_doing_right:
-  - text: "Ótimo 🙌 Você está fazendo certinho, se planejar e se preparar pra gravidez é muito importante!"
+  - text: Ótimo 🙌 Você está fazendo certinho, se planejar e se preparar pra gravidez
+      é muito importante!
   utter_doing_right_prenatal:
-  - text: "Ótimo 🙌 Você está fazendo certinho, o pré-natal é muito importante e deve ser iniciado assim que a gravidez é constatada!"
+  - text: Ótimo 🙌 Você está fazendo certinho, o pré-natal é muito importante e deve
+      ser iniciado assim que a gravidez é constatada!
   utter_schedule_gynecologist:
-  - text: "Marque uma consulta com o seu ginecologista e converse com ele sobre a sua vontade de engravidar. Assim, ele pode te ajudar durante esse processo 😉"
+  - text: Marque uma consulta com o seu ginecologista e converse com ele sobre a sua
+      vontade de engravidar. Assim, ele pode te ajudar durante esse processo 😉
   utter_planning_pregnancy:
-  - text: "Se você deseja engravidar é muito importante se preparar para isso. É recomendável que você e o seu parceiro estejam com saúde plena, física e mental, tenha uma dieta saudável, faça atividades físicas ponderadas e de preferência esteja sem sobrecargas emocionais.
-O planejamento tem o objetivo de identificar fatores de risco como diabetes e hipertensão, além de possibilitar acesso a informações sobre fertilidade."
+  - text: Se você deseja engravidar é muito importante se preparar para isso. É recomendável
+      que você e o seu parceiro estejam com saúde plena, física e mental, tenha uma
+      dieta saudável, faça atividades físicas ponderadas e de preferência esteja sem
+      sobrecargas emocionais. O planejamento tem o objetivo de identificar fatores
+      de risco como diabetes e hipertensão, além de possibilitar acesso a informações
+      sobre fertilidade.
   utter_ask_subscribe:
-  - text: "Posso te mandar dicas todos os dias para te ajudar durante essa fase, se quiser é só me avisar"
+  - text: Posso te mandar dicas todos os dias para te ajudar durante essa fase, se
+      quiser é só me avisar
   utter_ask_exam:
-  - text: "Você já fez o exame de {exam_name}?"
+  - text: Você já fez o exame de {exam_name}?
   utter_explain_whatspossible:
-  - text: "Eu posso tirar qualquer dúvida sobre a gestação e te lembrar de consultas e remédios! 💁‍♀️"
+  - text: Eu posso tirar qualquer dúvida sobre a gestação e te lembrar de consultas
+      e remédios! 💁‍♀️
   utter_okay:
-  - text: "Ok então 😊"
-  - text: "Okay 😊"
+  - text: Ok então 😊
+  - text: Okay 😊
   utter_doing_right_exam:
-  - text: "Muito bem! É importante realizar todos os exames 👏"
+  - text: Muito bem! É importante realizar todos os exames 👏
   utter_is_important_exam:
-  - text: "Por isso é essencial que você faça o exame. Agende uma consulta com seu médico e converse com ele sobre isso!"
+  - text: Por isso é essencial que você faça o exame. Agende uma consulta com seu
+      médico e converse com ele sobre isso!
   utter_why_answer:
-  - text: "Tudo bem se você não quiser responder mas com essas informações eu consigo te ajudar mais. Entendeu? 😊"
+  - text: Tudo bem se você não quiser responder mas com essas informações eu consigo
+      te ajudar mais. Entendeu? 😊
   utter_agree:
-  - text: "Isso mesmo! 👍"
-  - text: "Isso aí! 👍"
+  - text: Isso mesmo! 👍
+  - text: Isso aí! 👍
   utter_ask:
-  - text: "Qual a dúvida? Prometo tentar responder 😅"
+  - text: Qual a dúvida? Prometo tentar responder 😅
   utter_ask_me_later:
-  - text: "Bom, se surgir alguma dúvida é só me perguntar! 😉"
+  - text: Bom, se surgir alguma dúvida é só me perguntar! 😉
   utter_baby_not_moving:
-  - text: "Em geral, por volta do quinto mês de gestação, você já consegue sentir os primeiros 
-  movimentos do bebê na barriga. A partir do momento em que você começar a notar os movimentos, 
-  é importante ficar atenta para reparar se ele ficar muito tempo quieto.
-  Se passar mais de 6 horas e o bebê não se mexer, principalmente, depois das refeições, isso pode
-  ser um alerta. Se notar que seu bebê não está se mexendo na barriga durante alguns dias, procure
-  o seu obstetra e relate o que está acontecendo."
+  - text: Em geral, por volta do quinto mês de gestação, você já consegue sentir os
+      primeiros movimentos do bebê na barriga. A partir do momento em que você começar
+      a notar os movimentos, é importante ficar atenta para reparar se ele ficar muito
+      tempo quieto. Se passar mais de 6 horas e o bebê não se mexer, principalmente,
+      depois das refeições, isso pode ser um alerta. Se notar que seu bebê não está
+      se mexendo na barriga durante alguns dias, procure o seu obstetra e relate o
+      que está acontecendo.
   utter_which_medicine:
-  - text: "Os remédios só devem ser utilizados quando necessário e sob orientação a orientação do seu médico, por isso, se achar necessidade de tomar algum medicamento, consulte seu médico primeiro."
+  - text: Os remédios só devem ser utilizados quando necessário e sob orientação a
+      orientação do seu médico, por isso, se achar necessidade de tomar algum medicamento,
+      consulte seu médico primeiro.
   utter_ask_regular_medicine:
-  - text: "Você toma algum remédio regularmente?"
+  - text: Você toma algum remédio regularmente?
     buttons:
-    - title: "Sim"
-      payload: '/enter_data{"regular_medicine":true}'
-    - title: "Não"
-      payload: '/enter_data{"regular_medicine":false}'
+    - title: Sim
+      payload: /enter_data{"regular_medicine":true}
+    - title: Não
+      payload: /enter_data{"regular_medicine":false}
   utter_wrong_regular_medicine:
-  - text: "Por favor, me fale se você toma algum remédio regularmente 😬 Quanto mais informações, mais eu consigo te ajudar 😅"
+  - text: Por favor, me fale se você toma algum remédio regularmente 😬 Quanto mais
+      informações, mais eu consigo te ajudar 😅
   utter_ask_regular_medicine_name:
-  - text: "Qual o nome do remédio?"
+  - text: Qual o nome do remédio?
   utter_wrong_regular_medicine_name:
-  - text: "Por favor, me fale o nome do remédio 😬 Quanto mais informações, mais eu consigo te ajudar 😅"
+  - text: Por favor, me fale o nome do remédio 😬 Quanto mais informações, mais eu
+      consigo te ajudar 😅
   utter_ask_hypothyroidism:
-  - text: "Você tem hipotireoidismo?"
+  - text: Você tem hipotireoidismo?
     buttons:
-    - title: "Sim"
-      payload: '/enter_data{"hypothyroidism":true}'
-    - title: "Não"
-      payload: '/enter_data{"hypothyroidism":false}'
+    - title: Sim
+      payload: /enter_data{"hypothyroidism":true}
+    - title: Não
+      payload: /enter_data{"hypothyroidism":false}
   utter_wrong_hypothyroidism:
-  - text: "Por favor, me fale se você tem hipotireoidismo 😬 Quanto mais informações, mais eu consigo te ajudar 😅"
+  - text: Por favor, me fale se você tem hipotireoidismo 😬 Quanto mais informações,
+      mais eu consigo te ajudar 😅
   utter_ask_hyperthyroidism:
-  - text: "Você tem hipertireoidismo?"
+  - text: Você tem hipertireoidismo?
     buttons:
-    - title: "Sim"
-      payload: '/enter_data{"hyperthyroidism":true}'
-    - title: "Não"
-      payload: '/enter_data{"hyperthyroidism":false}'
+    - title: Sim
+      payload: /enter_data{"hyperthyroidism":true}
+    - title: Não
+      payload: /enter_data{"hyperthyroidism":false}
   utter_wrong_hyperthyroidism:
-  - text: "Por favor, me fale se você tem hipertireoidismo 😬 Quanto mais informações, mais eu consigo te ajudar 😅"
+  - text: Por favor, me fale se você tem hipertireoidismo 😬 Quanto mais informações,
+      mais eu consigo te ajudar 😅
   utter_ask_diabetes:
-  - text: "Você é diabética?"
+  - text: Você é diabética?
     buttons:
-    - title: "Sim"
-      payload: '/enter_data{"diabetes":true}'
-    - title: "Não"
-      payload: '/enter_data{"diabetes":false}'
+    - title: Sim
+      payload: /enter_data{"diabetes":true}
+    - title: Não
+      payload: /enter_data{"diabetes":false}
   utter_wrong_diabetes:
-  - text: "Por favor, me fale se você tem diabetes 😬 Quanto mais informações, mais eu consigo te ajudar 😅"
+  - text: Por favor, me fale se você tem diabetes 😬 Quanto mais informações, mais
+      eu consigo te ajudar 😅
   utter_ask_drug_use:
-  - text: "Já usou ou faz uso de drogas?"
+  - text: Já usou ou faz uso de drogas?
     buttons:
-    - title: "Sim"
-      payload: '/enter_data{"drug_use":true}'
-    - title: "Não"
-      payload: '/enter_data{"drug_use":false}'
+    - title: Sim
+      payload: /enter_data{"drug_use":true}
+    - title: Não
+      payload: /enter_data{"drug_use":false}
   utter_wrong_drug_use:
-  - text: "Por favor, me fale se você já usou ou usa drogas 😬 Quanto mais informações, mais eu consigo te ajudar 😅"
+  - text: Por favor, me fale se você já usou ou usa drogas 😬 Quanto mais informações,
+      mais eu consigo te ajudar 😅
   utter_ask_autoimmune_disease:
-  - text: "Possui alguma doença autoimune?"
+  - text: Possui alguma doença autoimune?
     buttons:
-    - title: "Sim"
-      payload: '/enter_data{"autoimmune_disease":true}'
-    - title: "Não"
-      payload: '/enter_data{"autoimmune_disease":false}'
+    - title: Sim
+      payload: /enter_data{"autoimmune_disease":true}
+    - title: Não
+      payload: /enter_data{"autoimmune_disease":false}
   utter_wrong_autoimmune_disease:
-  - text: "Por favor, me fale se você possui alguma doença autoimune 😬 Quanto mais informações, mais eu consigo te ajudar 😅"
+  - text: Por favor, me fale se você possui alguma doença autoimune 😬 Quanto mais
+      informações, mais eu consigo te ajudar 😅
   utter_ask_asthma:
-  - text: "Você tem asma?"
+  - text: Você tem asma?
     buttons:
-    - title: "Sim"
-      payload: '/enter_data{"asthma":true}'
-    - title: "Não"
-      payload: '/enter_data{"asthma":false}'
+    - title: Sim
+      payload: /enter_data{"asthma":true}
+    - title: Não
+      payload: /enter_data{"asthma":false}
   utter_wrong_asthma:
-  - text: "Por favor, me fale se você tem asma 😬 Quanto mais informações, mais eu consigo te ajudar 😅"
+  - text: Por favor, me fale se você tem asma 😬 Quanto mais informações, mais eu consigo
+      te ajudar 😅
   utter_ask_seropositive:
-  - text: "Você é soropositiva?"
+  - text: Você é soropositiva?
     buttons:
-    - title: "Sim"
-      payload: '/enter_data{"seropositive":true}'
-    - title: "Não"
-      payload: '/enter_data{"seropositive":false}'
+    - title: Sim
+      payload: /enter_data{"seropositive":true}
+    - title: Não
+      payload: /enter_data{"seropositive":false}
   utter_wrong_seropositive:
-  - text: "Por favor, me fale se você é soropositiva 😬 Quanto mais informações, mais eu consigo te ajudar 😅"
+  - text: Por favor, me fale se você é soropositiva 😬 Quanto mais informações, mais
+      eu consigo te ajudar 😅
   utter_ask_high_pressure:
-  - text: "Tem pressão alta?"
+  - text: Tem pressão alta?
     buttons:
-    - title: "Sim"
-      payload: '/enter_data{"high_pressure":true}'
-    - title: "Não"
-      payload: '/enter_data{"high_pressure":false}'
+    - title: Sim
+      payload: /enter_data{"high_pressure":true}
+    - title: Não
+      payload: /enter_data{"high_pressure":false}
   utter_wrong_high_pressure:
-  - text: "Por favor, me fale se você tem pressão alta 😬 Quanto mais informações, mais eu consigo te ajudar 😅"
+  - text: Por favor, me fale se você tem pressão alta 😬 Quanto mais informações, mais
+      eu consigo te ajudar 😅
   utter_ask_health_questions:
-  - text: "Posso te fazer algumas perguntas? Vai ser rapidinho 😅"
+  - text: Posso te fazer algumas perguntas? Vai ser rapidinho 😅
   utter_ask_personal_questions:
-  - text: "Posso te fazer algumas perguntas? Vai ser rapidinho 😅"
+  - text: Posso te fazer algumas perguntas? Vai ser rapidinho 😅
   utter_ask_pregnancy_questions:
-  - text: "Posso te fazer algumas perguntas? Vai ser rapidinho 😅"
+  - text: Posso te fazer algumas perguntas? Vai ser rapidinho 😅
   utter_ask_height:
-  - text: "Qual a sua altura em centímetros?"
+  - text: Qual a sua altura em centímetros?
   utter_wrong_height:
-  - text: "Por favor, me fale a sua altura em centímetros, por exemplo, se você tem 1,65m é equivalente a 165cm 😬"
+  - text: Por favor, me fale a sua altura em centímetros, por exemplo, se você tem
+      1,65m é equivalente a 165cm 😬
   utter_ask_weight:
-  - text: "Quantos kg você pesa?"
+  - text: Quantos kg você pesa?
   utter_wrong_weight:
-  - text: "Por favor, me fale qual o seu peso 😬"
+  - text: Por favor, me fale qual o seu peso 😬
   utter_ask_state:
-  - text: "Qual a sigla do estado em que você mora?"
+  - text: Qual a sigla do estado em que você mora?
   utter_wrong_state:
-  - text: "Por favor, me fale a sigla do seu estado 😬"
+  - text: Por favor, me fale a sigla do seu estado 😬
   utter_ask_high_risk:
-  - text: "A sua gravidez é de alto risco?"
+  - text: A sua gravidez é de alto risco?
     buttons:
-    - title: "Sim"
-      payload: '/enter_data{"high_risk":true}'
-    - title: "Não"
-      payload: '/enter_data{"high_risk":false}'
+    - title: Sim
+      payload: /enter_data{"high_risk":true}
+    - title: Não
+      payload: /enter_data{"high_risk":false}
   utter_wrong_high_risk:
-  - text: "Por favor, preciso saber se a sua gestação é de alto risco 😬"
+  - text: Por favor, preciso saber se a sua gestação é de alto risco 😬
   utter_ask_due_date:
-  - text: "Qual a data provável do seu parto?"
+  - text: Qual a data provável do seu parto?
   utter_wrong_due_date:
-  - text: "Não consegui entender 😬 Me fale a data provável do parto como, por exemplo, 5 de setembro ou 05/09 😅"
+  - text: Não consegui entender 😬 Me fale a data provável do parto como, por exemplo,
+      5 de setembro ou 05/09 😅
   utter_ask_births:
-  - text: "Quantos partos você já teve?"
+  - text: Quantos partos você já teve?
   utter_wrong_births:
-  - text: "Não consegui entender 😬 Me fale o número de partos que você já teve, por exemplo, 1, 2, etc 😅"
+  - text: Não consegui entender 😬 Me fale o número de partos que você já teve, por
+      exemplo, 1, 2, etc 😅
   utter_ask_normal_births:
-  - text: "Quantos foram normais?"
+  - text: Quantos foram normais?
   utter_wrong_normal_births:
-  - text: "Não consegui entender 😬 Me fale o número de partos normais que você já teve, por exemplo, 1, 2, etc 😅"
+  - text: Não consegui entender 😬 Me fale o número de partos normais que você já teve,
+      por exemplo, 1, 2, etc 😅
   utter_ask_why_cesarean_birth:
-  - text: "Então você já passou também pela cesárea né, por que precisou ser feito cesárea?"
+  - text: Então você já passou também pela cesárea né, por que precisou ser feito
+      cesárea?
   utter_wrong_why_cesarean_birth:
-  - text: "Me conte por que precisou ser cesárea, por favor 😬"
+  - text: Me conte por que precisou ser cesárea, por favor 😬
   utter_ask_abortion:
-  - text: "Você já sofreu algum aborto?"
+  - text: Você já sofreu algum aborto?
     buttons:
-    - title: "Sim"
-      payload: '/enter_data{"abortion":true}'
-    - title: "Não"
-      payload: '/enter_data{"abortion":false}'
+    - title: Sim
+      payload: /enter_data{"abortion":true}
+    - title: Não
+      payload: /enter_data{"abortion":false}
   utter_wrong_abortion:
-  - text: "Sei que é um assunto delicado mas pode me contar 😬"
+  - text: Sei que é um assunto delicado mas pode me contar 😬
   utter_ask_premature_birth:
-  - text: "Você já teve algum parto prematuro?"
+  - text: Você já teve algum parto prematuro?
     buttons:
-    - title: "Sim"
-      payload: '/enter_data{"premature_birth":true}'
-    - title: "Não"
-      payload: '/enter_data{"premature_birth":false}'    
+    - title: Sim
+      payload: /enter_data{"premature_birth":true}
+    - title: Não
+      payload: /enter_data{"premature_birth":false}
   utter_wrong_premature_birth:
-  - text: "Me conta se você já teve um parto prematuro, por favor 😬"
+  - text: Me conta se você já teve um parto prematuro, por favor 😬
   utter_ask_had_birth:
-  - text: "Você já teve algum parto?"
+  - text: Você já teve algum parto?
     buttons:
-    - title: "Sim"
-      payload: '/enter_data{"had_birth":true}'
-    - title: "Não"
-      payload: '/enter_data{"had_birth":false}'
+    - title: Sim
+      payload: /enter_data{"had_birth":true}
+    - title: Não
+      payload: /enter_data{"had_birth":false}
   utter_ask_breastfeeding:
-  - text: "Você está amamentando?"
+  - text: Você está amamentando?
     buttons:
-    - title: "Sim"
-      payload: '/enter_data{"breastfeeding":true}'
-    - title: "Não"
-      payload: '/enter_data{"breastfeeding":false}'
+    - title: Sim
+      payload: /enter_data{"breastfeeding":true}
+    - title: Não
+      payload: /enter_data{"breastfeeding":false}
   utter_ask_having_sex:
-  - text: "Está tendo relações sexuais?"
+  - text: Está tendo relações sexuais?
     buttons:
-    - title: "Sim"
-      payload: '/enter_data{"having_sex":true}'
-    - title: "Não"
-      payload: '/enter_data{"having_sex":false}'
+    - title: Sim
+      payload: /enter_data{"having_sex":true}
+    - title: Não
+      payload: /enter_data{"having_sex":false}
   utter_ask_contraceptive_method:
-  - text: "Qual método contraceptivo você está utilizando?"
+  - text: Qual método contraceptivo você está utilizando?
   utter_ask_episiotomy:
-  - text: "Foi necessário fazer episiotomia (corte próximo à vagina)?"
+  - text: Foi necessário fazer episiotomia (corte próximo à vagina)?
     buttons:
-    - title: "Sim"
-      payload: '/enter_data{"episiotomy":true}'
-    - title: "Não"
-      payload: '/enter_data{"episiotomy":false}'
+    - title: Sim
+      payload: /enter_data{"episiotomy":true}
+    - title: Não
+      payload: /enter_data{"episiotomy":false}
   utter_ask_doctor_appointment:
-  - text: "Você ja foi a uma consulta médica depois que o bebê nasceu?"
+  - text: Você ja foi a uma consulta médica depois que o bebê nasceu?
     buttons:
-    - title: "Sim"
-      payload: '/enter_data{"doctor_appointment":true}'
-    - title: "Não"
-      payload: '/enter_data{"doctor_appointment":false}'
+    - title: Sim
+      payload: /enter_data{"doctor_appointment":true}
+    - title: Não
+      payload: /enter_data{"doctor_appointment":false}
   utter_ask_infection:
-  - text: "Você teve algum tipo de infecção durante esse período?"
+  - text: Você teve algum tipo de infecção durante esse período?
     buttons:
-    - title: "Sim"
-      payload: '/enter_data{"infection":true}'
-    - title: "Não"
-      payload: '/enter_data{"infection":false}'
+    - title: Sim
+      payload: /enter_data{"infection":true}
+    - title: Não
+      payload: /enter_data{"infection":false}
   utter_ask_infection_kind:
-  - text: "Que tipo de infecção (mastite, endometrite, urinária, etc)?"
+  - text: Que tipo de infecção (mastite, endometrite, urinária, etc)?
   utter_ask_is_postpartum:
-  - text: "Você está no pós parto?"
+  - text: Você está no pós parto?
     buttons:
-    - title: "Sim"
-      payload: '/enter_data{"is_postpartum":true}'
-    - title: "Não"
-      payload: '/enter_data{"is_postpartum":false}'
+    - title: Sim
+      payload: /enter_data{"is_postpartum":true}
+    - title: Não
+      payload: /enter_data{"is_postpartum":false}
+actions:
+- action_default_fallback
+- ask_form
+- utter_hello
+- utter_bye
+- utter_default
+- utter_great
+- utter_greet
+- utter_greet_answer
+- utter_greet_back
+- utter_help
+- utter_introduce
+- utter_ask_info
+- utter_welcome
+- utter_thank_you
+- utter_canthelp
+- utter_ask_wherefrom
+- utter_ask_howold
+- utter_ask_isbot
+- utter_congrats
+- utter_first_step
+- utter_ask_is_pregnant
+- utter_ask_is_trying
+- utter_ask_planned_pregnancy
+- utter_ask_health_plan
+- utter_ask_first_pregnancy
+- utter_ask_pre_natal
+- utter_info_later
+- utter_pre_natal_sus
+- utter_ask_is_planning
+- utter_planning_pregnancy
+- utter_ask_has_children
+- utter_ask_me_anything
+- utter_schedule_gynecologist
+- utter_doing_right
+- utter_ask_subscribe
+- utter_ask_exam
+- action_get_answer
+- action_greet_user
+- action_is_bot
+- action_how_old
+- action_where_from
+- action_who_is_it
+- utter_explain_whatspossible
+- action_whats_possible
+- action_cant_help
+- utter_okay
+- action_get_exam
+- utter_doing_right_exam
+- action_doing_right_exam
+- utter_is_important_exam
+- utter_why_answer
+- utter_agree
+- utter_ask
+- utter_ask_me_later
+- utter_ask_first_ultrasound
+- utter_ask_first_ultrasound_date
+- utter_baby_not_moving
+- utter_which_medicine
+- utter_ask_health_questions
+- utter_ask_personal_questions
+- utter_ask_pregnancy_questions
+- utter_ask_breastfeeding
+- utter_ask_having_sex
+- utter_ask_contraceptive_method
+- utter_ask_episiotomy
+- utter_ask_doctor_appointment
+- utter_ask_infection
+- utter_ask_infection_kind
+- action_congrats
+forms:
+- form_initial
+- form_health
+- form_personal
+- form_pregnancy

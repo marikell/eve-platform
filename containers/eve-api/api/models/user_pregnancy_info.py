@@ -22,13 +22,17 @@ class UserPregnancyInfo(db.DynamicDocument):
     user_id = db.ReferenceField(User, required=True)
 
     def save(self, *args, **kwargs):
-        if self.last_menstruation_date:            
+        if isinstance(self.last_menstruation_date, str):
             self.last_menstruation_date = dateutil.parser.parse(self.last_menstruation_date)
             if self.last_menstruation_date > datetime.datetime.now(self.last_menstruation_date.tzinfo):
                 self.last_menstruation_date = self.last_menstruation_date - relativedelta(years=1)
-        if self.first_ultrasound_date:
+        if isinstance(self.first_ultrasound_date, str):
             self.first_ultrasound_date = dateutil.parser.parse(self.first_ultrasound_date)
             if self.first_ultrasound_date > datetime.datetime.now(self.first_ultrasound_date.tzinfo):
                 self.first_ultrasound_date = self.first_ultrasound_date - relativedelta(years=1)
+        if isinstance(self.due_date, str):
+            self.due_date = dateutil.parser.parse(self.due_date)
+            if self.due_date > datetime.datetime.now(self.due_date.tzinfo):
+                self.due_date = self.due_date - relativedelta(years=1)
         return super(UserPregnancyInfo, self).save(*args, **kwargs)
     

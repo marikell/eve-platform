@@ -16,15 +16,15 @@ pipeline:
 - name: "EmbeddingIntentClassifier"
 
 policies:
+  - name: "FormPolicy"
   - name: "KerasPolicy"
-    featurizer:
-      - name: MaxHistoryTrackerFeaturizer
-        max_history: 5
-        state_featurizer:
-          - name: BinarySingleStateFeaturizer
+    # featurizer:
+    #   - name: MaxHistoryTrackerFeaturizer
+    #     max_history: 5
+    #     state_featurizer:
+    #       - name: BinarySingleStateFeaturizer
   - name: "MemoizationPolicy"
   - name: "MappingPolicy"
-  - name: "FormPolicy"
   - name: "FallbackPolicy"
     nlu_threshold: 0.3
     core_threshold: 0.4

@@ -427,6 +427,7 @@ class HealthForm(FormAction):
         
         # se o registro não existe, insere
         if 'response' not in req.json():
+            print('if1')
             data = {
                 "user_id" : user_id,
                 "form_id" : health_form_id,
@@ -436,6 +437,7 @@ class HealthForm(FormAction):
             req = requests.post(route_config.get_route('user_form'),headers= headers,data=json.dumps(data))
 
         if(tracker.get_slot('regular_medicine') == False):
+            print('if2')
             return [
                 "hypothyroidism",
                 "hyperthyroidism",
@@ -447,6 +449,7 @@ class HealthForm(FormAction):
                 "high_pressure"
             ]
         else:
+            print('if3')
             return [
                 "regular_medicine",
                 "regular_medicine_name",
@@ -562,10 +565,12 @@ class PersonalForm(FormAction):
     def slot_mappings(self):
             return {
                 "height": [
-                    self.from_entity(entity="number")
+                    self.from_entity(entity="number"),
+                    self.from_text(intent="enter_data"),
                 ],
                 "weight": [
-                    self.from_entity(entity="number")
+                    self.from_entity(entity="number"),
+                    self.from_text(intent="enter_data"),
                 ],
                 "state": [
                     self.from_text(intent="enter_data"),
@@ -574,15 +579,15 @@ class PersonalForm(FormAction):
             }
 
     def validate_height(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]):
-        if(self.is_int(value) and int(value) > 150):
-            return {"height": value}
+        if(self.is_int(value[0]) and int(value[0]) > 150):
+            return {"height": value[0]}
         else:
             dispatcher.utter_template("utter_wrong_height", tracker)
             return {"height": None}
 
     def validate_weight(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]):
-        if(self.is_int(value) and int(value) > 40):
-            return {"weight": value}
+        if(self.is_int(value[0]) and int(value[0]) > 40):
+            return {"weight": value[0]}
         else:
             dispatcher.utter_template("utter_wrong_weight", tracker)
             return {"weight": None}
@@ -706,31 +711,39 @@ class PregnancyForm(FormAction):
             }
 
             req = requests.post(route_config.get_route('user_form'),headers= headers,data=json.dumps(data))
+
         if(tracker.get_slot('births') is not None):
+            print('if1')
             if(tracker.get_slot('normal_births') is not None):
+                print('if2')
                 if(int(tracker.get_slot('births')) == int(tracker.get_slot('normal_births'))):
+                    print('if3')
                     return [
                         "abortion",
                         "premature_birth"
                     ]
                 elif(int(tracker.get_slot('births')) > int(tracker.get_slot('normal_births'))):
+                    print('if4')
                     return [
                         "why_cesarean_birth",
                         "abortion",
                         "premature_birth"
                     ]
             else:
+                print('if5')
                 return [
                     "normal_births",
                     "why_cesarean_birth",
                     "abortion",
                     "premature_birth"
                 ]
-        if(tracker.get_slot('had_birth') == False):
+        elif(tracker.get_slot('had_birth') == False):
+            print('if6')
             return [
                 "abortion"
             ]
-        if(tracker.get_slot('had_birth')):
+        elif(tracker.get_slot('had_birth')):
+            print('if7')
             return [
                 "births",
                 "normal_births",
@@ -739,6 +752,7 @@ class PregnancyForm(FormAction):
                 "premature_birth"
             ]        
         else:
+            print('if8')
             return [
                 "high_risk",
                 "due_date",
@@ -851,7 +865,7 @@ class PregnancyForm(FormAction):
                 
         dispatcher.utter_template('utter_thank_you', tracker)
         dispatcher.utter_template('utter_ask_me_anything', tracker)
-        return [ActionReverted()]
+        return []
 
 class ActionAskForm(Action):
     def name(self):

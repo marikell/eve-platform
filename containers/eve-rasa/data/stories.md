@@ -548,6 +548,29 @@
 * welcome
     - utter_great
 
+## Story from conversation with me on July 9th 2019
+    - utter_ask_personal_questions
+* affirm
+    - form_personal
+    - slot{"requested_slot":"height"}
+* enter_data{"height":false}
+    - slot{"height":false}
+    - form_personal
+    - slot{"height":false}
+    - slot{"requested_slot":"weight"}
+* enter_data{"weight":false}
+    - slot{"weight":false}
+    - form_personal
+    - slot{"weight":false}
+    - slot{"requested_slot":"state"}
+* enter_data{"state":false}
+    - slot{"state":false}
+    - form_personal
+    - slot{"state":false}
+    - slot{"requested_slot":null}
+* welcome
+    - utter_great
+
 ## form_pregnancy 1
     - utter_ask_pregnancy_questions
 * affirm

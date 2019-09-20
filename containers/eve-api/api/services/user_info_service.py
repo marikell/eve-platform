@@ -14,9 +14,6 @@ class UserInfoService(GenericService):
         is_pregnant = (obj['is_pregnant'])
         is_trying = (obj['is_trying'])
         is_postpartum = (obj['is_postpartum'])
-        height = (obj['height'])
-        weight = (obj['weight'])        
-        state = (obj['state'])        
         
         user_info = UserInfo(has_children=has_children,
                              has_health_plan=has_health_plan, 
@@ -24,9 +21,6 @@ class UserInfoService(GenericService):
                              is_pregnant=is_pregnant,
                              is_trying=is_trying,
                              is_postpartum=is_postpartum,
-                             height=height,
-                             weight=weight,
-                             state=state,
                              user_id=obj['user'].to_dbref())
         user_info.save()
 
@@ -38,13 +32,7 @@ class UserInfoService(GenericService):
         
         if not user_info:
             raise Exception('Object with id {} not found!'.format(obj['id']))
-        
-        user_info.has_children = (obj['has_children'])
-        user_info.is_planning_with_doctor = (obj['is_planning'])
-        user_info.has_health_plan = (obj['has_health_plan'])
-        user_info.is_pregnant = (obj['is_pregnant'])
-        user_info.is_trying = (obj['is_trying'])
-        user_info.is_postpartum = (obj['is_postpartum'])
+                
         user_info.height = (obj['height'])
         user_info.weight = (obj['weight'])
         user_info.state = (obj['state'])
