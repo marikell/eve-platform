@@ -44,16 +44,6 @@
 * later
   - utter_info_later
 
-## o usuário inicia a conversa com apenas 'Oi' (gestante)
-* hello
-  - action_greet_user
-  - slot{"greeted_user": true}
-* affirm
-  - form_initial
-  - form{"name": "form_initial"}
-  - form{"name": null}
-  - utter_ask_me_anything
-
 ## o usuário inicia a conversa com apenas 'Oi' e não quer responder as perguntas
 * hello
   - action_greet_user
@@ -102,31 +92,6 @@
     - slot{"greeted_user": true}
 * greeting_answer
     - utter_great
-
-## estou gravida
-* im_pregnant
-    - action_congrats
-    - slot{"is_pregnant": true}
-    - utter_first_step
-    - utter_ask_info
-* affirm
-  - form_initial
-  - form{"name": "form_initial"}
-  - form{"name": null}
-  - utter_ask_me_anything
-
-## estou gravida
-* hello+im_pregnant
-    - utter_hello
-    - action_congrats
-    - slot{"is_pregnant": true}
-    - utter_first_step
-    - utter_ask_info
-* affirm
-  - form_initial
-  - form{"name": "form_initial"}
-  - form{"name": null}
-  - utter_ask_me_anything
 
 ## estou gravida
 * im_pregnant
@@ -598,6 +563,17 @@
   - form{"name": "form_pregnancy"}
   - form{"name": null}
 
+## unhappy path: form_health
+    - utter_ask_health_questions
+* affirm
+  - form_health
+  - form{"name": "form_health"}
+* ask_allowed_depilation
+  - action_get_answer
+  - form_health
+  - form{"name": "form_health"}
+  - form{"name": null}
+
 ## unhappy path: form_pregnancy 2
     - utter_ask_pregnancy_questions
 * deny
@@ -883,69 +859,6 @@
 ## ask_cesarean_can_normal_birth
 * ask_cesarean_can_normal_birth
     - action_get_answer
-
-## Story from conversation with me on September 4th 2019
-* hello
-    - action_greet_user
-    - slot{"greeted_user": true}
-* affirm
-    - form_initial
-    - slot{"requested_slot":"is_pregnant"}
-* enter_data{"is_pregnant":false}
-    - slot{"is_pregnant":false}
-    - form_initial
-    - slot{"is_pregnant":false}
-    - slot{"requested_slot":"is_trying"}
-* enter_data{"is_trying":false}
-    - slot{"is_trying":false}
-    - form_initial
-    - slot{"is_trying":false}
-    - slot{"requested_slot":"is_postpartum"}
-* enter_data{"is_postpartum":true}
-    - slot{"is_postpartum":true}
-    - form_initial
-    - slot{"is_postpartum":true}
-    - slot{"requested_slot":"health_plan"}
-* enter_data{"health_plan":false}
-    - slot{"health_plan":false}
-    - form_initial
-    - slot{"health_plan":false}
-    - slot{"requested_slot":"planned_pregnancy"}
-* enter_data{"planned_pregnancy":false}
-    - slot{"planned_pregnancy":false}
-    - form_initial
-    - slot{"planned_pregnancy":false}
-    - slot{"requested_slot":"breastfeeding"}
-* enter_data{"breastfeeding":true}
-    - slot{"breastfeeding":true}
-    - form_initial
-    - slot{"breastfeeding":true}
-    - slot{"requested_slot":"having_sex"}
-* enter_data{"having_sex":true}
-    - slot{"having_sex":true}
-    - form_initial
-    - slot{"having_sex":true}
-    - slot{"requested_slot":"contraceptive_method"}
-* enter_data{"contraceptive_method":"camisinha"}
-    - slot{"contraceptive_method":"camisinha"}
-    - form_initial
-    - slot{"contraceptive_method":"camisinha"}
-    - slot{"requested_slot":"doctor_appointment"}
-* enter_data{"doctor_appointment":true}
-    - slot{"doctor_appointment":true}
-    - form_initial
-    - slot{"doctor_appointment":true}
-    - slot{"requested_slot":"infection"}
-* enter_data{"infection":false}
-    - slot{"infection":false}
-    - form_initial
-    - slot{"infection":false}
-    - slot{"requested_slot":null}
-    - utter_ask_me_anything
-* ask_isbot
-    - action_is_bot
-* ask_wherefrom
-    - action_where_from
 
 ## Story from conversation with me on September 4th 2019
 * have_question OR affirm+have_question
