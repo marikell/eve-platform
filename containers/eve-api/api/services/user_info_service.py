@@ -14,6 +14,9 @@ class UserInfoService(GenericService):
         is_pregnant = (obj['is_pregnant'])
         is_trying = (obj['is_trying'])
         is_postpartum = (obj['is_postpartum'])
+        height = (obj['height'])
+        weight = (obj['weight'])
+        state = (obj['state'])
         
         user_info = UserInfo(has_children=has_children,
                              has_health_plan=has_health_plan, 
@@ -21,6 +24,9 @@ class UserInfoService(GenericService):
                              is_pregnant=is_pregnant,
                              is_trying=is_trying,
                              is_postpartum=is_postpartum,
+                             height=height,
+                             weight=weight,
+                             state=state,
                              user_id=obj['user'].to_dbref())
         user_info.save()
 

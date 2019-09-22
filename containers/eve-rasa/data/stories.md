@@ -378,6 +378,7 @@
     - utter_baby_not_moving
 
 ## form_health 1
+* start_form_health
     - utter_ask_health_questions
 * affirm
     - form_health
@@ -385,6 +386,7 @@
     - form{"name": null}
 
 ## form_health 2
+* start_form_health
     - utter_ask_health_questions
 * affirm
     - form_health
@@ -394,6 +396,7 @@
   - utter_ask
 
 ## unhappy path: form_health
+* start_form_health
     - utter_ask_health_questions
 * affirm
   - form_health
@@ -408,6 +411,7 @@
     - utter_great
 
 ## Story from conversation with me on July 9th 2019
+* start_form_health
     - utter_ask_health_questions
 * affirm
     - form_health
@@ -461,13 +465,20 @@
     - utter_great
 
 ## form_personal 1
+* start_form_personal
     - utter_ask_personal_questions
 * affirm
     - form_personal
     - form{"name": "form_personal"}
     - form{"name": null}
 
+## out_of_scope
+* out_of_scope
+    - utter_canthelp
+    - utter_explain_whatspossible
+
 ## form_personal 2
+* start_form_personal
     - utter_ask_personal_questions
 * affirm
     - form_personal
@@ -477,6 +488,7 @@
   - utter_ask
 
 ## unhappy path: form_personal
+* start_form_personal
     - utter_ask_personal_questions
 * affirm
   - form_personal
@@ -491,6 +503,7 @@
     - utter_great
 
 ## Story from conversation with me on July 9th 2019
+* start_form_personal
     - utter_ask_personal_questions
 * affirm
     - form_personal
@@ -514,6 +527,7 @@
     - utter_great
 
 ## Story from conversation with me on July 9th 2019
+* start_form_personal
     - utter_ask_personal_questions
 * affirm
     - form_personal
@@ -537,6 +551,7 @@
     - utter_great
 
 ## form_pregnancy 1
+* start_form_pregnancy
     - utter_ask_pregnancy_questions
 * affirm
     - form_pregnancy
@@ -544,6 +559,7 @@
     - form{"name": null}
 
 ## form_pregnancy 2
+* start_form_pregnancy
     - utter_ask_pregnancy_questions
 * affirm
     - form_pregnancy
@@ -553,6 +569,7 @@
   - utter_ask
 
 ## unhappy path: form_pregnancy
+* start_form_pregnancy
     - utter_ask_pregnancy_questions
 * affirm
   - form_pregnancy
@@ -564,6 +581,7 @@
   - form{"name": null}
 
 ## unhappy path: form_health
+* start_form_health
     - utter_ask_health_questions
 * affirm
   - form_health
@@ -575,20 +593,23 @@
   - form{"name": null}
 
 ## unhappy path: form_pregnancy 2
+* start_form_pregnancy
     - utter_ask_pregnancy_questions
-* deny
+* deny OR later
     - utter_info_later
     - utter_ask_me_anything
 
 ## unhappy path: form_personal
+* start_form_personal
     - utter_ask_personal_questions
-* deny
+* deny OR later
     - utter_info_later
     - utter_ask_me_anything
 
 ## unhappy path: form_health
+* start_form_health
     - utter_ask_health_questions
-* deny
+* deny OR later
     - utter_info_later
     - utter_ask_me_anything
 
@@ -1092,8 +1113,160 @@
 * ask_can_paint_nails
     - action_get_answer
 
+## ask_can_treatment_varicose_veins
+* ask_can_treatment_varicose_veins
+    - action_get_answer
+
+## ask_can_seabathe
+* ask_can_seabathe
+    - action_get_answer
+
+## ask_can_lymphatic_drainage
+* ask_can_lymphatic_drainage
+    - action_get_answer
+
+## ask_can_almond_oil
+* ask_can_almond_oil
+    - action_get_answer
+
+## ask_can_sick_friend
+* ask_can_sick_friend
+    - action_get_answer
+
+## ask_when_pregnant_again
+* ask_when_pregnant_again
+    - action_get_answer
+
+## ask_diet_after_delivery
+* ask_diet_after_delivery
+    - action_get_answer
+
+## ask_when_start_breastfeeding
+* ask_when_start_breastfeeding
+    - action_get_answer
+
+## ask_pregnant_takes_pill
+* ask_pregnant_takes_pill
+    - action_get_answer
+
+## ask_can_pregnant_anal_sex
+* ask_can_pregnant_anal_sex
+    - action_get_answer
+
+## ask_necessary_condom_pregnant
+* ask_necessary_condom_pregnant
+    - action_get_answer
+
+## ask_can_pregnant_orgasm
+* ask_can_pregnant_orgasm
+    - action_get_answer
+
+## ask_when_period_return
+* ask_when_period_return
+    - action_get_answer
+
+## ask_consult_after_childbirth
+* ask_consult_after_childbirth
+    - action_get_answer
+
+## ask_normal_birth_better_mother
+* ask_normal_birth_better_mother
+    - action_get_answer
+
+## ask_normal_birth_better_baby
+* ask_normal_birth_better_baby
+    - action_get_answer
+
+## ask_when_go_maternity
+* ask_when_go_maternity
+    - action_get_answer
+
+## ask_while_breastfeeding_pregnant
+* ask_while_breastfeeding_pregnant
+    - action_get_answer
+
 ## ask_can_paint_hair
 * ask_can_paint_hair
+    - action_get_answer
+
+## ask_types_childbirth
+* ask_types_childbirth
+    - action_get_answer
+
+## ask_what_is_forceps_childbirth
+* ask_what_is_forceps_childbirth
+    - action_get_answer
+
+## ask_what_is_leboyer_childbirth
+* ask_what_is_leboyer_childbirth
+    - action_get_answer
+
+## ask_what_is_squatting_childbirth
+* ask_what_is_squatting_childbirth
+    - action_get_answer
+
+## ask_what_is_water_childbirth
+* ask_what_is_water_childbirth
+    - action_get_answer
+
+## ask_what_is_natural_childbirth
+* ask_what_is_natural_childbirth
+    - action_get_answer
+
+## ask_what_is_humanized_childbirth
+* ask_what_is_humanized_childbirth
+    - action_get_answer
+
+## ask_who_receive_maternity_leave
+* ask_who_receive_maternity_leave
+    - action_get_answer
+
+## ask_unemployed_receive_maternity_leave
+* ask_unemployed_receive_maternity_leave
+    - action_get_answer
+
+## ask_pregnant_women_fired
+* ask_pregnant_women_fired
+    - action_get_answer
+
+## ask_what_is_maternity_pay
+* ask_what_is_maternity_pay
+    - action_get_answer
+
+## ask_how_much_salary_maternity_leave
+* ask_how_much_salary_maternity_leave
+    - action_get_answer
+
+## ask_how_apply_maternity_leave
+* ask_how_apply_maternity_leave
+    - action_get_answer
+
+## ask_how_long_maternity_leave
+* ask_how_long_maternity_leave
+    - action_get_answer
+
+## ask_when_maternity_leave_start
+* ask_when_maternity_leave_start
+    - action_get_answer
+
+## ask_add_vacation_maternity_leave
+* ask_add_vacation_maternity_leave
+    - action_get_answer
+
+## ask_father_have_paternity_leave
+* ask_father_have_paternity_leave
+    - action_get_answer
+
+## ask_what_is_maternity_leave
+* ask_what_is_maternity_leave
+    - action_get_answer
+
+## ask_what_is_maternity_leave
+* ask_what_is_maternity_leave
+    - action_get_answer
+
+## ask_what_is_cesarean_childbirth
+* ask_what_is_cesarean_childbirth
     - action_get_answer
 
 ## ask_can_discolor_hair

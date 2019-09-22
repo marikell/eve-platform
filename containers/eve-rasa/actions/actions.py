@@ -32,7 +32,7 @@ class GetAnswer(Action):
 
         intent = tracker.latest_message['intent'].get('name')
                 
-        response = 'Não vou te conseguir ajudar nessa, mas pergunte ao seu médico, ele saberá te responder ;)'
+        response = 'Não vou te conseguir ajudar nessa, mas pergunte ao seu médico, ele saberá te responder 😉'
         data = {
             'intent' : intent
         }
@@ -141,25 +141,25 @@ class InitialForm(FormAction):
                 "health_plan"
             ]
         elif(tracker.get_slot('is_postpartum')):
-            if(tracker.get_slot('having_sex') == False):
+            if(tracker.get_slot('infection') == False):
+                return []
+            elif(tracker.get_slot('having_sex') == False):
                 return [
                     "doctor_appointment",
                     "infection",
                     "infection_kind"
                 ]
-            if(tracker.get_slot('infection') == False):
-                return []
-            
-            return [
-                "health_plan",
-                "planned_pregnancy",
-                "breastfeeding",
-                "having_sex",
-                "contraceptive_method",
-                "doctor_appointment",
-                "infection",
-                "infection_kind"
-            ]
+            else:
+                return [
+                    "health_plan",
+                    "planned_pregnancy",
+                    "breastfeeding",
+                    "having_sex",
+                    "contraceptive_method",
+                    "doctor_appointment",
+                    "infection",
+                    "infection_kind"
+                ]
         elif(tracker.get_slot('is_pregnant') == False and tracker.get_slot('is_trying') == False and tracker.get_slot('is_postpartum') == False):
             return []
         else:
@@ -201,14 +201,6 @@ class InitialForm(FormAction):
                 self.from_text(intent="enter_data")
             ]
         }
-
-    @staticmethod
-    def is_int(string: Text) -> bool:
-        try:
-            int(string)
-            return True
-        except ValueError:
-            return False
 
     def submit(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any])-> List[Dict]:
         user_id = tracker.get_slot("user_id")
@@ -342,12 +334,20 @@ class ActionWhatsPossible(Action):
         dispatcher.utter_template("utter_explain_whatspossible", tracker)
         return [UserUtteranceReverted()]
 
-class ActionCantHelp(Action):
+class ActionSorryCantHelp(Action):
     def name(self):
-        return "action_cant_help"
+        return "action_sorry_cant_help"
 
     def run(self, dispatcher, tracker, domain):
-        dispatcher.utter_template("utter_canthelp", tracker)
+        dispatcher.utter_template("utter_sorry_canthelp", tracker)
+        return [UserUtteranceReverted()]
+
+class ActionInsult(Action):
+    def name(self):
+        return "action_insult"
+
+    def run(self, dispatcher, tracker, domain):
+        dispatcher.utter_template("utter_insult", tracker)
         return [UserUtteranceReverted()]
 
 class ActionGetExam(Action):
@@ -565,33 +565,32 @@ class PersonalForm(FormAction):
     def slot_mappings(self):
             return {
                 "height": [
-                    self.from_entity(entity="number"),
-                    self.from_text(intent="enter_data"),
+                    self.from_entity(entity="number")
                 ],
                 "weight": [
-                    self.from_entity(entity="number"),
-                    self.from_text(intent="enter_data"),
+                    self.from_entity(entity="number")
                 ],
                 "state": [
                     self.from_text(intent="enter_data"),
                     self.from_entity(entity="state")
                 ],
             }
-
     def validate_height(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]):
-        if(self.is_int(value[0]) and int(value[0]) > 150):
-            return {"height": value[0]}
+        height = value[0] if isinstance(value, list) else value
+        if(self.is_int(height) and int(height) > 100):
+            return {"height": int(height)}
         else:
             dispatcher.utter_template("utter_wrong_height", tracker)
             return {"height": None}
 
     def validate_weight(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]):
-        if(self.is_int(value[0]) and int(value[0]) > 40):
-            return {"weight": value[0]}
+        weight = value[0] if isinstance(value, list) else value
+        if(self.is_int(weight)):
+            return {"weight": int(weight)}
         else:
             dispatcher.utter_template("utter_wrong_weight", tracker)
             return {"weight": None}
-    
+
     def validate_state(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]):
         if value.upper() in self.state_db():
             return {"state": value}
@@ -662,8 +661,8 @@ class PersonalForm(FormAction):
         state = tracker.get_slot("state")
 
         data = {
-            "height" : int(height),
-            "weight" : int(weight),
+            "height" : height if height > 100 else height*100.0,
+            "weight" : weight,
             "state" : state
         }
         
@@ -867,12 +866,20 @@ class PregnancyForm(FormAction):
         dispatcher.utter_template('utter_ask_me_anything', tracker)
         return []
 
-class ActionAskForm(Action):
+class ActionLetsPeople(Action):
     def name(self):
-        return "ask_form"
+        return "action_lets_people"
 
     def run(self, dispatcher, tracker, domain):
-        dispatcher.utter_template("utter_explain_whatspossible", tracker)
+        dispatcher.utter_template("utter_lets_people", tracker)
+        return [UserUtteranceReverted()]
+    
+class ActionAbort(Action):
+    def name(self):
+        return "action_abort"
+
+    def run(self, dispatcher, tracker, domain):
+        dispatcher.utter_template("utter_abort", tracker)
         return [UserUtteranceReverted()]
 
 class ActionDefaultFallback(Action):

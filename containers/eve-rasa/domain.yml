@@ -1,4 +1,17 @@
 intents:
+- out_of_scope
+- affirm+ask_form
+- thank_you+ask_form
+- affirm+thank_you+ask_form
+- ask_abort:
+    triggers: action_abort
+- start_form_personal
+- start_form_pregnancy
+- start_form_health
+- lets_go_people:
+    triggers: action_lets_people
+- insult:
+    triggers: action_insult
 - hello
 - greeting
 - affirm
@@ -31,7 +44,7 @@ intents:
 - ask_whoisit:
     triggers: action_who_is_it
 - canthelp:
-    triggers: action_cant_help
+    triggers: action_sorry_cant_help
 - did_not_exam
 - enter_data
 - greeting_answer
@@ -257,6 +270,43 @@ intents:
 - ask_goal_exam_screening_beta_hermolytic_streptococcus
 - ask_goal_exam_third_trimester_ultrasound
 - ask_how_works_prenatal
+- ask_can_treatment_varicose_veins
+- ask_can_seabathe
+- ask_can_lymphatic_drainage
+- ask_can_almond_oil
+- ask_can_sick_friend
+- ask_when_pregnant_again
+- ask_diet_after_delivery
+- ask_when_start_breastfeeding
+- ask_pregnant_takes_pill
+- ask_can_pregnant_anal_sex
+- ask_necessary_condom_pregnant
+- ask_can_pregnant_orgasm
+- ask_when_period_return
+- ask_consult_after_childbirth
+- ask_normal_birth_better_mother
+- ask_normal_birth_better_baby
+- ask_when_go_maternity
+- ask_while_breastfeeding_pregnant
+- ask_types_childbirth
+- ask_what_is_forceps_childbirth
+- ask_what_is_leboyer_childbirth
+- ask_what_is_squatting_childbirth
+- ask_what_is_water_childbirth
+- ask_what_is_natural_childbirth
+- ask_what_is_humanized_childbirth
+- ask_what_is_cesarean_childbirth
+- ask_who_receive_maternity_leave
+- ask_unemployed_receive_maternity_leave
+- ask_pregnant_women_fired
+- ask_what_is_maternity_pay
+- ask_how_much_salary_maternity_leave
+- ask_how_apply_maternity_leave
+- ask_how_long_maternity_leave
+- ask_when_maternity_leave_start
+- ask_add_vacation_maternity_leave
+- ask_father_have_paternity_leave
+- ask_what_is_maternity_leave
 entities:
 - last_menstruation
 - first_ultrasound
@@ -278,7 +328,6 @@ entities:
 - having_sex
 - contraceptive_method
 - type_delivery
-- episiotomy
 - doctor_appointment
 - infection
 - infection_kind
@@ -314,8 +363,6 @@ slots:
   drug_use:
     type: unfeaturized
   due_date:
-    type: unfeaturized
-  episiotomy:
     type: unfeaturized
   exam_id:
     type: text
@@ -461,9 +508,13 @@ templates:
   utter_bye:
   - text: Tchau! 😙
   - text: Tchau, até mais! 😙
-  utter_canthelp:
+  utter_insult:
+  - text: "Isso não é muito legal 😕 Seja mais gentil 😉"
+  utter_sorry_canthelp:
   - text: Desculpe por não conseguir te ajudar 😕 Mas procure o seu médico, tenho certeza
       que ele conseguirá te ajudar! 😉
+  utter_canthelp:
+  - text: Não vou conseguir te ajudar com isso 😕
   utter_congrats:
   - text: Parabéns! Temos um baby a caminho 👶🤰😍
   utter_default:
@@ -534,8 +585,7 @@ templates:
   utter_ask_exam:
   - text: Você já fez o exame de {exam_name}?
   utter_explain_whatspossible:
-  - text: Eu posso tirar qualquer dúvida sobre a gestação e te lembrar de consultas
-      e remédios! 💁‍♀️
+  - text: Eu posso tirar qualquer dúvida sobre a gestação e o pós parto! 💁‍♀️
   utter_okay:
   - text: Ok então 😊
   - text: Okay 😊
@@ -582,7 +632,7 @@ templates:
   - text: Por favor, me fale o nome do remédio 😬 Quanto mais informações, mais eu
       consigo te ajudar 😅
   utter_ask_hypothyroidism:
-  - text: Você tem hipotireoidismo?
+  - text: Tem hipotireoidismo?
     buttons:
     - title: Sim
       payload: /enter_data{"hypothyroidism":true}
@@ -592,7 +642,7 @@ templates:
   - text: Por favor, me fale se você tem hipotireoidismo 😬 Quanto mais informações,
       mais eu consigo te ajudar 😅
   utter_ask_hyperthyroidism:
-  - text: Você tem hipertireoidismo?
+  - text: E hipertireoidismo?
     buttons:
     - title: Sim
       payload: /enter_data{"hyperthyroidism":true}
@@ -642,7 +692,7 @@ templates:
   - text: Por favor, me fale se você tem asma 😬 Quanto mais informações, mais eu consigo
       te ajudar 😅
   utter_ask_seropositive:
-  - text: Você é soropositiva?
+  - text: É soropositiva?
     buttons:
     - title: Sim
       payload: /enter_data{"seropositive":true}
@@ -662,22 +712,22 @@ templates:
   - text: Por favor, me fale se você tem pressão alta 😬 Quanto mais informações, mais
       eu consigo te ajudar 😅
   utter_ask_health_questions:
-  - text: Posso te fazer algumas perguntas? Vai ser rapidinho 😅
+  - text: Posso te fazer algumas perguntas sobre a sua saúde? Vai ser rapidinho 😅
   utter_ask_personal_questions:
-  - text: Posso te fazer algumas perguntas? Vai ser rapidinho 😅
+  - text: Posso te fazer algumas perguntas sobre você? É bem rápido 😅
   utter_ask_pregnancy_questions:
-  - text: Posso te fazer algumas perguntas? Vai ser rapidinho 😅
+  - text: Posso te fazer algumas perguntas sobre a sua gravidez? Vai ser rapidinho 😅
   utter_ask_height:
-  - text: Qual a sua altura em centímetros?
+  - text: Qual a sua altura em cm?
   utter_wrong_height:
   - text: Por favor, me fale a sua altura em centímetros, por exemplo, se você tem
-      1,65m é equivalente a 165cm 😬
+      1,65 m é equivalente a 165 cm
   utter_ask_weight:
   - text: Quantos kg você pesa?
   utter_wrong_weight:
-  - text: Por favor, me fale qual o seu peso 😬
+  - text: Por favor, me fale qual o seu peso, por exemplo, 60 kg 😬
   utter_ask_state:
-  - text: Qual a sigla do estado em que você mora?
+  - text: E qual a sigla do estado em que você mora?
   utter_wrong_state:
   - text: Por favor, me fale a sigla do seu estado 😬
   utter_ask_high_risk:
@@ -710,7 +760,7 @@ templates:
   utter_wrong_why_cesarean_birth:
   - text: Me conte por que precisou ser cesárea, por favor 😬
   utter_ask_abortion:
-  - text: Você já sofreu algum aborto?
+  - text: Já sofreu algum aborto?
     buttons:
     - title: Sim
       payload: /enter_data{"abortion":true}
@@ -719,7 +769,7 @@ templates:
   utter_wrong_abortion:
   - text: Sei que é um assunto delicado mas pode me contar 😬
   utter_ask_premature_birth:
-  - text: Você já teve algum parto prematuro?
+  - text: Já teve algum parto prematuro?
     buttons:
     - title: Sim
       payload: /enter_data{"premature_birth":true}
@@ -750,13 +800,6 @@ templates:
       payload: /enter_data{"having_sex":false}
   utter_ask_contraceptive_method:
   - text: Qual método contraceptivo você está utilizando?
-  utter_ask_episiotomy:
-  - text: Foi necessário fazer episiotomia (corte próximo à vagina)?
-    buttons:
-    - title: Sim
-      payload: /enter_data{"episiotomy":true}
-    - title: Não
-      payload: /enter_data{"episiotomy":false}
   utter_ask_doctor_appointment:
   - text: Você ja foi a uma consulta médica depois que o bebê nasceu?
     buttons:
@@ -780,9 +823,14 @@ templates:
       payload: /enter_data{"is_postpartum":true}
     - title: Não
       payload: /enter_data{"is_postpartum":false}
+  utter_lets_people:
+  - text: Ajuda aí 🤣
+  utter_abort:
+  - text: Esse é um assunto muito polêmico e por isso prefiro não opinar! 🤐
 actions:
+- action_lets_people
+- utter_lets_people
 - action_default_fallback
-- ask_form
 - utter_hello
 - utter_bye
 - utter_default
@@ -796,6 +844,7 @@ actions:
 - utter_welcome
 - utter_thank_you
 - utter_canthelp
+- utter_sorry_canthelp
 - utter_ask_wherefrom
 - utter_ask_howold
 - utter_ask_isbot
@@ -825,7 +874,7 @@ actions:
 - action_who_is_it
 - utter_explain_whatspossible
 - action_whats_possible
-- action_cant_help
+- action_sorry_cant_help
 - utter_okay
 - action_get_exam
 - utter_doing_right_exam
@@ -845,11 +894,14 @@ actions:
 - utter_ask_breastfeeding
 - utter_ask_having_sex
 - utter_ask_contraceptive_method
-- utter_ask_episiotomy
 - utter_ask_doctor_appointment
 - utter_ask_infection
 - utter_ask_infection_kind
 - action_congrats
+- action_insult
+- utter_insult
+- utter_abort
+- action_abort
 forms:
 - form_initial
 - form_health

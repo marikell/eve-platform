@@ -99,11 +99,15 @@
 - quais tipos de atividades físicas estão liberadas?
 - quais treinos são permitidos?
 - quais exercícios eu posso fazer?
+- quais exercícios eu posso fazer agora que estou grávida?
+- agora que estou grávida, quais exercícios eu posso fazer?
 - quais tipos de atividades físicas são permitidas?
 - quais exercícios físicos são permitidos?
 
 ## intent:ask_allowed_depilation
 - que tipo de depilação eu posso fazer?
+- que tipo de depilação eu posso fazer agora que estou grávida?
+- agora que estou grávida, que tipo de depilação eu posso fazer? 
 - quais tipo de depilação são permitidos?
 - que tipo de depilação uma gestante pode fazer?
 - posso me depilar com cera quente?
@@ -113,10 +117,29 @@
 ## intent:ask_needed_feed
 - quais alimentos eu preciso comer?
 - quais alimentos eu tenho que comer?
+- quais alimentos eu tenho que comer agora que estou grávida?
+- agora que estou grávida, quais alimentos eu tenho que comer?
+- quais alimentos preciso incluir na minha dieta?
+- quais nutrientes tenho que incluir na dieta?
 - quais alimentos uma gestante deve comer?
+- como devo me alimentar na gravidez?
+- como devo me alimentar durante a gravidez?
+- como me alimentar na gestação?
+
+## intent:ask_diet_after_delivery
+- Como deve ser a dieta após o parto?
+- como devo me alimentar depois do parto?
+- como tenho que me alimentar no pós parto?
+- como deve ser a dieta de uma mulher no pós parto?
+- como deve ser a dieta de uma puérpera?
+- como preciso me alimentar agora que estou no puerpério?
+- como tenho que me alimentar agora que estou no pós-parto?
+- agora que estou no pós parto, como deve ser a minha dieta?
 
 ## intent:ask_needed_vaccine
 - quais vacinas eu preciso tomar?
+- quais vacinas eu preciso tomar agora que estou grávida?
+- agora que estou grávida, quais vacinas eu preciso tomar?
 - quais vacinas uma gestante precisa tomar?
 - quais vacinas uma mulher gravida precisa tomar?
 - quais vacinas uma gestante deve tomar?
@@ -128,16 +151,25 @@
 - quais os sinais de que entrei em trabalho de parto?
 - quais são os sinais do trabalho de parto?
 - quais são os sinais de que estou em trabalho de parto?
+- como eu sei que estou em trabalho de parto?
+- como eu sei que entrei em trabalho de parto?
 
 ## intent:ask_ideal_weight
 - qual o ganho de peso ideal na gravidez?
 - qual o peso ideal durante a gravidez?
 - qual o peso ideal de uma gestante?
+- qual é o peso ideal para quem está grávida?
 
 ## intent:ask_best_sleeping_position
 - qual a melhor posição para dormir?
 - qual a melhor posição para uma gestante dormir?
 - qual a melhor posição para dormir grávida?
+- qual a melhor posição para dormir quando a barriga estiver grande?
+- com a barriga grande, qual a melhor posição para dormir?
+- não estou conseguindo dormir direito por conta da barriga
+- não to conseguindo dormir por causa do tamanho da barriga
+- não to conseguindo dormir por causa do tamanho da barriga, o que eu faço?
+- não consigo achar posição para dormir por causa da barriga
 
 ## intent:ask_best_childbirth
 - qual o melhor tipo de parto?
@@ -150,6 +182,10 @@
 - O parto normal é a melhor opção para o bebê?
 - o parto normal é sempre o melhor para o bebê?
 - qual a melhor opção de parto para o bebe?
+- Qual o melhor parto para as grávidas sem complicações durante a gravidez?
+- Qual o melhor parto para as grávidas sem complicações?
+- Qual o melhor tipo de parto quando não há complicações durante a gravidez? 
+- Qual o parto indicado quando não há complicações durante a gravidez? 
 
 ## intent:ask_cases_forceps
 - em quais casos o fórceps é utilizado?
@@ -325,9 +361,10 @@
 
 ## intent:ask_what_is_isthmus_cervical
 - o que é istmo-cervical?
+- o que é insuficiência istmo-cervical?
+- o que significa insuficiência istmo-cervical?
 - o que é istmo cervical?
-- o que é um istmo-cervical?
-- o que é um istmo cervical? 
+- o que é um istmo cervical?
 
 ## intent:ask_what_is_nesting
 - o que é nidação?
@@ -420,6 +457,8 @@
 - posso ir a sauna?
 - gravida pode fazer sauna?
 - posso fazer sauna?
+- Posso tomar banho de sauna?
+- grávida pode tomar banho de sauna?
 
 ## intent:ask_can_chili
 - tem algum problema em comer pimenta
@@ -450,12 +489,44 @@
 - posso tomar banho de sol
 - gravida pode tomar banho de sol?
 
+## intent:ask_can_seabathe
+- posso tomar banho de mar?
+- tem algum problema em tomar banho de mar
+- eu posso entrar no mar?
+- grávida pode tomar banho de mar?
+- gestante pode entrar no mar?
+
+## intent:ask_can_lymphatic_drainage
+- Posso fazer drenagem linfática?
+- tem algum problema em fazer drenagem linfatica?
+- grávida pode fazer drenagem linfática?
+- agora que estou gravida, ainda posso fazer drenagem linfática?
+- agora que estou grávida, tem problema fazer drenagem linfática?
+- posso fazer drenagem linfatica agora que estou grávida?
+
+## intent:ask_can_almond_oil
+- Posso fazer passa óleo de amêndoas a vontade?
+- tem algum problema em usar bastante oleo de amendoas?
+- posso usar bastante óleo de amêndoas para as estrias?
+- tem alguma restrição para o uso do óleo de amêndoas?
+
+## intent:ask_can_sick_friend
+- Posso fazer visitar um amigo doente?
+- tem algum problema em visitar um amigo doente?
+- gestante pode visitar pessoa doente?
+- posso visitar uma pessoa que está doente?
+- posso visitar um amigo doente mesmo estando grávida?
+
 ## intent:ask_can_moisturizer
 - posso usar hidratante?
 - posso usar hidratante de corpo?
 - gravida pode usar hidratante?
 - posso passar hidratante
 - gravida pode passar hidratante?
+- posso passar qualquer tipo de hidratante no corpo?
+- gestante pode usar qualquer tipo de hidratante?
+- preciso usar um tipo especifico de hidratante de corpo?
+- Posso passar qualquer hidratante no corpo ou precisa ser um tipo específico para gestantes?
 
 ## intent:ask_can_travel
 - posso viajar?
@@ -572,6 +643,7 @@
 ## intent:ask_can_drive
 - posso dirigir?
 - posso continuar dirigindo?
+- posso continuar dirigindo meu carro?
 - posso dirigir o meu carro?
 - mulher grávida pode dirigir?
 - posso dirigir?
@@ -725,6 +797,10 @@
 - quais os sintomas da pré-eclâmpsia?
 - quais são os principais sintomas da pre eclampsia?
 - quais são os principais sintomas da pre-eclampsia?
+- Quais os sintomas de uma gestante que apresenta pré-eclâmpsia?
+- Quais os sintomas de uma grávida com pré-eclâmpsia?
+- como saber se tenho pré eclampsia?
+- como saber se estou com pre eclampsia?
 
 ## intent:ask_why_sleep
 - por que eu tenho tanto sono?
@@ -772,6 +848,106 @@
 - o que eu faço se tiver um sangramento?
 - o que fazer se eu tiver um sangramento?
 
+## intent:ask_who_receive_maternity_leave
+- quem pode receber a licença-maternidade?
+- quem tem direito a licença maternidade?
+- quem tem direito a receber a licença maternidade?
+- como saber se tenho direito a licença-maternidade?
+
+## intent:ask_unemployed_receive_maternity_leave
+- quem está desempregada pode receber licença-maternidade?
+- gestante desempregada recebe licença maternidade?
+- gestante desempregada tem direito a licença-maternidade?
+- estou desempregada, tenho direito a licença maternidade?
+- Mulheres desempregadas também podem receber licença-maternidade?
+
+## intent:ask_pregnant_women_fired
+- grávida pode ser mandada embora?
+- eu posso ser mandada embora mesmo estando grávida?
+- posso ser mandada embora agora que estou grávida?
+- eu posso ser mandada embora?
+- Mulheres grávidas podem ser demitidas?
+
+## intent:ask_what_is_maternity_pay
+- o que é o salário maternidade?
+- o que é salário maternidade?
+- O que é salário-maternidade?
+
+## intent:ask_how_much_salary_maternity_leave
+- qual o valor do salário da licença maternidade?
+- qual o valor do salário maternidade?
+- quanto eu vou receber de licença maternidade?
+- quanto eu recebo do salário de licença maternidade?
+- Quanto é o valor do salário durante a licença-maternidade?
+
+## intent:ask_how_apply_maternity_leave
+- Como solicitar o benefício da licença-maternidade?
+- como solicito a licença maternidade?
+- como eu consigo a licença maternidade?
+- o que eu preciso fazer para ter o benefício da licença maternidade?
+- como eu faço para solicitar o salário maternidade?
+- como eu peço a licença maternidade?
+
+## intent:ask_how_long_maternity_leave
+- Quanto tempo dura a licença-maternidade?
+- quanto tempo eu tenho de licença maternidade?
+- quantos meses dura a licena maternidade?
+
+## intent:ask_when_maternity_leave_start
+- A partir de quando a licença-maternidade pode começar?
+- quando começa a licença maternidade?
+- quando posso começar a licença maternidade?
+
+## intent:ask_add_vacation_maternity_leave
+- A mulher pode juntar férias à licença-maternidade?
+- posso tirar a licença maternidade junto com as férias?
+- posso tirar a licença maternidade junto com as minhas férias?
+- posso juntar as férias com a licença maternidade?
+
+## intent:ask_father_have_paternity_leave
+- O pai também possui algum direito a licença-paternidade?
+- o pai tem direito a alguma licença?
+- o pai tem direito a alguma licença também?
+- o pai tem direito a licença paternidade?
+- o meu parceiro também tem direiro a licença?
+- o meu esposo tem direito a licença?
+- meu marido tem direito a licença paternidade?
+- meu namorado tem direito a licença paternidade?
+
+## intent:ask_what_is_maternity_leave
+- O que é a licença-maternidade?
+- o que é licença maternidade?
+
+## intent:insult
+- vai tomar no cu
+- robo idiota
+- otária
+- você é inútil
+- robo bosta
+- voce não presta pra nada
+- vc é muito burra
+- vc é uma bosta
+- q bot lixo
+- não responde nada
+- não serve pra nada
+- escrota
+- voce serve pra alguma coisa?
+- vc nao sabe responder bosta nenhuma
+- que bot horrivel
+- chatbot de bosta
+- assistente ridicula
+- filha da puta
+- bot cagado
+- vai se fuder
+- seu bosta
+- vc é um lixo
+- q bot burro
+- vtnc
+- estúpida
+- estupida
+- doutora de merda
+- vc é uma merda
+
 ## intent:ask_importance_breast_feeding
 - qual a importância da amamentação?
 - qual a importância da amamentacão?
@@ -779,6 +955,14 @@
 - por que é importante amamentar?
 - qual a importancia de amamentar?
 - a amamentação é importante?
+
+## intent:ask_when_start_breastfeeding
+- Quando eu começo a amamentar?
+- quando preciso começar a amamentar?
+- quando começo a amamentar o meu bebê?
+- quando começo a amamentar o bebê?
+- quando uma grávida deve começar amamentar?
+- quando a gestante de amamentar?
 
 ## intent:ask_how_to_know_bag_burst
 - como saber se a bolsa estourou?
@@ -1096,6 +1280,47 @@
 - tomei pilula por muito tempo, isso pode dificultar para eu engravidar?
 - tomei anticoncepcional por muito tempo, isso pode dificultar uma gravidez?
 - tomar anticoncepcional dificulta depois para quem quer engravidar?
+- depois de tomar pílula por muitos anos, a mulher consegue engravidar?
+- depois de tomar pílula por muitos anos, é dificil para engravidar?
+- Depois de tomar pílula por muitos anos, a mulher consegue engravidar logo?
+
+## intent:ask_pregnant_takes_pill
+- O que pode acontecer se uma grávida tomar pílula?
+- o que acontece se eu tomar uma pílula anticoncepcional?
+- o que acontece se uma gestante tomar pílula anticoncepcional?
+
+## intent:ask_can_pregnant_orgasm
+- Durante a gravidez, a mulher consegue chegar ao orgasmo?
+- É possível chegar ao orgasmo durante a gestação?
+- É possível ter orgasmos na gravidez?
+- Agora eu estou grávida, ainda é possível ter um orgasmo?
+- Agora eu estou grávida, ainda é possível char ao orgasmo?
+- durante a gestação, é possível ter um orgasmo?
+- eu consigo ter um orgasmo mesmo estando grávida?
+
+## intent:ask_when_period_return
+- Quando a minha menstruação irá voltar?
+- quando vou voltar a menstruar?
+- depois do parto, quando volta a menstruação?
+- depois do parto, quando voltarei a menstruar?
+
+## intent:ask_necessary_condom_pregnant
+- É preciso usar camisinha na relação com uma grávida?
+- Preciso usar camisinha agora que estou grávida?
+- Agora que estou grávida, preciso utilizar camisinha no sexo?
+- Agora que estou grávida, preciso utilizar camisinha durante a relação?
+- Agora que estou grávida, preciso utilizar camisinha durante a relação sexual?
+- Grávida pode fazer sexo sem camisinha?
+- Grávida pode transar sem camisinha?
+- Posso transar sem camisinha?
+- Agora que engravidei, ainda posso transar sem camisinha?
+
+## intent:ask_can_pregnant_anal_sex
+- Mulher grávida pode praticar sexo anal?
+- Posso praticar sexo anal?
+- Posso praticar sexo anal mesmo grávida?
+- agora que estou grávida ainda posso praticar sexo anal?
+- gestante pode fazer sexo anal?
 
 ## intent:ask_birth_transmit_disease
 - Há doenças que podem ser transmitidas pela mãe no parto?
@@ -1245,6 +1470,23 @@
 - é normal sentir muita tristeza depois do parto?
 - é normal sentir muita tristeza depois que o bebê nasce?
 
+## intent:ask_abort
+- eu quero abortar
+- o que eu faço para abortar?
+- como eu faço um aborto?
+- quero abortar o bebe, o que eu faço?
+- como eu consigo fazer um aborto?
+- posso fazer um aborto?
+- eu posso abortar?
+
+## intent:out_of_scope
+- vc consegue marcar uma consulta pra mim?
+- marque uma consulta pra mim pfvr
+- vc marca a consulta com o médico?
+- qual o hospital mais próximo?
+- vc sabe me dizer qual o hospital mais próximo?
+- preciso marcar uma consulta
+
 ## intent:ask_food_desire_baby_appearance
 - Passar vontade de comer algum alimento pode provocar algum sinal na aparência do bebê?
 - ter vontade de algum alimento durante a gestação pode influenciar na aparência do bebê?
@@ -1374,6 +1616,8 @@
 - meu cabelo está caindo muito por causa da amamentação, o que eu faço?
 - é normal perder muito cabelo na amamentação?
 - queda de cabelo durante a amamentação é normal?
+- É normal que o cabelo comece a cair?
+- É normal que o cabelo comece a cair muito? 
 
 ## intent:ask_normal_bigger_foot
 - Acho que meu pé está maior. Isso pode acontecer?
@@ -1517,10 +1761,16 @@
 - Sexo durante a gravidez faz mal e pode antecipar o parto?
 - o sexo pode fazer mal durante a gestação?
 - faz mal fazer sexo durante a gravidez?
+- transar pode fazer mal durante a gravidez?
 - faz mal ter relações sexuais durante a gravidez?
 - ter relações sexuais pode antecipar o parto?
+- ter relações sexuais pode prejudicar o bebê?
+- o sexo pode prejudicar o bebê durante a gravidez?
 - ter relações sexuais durante a gestação pode antecipar o parto?
 - ter relações sexuais na gravidez pode fazer mal para o bebe?
+- transar durante a gravidez prejudica o bebe?
+- transar pode antecipar o parto?
+- transar pode prejudicar o bebê?
 
 ## intent:ask_sex_hurt_baby
 - Meu marido não quer transar por medo de machucar o bebê, o que digo a ele?
@@ -1594,6 +1844,70 @@
 - quando preciso levar o bebê ao pediatra?
 - meu bebe nasceu, quando devo levar ele ao pediatra?
 
+## intent:ask_when_pregnant_again
+- Quando posso engravidar de novo?
+- posso engravidar de novo depois de quanto tempo?
+- quanto tempo tenho que esperar para engravidar de novo?
+
+## intent:ask_while_breastfeeding_pregnant
+- enquanto está amamentando, a mulher pode engravidar?
+- é possível engravidar enquanto estou amamentando?
+- é possível engravidar durante a amamentação?
+- a mulher pode engravidar enquanto está amamentando?
+- estou amamentando, posso engravidar?
+- tem como engravidar durante o período de amamentação?
+
+## intent:ask_types_childbirth
+- quais são os tipos de partos?
+- quais tipos de partos existem?
+- quais tipos de partos eu posso escolher?
+
+## intent:ask_what_is_forceps_childbirth
+- o que significa parto a fórceps?
+- o que é parto a fórceps?
+- o que quer dizer parto a fórceps?
+- como funciona o parto a fórceps?
+- como é o parto a fórceps?
+
+## intent:ask_what_is_leboyer_childbirth
+- o que é parto leboyer?
+- o que significa parto leboyer?
+- como funciona o parto leboyer?
+- o que quer dizer parto leboyer?
+- como é o parto leboyer?
+
+## intent:ask_what_is_squatting_childbirth
+- o que é parto de cócoras?
+- o que significa parto de cócoras?
+- como funciona o parto de cócoras?
+- o que quer dizer parto de cócoras?
+- como é o parto de cócoras?
+
+## intent:ask_what_is_water_childbirth
+- como é feito o parto na água?
+- o que é o parto na água?
+- como funciona o parto na água?
+- como é o parto na água?
+
+## intent:ask_what_is_natural_childbirth
+- o que é o parto natural?
+- como é o parto natural?
+- como funciona o parto natural?
+- o que significa parto natural?
+- o que quer dizer parto natural?
+
+## intent:ask_what_is_humanized_childbirth
+- o que é o parto humanizado?
+- como é feito o parto humanizado?
+- como funciona o parto humanizado?
+- o que significa parto humanizado?
+
+## intent:ask_what_is_cesarean_childbirth
+- o que é o parto cesárea?
+- como é feito o parto cesariana?
+- como funciona o parto cesárea?
+- o que é parto cesarea?
+
 ## intent:ask_when_have_sex
 - Quando eu meu marido podemos voltar a ter relações?
 - quando posso voltar a ter relações sexuais?
@@ -1605,6 +1919,45 @@
 - quando posso voltar a me relacionar com o meu marido?
 - quando posso voltar a me relacionar com o meu namorado?
 - quando posso voltar a me relacionar com o meu esposo?
+
+## intent:ask_can_treatment_varicose_veins
+- posso fazer tratamento para varizes?
+- grávida pode fazer tratamento para varizes?
+- pode fazer tratamento para varizes durante a gravidez?
+- agora que estou grávida, ainda posso fazer tratamento para varizes?
+
+## intent:ask_consult_after_childbirth
+- Devo me consultar após o parto?
+- tenho que me consultar depois do parto?
+- após o parto, preciso passar no médico?
+- preciso passar em uma consulta agora depois do parto?
+- tive o bebe, preciso passar em uma consulta?
+- preciso ir a uma consulta depois do parto?
+- grávida precisa passar no médico depois do parto?
+
+## intent:lets_go_people
+- vamos lá, pessoal
+- vamos, pessoal
+- pessoal, vamos lá
+
+## intent:ask_normal_birth_better_mother
+- Por que o parto normal é melhor para a mãe?
+- O parto normal é a melhor opção para a mãe?
+- Qual é o melhor parto normal para a mãe?
+- pq o parto normal é a melhor opção para a mãe?
+
+## intent:ask_normal_birth_better_baby
+- Por que o parto normal é melhor para o bebê?
+- O parto normal é a melhor opção para o bebê?
+- Qual é o melhor parto normal para o bebê?
+- pq o parto normal é a melhor opção para o bebê?
+
+## intent:ask_when_go_maternity
+- Quando devo ir para a maternidade?
+- Quando preciso ir para a maternidade?
+- Quando preciso ir para a maternidade para o parto?
+- Quando tenho que ir para a maternidade?
+- Quando devo ir para o hospital para o parto?
 
 ## intent:ask_wherefrom
 - da onde vc é?
@@ -1777,9 +2130,13 @@
 - [AM](state)
 - [RJ](state)
 - [mt](state)
+- [sc](state)
 - moro em [sp](state)
+- moro no [Mt](state)
+- moro no estado de [ro](state)
+- moro no estado de [RO](state)
 - peso [59](number)kg
-- [65](number)kg
+- [65](number) kg
 - [58,3](number) kg
 - [60.5](number)kg
 - [2](number)
@@ -1796,7 +2153,7 @@
 - [5](number) partos
 - [1](number) parto
 <!-- - seis -->
-- [1](number) parto
+<!-- - [1](number) parto -->
 <!-- - tres
 - quatro
 - cinco
@@ -1805,22 +2162,22 @@
 - nove
 - um -->
 - [1,65](number) m
-- [1,67](number)m
-- [150](number)cm
+- [1,67](number) m
+- [150](number) cm
 - [168](number) cm
 - [1.65](number) m
-- [1.64](number)m
+- [1.64](number) m
 - [160](number)
 - tenho [160](number) cm
 - [170](number) cm
-- [1,7](number)m
+- [1,7](number) m
 - [158](number)
 - [1,66](number)
 - [159](number)
-- eu tenho [1,66](number)m
-- tenho [168](number)cm
+- eu tenho [1,66](number) m
+- tenho [168](number) cm
 - [170](number) cm
-- [1,6](number)m
+- [1,6](number) m
 - [1.56](number) m
 - [camisinha](contraceptive_method)
 - [pilula](contraceptive_method)
@@ -1832,6 +2189,28 @@
 - [endometrite](infection_kind)
 - tive [mastite](infection_kind)
 - [urinária](infection_kind)
+- [RS](state)
+- [MG](state)
+- [AP](state)
+- [AC](state)
+- [AL](state)
+- [BA](state)
+- [CE](state)
+- [ES](state)
+- [GO](state)
+- [MA](state)
+- [MS](state)
+- [PA](state)
+- [PB](state)
+- [PR](state)
+- [PE](state)
+- [PI](state)
+- [RN](state)
+- [RO](state)
+- [RR](state)
+- [SE](state)
+- [TO](state)
+- [DF](state)
 
 ## intent:hello+greeting
 - Hey Como vc esta?
@@ -1906,8 +2285,15 @@
 - ok, eu tenho uma duvida, vc pode me ajudar?
 
 ## intent:hello
+- Dra Lara?
+- dra
+- dra lara
 - Oiii
+- Oi, dra
+- Ola, dra Lara
+- Oii Lara
 - Hey
+- Hey dra
 - Hey Boa tarde
 - Olá Boa tarde
 - Oie Bom dia
@@ -1915,8 +2301,10 @@
 - ola
 - E ai
 - Oi
+- Oi doutora
 - Hey
 - Bom dia
+- Bom dia, doutora
 - Hey Bom dia
 - Oiii Boa tarde
 - Ei
@@ -2062,6 +2450,8 @@
 - precisou ser cesarea pois o bebe era grande
 - teve que ser cesarea pq o bebe estava sentado
 - pq eu já tinha feito cesarea antes
+- não atingi a dilatação
+- porque não tinha dilatação suficiente
 
 ## intent:why_i_need_to_answer
 - pq eu preciso responder isso?
@@ -2195,6 +2585,10 @@
 - cafeína
 - cafeina
 
+## synonym:cesárea
+- cesariana
+- cesarea
+
 ## synonym:ultrassonografia
 - ultrassom
 
@@ -2220,9 +2614,13 @@
 - diclofenaco
 - nimesulida
 - anti-inflamatório
+- anti inflamatório
 - resfenol
 - anti-gripal
 - advil
+- antibiótico
+- pílula anticoncepcional
+
 
 ## lookup:state
 - SP

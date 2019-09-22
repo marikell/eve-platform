@@ -18,11 +18,12 @@ pipeline:
 policies:
   - name: "FormPolicy"
   - name: "KerasPolicy"
-    featurizer:
-      - name: MaxHistoryTrackerFeaturizer
-        max_history: 5
-        state_featurizer:
-          - name: BinarySingleStateFeaturizer
+    random_seed: 250
+    # featurizer:
+    #   - name: MaxHistoryTrackerFeaturizer
+    #     max_history: 5
+    #     state_featurizer:
+    #       - name: BinarySingleStateFeaturizer
   - name: "MemoizationPolicy"
   - name: "MappingPolicy"
   - name: "FallbackPolicy"

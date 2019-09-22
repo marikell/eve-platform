@@ -53,7 +53,10 @@ def send_slots_from_Rasa(id):
             'is_pregnant' : False if 'is_pregnant' not in json_obj else json_obj['is_pregnant'],
             'is_trying' : False if 'is_trying' not in json_obj else json_obj['is_trying'],
             'is_postpartum' : False if 'is_postpartum' not in json_obj else json_obj['is_postpartum'],
-            'user' : user
+            'user' : user,
+            'height': None,
+            'weight': None,
+            'state': None
         }
         
         user_info = ServiceHandler.get_service(ROUTE_CONFIG['USER_INFO_TYPE_NAME']).get_by_user_id(user.id)
@@ -196,7 +199,7 @@ def send_pregnancy_slots_from_Rasa(id):
             'premature_birth' : False if 'premature_birth' not in json_obj else json_obj['premature_birth'],
             'user' : user
         }
-        print(obj)
+        
         user_pregnancy_info = ServiceHandler.get_service(ROUTE_CONFIG['USER_PREGNANCY_INFO_TYPE_NAME']).get_by_user_id(user.id)
             
         if user_pregnancy_info:
@@ -234,6 +237,15 @@ def send_personal_slots_from_Rasa(id):
             obj['id'] = user_info.id
             ServiceHandler.get_service(ROUTE_CONFIG['USER_INFO_TYPE_NAME']).update(obj)
         else:
+            obj_info = {
+                'has_children': None,
+                'has_health_plan': None,
+                'is_planning': None,
+                'is_pregnant': None,
+                'is_trying': None,
+                'is_postpartum': None,
+            }
+            obj.update(obj_info)
             ServiceHandler.get_service(ROUTE_CONFIG['USER_INFO_TYPE_NAME']).insert(obj)
         
         return response(status=status.HTTP_200_OK)
