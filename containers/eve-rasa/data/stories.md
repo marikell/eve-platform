@@ -8,11 +8,6 @@
   - form{"name": null}
   - utter_ask_me_anything
 
-## greeting_back
-* greeting_back
-  - utter_greet_answer
-  - utter_ask_me_anything
-
 ## start 2
 * start
   - action_greet_user
@@ -26,11 +21,19 @@
   - utter_info_later
 
 ## 'Oi tudo bem?'
-* greeting OR hello+greeting
+* greeting OR hello+greeting OR hello
     - action_greet_user
     - slot{"greeted_user": true}
 * greeting_answer
     - utter_great
+
+## 'Oi tudo bem?'
+* greeting OR hello+greeting OR hello
+    - action_greet_user
+    - slot{"greeted_user": true}
+* greeting_back
+    - utter_greet_answer
+    - utter_ask_me_anything
 
 ## estou gravida
 * im_pregnant
@@ -815,16 +818,6 @@
 ## have_question
 * have_question OR affirm+have_question
     - utter_ask
-
-<!-- ## Story from conversation with me on September 4th 2019
-* hello
-    - action_greet_user
-    - slot{"greeted_user": true}
-* deny
-    - utter_info_later
-    - utter_ask_me_anything
-* baby_not_moving
-    - utter_baby_not_moving -->
 
 # got_it
 * got_it OR affirm+got_it
