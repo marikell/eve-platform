@@ -1876,6 +1876,43 @@
 - o que quer dizer parto leboyer?
 - como é o parto leboyer?
 
+## intent:ask_how_many_weeks_sex_baby
+- com quantas semanas da pra ver o sexo do bebe?
+- a partir de quantas semanas da pra saber o sexo do bebe?
+- com quantas semana da pra saber se é menino ou menina?
+- com quantos meses da pra ver o sexo do bebê?
+- a partir de qual trimestre da pra ver o sexo?
+- a partir de qual semana da pra descobrir o sexo do bebê?
+
+## intent:ask_how_long_pregnancy_last
+- afinal, quanto tempo dura uma gestação?
+- uma gestação dura quantas semanas?
+- quantas semanas dura a gestação?
+- a gestação dura 9 meses ou 40 semanas?
+- afinal, a gestação dura 9 meses ou 40 semanas?
+- uma gestação dura 36 semanas?
+- a gravidez dura quantos meses?
+- a gravidez dura quantas semanas?
+
+## intent:ask_dont_know_who_father_is
+- não sei quem é o pai
+- não sei quem é o pai do meu bebê
+- como eu descubro quem é o pai do meu filho?
+- nao sei quem é o pai do bebê e agora?
+- o q eu faço se não sei quem é o pai do meu bebê?
+- nao sei quem é o pai, o que eu faço?
+- estou grávida e não sei quem é o pai
+- estou grávida e não sei quem é o pai, o que eu faço?
+- to gravida e não sei quem é o pai do bebe, e agora?
+
+## intent:ask_how_calculate_fertilization_date
+- como eu calculo a data de fecundação?
+- e como eu calculo essa data?
+- como eu calculo a data de concepção?
+- como que calcula a data de fecundação?
+- e como eu faço o cálculo da data de concepção?
+- e como eu faço a conta da data de fecundação?
+
 ## intent:ask_what_is_squatting_childbirth
 - o que é parto de cócoras?
 - o que significa parto de cócoras?
@@ -2378,6 +2415,10 @@
 
 ## intent:later
 - depois
+- dps
+- pode ser dps
+- dps eu respondo
+- eu respondo dps
 - depois eu respondo
 - depois eu respondo pode ser?
 - eu respondo depois

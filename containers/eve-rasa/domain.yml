@@ -1,8 +1,10 @@
 intents:
+- ask_how_many_weeks_sex_baby
+- ask_how_long_pregnancy_last
+- ask_dont_know_who_father_is
+- ask_how_calculate_fertilization_date
+- start
 - out_of_scope
-- affirm+ask_form
-- thank_you+ask_form
-- affirm+thank_you+ask_form
 - ask_abort:
     triggers: action_abort
 - start_form_personal

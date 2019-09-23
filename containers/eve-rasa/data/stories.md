@@ -1,5 +1,5 @@
-## bot inicia a conversa e o usuário (gestante)
-* hello
+## start
+* start
   - action_greet_user
   - slot{"greeted_user": true}
 * affirm
@@ -8,83 +8,22 @@
   - form{"name": null}
   - utter_ask_me_anything
 
-## bot inicia a conversa e o usuário (gestante)
-* hello
-  - action_greet_user
-  - slot{"greeted_user": true}
+## greeting_back
 * greeting_back
   - utter_greet_answer
   - utter_ask_me_anything
 
-## bot inicia a conversa e o usuário (gestante)
-* hello
+## start 2
+* start
   - action_greet_user
   - slot{"greeted_user": true}
-* greeting_answer
-  - utter_great
-  - utter_ask_me_anything
-
-## bot inicia a conversa e o usuário nao quer responder as perguntas
-* hello
-  - action_greet_user
-  - slot{"greeted_user": true}
-* deny
-  - utter_info_later
-  - utter_ask_me_anything
-
-## bot inicia a conversa e o usuário quer responder as perguntas depois
-* hello
-  - action_greet_user
-  - slot{"greeted_user": true}
-* later
+* deny OR later
   - utter_info_later
   - utter_ask_me_anything
 
 ## o usuário quer responder as perguntas depois
 * later
   - utter_info_later
-
-## o usuário inicia a conversa com apenas 'Oi' e não quer responder as perguntas
-* hello
-  - action_greet_user
-  - slot{"greeted_user": true}
-* deny
-  - utter_info_later
-  - utter_ask_me_anything
-
-## o usuário inicia a conversa com apenas 'Oi' e quer responder as perguntas depois
-* hello
-  - action_greet_user
-  - slot{"greeted_user": true}
-* later
-  - utter_info_later
-  - utter_ask_me_anything
-
-## o usuário inicia a conversa com 'Oi tudo bem?' (gestante)
-* greeting OR hello+greeting
-  - action_greet_user
-  - slot{"greeted_user": true}
-* affirm
-  - form_initial
-  - form{"name": "form_initial"}
-  - form{"name": null}
-  - utter_ask_me_anything
-
-## o usuário inicia a conversa com 'Oi tudo bem?' e nao quer responder as perguntas
-* greeting OR hello+greeting
-  - action_greet_user
-  - slot{"greeted_user": true}
-* deny
-  - utter_info_later
-  - utter_ask_me_anything
-
-## o usuário inicia a conversa com 'Oi tudo bem?' e quer responder as perguntas depois
-* greeting OR hello+greeting
-  - action_greet_user
-  - slot{"greeted_user": true}
-* later
-  - utter_info_later
-  - utter_ask_me_anything
 
 ## 'Oi tudo bem?'
 * greeting OR hello+greeting
@@ -118,8 +57,8 @@
   - form{"name": null}
   - utter_ask_me_anything
 
-## unhappy path: bot inicia a conversa (gestante)
-* hello
+## start 3
+* start
   - action_greet_user
   - slot{"greeted_user": true}
 * affirm
@@ -131,8 +70,8 @@
   - form{"name": null}
   - utter_ask_me_anything
 
-## unhappy path: o usuário inicia a conversa com apenas 'Oi' (gestante)
-* hello
+## start 4
+* start
   - action_greet_user
   - slot{"greeted_user": true}
 * affirm
@@ -144,8 +83,8 @@
   - form{"name": null}
   - utter_ask_me_anything
 
-## unhappy path: o usuário inicia a conversa com apenas 'Oi' (gestante)
-* hello
+## start 5
+* start
   - action_greet_user
   - slot{"greeted_user": true}
 * affirm
@@ -157,20 +96,8 @@
   - form{"name": null}
   - utter_ask_me_anything
 
-## unhappy path: bot inicia a conversa e o usuário e pede para o bot parar as perguntas (gestante)
-* hello
-  - action_greet_user
-  - slot{"greeted_user": true}
-* affirm
-  - form_initial
-  - form{"name": "form_initial"}
-* stop
-  - action_deactivate_form
-  - form{"name": null}
-  - utter_ask_me_anything
-
-## unhappy path: o usuário inicia a conversa com apenas 'Oi' e pede para o bot parar as perguntas (gestante)
-* hello
+## start 6
+* start
   - action_greet_user
   - slot{"greeted_user": true}
 * affirm
@@ -270,8 +197,8 @@
 * i_know_importance
     - utter_agree
 
-## o usuário inicia a conversa com apenas 'Oi' e quer saber o motivo das perguntas (gestante)
-* hello
+## start 7
+* start
   - action_greet_user
   - slot{"greeted_user": true}
 * why_i_need_to_answer
@@ -282,8 +209,8 @@
   - form{"name": null}
   - utter_ask_me_anything
 
-## o usuário inicia a conversa com apenas 'Oi' e quer saber o motivo das perguntas (gestante)
-* hello
+## start 8
+* start
   - action_greet_user
   - slot{"greeted_user": true}
 * affirm
@@ -296,7 +223,7 @@
   - utter_ask_me_anything
 
 ## Generated Story -2517970030274559833
-* hello
+* start
     - action_greet_user
   - slot{"greeted_user": true}
 * why_i_need_to_answer
@@ -347,8 +274,8 @@
 * have_question OR affirm+have_question
     - utter_ask
 
-## o usuário inicia a conversa com apenas 'Oi' (gestante) e não tem duvidas
-* hello
+## start 9
+* start
   - action_greet_user
   - slot{"greeted_user": true}
 * affirm
@@ -360,18 +287,6 @@
   - utter_ask_me_later
 * affirm
   - utter_great
-
-## o usuário inicia a conversa com apenas 'Oi' (gestante) e tem duvidas
-* hello
-  - action_greet_user
-  - slot{"greeted_user": true}
-* affirm
-  - form_initial
-  - form{"name": "form_initial"}
-  - form{"name": null}
-  - utter_ask_me_anything
-* have_question OR affirm+have_question
-  - utter_ask
 
 ## baby_not_moving
 * baby_not_moving
@@ -861,6 +776,22 @@
 * ask_baby_feel_sex
     - action_get_answer
 
+## ask_how_many_weeks_sex_baby
+* ask_how_many_weeks_sex_baby
+    - action_get_answer
+
+## ask_how_long_pregnancy_last
+* ask_how_long_pregnancy_last
+    - action_get_answer
+
+## ask_dont_know_who_father_is
+* ask_dont_know_who_father_is
+    - action_get_answer
+
+## ask_how_calculate_fertilization_date
+* ask_how_calculate_fertilization_date
+    - action_get_answer
+
 ## ask_food_desire_baby_appearance
 * ask_food_desire_baby_appearance
     - action_get_answer
@@ -881,13 +812,11 @@
 * ask_cesarean_can_normal_birth
     - action_get_answer
 
-## Story from conversation with me on September 4th 2019
+## have_question
 * have_question OR affirm+have_question
     - utter_ask
-* no_question
-    - utter_ask_me_later
 
-## Story from conversation with me on September 4th 2019
+<!-- ## Story from conversation with me on September 4th 2019
 * hello
     - action_greet_user
     - slot{"greeted_user": true}
@@ -895,7 +824,7 @@
     - utter_info_later
     - utter_ask_me_anything
 * baby_not_moving
-    - utter_baby_not_moving
+    - utter_baby_not_moving -->
 
 # got_it
 * got_it OR affirm+got_it
@@ -920,6 +849,30 @@
 * thank_you+bye OR bye+thank_you
     - utter_welcome
     - utter_bye
+
+## ask_what_vaccines_baby
+* ask_what_vaccines_baby
+    - action_get_answer
+* thank_you OR affirm+thank_you
+    - utter_welcome
+
+## ask_when_go_pediatrician
+* ask_when_go_pediatrician
+    - action_get_answer
+* thank_you OR affirm+thank_you
+    - utter_welcome
+
+## ask_care_baby_belly_button
+* ask_care_baby_belly_button
+    - action_get_answer
+* thank_you OR affirm+thank_you
+    - utter_welcome
+
+## ask_birth_control_difficult_pregnancy
+* ask_birth_control_difficult_pregnancy
+    - action_get_answer
+* thank_you OR affirm+thank_you
+    - utter_welcome
 
 # bye
 * bye
