@@ -488,7 +488,7 @@ templates:
     - title: Não
       payload: /enter_data{"pre_natal":false}
   utter_ask_last_menstruation:
-  - text: Qual a data da sua última menstruação?
+  - text: Qual a data da sua última menstruação, no formato dia/mês/ano?
   utter_ask_first_ultrasound:
   - text: Você já fez o seu primeiro ultrassom?
     buttons:
@@ -742,10 +742,10 @@ templates:
   utter_wrong_high_risk:
   - text: Por favor, preciso saber se a sua gestação é de alto risco 😬
   utter_ask_due_date:
-  - text: Qual a data provável do seu parto?
+  - text: Qual a data provável do seu parto, no formato dia/mês/ano?
   utter_wrong_due_date:
   - text: Não consegui entender 😬 Me fale a data provável do parto como, por exemplo,
-      5 de setembro ou 05/09 😅
+      5 de setembro ou 05/09/19 😅
   utter_ask_births:
   - text: Quantos partos você já teve?
   utter_wrong_births:

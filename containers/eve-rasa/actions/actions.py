@@ -80,7 +80,7 @@ class ActionGreetUser(Action):
         if tracker.get_slot('greeted_user'):
             if intent == "hello":
                 dispatcher.utter_template("utter_greet", tracker)
-            elif intent == "greeting":
+            elif intent == "greeting" or intent == "hello+greeting":
                 dispatcher.utter_template("utter_greet_back", tracker)
         else:
             dispatcher.utter_template("utter_introduce", tracker)
@@ -712,24 +712,19 @@ class PregnancyForm(FormAction):
             req = requests.post(route_config.get_route('user_form'),headers= headers,data=json.dumps(data))
 
         if(tracker.get_slot('births') is not None):
-            print('if1')
             if(tracker.get_slot('normal_births') is not None):
-                print('if2')
                 if(int(tracker.get_slot('births')) == int(tracker.get_slot('normal_births'))):
-                    print('if3')
                     return [
                         "abortion",
                         "premature_birth"
                     ]
                 elif(int(tracker.get_slot('births')) > int(tracker.get_slot('normal_births'))):
-                    print('if4')
                     return [
                         "why_cesarean_birth",
                         "abortion",
                         "premature_birth"
                     ]
             else:
-                print('if5')
                 return [
                     "normal_births",
                     "why_cesarean_birth",
@@ -737,12 +732,10 @@ class PregnancyForm(FormAction):
                     "premature_birth"
                 ]
         elif(tracker.get_slot('had_birth') == False):
-            print('if6')
             return [
                 "abortion"
             ]
         elif(tracker.get_slot('had_birth')):
-            print('if7')
             return [
                 "births",
                 "normal_births",
@@ -751,7 +744,6 @@ class PregnancyForm(FormAction):
                 "premature_birth"
             ]        
         else:
-            print('if8')
             return [
                 "high_risk",
                 "due_date",
@@ -767,7 +759,6 @@ class PregnancyForm(FormAction):
             return {
                 "due_date": [
                     self.from_entity(entity="time"),
-                    self.from_text(intent="enter_data")
                 ],
                 "births": [
                     self.from_entity(entity="number"),
@@ -783,24 +774,18 @@ class PregnancyForm(FormAction):
                 ],
             }
 
-    def validate_due_date(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]):
-        try: 
-            date = dateutil.parser.parse(value)
-            return {"due_date": value}
-        except ValueError:
-            dispatcher.utter_template("utter_wrong_due_date", tracker)
-            return {"due_date": None}
-
     def validate_births(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]):
-        if(self.is_int(value)):             
-            return {"births": value}
+        births = value[0] if isinstance(value, list) else value
+        if(self.is_int(births)):             
+            return {"births": births}
         else:
             dispatcher.utter_template("utter_wrong_births", tracker)
             return {"births": None}
     
     def validate_normal_births(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]):
-        if(self.is_int(value)):             
-            return {"normal_births": value}
+        normal_births = value[0] if isinstance(value, list) else value
+        if(self.is_int(normal_births)):             
+            return {"normal_births": normal_births}
         else:
             dispatcher.utter_template("utter_wrong_normal_births", tracker)
             return {"normal_births": None}
@@ -842,7 +827,8 @@ class PregnancyForm(FormAction):
         
         data = {
             "current_high_risk" : current_high_risk,
-            "due_date" : due_date,
+            # "due_date" : due_date,
+            "due_date" : due_date['from'] if isinstance(due_date, dict) else due_date,
             "births" : births,
             "cesarean_births" : None if not had_birth else (int(births) - int(normal_births)),
             "normal_births" : normal_births,
