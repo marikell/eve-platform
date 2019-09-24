@@ -372,7 +372,7 @@
     - action_greet_user
     - slot{"greeted_user": true}
 
-<!-- ## ask_normal_birth_pain
+## ask_normal_birth_pain
 * ask_normal_birth_pain
     - action_get_answer
 
@@ -388,7 +388,7 @@
 * ask_normal_birth_recovery
     - action_get_answer
 
-## ask_normal_birth_duration
+<!-- ## ask_normal_birth_duration
 * ask_normal_birth_duration
     - action_get_answer
 
