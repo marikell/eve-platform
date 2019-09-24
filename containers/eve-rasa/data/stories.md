@@ -268,6 +268,44 @@
   - utter_info_later
   - utter_ask_me_anything
 
+## form_personal 1
+* start_form_personal
+    - utter_ask_personal_questions
+* affirm
+    - form_personal
+    - form{"name": "form_personal"}
+    - form{"name": null}
+
+## form_personal 2
+* start_form_personal
+  - utter_ask_personal_questions
+* deny OR later
+  - utter_info_later
+  - utter_ask_me_anything
+
+## form_personal 3
+* start_form_personal
+  - utter_ask_personal_questions
+* affirm
+  - form_personal
+  - form{"name": "form_personal"}
+* why_i_need_to_answer
+  - utter_why_answer
+  - form_personal
+  - form{"name": null}
+
+## form_personal 4
+* start_form_personal
+  - utter_ask_personal_questions
+* affirm
+  - form_personal
+  - form{"name": "form_personal"}
+* stop
+  - action_deactivate_form
+  - form{"name": null}
+  - utter_info_later
+  - utter_ask_me_anything
+
 <!-- ## form_health 2
 * start_form_health
     - utter_ask_health_questions
@@ -335,14 +373,6 @@
     - slot{"requested_slot":null}
 * welcome
     - utter_great -->
-
-## form_personal 1
-* start_form_personal
-    - utter_ask_personal_questions
-* affirm
-    - form_personal
-    - form{"name": "form_personal"}
-    - form{"name": null}    
 
 <!-- ## out_of_scope
 * out_of_scope
