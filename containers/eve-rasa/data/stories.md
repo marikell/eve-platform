@@ -306,88 +306,52 @@
   - utter_info_later
   - utter_ask_me_anything
 
-<!-- ## form_health 2
-* start_form_health
-    - utter_ask_health_questions
+## form_pregnancy 1
+* start_form_pregnancy
+    - utter_ask_pregnancy_questions
 * affirm
-    - form_health
-    - form{"name": "form_health"}
+    - form_pregnancy
+    - form{"name": "form_pregnancy"}
     - form{"name": null}
-* have_question OR affirm+have_question
-  - utter_ask -->
+
+## form_pregnancy 2
+* start_form_pregnancy
+  - utter_ask_pregnancy_questions
+* deny OR later
+  - utter_info_later
+  - utter_ask_me_anything
+
+## form_pregnancy 3
+* start_form_pregnancy
+  - utter_ask_pregnancy_questions
+* affirm
+  - form_pregnancy
+  - form{"name": "form_pregnancy"}
+* why_i_need_to_answer
+  - utter_why_answer
+  - form_pregnancy
+  - form{"name": null}
+
+## form_pregnancy 4
+* start_form_pregnancy
+  - utter_ask_pregnancy_questions
+* affirm
+  - form_pregnancy
+  - form{"name": "form_pregnancy"}
+* stop
+  - action_deactivate_form
+  - form{"name": null}
+  - utter_info_later
+  - utter_ask_me_anything
 
 ## welcome
 * welcome
     - utter_great
 
-<!-- ## Story from conversation with me on July 9th 2019
-* start_form_health
-    - utter_ask_health_questions
-* affirm
-    - form_health
-    - slot{"requested_slot":"regular_medicine"}
-* enter_data{"regular_medicine":false}
-    - slot{"regular_medicine":false}
-    - form_health
-    - slot{"regular_medicine":false}
-    - slot{"requested_slot":"hypothyroidism"}
-* enter_data{"hypothyroidism":false}
-    - slot{"hypothyroidism":false}
-    - form_health
-    - slot{"hypothyroidism":false}
-    - slot{"requested_slot":"hyperthyroidism"}
-* enter_data{"hyperthyroidism":false}
-    - slot{"hyperthyroidism":false}
-    - form_health
-    - slot{"hyperthyroidism":false}
-    - slot{"requested_slot":"diabetes"}
-* enter_data{"diabetes":false}
-    - slot{"diabetes":false}
-    - form_health
-    - slot{"diabetes":false}
-    - slot{"requested_slot":"drug_use"}
-* enter_data{"drug_use":false}
-    - slot{"drug_use":false}
-    - form_health
-    - slot{"drug_use":false}
-    - slot{"requested_slot":"autoimmune_disease"}
-* enter_data{"autoimmune_disease":false}
-    - slot{"autoimmune_disease":false}
-    - form_health
-    - slot{"autoimmune_disease":false}
-    - slot{"requested_slot":"asthma"}
-* enter_data{"asthma":false}
-    - slot{"asthma":false}
-    - form_health
-    - slot{"asthma":false}
-    - slot{"requested_slot":"seropositive"}
-* enter_data{"seropositive":false}
-    - slot{"seropositive":false}
-    - form_health
-    - slot{"seropositive":false}
-    - slot{"requested_slot":"high_pressure"}
-* enter_data{"high_pressure":false}
-    - slot{"high_pressure":false}
-    - form_health
-    - slot{"high_pressure":false}
-    - slot{"requested_slot":null}
-* welcome
-    - utter_great -->
-
 <!-- ## out_of_scope
 * out_of_scope
     - utter_canthelp
     - utter_explain_whatspossible
-
-## form_personal 2
-* start_form_personal
-    - utter_ask_personal_questions
-* affirm
-    - form_personal
-    - form{"name": "form_personal"}
-    - form{"name": null}
-* have_question OR affirm+have_question
-  - utter_ask
 
 ## unhappy path: form_personal
 * start_form_personal
@@ -404,73 +368,7 @@
 * welcome
     - utter_great
 
-<!-- ## Story from conversation with me on July 9th 2019
-* start_form_personal
-    - utter_ask_personal_questions
-* affirm
-    - form_personal
-    - slot{"requested_slot":"height"}
-* enter_data{"height":false}
-    - slot{"height":false}
-    - form_personal
-    - slot{"height":false}
-    - slot{"requested_slot":"weight"}
-* enter_data{"weight":false}
-    - slot{"weight":false}
-    - form_personal
-    - slot{"weight":false}
-    - slot{"requested_slot":"state"}
-* enter_data{"state":false}
-    - slot{"state":false}
-    - form_personal
-    - slot{"state":false}
-    - slot{"requested_slot":null}
-* welcome
-    - utter_great -->
-
-<!-- ## Story from conversation with me on July 9th 2019
-* start_form_personal
-    - utter_ask_personal_questions
-* affirm
-    - form_personal
-    - slot{"requested_slot":"height"}
-* enter_data{"height":false}
-    - slot{"height":false}
-    - form_personal
-    - slot{"height":false}
-    - slot{"requested_slot":"weight"}
-* enter_data{"weight":false}
-    - slot{"weight":false}
-    - form_personal
-    - slot{"weight":false}
-    - slot{"requested_slot":"state"}
-* enter_data{"state":false}
-    - slot{"state":false}
-    - form_personal
-    - slot{"state":false}
-    - slot{"requested_slot":null}
-* welcome
-    - utter_great
-
-## form_pregnancy 1
-* start_form_pregnancy
-    - utter_ask_pregnancy_questions
-* affirm
-    - form_pregnancy
-    - form{"name": "form_pregnancy"}
-    - form{"name": null}
-
-## form_pregnancy 2
-* start_form_pregnancy
-    - utter_ask_pregnancy_questions
-* affirm
-    - form_pregnancy
-    - form{"name": "form_pregnancy"}
-    - form{"name": null}
-* have_question OR affirm+have_question
-  - utter_ask
-
-## unhappy path: form_pregnancy
+<!-- ## unhappy path: form_pregnancy
 * start_form_pregnancy
     - utter_ask_pregnancy_questions
 * affirm
@@ -481,27 +379,7 @@
   - form_pregnancy
   - form{"name": "form_pregnancy"}
   - form{"name": null}
-
-## unhappy path: form_pregnancy 2
-* start_form_pregnancy
-    - utter_ask_pregnancy_questions
-* deny OR later
-    - utter_info_later
-    - utter_ask_me_anything
-
-## unhappy path: form_personal
-* start_form_personal
-    - utter_ask_personal_questions
-* deny OR later
-    - utter_info_later
-    - utter_ask_me_anything
-
-## unhappy path: form_health
-* start_form_health
-    - utter_ask_health_questions
-* deny OR later
-    - utter_info_later
-    - utter_ask_me_anything -->
+-->
 
 ## Generated Story -4178839390444423351
 * hello
