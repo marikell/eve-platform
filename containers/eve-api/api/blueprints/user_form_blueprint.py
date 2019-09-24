@@ -6,6 +6,7 @@ from api.services.service_handler import ServiceHandler
 from api.utils.validate_fields import check_empty_string, check_if_key_exists
 from api.utils.response_formatter import response, response_text
 import json
+from api.enums.user_enums import UserTypeEnum
 from bson import json_util
 
 route_name = ROUTE_CONFIG['USER_FORM_TYPE_NAME']
@@ -53,6 +54,7 @@ def get_forms_user(user_id):
         # forms = json.dumps()
         forms = []
         user_forms = []
+        user_info = ServiceHandler.get_service(ROUTE_CONFIG['USER_INFO_TYPE_NAME']).get_by_user_id(user_id)
         for f in ServiceHandler.get_service(ROUTE_CONFIG['FORM_TYPE_NAME']).get_all():
             forms.append(json.loads(f.to_json()))
         for uf in ServiceHandler.get_service(ROUTE_CONFIG['USER_FORM_TYPE_NAME']).get_all_forms_by_user(user_id):
@@ -65,15 +67,37 @@ def get_forms_user(user_id):
         done_forms = []
         currentForm = None
 
+        form_initial = json.loads(ServiceHandler.get_service(ROUTE_CONFIG['FORM_TYPE_NAME']).get_by_name("form_initial").to_json())
+
+        if not form_initial:
+            return response(form, status.HTTP_200_OK)
+
+        has_done_form_initial = False
+
         for uf in user_forms:
-            if uf['status'] == 1:
+            if uf['form_id']['$oid'] == form_initial['_id']['$oid']:
+                has_done_form_initial = True
+            elif uf['status'] == 1:
                 #vou adicionando na lista os forms que ja foram respondidos
                 done_forms.append(uf['form_id']['$oid'])
             else:
-                #se encontro um form pendente, nao tem pq continuar
+                #se encontro um form pendente ou não encontro o form_initial, nao tem pq continuar
                 form_id = uf['form_id']
                 currentForm = uf['form_id']['$oid']
                 break
+
+        if not has_done_form_initial:
+            return response(form, status.HTTP_200_OK)
+
+        user_type = UserTypeEnum.normal
+        if user_info is not None:
+            user_info_object = json.loads(user_info.to_json())
+            if "is_pregnant" in user_info_object and user_info_object['is_pregnant']:
+                user_type = UserTypeEnum.pregnant
+            elif "is_trying" in user_info_object and user_info_object['is_trying']:
+                user_type = UserTypeEnum.wanting_conceive
+            elif "is_postpartum" in user_info_object and user_info_object['is_postpartum']:
+                user_type = UserTypeEnum.after_birth
         
         # #se a quantidade de forms for a mesma do user_forms para um usuário, significa que todos já foram feitos.
         if not currentForm and len(forms) != len(user_forms):
@@ -81,8 +105,11 @@ def get_forms_user(user_id):
             for f in forms:
                 form_id = f['_id']['$oid']
                 if form_id not in done_forms:
-                    form = f
-                    break
+                    if (f['name'] == 'form_pregnancy' and user_type != UserTypeEnum.pregnant) or f['name'] == 'form_initial':
+                        continue
+                    else:
+                        form = f
+                        break
         if form:
             return response(form, status.HTTP_200_OK)
         else:
