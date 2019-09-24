@@ -3,7 +3,7 @@ from rasa_sdk import Action, Tracker, ActionExecutionRejection
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction, REQUESTED_SLOT
 from rasa_sdk.events import SlotSet
-from rasa_core_sdk.events import UserUtteranceReverted
+from rasa_sdk.events import UserUtteranceReverted
 from route_config import RouteConfig
 import requests
 import json
@@ -31,13 +31,9 @@ class GetAnswer(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         intent = tracker.latest_message['intent'].get('name')
-        if(intent == 'last_intent'):
-            intent = tracker.get_slot('last_intent')
-        entities = tracker.latest_message['entities']
-        entities_obj = [e.get('value') for e in entities]
+                
         response = 'Não vou te conseguir ajudar nessa, mas pergunte ao seu médico, ele saberá te responder ;)'
         data = {
-            'entities' : entities_obj,
             'intent' : intent
         }
         headers = {
@@ -56,7 +52,7 @@ class GetAnswer(Action):
             dispatcher.utter_message(response)
         except:
             dispatcher.utter_message(response)
-        return [SlotSet("last_intent", intent)]
+        return []
 
 class ActionGreetUser(Action):
     def name(self) -> Text:
@@ -431,6 +427,7 @@ class HealthForm(FormAction):
         
         # se o registro não existe, insere
         if 'response' not in req.json():
+            print('if1')
             data = {
                 "user_id" : user_id,
                 "form_id" : health_form_id,
@@ -440,6 +437,7 @@ class HealthForm(FormAction):
             req = requests.post(route_config.get_route('user_form'),headers= headers,data=json.dumps(data))
 
         if(tracker.get_slot('regular_medicine') == False):
+            print('if2')
             return [
                 "hypothyroidism",
                 "hyperthyroidism",
@@ -451,6 +449,7 @@ class HealthForm(FormAction):
                 "high_pressure"
             ]
         else:
+            print('if3')
             return [
                 "regular_medicine",
                 "regular_medicine_name",
@@ -566,10 +565,12 @@ class PersonalForm(FormAction):
     def slot_mappings(self):
             return {
                 "height": [
-                    self.from_entity(entity="number")
+                    self.from_entity(entity="number"),
+                    self.from_text(intent="enter_data"),
                 ],
                 "weight": [
-                    self.from_entity(entity="number")
+                    self.from_entity(entity="number"),
+                    self.from_text(intent="enter_data"),
                 ],
                 "state": [
                     self.from_text(intent="enter_data"),
@@ -578,15 +579,15 @@ class PersonalForm(FormAction):
             }
 
     def validate_height(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]):
-        if(self.is_int(value) and int(value) > 150):
-            return {"height": value}
+        if(self.is_int(value[0]) and int(value[0]) > 150):
+            return {"height": value[0]}
         else:
             dispatcher.utter_template("utter_wrong_height", tracker)
             return {"height": None}
 
     def validate_weight(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]):
-        if(self.is_int(value) and int(value) > 40):
-            return {"weight": value}
+        if(self.is_int(value[0]) and int(value[0]) > 40):
+            return {"weight": value[0]}
         else:
             dispatcher.utter_template("utter_wrong_weight", tracker)
             return {"weight": None}
@@ -710,31 +711,39 @@ class PregnancyForm(FormAction):
             }
 
             req = requests.post(route_config.get_route('user_form'),headers= headers,data=json.dumps(data))
+
         if(tracker.get_slot('births') is not None):
+            print('if1')
             if(tracker.get_slot('normal_births') is not None):
+                print('if2')
                 if(int(tracker.get_slot('births')) == int(tracker.get_slot('normal_births'))):
+                    print('if3')
                     return [
                         "abortion",
                         "premature_birth"
                     ]
                 elif(int(tracker.get_slot('births')) > int(tracker.get_slot('normal_births'))):
+                    print('if4')
                     return [
                         "why_cesarean_birth",
                         "abortion",
                         "premature_birth"
                     ]
             else:
+                print('if5')
                 return [
                     "normal_births",
                     "why_cesarean_birth",
                     "abortion",
                     "premature_birth"
                 ]
-        if(tracker.get_slot('had_birth') == False):
+        elif(tracker.get_slot('had_birth') == False):
+            print('if6')
             return [
                 "abortion"
             ]
-        if(tracker.get_slot('had_birth')):
+        elif(tracker.get_slot('had_birth')):
+            print('if7')
             return [
                 "births",
                 "normal_births",
@@ -743,6 +752,7 @@ class PregnancyForm(FormAction):
                 "premature_birth"
             ]        
         else:
+            print('if8')
             return [
                 "high_risk",
                 "due_date",
@@ -761,10 +771,12 @@ class PregnancyForm(FormAction):
                     self.from_text(intent="enter_data")
                 ],
                 "births": [
-                    self.from_entity(entity="number")
+                    self.from_entity(entity="number"),
+                    self.from_text(intent="enter_data")
                 ],
                 "normal_births": [
-                    self.from_entity(entity="number")
+                    self.from_entity(entity="number"),
+                    self.from_text(intent="enter_data")
                 ],
                 "why_cesarean_birth": [
                     self.from_text(intent="why_cesarean_answer"),
@@ -853,7 +865,7 @@ class PregnancyForm(FormAction):
                 
         dispatcher.utter_template('utter_thank_you', tracker)
         dispatcher.utter_template('utter_ask_me_anything', tracker)
-        return [ActionReverted()]
+        return []
 
 class ActionAskForm(Action):
     def name(self):
@@ -861,4 +873,21 @@ class ActionAskForm(Action):
 
     def run(self, dispatcher, tracker, domain):
         dispatcher.utter_template("utter_explain_whatspossible", tracker)
+        return [UserUtteranceReverted()]
+
+class ActionDefaultFallback(Action):
+    def name(self) -> Text:
+        return "action_default_fallback"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        headers = { 'Content-Type':'application/json' }
+        try:
+            data = { 'question' : tracker.latest_message['text'] }
+            req = requests.post(url = route_config.get_route('send_unanswered_question'),headers= headers,data=json.dumps(data))
+            dispatcher.utter_template("utter_default", tracker)            
+        except:
+            dispatcher.utter_template("utter_default", tracker)
+
         return [UserUtteranceReverted()]

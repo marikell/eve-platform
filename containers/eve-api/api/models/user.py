@@ -12,8 +12,6 @@ class User(db.DynamicDocument):
     user_type = db.IntField(required=True)
     accepts_notifications = db.BooleanField(required=True)
 
-
-
     def save(self, *args, **kwargs):
         if not self.creation_date:
             self.creation_date = datetime.datetime.now()

@@ -8,22 +8,21 @@ class UserPregnancyInfoService(GenericService):
         super().__init__(UserPregnancyInfo.objects)
         
     def insert(self, obj):
+        is_first_pregnancy = (obj['is_first_pregnancy'])
+        is_planned_pregnancy = (obj['is_planned_pregnancy'])
         is_doing_pre_natal = (obj['is_doing_pre_natal'])
         last_menstruation_date = (obj['last_menstruation_date'])
-        is_planned_pregnancy = (obj['is_planned_pregnancy'])
-        is_first_pregnancy = (obj['is_first_pregnancy'])
         first_ultrasound_date = (obj['first_ultrasound_date'])
         
         user_pregnancy_info = UserPregnancyInfo(
-                             is_doing_pre_natal=is_doing_pre_natal,
-                             last_menstruation_date=last_menstruation_date,
-                             is_planned_pregnancy=is_planned_pregnancy,
                              is_first_pregnancy=is_first_pregnancy,
+                             is_planned_pregnancy=is_planned_pregnancy,
+                             is_doing_pre_natal=is_doing_pre_natal,
+                             last_menstruation_date=last_menstruation_date,                             
                              first_ultrasound_date=first_ultrasound_date,
                              user_id=obj['user'].to_dbref())
         
         user_pregnancy_info.save()
-
 
     def get_by_user_id(self, user_id):
         return self.objects(Q(user_id=ObjectId(user_id))).first()
@@ -41,11 +40,6 @@ class UserPregnancyInfoService(GenericService):
         user_pregnancy_info.normal_births = (obj['normal_births'])
         user_pregnancy_info.why_cesarean_birth = (obj['why_cesarean_birth'])
         user_pregnancy_info.abortion = (obj['abortion'])
-        user_pregnancy_info.premature_birth = (obj['premature_birth'])
-        user_pregnancy_info.is_doing_pre_natal = (obj['is_doing_pre_natal'])
-        user_pregnancy_info.last_menstruation_date = (obj['last_menstruation_date'])
-        user_pregnancy_info.is_planned_pregnancy = (obj['is_planned_pregnancy'])
-        user_pregnancy_info.is_first_pregnancy = (obj['is_first_pregnancy'])
-        user_pregnancy_info.first_ultrasound_date = (obj['first_ultrasound_date'])
+        user_pregnancy_info.premature_birth = (obj['premature_birth'])        
         
         user_pregnancy_info.save()

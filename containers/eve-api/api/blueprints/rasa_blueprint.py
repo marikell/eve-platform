@@ -53,9 +53,6 @@ def send_slots_from_Rasa(id):
             'is_pregnant' : False if 'is_pregnant' not in json_obj else json_obj['is_pregnant'],
             'is_trying' : False if 'is_trying' not in json_obj else json_obj['is_trying'],
             'is_postpartum' : False if 'is_postpartum' not in json_obj else json_obj['is_postpartum'],
-            'height' : None if 'height' not in json_obj else json_obj['height'],
-            'weight' : None if 'weight' not in json_obj else json_obj['weight'],
-            'state' : None if 'state' not in json_obj else json_obj['state'],
             'user' : user
         }
         
@@ -75,7 +72,7 @@ def send_slots_from_Rasa(id):
                 'first_ultrasound_date' : None if 'first_ultrasound_date' not in json_obj else json_obj['first_ultrasound_date'],
                 'user' : user
             }
-
+            
             user_pregnancy_info = ServiceHandler.get_service(ROUTE_CONFIG['USER_PREGNANCY_INFO_TYPE_NAME']).get_by_user_id(user.id)
             if user_pregnancy_info:
                 obj_pregnancy_info['id'] = user_pregnancy_info.id
@@ -182,6 +179,7 @@ def send_health_slots_from_Rasa(id):
 def send_pregnancy_slots_from_Rasa(id):
     try:
         json_obj = request.get_json()
+        
         user = ServiceHandler.get_service(ROUTE_CONFIG['USER_TYPE_NAME']).get(id)
 
         if not user:
@@ -198,7 +196,7 @@ def send_pregnancy_slots_from_Rasa(id):
             'premature_birth' : False if 'premature_birth' not in json_obj else json_obj['premature_birth'],
             'user' : user
         }
-
+        print(obj)
         user_pregnancy_info = ServiceHandler.get_service(ROUTE_CONFIG['USER_PREGNANCY_INFO_TYPE_NAME']).get_by_user_id(user.id)
             
         if user_pregnancy_info:
@@ -230,13 +228,13 @@ def send_personal_slots_from_Rasa(id):
             'user' : user
         }
         
-        user_personal_info = ServiceHandler.get_service(ROUTE_CONFIG['USER_PERSONAL_INFO_TYPE_NAME']).get_by_user_id(user.id)
+        user_info = ServiceHandler.get_service(ROUTE_CONFIG['USER_INFO_TYPE_NAME']).get_by_user_id(user.id)
             
-        if user_personal_info:
-            obj['id'] = user_personal_info.id
-            ServiceHandler.get_service(ROUTE_CONFIG['USER_PERSONAL_INFO_TYPE_NAME']).update(obj)
+        if user_info:
+            obj['id'] = user_info.id
+            ServiceHandler.get_service(ROUTE_CONFIG['USER_INFO_TYPE_NAME']).update(obj)
         else:
-            ServiceHandler.get_service(ROUTE_CONFIG['USER_PERSONAL_INFO_TYPE_NAME']).insert(obj)
+            ServiceHandler.get_service(ROUTE_CONFIG['USER_INFO_TYPE_NAME']).insert(obj)
         
         return response(status=status.HTTP_200_OK)
 
