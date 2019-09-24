@@ -131,20 +131,6 @@
   - utter_info_later
   - utter_ask_me_anything
 
-<!-- ## start 8
-* start
-  - action_greet_user
-  - slot{"greeted_user": true}
-* affirm
-  - form_initial
-  - form{"name": "form_initial"}
-  - form{"name": null}
-  - utter_ask_me_anything
-* no_question
-  - utter_ask_me_later
-* affirm
-  - utter_great -->
-
 <!-- ## bot pergunta se fez o exame e o usuário fez
     - utter_ask_exam
 * affirm
@@ -262,7 +248,7 @@
 * affirm
   - form_health
   - form{"name": "form_health"}
-* stop
+* stop OR stop_form
   - action_deactivate_form
   - form{"name": null}
   - utter_info_later
@@ -300,7 +286,7 @@
 * affirm
   - form_personal
   - form{"name": "form_personal"}
-* stop
+* stop OR stop_form
   - action_deactivate_form
   - form{"name": null}
   - utter_info_later
@@ -338,7 +324,7 @@
 * affirm
   - form_pregnancy
   - form{"name": "form_pregnancy"}
-* stop
+* stop OR stop_form
   - action_deactivate_form
   - form{"name": null}
   - utter_info_later
@@ -385,21 +371,6 @@
 * hello
     - action_greet_user
     - slot{"greeted_user": true}
-
-<!-- ## Generated Story -6771195614729549971
-* im_pregnant
-    - action_congrats
-    - slot{"is_pregnant": true}
-    - utter_first_step
-    - utter_ask_info
-
-## Generated Story -6771195614729549971
-* hello+im_pregnant
-    - utter_hello
-    - action_congrats
-    - slot{"is_pregnant": true}
-    - utter_first_step
-    - utter_ask_info -->
 
 <!-- ## ask_normal_birth_pain
 * ask_normal_birth_pain
