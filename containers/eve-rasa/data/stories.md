@@ -388,7 +388,7 @@
 * ask_normal_birth_recovery
     - action_get_answer
 
-<!-- ## ask_normal_birth_duration
+## ask_normal_birth_duration
 * ask_normal_birth_duration
     - action_get_answer
 
@@ -1346,4 +1346,4 @@
 
 ## ask_how_works_prenatal
 * ask_how_works_prenatal
-    - action_get_answer -->
+    - action_get_answer
