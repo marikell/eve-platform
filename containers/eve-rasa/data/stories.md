@@ -334,12 +334,12 @@
 * welcome
     - utter_great
 
-<!-- ## out_of_scope
+## out_of_scope
 * out_of_scope
     - utter_canthelp
     - utter_explain_whatspossible
 
-## unhappy path: form_personal
+<!-- ## unhappy path: form_personal
 * start_form_personal
     - utter_ask_personal_questions
 * affirm
