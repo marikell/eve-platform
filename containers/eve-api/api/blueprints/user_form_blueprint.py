@@ -141,6 +141,16 @@ def get_form_by_user():
     except Exception as e:
         return response_text(str(e), status.HTTP_400_BAD_REQUEST)
 
+@app_user_form.route('/{}/<id>'.format(route_name), methods=['DELETE'])
+def delete_by_user(id):
+    try:
+        ServiceHandler.get_service(route_name).delete_by_id(id)
+
+        return response(status=status.HTTP_200_OK)
+
+    except Exception as e:
+        return response(str(e), status.HTTP_400_BAD_REQUEST)
+
 @app_user_form.route('/{}/<id>'.format(route_name), methods=['PUT'])
 def update(id):
     try:        
