@@ -1,24 +1,32 @@
-## start
-* start
-  - action_greet_user
-  - slot{"greeted_user": true}
-* affirm
-  - form_initial
-  - form{"name": "form_initial"}
-  - form{"name": null}
-  - utter_ask_me_anything
+# got_it
+* got_it OR affirm+got_it
+    - utter_great
 
-## start 2
-* start
-  - action_greet_user
-  - slot{"greeted_user": true}
-* deny OR later
-  - utter_info_later
-  - utter_ask_me_anything
+# got_it
+* affirm+got_it+thank_you OR got_it+thank_you
+    - utter_great
+    - utter_welcome
 
-## o usuário quer responder as perguntas depois
+# thank_you
+* thank_you OR affirm+thank_you
+    - utter_welcome
+
+# thank_you+bye
+* thank_you+bye OR bye+thank_you
+    - utter_welcome
+    - utter_bye
+
+# bye
+* bye
+    - utter_bye
+
+<!-- ## i_know_importance
+* i_know_importance
+    - utter_agree
+
+## later
 * later
-  - utter_info_later
+  - utter_info_later -->
 
 ## 'Oi tudo bem?'
 * greeting OR hello+greeting OR hello
@@ -26,6 +34,7 @@
     - slot{"greeted_user": true}
 * greeting_answer
     - utter_great
+    - utter_ask_me_anything
 
 ## 'Oi tudo bem?'
 * greeting OR hello+greeting OR hello
@@ -34,6 +43,24 @@
 * greeting_back
     - utter_greet_answer
     - utter_ask_me_anything
+
+## baby_not_moving
+* baby_not_moving
+    - utter_baby_not_moving
+
+## usuario não tem duvidas
+* no_question
+    - utter_ask_me_later
+
+## usuario não tem duvidas
+* no_question
+    - utter_ask_me_later
+* affirm OR affirm+thank_you
+    - utter_great
+
+## usuario tem duvidas
+* have_question OR affirm+have_question
+    - utter_ask
 
 ## estou gravida
 * im_pregnant
@@ -47,7 +74,7 @@
   - form{"name": null}
   - utter_ask_me_anything
 
-## estou gravida
+## Oi, estou gravida
 * hello+im_pregnant
     - utter_hello
     - action_congrats
@@ -60,33 +87,25 @@
   - form{"name": null}
   - utter_ask_me_anything
 
+## start 1
+* start
+  - action_greet_user
+  - slot{"greeted_user": true}
+* affirm
+  - form_initial
+  - form{"name": "form_initial"}
+  - form{"name": null}
+  - utter_ask_me_anything 
+
+## start 2
+* start
+  - action_greet_user
+  - slot{"greeted_user": true}
+* deny OR later
+  - utter_info_later
+  - utter_ask_me_anything
+
 ## start 3
-* start
-  - action_greet_user
-  - slot{"greeted_user": true}
-* affirm
-  - form_initial
-  - form{"name": "form_initial"}
-* ask_allowed_exercises
-  - action_get_answer
-  - form_initial
-  - form{"name": null}
-  - utter_ask_me_anything
-
-## start 4
-* start
-  - action_greet_user
-  - slot{"greeted_user": true}
-* affirm
-  - form_initial
-  - form{"name": "form_initial"}
-* ask_needed_feed
-  - action_get_answer
-  - form_initial
-  - form{"name": null}
-  - utter_ask_me_anything
-
-## start 5
 * start
   - action_greet_user
   - slot{"greeted_user": true}
@@ -99,7 +118,7 @@
   - form{"name": null}
   - utter_ask_me_anything
 
-## start 6
+## start 4
 * start
   - action_greet_user
   - slot{"greeted_user": true}
@@ -109,9 +128,24 @@
 * stop
   - action_deactivate_form
   - form{"name": null}
+  - utter_info_later
   - utter_ask_me_anything
 
-## bot pergunta se fez o exame e o usuário fez
+<!-- ## start 8
+* start
+  - action_greet_user
+  - slot{"greeted_user": true}
+* affirm
+  - form_initial
+  - form{"name": "form_initial"}
+  - form{"name": null}
+  - utter_ask_me_anything
+* no_question
+  - utter_ask_me_later
+* affirm
+  - utter_great -->
+
+<!-- ## bot pergunta se fez o exame e o usuário fez
     - utter_ask_exam
 * affirm
     - action_doing_right_exam
@@ -194,106 +228,7 @@
 * affirm OR affirm+did_exam OR did_exam
     - action_doing_right_exam
 * i_know_importance
-    - utter_agree
-
-## sabe a importancia dos exames e do pré-natal
-* i_know_importance
-    - utter_agree
-
-## start 7
-* start
-  - action_greet_user
-  - slot{"greeted_user": true}
-* why_i_need_to_answer
-  - utter_why_answer
-* affirm
-  - form_initial
-  - form{"name": "form_initial"}
-  - form{"name": null}
-  - utter_ask_me_anything
-
-## start 8
-* start
-  - action_greet_user
-  - slot{"greeted_user": true}
-* affirm
-  - form_initial
-  - form{"name": "form_initial"}
-* why_i_need_to_answer
-  - utter_why_answer
-  - form_initial
-  - form{"name": null}
-  - utter_ask_me_anything
-
-## Generated Story -2517970030274559833
-* start
-    - action_greet_user
-  - slot{"greeted_user": true}
-* why_i_need_to_answer
-    - utter_why_answer
-* affirm
-    - form_initial
-    - form{"name": "form_initial"}
-    - slot{"requested_slot": "is_pregnant"}
-* form: enter_data{"is_pregnant": false}
-    - slot{"is_pregnant": false}
-    - form: form_initial
-    - slot{"is_pregnant": false}
-    - slot{"requested_slot": "is_trying"}
-* form: enter_data{"is_trying": true}
-    - slot{"is_trying": true}
-    - form: form_initial
-    - slot{"is_trying": true}
-    - slot{"requested_slot": "is_planning"}
-* form: enter_data{"is_planning": false}
-    - slot{"is_planning": false}
-    - form: form_initial
-    - slot{"is_planning": false}
-    - slot{"requested_slot": "has_children"}
-* form: enter_data{"has_children": false}
-    - slot{"has_children": false}
-    - form: form_initial
-    - slot{"has_children": false}
-    - slot{"requested_slot": "health_plan"}
-* form: enter_data{"health_plan": false}
-    - slot{"health_plan": false}
-    - form: form_initial
-    - slot{"health_plan": false}
-    - form{"name": null}
-    - slot{"requested_slot": null}
-    - utter_ask_me_anything
-
-## usuario não tem duvidas
-* no_question
-    - utter_ask_me_later
-
-## usuario não tem duvidas
-* no_question
-    - utter_ask_me_later
-* affirm
-    - utter_great
-
-## usuario tem duvidas
-* have_question OR affirm+have_question
-    - utter_ask
-
-## start 9
-* start
-  - action_greet_user
-  - slot{"greeted_user": true}
-* affirm
-  - form_initial
-  - form{"name": "form_initial"}
-  - form{"name": null}
-  - utter_ask_me_anything
-* no_question
-  - utter_ask_me_later
-* affirm
-  - utter_great
-
-## baby_not_moving
-* baby_not_moving
-    - utter_baby_not_moving
+    - utter_agree -->
 
 ## form_health 1
 * start_form_health
@@ -305,30 +240,49 @@
 
 ## form_health 2
 * start_form_health
+  - utter_ask_health_questions
+* deny OR later
+  - utter_info_later
+  - utter_ask_me_anything
+
+## form_health 3
+* start_form_health
+  - utter_ask_health_questions
+* affirm
+  - form_health
+  - form{"name": "form_health"}
+* why_i_need_to_answer
+  - utter_why_answer
+  - form_health
+  - form{"name": null}
+
+## form_health 4
+* start_form_health
+  - utter_ask_health_questions
+* affirm
+  - form_health
+  - form{"name": "form_health"}
+* stop
+  - action_deactivate_form
+  - form{"name": null}
+  - utter_info_later
+  - utter_ask_me_anything
+
+<!-- ## form_health 2
+* start_form_health
     - utter_ask_health_questions
 * affirm
     - form_health
     - form{"name": "form_health"}
     - form{"name": null}
 * have_question OR affirm+have_question
-  - utter_ask
-
-## unhappy path: form_health
-* start_form_health
-    - utter_ask_health_questions
-* affirm
-  - form_health
-  - form{"name": "form_health"}
-* ask_main_exams_prenatal
-  - action_get_answer
-  - form_health
-  - form{"name": null}
+  - utter_ask -->
 
 ## welcome
 * welcome
     - utter_great
 
-## Story from conversation with me on July 9th 2019
+<!-- ## Story from conversation with me on July 9th 2019
 * start_form_health
     - utter_ask_health_questions
 * affirm
@@ -380,7 +334,7 @@
     - slot{"high_pressure":false}
     - slot{"requested_slot":null}
 * welcome
-    - utter_great
+    - utter_great -->
 
 ## form_personal 1
 * start_form_personal
@@ -388,9 +342,9 @@
 * affirm
     - form_personal
     - form{"name": "form_personal"}
-    - form{"name": null}
+    - form{"name": null}    
 
-## out_of_scope
+<!-- ## out_of_scope
 * out_of_scope
     - utter_canthelp
     - utter_explain_whatspossible
@@ -414,13 +368,13 @@
 * ask_allowed_exercises
   - action_get_answer
   - form_personal
-  - form{"name": null}
+  - form{"name": null} -->
 
 ## welcome
 * welcome
     - utter_great
 
-## Story from conversation with me on July 9th 2019
+<!-- ## Story from conversation with me on July 9th 2019
 * start_form_personal
     - utter_ask_personal_questions
 * affirm
@@ -442,9 +396,9 @@
     - slot{"state":false}
     - slot{"requested_slot":null}
 * welcome
-    - utter_great
+    - utter_great -->
 
-## Story from conversation with me on July 9th 2019
+<!-- ## Story from conversation with me on July 9th 2019
 * start_form_personal
     - utter_ask_personal_questions
 * affirm
@@ -498,18 +452,6 @@
   - form{"name": "form_pregnancy"}
   - form{"name": null}
 
-## unhappy path: form_health
-* start_form_health
-    - utter_ask_health_questions
-* affirm
-  - form_health
-  - form{"name": "form_health"}
-* ask_allowed_depilation
-  - action_get_answer
-  - form_health
-  - form{"name": "form_health"}
-  - form{"name": null}
-
 ## unhappy path: form_pregnancy 2
 * start_form_pregnancy
     - utter_ask_pregnancy_questions
@@ -529,9 +471,29 @@
     - utter_ask_health_questions
 * deny OR later
     - utter_info_later
-    - utter_ask_me_anything
+    - utter_ask_me_anything -->
 
-## ask_normal_birth_pain
+## Generated Story -4178839390444423351
+* hello
+    - action_greet_user
+    - slot{"greeted_user": true}
+
+<!-- ## Generated Story -6771195614729549971
+* im_pregnant
+    - action_congrats
+    - slot{"is_pregnant": true}
+    - utter_first_step
+    - utter_ask_info
+
+## Generated Story -6771195614729549971
+* hello+im_pregnant
+    - utter_hello
+    - action_congrats
+    - slot{"is_pregnant": true}
+    - utter_first_step
+    - utter_ask_info -->
+
+<!-- ## ask_normal_birth_pain
 * ask_normal_birth_pain
     - action_get_answer
 
@@ -747,26 +709,6 @@
 * ask_how_long_healthy_pregnant
     - action_get_answer
 
-## Generated Story -4178839390444423351
-* hello
-    - action_greet_user
-    - slot{"greeted_user": true}
-
-## Generated Story -6771195614729549971
-* im_pregnant
-    - action_congrats
-    - slot{"is_pregnant": true}
-    - utter_first_step
-    - utter_ask_info
-
-## Generated Story -6771195614729549971
-* hello+im_pregnant
-    - utter_hello
-    - action_congrats
-    - slot{"is_pregnant": true}
-    - utter_first_step
-    - utter_ask_info
-
 ## ask_high_risk_normal_birth 
 * ask_high_risk_normal_birth
     - action_get_answer
@@ -814,62 +756,6 @@
 ## ask_cesarean_can_normal_birth
 * ask_cesarean_can_normal_birth
     - action_get_answer
-
-## have_question
-* have_question OR affirm+have_question
-    - utter_ask
-
-# got_it
-* got_it OR affirm+got_it
-    - utter_great
-
-# got_it
-* affirm+got_it+thank_you OR got_it+thank_you
-    - utter_great
-    - utter_welcome
-
-# got_it
-* baby_not_moving
-    - utter_baby_not_moving
-* got_it OR affirm+got_it
-    - utter_great
-
-# thank_you
-* thank_you OR affirm+thank_you
-    - utter_welcome
-
-# thank_you+bye
-* thank_you+bye OR bye+thank_you
-    - utter_welcome
-    - utter_bye
-
-## ask_what_vaccines_baby
-* ask_what_vaccines_baby
-    - action_get_answer
-* thank_you OR affirm+thank_you
-    - utter_welcome
-
-## ask_when_go_pediatrician
-* ask_when_go_pediatrician
-    - action_get_answer
-* thank_you OR affirm+thank_you
-    - utter_welcome
-
-## ask_care_baby_belly_button
-* ask_care_baby_belly_button
-    - action_get_answer
-* thank_you OR affirm+thank_you
-    - utter_welcome
-
-## ask_birth_control_difficult_pregnancy
-* ask_birth_control_difficult_pregnancy
-    - action_get_answer
-* thank_you OR affirm+thank_you
-    - utter_welcome
-
-# bye
-* bye
-    - utter_bye
 
 ## ask_main_exams_prenatal
 * ask_main_exams_prenatal
@@ -1581,4 +1467,4 @@
 
 ## ask_how_works_prenatal
 * ask_how_works_prenatal
-    - action_get_answer
+    - action_get_answer -->
