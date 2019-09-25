@@ -614,7 +614,7 @@
 * ask_how_many_weeks_sex_baby
     - action_get_answer
 
-<!-- ## ask_how_long_pregnancy_last
+## ask_how_long_pregnancy_last
 * ask_how_long_pregnancy_last
     - action_get_answer
 
@@ -670,7 +670,7 @@
 * ask_signs_labor
     - action_get_answer
 
-## ask_ideal_weight
+<!-- ## ask_ideal_weight
 * ask_ideal_weight
     - action_get_answer
 
