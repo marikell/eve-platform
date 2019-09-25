@@ -1350,6 +1350,7 @@
 - como eu calculo o período fértil?
 - como eu calculo meu período fértil?
 - como se calcula o período fértil?
+- como calcular o período fértil?
 
 ## intent:ask_care_baby_belly_button
 - Como devo cuidar do umbigo do bebê?

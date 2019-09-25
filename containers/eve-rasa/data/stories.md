@@ -62,6 +62,11 @@
 * have_question OR affirm+have_question
     - utter_ask
 
+## ok
+    - action_get_answer
+* affirm
+    - utter_great
+
 ## estou gravida
 * im_pregnant
     - action_congrats
@@ -388,7 +393,7 @@
 * ask_normal_birth_recovery
     - action_get_answer
 
-<!-- ## ask_normal_birth_duration
+## ask_normal_birth_duration
 * ask_normal_birth_duration
     - action_get_answer
 
@@ -412,7 +417,7 @@
 * ask_late_menstruation
     - action_get_answer
 
-## ask_do_pregnancy_test
+<!-- ## ask_do_pregnancy_test
 * ask_do_pregnancy_test
     - action_get_answer
 
