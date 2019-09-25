@@ -863,7 +863,7 @@
 * ask_when_pregnant_again
     - action_get_answer
 
-<!-- ## ask_diet_after_delivery
+## ask_diet_after_delivery
 * ask_diet_after_delivery
     - action_get_answer
 
@@ -879,7 +879,7 @@
 * ask_can_pregnant_anal_sex
     - action_get_answer
 
-## ask_necessary_condom_pregnant
+<!-- ## ask_necessary_condom_pregnant
 * ask_necessary_condom_pregnant
     - action_get_answer
 
