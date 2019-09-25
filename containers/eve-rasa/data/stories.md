@@ -1075,7 +1075,7 @@
 * ask_can_smoke
     - action_get_answer
 
-<!-- ## ask_can_x_ray
+## ask_can_x_ray
 * ask_can_x_ray
     - action_get_answer
 
@@ -1131,7 +1131,7 @@
 * ask_when_start_braxton_hicks
     - action_get_answer
 
-## ask_when_exam_feces
+<!-- ## ask_when_exam_feces
 * ask_when_exam_feces
     - action_get_answer
 
