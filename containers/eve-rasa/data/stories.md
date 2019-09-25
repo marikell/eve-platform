@@ -879,7 +879,7 @@
 * ask_can_pregnant_anal_sex
     - action_get_answer
 
-<!-- ## ask_necessary_condom_pregnant
+## ask_necessary_condom_pregnant
 * ask_necessary_condom_pregnant
     - action_get_answer
 
@@ -895,7 +895,7 @@
 * ask_consult_after_childbirth
     - action_get_answer
 
-## ask_normal_birth_better_mother
+<!-- ## ask_normal_birth_better_mother
 * ask_normal_birth_better_mother
     - action_get_answer
 
