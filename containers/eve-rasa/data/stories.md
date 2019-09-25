@@ -417,7 +417,7 @@
 * ask_late_menstruation
     - action_get_answer
 
-<!-- ## ask_do_pregnancy_test
+## ask_do_pregnancy_test
 * ask_do_pregnancy_test
     - action_get_answer
 
@@ -425,7 +425,7 @@
 * ask_normal_swollen_foot
     - action_get_answer
 
-## ask_how_long_milk_come_down
+<!-- ## ask_how_long_milk_come_down
 * ask_how_long_milk_come_down
     - action_get_answer
 
