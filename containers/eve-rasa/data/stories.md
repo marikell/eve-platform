@@ -975,7 +975,7 @@
 * ask_when_maternity_leave_start
     - action_get_answer
 
-<!-- ## ask_add_vacation_maternity_leave
+## ask_add_vacation_maternity_leave
 * ask_add_vacation_maternity_leave
     - action_get_answer
 
@@ -1023,7 +1023,7 @@
 * ask_can_steam_room
     - action_get_answer
 
-## ask_can_chili
+<!-- ## ask_can_chili
 * ask_can_chili
     - action_get_answer
 
