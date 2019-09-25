@@ -754,7 +754,7 @@
 * ask_what_is_uterine_height
     - action_get_answer
 
-<!-- ## ask_what_is_amniocentesis
+## ask_what_is_amniocentesis
 * ask_what_is_amniocentesis
     - action_get_answer
 
@@ -802,7 +802,7 @@
 * ask_what_is_nesting
     - action_get_answer
 
-## ask_what_is_oxytocin
+<!-- ## ask_what_is_oxytocin
 * ask_what_is_oxytocin
     - action_get_answer
 
