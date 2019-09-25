@@ -1023,7 +1023,7 @@
 * ask_can_steam_room
     - action_get_answer
 
-<!-- ## ask_can_chili
+## ask_can_chili
 * ask_can_chili
     - action_get_answer
 
@@ -1037,10 +1037,6 @@
 
 ## ask_can_moisturizer
 * ask_can_moisturizer
-    - action_get_answer
-
-## ask_can_travel
-* ask_can_travel
     - action_get_answer
 
 ## ask_can_travel
@@ -1079,7 +1075,7 @@
 * ask_can_smoke
     - action_get_answer
 
-## ask_can_x_ray
+<!-- ## ask_can_x_ray
 * ask_can_x_ray
     - action_get_answer
 
