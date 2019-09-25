@@ -481,7 +481,7 @@
 * ask_body_back_normal
     - action_get_answer
 
-<!-- ## ask_back_exercise
+## ask_back_exercise
 * ask_back_exercise
     - action_get_answer
 
@@ -493,7 +493,7 @@
 * ask_exercise_impair_milk
     - action_get_answer
 
-## ask_normal_bleeding_after_birth
+<!-- ## ask_normal_bleeding_after_birth
 * ask_normal_bleeding_after_birth
     - action_get_answer
 
