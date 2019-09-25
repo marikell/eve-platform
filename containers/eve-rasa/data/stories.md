@@ -670,7 +670,7 @@
 * ask_signs_labor
     - action_get_answer
 
-<!-- ## ask_ideal_weight
+## ask_ideal_weight
 * ask_ideal_weight
     - action_get_answer
 
@@ -710,7 +710,7 @@
 * ask_what_is_postpartum
     - action_get_answer
 
-## ask_what_is_loco
+<!-- ## ask_what_is_loco
 * ask_what_is_loco
     - action_get_answer
 
