@@ -1131,7 +1131,7 @@
 * ask_when_start_braxton_hicks
     - action_get_answer
 
-<!-- ## ask_when_exam_feces
+## ask_when_exam_feces
 * ask_when_exam_feces
     - action_get_answer
 
@@ -1191,7 +1191,7 @@
 * ask_why_sleep
     - action_get_answer
 
-## ask_why_nausea
+<!-- ## ask_why_nausea
 * ask_why_nausea
     - action_get_answer
 
