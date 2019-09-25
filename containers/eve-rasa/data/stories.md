@@ -935,7 +935,7 @@
 * ask_what_is_water_childbirth
     - action_get_answer
 
-<!-- ## ask_what_is_natural_childbirth
+## ask_what_is_natural_childbirth
 * ask_what_is_natural_childbirth
     - action_get_answer
 
@@ -975,7 +975,7 @@
 * ask_when_maternity_leave_start
     - action_get_answer
 
-## ask_add_vacation_maternity_leave
+<!-- ## ask_add_vacation_maternity_leave
 * ask_add_vacation_maternity_leave
     - action_get_answer
 
