@@ -1191,7 +1191,7 @@
 * ask_why_sleep
     - action_get_answer
 
-<!-- ## ask_why_nausea
+## ask_why_nausea
 * ask_why_nausea
     - action_get_answer
 
@@ -1255,7 +1255,7 @@
 * complain_salivation
     - action_get_answer
 
-## complain_weakness
+<!-- ## complain_weakness
 * complain_weakness
     - action_get_answer
 
