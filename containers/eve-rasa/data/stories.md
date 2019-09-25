@@ -425,7 +425,7 @@
 * ask_normal_swollen_foot
     - action_get_answer
 
-<!-- ## ask_how_long_milk_come_down
+## ask_how_long_milk_come_down
 * ask_how_long_milk_come_down
     - action_get_answer
 
@@ -481,7 +481,7 @@
 * ask_body_back_normal
     - action_get_answer
 
-## ask_back_exercise
+<!-- ## ask_back_exercise
 * ask_back_exercise
     - action_get_answer
 
