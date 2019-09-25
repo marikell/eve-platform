@@ -62,6 +62,11 @@
 * have_question OR affirm+have_question
     - utter_ask
 
+## usuario tem duvidas
+    - utter_ask_me_anything
+* have_question OR affirm+have_question
+    - utter_ask
+
 ## ok
     - action_get_answer
 * affirm
@@ -802,7 +807,7 @@
 * ask_what_is_nesting
     - action_get_answer
 
-<!-- ## ask_what_is_oxytocin
+## ask_what_is_oxytocin
 * ask_what_is_oxytocin
     - action_get_answer
 
@@ -818,7 +823,7 @@
 * ask_what_is_cephalic_perimeter
     - action_get_answer
 
-## ask_what_is_spinal_anesthesia
+<!-- ## ask_what_is_spinal_anesthesia
 * ask_what_is_spinal_anesthesia
     - action_get_answer
 
