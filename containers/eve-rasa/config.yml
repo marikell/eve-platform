@@ -18,7 +18,7 @@ pipeline:
 policies:
   
   - name: "KerasPolicy"
-    max_history: 6
+    max_history: 5
     # random_seed: 250
     # featurizer:
     #   - name: MaxHistoryTrackerFeaturizer

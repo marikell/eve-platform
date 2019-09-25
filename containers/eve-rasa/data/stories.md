@@ -710,7 +710,7 @@
 * ask_what_is_postpartum
     - action_get_answer
 
-<!-- ## ask_what_is_loco
+## ask_what_is_loco
 * ask_what_is_loco
     - action_get_answer
 
@@ -754,7 +754,7 @@
 * ask_what_is_uterine_height
     - action_get_answer
 
-## ask_what_is_amniocentesis
+<!-- ## ask_what_is_amniocentesis
 * ask_what_is_amniocentesis
     - action_get_answer
 
