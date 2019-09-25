@@ -136,6 +136,11 @@
   - utter_info_later
   - utter_ask_me_anything
 
+## utter_ask_me_anything
+    - utter_ask_me_anything
+* affirm
+    - utter_ask
+
 <!-- ## bot pergunta se fez o exame e o usuário fez
     - utter_ask_exam
 * affirm
@@ -493,7 +498,7 @@
 * ask_exercise_impair_milk
     - action_get_answer
 
-<!-- ## ask_normal_bleeding_after_birth
+## ask_normal_bleeding_after_birth
 * ask_normal_bleeding_after_birth
     - action_get_answer
 
@@ -541,7 +546,7 @@
 * ask_receive_oral_sex
     - action_get_answer
 
-## ask_smell_sweat_stronger
+<!-- ## ask_smell_sweat_stronger
 * ask_smell_sweat_stronger
     - action_get_answer
 
