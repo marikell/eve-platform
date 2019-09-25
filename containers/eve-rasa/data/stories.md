@@ -546,7 +546,7 @@
 * ask_receive_oral_sex
     - action_get_answer
 
-<!-- ## ask_smell_sweat_stronger
+## ask_smell_sweat_stronger
 * ask_smell_sweat_stronger
     - action_get_answer
 
@@ -590,7 +590,7 @@
 * ask_how_many_pounds_pregnancy
     - action_get_answer
 
-## ask_how_long_breastfeed
+<!-- ## ask_how_long_breastfeed
 * ask_how_long_breastfeed
     - action_get_answer
 
