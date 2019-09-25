@@ -895,7 +895,7 @@
 * ask_consult_after_childbirth
     - action_get_answer
 
-<!-- ## ask_normal_birth_better_mother
+## ask_normal_birth_better_mother
 * ask_normal_birth_better_mother
     - action_get_answer
 
@@ -935,7 +935,7 @@
 * ask_what_is_water_childbirth
     - action_get_answer
 
-## ask_what_is_natural_childbirth
+<!-- ## ask_what_is_natural_childbirth
 * ask_what_is_natural_childbirth
     - action_get_answer
 
