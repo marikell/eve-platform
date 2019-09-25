@@ -823,7 +823,7 @@
 * ask_what_is_cephalic_perimeter
     - action_get_answer
 
-<!-- ## ask_what_is_spinal_anesthesia
+## ask_what_is_spinal_anesthesia
 * ask_what_is_spinal_anesthesia
     - action_get_answer
 
@@ -863,7 +863,7 @@
 * ask_when_pregnant_again
     - action_get_answer
 
-## ask_diet_after_delivery
+<!-- ## ask_diet_after_delivery
 * ask_diet_after_delivery
     - action_get_answer
 
