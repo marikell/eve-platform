@@ -590,7 +590,7 @@
 * ask_how_many_pounds_pregnancy
     - action_get_answer
 
-<!-- ## ask_how_long_breastfeed
+## ask_how_long_breastfeed
 * ask_how_long_breastfeed
     - action_get_answer
 
@@ -614,7 +614,7 @@
 * ask_how_many_weeks_sex_baby
     - action_get_answer
 
-## ask_how_long_pregnancy_last
+<!-- ## ask_how_long_pregnancy_last
 * ask_how_long_pregnancy_last
     - action_get_answer
 
