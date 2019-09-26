@@ -170,45 +170,25 @@
     - action_get_exam
     - utter_is_important_exam
 
-<!-- ## bot pergunta se fez o exame e o usuário fez
-    - utter_ask_exam
-* affirm OR affirm+did_exam OR did_exam
-    - action_doing_right_exam -->
-
-<!-- ## bot pergunta se fez o exame e o usuário não fez
-    - utter_ask_exam  
-* deny
-    - action_get_exam
-    - utter_is_important_exam
-
-## bot pergunta se fez o exame e o usuário não fez
-    - utter_ask_exam  
-* did_not_exam
-    - action_get_exam
-    - utter_is_important_exam
-
-## bot pergunta se fez o exame e o usuário não fez
-    - utter_ask_exam  
-* deny
-    - action_get_exam
+## exame
     - utter_is_important_exam
 * affirm+ill_do_it OR affirm OR ill_do_it
-    - utter_great
-
-## bot pergunta se fez o exame e o usuário não fez
-    - utter_ask_exam  
-* did_not_exam
-    - action_get_exam
-    - utter_is_important_exam
-* ill_do_it OR affirm OR affirm+ill_do_it
     - utter_great
 
 ## bot pergunta se fez o exame, o usuário fez mas quer saber o motivo da pergunta
     - utter_ask_exam  
 * why_i_need_to_answer
     - utter_why_answer
-* did_exam
+* affirm OR affirm+did_exam OR did_exam
     - action_doing_right_exam
+
+<!-- ## bot pergunta se fez o exame e o usuário não fez
+    - utter_ask_exam  
+* deny
+    - action_get_exam
+    - utter_is_important_exam
+* affirm+ill_do_it OR affirm OR ill_do_it
+    - utter_great
 
 ## bot pergunta se fez o exame, o usuário fez mas quer saber o motivo da pergunta
     - utter_ask_exam  
