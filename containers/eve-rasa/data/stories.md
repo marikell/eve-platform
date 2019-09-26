@@ -1255,7 +1255,7 @@
 * complain_salivation
     - action_get_answer
 
-<!-- ## complain_weakness
+## complain_weakness
 * complain_weakness
     - action_get_answer
 
@@ -1315,7 +1315,7 @@
 * complain_bleeding
     - action_get_answer
 
-## complain_colic
+<!-- ## complain_colic
 * complain_colic
     - action_get_answer
 
