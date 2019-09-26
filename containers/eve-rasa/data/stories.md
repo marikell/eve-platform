@@ -1315,7 +1315,7 @@
 * complain_bleeding
     - action_get_answer
 
-<!-- ## complain_colic
+## complain_colic
 * complain_colic
     - action_get_answer
 
@@ -1357,4 +1357,4 @@
 
 ## ask_how_works_prenatal
 * ask_how_works_prenatal
-    - action_get_answer -->
+    - action_get_answer
