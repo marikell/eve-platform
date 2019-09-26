@@ -599,7 +599,7 @@ templates:
       médico e converse com ele sobre isso!
   utter_why_answer:
   - text: Tudo bem se você não quiser responder mas com essas informações eu consigo
-      te ajudar mais. Entendeu? 😊
+      te ajudar mais 😊
   utter_agree:
   - text: Isso mesmo! 👍
   - text: Isso aí! 👍
