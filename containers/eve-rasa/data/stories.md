@@ -320,33 +320,9 @@
     - utter_canthelp
     - utter_explain_whatspossible
 
-<!-- ## unhappy path: form_personal
-* start_form_personal
-    - utter_ask_personal_questions
-* affirm
-  - form_personal
-  - form{"name": "form_personal"}
-* ask_allowed_exercises
-  - action_get_answer
-  - form_personal
-  - form{"name": null} -->
-
 ## welcome
 * welcome
     - utter_great
-
-<!-- ## unhappy path: form_pregnancy
-* start_form_pregnancy
-    - utter_ask_pregnancy_questions
-* affirm
-  - form_pregnancy
-  - form{"name": "form_pregnancy"}
-* ask_allowed_depilation
-  - action_get_answer
-  - form_pregnancy
-  - form{"name": "form_pregnancy"}
-  - form{"name": null}
--->
 
 ## Generated Story -4178839390444423351
 * hello
