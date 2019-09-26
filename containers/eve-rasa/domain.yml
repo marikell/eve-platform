@@ -1,4 +1,5 @@
 intents:
+- ask_exam
 - ask_how_many_weeks_sex_baby
 - ask_how_long_pregnancy_last
 - ask_dont_know_who_father_is

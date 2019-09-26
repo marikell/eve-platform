@@ -110,15 +110,16 @@ class ReceiveExamJob():
         
             req = requests.post(url = url_slot,headers= headers,data=json.dumps(json_data))
 
-            url_action = '{}/conversations/{}/execute'.format(RASA_API['url'],obj['user_id'])
-
-            action_data = { "name":"utter_ask_exam" }
+            # url_action = '{}/conversations/{}/execute'.format(RASA_API['url'],obj['user_id'])
+            url_action = '{}/webhooks/rest/webhook'.format(RASA_API['url'])
+            # action_data = { "name":"utter_ask_exam" }
+            intent_data = { "sender": obj['user_id'], "message": "/ask_exam" }
             
-            req_action_data = requests.post(url = url_action, headers = headers, data=json.dumps(action_data))
+            req_action_data = requests.post(url = url_action, headers = headers, data=json.dumps(intent_data))
 
-            action_listen = { "name" : "action_listen" }
+            # action_listen = { "name" : "action_listen" }
 
-            req_action_listen = requests.post(url = url_action, headers = headers, data=json.dumps(action_listen))
+            # req_action_listen = requests.post(url = url_action, headers = headers, data=json.dumps(action_listen))
         except Exception as e:
             print(str(e))
             

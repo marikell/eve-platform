@@ -146,22 +146,36 @@
 * affirm
     - utter_ask
 
+## bot pergunta se fez o exame e o usuário fez
+* ask_exam
+    - utter_ask_exam
+* affirm OR affirm+did_exam OR did_exam
+    - action_doing_right_exam
+
+## bot pergunta se fez o exame e o usuário fez
+    - utter_ask_exam
+* affirm OR affirm+did_exam OR did_exam
+    - action_doing_right_exam
+
+## bot pergunta se fez o exame e o usuário fez
+* ask_exam
+    - utter_ask_exam
+* deny OR did_not_exam OR deny+did_not_exam
+    - action_get_exam
+    - utter_is_important_exam
+
+## bot pergunta se fez o exame e o usuário fez
+    - utter_ask_exam
+* deny OR did_not_exam OR deny+did_not_exam
+    - action_get_exam
+    - utter_is_important_exam
+
 <!-- ## bot pergunta se fez o exame e o usuário fez
     - utter_ask_exam
-* affirm
-    - action_doing_right_exam
+* affirm OR affirm+did_exam OR did_exam
+    - action_doing_right_exam -->
 
-## bot pergunta se fez o exame e o usuário fez
-    - utter_ask_exam
-* affirm+did_exam
-    - action_doing_right_exam
-
-## bot pergunta se fez o exame e o usuário fez
-    - utter_ask_exam
-* did_exam
-    - action_doing_right_exam
-
-## bot pergunta se fez o exame e o usuário não fez
+<!-- ## bot pergunta se fez o exame e o usuário não fez
     - utter_ask_exam  
 * deny
     - action_get_exam
