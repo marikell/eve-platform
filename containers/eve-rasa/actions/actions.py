@@ -437,7 +437,6 @@ class HealthForm(FormAction):
             req = requests.post(route_config.get_route('user_form'),headers= headers,data=json.dumps(data))
 
         if(tracker.get_slot('regular_medicine') == False):
-            print('if2')
             return [
                 "hypothyroidism",
                 "hyperthyroidism",
@@ -449,7 +448,6 @@ class HealthForm(FormAction):
                 "high_pressure"
             ]
         else:
-            print('if3')
             return [
                 "regular_medicine",
                 "regular_medicine_name",

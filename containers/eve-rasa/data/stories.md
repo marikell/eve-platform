@@ -20,6 +20,20 @@
 * bye
     - utter_bye
 
+# im_think_pregnant
+* hello+im_think_pregnant
+    - utter_hello
+    - utter_not_sure_pregnancy
+
+# im_think_pregnant
+* im_think_pregnant
+    - utter_not_sure_pregnancy
+
+# im_think_pregnant
+    - utter_not_sure_pregnancy
+* affirm OR got_it OR affirm+got_it
+    - utter_great
+
 <!-- ## i_know_importance
 * i_know_importance
     - utter_agree
@@ -61,6 +75,16 @@
 ## usuario tem duvidas
 * have_question OR affirm+have_question
     - utter_ask
+
+## usuario tem duvidas
+    - utter_ask_me_anything
+* have_question OR affirm+have_question
+    - utter_ask
+
+## ok
+    - action_get_answer
+* affirm
+    - utter_great
 
 ## estou gravida
 * im_pregnant
@@ -131,85 +155,56 @@
   - utter_info_later
   - utter_ask_me_anything
 
-<!-- ## bot pergunta se fez o exame e o usuário fez
-    - utter_ask_exam
+## utter_ask_me_anything
+    - utter_ask_me_anything
 * affirm
+    - utter_ask
+
+## bot pergunta se fez o exame e o usuário fez
+* ask_exam
+    - utter_ask_exam
+* affirm OR affirm+did_exam OR did_exam
     - action_doing_right_exam
 
 ## bot pergunta se fez o exame e o usuário fez
     - utter_ask_exam
-* affirm+did_exam
+* affirm OR affirm+did_exam OR did_exam
     - action_doing_right_exam
 
 ## bot pergunta se fez o exame e o usuário fez
-    - utter_ask_exam
-* did_exam
-    - action_doing_right_exam
-
-## bot pergunta se fez o exame e o usuário não fez
-    - utter_ask_exam  
-* deny
-    - action_get_exam
-    - utter_is_important_exam
-
-## bot pergunta se fez o exame e o usuário não fez
-    - utter_ask_exam  
-* did_not_exam
-    - action_get_exam
-    - utter_is_important_exam
-
-## bot pergunta se fez o exame e o usuário não fez
-    - utter_ask_exam  
-* deny
-    - action_get_exam
-    - utter_is_important_exam
-* affirm+ill_do_it OR affirm OR ill_do_it
-    - utter_great
-
-## bot pergunta se fez o exame e o usuário não fez
-    - utter_ask_exam  
-* did_not_exam
-    - action_get_exam
-    - utter_is_important_exam
-* ill_do_it OR affirm OR affirm+ill_do_it
-    - utter_great
-
-## bot pergunta se fez o exame, o usuário fez mas quer saber o motivo da pergunta
-    - utter_ask_exam  
-* why_i_need_to_answer
-    - utter_why_answer
-* did_exam
-    - action_doing_right_exam
-
-## bot pergunta se fez o exame, o usuário fez mas quer saber o motivo da pergunta
-    - utter_ask_exam  
-* why_i_need_to_answer
-    - utter_why_answer
-* affirm
-    - utter_ask_exam
-* affirm+did_exam OR did_exam OR affirm
-    - action_doing_right_exam
-
-## bot pergunta se fez o exame, o usuário fez mas quer saber o motivo da pergunta
-    - utter_ask_exam  
-* why_i_need_to_answer
-    - utter_why_answer
-* affirm
-    - utter_ask_exam
-* affirm+did_exam OR affirm OR did_exam
-    - action_doing_right_exam
-
-## bot pergunta se fez o exame, o usuário não fez mas quer saber o motivo da pergunta
-    - utter_ask_exam  
-* why_i_need_to_answer
-    - utter_why_answer
-* affirm
+* ask_exam
     - utter_ask_exam
 * deny OR did_not_exam OR deny+did_not_exam
     - action_get_exam
     - utter_is_important_exam
 
-## bot pergunta se fez o exame, o usuário fez e sabe a importância do exame
+## bot pergunta se fez o exame e o usuário fez
+    - utter_ask_exam
+* deny OR did_not_exam OR deny+did_not_exam
+    - action_get_exam
+    - utter_is_important_exam
+
+## exame
+    - utter_is_important_exam
+* affirm+ill_do_it OR affirm OR ill_do_it
+    - utter_great
+
+## bot pergunta se fez o exame, o usuário fez mas quer saber o motivo da pergunta
+    - utter_ask_exam  
+* why_i_need_to_answer
+    - utter_why_answer
+* affirm OR affirm+did_exam OR did_exam
+    - action_doing_right_exam
+
+## bot pergunta se fez o exame, o usuário fez mas quer saber o motivo da pergunta
+    - utter_ask_exam  
+* why_i_need_to_answer
+    - utter_why_answer
+* deny OR did_not_exam OR deny+did_not_exam
+    - action_get_exam
+    - utter_is_important_exam
+
+<!-- ## bot pergunta se fez o exame, o usuário fez e sabe a importância do exame
     - utter_ask_exam
 * affirm OR affirm+did_exam OR did_exam
     - action_doing_right_exam
@@ -339,33 +334,9 @@
     - utter_canthelp
     - utter_explain_whatspossible
 
-<!-- ## unhappy path: form_personal
-* start_form_personal
-    - utter_ask_personal_questions
-* affirm
-  - form_personal
-  - form{"name": "form_personal"}
-* ask_allowed_exercises
-  - action_get_answer
-  - form_personal
-  - form{"name": null} -->
-
 ## welcome
 * welcome
     - utter_great
-
-<!-- ## unhappy path: form_pregnancy
-* start_form_pregnancy
-    - utter_ask_pregnancy_questions
-* affirm
-  - form_pregnancy
-  - form{"name": "form_pregnancy"}
-* ask_allowed_depilation
-  - action_get_answer
-  - form_pregnancy
-  - form{"name": "form_pregnancy"}
-  - form{"name": null}
--->
 
 ## Generated Story -4178839390444423351
 * hello
@@ -388,7 +359,7 @@
 * ask_normal_birth_recovery
     - action_get_answer
 
-<!-- ## ask_normal_birth_duration
+## ask_normal_birth_duration
 * ask_normal_birth_duration
     - action_get_answer
 
@@ -1028,10 +999,6 @@
 * ask_can_travel
     - action_get_answer
 
-## ask_can_travel
-* ask_can_travel
-    - action_get_answer
-
 ## ask_can_ladder
 * ask_can_ladder
     - action_get_answer
@@ -1346,4 +1313,4 @@
 
 ## ask_how_works_prenatal
 * ask_how_works_prenatal
-    - action_get_answer -->
+    - action_get_answer

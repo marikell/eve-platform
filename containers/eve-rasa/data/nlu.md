@@ -18,6 +18,7 @@
 - claro
 - sim, claro!
 - pode sim
+- pode fazer
 - pode
 - pode ser
 - claro, pode sim
@@ -1350,6 +1351,7 @@
 - como eu calculo o período fértil?
 - como eu calculo meu período fértil?
 - como se calcula o período fértil?
+- como calcular o período fértil?
 
 ## intent:ask_care_baby_belly_button
 - Como devo cuidar do umbigo do bebê?
@@ -2301,6 +2303,9 @@
 - tudo e vc
 
 ## intent:have_question
+- tenho sim
+- tenho uma dúvida sim
+- quero tirar uma dúvida
 - eu tenho uma duvida
 - quero tirar uma duvida
 - preciso tirar uma duvida
@@ -2386,6 +2391,23 @@
 - sem problema, vou falar com o meu medico
 - claro, vou fazer sim
 - ok, vou fazer
+
+## intent:im_think_pregnant
+- acho que estou grávida
+- acho q estou grávida, o que eu faço?
+- não tenho ctz se estou grávida
+- talvez eu esteja grávida
+- nao tenho certeza se estou grávida
+- nao sei se estou grávida, o que eu faço?
+- nao sei dizer se estou grávida, oq eu faço?
+
+## intent:hello+im_think_pregnant
+- Oi, acho que estou grávida
+- Olá, acho q estou grávida, o que eu faço?
+- Ei, não tenho ctz se estou grávida
+- Oii, nao tenho certeza se estou grávida
+- Oie, nao sei se estou grávida, o que eu faço?
+- Oiii, nao sei dizer se estou grávida, oq eu faço?
 
 ## intent:im_pregnant
 - Estou grávida e agora?

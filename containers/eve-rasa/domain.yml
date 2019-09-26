@@ -1,4 +1,5 @@
 intents:
+- ask_exam
 - ask_how_many_weeks_sex_baby
 - ask_how_long_pregnancy_last
 - ask_dont_know_who_father_is
@@ -15,6 +16,8 @@ intents:
 - insult:
     triggers: action_insult
 - hello
+- im_think_pregnant
+- hello+im_think_pregnant
 - greeting
 - affirm
 - deny
@@ -481,7 +484,7 @@ templates:
     - title: Não
       payload: /enter_data{"planned_pregnancy":false}
   utter_ask_pre_natal:
-  - text: Você já começou o pré-natal?
+  - text: Já começou o pré-natal?
     buttons:
     - title: Sim
       payload: /enter_data{"pre_natal":true}
@@ -598,7 +601,7 @@ templates:
       médico e converse com ele sobre isso!
   utter_why_answer:
   - text: Tudo bem se você não quiser responder mas com essas informações eu consigo
-      te ajudar mais. Entendeu? 😊
+      te ajudar mais 😊
   utter_agree:
   - text: Isso mesmo! 👍
   - text: Isso aí! 👍
@@ -714,11 +717,11 @@ templates:
   - text: Por favor, me fale se você tem pressão alta 😬 Quanto mais informações, mais
       eu consigo te ajudar 😅
   utter_ask_health_questions:
-  - text: Posso te fazer algumas perguntas sobre a sua saúde? Vai ser rapidinho 😅
+  - text: Oi 😊 Posso te fazer algumas perguntas sobre a sua saúde? Vai ser rapidinho 😅
   utter_ask_personal_questions:
-  - text: Posso te fazer algumas perguntas sobre você? É bem rápido 😅
+  - text: Olá 😊 Posso te fazer algumas perguntas sobre você? É bem rápido 😅
   utter_ask_pregnancy_questions:
-  - text: Posso te fazer algumas perguntas sobre a sua gravidez? Vai ser rapidinho 😅
+  - text: Oie 😊 Posso te fazer algumas perguntas sobre a sua gravidez? Vai ser rapidinho 😅
   utter_ask_height:
   - text: Qual a sua altura em cm?
   utter_wrong_height:
@@ -829,7 +832,10 @@ templates:
   - text: Ajuda aí 🤣
   utter_abort:
   - text: Esse é um assunto muito polêmico e por isso prefiro não opinar! 🤐
+  utter_not_sure_pregnancy:
+  - text: Bom, a única maneira de ter certeza se está grávida ou não é fazendo um teste de gravidez. Os mais confiáveis são os teste de farmácia e o exame de sangue. Além disso, você pode verificar também se você apresenta algum dos sintomas da gravidez!
 actions:
+- utter_not_sure_pregnancy
 - action_lets_people
 - utter_lets_people
 - action_default_fallback
