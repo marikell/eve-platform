@@ -16,6 +16,8 @@ intents:
 - insult:
     triggers: action_insult
 - hello
+- im_think_pregnant
+- hello+im_think_pregnant
 - greeting
 - affirm
 - deny
@@ -830,7 +832,10 @@ templates:
   - text: Ajuda aí 🤣
   utter_abort:
   - text: Esse é um assunto muito polêmico e por isso prefiro não opinar! 🤐
+  utter_not_sure_pregnancy:
+  - text: Bom, a única maneira de ter certeza se está grávida ou não é fazendo um teste de gravidez. Os mais confiáveis são os teste de farmácia e o exame de sangue. Além disso, você pode verificar também se você apresenta algum dos sintomas da gravidez!
 actions:
+- utter_not_sure_pregnancy
 - action_lets_people
 - utter_lets_people
 - action_default_fallback

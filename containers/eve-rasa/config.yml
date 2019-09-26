@@ -16,18 +16,9 @@ pipeline:
 - name: "EmbeddingIntentClassifier"
 
 policies:
-  
   - name: "KerasPolicy"
     max_history: 4
     augmentation_factor: 250
-    # random_seed: 250
-    # featurizer:
-    #   - name: MaxHistoryTrackerFeaturizer
-    #     max_history: 5
-    #     state_featurizer:
-    #       - name: BinarySingleStateFeaturizer
-  # - name: "MemoizationPolicy"
-  #   max_history: 5    
   - name: AugmentedMemoizationPolicy
     max_history: 4
   - name: "FormPolicy"
@@ -37,4 +28,3 @@ policies:
     core_threshold: 0.4
     ambiguity_threshold: 0.01
     fallback_action_name: "action_default_fallback"
-

@@ -20,6 +20,20 @@
 * bye
     - utter_bye
 
+# im_think_pregnant
+* hello+im_think_pregnant
+    - utter_hello
+    - utter_not_sure_pregnancy
+
+# im_think_pregnant
+* im_think_pregnant
+    - utter_not_sure_pregnancy
+
+# im_think_pregnant
+    - utter_not_sure_pregnancy
+* affirm OR got_it OR affirm+got_it
+    - utter_great
+
 <!-- ## i_know_importance
 * i_know_importance
     - utter_agree
