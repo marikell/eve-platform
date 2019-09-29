@@ -1,0 +1,14 @@
+[
+  {
+    "text": "estou tomando amoxicilina",
+    "entities": [
+      {
+        "start": 14,
+        "end": 25,
+        "value": "amoxicilina",
+        "entity": "med_name"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

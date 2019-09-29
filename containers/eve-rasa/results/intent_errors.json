@@ -1,0 +1,578 @@
+[
+  {
+    "text": "agenda um horário pra mim com um médico por favor",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "insult",
+      "confidence": 0.1924287974834442
+    }
+  },
+  {
+    "text": "vamo la",
+    "intent": "lets_go_people",
+    "intent_prediction": {
+      "name": "hello",
+      "confidence": 0.28537246584892273
+    }
+  },
+  {
+    "text": "tudo bem?",
+    "intent": "greeting",
+    "intent_prediction": {
+      "name": "greeting_answer",
+      "confidence": 0.5684788227081299
+    }
+  },
+  {
+    "text": "já fiz esse ultrassom",
+    "intent": "did_exam",
+    "intent_prediction": {
+      "name": "ask_ultrasound_hurt_baby",
+      "confidence": 0.36840784549713135
+    }
+  },
+  {
+    "text": "entendi, xau",
+    "intent": "got_it+thank_you",
+    "intent_prediction": {
+      "name": "got_it",
+      "confidence": 0.8103562593460083
+    }
+  },
+  {
+    "text": "entendo, tchau",
+    "intent": "got_it+thank_you",
+    "intent_prediction": {
+      "name": "got_it",
+      "confidence": 0.7910307049751282
+    }
+  },
+  {
+    "text": "obg, tchau!",
+    "intent": "thank_you+bye",
+    "intent_prediction": {
+      "name": "bye+thank_you",
+      "confidence": 0.6465034484863281
+    }
+  },
+  {
+    "text": "vlw, até",
+    "intent": "thank_you+bye",
+    "intent_prediction": {
+      "name": "bye+thank_you",
+      "confidence": 0.9978244304656982
+    }
+  },
+  {
+    "text": "naao, ainda nao fiz o exame",
+    "intent": "deny+did_not_exam",
+    "intent_prediction": {
+      "name": "did_not_exam",
+      "confidence": 0.9246191382408142
+    }
+  },
+  {
+    "text": "blz, preciso tirar uma dúvida",
+    "intent": "affirm+have_question",
+    "intent_prediction": {
+      "name": "have_question",
+      "confidence": 0.5220877528190613
+    }
+  },
+  {
+    "text": "sim, eu farei o exame",
+    "intent": "affirm+ill_do_it",
+    "intent_prediction": {
+      "name": "affirm+did_exam",
+      "confidence": 0.3929274082183838
+    }
+  },
+  {
+    "text": "vc é um bot?",
+    "intent": "ask_isbot",
+    "intent_prediction": {
+      "name": "insult",
+      "confidence": 0.889465868473053
+    }
+  },
+  {
+    "text": "qual seu nome?",
+    "intent": "ask_whoisit",
+    "intent_prediction": {
+      "name": "enter_data",
+      "confidence": 0.8253110647201538
+    }
+  },
+  {
+    "text": "vc não responde nada certo",
+    "intent": "canthelp",
+    "intent_prediction": {
+      "name": "insult",
+      "confidence": 0.8879903554916382
+    }
+  },
+  {
+    "text": "vc responde tudo errado e não ta me ajudando",
+    "intent": "canthelp",
+    "intent_prediction": {
+      "name": "insult",
+      "confidence": 0.20438334345817566
+    }
+  },
+  {
+    "text": "estou tomando amoxicilina",
+    "intent": "enter_data",
+    "intent_prediction": {
+      "name": "welcome",
+      "confidence": 0.23590165376663208
+    }
+  },
+  {
+    "text": "estou ótima",
+    "intent": "greeting_answer",
+    "intent_prediction": {
+      "name": "enter_data",
+      "confidence": 0.10724730789661407
+    }
+  },
+  {
+    "text": "é importante mesmo",
+    "intent": "i_know_importance",
+    "intent_prediction": {
+      "name": "ask_importance_breast_feeding",
+      "confidence": 0.3670961856842041
+    }
+  },
+  {
+    "text": "para com isso",
+    "intent": "stop",
+    "intent_prediction": {
+      "name": "enter_data",
+      "confidence": 0.3497839868068695
+    }
+  },
+  {
+    "text": "pq foi oq o médico me falou pra fazer",
+    "intent": "why_cesarean_answer",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.3220159411430359
+    }
+  },
+  {
+    "text": "eu não posso ter um parto normal se já fiz uma cesárea?",
+    "intent": "ask_avoid_normal_birth",
+    "intent_prediction": {
+      "name": "ask_cesarean_can_normal_birth",
+      "confidence": 0.9630510210990906
+    }
+  },
+  {
+    "text": "que parto deve ser feito quando a mulher tem 40 anos e pressão alta?",
+    "intent": "ask_ideal_birth_older_women",
+    "intent_prediction": {
+      "name": "ask_howold",
+      "confidence": 0.12792734801769257
+    }
+  },
+  {
+    "text": "to muito triste dps q o meu filho nasceu, é normal?",
+    "intent": "ask_feeling_sad",
+    "intent_prediction": {
+      "name": "ask_normal_feeling_tired",
+      "confidence": 0.4576526880264282
+    }
+  },
+  {
+    "text": "ganhei muito peso na gestação, oq eu faço?",
+    "intent": "ask_gain_weight_pregnancy",
+    "intent_prediction": {
+      "name": "im_pregnant",
+      "confidence": 0.5735005736351013
+    }
+  },
+  {
+    "text": "estou muito gorda dps da gravidez, oq eu faço?",
+    "intent": "ask_gain_weight_pregnancy",
+    "intent_prediction": {
+      "name": "im_pregnant",
+      "confidence": 0.7810385823249817
+    }
+  },
+  {
+    "text": "quando vou poder voltar a transar?",
+    "intent": "ask_when_have_sex",
+    "intent_prediction": {
+      "name": "ask_back_exercise",
+      "confidence": 0.719327986240387
+    }
+  },
+  {
+    "text": "estou cheia de estrias dps da gestação, isso vai sair?",
+    "intent": "ask_stretch_marks",
+    "intent_prediction": {
+      "name": "ask_symptom_pregnancy",
+      "confidence": 0.3340158462524414
+    }
+  },
+  {
+    "text": "meus pés estão maiores dps da gravidez",
+    "intent": "ask_normal_bigger_foot",
+    "intent_prediction": {
+      "name": "ask_risk_factor_pregnancy",
+      "confidence": 0.41393062472343445
+    }
+  },
+  {
+    "text": "meus pés ficaram maiors dps da gestação, é normal?",
+    "intent": "ask_normal_bigger_foot",
+    "intent_prediction": {
+      "name": "ask_needed_feed",
+      "confidence": 0.07314044237136841
+    }
+  },
+  {
+    "text": "transar na gravidez pode adiantar o trabalho de parto?",
+    "intent": "ask_sex_bad_pregnancy",
+    "intent_prediction": {
+      "name": "ask_baby_feel_sex",
+      "confidence": 0.2616780698299408
+    }
+  },
+  {
+    "text": "é normal acabar fazendo coco no parto normal?",
+    "intent": "ask_feces_normal_birth",
+    "intent_prediction": {
+      "name": "ask_normal_birth_pain",
+      "confidence": 0.6704041361808777
+    }
+  },
+  {
+    "text": "que vacinas tenho levar o bebe tomar?",
+    "intent": "ask_what_vaccines_baby",
+    "intent_prediction": {
+      "name": "ask_needed_vaccine",
+      "confidence": 0.5706242322921753
+    }
+  },
+  {
+    "text": "quando tenho q levar o meu bebê no médico?",
+    "intent": "ask_when_go_pediatrician",
+    "intent_prediction": {
+      "name": "ask_when_baby_move",
+      "confidence": 0.40303707122802734
+    }
+  },
+  {
+    "text": "se eu tomar anticoncepcional por muito tempo, é mais dificil de engravidar dps?",
+    "intent": "ask_birth_control_difficult_pregnancy",
+    "intent_prediction": {
+      "name": "ask_how_long_healthy_pregnant",
+      "confidence": 0.5698865652084351
+    }
+  },
+  {
+    "text": "qual o ganho de peso ideal na gestação?",
+    "intent": "ask_how_many_pounds_pregnancy",
+    "intent_prediction": {
+      "name": "ask_ideal_weight",
+      "confidence": 0.976074755191803
+    }
+  },
+  {
+    "text": "é vdd q se eu passar vontade de comer alguma coisa o bebê vai ficar com a cara do alimento?",
+    "intent": "ask_food_desire_baby_appearance",
+    "intent_prediction": {
+      "name": "got_it",
+      "confidence": 0.2764105200767517
+    }
+  },
+  {
+    "text": "posso tomar a mesma pílula q tomava antes da gestação?",
+    "intent": "ask_contraceptive_pill_after_birth",
+    "intent_prediction": {
+      "name": "ask_birth_control_difficult_pregnancy",
+      "confidence": 0.45004796981811523
+    }
+  },
+  {
+    "text": "que exames eu preciso fazer no pre natal?",
+    "intent": "ask_main_exams_prenatal",
+    "intent_prediction": {
+      "name": "i_know_importance",
+      "confidence": 0.6069226264953613
+    }
+  },
+  {
+    "text": "quais exercicios fisicos eu posso fazer?",
+    "intent": "ask_allowed_exercises",
+    "intent_prediction": {
+      "name": "ask_not_allowed_exercises",
+      "confidence": 0.37529492378234863
+    }
+  },
+  {
+    "text": "o que é pós parto?",
+    "intent": "ask_what_is_postpartum",
+    "intent_prediction": {
+      "name": "ask_what_is_squatting_childbirth",
+      "confidence": 0.20857149362564087
+    }
+  },
+  {
+    "text": "oq é pre eclampsia?",
+    "intent": "ask_what_is_pre_eclampsia",
+    "intent_prediction": {
+      "name": "ask_what_is_eclampsia",
+      "confidence": 0.34247779846191406
+    }
+  },
+  {
+    "text": "vc sabe o que é tricotomia?",
+    "intent": "ask_what_is_trichotomy",
+    "intent_prediction": {
+      "name": "ask_dont_know_who_father_is",
+      "confidence": 0.1642255187034607
+    }
+  },
+  {
+    "text": "posso tomar banho de mar?",
+    "intent": "ask_can_sunbathe",
+    "intent_prediction": {
+      "name": "ask_can_seabathe",
+      "confidence": 0.9898869395256042
+    }
+  },
+  {
+    "text": "posso entrar no mar?",
+    "intent": "ask_can_sunbathe",
+    "intent_prediction": {
+      "name": "ask_can_seabathe",
+      "confidence": 0.9792836904525757
+    }
+  },
+  {
+    "text": "posso tomar coca cola?",
+    "intent": "ask_can_soda",
+    "intent_prediction": {
+      "name": "ask_can_alcohol",
+      "confidence": 0.8301586508750916
+    }
+  },
+  {
+    "text": "eu posso dormir de barriga pra baixo?",
+    "intent": "ask_can_sleep_stomach",
+    "intent_prediction": {
+      "name": "ask_best_sleeping_position",
+      "confidence": 0.19849620759487152
+    }
+  },
+  {
+    "text": "posso usar cera quente?",
+    "intent": "ask_can_hot_wax",
+    "intent_prediction": {
+      "name": "ask_can_sunbathe",
+      "confidence": 0.15005727112293243
+    }
+  },
+  {
+    "text": "eu posso fazer depilação com cera quente?",
+    "intent": "ask_can_hot_wax",
+    "intent_prediction": {
+      "name": "ask_allowed_depilation",
+      "confidence": 0.9761501550674438
+    }
+  },
+  {
+    "text": "quando vai passar a ansia?",
+    "intent": "ask_when_stop_nausea",
+    "intent_prediction": {
+      "name": "ask_when_start_prenatal",
+      "confidence": 0.3948008716106415
+    }
+  },
+  {
+    "text": "porque a gestação da ansia?",
+    "intent": "ask_why_nausea",
+    "intent_prediction": {
+      "name": "why_cesarean_answer",
+      "confidence": 0.10707668960094452
+    }
+  },
+  {
+    "text": "oq eu faço se tiver um sangramento?",
+    "intent": "ask_what_to_do_bleeding",
+    "intent_prediction": {
+      "name": "complain_bleeding",
+      "confidence": 0.5598576664924622
+    }
+  },
+  {
+    "text": "o que eu faço em caso de um sangramento?",
+    "intent": "ask_what_to_do_bleeding",
+    "intent_prediction": {
+      "name": "complain_bleeding",
+      "confidence": 0.4736960828304291
+    }
+  },
+  {
+    "text": "estou tendo muita tontura, é normalw",
+    "intent": "complain_dizziness",
+    "intent_prediction": {
+      "name": "complain_nauseas",
+      "confidence": 0.994452178478241
+    }
+  },
+  {
+    "text": "to tendo muita tontura, oq eu faço?",
+    "intent": "complain_dizziness",
+    "intent_prediction": {
+      "name": "complain_nauseas",
+      "confidence": 0.940738320350647
+    }
+  },
+  {
+    "text": "tenho tido azia ultimamente, o que eu faço?",
+    "intent": "complain_heartburn",
+    "intent_prediction": {
+      "name": "got_it",
+      "confidence": 0.3935588598251343
+    }
+  },
+  {
+    "text": "estou tendo muitos gases ultimamente",
+    "intent": "complain_flatulence",
+    "intent_prediction": {
+      "name": "ask_while_breastfeeding_pregnant",
+      "confidence": 0.28266891837120056
+    }
+  },
+  {
+    "text": "meus seios estão doendo, é normal?",
+    "intent": "complain_breasts",
+    "intent_prediction": {
+      "name": "ask_sagging_breasts_breastfeed",
+      "confidence": 0.7504799962043762
+    }
+  },
+  {
+    "text": "estou tendo muita dor nas costas, oq eu faço?",
+    "intent": "complain_back",
+    "intent_prediction": {
+      "name": "complain_body",
+      "confidence": 0.8356900215148926
+    }
+  },
+  {
+    "text": "to com muita dor nas costas",
+    "intent": "complain_back",
+    "intent_prediction": {
+      "name": "complain_body",
+      "confidence": 0.9791452884674072
+    }
+  },
+  {
+    "text": "to com muita dor nos joelhos",
+    "intent": "complain_knee",
+    "intent_prediction": {
+      "name": "complain_body",
+      "confidence": 0.6629895567893982
+    }
+  },
+  {
+    "text": "meus joelhos estão doendo muito",
+    "intent": "complain_knee",
+    "intent_prediction": {
+      "name": "complain_body",
+      "confidence": 0.16289976239204407
+    }
+  },
+  {
+    "text": "meus tornozelos estão doendo muito",
+    "intent": "complain_ankle",
+    "intent_prediction": {
+      "name": "complain_body",
+      "confidence": 0.34502553939819336
+    }
+  },
+  {
+    "text": "oq eu posso fazer pra melhorar a dor nos tornozelos?",
+    "intent": "complain_ankle",
+    "intent_prediction": {
+      "name": "complain_breasts",
+      "confidence": 0.40373092889785767
+    }
+  },
+  {
+    "text": "qual o objetivo da ultrassonografia intravaginal?",
+    "intent": "ask_goal_exam_intravaginal_ultrasound",
+    "intent_prediction": {
+      "name": "ask_goal_exam_nuchal_translucency_ultrasound",
+      "confidence": 0.8814892768859863
+    }
+  },
+  {
+    "text": "pq é feito a ultima ultrassonografia?",
+    "intent": "ask_goal_exam_third_trimester_ultrasound",
+    "intent_prediction": {
+      "name": "ask_when_exam_third_trimester_ultrasound",
+      "confidence": 0.8257909417152405
+    }
+  },
+  {
+    "text": "posso tomar sol?",
+    "intent": "ask_can_seabathe",
+    "intent_prediction": {
+      "name": "ask_can_sunbathe",
+      "confidence": 0.9287237524986267
+    }
+  },
+  {
+    "text": "tem problema tomar banho de sol?",
+    "intent": "ask_can_seabathe",
+    "intent_prediction": {
+      "name": "ask_can_sunbathe",
+      "confidence": 0.8271912932395935
+    }
+  },
+  {
+    "text": "quando posso voltar a engravidar?",
+    "intent": "ask_when_pregnant_again",
+    "intent_prediction": {
+      "name": "ask_back_exercise",
+      "confidence": 0.4567219316959381
+    }
+  },
+  {
+    "text": "quando posso ficar grávida dnv?",
+    "intent": "ask_when_pregnant_again",
+    "intent_prediction": {
+      "name": "ask_can_ride_motorcycle",
+      "confidence": 0.16969215869903564
+    }
+  },
+  {
+    "text": "ainda preciso ir no médico depois que o bebê nasce?",
+    "intent": "ask_consult_after_childbirth",
+    "intent_prediction": {
+      "name": "ask_can_discolor_hair",
+      "confidence": 0.2739507555961609
+    }
+  },
+  {
+    "text": "eu posso ser demitida se estou grávida?",
+    "intent": "ask_pregnant_women_fired",
+    "intent_prediction": {
+      "name": "im_think_pregnant",
+      "confidence": 0.19330990314483643
+    }
+  },
+  {
+    "text": "quanto é o salário maternidade?",
+    "intent": "ask_how_much_salary_maternity_leave",
+    "intent_prediction": {
+      "name": "ask_what_is_maternity_pay",
+      "confidence": 0.5315741300582886
+    }
+  }
+]

@@ -1,35 +1,35 @@
-# got_it
+## got_it
 * got_it OR affirm+got_it
     - utter_great
 
-# got_it
+## got_it
 * affirm+got_it+thank_you OR got_it+thank_you
     - utter_great
     - utter_welcome
 
-# thank_you
+## thank_you
 * thank_you OR affirm+thank_you
     - utter_welcome
 
-# thank_you+bye
+## thank_you+bye
 * thank_you+bye OR bye+thank_you
     - utter_welcome
     - utter_bye
 
-# bye
+## bye
 * bye
     - utter_bye
 
-# im_think_pregnant
+## im_think_pregnant
 * hello+im_think_pregnant
     - utter_hello
     - utter_not_sure_pregnancy
 
-# im_think_pregnant
+## im_think_pregnant
 * im_think_pregnant
     - utter_not_sure_pregnancy
 
-# im_think_pregnant
+## im_think_pregnant
     - utter_not_sure_pregnancy
 * affirm OR got_it OR affirm+got_it
     - utter_great
@@ -61,6 +61,11 @@
 ## baby_not_moving
 * baby_not_moving
     - utter_baby_not_moving
+
+## usuario não tem duvidas
+    - utter_ask_me_anything
+* no_question OR deny
+    - utter_ask_me_later
 
 ## usuario não tem duvidas
 * no_question
@@ -125,7 +130,7 @@
 * start
   - action_greet_user
   - slot{"greeted_user": true}
-* deny OR later
+* deny OR later OR stop_form OR stop
   - utter_info_later
   - utter_ask_me_anything
 
@@ -189,6 +194,16 @@
 * affirm+ill_do_it OR affirm OR ill_do_it
     - utter_great
 
+## i_know_importance
+    - utter_is_important_exam
+* i_know_importance
+    - utter_agree
+
+## i_know_importance
+    - action_doing_right_exam
+* i_know_importance
+    - utter_agree
+
 ## bot pergunta se fez o exame, o usuário fez mas quer saber o motivo da pergunta
     - utter_ask_exam  
 * why_i_need_to_answer
@@ -222,7 +237,7 @@
 ## form_health 2
 * start_form_health
   - utter_ask_health_questions
-* deny OR later
+* deny OR later OR stop_form OR stop
   - utter_info_later
   - utter_ask_me_anything
 
@@ -260,7 +275,7 @@
 ## form_personal 2
 * start_form_personal
   - utter_ask_personal_questions
-* deny OR later
+* deny OR later OR stop_form OR stop
   - utter_info_later
   - utter_ask_me_anything
 
@@ -298,7 +313,7 @@
 ## form_pregnancy 2
 * start_form_pregnancy
   - utter_ask_pregnancy_questions
-* deny OR later
+* deny OR later OR stop_form OR stop
   - utter_info_later
   - utter_ask_me_anything
 
