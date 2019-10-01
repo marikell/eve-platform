@@ -73,10 +73,18 @@ def get_forms_user(user_id):
             return response(form, status.HTTP_200_OK)
 
         has_done_form_initial = False
+        has_some_doing_fom = False
 
         for uf in user_forms:
             if uf['form_id']['$oid'] == form_initial['_id']['$oid']:
+                if uf['status'] == 0:
+                    has_some_doing_fom = True
+                else:
+                    has_some_doing_fom = False
                 has_done_form_initial = True
+            elif uf['status'] == 0:
+                has_some_doing_fom = True
+                break
             elif uf['status'] == 1:
                 #vou adicionando na lista os forms que ja foram respondidos
                 done_forms.append(uf['form_id']['$oid'])
@@ -87,6 +95,8 @@ def get_forms_user(user_id):
                 break
 
         if not has_done_form_initial:
+            return response(form, status.HTTP_200_OK)
+        if has_some_doing_fom:
             return response(form, status.HTTP_200_OK)
 
         user_type = UserTypeEnum.normal
@@ -110,7 +120,10 @@ def get_forms_user(user_id):
                     else:
                         form = f
                         break
-        if form:
+        user = ServiceHandler.get_service(ROUTE_CONFIG['USER_TYPE_NAME']).get(user_id)
+        has_exam = ServiceHandler.get_service(ROUTE_CONFIG['USER_EXAM_TYPE_NAME']).get_exam_status_by_user(user, 1)
+
+        if form and not has_exam:
             return response(form, status.HTTP_200_OK)
         else:
             return response(status.HTTP_200_OK)        

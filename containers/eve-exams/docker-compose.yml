@@ -16,7 +16,7 @@ services:
         - eve_rabbit
       command: python -u ./consumer.py
       environment:
-        - RUN_TIME=23:26
+        - RUN_TIME=22:20
       networks:
         - evemongo_evenetwork
   eve_producer:
@@ -26,7 +26,7 @@ services:
         - eve_rabbit
       command: python -u ./producer.py
       environment:
-        - RUN_TIME=23:25
+        - RUN_TIME=22:18
       networks:
         - evemongo_evenetwork
   
