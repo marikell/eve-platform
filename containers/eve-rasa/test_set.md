@@ -83,8 +83,8 @@
 - ok, faz sentido, obrigada
 
 ## intent:got_it+thank_you
-- entendi, xau
-- entendo, tchau
+- entendi, obg
+- entendo, vlw
 
 ## intent:bye
 - tchau

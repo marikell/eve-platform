@@ -32,22 +32,6 @@
     }
   },
   {
-    "text": "entendi, xau",
-    "intent": "got_it+thank_you",
-    "intent_prediction": {
-      "name": "got_it",
-      "confidence": 0.8103562593460083
-    }
-  },
-  {
-    "text": "entendo, tchau",
-    "intent": "got_it+thank_you",
-    "intent_prediction": {
-      "name": "got_it",
-      "confidence": 0.7910307049751282
-    }
-  },
-  {
     "text": "obg, tchau!",
     "intent": "thank_you+bye",
     "intent_prediction": {

@@ -1,14 +1,14 @@
 {
-  "state": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 1
-  },
   "med_name": {
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,
+    "support": 1
+  },
+  "state": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
     "support": 1
   },
   "micro avg": {

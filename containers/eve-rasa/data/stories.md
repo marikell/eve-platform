@@ -34,14 +34,6 @@
 * affirm OR got_it OR affirm+got_it
     - utter_great
 
-<!-- ## i_know_importance
-* i_know_importance
-    - utter_agree
-
-## later
-* later
-  - utter_info_later -->
-
 ## 'Oi tudo bem?'
 * greeting OR hello+greeting OR hello
     - action_greet_user
@@ -218,13 +210,6 @@
 * deny OR did_not_exam OR deny+did_not_exam
     - action_get_exam
     - utter_is_important_exam
-
-<!-- ## bot pergunta se fez o exame, o usuário fez e sabe a importância do exame
-    - utter_ask_exam
-* affirm OR affirm+did_exam OR did_exam
-    - action_doing_right_exam
-* i_know_importance
-    - utter_agree -->
 
 ## form_health 1
 * start_form_health
