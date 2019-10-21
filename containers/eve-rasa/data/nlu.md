@@ -2290,6 +2290,31 @@
 - tudo bom
 - td bom
 - td certo
+- tudo sim
+  
+## intent:not_pregnant
+- eu nao tô grávida
+- eu nao estou gravida
+- nao to grávida
+- mas eu não estou gestante
+- não estou grávida
+- não to gestante
+
+## intent:hello+not_pregnant
+- Oi, eu nao tô grávida
+- Olá, eu nao estou gravida
+- Ei, nao to grávida
+- Oii, mas eu não estou gestante
+- Oie, mas não estou grávida
+- Oi, não to gestante
+  
+## intent:deny+not_pregnant
+- não, eu nao tô grávida
+- não, eu nao estou gravida
+- ñ, nao to grávida
+- nao, mas eu não estou gestante
+- nao, mas não estou grávida
+- naao, não to gestante
 
 ## intent:greeting_back
 - Estou bem, e vc?

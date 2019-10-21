@@ -18,9 +18,12 @@ intents:
 - hello
 - im_think_pregnant
 - hello+im_think_pregnant
+- not_pregnant
+- deny
+- deny+not_pregnant
+- hello+not_pregnant
 - greeting
 - affirm
-- deny
 - ill_do_it
 - did_exam
 - thank_you

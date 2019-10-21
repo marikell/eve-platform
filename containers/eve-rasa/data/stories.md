@@ -1,3 +1,7 @@
+# not_pregnant
+* not_pregnant OR deny+not_pregnant OR hello+not_pregnant
+    - utter_ask_me_anything
+
 # got_it
 * got_it OR affirm+got_it
     - utter_great
@@ -33,14 +37,6 @@
     - utter_not_sure_pregnancy
 * affirm OR got_it OR affirm+got_it
     - utter_great
-
-<!-- ## i_know_importance
-* i_know_importance
-    - utter_agree
-
-## later
-* later
-  - utter_info_later -->
 
 ## 'Oi tudo bem?'
 * greeting OR hello+greeting OR hello
