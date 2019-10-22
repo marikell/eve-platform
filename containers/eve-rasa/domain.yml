@@ -1,4 +1,5 @@
 intents:
+- ask_go_doctor
 - father_ask_questions
 - ask_exam
 - ask_how_many_weeks_sex_baby
@@ -17,6 +18,7 @@ intents:
 - insult:
     triggers: action_insult
 - hello
+- hello+ask_go_doctor
 - hello+father_ask_questions
 - im_think_pregnant
 - hello+im_think_pregnant
@@ -473,6 +475,8 @@ templates:
   utter_ask_info:
   - text: Bom, pra eu poder te ajudar, preciso te fazer algumas perguntas antes ok?
       É rapidinho 😊
+  utter_ask_info_initial:
+  - text: Então, posso te fazer algumas perguntas antes? Vai ser bem rápido 😊
   utter_ask_is_pregnant:
   - text: Você está grávida?
     buttons:
@@ -534,6 +538,9 @@ templates:
   - text: Bom, a primeira coisa a se fazer é procurar um obstetra para acompanhar
       a sua gestação de perto e realizar o pré-natal! O pré-natal é de extrema importância
       para garantir a sua saúde e a do seu bebê! 👩‍⚕️
+  utter_go_doctor:
+  - text: Sim, se você está grávida é de extrema importância procurar um médico para realizar o acompanhamento pré-natal!
+      Esse acompanhamento é muito importante para garantir a sua saúde e a do bebê 😉
   utter_great:
   - text: Legal! 🙌
   utter_greet:
@@ -916,6 +923,8 @@ actions:
 - utter_insult
 - utter_abort
 - action_abort
+- utter_ask_info_initial
+- utter_go_doctor
 forms:
 - form_initial
 - form_health

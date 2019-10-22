@@ -1,4 +1,8 @@
-# not_pregnant
+# ask_go_doctor
+* ask_go_doctor OR hello+ask_go_doctor
+    - utter_go_doctor
+
+# father_ask_questions
 * father_ask_questions OR hello+father_ask_questions
     - utter_help
   
@@ -119,7 +123,7 @@
   - form_initial
   - form{"name": "form_initial"}
   - form{"name": null}
-  - utter_ask_me_anything 
+  - utter_ask_me_anything
 
 ## start 2
 * start
@@ -154,6 +158,38 @@
   - form{"name": null}
   - utter_info_later
   - utter_ask_me_anything
+
+## start 5
+* start
+  - action_greet_user
+  - slot{"greeted_user": true}
+* hello
+  - utter_hello
+  - utter_ask_info_initial
+* affirm
+  - form_initial
+  - form{"name": "form_initial"}
+  - form{"name": null}
+  - utter_ask_me_anything
+
+## start 6
+* start
+  - action_greet_user
+  - slot{"greeted_user": true}
+* hello
+  - utter_hello
+  - utter_ask_info_initial
+* deny OR later
+  - utter_info_later
+  - utter_ask_me_anything
+
+## start 7
+* start
+  - action_greet_user
+  - slot{"greeted_user": true}
+* hello
+  - utter_hello
+  - utter_ask_info_initial
 
 ## utter_ask_me_anything
     - utter_ask_me_anything

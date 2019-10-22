@@ -1,3 +1,21 @@
+## intent: ask_go_doctor
+- estou gravida, preciso ir no médico?
+- tenho que ir no médico?
+- descobri q estou grávida, tenho q ir no medico?
+- to gravida, em qual medico eu tenho q ir?
+- gestante precisa ir no médico?
+- gravida deve ir em qual medico?
+- estou gravida, preciso marcar uma consulta com o medico?
+
+## intent: hello+ask_go_doctor
+- Oii, estou gravida, preciso ir no médico?
+- Ola, tenho que ir no médico?
+- Oie, descobri q estou grávida, tenho q ir no medico?
+- Oi, to gravida, em qual medico eu tenho q ir?
+- Ola, gestante precisa ir no médico?
+- Oie, gravida deve ir em qual medico?
+- Ei, estou gravida, preciso marcar uma consulta com o medico?
+
 ## intent: father_ask_questions
 - sou o marido, posso fazer perguntas também?
 - sou o pai, posso tirar uma dúvida com vc?
