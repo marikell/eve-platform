@@ -2381,6 +2381,15 @@
 - Boa tarde
 - Oii
 
+## intent:hello+affirm
+- Oiii, ok
+- Hey, blz
+- Olá, pode perguntar
+- ola, pode sim
+- Oi, okay
+- Oi doutora, claro
+- Oie, beleza
+
 ## intent:i_know_importance
 - Ah sim, eu sei como o pré-natal é importante
 - claro, é muito importante realizar o pré-natal

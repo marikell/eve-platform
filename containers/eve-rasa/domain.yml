@@ -24,6 +24,7 @@ intents:
 - hello+not_pregnant
 - greeting
 - affirm
+- hello+affirm
 - ill_do_it
 - did_exam
 - thank_you

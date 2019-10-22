@@ -111,7 +111,7 @@
 * start
   - action_greet_user
   - slot{"greeted_user": true}
-* affirm
+* affirm OR hello+affirm
   - form_initial
   - form{"name": "form_initial"}
   - form{"name": null}
@@ -129,7 +129,7 @@
 * start
   - action_greet_user
   - slot{"greeted_user": true}
-* affirm
+* affirm OR hello+affirm
   - form_initial
   - form{"name": "form_initial"}
 * why_i_need_to_answer
@@ -142,7 +142,7 @@
 * start
   - action_greet_user
   - slot{"greeted_user": true}
-* affirm
+* affirm OR hello+affirm
   - form_initial
   - form{"name": "form_initial"}
 * stop
