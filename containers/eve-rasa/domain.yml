@@ -1,4 +1,5 @@
 intents:
+- father_ask_questions
 - ask_exam
 - ask_how_many_weeks_sex_baby
 - ask_how_long_pregnancy_last
@@ -16,6 +17,7 @@ intents:
 - insult:
     triggers: action_insult
 - hello
+- hello+father_ask_questions
 - im_think_pregnant
 - hello+im_think_pregnant
 - not_pregnant
@@ -544,7 +546,7 @@ templates:
   utter_hello:
   - text: Olá, {user_name}! 😄
   utter_help:
-  - text: Bom, no que eu posso te ajudar? Você tem alguma dúvida?
+  - text: Claro, no que eu posso te ajudar?
   utter_info_later:
   - text: Tudo bem, podemos fazer isso depois se quiser 😅
   utter_introduce:

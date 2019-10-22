@@ -1,4 +1,8 @@
 # not_pregnant
+* father_ask_questions OR hello+father_ask_questions
+    - utter_help
+  
+# not_pregnant
 * not_pregnant OR deny+not_pregnant OR hello+not_pregnant
     - utter_ask_me_anything
 

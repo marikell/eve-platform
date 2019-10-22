@@ -1,3 +1,25 @@
+## intent: father_ask_questions
+- sou o marido, posso fazer perguntas também?
+- sou o pai, posso tirar uma dúvida com vc?
+- vou ser pai, e tenho algumas duvidas?
+- o pai também pode tirar as dúvidas por aqui?
+- o homem também pode fazer perguntas pra vc?
+- o meu marido também pode fazer perguntas?
+- meu marido quer fazer algumas perguntas
+- minha mulher está grávida e queria tirar algumas dúvidas
+- minha mulher está grávida e queria tirar algumas dúvidas pra ela
+- meu esposo também quer fazer perguntas
+
+## intent: hello+father_ask_questions
+- Oi, sou o marido, posso fazer perguntas também?
+- Olá, eu sou o pai, posso tirar uma dúvida com vc?
+- Boa noite, vou ser pai, e tenho algumas duvidas?
+- Ei, o pai também pode tirar as dúvidas por aqui?
+- Bom dia, o homem também pode fazer perguntas pra vc?
+- Oi, o meu marido também pode fazer perguntas?
+- ola meu marido quer fazer algumas perguntas
+- Oi, minha mulher está grávida e queria tirar algumas dúvidas
+
 ## intent:affirm
 - sim
 - sem problemas
