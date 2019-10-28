@@ -1,4 +1,5 @@
 intents:
+- ask_normal_swollen
 - ask_which_doctor
 - ask_go_doctor
 - father_ask_questions

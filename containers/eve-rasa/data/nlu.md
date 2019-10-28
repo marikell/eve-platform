@@ -1762,8 +1762,19 @@
 ## intent:ask_normal_swollen_foot
 - É normal os pés continuarem inchados após o parto?
 - mesmo depois do parto meus pés ainda estão inchados
-- meus pés ainda estão inchados, isso é normal?
+- já tive o bebê e os meus pés ainda estão inchados, isso é normal?
 - é normal os pés continuarem inchados depois do parto?
+
+## intent:ask_normal_swollen
+- estou muito inchada, o que eu posso fazer pra melhorar?
+- o que eu faço pra melhorar o inchaço?
+- meus pés estão muito inchados, isso é normal?
+- meus pés estão inchados
+- minhas pernas estão muito inchadas
+- como melhorar o inchaço nas pernas?
+- é normal as pernas incharem?
+- é normal os pés incharem muito?
+- minhas pernas estão inchadas
 
 ## intent:ask_pain_breastfeed
 - Estou sentindo muita dor quando amamento. Será que estou fazendo algo errado?

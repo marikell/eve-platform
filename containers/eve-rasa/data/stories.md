@@ -430,6 +430,10 @@
 ## ask_normal_swollen_foot
 * ask_normal_swollen_foot
     - action_get_answer
+  
+## ask_normal_swollen
+* ask_normal_swollen
+    - action_get_answer
 
 ## ask_how_long_milk_come_down
 * ask_how_long_milk_come_down
