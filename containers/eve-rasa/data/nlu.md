@@ -1,3 +1,28 @@
+## intent: ask_which_doctor
+- estou gravida, preciso ir em qual médico?
+- tenho que ir em qual médico?
+- descobri q estou grávida, tenho q ir em qual medico?
+- to gravida, em qual medico eu tenho q ir?
+- gestante precisa ir em qual médico?
+- gravida deve ir em qual medico?
+- estou gravida, preciso marcar uma consulta com qual medico?
+- gravida tem q ir em ginecologista ou obstetra?
+- estou gravida, tenho q procurar um obstetra ou um ginecologista?
+- to gravida, preciso ir em uma ginecologista ou obstetra?
+
+## intent: hello+ask_which_doctor
+- Oi, estou gravida, preciso ir em qual médico?
+- Oii, tenho que ir em qual médico?
+- Ola, descobri q estou grávida, tenho q ir em qual medico?
+- Oie, to gravida, em qual medico eu tenho q ir?
+- Oi, gestante precisa ir em qual médico?
+- Oii, gravida deve ir em qual medico?
+- Oie, estou gravida, preciso marcar uma consulta com qual medico?
+- Ola, gravida tem q ir em ginecologista ou obstetra?
+- Ei, estou gravida, tenho q procurar um obstetra ou um ginecologista?
+- Oi, to gravida, preciso ir em uma ginecologista ou obstetra?
+
+
 ## intent: ask_go_doctor
 - estou gravida, preciso ir no médico?
 - tenho que ir no médico?

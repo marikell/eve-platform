@@ -1,3 +1,7 @@
+# ask_which_doctor
+* ask_which_doctor OR hello+ask_which_doctor
+    - utter_which_doctor
+
 # ask_go_doctor
 * ask_go_doctor OR hello+ask_go_doctor
     - utter_go_doctor

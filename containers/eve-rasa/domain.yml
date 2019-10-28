@@ -1,4 +1,5 @@
 intents:
+- ask_which_doctor
 - ask_go_doctor
 - father_ask_questions
 - ask_exam
@@ -18,6 +19,7 @@ intents:
 - insult:
     triggers: action_insult
 - hello
+- hello+ask_which_doctor
 - hello+ask_go_doctor
 - hello+father_ask_questions
 - im_think_pregnant
@@ -541,6 +543,10 @@ templates:
   utter_go_doctor:
   - text: Sim, se você está grávida é de extrema importância procurar um médico para realizar o acompanhamento pré-natal!
       Esse acompanhamento é muito importante para garantir a sua saúde e a do bebê 😉
+  utter_which_doctor:
+  - text: O obstetra é o médico que cuida em todos os sentidos da gestação e reprodução humana.
+      Ele avalia, examina e diagnostica tanto a mãe, quanto o bebê. Esse médico é responsável também
+      por realizar os partos, participando e acompanhando o momento do nascimento dos bebês.
   utter_great:
   - text: Legal! 🙌
   utter_greet:
@@ -919,6 +925,7 @@ actions:
 - utter_ask_infection
 - utter_ask_infection_kind
 - action_congrats
+- utter_which_doctor
 - action_insult
 - utter_insult
 - utter_abort
