@@ -1,3 +1,12 @@
+## intent: ask_me_questions
+- pode me fazer as perguntas
+- pode me perguntar
+- pode falar
+- se quiser pode fazer as perguntas
+- pode me perguntar o que quiser
+- o que voce ia me perguntar
+- pode perguntar
+
 ## intent: ask_which_doctor
 - estou gravida, preciso ir em qual médico?
 - tenho que ir em qual médico?
