@@ -422,6 +422,10 @@
 ## ask_late_menstruation
 * ask_late_menstruation
     - action_get_answer
+  
+## ask_contractions
+* ask_contractions
+    - action_get_answer
 
 ## ask_do_pregnancy_test
 * ask_do_pregnancy_test

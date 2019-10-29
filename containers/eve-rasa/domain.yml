@@ -1,4 +1,5 @@
 intents:
+- ask_contractions
 - ask_normal_swollen
 - ask_which_doctor
 - ask_go_doctor

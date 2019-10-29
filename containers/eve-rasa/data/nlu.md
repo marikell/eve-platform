@@ -1765,6 +1765,17 @@
 - já tive o bebê e os meus pés ainda estão inchados, isso é normal?
 - é normal os pés continuarem inchados depois do parto?
 
+## intent:ask_contractions
+- estou tendo contrações, o que eu faço?
+- to com contração a cada 10 minutos
+- estou com contrações de 5 em 5 minutos?
+- estou tendo contrações, tenho q ir ao hospital?
+- quando devo ir ao hospital quando as contrações começarem?
+- to tendo contrações a cada 20 min, devo ir ao hospital?
+- estou com contrações, o que eu faço?
+- quanto tempo a contração deve durar para ir ao hospital?
+- estou tendo contrações, como saber quando é hora de ir ao hospital?
+
 ## intent:ask_normal_swollen
 - estou muito inchada, o que eu posso fazer pra melhorar?
 - o que eu faço pra melhorar o inchaço?
