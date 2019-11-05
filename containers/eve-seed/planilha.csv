@@ -1,0 +1,467 @@
+intent,answer
+ask_main_exams_prenatal,"Os principais exames feitos no pré-natal são:
+- Fezes para pesquisa de verminoses
+- Sangue
+- Urina
+- Ultrassonografia intravaginal
+- Ultrassonografia da translucência nucal
+- Triagem de diabetes gestacional
+- Triagem de estreptococo beta-hermolitico
+- Ultrassonografia do 3º trimestre
+Se quiser saber mais sobre algum exame em especifico é só me perguntar :)"
+ask_allowed_exercises,"Os melhores exercícios para serem praticados na gravidez são: 
+- Caminhada
+- Pilates
+- Alongamentos
+- Hidroginástica. 
+No entanto, só devem ser realizados sob orientação médica pois em alguns casos, como gravidez de risco, nenhum tipo de atividade física é permitida."
+ask_allowed_depilation,"Você pode se depilar com lâmina e com cera. A chamada depilação a laser não é recomendada, por precaução, já que não são feitos testes em gestantes."
+ask_needed_feed,"Durante a gestação, alguns nutrientes não podem faltar na alimentação como:
+- Proteínas: carnes e ovos (as gestantes veganas e vegetarianas devem buscar ajuda de um nutricionista para compensar adequadamente as necessidades de ferro e proteína da gestação)
+- Carboidrato: cereais, massas e pães, de preferencia integrais
+- Cálcio: Vegetais verde-escuros, leites e derivados e cereais integrais
+- Ferro: carnes, leguminosas e vegetais verde-escuros
+- Ácido fólico: frutas, carnes, ovos, leguminosas e vegetais verde-escuros"
+ask_needed_vaccine,"Você pode tomar a vacina da gripe, da difteria, tétano e coqueluche acelular e a vacina da hepatite B. Estas vacinas protegem você e o bebê, já que os anticorpos que constituem a vacina, passam para o bebê através do cordão umbilical.
+Existem outras situações em que você pode tomar vacina, como quando corre elevado risco de contrair uma doença. Mas nestes casos, o seu médico irá te indicar quais vacinas tomar.
+Sempre comunique o estado de gravidez ao fazer uma vacina."
+ask_signs_labor,"Os sinais variam muito mas podem começar com dores na região lombar que se irradiam para o abdômen, deixando a barriga dura mais ou menos a cada meia hora – são as famosas contrações. Se você sentir duas contrações de 40 segundos a um minuto e meio no período de dez minutos aí pode ser que você esteja entrando mesmo em trabalho de parto. Em alguns casos, o trabalho de parto se anuncia com um discreto sangramento genital ou ainda com a rotura da bolsa. Outro sinal importante é a dilatação do colo uterino acima de 2 centímetros, mas isso só o seu médico pode observar."
+ask_ideal_weight,"Isso depende de como você estava antes de engravidar. Se você tinha o índice de massa corporal (IMC) normal pode ganhar em média 12kg até o parto. Já se você estava com sobrepeso, deve ganhar no máximo uns 9kg."
+ask_best_sleeping_position,A melhor posição para dormir é virada para o lado esquerdo. Assim você não comprime a veia cava e garante uma boa circulação e oxigenação tanto para você quanto para o bebê.
+ask_best_childbirth,"Em condições normais, o parto normal é sempre a melhor opção. A recuperação é mais rápida, o leite geralmente desce mais cedo, o bebê entra em contato com bactérias que vão lhe conferir maior imunidade e há menos riscos. Já a cesárea é uma cirurgia que pode salvar vidas quando corretamente indicada. Porém há uma perda sanguínea três vezes maior, risco de infecção, dores no pós-parto e a cicatriz."
+ask_cases_forceps,"Normalmente é utilizado quando o bebê está posicionado corretamente e quase saindo, mas fica preso no canal de parto, sem dar sinais de qualquer avanço. Também se utiliza esta técnica quando a mãe está exausta e sem forças para continuar até ao final do parto, como aquelas que apresentam contrações muito fracas.
+
+Antes de utilizar o fórceps, a bolsa deve ter estourado, o colo do útero deve estar completamente dilatado e a cabeça do bebê deveria estar totalmente encaixada num ponto próximo da abertura vaginal, pronta para sair."
+ask_medicine,"Os remédios só devem ser utilizados quando necessário e sob orientação a orientação do seu médico, por isso, se achar necessidade de tomar algum medicamento, consulte seu médico primeiro."
+ask_not_allowed_exercises,"Exercícios de grande impacto não são recomendados na gravidez, especialmente se a gestante não praticava estas atividades antes da gestação. 
+Como regra geral, devem ser evitados exercícios muito intensos, nos quais a grávida sinta o coração muito acelerado (> 140 bpm) ou fique muito ofegante. Devem também ser evitadas atividades onde haja risco de trauma abdominal ou queda, como ciclismo, patinação e esportes de contato ou esportes com bola (lutas, futebol, vôlei, basquete).
+A gestante deve estar atenta ainda ao fato de que a gravidez leva a diminuição do equilíbrio, aumentando o risco de quedas. Além disso, os hormônios da gestação promovem maior flexibilidade articular e com isso maior risco de distensões e lesões durante o exercício."
+ask_not_allowed_food,"Durante a gravidez, algumas substâncias presentes nos alimentos podem causar problemas para o feto e para a gestação em si. Por isso, é bom evitar:
+- Ovos crus
+- Leites e queijos não pasteurizados
+- Frutas e vegetais mal lavados
+- Peixes crus e carnes mal passadas
+- Café
+- Bebidas alcoólicas"
+ask_not_allowed_vaccine,"As seguintes vacinas não devem ser tomadas pois são vacinas com vírus ou elementos vivos que podem afetar o bebê causando complicações, como malformação ou aborto, por exemplo.
+- BCG
+- Tríplice viral
+- Pólio
+- Rubéola
+- Catapora
+- Caxumba
+- Sarampo
+- HPV
+- Dengue
+A vacina da febre amarela também é de vírus vivos inativados, porém pode ser recomendada em algumas situações especiais, onde o risco de ocorrer a infecção é muito alto. Nestas situações, cada caso será avaliado individualmente pelo médico.
+
+Sempre comunique o estado de gravidez ao fazer uma vacina."
+ask_what_is_prenatal,"O acompanhamento pré-natal é um conjunto de avaliações clínicas e exames realizados durante a gestação que possibilitam que a mulher faça um acompanhamento detalhado da sua saúde e do bebê. É de extrema importância, pois ajuda a prevenir diversas doenças e complicações que podem trazer inclusive o parto prematuro e o aborto."
+ask_what_is_postpartum,"O puerpério é o período de 42 dias a oito semanas após o parto, durante o qual o corpo da mulher retorna às condições anteriores à gestação. As transformações ocorrem em vários âmbitos: mudanças hormonais, físicas, contornors corporais, peso, retorno do útero e órgãos genitais ao estado pré-gravídico, além de modificações emocionais. Quase todos os sistemas corporais são afetados. A exceção são as mamas, que, devido à amamentação, atingem seu desenvolvimento completo no puerpério e não retornam ao estado pré-gravídico."
+ask_what_is_loco,"O lóquio é o sangramento que ocorre no pós-parto e é semelhante a menstruação. 
+Nas primeiras 24 horas, o lóquio é um pouco mais intenso que uma menstruação. Contudo, a partir desse momento o fluxo vai diminuindo até que fique como um corrimento. O tempo de duração do lóquio varia. Se a mulher amamenta vai demorar menos tempo, mas se não amamenta, pode ocorrer por até um mês."
+ask_what_is_miscarriage,"Aborto espontâneo ocorre quando a gravidez que é interrompida naturalmente até a 22ª semana de gestação. Se ocorrer antes da 12ª semana, o abortamento é considerado precoce; depois disso, é chamado de tardio."
+ask_what_is_amniotic_fluid,"Líquido amniótico é o fluido que envolve o embrião, preenchendo a bolsa amniótica, que desta forma o protege de choques mecânicos e térmicos. "
+ask_what_is_pre_eclampsia,"Picos de aumento da pressão arterial durante a gravidez que, se não controlados, levam à eclâmpsia propriamente dita, condição que põe em risco a vida tanto da mãe quanto do bebê. É preciso tomar medicamentos e fazer um acompanhamento rigoroso."
+ask_what_is_folic_acid,"Ácido fólico é uma vitamina do complexo B, solúvel em água e presente em diversos itens da dieta diária. O folato ocorre naturalmente nos alimentos e o ácido fólico é a forma sintética do folato, usada em medicamentos.
+Para gestantes, o folato é especialmente importante para um bom desenvolvimento fetal e formação do tubo neural. A suplementação deve começar pelo menos um mês antes da gravidez e é essencial nas primeiras oito semanas após a concepção. Isto porque é neste período que ocorre o desenvolvimento do sistema nervoso e tubo neural do feto"
+ask_what_is_episiotomy,"É o corte do períneo (região localizada entre a vagina e o ânus) na hora do nascimento do bebê, uma técnica usada para aumentar a abertura vaginal a fim de evitar que a área perineal sofra uma laceração."
+ask_what_is_trichotomy,"É a raspagem dos pêlos de uma zona do corpo, geralmente antes de uma cirurgia ou intervenção semelhante. Este procedimento é realizado para diminuir o risco de infeção no período pós operatório e deixar a área livre para o procedimento médico.
+A depilação pode ser feita por um enfermeiro na maternidade e só é realizada na região onde será feito o corte. No caso do parto normal, não há necessidade de tricotomia. No caso de cesariana, a tricotomia é feita na região próxima de onde será feito o corte."
+ask_what_is_forceps,"O fórceps é um instrumento utilizado num parto vaginal, para auxiliar a saída da cabeça do bebê. É semelhante às pinças cirúrgicas, mas cujos extremos têm forma de colher e são ligeiramente curvos. Esta forma permite a sustentação da cabeça do bebé para facilitar o parto."
+ask_what_is_braxton_hicks,"As contrações de Braxton Hicks ou falsas contrações, são contrações de treinamento, levam o nome do médico que as identificou. São muito comuns e naturais da gravidez, e se tratam apenas do seu corpo se preparando para as verdadeiras contrações de expulsão do bebê na hora de trabalho de parto. Identificar as contrações de Braxton Hicks é fácil, basta ficar atenta a esses sinais:
+
+- Endurecimento da barriga
+- Falta de ar passageira
+- Sensação de aperto na barriga e costas"
+ask_what_is_eclampsia,"É fácil confundir pré-eclâmpsia com eclâmpsia. A eclâmpsia é uma condição mais grave que envolve convulsões ligadas à pressão alta. Ela geralmente requer o parto imediato do bebê, independentemente do momento da gravidez."
+ask_what_is_uterine_height,"É uma medida feita com fita métrica que acompanha o desenvolvimento da gravidez. Por volta do quinto mês, quando o útero fica visível e o teste começa a ser feito, são cerca de 20 cm entre a bacia e a barriga e a elevação chega na altura do umbigo. Depois do terceiro mês, o útero cresce em média um centímetro por mês até o final da gestação."
+ask_what_is_amniocentesis,"É um exame que recolhe líquido amniótico da bolsa para investigar possíveis alterações de cromossomos, como a da Síndrome de Down, e outras doenças de origem genética. O teste é recomendado em casos específicos e só pode ser realizado após a 16ª semana de gestação."
+ask_what_is_bcf,BCF siginifica batimentos cardíacos fetais. Essa frequência varia entre 120 e 160 batimentos por minutos e vai desacelerando até o momento do parto. Mas é normal que oscile um pouco para além desses parâmetros durante a gravidez. Isso porque as células do coração ainda estão amadurecendo.
+ask_what_is_term_baby,São os bebês que nascem entre a 39ª e a 41ª semana de gestação que é a duração considerada ideal para a saúde da criança.
+ask_what_is_deflected_baby,"É quando o bebê está na posição correta, a cefálica, de cabeça para baixo, mas o queixo está erguido para cima, como se o bebê estivesse olhando para o chão e não na direção do rosto da mãe – como deveria ser."
+ask_what_is_pelvic,"É quando o bebê está sentado, com as pernas para baixo. Há manobras que tentam virar o feto, mas é bem comum que a cesárea seja necessária."
+ask_what_is_choric,"É quando o bebê está atravessado na diagonal e neste caso, a cesárea é obrigatório. "
+ask_what_is_beta_hcg,"Hormônio produzido pela placenta que é determinante para detectar a gravidez, mas não só isso. Ele pode também ser medido em outros momentos para avaliar o desenvolvimento da gestação, uma vez que dobra de quantidade a cada 24 horas se está tudo certo."
+ask_what_is_colostrum,"Líquido anterior ao leite materno, que pode começar a ser produzido ainda no meio da gestação ou só depois do parto. É um composto rico em proteínas e calorias, mais amarelado e grosso do que o leite propriamente dito."
+ask_what_is_pdd,É a data prevista para o parto. O cálculo soma 40 semanas à data da última menstruação.
+ask_what_is_hyperemesis_gravidarum,"Quando o enjoo ocasional do início da gravidez se transforma em vômitos excessivos, o que necessita de atenção médica. O quadro pode provocar desequilíbrio no nível de minerais no sangue e até exigir internação."
+ask_what_is_isthmus_cervical,"Também conhecida como insuficiência do colo uterino. O colo, que liga o útero à vagina, deve estar fechado para segurar o bebê, mas acaba cedendo com o peso da placenta e pode provocar aborto espontâneo tardio ou parto prematuro."
+ask_what_is_nesting,"Quando o embrião se fixa na parede do útero e começa a se desenvolver, processo que costuma ocorrer até a terceira semana de gestação e pode causar um pequeno sangramento e leve desconforto mas isso tudo é normal."
+ask_what_is_oxytocin,"Hormônio que auxilia as contrações uterinas no trabalho de parto e também trabalha na liberação do leite materno. Depois do nascimento, ajuda o corpo da mãe a entrar em forma novamente. Quanto mais amamentação, maior a produção da substância."
+ask_what_is_previous_placenta,"Quando a placenta se fixa na parte inferior do útero, mais perto do colo. A condição é rara, mas perigosa: aumenta o risco de partos prematuros e sangramentos. Mulheres com placenta prévia devem ficar de repouso e se submeter à cesariana para minimizar o perigo."
+ask_what_is_epidural_anesthesia,"Tipo de anestesia utilizado em partos normais e cesáreas. Aplicada na região inferior das costas, a mãe perde a sensibilidade apenas da cintura para baixo. Como demora um pouco para fazer efeito, um cateter faz com que a anestesia seja administrada continuamente ou em doses espaçadas."
+ask_what_is_cephalic_perimeter,É o tamanho da circunferência da cabeça do bebê.
+ask_what_is_spinal_anesthesia,"É uma anestesia comum nos partos, a raquidiana tira a sensibilidade apenas da metade inferior do corpo. De efeito instantâneo, pode ser administrada no parto normal ou cesárea em momentos de dor aguda."
+ask_what_is_basal_temperature,"Quando a mulher está ovulando, a temperatura aumenta um ou dois graus. Por isso, quem deseja engravidar pode usar o termômetro para saber se o momento é propício. Mas esse não é um método preciso e deve ser utilizado apenas como auxiliar."
+ask_what_is_nuchal_translucency,"Medida da quantidade de líquido na nuca do feto no primeiro trimestre da gravidez, durante o primeiro ultrassom morfológico. Se a quantidade é maior do que deveria, há risco elevado de Síndrome de Down e outras alterações cromossômicas."
+ask_can_paint_nails,"Você pode tanto pintar as unhas como também remover a cutícula. O único cuidado é em relação à higiene dos acessórios de manicure. O ideal é que você tenha seu próprio kit de tesoura e alicate para fornecê-lo à profissional. Isso evita possíveis contaminações. Ou, então, escolha um estabelecimento que tenha rígidos procedimentos de esterilização do material."
+ask_can_paint_hair,"As tinturas que contém chumbo e amônia estão contraindicadas durante todo o período gestacional. Algumas tinturas semi-permanentes são permitidas após o 4o mês de gestação, por isso consulte seu médico. Escova progressiva, alisamentos e permanentes nos cabelos estão proibidos ao longo de todo o período."
+ask_can_discolor_hair,"Evite descolori-los. Não há garantias de que as substâncias químicas usadas no processo não penetrem na pele e, assim, ofereçam riscos ao bebê."
+ask_can_ride_motorcycle,"Não há nenhuma contraindicação formal. Mas lembre-se que os acidentes de moto são relativamente comuns e uma queda pode colocar a vida do bebê em risco, portanto procure evitar."
+ask_can_horseback_riding,"Assim como a moto, andar a cavalo pode não ser uma boa ideia, pois qualquer queda pode prejudicar você e o bebê."
+ask_can_ride_bike,"Não há contraindicação absoluta, porém a gravidez reduz o equilíbrio e as quedas nesse período podem colocar em risco mãe e bebê. Se possível, deve ser evitado."
+ask_can_take_laxative,"O ideal é adicionar à dieta alimentos ricos em fibras para melhorar o trânsito intestinal, como frutas e cereais integrais. Se ainda assim o intestino continuar preso, consulte o seu médico e veja com ele se é possível ele te indicar um laxante permitido para gestante."
+ask_can_take_bath,"Desde que a temperatura da água esteja morninha, até uns 38°C. Nos primeiros três meses de gestação, a hipertermia (excesso de calor) pode causar malformações no feto. Já a partir do segundo trimestre, é comum a sua pressão cair, o ambiente muito quente pode contribuir para uma pressão ainda mais baixa, o que pode diminuir o fluxo de sangue para o bebê ou te fazer desmaiar."
+ask_can_steam_room,"Não, devido à alta temperatura nesse ambiente, fazer sauna é desaconselhado para prevenir problemas como queda de pressão, desmaio e enjoo."
+ask_can_chili,"Desde que não te provoque azia ou outro desconforto gástrico, não há problema algum."
+ask_can_coffee,"Você pode tomar mas com muita moderação, uma ou duas xícaras pequenas por dia. Isso porque a cafeína piora os sintomas de queimação no estômago, algo comum entre várias gestantes, além de ser muito estimulante."
+ask_can_sunbathe,"Você pode tomar sol desde que seja antes das 10 horas ou depois das 16 horas e sempre com um protetor solar com FPS maior que 30. Durante a gestação, você tem um risco maior de ficar com manchas tanto na face como na barriga."
+ask_can_moisturizer,"Escolha sempre por produtos exclusivos para gestantes, pois alguns ativos de hidratantes comuns são proibidos durante a gestação."
+ask_can_travel,"Então, até o sétimo mês, as viagens podem ser realizadas mas com algumas precauções. Por exemplo, no carro, procure parar a cada uma hora para esticar as pernas.
+Se for viajar de avião, procure caminhar pelo corredor da aeronave sempre que der e beba bastante líquido para não se desidratar. Já no oitavo mês, é necessário atestado médico para embarcar. E, no nono, é melhor não fazer nenhuma viagem, nem de carro."
+ask_can_ladder,"Sim, mas você deve ficar atenta para não ficar ofegante na subida e, na descida, não se desequilibrar."
+ask_can_high_heels,"Você pode usar salto de até 3 centímetros. Mais do que isso, aumenta a possibilidade de você cair devido à mudança de eixo no equilíbrio do corpo."
+ask_can_japanese_food,"O melhor é evitar comida japonesa, embora o peixe cru não transmita toxoplasmose, o ideal é evitar o alimento nessa fase – aliás, qualquer carne crua."
+ask_can_dentist,"Não só pode como deve, caso ocorra algum problema nos dentes ou nas gengivas. Claro, na verdade, é muito importante ir ao dentista pois doenças bucais são associadas a parto prematuro e nascimento de bebês com baixo peso. Sempre informe o seu dentista da sua situação para que ele possa tomar as devidas precauções."
+ask_can_exercise,"A não ser que exista uma contraindicaçao específica dada pelo seu médico (como por exemplo risco aumentado de abortou ou parto prematuro), você pode fazer exercícios durante toda a gestação. Se você não praticava exercícios antes, prefira por atividades mais leves e se você já estava habituada procure diminuir um pouco o ritmo.
+Se quiser saber mais sobre quais tipos de exercícios são os mais recomendados ou quais tipos de exercícios devem ser evitados é só me perguntar :)"
+ask_can_alcohol,"Não há uma dose segura de álcool para gestantes, portanto não é recomendado. Bebida alcoólica pode acarretar prejuízos ao bebê."
+ask_can_drugs,Não é permitido o uso de álcool ou qualquer outra droga pois podem prejudicar o bebê.
+ask_can_smoke,"Fumar pode causar insuficiência placentária e aumenta a chance de o bebê nascer antes do tempo e com baixo peso. Além disso, você corre o risco de ter trombose venosa profunda – o que pode levar à morte. Por isso, se você é fumante, é de extrema importância que você tente parar durante esse período."
+ask_can_x_ray,"Apenas em situações nas quais seja realmente necessário e os riscos de não fazer compensem os riscos para a gestação, o que sempre terá que ser indicado pelo médico. Além disso, você sempre deverá comunicar ao técnico que realiza o exame pois em alguns casos é possível utilizar um avental para proteger o bebê da radiação."
+ask_can_sex,"Fazer sexo na gravidez é uma prática normal e não traz problema nenhum, desde que não haja contraindicações, como ameaça de parto prematuro ou abortamento."
+ask_can_raw_meat,"Os peixes crus, como sushi, e as carnes mal passadas devem ser evitados porque podem estar contaminados com a bactéria listeria, que pode causar aborto e parto prematuro, ou com doenças como a cisticercose, que pode afetar o sistema nervoso e prejudicar o funcionamento do cérebro."
+ask_can_soda,"Depende, tomar refrigerante durante a gravidez não faz propriamente mal para a mãe ou para o bebê, desde que seja consumido moderadamente e a gestante não tenha problemas de saúde como diabetes ou obesidade, que contraindicam o uso excessivo de açucares."
+ask_can_sweetener,"A estévia e a sucralose podem ser ingeridas sem problema, pois são naturais. Já a sacarina não é indicada, pois ela tem a capacidade de atravessar a barreira placentária e, segundo alguns estudos, há o risco de provocar câncer futuramente."
+ask_can_vaccine,"Depende. Algumas vacinas estão liberadas, algumas indicadas em condições especiais e outras contraindicadas durante toda a gestação. Sempre consulte seu médico a respeito das vacinas.
+Como regra geral, a vacina tríplice bacteriana acelular (difteria, tétano e coqueluche) e hepatite B estão indicadas na gestação, de acordo com o estado vacinal prévio. A vacina da gripe (Influenza A) está indicada nas campanhas anuais sazonais, independente do tempo de gravidez da mãe. 
+As vacinas de vírus vivos inativados (sarampo, caxumba, rubéola, varicela, dengue) são de regra geral contraindicadas, exceto em situações muito especiais. 
+Na dúvida consulte a versão mais recente do calendário vacinal do Ministério da Saúde ou da Sociedade Brasileira de Imunização. https://sbim.org.br/images/calendarios/calend-sbim-gestante.pdf"
+ask_can_sleep_stomach,"No início da gestação, não tem problema. Mas, com o aumento da barriga, ela acaba se tornando inviável. O mais indicado é você dormir de lado, de preferência o esquerdo."
+ask_can_hot_wax,"Você pode se depilar com lâmina e com cera. A chamada depilação a laser não é recomendada, por precaução, já que não são feitos testes em gestantes."
+ask_can_pap_smear,"Pode, o exame é importante e deve ser feito de acordo com a recomendação de um profissional de saúde."
+ask_can_drive,Existem muitas controvérsias sobre isso. Converse com o seu médico para ver o que ele acha melhor no seu caso.
+ask_when_start_prenatal,É muito importante iniciar o pré natal assim que você fica sabendo que está grávida.
+ask_when_episiotomy,A episiotomia é necessária em situações específicas onde se precise ampliar o canal de parto para o nascimento do bebê. Nao há indicações formais e atualmente não é procedimento realizado de rotina. Isso só será decidido no momento do parto e o médico irá informá-la sobre a necessidade de fazer a incisão e obter seu consentimento.
+ask_when_baby_move,"Geralmente, você irá sentir o bebê mexendo pela primeira vez na barriga entre a 16ª e a 20ª semana de gestação, ou seja, no final do 4º mês ou durante o 5º mês de gravidez. Porém, se for a sua segunda gravidez, é normal sentir o bebê mexer mais cedo, entre o final do 3º mês e o início do 4º mês de gestação."
+ask_when_start_braxton_hicks,"Essas contrações podem aparecer em torno da 20ª semana de gravidez, algumas vezes depois, mas no geral nesse período. Logo que o útero atinge uma altura significativa, os treinamentos uterinos para o parto iniciam."
+ask_when_exam_feces,"Deve ser feito no início da gravidez e pode ser repetido se necessário, durante os nove meses."
+ask_when_exam_blood_glucose,"Geralmente, logo no início da gravidez. 
+Ao redor da 24ª semana, fase em que o corpo da gestante já encontra mais dificuldade em absorver o açúcar, é realizada a curva glicêmica ou teste de tolerância à glicose."
+ask_when_exam_blood,Esse exame deve ser feito assim que se inicia o pré-natal.
+ask_when_exam_urine,Esse exame deve ser feito assim que se inicia o pré-natal.
+ask_when_exam_intravaginal_ultrasound,Esse exame deve ser feito assim que se inicia o pré-natal.
+ask_when_exam_nuchal_translucency_ultrasound,Esse exame deve ser feito no 1º trimestre da gestação.
+ask_when_exam_screening_gestational_diabetes,Esse exame deve ser feito no 2º trimestre da gestação.
+ask_when_exam_screening_beta_hermolytic_streptococcus,Esse exame deve ser feito no 3º trimestre da gestação.
+ask_when_exam_third_trimester_ultrasound,Esse exame deve ser feito no último trimestre da gestação.
+ask_when_stop_nausea,"Normalmente, os enjoos diminuem após a 12a semana de gestação, quando os níveis de hCG começam a cair."
+ask_symptom_miscarriage,"Os principais sinais são sangramento junto com a cólica. Algumas mulheres também percebem o desaparecimento de sintomas típicos da gravidez, como enjoos, aumento dos seios e o crescimento da barriga."
+ask_symptom_pregnancy,"Quando a mulher engravida o corpo passa por diferentes mudanças para se adaptar ao bebê que está se desenvolvendo e assim surgem os primeiros sintomas de gravidez. Existem diferentes sinais que podem indicar uma gravidez, entre os sintomas iniciais da gravidez estão:
+
+- Atraso menstrual
+- Enjoos
+- Mamas maiores e sensíveis
+- Maior frequência urinária
+- Aumento abdominal
+- Prisão de ventre e aumento dos gases
+- Aversão a cheiros fortes
+- Instabilidade emocional
+- Aumento da libido
+- Ronco
+- Aumento da transpiração"
+ask_symptom_premature_birth,"As contrações do trabalho de parto prematuro podem ocorrer no segundo e terceiro trimestre da gravidez. Elas não param, e podem se tornar mais frequentes, regulares e desconfortáveis ao longo do tempo. Alguns sinais são:
+
+- Cólicas parecidas com as menstruais acima do osso púbico
+- Pressão ou dor na pélvis, coxas ou virilha
+- Dor seca na lombar ou pressão nas costas
+- Cólicas intestinais ou diarreia
+- Aumento do corrimento vaginal
+- Líquido aquoso, corrimento rosado ou marrom, ou sangue saindo pela vagina
+
+Se você sentir algum desses sintomas, ou mais de quatro contrações em uma hora, contate o seu médico imediatamente. Pode ser pedido que você vá ao hospital para ser examinada, ou o seu médico pode querer que você cronometre as contrações."
+ask_symptom_pre_eclampsia,"Os sinais e sintomas da pré-eclâmpsia na gravidez podem ser:
+
+- Dor de cabeça persistente
+- Ver pontinhos ou ter outras alterações da visão
+- Dor na parte superior do abdômen ou no ombro
+- Náusea e vômito (na segunda metade da gravidez)
+- Ganho de peso repentino
+- Inchaço repentino do rosto e das mãos
+- Dificuldade para respirar
+- Diminuição do volume de urina"
+ask_why_sleep,Uma das responsáveis pela incontrolável vontade de dormir é a glândula tireóide que modifica sua produção hormonal. É importante que você respeite seus momentos de sono e preguiça. O crescimento do bebê dependerá de muita energia e boas horas de repouso ajudarão na renovação do seu corpo.
+ask_why_nausea,"Existem várias teorias que tentam explicar por que as mulheres enjoam durante a gravidez. Há o fator hormonal, o fator digestivo e até o psicológico, mas um veredicto certo a ciência ainda não deu. Para aliviar o incômodo indica-se o consumo de água gelada, chá de gengibre e a ingestão de bolachas salgadas."
+ask_risk_factor_pregnancy,"Entre os fatores de risco durante a gravidez que podem afetar você e o bebê, estão:
+
+- Pressão arterial alta
+- Diabetes
+- Obesidade
+- Gravidez adolescente
+- Diabetes gestacional
+- Pré-eclâmpsia e eclâmpsia
+- Consumo de álcool, cigarro e outras drogas
+- Gravidez tardia
+- Gravidez múltipla
+- AIDS"
+ask_risk_factor_premature_birth,"Muitos são os fatores que podem aumentar o risco de que o bebê nasça prematuramente. Gestantes que já passaram por um parto prematuro, bem como as grávidas de gêmeos (ou múltiplos) ou mesmo aquelas que apresentam um histórico de problemas no útero têm maiores chances de ter uma gestação interrompida antecipadamente. Outros fatores de risco são:
+
+- Insuficiência do colo uterino
+- Infecções na vagina ou no trato urinário
+- Certas anormalidades uterinas
+- Ter feito cirurgia no colo do útero
+- Ter sofrido aborto espontâneo, principalmente entre 16 e 24 semanas de gravidez
+- Problemas na placenta, como placenta baixa (ou prévia)
+- Excesso de líquido amniótico
+- Forte estresse momentâneo (ou por um longo tempo)
+- Tabagismo ou uso de drogas, como maconha, ecstasy ou cocaína
+- Condições precárias de alimentação, falta de saneamento básico violência doméstica ou outros problemas sociais
+ Ter feito um aborto anteriormente"
+ask_causes_pre_eclampsia,"Embora nem sempre seja claro saber o que causa a pré-eclâmpsia durante a gravidez, há alguns fatores de risco conhecidos, como:
+
+- Primeira gravidez
+- Ficar grávida novamente com menos de 2 anos ou mais de dez anos de intervalo
+- Ter tido pré-eclâmpsia em gravidez anterior
+- Ter histórico de pré-eclâmpsia na família
+- Ter histórico de pressão alta ou doença renal
+- Mais de 40 anos
+- Grávida de gêmeos ou múltiplos
+- Diabetes, distúrbios de coagulação, lúpus ou enxaqueca
+- Obesidade"
+ask_causes_premature_birth,"Entre as principais causas para um nascimento prematuro estão:
+
+- Ruptura prematura da bolsa aminiótica
+- Hipertensão crônica
+- Pré-eclâmpsia
+- Síndrome Hellp (uma síndrome com hipertensão e alterações no funcionamento do fígado e sistema de coagulação)
+- Insuficiência istmo-cervical (do colo uterino)
+- Descolamento prematuro da placenta
+- Placenta prévia (placenta que se insere na saída do útero, provocando sangramentos)
+- Malformações uterinas
+- Infecções uterinas
+- Gestação múltipla (de gêmeos)
+- Fertilização in vitro (técnicas de reprodução assistida)
+- Malformações fetais"
+ask_what_to_do_bag,"Para quem está com menos de 37 semanas e sinais de que a bolsa estourou, ou está vazando líquido, é preciso entrar em contato com o médico e ir para o hospital o mais rápido possível (mesmo que você não tenha certeza). O obstetra vai avaliar a necessidade de fazer o parto ou esperar mais um pouco, em condições controladas, para evitar infecções. 
+
+Para grávidas de mais de 37 semanas, rompimento da bolsa significa avisar o médico (se possível), preparar as coisas e também dirigir-se para a materinidade,  monitorando eventuais contrações. "
+ask_what_to_do_bleeding,"Assim que perceber qualquer sangramento, é imprescindível que você procure um pronto-socorro e informe o obstetra que a acompanha o mais rápido possível."
+ask_importance_breast_feeding,"O leite materno é o único alimento que fornece nutrientes importantes para o desenvolvimento cerebral, que combate infecções, protege a criança contra bactérias e vírus, e evita diarreias.
+
+O ideal é o bebê se alimentar apenas do leite materno nos seus seis primeiros meses de vida, não precisando comer ou beber mais nada – nem mesmo água ou chás, pois nele há tudo que o bebê necessita para estar nutrido, crescer e se desenvolver com saúde."
+ask_how_to_know_bag_burst,"A quantidade de líquido que escapa pode variar bastante. Pode ser uma enxurrada, e aí você não vai ter dúvida nenhuma. Mas pode ser bem menos, um pouquinho por vez. A cabeça do bebê pode funcionar como uma ""tampa"" que não deixa o líquido escapar quando você está de pé ou sentada.
+
+Uma saída é deitar de lado e tossir, para ver se o líquido escapa. Se escapar, provavelmente é a bolsa mesmo. Muitas mulheres descrevem a sensação de rompimento da bolsa como um ""xixi na calça"" (só que não dá para segurar).
+
+Em caso de dúvida, procure assistência médica, principalmente se você estiver com menos de 37 semanas. Os médicos podem testar o líquido para saber se é o líquido amniótico ou não."
+ask_how_to_know_childbirth,"Bom, os sinais variam muito mas podem começar com dores na região lombar que se irradiam para o abdômen, deixando a barriga dura mais ou menos a cada meia hora – são as famosas contrações. Se você sentir duas contrações de 40 segundos a um minuto e meio no período de dez minutos aí pode ser que você esteja entrando mesmo em trabalho de parto. Em alguns casos, o trabalho de parto se anuncia com um discreto sangramento genital ou ainda com a rotura da bolsa. Outro sinal importante é a dilatação do colo uterino acima de 2 centímetros, mas isso só o seu médico pode observar."
+ask_how_to_know_pregnancy,"Quando a mulher engravida o corpo passa por diferentes mudanças para se adaptar ao bebê que está se desenvolvendo e assim surgem os primeiros sintomas de gravidez. Existem diferentes sinais que podem indicar uma gravidez, entre os sintomas iniciais da gravidez estão:
+
+- Atraso menstrual
+- Enjoos
+- Mamas maiores e sensíveis
+- Maior frequência urinária
+- Aumento abdominal
+- Prisão de ventre e aumento dos gases
+- Aversão a cheiros fortes
+- Instabilidade emocional
+- Aumento da libido
+- Ronco
+- Aumento da transpiração"
+ask_prevent_premature_birth,"Você pode tomar precauções que podem ajudar a impedir o parto prematuro de começar.
+
+ Beber oito doses de suco ou água a cada duas horas para evitar a desidratação, o que poderia deixar seu útero mais ""irritado"".
+ Ter uma dieta saudável e ganhar de 10 a 15 quilos durante a gravidez
+ Sempre limpe da frente para trás após urinar ou evacuar, para evitar uma ITU (infecção do trato urinário).
+ Sente-se com as pernas elevadas mais ou menos a cada uma hora, e não levante objetos pesados.
+ Pare as atividades físicas e descanse se tiver contrações que não parem dentro de um curto espaço de tempo.
+ Tente diminuir o estresse em sua vida."
+ask_prevent_pre_eclampsia,"Nem sempre é possível prevenir a pré-eclâmpsia, mas se você apresentar um dos fatores de risco, você pode tomar alguns cuidados, como:
+
+- Identifiar e tratar os fatores de risco antes de ficar grávida. Por exemplo, controle a pressão alta, perca peso se necessário e, se você for diabética, tenha sua condição sob controle antes de ficar grávida. Seu médico poderá aconselhá-la sobre os próximos passos, caso você esteja grávida e apresente algum desses fatores de risco.
+- Alguns médico podem recomendar aspirina em baixa dosagem durante toda a gravidez se seu risco for alto."
+complain_nauseas,"Náuseas, vômitos e tonturas são sintomas comuns no início da gestação. Algumas dicas que podem aliviar esse sintomas são:
+- alimentação fracionada (seis refeições leves ao dia)
+- evitar frituras, gorduras e alimentos com cheiros fortes
+- evitar líquidos durante as refeições
+- ingerir alimentos sólidos pela manhã antes de escovar os dentes
+- Adiar o horário de escovação dos dentes, evitando os primeiros instantes após levantar-se pela manhã
+Em caso de vômitos frequentes, agende uma consulta com o seu médico."
+complain_heartburn,"É comum a partir do segundo trimestre da gestação. Algumas dicas que podem te ajudar são:
+- Ingestão de forma fracionada (pequenas quantidades e com maior frequência)
+- Evitar frituras, café, chá preto, mates, alimentos gordurosos e picantes e outros irritantes gástricos, doces, álcool e fumo
+- Ao dormir, buscar elevar o tronco em relação ao resto do corpo (pode-se elevar a cabeceira da cama). 
+- Após as refeições, deitar-se só após uma ou duas horas."
+complain_salivation,É bem comum no início da gestação. Evite cuspir a saliva e procure tomar líquidos em abundância (especialmente em épocas de calor). Chupar gelo também pode ajudar.
+complain_weakness,"Fraquezas e desmaios podem acontecer após mudanças bruscas de posição e também quando você ficar muito tempo sem se alimentar. 
+Geralmente deitar de lado (esquerdo preferencialmente) respirando calma e profundamente melhora a sensação. Procure evitar ambientes pouco ventilados e roupas muito quentes."
+complain_flatulence,"Para melhorar esse sintoma mantenha uma alimentação rica em fibras, incluindo na sua dieta verduras, cereais integrais e frutas laxantes como o mamão e a banana. Beba bastante água e procure evitar alimentos como feijão, repolho, frituras e ovo. Realizar exercícios físicos como caminhada também podem ajudar."
+complain_constipation,"Para melhorar esse sintoma mantenha uma alimentação rica em fibras, incluindo na sua dieta verduras, cereais integrais e frutas laxantes como o mamão e a banana. Beba bastante água e procure evitar alimentos como feijão, repolho, frituras e ovo. Realizar exercícios físicos como caminhada também podem ajudar."
+complain_discharge,"O aumento do corrimento é comum em gestantes apenas fique atenta pois o fluxo normal não causa coceira, mau cheiro, ardência ou dor nas relações. Se você apresentar qualquer um desses sintomas, procure o seu médico."
+complain_urine,"O aumento da vontade de urinar é muito comum no início e no fim da gestação. Portanto, não diminua a ingestão de líquido para tentar diminuir a frequência com que você vai ao banheiro, é importante manter-se hidratada. 
+Sempre que sentir ardência para urinar ou dor e aparecer sangue na urina ou febre avise o seu médico."
+complain_breasts,"As mamas aumentam de volume durante a gestação o que frequentemente causa dor, para ajudar procure sempre usar sutiã com boa sustentação. Ainda assim, é importante realizar o exame das mamas para descartar qualquer problema mais grave. Lembre-se também de se preparar para a amamentação."
+complain_varicose_veins,"Para melhorar os sintomas das varizes procure:
+- Não permanecer muito tempo em pé ou sentada e evitar inatividade
+- Repousar pelo menos 20 minutos, várias vezes ao dia, com as pernas elevadas
+- Não usar roupas muito justas e, se possível, utilizar meia-calça elástica para gestante"
+complain_body,"Durante a gestação as articulações ficam com maior mobilidade e isto frequentemente ocasiona dores nas costas e em articulações como o joelho e o tornozelo. Algumas medidas que podem te ajudar são:
+
+- Evitar aumento excessivo de peso
+- Fazer exercícios regularmente
+- Manter uma postura adequada
+- Evitar uso de saltos altos e desconfortáveis"
+complain_headache,"Em geral, dores de cabeça são provenientes de tensão emocional, entretanto podem estar associadas também a doenças mais sérias. Sempre comunique o seu médico para que ele possa te examinar e descartar casos de hipertensão arterial e pré-eclâmpsia. O uso de medicamentos só deve ser feito sob a indicação do seu médico. Para aliviar a dor, procure descansar em um lugar tranquilo e sem barulho, com as luzes apagadas."
+complain_cramps,"As câimbras podem ocorrer durante a gestação, geralmente após excesso de exercício. Quando acontecer, massageie o músculo e aplique calor no local. Procure consumir alimentos ricos em potássio, cálcio e vitamina B1, como banana, couve e aveia."
+complain_stretch_marks,"As estrias são resultado da distensão dos tecidos e, infelizmente, não existe método eficaz de prevenção. O que você pode fazer para tentar  preveni-las é realizar massagens com óleos nos lugares mais propensos a estrias como abdômen, mamas e coxas. Só cuidado para não aplicar nenhum creme nos mamilos."
+complain_melasma,"Manchas na pele são comuns na gravidez e costumam diminuir ou desaparecer, em tempo variável, após o parto. Procure sempre usar filtro solar e evite a exposição ao sol."
+complain_gums,"O sangramento nas gengivas também é um sintoma comum da gestação, a causa mais freqüente é a inflamação crônica da gengiva. Utilize escova de dente macia, massageie a gengiva e passe o fio dental. Relate esse problema ao seu médico e se possível, marque também um dentista."
+complain_shortness_breath,"A falta de ar e a dificuldade para respirar são sintomas frequentes na gestação devido ao aumento do útero, elevação do diafragma, ou ansiedade. Deitar de lado, de preferência do lado esquerdo, ajuda a aliviar a sensação de falta de ar.
+Se os sintomas não melhorarem com o repouso ou estiverem se agravando, procure seu médico."
+complain_bleeding,"Não entre em desespero e tente manter a calma. Os sangramentos genitais durante a gravidez são frequentes e, nem sempre, indicam um problema grave. Mesmo assim, é sempre necessário entrar em contato com o seu médico ou ir ao pronto atendimento mais próximo para avaliação."
+complain_colic,"A cólica na gravidez é normal, principalmente no início da gestação devido a adaptação do corpo da mãe ao crescimento do bebê e também no final da gravidez, por volta das 37 semanas de gestação, dando indícios do início do trabalho de parto.
+
+No entanto, existem outras situações que podem causar cólicas fortes e persistentes na gravidez, e que devem ser avaliadas pelo médico. Se as cólicas não pararem depois de um tempo ou vierem acompanhadas sangramento vaginal, corrimento ou febre, é importante consultar um ginecologista.
+
+O alívio da cólica é feito de acordo com sua causa e conforme a recomendação médica."
+ask_goal_exam_feces,É importante para investigar a presença de parasitas no intestino que podem provocar problemas como anemia.
+ask_goal_exam_blood_glucose,"O exame de glicemia, conhecido popularmente como glicemia em jejum, é solicitado pelo ginecologista para medir a quantidade de glicose presente na corrente sanguínea, o que permite identificar eventuais quadros de intolerância à glicose e diabetes.
+Se as taxas estiverem muito acima do normal, pode ser que a mulher esteja com diabetes gestacional, que exige cuidado e atenção especial, pois pode comprometer a gravidez.
+
+O exame costuma ser feito em jejum de 8 horas, em que é medida a quantidade de glicose quando não houve ingestão recente de alimentos. 
+Além disso pode ser feito durante a chamada curva glicêmica ou teste de tolerância à glicose — duas horas após a ingestão de uma dose padronizada de glicose."
+ask_goal_exam_blood,"É importante para determinar o seu tipo sanguíneo e detectar infecções como sífilis e HIV. Além disso, serve para verificar se você possui anemia, dosar os níveis de açucar no sangue e definir se você possui risco de contrair doenças como rubéola e toxoplasmose."
+ask_goal_exam_urine,O exame de urina é responsável por detectar uma eventual infecção urinária
+ask_goal_exam_intravaginal_ultrasound,"Nesse exame, podemos calcular o tempo de gravidez e a data provável do parto, além de visualizar o embrião e o saco gestacional."
+ask_goal_exam_nuchal_translucency_ultrasound,"O principal objetivo desse exame é a medicação da espessura de um fluido entre a pele e a gordura da nuca do bebê. O resultado aponta a chance de haver anomalias, como a Síndrome de Down."
+ask_goal_exam_screening_gestational_diabetes,"O objetivo desse exame é verificar se você não desenvolveu diabetes gestacional, pois essa doença requer cuidados especiais e uma possível antecipação do parto."
+ask_goal_exam_screening_beta_hermolytic_streptococcus,"Esse exame serve pra detectar um infecção causada pela bactéria estreptococo do grupo B, que pode ser passada para o bebê durante o nascimento. O tratamento para esses casos, consiste na administração de antibióticos no dia do parto."
+ask_goal_exam_third_trimester_ultrasound,"Esse exame serve para acompanhar o tamanho, o peso e a posição do bebê, além de avaliar a maturidade da placenta e a quantidade de líquido aminiótico."
+ask_how_works_prenatal,"O acompanhamento pré-natal é um conjunto de exames realizados durante a gestação que possibilitam que a mulher faça um acompanhamento detalhado da sua saúde e do bebê. É de extrema importância, pois ajuda a prevenir diversas doenças e complicações que podem trazer inclusive o parto prematuro e o aborto."
+ask_anesthesia_dentist,Sim. Você pode receber anestesia e o dentista vai saber a conduta mais adequada e segura na gravidez.
+ask_avoid_cleaning_products,"Tome cuidado com produtos de limpeza, principalmente aqueles que contenham amônia ou os seus derivados, já que essas substâncias podem trazer malefícios ao bebê."
+ask_avoid_normal_birth,"Isso não é uma verdade absoluta, a partir da segunda cirurgia, os médicos desaconselham parto normal, pois há risco de ocorrer ruptura no útero. O órgão fica frágil por ter sido cortado mais de uma vez no mesmo lugar."
+ask_baby_feel_sex,"Não, isso é um mito."
+ask_back_exercise,"Se foi parto normal, você pode voltar a se exercitar em dois meses. Mas, se fez cesariana, espere pelo menos 3 meses. Em algumas situações especiais, o médico pode pedir períodos mais longos sem atividade físicas. Consulte-o sobre o seu caso específico."
+ask_best_position_baby_sleep,"O bebê deve dormir de barriga para cima. De acordo com pesquisas, bebês que dormem de bruço ou de lado correm o risco de ter a síndrome de morte súbita. As demais posições são permitidas quando o bebê já for capaz de ser virar sozinho na cama."
+ask_birth_control_difficult_pregnancy,"As pílulas anticoncepcionais não causam infertilidade mesmo após anos de uso. Assim que se suspende o uso, a fertilidade retorna imediatamente."
+ask_birth_transmit_disease,"Sim, como por exemplo o vírus HIV. No entanto, a maioria das condições infecciosas da mãe, quando bem controlada, não contraindica o parto normal. A avaliação médica ditará a conduta, em alguns casos usando medicamentos que previnem a contaminação."
+ask_body_back_normal,O corpo retoma suas formas entre 40 e 60 dias. Já os seios só voltam ao normal depois do fim da amamentação.
+ask_breast_milk_normal_birth,"Na maioria dos casos isso acontece, mas não é uma regra. Pode ser mais demorado para uma mulher que fez a cesariana, mas não estava em trabalho de parto."
+ask_calculate_fertile_period,"Para calcular o período fértil é necessário considerar que a concepção acontece sempre no meio do ciclo, ou seja, em torno do 14º dia de um ciclo normal de 28 dias.
+Desta forma, para saber quando é o período fértil é preciso contar 14 dias a partir da data em que veio a última menstruação. A ovulação acontecerá entre 3 dias antes e 3 dias depois dessa data, que é o que se considera o período fértil da mulher. "
+ask_care_baby_belly_button,O umbigo pode cair entre 7 e 15 dias após o nascimento. É importante fazer a limpeza dessa parte do corpo do pequeno para evitar infecções.
+ask_cesarean_can_normal_birth,"Sim. Se seu primeiro parto foi uma cesariana, isso não é impedimento para parto normal. Informe-se melhor no pré-natal para entender o seguimento de uma gestante no final da gestação."
+ask_choose_birth_type_public,"De acordo com a Organização Mundial da Saúde (OMS), o parto normal é a melhor via de nascimento para mãe e bebê. Você pode e deve conversar com o seu médico sobre como se sente mas na hora do parto a decisão final é do médico obstetra, que avaliará a melhor abordagem de acordo com as suas condições de saúde e do bebê."
+ask_contraceptive_pill_after_birth,"Depende da pílula, procure orientação a respeito disso, pois alguns métodos não são recomendados logo no pós-parto imediato. Até você tirar essa dúvida com o seu médico, use preservativo."
+ask_desire_sex,"Isso é super normal devido a uma série de fatores como o estresse do parto, o cansaço de cuidar de um recém-nascido, medo de engravidar novamente e a insegurança em relação ao corpo. Além disso, o seu metabolismo também altera o desejo sexual devido a falta de ovulação e ao aumento do hormônio prolactina que é importante para a produção do leite. Mas logo a sua libido voltará ao normal."
+ask_diet_breastfeed,Não faça dietas e regimes nesse período. Eles podem afetar sua produção de leite. Procure apenas ter uma alimentação balanceada e beber muito líquido.
+ask_do_pregnancy_test,"Existem dois tipos de teste: o de urina e o de sangue. O mais confiável é o de sangue, esse exame pode ser feito sem um pedido médico cerca de 10 dias após a relação sexual e custa em média R$ 50. O teste de gravidez de farmácia pode ser feito a partir do 1º dia do atraso da menstruação e custa cerca de R$ 10. Porém, se o resultado desse primeiro teste for negativo e a menstruação ainda estiver atrasada ou se existirem sintomas de gravidez, o teste deve ser repetido em 3 ou 5 dias, quando os níveis do hormônio beta HCG estão maiores e mais fáceis de serem detectados."
+ask_dye_hair_breastfeed,"O melhor é evitar até o término da amamentação devido as substâncias presentes nas tinturas que podem fazer mal ao bebê, especialmente aquelas contendo chumbo e amônia. Você pode consultar o seu médico a respeito de tinturas semi-permanentes, que em alguns casos são permitidas."
+ask_exercise_help_normal_birth,"A prática regular de exercícios pode trazer muitas vantagens para as grávidas e para os bebês desde que seguindo à risca as orientações médicas. O trabalho de parto exige paciência e a mulher tem que fazer força, com um melhor condicionamento físico você conseguirá fazer força mais facilmente."
+ask_exercise_impair_milk,"A prática exagerada de exercícios pode diminuir a produção de leite. Prefira atividades de menor intensidade. Se notar diminuição do volume de leite, reduza o ritmo."
+ask_feces_normal_birth,"Sim, isso pode acontecer. Quando a cabeça do bebê passa pelo canal de parto pode comprimir o reto, parte do intestino que fica logo atrás do útero e da vagina. Se acontecer, não tem problema, isto é normal ocorrer."
+ask_feeling_sad,"Não se preocupe, essa tristeza depois do parto é bem comum. Também conhecida por baby blues, ela ocorre devido a modificações neuro-hormonais. Esse sentimento está associado ao medo e ansiedade. Vale a pena conversar com pessoas que já passaram por isso ou mesmo médicos e psicólogos. 
+Porém se você está tendo choros compulsivos, tristeza intensa e muita insegurança é recomendável buscar ajuda profissional pois pode se tratar de uma depressão pós-parto."
+ask_food_desire_baby_appearance,"Não. Esses desejos repentinos por algum alimento específico, mesmo se não atendidos, não provocarão o aparecimento de nenhum sinal na aparência do bebê."
+ask_gain_weight_pregnancy,"Procure um médico ou nutricionista para ajudá-la a perder o peso em excesso. Passados 40 dias do parto, a mulher em geral já pode voltar a fazer atividades físicas leves, sempre com acompanhamento. A alimentação balanceada e fracionada também é sempre bem-vinda."
+ask_have_sex_until_month,"Se não há complicações, o sexo é permitido até o final da gestação. Se houver sangramento vaginal, perda de líquido, dor ou qualquer dúvida, procure orientação médica."
+ask_high_risk_normal_birth,"Sim. Você pode ter parto normal e, na maioria das vezes, mesmo em gestações de alto risco, é o parto que implica em menos complicações. Se há algum impedimento ao parto normal, essa situação deverá ser explicada a você pelo médico e deverá constar por escrito em seu cartão de pré-natal."
+ask_how_long_breastfeed,"O aleitamento deve ser exclusivo por pelo menos seis meses, e depois mantido até dois anos ou mais. Amentar é difícil, exige dedicação e paciência, mas é extremamente benéfica para o desenvolvimento do bebê."
+ask_how_long_healthy_pregnant,"Pode demorar até dois anos para engravidar. Apenas passando desse período é que começa a ser aconselhado exames específicos para avaliar a fertilidade do casal, antes não é preciso se preocupar. Nas mulheres com mais de 35 anos, é recomendável avaliação médica se após 6 meses de tentativas não tenha ocorrido a gestação, pois depois dessa idade a fertilidade diminui naturalmente e não se pode perder tempo seu no diagnóstico e tratamento."
+ask_how_long_milk_come_down,"Geralmente, o leite desce entre o terceiro e o quinto dia depois do parto. O líquido que sai antes se chama colostro, que é rico em anticorpos e por isso também é muito importante para o recém-nascido."
+ask_how_many_pounds_pregnancy,"O ideal é engordar entre 10 e 12kg. Assim, a mulher conseguirá voltar ao peso normal em poucos meses, sem precisar ter muito trabalho para emagrecer e fazer grandes sacrifícios."
+ask_ideal_birth_older_women,"Se a pressão estiver controlada e a gravidez transcorrer bem, não há restrição para o parto normal. Mas converse com o seu médico para decidir como será feito o parto."
+ask_invite_accompany_birth,"Sim. Na maternidade, é seu direito escolher um acompanhante e tê-lo sempre ao seu lado durante o trabalho de parto, no parto e pós-parto."
+ask_late_menstruation,"Atrasos de até 5 dias são normais e não necessariamente indicam alguma condição. Já se o seu atraso é de mais de 15 dias, é indispensável fazer um teste de gravidez para verificar se não há uma gestação.
+Se o resultado for positivo, é necessário contatar seu ginecologista para poder tomar as medidas necessárias e assegurar a sua saúde e do bebê.
+Caso o resultado seja negativo, procure um ginecologista para verificar se não existe alguma condição patológica que está causando esse atraso."
+ask_loose_vagina,"Se o parto for feito corretamente, com procedimentos adequados isso não acontece. Agora, se o parto for mal assistido, há riscos. Porém existem exercícios para recuperar e melhorar o desempenho da musculatura vaginal. Eles devem ser iniciados tão logo ocorra a cicatrização dos tecidos vaginais."
+ask_loss_hair_breastfeed,"É normal. Em geral, os fios começam a cair entre dois e três meses após o parto e podem continuar por até seis meses. Durante esse período, suavize as escovações, evite banhos com água muito quente e massageie a cabeça sempre que se lembrar."
+ask_normal_bigger_foot,"Em alguns casos, isso pode acontecer sim devido a produção de um hormônio que relaxa os ligamentos de todas articulações, fazendo com que os pés fiquem um pouco maiores no comprimento."
+ask_normal_birth_duration,"Enquanto a cesariana demora de 1 a 2 horas para acontecer, a fase ativa do parto normal pode levar de 8 a 12 horas na primeira gestação."
+ask_normal_birth_pain,"O nível de sensibilidade varia muito de pessoa para pessoa e claro que o lado psicológico interfere nessa hora. Mas geralmente, é uma dor suportável e que você vai acabar esquecendo depois que o bebê nasce. Existem algumas alternativas naturais que podem aliviar o incômodo, como massagem, água quente e até mesmo o apoio do seu acompanhante. Além disso, existe a possibilidade de realizar uma analgesia de bloqueio (peridural ou combinada), feita por anestesista, na maternidade, que vai retirar a dor, sem que você perca a mobilidade e a possibilidade de ter um parto normal."
+ask_normal_birth_recovery,"O parto normal propicia que a mulher retome as atividades mais rápido, enquanto a que faz cesárea pode demorar um pouco devido às limitações da cirurgia, isso porque no caso do parto normal a estrutura dos órgãos internos não foi alterada."
+ask_normal_bleeding_after_birth,"É normal, o nome disso é loquios e se trata da perda de sangue, muco e tecidos do interior do útero durante o puerpério. No caso de parto normal, o corrimento escurece até o final do primeiro mês. Depois, por mais um mês, uma secreção amarelada ainda. Em casos de cesariana, o sangramento pode durar até o segundo mês."
+ask_normal_feeling_tired,"O cansaço é absolutamente normal. Você gasta muita energia para ter o bebê e não tem tempo de se recompor como deveria porque logo começa a cuidar dele. Por isso, peça ajuda a sua familia para dar banho, ninar e trocar o bebê, além de cozinhar, arrumar a casa e afins."
+ask_normal_fever_milk_comes_down,"Sim, as reações metabólicas podem causar febre baixa nas primeiras horas do pós-parto, mas ela logo regride. O importante é que não passe dos 38°C. Nesse caso, é preciso investigar eventuais infecções."
+ask_normal_lose_weight_breastfeed,A produção de leite absorve muitas calorias por isso é normal emagrecer durante a amamentação.
+ask_normal_menstruation_breastfeed,"Em geral, é normal não menstruar nesse período. Mas isso não é regra. Algumas podem menstruar e até engravidar enquanto amamentam, embora as chances sejam menores."
+ask_normal_swollen_foot,"Isso é normal e acontece por causa do aumento da retenção de líquidos. Mas fique tranquila, seu pé deve desinchar em até uma semana.
+Caso haja inchaço assimétrico, dor importante ou vermelhidão nas pernas após o parto, procure um médico pelo risco de trombose no período pós-parto."
+ask_pain_breastfeed,"Se a dor for no bico do seio, provavelmente o bebê não está pegando direito o peito. Nesse caso, é importante pedir orientações ao seu obstetra ou ao pediatra da criança. Agora, se você estiver sentindo cólicas, parecidas com as menstruais, não há muito o que fazer a não ser suportar. Mas não se preocupe, pois ela é normal e tende a regredir."
+ask_pregnant_eat_two,"Não, isso é um mito. O importante é ter um prato variado e colorido, com vegetais, frutas, legumes, carboidratos, proteínas e gorduras e beber bastante água. Para ter disposição o dia todo, as refeições devem ser divididas entre três principais: café da manhã, almoço e jantar. É importante também se alimentar de três em três horas, com lanches saudáveis como frutas, iogurtes e cereais."
+ask_pregnant_menopause,"O que caracteriza a menopausa é a ausência da menstruação e depois de confirmado este diagnóstico, não é possível engravidar por meios naturais."
+ask_prevent_milk_stumbling,"É importante nunca ficar com o peito cheio de leite, por isso, dê o peito sempre que o bebê tiver fome e faça o rodízio de mamas, esvaziando cada uma delas até ficarem flácidas. Verifique também se o bebê está pegando o peito direito e conseguindo mamar. Se o seu bebê não mamar tudo, você pode retirar o excesso de leite manualmente ou utilizando uma bombinha de tirar leite e guardar para mais tarde ou doá-lo para bancos de leite."
+ask_receive_oral_sex,"O sexo oral, na maioria das vezes, não tem contraindicação. Lembre-se apenas de evitar o contato no caso de herpes labial ativo."
+ask_sagging_breasts_breastfeed,"A verdade é que os seios não voltarão a ser como antes, porém com o tempo, voltam a uma forma parecida com a que tinham. Ah saiba que a flacidez dos seios é causada pela gestação e não pela amamentação, então não adianta interromper a amamentação com intuito de evitar a flacidez."
+ask_sex_bad_pregnancy,"O sexo em condições normais não faz mal. Existe restrição em situações anormais, como na ameaça de aborto ou risco de parto prematuro."
+ask_sex_hurt_baby,"Isso não vai acontecer, a criança está bem protegida dentro do útero e o colo uterino tem um tampão para evitar infecções. Se restarem dúvidas, conversem com o seu médico durante uma consulta de pré-natal."
+ask_smell_sweat_stronger,"Isso é normal devido as alterações hormonais. Além dos cuidados básicos de higiene, procure usar roupas leves que facilitam a transpiração, evite cafeína e alimentos picantes e hidrate-se bem."
+ask_sore_sex_after_birth,"Sim, porque, nessa momento, os hormônios comportam-se quase como que na menopausa. A vagina fica mais seca e dificulta a penetração, causando dor."
+ask_stretch_marks,"Infelizmente, as estrias são definitivas. Alguns tratamentos com produtos cosméticos podem atenuar o problema, mas não solucioná-lo."
+ask_thirst_breastfeed,Normal. Ter sede é muito comum durante a fase de amamentação pois a produção de leite depende de uma boa hidratação.
+ask_ultrasound_hurt_baby,Não. Você pode realizar quantos ultrassons forem necessários desde que seja por indicação médica.
+ask_what_vaccines_baby,"Na maternidade é dado o BCG, contra tuberculose, e a vacina contra hepatite B."
+ask_when_go_pediatrician,A criança deve fazer a primeira consulta ao pediatra entre os primeiros 7 e 10 dias de vida.
+ask_when_have_sex,"É recomendado esperar 40 dias antes de voltar às atividades sexuais, para aguardar o fechamento completo do colo uterino e, no caso de parto normal, a cicatrização dos tecidos vaginais."
+ask_can_treatment_varicose_veins,"Cirurgias para para varizes não são indicadas nesse momento. As varizes decorrentes da primeira gestação normalmente desaparecem depois do parto. Mas as da segunda gravidez tendem a permanecer. O mais recomendado é deixar as pernas levantadas por alguns minutos, usar meias elásticas de compressão (apenas no frio), evitar ficar muito tempo parada em pé ou sentada e fazer caminhadas regulares. Essas medidas ajudam a aliviar os sintomas."
+ask_can_seabathe,"Se a gravidez não é de risco não há problema porém, são necessários alguns cuidados básicos para entrar no mar, como deixar a água chegar, no máximo, até a altura da coxa e evitar ondas fortes de frente."
+ask_can_lymphatic_drainage,"Depende. A drenagem linfática é realmente eficaz para reduzir o inchaço, mas há sempre o risco de lesão vascular ou desprendimento de trombos, acarretando problemas muito maiores. Por isso, é importante, antes de qualquer coisa, conversar com o seu obstetra."
+ask_can_almond_oil,"Esse tipo de óleo pode ser usado sem restrições mas ele só melhora a hidratação da pele, o que nem sempre é suficiente para impedir o aparecimento das estrias na pele."
+ask_can_sick_friend,"Não pode se a doença for contagiosa ou a pessoa estiver internada. Hospitais são focos de doenças e o melhor é evitar entrar num ambiente assim. Caso não haja um diagnóstico, o melhor é telefonar ou mandar uma mensagem para a pessoa."
+ask_when_pregnant_again,"Você pode engravidar de novo seis meses após o parto. O certo é esperar esse período porque quando engravidar, será interrompida a amamentação e a criança precisa se alimentar exclusivamente de leite por seis meses."
+ask_diet_after_delivery,A dieta deve ser a mesma que você teve durante a gestação para não influenciar a qualidade do leite materno e a saúde da criança.
+ask_when_start_breastfeeding,"A descida do leite acontece 72 horas após o nascimento. Isso acontece porque o bebê demora para entender que nasceu e que precisará buscar alimento de outra maneira. O bebê demora entre três e quatro dias para começar a acordar com fome. Até o leite descer, o bebê irá se alimentar do colostro."
+ask_pregnant_takes_pill,"Se estiver no início da gravidez e tomar alguns comprimidos por engano, geralmente, não há problemas. Mas procurar um ginecologista é a primeira atitude que deve ser tomada nesse momento."
+ask_can_pregnant_anal_sex,"Sim, porém a camisinha é sempre fundamental, e deve-se evitar ao máximo que o pênis entre em contato com a vagina, para que não haja perigo de contaminação."
+ask_necessary_condom_pregnant,O uso da camisinha é sempre fundamental para não prejudicar a saúde da mãe nem do bebê.
+ask_can_pregnant_orgasm,"Consegue sim! Inclusive existem mulheres que chegam ao orgasmo pela primeira vez durante a gestação, por causa da irrigação maior de sangue na vagina."
+ask_when_period_return,"A menstruação depois do parto pode demorar cerca de 2 meses a 1 ano para vir, dependendo de se você amamenta ou não. Para mulheres que amamentam somente no peito, a menstruação pode vir só quando o bebê parar de mamar, ou diminuir muito a frequência das mamadas, por volta de 1 ano de idade. Já para quem não amamenta, a menstruação pode vir em cerca de 2 meses, depois do nascimento, mas ainda assim, é normal que fique desregulada inicialmente."
+ask_consult_after_childbirth,"Sim, procure a rede de saúde pública mais próxima e faça esta consulta até 42 dias depois do parto, para saber como está sua saúde depois do parto, como estão o útero, as mamas, o sangramento e, se for o caso de cesárea ou de corte no períneo, como está a cicatrização. "
+ask_normal_birth_better_mother,"Em condições normais, o parto normal é a melhor opção, entre as vantagens para a mãe estão:
+
+- a recuperação é mais rápida e a mulher volta a andar logo após o parto
+- o risco de infecção é menor
+- há menos riscos de hemorragia
+- após o parto normal, a mulher se sente melhor, o que facilita a amamentação
+- a cicatriz da cesariana no útero pode ter conseqüências em futuros partos"
+ask_normal_birth_better_baby,"Em condições normais, o parto normal é a melhor opção, entre as vantagens para o bebê estão:
+
+- a criança não corre o risco de ser tirada da barriga antes do tempo
+- a criança corre menos risco de problemas respiratórios
+- o risco de doenças como infecções é menor
+- é mais freqüente o contato pele a pele e o início da amamentação ainda na sala de parto"
+ask_when_go_maternity,"- Quando você estiver sentindo, pelo menos, três contrações no período de meia hora.
+- Quando a bolsa-d’água se romper antes de começarem as contrações. (Preste atenção na cor e no cheiro do líquido, porque esta é uma informação
+importante para orientar os profissionais que vão atendê-la na maternidade).
+- Quando tiver sangramento, mesmo sem dor."
+ask_while_breastfeeding_pregnant,"É possível engravidar enquanto está amamentando, e por isso é recomendado voltar o uso da pílula anticoncepcional 15 dias após o parto. É importante utilizar um método contraceptivo durante a amamentação."
+ask_types_childbirth,"Existem dois tipos de parto: o parto cirúrgico (cesárea) e o parto vaginal (ou natural).
+Os partos vaginais podem ser diferenciados em: partos vaginais cirúrgicos, onde acontecem intervenções médicas como anestesia, aplicação de ocitocina (hormônio sintético que induz as contrações uterinas), episiotomia, etc. E partos vaginais naturais que são quase sem intervenções ou apenas se necessárias.
+Já a cesárea é uma cirurgia que realiza um corte na parede abdominal e no útero. O bebê é retirado através desta abertura, que é fechada com pontos. A cesárea é uma cirurgia e, por isso, a recuperação da mãe é mais lenta que a do parto normal, mas atualmente é considerado um procedimento seguro."
+ask_what_is_forceps_childbirth,"É quando um instrumento cirúrgico (fórceps) é introduzido no canal genital, ajustando-se dos dois lados da cabeça do bebê e puxando-o para fora. É utilizado quando o parto não transcorre bem e o bebê não consegue sair. Também é usado para auxiliar já no final do parto normal."
+ask_what_is_leboyer_childbirth,"Nesse tipo de parto, requer-se baixa luz e pouco som na sala, para não incomodar o bebê. Tenta-se amenizar o máximo possível a diferença entre o útero e o ambiente externo. Nesse caso, o pai pode dar o primeiro banho do bebê. Utilizado nos casos em que a mulher teve uma gravidez sem complicações."
+ask_what_is_squatting_childbirth,"A diferença para o parto normal é a posição da mulher, que fica de cócoras em vez de permanecer deitada. Devido à gravidade, a tendência é de um parto mais rápido. Mas atenção: ele só pode ser realizado em mulheres saudáveis e sem problemas de pressão e se o bebê estiver na posição cefálica (com a cabeça para baixo)."
+ask_what_is_water_childbirth,"O parto é feito em uma banheira esterilizada e com água aquecida, a mulher dá à luz no mesmo ambiente em que o bebê se encontra no útero, ou seja, cercado de líquido. Como ele segue respirando pelo cordão umbilical por alguns segundos após o nascimento, não há risco de afogamento caso o parto seja conduzido por profissionais habilitados. Para a mãe, a água quente pode atenuar as dores e o cansaço do trabalho de parto."
+ask_what_is_natural_childbirth,"É o parto vaginal feito sem intervenções médicas como a analgesia, o rompimento artificial da bolsa e a episiotomia. Apesar de proporcionar à mulher a experiência de parir em circunstâncias totalmente naturais, esse tipo de parto não é indicado para todas as mulheres."
+ask_what_is_humanized_childbirth,"No parto humanizado, as vontades da mulher são respeitadas. Ela deve contar com o apoio de seu marido e muitas vezes conta com a doula, formada em obstetrícia, que acompanha a mulher durante a gestação e o parto. Para um grupo de médicos, significa que o bebê fique sobre a barriga da mãe por alguns minutos após o parto."
+ask_what_is_cesarean_childbirth,"Trata-se de uma cirurgia abdominal em que o médico faz uma pequena incisão no abdômen e na parte inferior do útero para retirar o bebê da barriga da mãe. Por apresentar maiores riscos de infecção e sangramento, a cesariana é indicada apenas quando há algum impedimento para a realização do parto normal."
+ask_who_receive_maternity_leave,"A licença-maternidade é um benefício para todas as mulheres que trabalham com a carteira assinada e acabaram de dar à luz. Além disso, quando se trata de uma adoção ou obtenção da guarda judicial de crianças com até 12 anos, também é possível utilizar o benefício."
+ask_unemployed_receive_maternity_leave,"As mulheres que estão desempregadas, possuem empregos informais ou são empreendedoras também podem recebem o salário-maternidade e se afastar durante o período. Para a mulher que é contribuinte individual ou segurado especial, a carência é de 10 meses. Agora, caso esteja desempregada e já perdeu a qualidade de segurado, deve contribuir cinco meses da carência."
+ask_pregnant_women_fired,"A partir do momento da descoberta da gravidez, a mulher adquire estabilidade no emprego, mesmo que ainda não tenha feito a comunicação ao empregador. Essa estabilidade tem a duração de até cinco meses após o nascimento da criança.
+Em situações que a mãe é demitida sem justa causa nesse período, a empresa será notificada para que ela seja readmitida ao seu posto de trabalho imediatamente. Caso a readmissão não seja possível, a empresa deverá pagar uma indenização à mulher, mantendo seu direito à licença-maternidade e todos os direitos trabalhistas."
+ask_what_is_maternity_pay,"O salário-maternidade é um benefício que garante auxílio financeiro às mães no período da licença-maternidade.
+Ele é pago pela Previdência Social e seu objetivo é ajudar na complementação da renda de mulheres que precisam se afastar de suas funções profissionais por causa do nascimento ou da adoção de uma criança."
+ask_how_much_salary_maternity_leave,"Para as mulheres que trabalham formalmente, o valor a ser recebido durante a licença-maternidade é equivalente ao salário. Caso a remuneração seja variada, como no caso de pessoas que têm direito à comissão, o salário será uma média dos últimos seis meses.
+Agora, para quem está desempregada, tem emprego informal ou é empreendedora, o salário-maternidade será no valor da soma dos 12 últimos salários relativos aos quais foram feitas as contribuições dividida por 12."
+ask_how_apply_maternity_leave,"Para as mulheres que trabalham com carteira assinada, apenas é preciso informar a gravidez ou a adoção ao RH da empresa onde trabalha. É de responsabilidade da empresa comunicar ao INSS, solicitando o benefício.
+O pagamento é feito automaticamente após o registro da criança. Agora, caso o benefício não seja repassado pela empresa, a mãe deve procurar uma agência do INSS ou ligar para o número 135 para regularizar sua situação.
+Para as contribuintes individuais, desempregadas, seguradas especiais e empregadas domésticas  é necessário dar entrada em uma agência do INSS."
+ask_how_long_maternity_leave,"A licença-maternidade dura 120 dias, podendo ser iniciada entre o 28º dia antes da previsão do parto até o dia do nascimento do bebê. Isso se aplica também aos casos em que o bebê é nasci morto.
+A duração da licença pode ser estendida até 180 dias, que é o tempo recomendado pela Sociedade Brasileira de Pediatria (SBP).
+Devido a isso, a  SBP possui o programa chamado Empresa Cidadã. As corporações privadas que aderirem ao programa e prorrogarem a licença de suas empregadas em mais 60 dias, podem obter benefícios fiscais."
+ask_when_maternity_leave_start,"O afastamento pode se iniciar a partir do momento que a mulher decidir, podendo ser até 28 dias antes do parto, ou então a partir da data de nascimento do bebê.
+Agora, o recebimento do salário-maternidade começa mediante apresentação de um atestado médico ou a certidão de nascimento do bebê."
+ask_add_vacation_maternity_leave,"Sim, é possível juntar os 30 dias de férias à licença-maternidade. Para isso, a profissional precisa ter direito às férias e precisa ser aprovado pela a empresa que trabalha."
+ask_father_have_paternity_leave,"O pai do recém-nascido possui direito a licença-paternidade remunerada de cinco dias corridos, a partir da data de nascimento da criança."
+ask_what_is_maternity_leave,"A licença-maternidade é um benefício garantido na Constituição para todas as mulheres que são contribuintes da Previdência Social (INSS). Por meio desse benefício, as mulheres podem se ausentar do trabalho, sem perdas salariais por, no mínimo, 120 dias. O benefício é concedido nos casos em que a mulher gera e dá à luz a um bebê e também quando adota uma criança."
+ask_how_many_weeks_sex_baby,"É possível saber o sexo do bebê a partir da 8ª semana de gravidez, através de um exame de sangue específico (sexagem fetal) ou a partir da 13ª semana pelo ultrassom."
+ask_how_long_pregnancy_last,"De acordo com a Febrasgo, Federação Brasileira das Associações de Ginecologia e Obstetrícia, uma gestação a termo, ou seja, dentro do período ""certo"", é da 39ª até a 40ª semana e 6 dias."
+ask_dont_know_who_father_is,"A única forma de saber com certeza quem é o pai é pelo exame de DNA. Porém, em algumas situações é possível calcular a data de fecundação que pode sugerir quem é o pai.
+- Se o intervalo das relações sexuais com os diferentes parceiros tiver sido de menos de 10 dias, só o teste de DNA pode dar uma resposta exata mesmo. A comparação entre o tipo sanguíneo do bebê com o da mãe e o dos possíveis pais em alguns casos pode dar a resposta, mas em muitos não dá.
+- Se o intervalo das relações sexuais com os diferentes parceiros tiver sido de mais de 10 dias, dá para tentar calcular a data da fecundação para descobrir quem é o pai."
+ask_how_calculate_fertilization_date,"Há duas maneiras de calcular: pela data da última menstração e pela data provável do parto.
+Para calcular pela menstruação basta somar 11 e 21 dias ao primeiro dia da última menstruação. Por exemplo, se a última menstruação apareceu no dia 5 de Abril, significa que a concepção deve ter acontecido entre os dias 16 a 26 de Abril.
+Se você não lembra a data da sua última menstruação é possível descobrir utilizando a data provável do parto. Basta subtrair 40 semanas da data provável do parto e aí você tem a data do primeiro dia da última menstração e então, é só fazer a mesma conta. Por exemplo, se a data prevista do parto é dia 10 de Novembro, deve-se retirar 40 semanas para descobrir o possível primeiro dia da última menstruação, que, neste caso será o dia 3 de Fevereiro. A esse dia, deve-se agora juntar os 11 e 21 dias para descobrir o intervalo de 10 dias para a concepção, que deverá ter sido então entre os dias 14 e 24 de Fevereiro."

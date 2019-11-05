@@ -19,12 +19,6 @@ class UserFormService(GenericService):
     def get(self, id):
         return self.objects(Q(id=ObjectId(id))).first()
     
-    def delete_by_id(self, id):
-        senders = self.objects(Q(user_id=ObjectId(id)))
-        for obj in senders:
-            sender_id = json.loads(obj.to_json())['_id']['$oid']
-            self.delete(sender_id)
-    
     def update(self, obj):
         user_form = self.get(obj['id'])
 

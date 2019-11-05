@@ -1,3 +1,4 @@
+import json
 from mongoengine import connect
 from mongoengine import QuerySetManager
 from bson.objectid import ObjectId
@@ -19,3 +20,9 @@ class GenericService():
         if not obj:
             raise Exception('Object with id {} not found!'.format(id))
         obj.delete()
+
+    def delete_by_user_id(self, user_id):
+        senders = self.objects(Q(user_id=ObjectId(user_id)))
+        for obj in senders:
+            sender_id = json.loads(obj.to_json())['_id']['$oid']
+            self.delete(sender_id)

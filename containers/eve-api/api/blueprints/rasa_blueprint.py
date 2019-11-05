@@ -16,6 +16,24 @@ from dateutil.relativedelta import relativedelta
 route_name = ROUTE_CONFIG['RASA']
 app_rasa = Blueprint(route_name,__name__, url_prefix='/api')
 
+
+@app_rasa.route('/reset/<id>'.format(route_name), methods=['DELETE'])
+def delete_by_user(id):
+    try:
+        ServiceHandler.get_service(ROUTE_CONFIG['USER_EXAM_TYPE_NAME']).delete_by_user_id(id)
+        ServiceHandler.get_service(ROUTE_CONFIG['USER_FORM_TYPE_NAME']).delete_by_user_id(id)
+        ServiceHandler.get_service(ROUTE_CONFIG['USER_HEALTH_INFO_TYPE_NAME']).delete_by_user_id(id)
+        ServiceHandler.get_service(ROUTE_CONFIG['USER_INFO_TYPE_NAME']).delete_by_user_id(id)
+        ServiceHandler.get_service(ROUTE_CONFIG['USER_POSTPARTUM_INFO_TYPE_NAME']).delete_by_user_id(id)
+        ServiceHandler.get_service(ROUTE_CONFIG['USER_PREGNANCY_INFO_TYPE_NAME']).delete_by_user_id(id)
+        ServiceHandler.get_service(ROUTE_CONFIG['USER_TRIMESTER_TYPE_NAME']).delete_by_user_id(id)
+        ServiceHandler.get_service(ROUTE_CONFIG['CONVERSATIONS_TYPE_NAME']).delete_by_user_id(id)
+
+        return response(status=status.HTTP_200_OK)
+
+    except Exception as e:
+        return response(str(e), status.HTTP_400_BAD_REQUEST) 
+
 @app_rasa.route('/{}/send-slot-user-exam'.format(route_name), methods=['POST'])
 def send_user_exam_slot():
     try:
