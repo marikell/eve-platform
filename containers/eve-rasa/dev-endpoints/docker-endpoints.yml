@@ -2,6 +2,9 @@ action_endpoint:
  url: "http://eve_actionserver:5055/webhook"
 
 tracker_store:
-  type: mongod
-  url: mongodb://eve_mongo:27017/evedb
-  db: evedb
+ type: mongod
+ url: mongodb://admin:eve2019@evecluster-shard-00-00-90nlz.mongodb.net:27017,evecluster-shard-00-01-90nlz.mongodb.net:27017,evecluster-shard-00-02-90nlz.mongodb.net:27017/evedb?ssl=true&replicaSet=EveCluster-shard-0&authSource=admin&retryWrites=true'
+ db: evedb
+ username: admin
+ password: eve2019
+ auth_source: admin

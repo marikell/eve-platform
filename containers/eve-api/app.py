@@ -27,8 +27,10 @@ from api.models.db_model import db
 flask_app = FlaskAPI(__name__)
 
 flask_app.config['MONGODB_SETTINGS'] = {
-    'db': 'evedb',
-    'host': 'mongodb://eve_mongo:27017/evedb'
+'db': 'evedb',
+'host': 'mongodb://admin:eve2019@evecluster-shard-00-00-90nlz.mongodb.net:27017,evecluster-shard-00-01-90nlz.mongodb.net:27017,evecluster-shard-00-02-90nlz.mongodb.net:27017/evedb?ssl=true&replicaSet=EveCluster-shard-0&authSource=admin&retryWrites=true',
+'username':'admin',
+'password':'eve2019'
 }
 
 db.init_app(flask_app)
