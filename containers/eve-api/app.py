@@ -27,8 +27,8 @@ from api.models.db_model import db
 flask_app = FlaskAPI(__name__)
 
 flask_app.config['MONGODB_SETTINGS'] = {
-    'db': MONGO_CONFIG['db'],
-    'host': MONGO_CONFIG['host']
+    'db': 'evedb',
+    'host': 'mongodb://eve_mongo:27017/evedb'
 }
 
 db.init_app(flask_app)
