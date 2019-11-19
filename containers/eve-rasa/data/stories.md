@@ -214,6 +214,24 @@
     - action_doing_right_exam
 
 ## bot pergunta se fez o exame e o usuário fez
+* ask_exam
+    - utter_ask_exam
+* affirm
+    - action_doing_right_exam
+
+## bot pergunta se fez o exame e o usuário fez
+* ask_exam
+    - utter_ask_exam
+* affirm+did_exam
+    - action_doing_right_exam
+
+## bot pergunta se fez o exame e o usuário fez
+* ask_exam
+    - utter_ask_exam
+* did_exam
+    - action_doing_right_exam
+
+## bot pergunta se fez o exame e o usuário fez
     - utter_ask_exam
 * affirm OR affirm+did_exam OR did_exam
     - action_doing_right_exam
